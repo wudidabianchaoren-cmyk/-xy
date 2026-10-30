@@ -1,0 +1,9 @@
+/* The author and edition form one centered imprint, on a shared text baseline. */
+.works-orbit-header{grid-template-columns:minmax(240px,1fr) auto minmax(240px,1fr)}
+.works-orbit-header>div{display:flex;align-items:baseline;justify-content:center;gap:24px;white-space:nowrap;transform:none}
+.works-orbit-header>div span:first-child{font-size:17px;line-height:1.4;letter-spacing:.12em;font-weight:500}
+.works-orbit-header>div span:last-child{font-size:15px;line-height:1.4;letter-spacing:.06em;border-left:1px solid #88745155;padding-left:24px}
+.works-orbit-header>div span{position:static;margin:0;transform:none;vertical-align:baseline}
+.works-orbit-info-left{display:flex;flex-direction:column;align-items:flex-start}
+.works-orbit-info-left small{margin-top:16px}
+.works-orbit-info-left>span{margin-bottom:18px}

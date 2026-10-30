@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+const old=await fs.readFile('motion/physical-universe-v100/film.js','utf8');
+let core=old.slice(0,old.indexOf('// New close views'));
+core=core.replace("if(!study)text('Make images feel alive.',160,225,66,C.ink,400,'Arial,sans-serif');",'');
+await fs.writeFile('motion/physical-universe-v102/film.js',core+await fs.readFile('motion/physical-universe-v102/drawing.js','utf8'));
+await fs.copyFile('motion/physical-universe-v100/index.html','motion/physical-universe-v102/index.html');
+let render=await fs.readFile('scripts/render-physical-universe-v101.mjs','utf8');
+render=render.replaceAll('v101','v102').replaceAll('v32-101','v32-102').replaceAll('630','540').replace('duration:21','duration:18').replace("['frame-01',7.7],['frame-02',10.6],['frame-03',13.8],['frame-04',16.1]","['frame-01',4.45],['frame-02',7.95],['frame-03',10.6],['frame-04',13.4]").replace("'-ss','4.6'","'-ss','7.95'");
+render=render.replace("source:'motion/physical-universe-v102',", "source:'motion/physical-universe-v102',shots:15,photographicAssets:0,displayTypography:'local Bodoni MT / italic / custom glyph deformation',");
+await fs.writeFile('scripts/render-physical-universe-v102.mjs',render);
+let audio=await fs.readFile('scripts/make-physical-audio-v101.py','utf8');
+audio=audio.replaceAll('v101','v102').replaceAll('duration=21','duration=18').replace("'duration':21","'duration':18").replaceAll('(21-tt)','(18-tt)').replace('default_rng(1011)','default_rng(1021)').replace('np.arange(.75,20.2,.75)','np.arange(.375,17.6,.375)');
+audio=audio.replace(/strike\(contact\+\.025[\s\S]*?for t in \[.*?\]:/,"strike(contact+.025,185,.075)\nfor t in [1.55,2.85,4.2,5.5,6.75,8.1,9.35,10.65,11.95,13.0,14.4,15.15,15.85,16.5]:strike(t,432 if t<10 else 324,.055)\nfor t in [1.35,2.65,3.95,5.25,6.55,7.9,9.2,10.45,11.75,12.85,14.2,16.3]:");
+await fs.writeFile('scripts/make-physical-audio-v102.py',audio);
+console.log('V102 native composition prepared: 18 seconds, 15 shots, no photographs');

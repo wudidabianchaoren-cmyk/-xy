@@ -1,0 +1,11 @@
+.southeast-film-caption{position:absolute;left:7vw;right:7vw;bottom:28px;display:flex;align-items:baseline;gap:24px;color:#e7e4d8;z-index:2}
+.southeast-film-caption h1{font:400 26px/1.5 'STSong','SimSun',serif;letter-spacing:.08em;margin:0}
+.southeast-film-caption p,.southeast-film-caption>span,.southeast-film-caption a{font-size:13px;line-height:1.8;margin:0}
+.southeast-film-caption>span{color:#bdbba9}
+.southeast-film-caption a{margin-left:auto;display:flex;gap:16px;align-items:center}
+.project-film .film-poster{inset:5vh 3vw 9vh;width:94vw;height:86vh;object-fit:contain}
+.project-about{background:#e7e6dc;color:#24392d}
+.about-label p,.about-copy h2{color:#24392d}
+.about-copy>p{color:#4c584c}
+.about-label p span,.project-facts small{color:#596455}
+.project-facts{border-color:#9fa99c}

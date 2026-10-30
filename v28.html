@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071014">
+  <title>脑海宇宙 V28 - 无名状呼吸场</title>
+  <link rel="preload" as="image" href="./assets/space-hero.png">
+  <link rel="preload" as="image" href="./assets/void-object-v28-cutout.png">
+  <link rel="preload" as="image" href="./assets/works/rural-field.png">
+  <link rel="preload" as="image" href="./assets/works/xianxia-duel.png">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+  <link rel="stylesheet" href="./v23.css">
+  <link rel="stylesheet" href="./v28-motion.css">
+</head>
+<body>
+  <section class="countdown-prelude" id="countdownPrelude" aria-label="入场倒计时">
+    <div class="countdown-video-slot">Video slot / pending</div>
+    <div class="countdown-number" id="countdownNumber">03</div>
+    <div class="countdown-mark">Mind Universe / pre-entry</div>
+  </section>
+
+  <div class="loader" id="loader" aria-live="polite">
+    <div class="loader-inner">
+      <b>正在接近未知物体</b>
+      <span>Reading surface / measuring gravitational response</span>
+      <div class="loader-track"><i id="loaderLine"></i></div>
+    </div>
+  </div>
+
+  <section class="entry-gate" id="entryGate" aria-label="进入脑海宇宙">
+    <div class="entry-field" aria-hidden="true">
+      <i></i><i></i><i></i><i></i>
+    </div>
+    <div class="entry-code">
+      <span>WU XIANGYU / LIVING DIGITAL ARCHIVE</span>
+      <span>SEQUENCE 23 / IMAGE UNIVERSE</span>
+    </div>
+    <button class="entry-title" id="entryButton" type="button">
+      <span class="entry-title-line">
+        <i>脑</i><i>海</i>
+      </span>
+      <span class="entry-title-line is-offset">
+        <i>宇</i><i>宙</i>
+      </span>
+      <small>点击进入脑内展览 <b>↘</b></small>
+    </button>
+    <div class="entry-axis" aria-hidden="true"><i></i><span>00:00:23</span></div>
+  </section>
+
+  <header class="topbar">
+    <button class="brand" id="homeButton" type="button" aria-label="返回脑海宇宙起点">
+      <strong>脑海宇宙</strong>
+      <small>Wu Xiangyu / living digital archive</small>
+    </button>
+    <button class="index-trigger" id="indexTrigger" type="button">展览目录</button>
+  </header>
+
+  <main>
+    <section class="voyage" id="voyage">
+      <div class="stage" id="stage">
+        <div class="spatial-grid" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="bg-plane bg-base" id="bgBase"><img src="./assets/space-hero.png" alt=""></div>
+        <div class="bg-plane bg-horizon" id="bgHorizon"><img src="./assets/space-hero.png" alt=""></div>
+        <div class="bg-plane bg-matter" id="bgMatter"><img src="./assets/space-hero.png" alt=""></div>
+        <div class="edge-depth"></div>
+        <canvas id="universe" aria-label="可交互的无名航行体"></canvas>
+        <div class="void-object-shell" id="voidObjectShell" aria-label="可交互的无名状物体" role="img">
+          <img src="./assets/void-object-v28-cutout.png" alt="">
+          <i class="void-orbit void-orbit-a"></i>
+          <i class="void-orbit void-orbit-b"></i>
+          <i class="void-beam void-beam-a"></i>
+          <i class="void-beam void-beam-b"></i>
+          <span class="void-sparks" aria-hidden="true"></span>
+        </div>
+
+        <div class="hero" id="hero">
+          <div class="hero-kicker">Mind universe / digital exhibition</div>
+          <div class="hero-index" aria-hidden="true">
+            <b>23</b>
+            <span>Current field<br>living digital archive</span>
+          </div>
+          <h1 aria-label="脑海宇宙">
+            <span class="hero-line">
+              <span class="hero-char"><i>脑</i></span>
+              <span class="hero-char"><i>海</i></span>
+            </span>
+            <span class="hero-line hero-line-offset">
+              <span class="hero-char"><i>宇</i></span>
+              <span class="hero-char"><i>宙</i></span>
+            </span>
+          </h1>
+          <div class="hero-coordinate">
+            <span>Archive 23</span>
+            <i></i>
+            <span>Exhibition system / ongoing</span>
+          </div>
+          <p class="hero-copy">
+            <span>真实作品图像已经接入这片脑内空间。</span>
+            <span>宇宙仍是入口，影像章节成为新的记忆坐标。</span>
+          </p>
+        </div>
+
+        <div class="object-prompt" id="objectPrompt">Approach / disturb matter</div>
+        <div class="galaxy-field" id="galaxyField" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <div class="meteor-field" id="meteorField" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </div>
+        <div class="ambient-status">
+          <span id="phaseCode">Form 01</span>
+          <i></i>
+          <span id="phaseStatus">Condensed matter / resting</span>
+        </div>
+        <button class="wxy-signature" id="wxySignature" type="button" aria-label="吴翔宇签名">
+          <span>wxy</span>
+        </button>
+        <div class="logo-loop-field" id="logoLoopField" aria-hidden="true"></div>
+
+        <div class="work-panel" id="workPanel" aria-live="polite">
+          <div class="work-sequence" id="workSequence">Chapter 01 / 05</div>
+          <h2 id="workTitle">作品</h2>
+          <div class="work-meta" id="workMeta">Works / Moving Image Archive</div>
+          <p class="work-summary" id="workSummary">影像作品被收进一个可继续进入的深空档案。</p>
+          <button class="enter-work" id="enterWork" type="button">
+            进入章节 <span>→</span>
+          </button>
+        </div>
+
+        <nav class="work-nav" id="workNav" aria-label="展览章节"></nav>
+        <div class="shockwave" id="shockwave"></div>
+      </div>
+    </section>
+
+    <section class="work-flow" id="workFlow" aria-label="作品图像流动">
+      <div class="work-flow-heading">
+        <small>Works / image current</small>
+        <h2>图像流动</h2>
+      </div>
+      <div class="accordion-gallery mind-accordion" id="mindAccordion" role="list">
+        <button class="ag-panel" type="button" role="listitem" aria-label="乡土远景">
+          <span class="ag-panel__frame"><span class="ag-panel__media"><img src="./assets/works/rural-field.png" alt="乡土远景"></span><span class="ag-panel__overlay"></span></span>
+          <span class="ag-panel__label"><span class="ag-panel__bar"></span><span class="ag-panel__text">乡土远景</span></span>
+        </button>
+        <button class="ag-panel" type="button" role="listitem" aria-label="桥上凝视">
+          <span class="ag-panel__frame"><span class="ag-panel__media"><img src="./assets/works/rural-bridge.png" alt="桥上凝视"></span><span class="ag-panel__overlay"></span></span>
+          <span class="ag-panel__label"><span class="ag-panel__bar"></span><span class="ag-panel__text">桥上凝视</span></span>
+        </button>
+        <button class="ag-panel" type="button" role="listitem" aria-label="黄昏背影">
+          <span class="ag-panel__frame"><span class="ag-panel__media"><img src="./assets/works/rural-dusk.png" alt="黄昏背影"></span><span class="ag-panel__overlay"></span></span>
+          <span class="ag-panel__label"><span class="ag-panel__bar"></span><span class="ag-panel__text">黄昏背影</span></span>
+        </button>
+        <button class="ag-panel" type="button" role="listitem" aria-label="宫殿双强">
+          <span class="ag-panel__frame"><span class="ag-panel__media"><img src="./assets/works/xianxia-duel.png" alt="宫殿双强"></span><span class="ag-panel__overlay"></span></span>
+          <span class="ag-panel__label"><span class="ag-panel__bar"></span><span class="ag-panel__text">宫殿双强</span></span>
+        </button>
+        <button class="ag-panel" type="button" role="listitem" aria-label="崖边相遇">
+          <span class="ag-panel__frame"><span class="ag-panel__media"><img src="./assets/works/xianxia-cliff.png" alt="崖边相遇"></span><span class="ag-panel__overlay"></span></span>
+          <span class="ag-panel__label"><span class="ag-panel__bar"></span><span class="ag-panel__text">崖边相遇</span></span>
+        </button>
+        <button class="ag-panel" type="button" role="listitem" aria-label="雨夜宫殿">
+          <span class="ag-panel__frame"><span class="ag-panel__media"><img src="./assets/works/rain-palace.png" alt="雨夜宫殿"></span><span class="ag-panel__overlay"></span></span>
+          <span class="ag-panel__label"><span class="ag-panel__bar"></span><span class="ag-panel__text">雨夜宫殿</span></span>
+        </button>
+        <button class="ag-panel" type="button" role="listitem" aria-label="竹林材质">
+          <span class="ag-panel__frame"><span class="ag-panel__media"><img src="./assets/works/bamboo-forest.png" alt="竹林材质"></span><span class="ag-panel__overlay"></span></span>
+          <span class="ag-panel__label"><span class="ag-panel__bar"></span><span class="ag-panel__text">竹林材质</span></span>
+        </button>
+      </div>
+      <div class="morph-flow" id="morphFlow" aria-label="作品图片变形流">
+        <img src="./assets/works/rural-field.png" alt="">
+        <img src="./assets/works/xianxia-duel.png" alt="">
+      </div>
+      <div class="circular-flow" id="circularFlow" tabindex="0" role="region" aria-label="弧形滚动图像廊"></div>
+    </section>
+
+    <section class="image-chapters" id="imageChapters" aria-label="作品影像章节">
+      <article class="image-chapter is-rural">
+        <figure><img src="./assets/works/rural-field.png" alt="男孩坐在石桥上望向云雾山村和梯田"></figure>
+        <div>
+          <small>Image chapter 01 / Distant Homeland</small>
+          <h2>乡土远景</h2>
+          <p>梯田、白墙村落、电线和背影共同组成第一组记忆坐标。它不是替代宇宙，而是宇宙里被读取出的第一枚真实图像。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-rural is-reverse">
+        <figure><img src="./assets/works/rural-bridge.png" alt="孩子坐在石桥上俯瞰村落和梯田"></figure>
+        <div>
+          <small>Image chapter 02 / Bridge memory</small>
+          <h2>桥上凝视</h2>
+          <p>人物背影、石桥和村落构成“回望”的结构。这里承接作品章节里的乡土记忆，让内容不再停留在文字占位。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-dusk">
+        <figure><img src="./assets/works/rural-dusk.png" alt="黄昏田野里人物背对镜头坐在树下"></figure>
+        <div>
+          <small>Image chapter 03 / Dusk residue</small>
+          <h2>黄昏背影</h2>
+          <p>暖色、树影和田埂把乡土章节推向更私人、更沉默的方向。它补足“回不去的乡”的情绪尾音。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-palace is-wide">
+        <figure><img src="./assets/works/xianxia-duel.png" alt="金色宫殿中红衣与黑衣角色对峙"></figure>
+        <div>
+          <small>Image chapter 04 / Oriental fantasy</small>
+          <h2>宫殿双强</h2>
+          <p>中轴、王座、红毯和双人对峙形成明确的视觉中心。V23 保留宇宙结构，同时让作品图像真正成为主角。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-cliff is-reverse">
+        <figure><img src="./assets/works/xianxia-cliff.png" alt="悬崖边两位仙侠人物在日落下相对站立"></figure>
+        <div>
+          <small>Image chapter 05 / Cliff encounter</small>
+          <h2>崖边相遇</h2>
+          <p>关系从宫殿转向天地。海雾、松枝和远处夕光让人物对峙获得更开阔的空间压力。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-rain">
+        <figure><img src="./assets/works/rain-palace.png" alt="暴雨中的东方宫殿、湿地反光和红灯笼"></figure>
+        <div>
+          <small>Image chapter 06 / Wet classicism</small>
+          <h2>雨夜宫殿</h2>
+          <p>雨幕、蓝灰冷光、红灯笼和湿地反射构成色彩研究。它对应实验章节里的材质与运动样本。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-bamboo is-reverse">
+        <figure><img src="./assets/works/bamboo-forest.png" alt="金色光线穿过密集竹林"></figure>
+        <div>
+          <small>Image chapter 07 / Bamboo material</small>
+          <h2>竹林材质</h2>
+          <p>竹子的竖向密度、前景虚化和金色光雾形成材质章节。它不抢走宇宙，只补充作品集的真实肌理。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter image-atlas">
+        <div class="atlas-strip">
+          <img src="./assets/works/rural-field.png" alt="">
+          <img src="./assets/works/rural-bridge.png" alt="">
+          <img src="./assets/works/rural-dusk.png" alt="">
+          <img src="./assets/works/xianxia-duel.png" alt="">
+          <img src="./assets/works/xianxia-cliff.png" alt="">
+          <img src="./assets/works/rain-palace.png" alt="">
+          <img src="./assets/works/bamboo-forest.png" alt="">
+        </div>
+        <div>
+          <small>Image chapter 08 / Ordered atlas</small>
+          <h2>图像星图</h2>
+          <p>按元素关系组织，而不是做图片堆叠：乡土背影、仙侠双人关系、雨夜材质、竹林纵深，分别进入作品、实验和方法章节。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-method">
+        <div class="method-lines">
+          <span>Universe remains</span>
+          <span>Images become memory nodes</span>
+          <span>Archive grows from real works</span>
+        </div>
+        <div>
+          <small>Image chapter 09 / System repair</small>
+          <h2>系统修正</h2>
+          <p>这一轮的重点是不删除脑海宇宙，而是在宇宙中接入真实作品，让原本的交互、章节和档案舱继续成立。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-future">
+        <figure><img src="./assets/works/rain-palace.png" alt="雨夜宫殿作为未来扩展的色彩样本"></figure>
+        <div>
+          <small>Image chapter 10 / Open route</small>
+          <h2>未来航线</h2>
+          <p>下一步可以继续为每张图补充生成过程、工具链、失败版本和视频片段，让记忆舱真正变成作品档案系统。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="boundary" id="boundary">
+      <small>Exhibition boundary / the archive remains open</small>
+      <h2>展览抵达边界，脑海仍在继续生成。</h2>
+      <p>作品、书籍、学习和实验在这里共享一套坐标，但它们不会被压成同一种内容。</p>
+      <div class="boundary-signals" aria-label="开放边界信号">
+        <button type="button" data-boundary-signal="0">
+          <span>06-A</span>
+          <strong>真实素材接入</strong>
+          <small>Stills / video / image evidence</small>
+        </button>
+        <button type="button" data-boundary-signal="1">
+          <span>06-B</span>
+          <strong>失败版本库</strong>
+          <small>Rejected shots / process memory</small>
+        </button>
+        <button type="button" data-boundary-signal="2">
+          <span>06-C</span>
+          <strong>未来航线</strong>
+          <small>Unnamed work / next orbit</small>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress"><i id="progressLine"></i></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-label" id="cursorLabel">Disturb</div>
+  <div class="background-ripple" id="backgroundRipple"></div>
+  <div class="image-cut" id="imageCut" aria-hidden="true"><span>Memory cut</span></div>
+  <div class="authority-field" id="authorityField" aria-hidden="true">
+    <i></i>
+    <span>Gravity lock</span>
+  </div>
+
+  <section class="index-overlay" id="indexOverlay" role="dialog" aria-modal="true" aria-labelledby="indexTitle">
+    <button class="overlay-close" id="indexClose" type="button" aria-label="关闭展览目录">×</button>
+    <div class="index-heading">
+      <small>Five exhibition chapters</small>
+      <h2 id="indexTitle">展览目录</h2>
+    </div>
+    <div class="index-list" id="indexList"></div>
+  </section>
+
+  <section class="memory-overlay memory-composition" id="memoryOverlay" role="dialog" aria-modal="true" aria-labelledby="memoryTitle">
+    <button class="overlay-close" id="memoryClose" type="button" aria-label="关闭展览章节">×</button>
+    <div class="memory-visual">
+      <figure class="memory-image">
+        <img src="./assets/space-hero.png" alt="">
+        <div class="memory-signal" id="memorySignal">Memory signal 01</div>
+        <div class="memory-frame-code" id="memoryFrameCode">Master frame / 01</div>
+        <div class="memory-scan-field" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </div>
+        <i class="memory-scan"></i>
+      </figure>
+      <div class="memory-title-rail">
+        <small id="memoryKicker">AI Short Film / Distant Homeland</small>
+        <h2 id="memoryTitle">回不去的乡</h2>
+        <div class="memory-english" id="memoryEnglish">Distant Homeland</div>
+      </div>
+      <div class="memory-fragments" id="memoryFragments" aria-label="作品影像片段">
+        <figure><img src="./assets/space-hero.png" alt=""><figcaption>Fragment / 01</figcaption></figure>
+        <figure><img src="./assets/space-hero.png" alt=""><figcaption>Fragment / 02</figcaption></figure>
+        <figure><img src="./assets/space-hero.png" alt=""><figcaption>Fragment / 03</figcaption></figure>
+      </div>
+      <div class="memory-map" id="memoryMap" aria-label="章节内部坐标"></div>
+    </div>
+    <div class="memory-body" data-lenis-prevent>
+      <div class="memory-section-heading">
+        <span id="memoryOrdinal">01</span>
+        <small>Archive chamber</small>
+      </div>
+      <p class="memory-description memory-lead" id="memoryDescription"></p>
+      <div class="memory-sample-strip" id="memorySampleStrip" aria-label="章节采样信号"></div>
+      <div class="chapter-ledger" id="chapterLedger" aria-label="章节内容"></div>
+      <dl class="memory-facts">
+        <div><dt>Current focus</dt><dd id="memoryRole"></dd></div>
+        <div><dt>Archive structure</dt><dd id="memoryGoal"></dd></div>
+        <div><dt>Methods</dt><dd id="memoryTools"></dd></div>
+        <div><dt>Contents</dt><dd id="memoryOutput"></dd></div>
+        <div><dt>Ongoing</dt><dd id="memoryReflection"></dd></div>
+        <div><dt>Open edge</dt><dd id="memoryEdge"></dd></div>
+      </dl>
+      <div class="memory-process-axis" id="memoryProcessAxis" aria-label="创作过程">
+        <span><b>01</b>Collect</span>
+        <span><b>02</b>Distill</span>
+        <span><b>03</b>Compose</span>
+        <span><b>04</b>Remain open</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="fallback" id="fallback">
+    动效库或 WebGL 没有成功加载。请保持网络可用并刷新页面，以查看完整的航行体交互。
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  <script src="./v23.js"></script>
+  <script src="./v28-motion.js"></script>
+</body>
+</html>

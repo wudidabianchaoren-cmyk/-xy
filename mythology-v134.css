@@ -1,0 +1,18 @@
+html,body{background:#555d5d}
+.odyssey-heading{position:absolute;top:112px;left:36px;right:auto;padding:0!important;pointer-events:none}
+.odyssey-heading .odyssey-scene-index,.odyssey-heading .odyssey-scene-credit{display:none}
+.odyssey-heading h2{display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-family:"Noto Serif SC","Songti SC",SimSun,serif;font-size:27px!important;font-weight:400;line-height:1.45;margin:0!important;color:#23382e;text-shadow:none}
+.odyssey-heading h2 span+span{font-size:14px;letter-spacing:.1em}
+.odyssey-exit{top:30px;left:36px;background:#1e2c2bd9;color:#f0e6d2}
+.odyssey-tools{top:30px!important;right:30px!important}
+.odyssey-tools button{background:#1e2c2bd9!important;color:#f0e6d2!important}
+.coast-views{position:absolute;bottom:26px;right:30px;display:flex;align-items:center;gap:4px;white-space:nowrap}
+.coast-views button{padding:12px 17px;border:0;background:#1e2c2bde;color:#e6ddca;font:13px "Microsoft YaHei",sans-serif;cursor:pointer;transition:background .2s,color .2s}
+.coast-views button:hover{background:#344640}
+.coast-views button[aria-pressed=true]{background:#e4d7bc;color:#24352f}
+.coast-views span{color:#f2e5cf;font-size:12px;margin-left:14px;text-shadow:0 2px 8px #14241e}/* taste-skill-ignore: functional text overlay on changing water luminance */
+.coast-views button:focus-visible,.odyssey-tools button:focus-visible,.odyssey-exit:focus-visible{outline:2px solid #fff0ca;outline-offset:4px}
+.odyssey-preparing{background:#263b3c}
+.odyssey-preparing p{color:#efe3ce}
+::selection{background:#e4d7bc;color:#213b32}
+body:has(.odyssey-preparing) .odyssey-heading,body:has(.odyssey-preparing) .coast-views{visibility:hidden}

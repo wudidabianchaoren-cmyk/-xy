@@ -1,0 +1,2 @@
+import bpy,bmesh,json
+giant=bpy.data.objects.get('V106_CYCLOPS / retained anatomical base, new male sculpt');body=next(o for o in giant.children_recursive if o.type=='MESH' and 'Human.body' in o.name);bm=bmesh.new();bm.from_mesh(body.data);edges=[e for e in bm.edges if e.is_boundary];chest=[e for e in edges if all(1.0<v.co.z<1.46 and v.co.y<-.04 for v in e.verts)];print(json.dumps({'bodyName':body.name,'boundaryEdges':len(edges),'chestBoundaryEdges':len(chest),'chestSamples':[[list(v.co) for v in e.verts] for e in chest[:5]]}));bm.free()

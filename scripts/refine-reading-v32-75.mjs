@@ -1,0 +1,41 @@
+import {readFile,writeFile} from 'node:fs/promises';
+let s=await readFile('src/reading-book.ts','utf8');
+const edit=(a,b)=>{if(!s.includes(a))throw Error('Missing reading edit: '+a.slice(0,50));s=s.replace(a,b);};
+edit("import * as THREE from 'three';","import * as THREE from 'three';\nimport {readingNook} from './reading-nook';");
+edit('renderer.toneMappingExposure=1.3','renderer.toneMappingExposure=.95');
+edit('new THREE.HemisphereLight(0xffffff,0xc7c0a7,2.1)','new THREE.HemisphereLight(0x8faaa7,0x171712,.25)');
+edit('new THREE.DirectionalLight(0xfff3df,3.0)','new THREE.DirectionalLight(0xffd098,2.0)');
+edit('new THREE.DirectionalLight(0xe5edf7,1.1)','new THREE.DirectionalLight(0x97b9c0,.28)');
+edit('book.rotation.set(Math.PI/2,-.25,.045);book.position.y=H/2+.20','book.rotation.set(Math.PI/2,0,0);book.position.y=H/2+.22;book.position.x=-W/2');
+const start=s.indexOf('const shelf=new THREE.Group()'),end=s.indexOf('const textureLoader=',start);
+if(start<0||end<0)throw Error('Shelf block missing');
+s=s.slice(0,start)+"const nook=readingNook(scene),shelf=nook.root;\nconst SPREADS:number[][]=[...Array.from({length:12},(_,i)=>[2+i*2,3+i*2]),[26,1]];\n"+s.slice(end);
+edit('let manifest:BookManifest,opened=false,spread=0,currentPage=1','let manifest:BookManifest,opened=false,spread=0,currentPage=2');
+edit('opened:false,spread:0,currentPage:1','opened:false,spread:0,currentPage:2');
+edit('pageBlockThickness:THICK','pageBlockThickness:THICK,pairedPages:[2,3],readingMode:\'original-facing-spreads\',uprightOnShelf:true,shelfWidth:3.9');
+edit('Math.floor((Number(button.dataset.page)-1)/2)===spread','SPREADS[spread].includes(Number(button.dataset.page))');
+edit('currentPage=spread*2+1;[leftMaterial.map,rightMaterial.map]=await Promise.all([texture(currentPage),texture(currentPage+1)])','currentPage=SPREADS[spread][0];state.pairedPages=SPREADS[spread];[leftMaterial.map,rightMaterial.map]=await Promise.all(SPREADS[spread].map(texture))');
+edit('texture(delta>0?spread*2+2:spread*2+1),texture(delta>0?target*2+1:target*2+2)','texture(SPREADS[spread][delta>0?1:0]),texture(SPREADS[target][delta>0?0:1])');
+edit('texture(target*2+2)','texture(SPREADS[target][1])');edit('texture(target*2+1)','texture(SPREADS[target][0])');
+edit('setSpread(Math.floor((Math.max(1,Math.min(26,Number(field.value)))-1)/2))','setSpread(SPREADS.findIndex(p=>p.includes(Math.max(1,Math.min(26,Number(field.value))))))');
+const fullStart=s.indexOf('function fullPage('),fullEnd=s.indexOf("document.getElementById('zoomPage')",fullStart);
+s=s.slice(0,fullStart)+`function fullPage(number:number){
+ const index=SPREADS.findIndex(p=>p.includes(THREE.MathUtils.clamp(number,1,26)));spread=Math.max(0,index);currentPage=SPREADS[spread][0];state.pairedPages=SPREADS[spread];
+ for(const [i,id] of ['fullPageImage','fullPageRight'].entries()){const image=document.getElementById(id) as HTMLImageElement,p=SPREADS[spread][i];image.src='./assets/reading/cinema-aesthetics/'+manifest.pages[p-1].image;image.alt='《电影美学》原稿第 '+p+' 页';image.dataset.page=String(p);}
+ document.getElementById('readerPageLabel')!.textContent=spread===12?'封底 · 封面':SPREADS[spread].join(' — ')+' / 26';state.currentPage=currentPage;updateControls();if(!dialog.open)dialog.showModal();
+}
+`+s.slice(fullEnd);
+edit('()=>fullPage(spread*2+1)','()=>fullPage(SPREADS[spread][0])');
+edit('()=>fullPage(currentPage-1)','()=>fullPage(SPREADS[Math.max(0,spread-1)][0])');
+edit('()=>fullPage(currentPage+1)','()=>fullPage(SPREADS[Math.min(12,spread+1)][0])');
+edit("dialog.addEventListener('close',()=>void setSpread(Math.floor((currentPage-1)/2)))","dialog.addEventListener('close',()=>void setSpread(spread))");
+edit('if(dialog.open)fullPage(currentPage+1)','if(dialog.open)fullPage(SPREADS[Math.min(12,spread+1)][0])');
+edit('if(dialog.open)fullPage(currentPage-1)','if(dialog.open)fullPage(SPREADS[Math.max(0,spread-1)][0])');
+edit('fullPage(spread*2+(e.clientX<rect.left+rect.width/2?1:2))','fullPage(SPREADS[spread][0])');
+edit('setSpread(Math.floor((page.number-1)/2))','setSpread(SPREADS.findIndex(p=>p.includes(page.number)))');
+edit('opened?tiltY:-.25','opened?tiltY:0');edit('opened?0:.045','0');
+edit('opened?.20:H/2+.20','opened?.20:H/2+.22');
+edit('new THREE.Vector3(0,4.6,9)','new THREE.Vector3(0,3.7,camera.aspect<1?11:8.0)');
+edit('camera.lookAt(0,opened?0:1.2,0)','camera.lookAt(0,opened?0:1.9,0);nook.update(clock.elapsedTime)');
+await writeFile('src/reading-book.ts',s);
+console.log('Upright fitted book and original facing spreads (including connected pages 4–5).');

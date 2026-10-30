@@ -1,0 +1,10 @@
+.portfolio-child-portal{position:fixed;inset:0;z-index:18000;background:#101714}
+.portfolio-child-portal iframe{display:block;width:100%;height:100%;border:0}
+body.portfolio-portal-open{overflow:hidden!important}
+body.portfolio-portal-open>#portfolioProgress,body.directory-music-open #portfolioProgress{display:none!important}
+[data-cottage-process]{background:transparent!important;border:0!important;box-shadow:none!important;width:42px!important;height:42px!important;padding:0!important;border-radius:50%}
+[data-cottage-process]::before,[data-cottage-process]::after{content:'';position:absolute;left:50%;top:50%;width:12px;height:12px;border:1px solid #f4e5c577;border-radius:50%;animation:cottage-ring 2.6s ease-out infinite;background:transparent!important}
+[data-cottage-process]::after{animation-delay:1.3s}
+[data-cottage-process]>span{background:transparent!important;box-shadow:0 0 7px #fff0c330!important;animation:none!important;border:1px solid #f4e5c5!important;width:8px!important;height:8px!important}
+@keyframes cottage-ring{0%{transform:translate(-50%,-50%) scale(.7);opacity:.7}100%{transform:translate(-50%,-50%) scale(2.2);opacity:0}}
+@media(prefers-reduced-motion:reduce){[data-cottage-process]::before,[data-cottage-process]::after{animation:none}}

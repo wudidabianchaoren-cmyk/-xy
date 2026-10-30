@@ -1,0 +1,31 @@
+import json, math, wave, pathlib, sys
+sys.path.insert(0,'E:/Brain-Universe-assets/V32-69/python-deps')
+import numpy as np
+out=pathlib.Path('assets/works/physical-universe-v102');sr=48000;duration=18
+audio=np.zeros((sr*duration,2),dtype=np.float64);rng=np.random.default_rng(1021)
+record=json.loads((out/'physics-record.json').read_text('utf-8'))
+def pan(t): return record[min(len(record)-1,int(t*240))]['x']
+def add(t,samples,gain=1):
+ start=int(t*sr);length=min(len(samples),len(audio)-start)
+ if length<=0:return
+ x=pan(t);audio[start:start+length,0]+=samples[:length]*gain*math.cos(x*math.pi/2);audio[start:start+length,1]+=samples[:length]*gain*math.sin(x*math.pi/2)
+def strike(t,base,gain):
+ tt=np.arange(int(sr*.9))/sr
+ sig=sum(np.sin(2*math.pi*base*ratio*tt)*np.exp(-tt*(4+i*1.8))/(i+1)**1.4 for i,ratio in enumerate([1,2.71,4.13,6.47]))
+ sig*=np.minimum(tt*sr/150,1);add(t,sig,gain)
+# Locate the actual first compression; audio is attached to the same input force.
+contact=next(r['t'] for r in record if r['force']>.13)
+tt=np.arange(int(sr*.6))/sr;add(contact,np.tanh(np.sin(2*math.pi*(64*tt-23*tt*tt))*2)*np.exp(-tt*8),.17)
+strike(contact+.025,185,.075)
+for t in [1.55,2.85,4.2,5.5,6.75,8.1,9.35,10.65,11.95,13.0,14.4,15.15,15.85,16.5]:strike(t,432 if t<10 else 324,.055)
+for t in [1.35,2.65,3.95,5.25,6.55,7.9,9.2,10.45,11.75,12.85,14.2,16.3]:
+ n=int(sr*1.2);tt=np.arange(n)/sr;noise=rng.normal(0,1,n);low=np.convolve(noise,np.ones(19)/19,'same');upper=np.convolve(noise,np.ones(3)/3,'same');air=(upper-low)*np.sin(math.pi*tt/1.2)**2;add(t,air,.018)
+# Restrained pulse bed, authored and synthesized locally; no stock audio.
+for t in np.arange(.375,17.6,.375):
+ tt=np.arange(int(sr*.32))/sr;beat=np.sin(2*math.pi*(48*tt-20*tt*tt))*np.exp(-tt*19);add(float(t),beat,.045)
+tt=np.arange(sr*duration)/sr
+bed=sum(np.sin(2*math.pi*f*tt+p) for f,p in [(110,.1),(164.81,.4),(220,.2)])/3
+envelope=np.minimum(tt/2,1)*np.minimum((18-tt)/3,1);audio+=bed[:,None]*envelope[:,None]*.022
+peak=np.max(np.abs(audio));audio*=10**(-8/20)/max(peak,1e-9)
+with wave.open(str(out/'soundtrack.wav'),'wb')as w:w.setnchannels(2);w.setsampwidth(2);w.setframerate(sr);w.writeframes((audio*32767).astype('<i2').tobytes())
+(out/'audio-record.json').write_text(json.dumps({'sampleRate':sr,'channels':2,'duration':18,'peakDBFS':-8,'firstPhysicalContact':contact,'panning':'same input spline screen x','method':'seeded bandpass air / inharmonic glass / pitch-dropping saturated sub / synthesized pulse bed'},indent=2),encoding='utf-8')

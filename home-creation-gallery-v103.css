@@ -1,0 +1,17 @@
+/* One physical image width for the original process images and the two collages.
+   Natural aspect ratios are preserved; taller process images travel through the
+   fixed glass window instead of shrinking into shallow collage slots. */
+html:has(body[data-project="home-creation"]){scroll-snap-type:none!important;scroll-padding-top:0;scroll-behavior:auto}
+.home-creation .glass-frame{left:18%;top:12%;width:64%;height:76%}
+.home-creation .glass-wall{background:#050505}
+.home-creation .glass-reflection{height:12%}
+.home-creation .reflection-top{top:0;clip-path:polygon(0 0,100% 0,82% 100%,18% 100%)}
+.home-creation .reflection-bottom{top:88%;clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.home-creation .glass-reflection .glass-artwork{left:18%;width:64%;height:633.333333333%}
+.home-creation .reflection-top .glass-artwork{top:-533.333333333%}
+.home-creation .reflection-bottom .glass-artwork{top:0}
+.home-creation .glass-track{position:absolute;left:0;top:0;width:100%;will-change:transform;transform:translate3d(0,0,0)}
+.home-creation .glass-room .glass-track img{display:block;width:100%;height:auto;aspect-ratio:var(--frame-ratio);object-fit:contain!important;object-position:center;flex:none;background:#050505}
+.home-creation .glass-plane .glass-artwork{transform:scaleY(-1)}
+.home-creation .home-gallery-fallback{left:18%;top:12%;width:64%;height:76%;overflow:hidden;display:block}
+.home-creation .home-gallery-fallback img{width:100%;height:auto;object-fit:contain}

@@ -1,0 +1,50 @@
+.splash-cursor-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 24;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transition: opacity 700ms ease;
+}
+
+body.experience-entered .splash-cursor-layer {
+  opacity: .48;
+}
+
+.splash-cursor-layer canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  filter: blur(.15px) saturate(1.22);
+}
+
+.splash-cursor-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at var(--splash-x, 50%) var(--splash-y, 50%), rgba(215, 176, 111, .075), transparent 16%),
+    radial-gradient(circle at calc(var(--splash-x, 50%) + 12%) calc(var(--splash-y, 50%) - 9%), rgba(155, 190, 192, .045), transparent 22%);
+  opacity: var(--splash-glow, 0);
+  transition: opacity 260ms ease;
+}
+
+.memory-overlay.is-open ~ .splash-cursor-layer,
+.index-overlay.is-open ~ .splash-cursor-layer,
+.loader:not([aria-hidden="true"]) ~ .splash-cursor-layer {
+  opacity: 0;
+}
+
+@media (max-width: 720px) {
+  body.experience-entered .splash-cursor-layer {
+    opacity: .34;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-cursor-layer {
+    display: none;
+  }
+}

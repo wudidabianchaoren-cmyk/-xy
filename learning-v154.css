@@ -1,0 +1,4 @@
+/* The existing reading surface, warmed to the portfolio's paper palette. */
+:root{--paper:#e9e5dc;--ink:#282b29;--muted:#596255;--wash:#dfded4;--focus:#436352}
+.image-reader{background:var(--paper)}
+::-webkit-scrollbar-thumb{border-color:var(--paper)}

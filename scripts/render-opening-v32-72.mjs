@@ -1,0 +1,15 @@
+import {createRequire} from 'node:module';
+import {mkdir,copyFile,writeFile,readFile} from 'node:fs/promises';
+import path from 'node:path';import {createHash} from 'node:crypto';
+const modules='E:/Brain-Universe-assets/V32-72/video-tools/node_modules',require=createRequire(modules+'/remotion/package.json');
+const {bundle}=require('@remotion/bundler'),{renderMedia,selectComposition,renderStill}=require('@remotion/renderer');
+const folder='motion/remotion-v32-72';await mkdir(folder+'/public',{recursive:true});
+await copyFile('assets/loading-study/v32-72/expanded-scientific-atlas.png',folder+'/public/expanded-scientific-atlas.png');await copyFile('assets/loading-study/v32-71/perception-engraving-atlas.png',folder+'/public/perception-engraving-atlas.png');
+const serveUrl=await bundle({entryPoint:path.resolve(folder+'/src/index.tsx'),publicDir:path.resolve(folder+'/public'),webpackOverride:c=>({...c,resolve:{...c.resolve,modules:[...(c.resolve.modules||['node_modules']),modules]}})});
+const composition=await selectComposition({serveUrl,id:'MindUniverseOpening'});
+await renderStill({serveUrl,composition,output:'assets/loading-study/opening-poster-v32-72.png',frame:18,imageFormat:'png'});
+for(const [name,frame] of [['look',52],['negative',209],['mechanism',329],['recurse',424],['title',583]])await renderStill({serveUrl,composition,output:'.verify/v32-72/opening-'+name+'.png',frame,imageFormat:'png'});
+let last=-1;await renderMedia({serveUrl,composition,codec:'h264',outputLocation:'assets/loading-study/loading-study-v32-72.mp4',crf:17,concurrency:2,onProgress:p=>{const n=Math.floor(p.progress*10);if(n!==last){last=n;console.log('Remotion opening '+n*10+'%');}}});
+const sha=x=>createHash('sha256').update(x).digest('hex');
+const result={passed:true,renderer:'Actual installed Remotion',frames:600,fps:30,duration:20,width:1536,height:864,beats:19,images:15,videoSha256:sha(await readFile('assets/loading-study/loading-study-v32-72.mp4')),sourceSha256:sha(await readFile('motion/loading-study-v3/opening.js'))};
+await writeFile('.verify/v32-72/opening-production.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));

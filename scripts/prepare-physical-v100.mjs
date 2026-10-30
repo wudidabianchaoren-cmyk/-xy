@@ -1,0 +1,18 @@
+import fs from 'node:fs/promises';
+await fs.mkdir('motion/physical-universe-v100',{recursive:true});await fs.mkdir('.verify/v32-100',{recursive:true});
+const old=await fs.readFile('motion/physical-universe-v99/film.js','utf8');
+let core=old.slice(0,old.indexOf('// Original procedural visual studies'));
+core=core.replace('name or website screenshot','name or website screenshot').replace(/function frameMark\(t,title\)\{[^\n]+\}/,'function frameMark(){}');
+core=core.replace('"Microsoft YaHei",sans-serif','Arial,sans-serif');
+const bitmap=old.slice(old.indexOf('const tc=document'),old.indexOf('function aperture'));
+let weave=old.slice(old.indexOf('function weave(t)'),old.indexOf('function opening(t)'));
+weave=weave.replace("frameMark(t,'04 / 组织视觉');text('让视觉，有自己的语言。',100,265,67,C.ink,500);","if(!study)text('Make images feel alive.',160,225,66,C.ink,400,'Arial,sans-serif');");
+weave=weave.replace("text('构图 / 光线 / 材质 / 节奏',100,910,25,'#6d7971');",'');
+const drawing=await fs.readFile('motion/physical-universe-v100/drawing.js','utf8');
+await fs.writeFile('motion/physical-universe-v100/film.js',core+bitmap+weave+drawing);
+await fs.writeFile('motion/physical-universe-v100/index.html','<!doctype html><html lang="en"><meta charset="utf-8"><title>Make images feel alive</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f5f6f1}canvas{display:block;width:100%;height:100%;object-fit:contain}#hud{position:fixed;left:24px;top:20px;font:12px monospace;display:none}</style><canvas width="1920" height="1080"></canvas><output id="hud"></output><script src="film.js"></script></html>');
+let render=await fs.readFile('scripts/render-physical-universe-v99.mjs','utf8');render=render.replaceAll('physical-universe-v99','physical-universe-v100').replaceAll('v32-99','v32-100').replaceAll('make-physical-audio-v99','make-physical-audio-v100').replace("['frame-01',6.4],['frame-02',9.6],['frame-03',13.1],['frame-04',16.2]","['frame-01',2.4],['frame-02',6.4],['frame-03',10.2],['frame-04',13.1]");
+render=render.replace("console.log('Native film and lossless master finished.');","await run(process.execPath,['scripts/physical-studies-v100.mjs']);console.log('Native film, wide studies and lossless master finished.');");await fs.writeFile('scripts/render-physical-universe-v100.mjs',render);
+let audio=await fs.readFile('scripts/make-physical-audio-v99.py','utf8');audio=audio.replaceAll('physical-universe-v99','physical-universe-v100').replace('default_rng(991)','default_rng(1001)').replace('strike(5.05,432,.09);strike(8.05,510,.1);strike(11.45,324,.085);strike(15.03,432,.065)','strike(5.6,432,.06);strike(8.1,510,.065);strike(11.55,324,.085)').replace('[2.6,5,8,11.4,15]','[3.2,7.7,11.4]').replace('np.arange(2.7,15.4,.6)','np.arange(3.3,16.2,.75)').replace('beat,.075','beat,.045');await fs.writeFile('scripts/make-physical-audio-v100.py',audio);
+let studies=await fs.readFile('scripts/physical-studies-v99.mjs','utf8');studies=studies.replaceAll('physical-universe-v99','physical-universe-v100').replace('const shots=[6.4,9.6,13.1,16.2]','const shots=[2.4,6.4,10.2,13.1]').replace('?study&t=6.4','?study&t=2.4');await fs.writeFile('scripts/physical-studies-v100.mjs',studies);
+console.log('V100 native pipeline prepared; accepted weave reused');

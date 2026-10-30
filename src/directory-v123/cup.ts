@@ -1,0 +1,10 @@
+import * as THREE from'three';
+export function createCupEffect(scene:THREE.Scene){
+ const position=new THREE.Vector3(-.73,.884,.56),count=22,points=new Float32Array(count*3),geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(points,3));
+ const material=new THREE.PointsMaterial({color:0xe8e7da,size:.014,transparent:true,opacity:0,depthWrite:false,sizeAttenuation:true});
+ const canvas=document.createElement('canvas');canvas.width=64;canvas.height=64;const ctx=canvas.getContext('2d')!,g=ctx.createRadialGradient(32,32,0,32,32,32);g.addColorStop(0,'#ffffff70');g.addColorStop(1,'#ffffff00');ctx.fillStyle=g;ctx.fillRect(0,0,64,64);const texture=new THREE.CanvasTexture(canvas);material.map=texture;
+ const steam=new THREE.Points(geometry,material);steam.frustumCulled=false;steam.name='Warm cup steam / click response';scene.add(steam);
+ const rings=Array.from({length:3},(_,i)=>{const m=new THREE.Mesh(new THREE.RingGeometry(.8,1,64),new THREE.MeshBasicMaterial({color:0xd5bd8c,transparent:true,opacity:0,side:THREE.DoubleSide,depthWrite:false}));m.rotation.x=-Math.PI/2;m.position.copy(position);m.position.y+=i*.00015;scene.add(m);return m});
+ let last=-100;
+ return{pulse(t:number){last=t},update(t:number,reduced:boolean){const a=t-last,on=a>=0&&a<4;material.opacity=on?.32*Math.min(1,a/.3)*(1-a/4):0;for(let i=0;i<count;i++){const phase=(a*.37+i/count)%1,angle=i*2.399+phase*3;points[i*3]=position.x+Math.sin(angle)*(.008+phase*.017);points[i*3+1]=position.y+.025+phase*.16;points[i*3+2]=position.z+Math.cos(angle)*(.008+phase*.014)}geometry.attributes.position.needsUpdate=true;rings.forEach((r,i)=>{const u=(a-i*.15)/1.45;r.visible=on&&u>=0&&u<1&&!reduced;const radius=.006+Math.max(0,u)*.051;r.scale.setScalar(radius);(r.material as THREE.MeshBasicMaterial).opacity=r.visible?.20*(1-u):0})},destroy(){geometry.dispose();material.dispose();texture.dispose();rings.forEach(r=>{r.geometry.dispose();(r.material as THREE.Material).dispose()})}};
+}

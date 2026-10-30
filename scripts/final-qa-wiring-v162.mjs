@@ -1,0 +1,3 @@
+import fs from'node:fs/promises';
+const p='.verify/v32-162/check-slow-entry.mjs';let s=await fs.readFile(p,'utf8');s=s.replace("r.failure=e.stack;r.passed=false;", "r.failure=e.stack;r.passed=false;r.debug=await p.evaluate(()=>({boot:[...portfolioBoot.entries],home:homeClockState?.preparePhases,ready:homeClockState?.ready,room:window.directoryState?.ready,progress:window.directoryPreparationProgress,film:{time:document.querySelector('.prelude-opening-video')?.currentTime,paused:document.querySelector('.prelude-opening-video')?.paused},intro:window.homeDesignedIntroState})).catch(()=>null);");await fs.writeFile(p,s);
+console.log('Late-module race fixed; slow-entry failure records actual preparation state');

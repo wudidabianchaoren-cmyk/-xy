@@ -1,0 +1,5 @@
+import{createRequire}from'node:module';import fs from'node:fs/promises';
+const tools='E:/Brain-Universe-assets/V32-61/toolchain/node_modules';const{build}=createRequire(tools+'/esbuild/package.json')('esbuild');
+const common={bundle:true,format:'esm',target:'es2022',minify:true,sourcemap:true,nodePaths:['E:/codex/toolchains/directory-v119/node_modules',tools,'E:/Brain-Universe-assets/V32-72/video-tools/node_modules','E:/Brain-Universe-assets/V32-84/react-motion/node_modules','E:/Brain-Universe-assets/V32-84/geometry-acceleration/node_modules'],jsx:'automatic',loader:{'.ttf':'file'}};
+const outputs=[];for(const [input,output]of [['src/directory-v135/app.tsx','scene-dist/directory-v135/app.js'],['src/reading-book.ts','scene-dist/reading-book-v135.js']]){const r=await build({...common,entryPoints:[input],outfile:output,metafile:true});outputs.push(...Object.keys(r.metafile.outputs));}
+await fs.writeFile('.verify/v32-135/build.json',JSON.stringify(outputs,null,2));console.log('Built only directory and reading shelf.');

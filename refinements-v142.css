@@ -1,0 +1,60 @@
+@font-face{font-family:ZaojingTitle;src:url('./assets/wordmark-v142/wordmark.ttf') format('truetype');font-weight:500;font-display:swap}
+.topbar .brand strong,.courtyard-inscription{font-family:ZaojingTitle,'Noto Serif SC',serif!important;font-weight:500}
+.topbar .brand strong{letter-spacing:.12em;font-size:28px}
+.topbar .brand small{font-size:12px!important;line-height:1.6;letter-spacing:.025em}
+.courtyard-inscription{font-size:30px!important;letter-spacing:.12em;color:#d8c18d!important}
+.courtyard-inscription small{font:12px/1.8 'Microsoft YaHei',sans-serif!important;letter-spacing:.06em!important;margin-top:8px}
+.entry-gate{background:#101918 url('./assets/entry-v142/home-dusk.png') 65% center/cover no-repeat!important;cursor:auto}
+.entry-gate::after{background:linear-gradient(90deg,rgba(8,17,18,.83),rgba(8,17,18,.4) 55%,rgba(8,17,18,.18))!important}
+.entry-field,.entry-live-field,.entry-axis{display:none!important}
+.entry-code{top:7%;left:7%;right:7%;font:13px/1.6 'Microsoft YaHei',sans-serif!important;color:#d3d5cd;letter-spacing:.03em;text-transform:none}
+.entry-title{left:7%!important;top:52%!important;width:min(760px,68vw)!important;transform:translateY(-50%)!important;display:flex!important;flex-wrap:wrap;gap:0 22px;cursor:pointer}
+.entry-title-line,.entry-title-line.is-offset{font:500 clamp(70px,6.5vw,116px)/1.25 ZaojingTitle,serif!important;letter-spacing:.09em!important;margin:0!important;transform:none}
+.entry-title-line i{min-width:0!important;will-change:auto}
+.entry-title small{width:100%;margin:28px 0 0!important;justify-content:flex-start;font:14px/1.7 'Microsoft YaHei',sans-serif!important;letter-spacing:.08em;color:#e0ddd2}
+.entry-title small::before{display:none}.entry-title b{font-size:22px}
+.sand-story-topline{font:13px/1.6 'Microsoft YaHei',sans-serif!important;letter-spacing:.025em!important}
+.sand-story-topline span{font-size:13px!important}
+.portfolio-child-portal iframe[hidden]{display:none!important}
+.portfolio-child-portal iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#0c1517}
+.reading-tip{font:14px/1.8 'Microsoft YaHei',sans-serif!important;color:#d7d6c7!important;max-width:760px;margin:18px auto 8px!important;text-align:center}
+.book-is-open .reading-tip{position:fixed;z-index:12;left:50%;bottom:104px;transform:translateX(-50%);width:max-content;max-width:85vw;margin:0!important;padding:10px 18px;background:#17221ff0;border-radius:6px;pointer-events:none}
+body:has(#bookStage)>header>span{font:14px/1.6 'Microsoft YaHei',sans-serif;letter-spacing:.08em}
+.glass-original-dialog{width:min(94vw,1800px);max-width:94vw;height:min(90vh,1100px);padding:52px 20px 20px;border:0;background:#101514;color:#eee9df}
+.glass-original-dialog::backdrop{background:#000c}.glass-original-dialog img{width:100%;height:100%;object-fit:contain}
+.glass-original-dialog>button{position:absolute;right:20px;top:12px;padding:8px 14px;color:inherit;background:#29332e;border:0;border-radius:5px;cursor:pointer}
+.glass-reading-controls .glass-enlarge{width:auto;min-width:82px;font:13px/1.4 'Microsoft YaHei',sans-serif;border-radius:5px;background:#d6d0c410;margin-left:14px;padding:0 10px}
+.code-gallery .glass-frame{overflow:visible;isolation:isolate}
+.code-gallery .glass-ceiling,.code-gallery .glass-floor{display:block!important;opacity:.18}
+.code-gallery .glass-reflection{opacity:.46!important;transform:none!important}
+.code-gallery .reflection-top{clip-path:polygon(0 0,100% 0,92% 100%,8% 100%)}
+.code-gallery .reflection-bottom{clip-path:polygon(8% 0,92% 0,100% 100%,0 100%)}
+.code-gallery .reflection-top{mask-image:linear-gradient(to top,#000b,transparent)}
+.code-gallery .reflection-bottom{mask-image:linear-gradient(to bottom,#000b,transparent)}
+.personal-contribution{margin:0 0 50px;padding:28px 30px;background:#dadccd;color:#273d37}
+.personal-contribution h3{margin:0 0 16px;font:500 26px/1.45 ZaojingTitle,'SimSun',serif}
+.personal-contribution p{font-size:16px;line-height:1.9;margin:0 0 20px}
+.personal-contribution dl{display:grid;grid-template-columns:1fr;gap:16px;margin:20px 0}
+.personal-contribution dl>div{display:grid;grid-template-columns:190px 1fr;gap:22px}
+.personal-contribution dt{font-size:14px;font-weight:600}.personal-contribution dd{margin:0;font-size:15px;line-height:1.8}
+.personal-contribution .contribution-note{font-size:13px;margin:24px 0 0}
+#indexList{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px!important;align-items:stretch!important;width:min(1060px,84vw)!important;margin:0 auto!important}
+#indexList>.index-work,#indexList>.border-glow-card{width:100%!important;height:216px!important;min-height:216px!important;margin:0!important;transform:none!important;box-sizing:border-box!important}
+#indexList>.archive-border-mount{width:100%!important;height:216px!important;min-width:0;margin:0!important;grid-column:auto!important;grid-row:auto!important}
+#indexList>*{grid-column:auto!important;grid-row:auto!important;min-width:0!important}
+#indexList .index-work[data-index-target="personalPage"]{grid-column:auto!important;grid-row:auto!important;min-height:0!important;max-width:none!important}
+#indexList>.archive-border-mount>.border-glow-card,#indexList .border-glow-inner{height:100%!important;width:100%!important;box-sizing:border-box!important}
+#indexList .border-glow-inner,#indexList .index-work{box-sizing:border-box}
+#indexList .index-work{display:grid!important;grid-template-columns:46px 1fr 28px!important;grid-template-rows:auto auto!important;gap:16px 20px!important;align-content:center!important;padding:28px 30px!important;text-align:left}
+#indexList .index-work{height:100%!important;min-height:0!important;border:0!important;background:transparent!important;border-radius:inherit!important}
+#indexList .border-glow-inner{padding:0!important}
+#indexList>.index-work{height:216px!important;min-height:216px!important;background:#17231b!important;border:1px solid #39483e!important;border-radius:14px!important}
+#indexList .index-work .number{grid-column:1;grid-row:1/3;align-self:center;font-size:13px!important}
+#indexList .index-work .title{grid-column:2;grid-row:1;font:500 30px/1.3 ZaojingTitle,'SimSun',serif!important;letter-spacing:.04em!important}
+#indexList .index-work .meta{grid-column:2;grid-row:2;font:13px/1.8 'Microsoft YaHei',sans-serif!important;max-width:100%;opacity:.8}
+#indexList .index-work .arrow{grid-column:3;grid-row:1/3;align-self:center;font-size:24px!important}
+#indexList .index-work svg{width:32px!important;height:32px!important;stroke-width:1.4!important;flex:none}
+
+.sand-narrative-masthead{display:none!important}
+.process-intro figcaption{font-size:13px;line-height:1.9}
+.index-heading small{display:none!important}

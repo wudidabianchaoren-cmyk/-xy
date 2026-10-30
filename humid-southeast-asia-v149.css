@@ -1,0 +1,13 @@
+/* V149: the user's complete film, at its original aspect ratio. */
+body[data-project="humid-southeast-asia"] .project-film-video {
+  inset: 4vh 3vw 12vh;
+  width: 94vw;
+  height: 84vh;
+  object-fit: contain;
+  background: #050606;
+  z-index: 1;
+  cursor: auto;
+}
+body[data-project="humid-southeast-asia"] .southeast-film-caption {
+  bottom: 24px;
+}

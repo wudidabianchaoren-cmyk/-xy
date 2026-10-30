@@ -1,0 +1,1777 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WuXiangYu - 脑海宇宙 V9</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f7efe1;
+      --soft: rgba(247, 239, 225, .72);
+      --muted: rgba(247, 239, 225, .48);
+      --hair: rgba(247, 239, 225, .14);
+      --field: #040405;
+      --gold: #d5a24f;
+      --cyan: #7ed7df;
+      --red: #d74837;
+      --green: #77bb9c;
+      --violet: #9583c8;
+      --ui-font: "Inter", "SF Pro Display", "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      --title-font: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", Georgia, serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #020202;
+      color: var(--ink);
+      font-family: var(--ui-font);
+      cursor: none;
+    }
+
+    button {
+      border: 0;
+      padding: 0;
+      color: inherit;
+      font: inherit;
+      background: transparent;
+    }
+
+    .stage {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 48% 42%, rgba(126, 215, 223, .1), transparent 28%),
+        radial-gradient(circle at 72% 20%, rgba(215, 72, 55, .12), transparent 22%),
+        radial-gradient(circle at 28% 80%, rgba(213, 162, 79, .14), transparent 28%),
+        #020202;
+      isolation: isolate;
+    }
+
+    #universe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .vignette,
+    .grain,
+    .speed-veil,
+    .scan-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .vignette {
+      background:
+        radial-gradient(circle at 50% 48%, transparent 34%, rgba(0, 0, 0, .34) 68%, rgba(0, 0, 0, .82) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, .56), transparent 18%, transparent 82%, rgba(0, 0, 0, .48));
+      mix-blend-mode: multiply;
+    }
+
+    .grain {
+      opacity: .18;
+      background-image:
+        repeating-radial-gradient(circle at 20% 30%, rgba(255,255,255,.16) 0 1px, transparent 1px 3px),
+        repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 1px, transparent 1px 4px);
+      background-size: 140px 140px, 190px 190px;
+      animation: grain 1.4s steps(3) infinite;
+    }
+
+    .speed-veil {
+      opacity: var(--warp, .18);
+      background:
+        radial-gradient(ellipse at 50% 50%, transparent 0 34%, rgba(126,215,223,.12) 44%, transparent 58%),
+        repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg 7deg, rgba(255,255,255,.08) 8deg 8.6deg, transparent 9.2deg 14deg);
+      filter: blur(10px);
+      transform: scale(1.14);
+      mix-blend-mode: screen;
+      transition: opacity .4s ease;
+    }
+
+    .scan-lines {
+      opacity: .12;
+      background: repeating-linear-gradient(180deg, transparent 0 5px, rgba(255,255,255,.08) 6px, transparent 7px 12px);
+      mix-blend-mode: overlay;
+    }
+
+    .rain-title {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(34px, 9vh, 96px);
+      z-index: 6;
+      translate: -50% 0;
+      width: min(720px, calc(100vw - 40px));
+      text-align: center;
+      pointer-events: none;
+      transition: opacity 1.1s ease, transform 1.1s ease;
+    }
+
+    .rain-title.is-gone {
+      opacity: 0;
+      transform: translateY(32px) scale(.96);
+    }
+
+    .rain-title b {
+      display: block;
+      margin-bottom: 14px;
+      font-family: var(--title-font);
+      font-size: clamp(30px, 5.6vw, 86px);
+      font-weight: 400;
+      line-height: 1;
+      text-shadow: 0 0 26px rgba(247,239,225,.18);
+    }
+
+    .rain-title span {
+      display: block;
+      color: var(--soft);
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 1.9;
+      text-transform: uppercase;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 22px;
+      left: 22px;
+      right: 22px;
+      z-index: 8;
+      display: grid;
+      grid-template-columns: minmax(168px, 1fr) auto minmax(168px, 1fr);
+      align-items: start;
+      gap: 18px;
+      pointer-events: none;
+    }
+
+    .brand,
+    .status,
+    .chapter-bar,
+    .memory-panel,
+    .work-radar,
+    .hint {
+      pointer-events: auto;
+    }
+
+    .brand {
+      justify-self: start;
+      text-align: left;
+    }
+
+    .brand-title {
+      display: block;
+      font-family: var(--title-font);
+      font-size: 18px;
+      line-height: 1.1;
+    }
+
+    .brand small,
+    .status small,
+    .hint {
+      display: block;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .status {
+      justify-self: center;
+      width: min(380px, 35vw);
+      min-height: 42px;
+      padding-top: 3px;
+      text-align: center;
+    }
+
+    .status b {
+      display: block;
+      margin-bottom: 7px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .status-line {
+      display: block;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(247,239,225,.6), transparent);
+      transform-origin: center;
+      transform: scaleX(var(--speed-line, .42));
+      transition: transform .25s ease;
+    }
+
+    .quick-actions {
+      justify-self: end;
+      display: flex;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--hair);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--soft);
+      background: rgba(7, 7, 8, .26);
+      backdrop-filter: blur(14px);
+      transition: border-color .2s ease, color .2s ease, background .2s ease, transform .2s ease;
+    }
+
+    .icon-btn:hover,
+    .nav-dot:hover,
+    .signal-button:hover,
+    .dock-button:hover {
+      border-color: rgba(247,239,225,.46);
+      color: #fff;
+      background: rgba(247,239,225,.08);
+      transform: translateY(-1px);
+    }
+
+    .icon-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      fill: none;
+    }
+
+    .chapter-bar {
+      position: fixed;
+      left: 22px;
+      bottom: 22px;
+      z-index: 9;
+      display: grid;
+      gap: 8px;
+      width: min(240px, calc(100vw - 44px));
+    }
+
+    .nav-dot {
+      min-height: 38px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      text-align: left;
+      transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .nav-dot::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      justify-self: center;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 18px currentColor;
+    }
+
+    .nav-dot b {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-dot span {
+      display: block;
+      margin-top: 2px;
+      color: rgba(247,239,225,.4);
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    .nav-dot.is-active {
+      border-color: rgba(247,239,225,.22);
+      color: var(--ink);
+      background: rgba(247,239,225,.07);
+    }
+
+    .work-radar {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 9;
+      width: min(330px, calc(100vw - 44px));
+      display: grid;
+      gap: 9px;
+    }
+
+    .signal-button {
+      min-height: 46px;
+      border: 1px solid rgba(247,239,225,.1);
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: 40px 1fr auto;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 10px;
+      color: var(--soft);
+      background: rgba(7, 7, 8, .22);
+      backdrop-filter: blur(16px);
+      text-align: left;
+      transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .signal-button i {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: block;
+      background:
+        radial-gradient(circle at 35% 32%, rgba(255,255,255,.9), transparent 0 16%),
+        radial-gradient(circle at 50% 50%, var(--tone), transparent 0 58%),
+        #151515;
+      box-shadow: 0 0 24px color-mix(in srgb, var(--tone), transparent 44%);
+    }
+
+    .signal-button b {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    .signal-button span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.3;
+    }
+
+    .signal-button em {
+      color: rgba(247,239,225,.38);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-style: normal;
+    }
+
+    .memory-panel {
+      position: fixed;
+      right: 22px;
+      top: 96px;
+      z-index: 10;
+      width: min(410px, calc(100vw - 44px));
+      opacity: 0;
+      transform: translateX(24px);
+      pointer-events: none;
+      transition: opacity .55s ease, transform .55s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .memory-panel.is-open {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+
+    .memory-inner {
+      border: 1px solid rgba(247,239,225,.14);
+      border-radius: 6px;
+      padding: 18px;
+      background: linear-gradient(145deg, rgba(8,8,9,.76), rgba(8,8,9,.36));
+      backdrop-filter: blur(22px);
+      box-shadow: 0 24px 80px rgba(0,0,0,.34);
+    }
+
+    .memory-kicker {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .memory-title {
+      margin: 0;
+      font-family: var(--title-font);
+      font-size: clamp(26px, 3vw, 44px);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .memory-copy {
+      margin: 14px 0 0;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.85;
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .memory-cell {
+      min-height: 76px;
+      border: 1px solid rgba(247,239,225,.1);
+      border-radius: 4px;
+      padding: 10px;
+      background: rgba(247,239,225,.045);
+    }
+
+    .memory-cell b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .memory-cell span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .dock {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .dock-button {
+      height: 34px;
+      border: 1px solid rgba(247,239,225,.14);
+      border-radius: 17px;
+      padding: 0 13px;
+      color: var(--soft);
+      font-size: 11px;
+      text-transform: uppercase;
+      transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .dock-button.is-active {
+      border-color: color-mix(in srgb, var(--active-tone), #fff 28%);
+      color: #fff;
+      background: color-mix(in srgb, var(--active-tone), transparent 84%);
+    }
+
+    .hint {
+      position: fixed;
+      left: 50%;
+      bottom: 26px;
+      z-index: 8;
+      translate: -50% 0;
+      width: min(520px, calc(100vw - 44px));
+      text-align: center;
+      transition: opacity .4s ease;
+    }
+
+    .hint.is-hidden {
+      opacity: 0;
+    }
+
+    .cursor,
+    .cursor-ring {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 30;
+      pointer-events: none;
+      border-radius: 50%;
+      translate: -50% -50%;
+    }
+
+    .cursor {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      box-shadow: 0 0 18px rgba(255,255,255,.8);
+    }
+
+    .cursor-ring {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(247,239,225,.36);
+      transition: width .18s ease, height .18s ease, border-color .18s ease;
+    }
+
+    .cursor-ring.is-touching {
+      width: 58px;
+      height: 58px;
+      border-color: rgba(247,239,225,.76);
+    }
+
+    .loading {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      display: grid;
+      place-items: center;
+      background: #020202;
+      transition: opacity .7s ease, visibility .7s ease;
+    }
+
+    .loading.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loading b {
+      display: block;
+      margin-bottom: 12px;
+      font-family: var(--title-font);
+      font-size: clamp(28px, 5vw, 76px);
+      font-weight: 400;
+    }
+
+    .loading span {
+      display: block;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .fallback {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      display: none;
+      place-items: center;
+      padding: 24px;
+      background: #050505;
+      text-align: center;
+    }
+
+    .fallback.is-visible {
+      display: grid;
+    }
+
+    .fallback div {
+      max-width: 520px;
+      color: var(--soft);
+      line-height: 1.8;
+    }
+
+    @keyframes grain {
+      0% { transform: translate3d(0, 0, 0); }
+      33% { transform: translate3d(1.5%, -1%, 0); }
+      66% { transform: translate3d(-1%, 1.2%, 0); }
+      100% { transform: translate3d(0, 0, 0); }
+    }
+
+    @media (max-width: 760px) {
+      body { cursor: auto; }
+      .cursor,
+      .cursor-ring { display: none; }
+      .topbar {
+        top: 14px;
+        left: 14px;
+        right: 14px;
+        grid-template-columns: 1fr auto;
+      }
+      .status { display: none; }
+      .brand-title { font-size: 15px; }
+      .brand small { font-size: 9px; }
+      .quick-actions { gap: 6px; }
+      .icon-btn {
+        width: 36px;
+        height: 36px;
+      }
+      .chapter-bar {
+        left: 14px;
+        bottom: 14px;
+        width: calc(100vw - 28px);
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .nav-dot {
+        min-height: 34px;
+        grid-template-columns: 16px 1fr;
+      }
+      .nav-dot span { display: none; }
+      .work-radar {
+        right: 14px;
+        bottom: 146px;
+        width: min(300px, calc(100vw - 28px));
+      }
+      .signal-button {
+        min-height: 40px;
+        grid-template-columns: 30px 1fr auto;
+      }
+      .signal-button i {
+        width: 22px;
+        height: 22px;
+      }
+      .memory-panel {
+        left: 14px;
+        right: 14px;
+        top: auto;
+        bottom: 14px;
+        width: auto;
+      }
+      .memory-grid { grid-template-columns: 1fr; }
+      .hint { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .grain { animation: none; }
+      .speed-veil,
+      .rain-title,
+      .memory-panel,
+      .loading { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage" id="stage">
+    <canvas id="universe"></canvas>
+    <div class="speed-veil" id="speedVeil"></div>
+    <div class="vignette"></div>
+    <div class="scan-lines"></div>
+    <div class="grain"></div>
+
+    <header class="topbar">
+      <button class="brand touch" id="homeBtn" type="button">
+        <span class="brand-title">脑海宇宙 / 无名航行体</span>
+        <small>nameless object / volumetric rain / signal memory</small>
+      </button>
+      <button class="status touch" id="statusBtn" type="button">
+        <b id="statusText">rain field initializing</b>
+        <span class="status-line"></span>
+        <small id="statusSub">scroll or drag to bend the voyage</small>
+      </button>
+      <div class="quick-actions">
+        <button class="icon-btn touch" id="rainBtn" type="button" aria-label="Replay rain entrance">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 8l5-5 5 5M6 16c2 2 4 3 6 3s4-1 6-3"/></svg>
+        </button>
+        <button class="icon-btn touch" id="memoryBtn" type="button" aria-label="Enter active signal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M12 4l8 8-8 8M4 5v14"/></svg>
+        </button>
+        <button class="icon-btn touch" id="releaseBtn" type="button" aria-label="Return to voyage">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <nav class="chapter-bar" id="chapterBar" aria-label="脑海宇宙方向"></nav>
+    <nav class="work-radar" id="workRadar" aria-label="作品信号"></nav>
+
+    <aside class="memory-panel" id="memoryPanel" aria-live="polite">
+      <div class="memory-inner">
+        <div class="memory-kicker" id="memoryKicker">memory field</div>
+        <h1 class="memory-title" id="memoryTitle">回不去的乡</h1>
+        <p class="memory-copy" id="memoryCopy"></p>
+        <div class="memory-grid">
+          <div class="memory-cell"><b>visual symbols</b><span id="memorySymbols"></span></div>
+          <div class="memory-cell"><b>motion role</b><span id="memoryMotion"></span></div>
+          <div class="memory-cell"><b>process</b><span id="memoryProcess"></span></div>
+          <div class="memory-cell"><b>open edge</b><span id="memoryEdge"></span></div>
+        </div>
+        <div class="dock" id="memoryTabs">
+          <button class="dock-button is-active touch" type="button" data-tab="overview">overview</button>
+          <button class="dock-button touch" type="button" data-tab="stills">stills</button>
+          <button class="dock-button touch" type="button" data-tab="process">process</button>
+          <button class="dock-button touch" type="button" data-tab="symbols">symbols</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="rain-title" id="rainTitle">
+      <b>一个无名状的物体正在穿过雨和星尘</b>
+      <span>作品不是页面，它们是航行途中被读取出的记忆信号</span>
+    </div>
+
+    <div class="hint" id="hint">滚轮改变速度，拖拽改变航线，点击右侧信号进入作品记忆空间</div>
+  </main>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="loading" id="loading">
+    <div>
+      <b>脑海宇宙正在成形</b>
+      <span>building rain volume / star tunnel / nameless object</span>
+    </div>
+  </div>
+
+  <div class="fallback" id="fallback">
+    <div>这个版本需要 WebGL 与 Three.js。请使用现代浏览器打开，或保持网络可访问以加载 Three.js。</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script>
+    const chapters = [
+      { id: "origin", cn: "起点", en: "origin", copy: "不是履历，是第一次相信自己能创造。", color: "#d5a24f" },
+      { id: "voyage", cn: "航行", en: "voyage", copy: "无名物体持续穿梭，路径被实时生成。", color: "#7ed7df" },
+      { id: "works", cn: "作品", en: "works", copy: "作品作为信号出现，不作为卡片陈列。", color: "#f7efe1" },
+      { id: "experiment", cn: "实验", en: "experiment", copy: "工具、提示词、推翻和试错变成轨道碎片。", color: "#77bb9c" },
+      { id: "failure", cn: "折返", en: "failure", copy: "失败不是隐藏项，而是航线改变的证据。", color: "#9583c8" },
+      { id: "unknown", cn: "未知", en: "unknown", copy: "地图抵达边界，但远处还有信号。", color: "#ffffff" }
+    ];
+
+    const works = [
+      {
+        id: "rural",
+        cn: "回不去的乡",
+        en: "Distant Homeland",
+        type: "AI Short Film",
+        tone: "#c98a44",
+        alt: "#75654a",
+        copy: "时代记忆、土地和背影被压成一枚缓慢发光的记忆星体。进入它时，镜头不解释乡愁，而是穿过黄昏、道路和远山。",
+        symbols: "树、路、背影、黄昏、远山",
+        motion: "低速推进，像在记忆里向前走，但每一次靠近都被拉回。",
+        process: "从乡土关键词到镜头构图，再到 AI 短片节奏测试。",
+        edge: "保留未完成的家庭影像、废弃镜头和声音采样。",
+        tabs: {
+          overview: "记忆层：黄昏和背影构成第一情绪，作品像一段被读取出的时代残影。",
+          stills: "剧照层：远景、村庄、道路、人物背影围绕成半环。",
+          process: "流程层：关键词、分镜、生成版本、重剪版本沿轨道依次出现。",
+          symbols: "符号层：树、路、背影、黄昏、远山被抽成可复用视觉语法。"
+        }
+      },
+      {
+        id: "palace",
+        cn: "东方玄幻",
+        en: "Oriental Fantasy",
+        type: "Scene Design",
+        tone: "#ce3528",
+        alt: "#c48d3f",
+        copy: "宫殿、红衣和对峙关系不是静态设定图，而是一组在中轴线上互相压迫的戏剧结构。",
+        symbols: "红衣、王座、宫灯、金色木构、对称轴",
+        motion: "镜头像穿过宫门，红色信号在空间中心不断逼近。",
+        process: "角色设定、场景搭建、运动测试和镜头压迫感校正。",
+        edge: "下一步可以扩展成角色关系图与场景漫游。",
+        tabs: {
+          overview: "主场景层：宫殿中轴、红衣角色和对峙构成叙事压力。",
+          stills: "剧照层：主场景、近景、三视图、道具和宫殿结构分布在前后景。",
+          process: "流程层：Midjourney 角色设定、场景搭建、Seedance 运动设计。",
+          symbols: "符号层：红衣、王座、宫灯、金色木构、对称轴。"
+        }
+      },
+      {
+        id: "rain",
+        cn: "雨夜与红",
+        en: "Wet Oriental Classicism",
+        type: "Color Study",
+        tone: "#d94235",
+        alt: "#80c7d2",
+        copy: "蓝灰雨幕和红色焦点形成色彩矛盾。这个作品节点本身就应该像一场湿润、发光、有深度的雨。",
+        symbols: "雨、红灯、剑光、湿地反射、蓝灰色",
+        motion: "雨线按深度分层，红色光源在镜头接近时产生反射拖尾。",
+        process: "冷光设定、红色焦点控制、雨幕速度和地面反射测试。",
+        edge: "可以继续发展为完整色彩方法论样本库。",
+        tabs: {
+          overview: "色彩层：冷雨环境和红色焦点构成主要视觉矛盾。",
+          stills: "剧照层：雨夜街道、灯笼、地面反射和对峙镜头交叉出现。",
+          process: "流程层：冷光设定、红色焦点控制、雨幕运动测试。",
+          symbols: "符号层：雨、红灯、剑光、湿地反射、蓝灰色。"
+        }
+      },
+      {
+        id: "abyss",
+        cn: "骸骨之岸",
+        en: "Echoes of the Abyss",
+        type: "Film Concept",
+        tone: "#9eb7b2",
+        alt: "#455456",
+        copy: "黑海、白瞳和骨骸岛构成深海史诗。它不是一张暗图，而是一个有压力、有雾、有漂浮残骸的区域。",
+        symbols: "白瞳、骨骸、黑海、雾、岛",
+        motion: "镜头下降，星尘变慢，白色信号像深海眼睛一样打开。",
+        process: "低饱和控制、地貌生成、角色视觉测试和灾难尺度推演。",
+        edge: "适合继续做成黑海世界观和角色体系。",
+        tabs: {
+          overview: "世界层：黑海、白瞳与骨骸岛构成深海史诗感。",
+          stills: "剧照层：岛屿、海面、人物、骨骸结构和远景。",
+          process: "流程层：低饱和控制、地貌生成、角色视觉测试。",
+          symbols: "符号层：白瞳、骨骸、黑海、雾、岛。"
+        }
+      },
+      {
+        id: "folk",
+        cn: "民俗符号",
+        en: "Northeast Ritual System",
+        type: "Symbol Archive",
+        tone: "#d98b1d",
+        alt: "#0f686d",
+        copy: "祭祀、器物、烟和布料被整理成一个视觉标本室。它不只是展示民俗，而是把民俗转译成影像系统。",
+        symbols: "鼓、香、布、火、烟、供桌",
+        motion: "物件沿圆形轨道漂浮，烟雾与火光形成慢速呼吸。",
+        process: "民俗资料提炼、符号分类、器物建模和场景转译。",
+        edge: "可以继续扩展为东北民俗影像词典。",
+        tabs: {
+          overview: "档案层：从东北民俗中提取可进入影像系统的符号。",
+          stills: "剧照层：祭祀现场、器物、烟、布料和人物。",
+          process: "流程层：民俗资料提炼、符号分类和场景转译。",
+          symbols: "符号层：鼓、香、布、火、烟、供桌。"
+        }
+      }
+    ];
+
+    const canvas = document.querySelector("#universe");
+    const loading = document.querySelector("#loading");
+    const fallback = document.querySelector("#fallback");
+    const rainTitle = document.querySelector("#rainTitle");
+    const statusText = document.querySelector("#statusText");
+    const statusSub = document.querySelector("#statusSub");
+    const speedVeil = document.querySelector("#speedVeil");
+    const chapterBar = document.querySelector("#chapterBar");
+    const workRadar = document.querySelector("#workRadar");
+    const memoryPanel = document.querySelector("#memoryPanel");
+    const memoryKicker = document.querySelector("#memoryKicker");
+    const memoryTitle = document.querySelector("#memoryTitle");
+    const memoryCopy = document.querySelector("#memoryCopy");
+    const memorySymbols = document.querySelector("#memorySymbols");
+    const memoryMotion = document.querySelector("#memoryMotion");
+    const memoryProcess = document.querySelector("#memoryProcess");
+    const memoryEdge = document.querySelector("#memoryEdge");
+    const memoryTabs = document.querySelector("#memoryTabs");
+    const hint = document.querySelector("#hint");
+    const cursor = document.querySelector("#cursor");
+    const cursorRing = document.querySelector("#cursorRing");
+    const homeBtn = document.querySelector("#homeBtn");
+    const rainBtn = document.querySelector("#rainBtn");
+    const memoryBtn = document.querySelector("#memoryBtn");
+    const releaseBtn = document.querySelector("#releaseBtn");
+
+    let renderer;
+    let scene;
+    let camera;
+    let clock;
+    let starGeo;
+    let rainGeometries = [];
+    let rainMeshes = [];
+    let tunnelGroup;
+    let objectGroup;
+    let signalGroup;
+    let memoryGroup;
+    let ruptureGroup;
+    let objectParts = [];
+    let signalMeshes = [];
+    let memoryFrames = [];
+    let activeChapter = 1;
+    let activeWork = 0;
+    let activeTab = "overview";
+    let mode = "rain";
+    let enterProgress = 0;
+    let rainProgress = 0;
+    let travel = 0;
+    let velocity = 1.15;
+    let targetVelocity = 1.15;
+    let mouse = { x: 0, y: 0, sx: 0, sy: 0, down: false, px: 0, py: 0 };
+    let cameraRig = { x: 0, y: 0, z: 8 };
+
+    function hexToRgb(hex) {
+      const normalized = hex.replace("#", "");
+      const value = parseInt(normalized, 16);
+      return {
+        r: ((value >> 16) & 255) / 255,
+        g: ((value >> 8) & 255) / 255,
+        b: (value & 255) / 255
+      };
+    }
+
+    function makeDotTexture() {
+      const size = 96;
+      const c = document.createElement("canvas");
+      c.width = size;
+      c.height = size;
+      const ctx = c.getContext("2d");
+      const g = ctx.createRadialGradient(size * .5, size * .5, 0, size * .5, size * .5, size * .5);
+      g.addColorStop(0, "rgba(255,255,255,1)");
+      g.addColorStop(.22, "rgba(255,255,255,.78)");
+      g.addColorStop(.52, "rgba(126,215,223,.22)");
+      g.addColorStop(1, "rgba(255,255,255,0)");
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, size, size);
+      const texture = new THREE.CanvasTexture(c);
+      texture.needsUpdate = true;
+      return texture;
+    }
+
+    function makeRainTexture() {
+      const c = document.createElement("canvas");
+      c.width = 32;
+      c.height = 160;
+      const ctx = c.getContext("2d");
+      const g = ctx.createLinearGradient(16, 0, 16, 160);
+      g.addColorStop(0, "rgba(255,255,255,0)");
+      g.addColorStop(.2, "rgba(255,255,255,.35)");
+      g.addColorStop(.72, "rgba(126,215,223,.7)");
+      g.addColorStop(1, "rgba(255,255,255,0)");
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.ellipse(16, 80, 4, 70, 0, 0, Math.PI * 2);
+      ctx.fill();
+      const texture = new THREE.CanvasTexture(c);
+      texture.needsUpdate = true;
+      return texture;
+    }
+
+    function makeFrameTexture(work, index, tabLabel) {
+      const c = document.createElement("canvas");
+      c.width = 900;
+      c.height = 1180;
+      const ctx = c.getContext("2d");
+      const tone = work.tone;
+      const alt = work.alt;
+      const bg = ctx.createLinearGradient(0, 0, 900, 1180);
+      bg.addColorStop(0, alt);
+      bg.addColorStop(.42, "#111112");
+      bg.addColorStop(1, tone);
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, 900, 1180);
+
+      for (let i = 0; i < 18; i++) {
+        const x = 80 + Math.sin(i * 2.31 + index) * 290 + i * 34;
+        const y = 120 + i * 52;
+        ctx.save();
+        ctx.globalAlpha = .12 + (i % 4) * .045;
+        ctx.strokeStyle = i % 3 === 0 ? "#ffffff" : tone;
+        ctx.lineWidth = 8 + (i % 5) * 5;
+        ctx.beginPath();
+        ctx.moveTo(x - 420, y);
+        ctx.bezierCurveTo(x - 160, y - 120, x + 180, y + 160, x + 520, y + 20);
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      const mist = ctx.createRadialGradient(450, 460, 20, 450, 540, 620);
+      mist.addColorStop(0, "rgba(255,255,255,.42)");
+      mist.addColorStop(.25, "rgba(255,255,255,.08)");
+      mist.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.fillStyle = mist;
+      ctx.fillRect(0, 0, 900, 1180);
+
+      ctx.fillStyle = "rgba(0,0,0,.35)";
+      ctx.fillRect(46, 46, 808, 1088);
+      ctx.strokeStyle = "rgba(255,255,255,.26)";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(46, 46, 808, 1088);
+
+      ctx.fillStyle = "rgba(255,255,255,.82)";
+      ctx.font = "38px serif";
+      ctx.fillText(work.cn, 86, 120);
+      ctx.font = "22px monospace";
+      ctx.fillStyle = "rgba(255,255,255,.48)";
+      ctx.fillText(work.en + " / " + tabLabel, 86, 164);
+
+      ctx.font = "28px sans-serif";
+      ctx.fillStyle = "rgba(255,255,255,.72)";
+      const text = work.tabs[tabLabel] || work.copy;
+      const words = text.split("");
+      let line = "";
+      let y = 920;
+      for (const ch of words) {
+        const test = line + ch;
+        if (ctx.measureText(test).width > 680) {
+          ctx.fillText(line, 86, y);
+          line = ch;
+          y += 44;
+        } else {
+          line = test;
+        }
+      }
+      ctx.fillText(line, 86, y);
+
+      ctx.fillStyle = tone;
+      ctx.globalAlpha = .86;
+      ctx.beginPath();
+      ctx.arc(722, 204, 54, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalAlpha = 1;
+
+      const texture = new THREE.CanvasTexture(c);
+      texture.colorSpace = THREE.SRGBColorSpace;
+      texture.needsUpdate = true;
+      return texture;
+    }
+
+    function makeNebulaTexture(work) {
+      const c = document.createElement("canvas");
+      c.width = 512;
+      c.height = 512;
+      const ctx = c.getContext("2d");
+      const tone = hexToRgb(work.tone);
+      const alt = hexToRgb(work.alt);
+      const image = ctx.createImageData(512, 512);
+      for (let y = 0; y < 512; y++) {
+        for (let x = 0; x < 512; x++) {
+          const dx = x / 512 - .5;
+          const dy = y / 512 - .5;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          const swirl = Math.sin((Math.atan2(dy, dx) + d * 12) * 4 + x * .014) * .5 + .5;
+          const fog = Math.max(0, 1 - d * 2.1);
+          const n = (Math.sin(x * .042 + y * .03) + Math.sin(x * .018 - y * .05)) * .5 + 1;
+          const a = Math.pow(fog, 1.7) * (.28 + swirl * .5) * n;
+          const i = (y * 512 + x) * 4;
+          image.data[i] = Math.min(255, (tone.r * 150 + alt.r * 120 + 20) * a);
+          image.data[i + 1] = Math.min(255, (tone.g * 150 + alt.g * 120 + 24) * a);
+          image.data[i + 2] = Math.min(255, (tone.b * 150 + alt.b * 120 + 30) * a);
+          image.data[i + 3] = Math.min(255, 255 * a);
+        }
+      }
+      ctx.putImageData(image, 0, 0);
+      const texture = new THREE.CanvasTexture(c);
+      texture.colorSpace = THREE.SRGBColorSpace;
+      texture.needsUpdate = true;
+      return texture;
+    }
+
+    function createStarfield() {
+      const count = 3600;
+      const positions = new Float32Array(count * 3);
+      const colors = new Float32Array(count * 3);
+      for (let i = 0; i < count; i++) {
+        const radius = 6 + Math.random() * 62;
+        const a = Math.random() * Math.PI * 2;
+        const b = (Math.random() - .5) * Math.PI;
+        positions[i * 3] = Math.cos(a) * Math.cos(b) * radius;
+        positions[i * 3 + 1] = Math.sin(b) * radius * .74;
+        positions[i * 3 + 2] = -Math.random() * 220 - 12;
+        const warmth = Math.random();
+        colors[i * 3] = .48 + warmth * .44;
+        colors[i * 3 + 1] = .6 + Math.random() * .32;
+        colors[i * 3 + 2] = .72 + (1 - warmth) * .26;
+      }
+      starGeo = new THREE.BufferGeometry();
+      starGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+      starGeo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+      const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({
+        size: .095,
+        vertexColors: true,
+        transparent: true,
+        opacity: .92,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        map: makeDotTexture()
+      }));
+      scene.add(stars);
+    }
+
+    function createRainField() {
+      const texture = makeRainTexture();
+      const layerDefs = [
+        { count: 520, spread: 30, depth: 76, size: .62, opacity: .58, speed: 1.35 },
+        { count: 760, spread: 46, depth: 118, size: .38, opacity: .42, speed: .92 },
+        { count: 960, spread: 68, depth: 160, size: .22, opacity: .28, speed: .62 }
+      ];
+      layerDefs.forEach((def) => {
+        const positions = new Float32Array(def.count * 3);
+        for (let i = 0; i < def.count; i++) {
+          positions[i * 3] = (Math.random() - .5) * def.spread;
+          positions[i * 3 + 1] = (Math.random() - .5) * def.spread * .7;
+          positions[i * 3 + 2] = -Math.random() * def.depth - 2;
+        }
+        const geo = new THREE.BufferGeometry();
+        geo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+        const mesh = new THREE.Points(geo, new THREE.PointsMaterial({
+          size: def.size,
+          transparent: true,
+          opacity: def.opacity,
+          depthWrite: false,
+          blending: THREE.AdditiveBlending,
+          map: texture,
+          color: 0xbfe9ef
+        }));
+        mesh.userData = def;
+        rainGeometries.push(geo);
+        rainMeshes.push(mesh);
+        scene.add(mesh);
+      });
+    }
+
+    function createTunnel() {
+      tunnelGroup = new THREE.Group();
+      for (let i = 0; i < 26; i++) {
+        const radius = 4 + i * .46;
+        const geo = new THREE.TorusGeometry(radius, .008, 8, 96);
+        const hue = i % 3 === 0 ? 0x7ed7df : i % 3 === 1 ? 0xd5a24f : 0xd74837;
+        const mat = new THREE.MeshBasicMaterial({
+          color: hue,
+          transparent: true,
+          opacity: .035 + (i % 4) * .012,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false
+        });
+        const ring = new THREE.Mesh(geo, mat);
+        ring.position.z = -i * 5.8 - 10;
+        ring.rotation.x = Math.PI / 2;
+        ring.rotation.z = i * .31;
+        tunnelGroup.add(ring);
+      }
+      scene.add(tunnelGroup);
+    }
+
+    function createNamelessObject() {
+      objectGroup = new THREE.Group();
+
+      const coreMat = new THREE.MeshStandardMaterial({
+        color: 0x111216,
+        emissive: 0x7ed7df,
+        emissiveIntensity: .42,
+        roughness: .34,
+        metalness: .24,
+        transparent: true,
+        opacity: .96
+      });
+      const glowMat = new THREE.MeshBasicMaterial({
+        color: 0xd5a24f,
+        transparent: true,
+        opacity: .14,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
+      });
+      const wireMat = new THREE.MeshBasicMaterial({
+        color: 0xf7efe1,
+        wireframe: true,
+        transparent: true,
+        opacity: .22
+      });
+
+      const core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.06, 3), coreMat);
+      core.scale.set(1.1, .82, 1.45);
+      core.userData.baseScale = core.scale.clone();
+      objectGroup.add(core);
+      objectParts.push(core);
+
+      const shell = new THREE.Mesh(new THREE.IcosahedronGeometry(1.62, 2), wireMat);
+      shell.scale.set(1.3, .82, 1.72);
+      shell.userData.baseScale = shell.scale.clone();
+      objectGroup.add(shell);
+      objectParts.push(shell);
+
+      const glow = new THREE.Mesh(new THREE.SphereGeometry(1.9, 48, 24), glowMat);
+      glow.scale.set(1.36, .82, 1.9);
+      glow.userData.baseScale = glow.scale.clone();
+      objectGroup.add(glow);
+      objectParts.push(glow);
+
+      for (let i = 0; i < 12; i++) {
+        const geo = new THREE.TetrahedronGeometry(.28 + Math.random() * .22, 1);
+        const mat = new THREE.MeshStandardMaterial({
+          color: i % 3 === 0 ? 0xd5a24f : i % 3 === 1 ? 0x7ed7df : 0xd74837,
+          emissive: i % 3 === 0 ? 0xd5a24f : i % 3 === 1 ? 0x7ed7df : 0xd74837,
+          emissiveIntensity: .35,
+          roughness: .46,
+          metalness: .18,
+          transparent: true,
+          opacity: .82
+        });
+        const shard = new THREE.Mesh(geo, mat);
+        const a = i / 12 * Math.PI * 2;
+        shard.position.set(Math.cos(a) * (1.45 + Math.random() * .5), Math.sin(a * 1.7) * .55, Math.sin(a) * .96);
+        shard.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+        shard.userData = { a, r: shard.position.length(), speed: .6 + Math.random() * .8 };
+        objectGroup.add(shard);
+        objectParts.push(shard);
+      }
+
+      for (let i = 0; i < 7; i++) {
+        const ring = new THREE.Mesh(
+          new THREE.TorusGeometry(1.55 + i * .16, .01, 6, 96),
+          new THREE.MeshBasicMaterial({
+            color: i % 2 ? 0x7ed7df : 0xd5a24f,
+            transparent: true,
+            opacity: .15,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
+          })
+        );
+        ring.rotation.x = Math.PI / 2 + i * .16;
+        ring.rotation.y = i * .18;
+        ring.scale.y = .48 + i * .05;
+        ring.userData.baseScale = ring.scale.clone();
+        objectGroup.add(ring);
+        objectParts.push(ring);
+      }
+
+      objectGroup.position.set(0, 0, -4);
+      scene.add(objectGroup);
+    }
+
+    function createSignals() {
+      signalGroup = new THREE.Group();
+      works.forEach((work, i) => {
+        const group = new THREE.Group();
+        const angle = i / works.length * Math.PI * 2 + .35;
+        const radius = 10.5 + (i % 2) * 3.2;
+        group.position.set(Math.cos(angle) * radius, Math.sin(angle * 1.4) * 2.5, -22 - i * 6 + Math.sin(angle) * 4);
+
+        const nebula = new THREE.Sprite(new THREE.SpriteMaterial({
+          map: makeNebulaTexture(work),
+          color: 0xffffff,
+          transparent: true,
+          opacity: .82,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false
+        }));
+        nebula.scale.set(5.8, 5.8, 1);
+        group.add(nebula);
+
+        const core = new THREE.Mesh(
+          new THREE.SphereGeometry(.38, 32, 16),
+          new THREE.MeshStandardMaterial({
+            color: work.tone,
+            emissive: work.tone,
+            emissiveIntensity: 1.4,
+            roughness: .2,
+            metalness: .12
+          })
+        );
+        group.add(core);
+
+        for (let k = 0; k < 3; k++) {
+          const ring = new THREE.Mesh(
+            new THREE.TorusGeometry(.82 + k * .32, .012, 8, 80),
+            new THREE.MeshBasicMaterial({
+              color: k % 2 ? work.alt : work.tone,
+              transparent: true,
+              opacity: .24,
+              blending: THREE.AdditiveBlending
+            })
+          );
+          ring.rotation.x = Math.PI / 2 + k * .28;
+          ring.rotation.y = k * .44;
+          group.add(ring);
+        }
+
+        const texture = makeFrameTexture(work, i, "overview");
+        const frame = new THREE.Mesh(
+          new THREE.PlaneGeometry(1.55, 2.1),
+          new THREE.MeshBasicMaterial({
+            map: texture,
+            transparent: true,
+            opacity: .68,
+            side: THREE.DoubleSide
+          })
+        );
+        frame.position.set(1.45, .22, .16);
+        frame.rotation.y = -.36;
+        group.add(frame);
+
+        group.userData = { work, angle, radius, baseZ: group.position.z };
+        signalMeshes.push(group);
+        signalGroup.add(group);
+      });
+      scene.add(signalGroup);
+    }
+
+    function createMemorySpace() {
+      memoryGroup = new THREE.Group();
+      memoryGroup.visible = false;
+
+      const floor = new THREE.Mesh(
+        new THREE.RingGeometry(3.8, 9.8, 96, 1),
+        new THREE.MeshBasicMaterial({
+          color: 0x7ed7df,
+          transparent: true,
+          opacity: .06,
+          side: THREE.DoubleSide,
+          blending: THREE.AdditiveBlending
+        })
+      );
+      floor.rotation.x = Math.PI / 2;
+      floor.position.y = -2.25;
+      memoryGroup.add(floor);
+
+      for (let i = 0; i < 16; i++) {
+        const geo = new THREE.BoxGeometry(.04, .04, .7 + Math.random() * 1.6);
+        const mat = new THREE.MeshBasicMaterial({
+          color: i % 3 === 0 ? 0xd5a24f : i % 3 === 1 ? 0x7ed7df : 0xd74837,
+          transparent: true,
+          opacity: .18,
+          blending: THREE.AdditiveBlending
+        });
+        const piece = new THREE.Mesh(geo, mat);
+        const a = i / 16 * Math.PI * 2;
+        piece.position.set(Math.cos(a) * (4 + Math.random() * 4), (Math.random() - .5) * 3, Math.sin(a) * 2 - 7);
+        piece.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+        piece.userData = { a, speed: .3 + Math.random() * .6 };
+        memoryGroup.add(piece);
+      }
+
+      scene.add(memoryGroup);
+      rebuildMemoryFrames();
+    }
+
+    function createRuptureField() {
+      ruptureGroup = new THREE.Group();
+      for (let i = 0; i < 34; i++) {
+        const shard = new THREE.Mesh(
+          new THREE.TetrahedronGeometry(.18 + Math.random() * .38, 1),
+          new THREE.MeshBasicMaterial({
+            color: i % 2 ? 0x9583c8 : 0xf7efe1,
+            transparent: true,
+            opacity: .08 + Math.random() * .1,
+            wireframe: true
+          })
+        );
+        const a = Math.random() * Math.PI * 2;
+        shard.position.set(Math.cos(a) * (8 + Math.random() * 10), (Math.random() - .5) * 8, -26 - Math.random() * 70);
+        shard.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+        shard.userData = { speed: .18 + Math.random() * .42 };
+        ruptureGroup.add(shard);
+      }
+      scene.add(ruptureGroup);
+    }
+
+    function rebuildMemoryFrames() {
+      if (!memoryGroup) return;
+      memoryFrames.forEach((frame) => {
+        frame.geometry.dispose();
+        if (frame.material.map) frame.material.map.dispose();
+        frame.material.dispose();
+        memoryGroup.remove(frame);
+      });
+      memoryFrames = [];
+
+      const work = works[activeWork];
+      const tabs = ["overview", "stills", "process", "symbols"];
+      tabs.forEach((tab, i) => {
+        const texture = makeFrameTexture(work, i, tab);
+        const mat = new THREE.MeshBasicMaterial({
+          map: texture,
+          transparent: true,
+          opacity: tab === activeTab ? .96 : .42,
+          side: THREE.DoubleSide
+        });
+        const frame = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 3.15), mat);
+        const spread = (i - 1.5) * 1.92;
+        frame.position.set(spread, i === tabs.indexOf(activeTab) ? .18 : -.12, -5.6 - Math.abs(i - 1.5) * .32);
+        frame.rotation.y = -spread * .16;
+        frame.userData = { tab, index: i };
+        memoryFrames.push(frame);
+        memoryGroup.add(frame);
+      });
+    }
+
+    function buildUI() {
+      chapterBar.innerHTML = chapters.map((chapter, i) => `
+        <button class="nav-dot touch ${i === activeChapter ? "is-active" : ""}" type="button" data-index="${i}" style="color:${chapter.color}">
+          <b>${chapter.cn} / ${chapter.en}</b>
+          <span>${chapter.copy}</span>
+        </button>
+      `).join("");
+
+      workRadar.innerHTML = works.map((work, i) => `
+        <button class="signal-button touch" type="button" data-index="${i}" style="--tone:${work.tone}">
+          <i></i>
+          <span><b>${work.cn}</b><span>${work.en} / ${work.type}</span></span>
+          <em>${String(i + 1).padStart(2, "0")}</em>
+        </button>
+      `).join("");
+
+      chapterBar.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-index]");
+        if (!button) return;
+        setChapter(Number(button.dataset.index));
+      });
+
+      workRadar.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-index]");
+        if (!button) return;
+        setActiveWork(Number(button.dataset.index), true);
+      });
+
+      memoryTabs.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-tab]");
+        if (!button) return;
+        activeTab = button.dataset.tab;
+        updateMemory();
+        rebuildMemoryFrames();
+      });
+    }
+
+    function setChapter(index) {
+      activeChapter = index;
+      mode = index === 2 ? "voyage" : mode === "memory" ? "memory" : "voyage";
+      targetVelocity = index === 0 ? .72 : index === 4 ? .94 : index === 5 ? 1.85 : 1.22;
+      statusText.textContent = chapters[index].cn + " / " + chapters[index].en;
+      statusSub.textContent = chapters[index].copy;
+      chapterBar.querySelectorAll(".nav-dot").forEach((node, i) => node.classList.toggle("is-active", i === index));
+      if (index === 4) ruptureGroup.visible = true;
+      if (index !== 4) ruptureGroup.visible = false;
+      hint.classList.toggle("is-hidden", index !== 1 && index !== 2);
+    }
+
+    function setActiveWork(index, enter) {
+      activeWork = index;
+      activeTab = "overview";
+      const work = works[index];
+      document.documentElement.style.setProperty("--active-tone", work.tone);
+      statusText.textContent = "signal locked / " + work.en;
+      statusSub.textContent = work.type + " is ready to unfold";
+      updateMemory();
+      rebuildMemoryFrames();
+      if (enter) enterMemory();
+    }
+
+    function updateMemory() {
+      const work = works[activeWork];
+      const tabCopy = work.tabs[activeTab] || work.copy;
+      memoryKicker.textContent = work.type + " / " + work.en;
+      memoryTitle.textContent = work.cn;
+      memoryCopy.textContent = tabCopy;
+      memorySymbols.textContent = work.symbols;
+      memoryMotion.textContent = work.motion;
+      memoryProcess.textContent = work.process;
+      memoryEdge.textContent = work.edge;
+      memoryTabs.querySelectorAll(".dock-button").forEach((button) => button.classList.toggle("is-active", button.dataset.tab === activeTab));
+    }
+
+    function enterMemory() {
+      mode = "enter";
+      enterProgress = 0;
+      memoryPanel.classList.add("is-open");
+      hint.classList.add("is-hidden");
+      targetVelocity = 2.55;
+      if (memoryGroup) memoryGroup.visible = true;
+    }
+
+    function releaseMemory() {
+      mode = "voyage";
+      memoryPanel.classList.remove("is-open");
+      targetVelocity = 1.22;
+      if (memoryGroup) memoryGroup.visible = false;
+      statusText.textContent = "released / back to voyage";
+      statusSub.textContent = "the nameless object returns to the signal field";
+    }
+
+    function replayRain() {
+      mode = "rain";
+      rainProgress = 0;
+      rainTitle.classList.remove("is-gone");
+      memoryPanel.classList.remove("is-open");
+      if (memoryGroup) memoryGroup.visible = false;
+      targetVelocity = .72;
+      statusText.textContent = "rain field initializing";
+      statusSub.textContent = "the object is cutting through the first atmosphere";
+    }
+
+    function bindEvents() {
+      window.addEventListener("resize", resize);
+      window.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        targetVelocity = Math.max(.55, Math.min(4.2, targetVelocity + event.deltaY * .0022));
+        if (mode === "rain" && rainProgress > .4) {
+          mode = "voyage";
+          rainTitle.classList.add("is-gone");
+        }
+      }, { passive: false });
+
+      window.addEventListener("pointermove", (event) => {
+        const x = event.clientX / window.innerWidth;
+        const y = event.clientY / window.innerHeight;
+        mouse.x = x * 2 - 1;
+        mouse.y = y * 2 - 1;
+        if (mouse.down) {
+          mouse.sx += (event.clientX - mouse.px) * .002;
+          mouse.sy += (event.clientY - mouse.py) * .002;
+        }
+        mouse.px = event.clientX;
+        mouse.py = event.clientY;
+        cursor.style.left = event.clientX + "px";
+        cursor.style.top = event.clientY + "px";
+        cursorRing.style.left = event.clientX + "px";
+        cursorRing.style.top = event.clientY + "px";
+      });
+
+      window.addEventListener("pointerdown", (event) => {
+        mouse.down = true;
+        mouse.px = event.clientX;
+        mouse.py = event.clientY;
+      });
+      window.addEventListener("pointerup", () => { mouse.down = false; });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") releaseMemory();
+        if (event.key === "Enter") enterMemory();
+        if (event.key === "ArrowRight") setActiveWork((activeWork + 1) % works.length, false);
+        if (event.key === "ArrowLeft") setActiveWork((activeWork - 1 + works.length) % works.length, false);
+      });
+
+      document.addEventListener("mouseover", (event) => {
+        cursorRing.classList.toggle("is-touching", Boolean(event.target.closest(".touch, button")));
+      });
+
+      homeBtn.addEventListener("click", releaseMemory);
+      rainBtn.addEventListener("click", replayRain);
+      memoryBtn.addEventListener("click", enterMemory);
+      releaseBtn.addEventListener("click", releaseMemory);
+    }
+
+    function resize() {
+      if (!renderer || !camera) return;
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.6));
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+
+    function animateStars(dt) {
+      const position = starGeo.attributes.position;
+      const arr = position.array;
+      const speed = velocity * (mode === "memory" ? .18 : 1);
+      for (let i = 0; i < arr.length; i += 3) {
+        arr[i + 2] += dt * speed * (8 + Math.abs(arr[i]) * .08);
+        arr[i] += mouse.sx * dt * .22;
+        arr[i + 1] -= mouse.sy * dt * .16;
+        if (arr[i + 2] > 8) {
+          const radius = 8 + Math.random() * 72;
+          const a = Math.random() * Math.PI * 2;
+          const b = (Math.random() - .5) * Math.PI;
+          arr[i] = Math.cos(a) * Math.cos(b) * radius;
+          arr[i + 1] = Math.sin(b) * radius * .74;
+          arr[i + 2] = -220 - Math.random() * 70;
+        }
+      }
+      position.needsUpdate = true;
+    }
+
+    function animateRain(dt) {
+      const visible = mode === "rain" || activeWork === 2 || rainProgress < 1.2;
+      rainMeshes.forEach((mesh) => {
+        mesh.visible = visible;
+        const def = mesh.userData;
+        const position = mesh.geometry.attributes.position;
+        const arr = position.array;
+        const layerPush = mode === "rain" ? 4.8 : activeWork === 2 ? 1.6 : .42;
+        for (let i = 0; i < arr.length; i += 3) {
+          arr[i] += (mouse.x * .35 + .24) * dt * def.speed * layerPush;
+          arr[i + 1] -= dt * def.speed * (12 + velocity * 3.6);
+          arr[i + 2] += dt * def.speed * (velocity * 8 + layerPush * 4);
+          if (arr[i + 1] < -def.spread * .42 || arr[i + 2] > 7) {
+            arr[i] = (Math.random() - .5) * def.spread - mouse.x * 2;
+            arr[i + 1] = def.spread * .34 + Math.random() * def.spread * .2;
+            arr[i + 2] = -Math.random() * def.depth - 10;
+          }
+        }
+        position.needsUpdate = true;
+        mesh.material.opacity = visible ? def.opacity * (mode === "rain" ? 1 : activeWork === 2 ? .72 : .24) : 0;
+      });
+    }
+
+    function animateObject(t, dt) {
+      const chapter = chapters[activeChapter];
+      const chapterColor = new THREE.Color(chapter.color);
+      objectGroup.position.x += ((mouse.x + mouse.sx * .45) * .78 - objectGroup.position.x) * dt * 2.4;
+      objectGroup.position.y += ((-mouse.y + mouse.sy * .45) * .42 - objectGroup.position.y) * dt * 2.2;
+      objectGroup.position.z += ((mode === "memory" ? -7.2 : -4.2) - objectGroup.position.z) * dt * 2.6;
+      objectGroup.rotation.x += dt * (.22 + velocity * .06);
+      objectGroup.rotation.y += dt * (.46 + velocity * .14);
+      objectGroup.rotation.z = Math.sin(t * .42) * .16 + mouse.x * .12;
+
+      objectParts.forEach((part, i) => {
+        if (part.material && part.material.emissive) part.material.emissive.lerp(chapterColor, dt * 1.5);
+        const s = 1 + Math.sin(t * (1.2 + i * .06) + i) * .026;
+        part.scale.multiplyScalar(1);
+        if (part.userData && part.userData.a !== undefined) {
+          const a = part.userData.a + t * part.userData.speed * .22;
+          const r = 1.55 + Math.sin(t * .8 + i) * .32;
+          part.position.x = Math.cos(a) * r;
+          part.position.z = Math.sin(a) * r * .72;
+          part.position.y = Math.sin(a * 1.7 + t) * .55;
+          part.rotation.x += dt * part.userData.speed;
+          part.rotation.y += dt * part.userData.speed * 1.4;
+        } else {
+          const base = part.userData.baseScale || { x: 1, y: 1, z: 1 };
+          part.scale.set(base.x * s, base.y / s, base.z * (1 + Math.sin(t * .9 + i) * .018));
+        }
+      });
+    }
+
+    function animateSignals(t, dt) {
+      signalMeshes.forEach((group, i) => {
+        const isActive = i === activeWork;
+        const targetOpacity = mode === "memory" ? .12 : isActive ? 1 : .62;
+        group.children.forEach((child) => {
+          if (child.material) child.material.opacity += (targetOpacity - child.material.opacity) * dt * 2.2;
+        });
+        group.position.z += dt * velocity * 2.2;
+        if (group.position.z > 6) group.position.z = group.userData.baseZ - 44;
+        group.position.x += Math.sin(t * .18 + i) * dt * .22;
+        group.position.y += Math.cos(t * .24 + i * 2) * dt * .2;
+        group.rotation.y = Math.sin(t * .32 + i) * .28;
+        group.rotation.z += dt * (isActive ? .18 : .06);
+        group.scale.lerp(new THREE.Vector3(isActive ? 1.2 : .92, isActive ? 1.2 : .92, isActive ? 1.2 : .92), dt * 2.2);
+      });
+    }
+
+    function animateTunnel(t, dt) {
+      tunnelGroup.children.forEach((ring, i) => {
+        ring.position.z += dt * velocity * 7.2;
+        ring.rotation.z += dt * (.08 + i * .003);
+        const pulse = Math.sin(t * 1.4 + i * .7) * .5 + .5;
+        ring.material.opacity = (.025 + pulse * .055) * Math.min(1, velocity / 1.6);
+        if (ring.position.z > 8) ring.position.z = -150;
+      });
+    }
+
+    function animateMemory(t, dt) {
+      if (!memoryGroup) return;
+      const memoryOn = mode === "memory" || mode === "enter";
+      memoryGroup.visible = memoryOn;
+      if (!memoryOn) return;
+      memoryGroup.rotation.y = Math.sin(t * .22) * .05 + mouse.x * .08;
+      memoryGroup.position.x += (-mouse.x * .42 - memoryGroup.position.x) * dt * 1.8;
+      memoryGroup.position.y += (mouse.y * .18 - memoryGroup.position.y) * dt * 1.8;
+      memoryFrames.forEach((frame) => {
+        const isActive = frame.userData.tab === activeTab;
+        frame.position.y += ((isActive ? .2 : -.18) - frame.position.y) * dt * 3;
+        frame.rotation.x = Math.sin(t * .5 + frame.userData.index) * .035;
+        frame.material.opacity += ((isActive ? .98 : .48) - frame.material.opacity) * dt * 4;
+      });
+      memoryGroup.children.forEach((child) => {
+        if (child.userData && child.userData.speed) {
+          child.rotation.x += dt * child.userData.speed;
+          child.rotation.y += dt * child.userData.speed * 1.3;
+          child.position.y += Math.sin(t * child.userData.speed + child.userData.a) * dt * .08;
+        }
+      });
+    }
+
+    function animateRupture(dt) {
+      ruptureGroup.children.forEach((shard) => {
+        shard.rotation.x += dt * shard.userData.speed;
+        shard.rotation.y -= dt * shard.userData.speed * .7;
+        shard.position.z += dt * velocity * 2.4;
+        if (shard.position.z > 8) shard.position.z = -92 - Math.random() * 30;
+      });
+    }
+
+    function updateCamera(dt) {
+      const targetZ = mode === "memory" ? 4.8 : mode === "enter" ? 3.4 : 8;
+      const targetX = mode === "memory" ? mouse.x * .28 : mouse.x * .8 + mouse.sx * .7;
+      const targetY = mode === "memory" ? -mouse.y * .16 : -mouse.y * .44 + mouse.sy * .5;
+      cameraRig.x += (targetX - cameraRig.x) * dt * 2.2;
+      cameraRig.y += (targetY - cameraRig.y) * dt * 2.2;
+      cameraRig.z += (targetZ - cameraRig.z) * dt * 2.6;
+      camera.position.set(cameraRig.x, cameraRig.y, cameraRig.z);
+      camera.lookAt(objectGroup.position.x * .32, objectGroup.position.y * .18, mode === "memory" ? -6 : -12);
+    }
+
+    function updateState(dt) {
+      velocity += (targetVelocity - velocity) * dt * 1.8;
+      mouse.sx *= Math.pow(.86, dt * 60);
+      mouse.sy *= Math.pow(.86, dt * 60);
+      travel += dt * velocity;
+
+      if (mode === "rain") {
+        rainProgress += dt * .23;
+        targetVelocity += (.98 - targetVelocity) * dt * .7;
+        if (rainProgress > 1) {
+          mode = "voyage";
+          rainTitle.classList.add("is-gone");
+          targetVelocity = 1.18;
+          statusText.textContent = "voyage / signal field";
+          statusSub.textContent = "the nameless object is now moving through memory space";
+        }
+      }
+
+      if (mode === "enter") {
+        enterProgress += dt * .72;
+        targetVelocity = 3.15;
+        if (enterProgress >= 1) {
+          mode = "memory";
+          targetVelocity = .86;
+          statusText.textContent = "memory opened / " + works[activeWork].en;
+          statusSub.textContent = "switch tabs to rotate the archive layer";
+        }
+      }
+
+      const warp = Math.min(.72, .12 + velocity * .12 + (mode === "enter" ? enterProgress * .5 : 0));
+      speedVeil.style.setProperty("--warp", warp.toFixed(3));
+      document.documentElement.style.setProperty("--speed-line", Math.min(1, velocity / 3.8).toFixed(3));
+    }
+
+    function render() {
+      const dt = Math.min(clock.getDelta(), .033);
+      const t = clock.elapsedTime;
+      updateState(dt);
+      animateStars(dt);
+      animateRain(dt);
+      animateTunnel(t, dt);
+      animateObject(t, dt);
+      animateSignals(t, dt);
+      animateMemory(t, dt);
+      animateRupture(dt);
+      updateCamera(dt);
+      renderer.render(scene, camera);
+      requestAnimationFrame(render);
+    }
+
+    function init() {
+      if (!window.THREE) {
+        fallback.classList.add("is-visible");
+        loading.classList.add("is-hidden");
+        return;
+      }
+
+      renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: true,
+        alpha: false,
+        powerPreference: "high-performance"
+      });
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.12;
+
+      scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x020203, .026);
+      camera = new THREE.PerspectiveCamera(62, window.innerWidth / window.innerHeight, .1, 260);
+      clock = new THREE.Clock();
+
+      const ambient = new THREE.AmbientLight(0x7b8992, .85);
+      scene.add(ambient);
+      const key = new THREE.PointLight(0xd5a24f, 18, 24);
+      key.position.set(-3, 3, 2);
+      scene.add(key);
+      const rim = new THREE.PointLight(0x7ed7df, 24, 32);
+      rim.position.set(4, -2, -5);
+      scene.add(rim);
+      const red = new THREE.PointLight(0xd74837, 12, 28);
+      red.position.set(6, 4, -14);
+      scene.add(red);
+
+      createStarfield();
+      createRainField();
+      createTunnel();
+      createNamelessObject();
+      createSignals();
+      createMemorySpace();
+      createRuptureField();
+      ruptureGroup.visible = false;
+
+      buildUI();
+      bindEvents();
+      setActiveWork(0, false);
+      resize();
+
+      setTimeout(() => loading.classList.add("is-hidden"), 900);
+      requestAnimationFrame(render);
+    }
+
+    init();
+  </script>
+</body>
+</html>

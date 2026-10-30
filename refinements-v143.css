@@ -1,0 +1,8 @@
+/* The film now reveals the real courtyard directly; no intermediate title page. */
+#entryGate{display:none!important;visibility:hidden!important;pointer-events:none!important}
+.courtyard-inscription{display:none!important}
+.portfolio-child-portal[data-parked="true"]{visibility:hidden;pointer-events:none}
+.portfolio-child-portal iframe[data-cached="true"]{visibility:hidden;pointer-events:none}
+.portfolio-child-portal iframe[data-cached="true"][hidden]{display:block!important}
+.portfolio-child-portal iframe{height:100vh!important}
+#indexList .index-work .title{font-size:28px!important}

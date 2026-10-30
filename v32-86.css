@@ -1,0 +1,11 @@
+/* Cover only the photograph; preserve its caption and the original card layout. */
+.photo-halftone-reveal{bottom:52px}
+.photo-halftone-reveal>.halftone-reveal{position:relative;width:100%;height:100%}
+.photo-halftone-reveal .halftone-reveal-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.photo-halftone-reveal{animation:photo-reveal-release-v86 2.2s both}
+@keyframes photo-reveal-release-v86{0%,50%{opacity:1}100%{opacity:0}}
+/* Keep the front rim outside the writing while the authored cursor light moves. */
+#indexList .border-glow-card{--border-radius:20px!important}
+#indexList .border-glow-card:hover,#indexList .border-glow-card:focus-within{--edge-proximity:100!important}
+#indexList .border-glow-card:before{padding:1px;background:var(--gradient-base);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude}
+#indexList>.archive-border-mount:last-child{grid-column:1/-1}

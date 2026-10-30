@@ -1,0 +1,20 @@
+import fs from'node:fs/promises';import path from'node:path';import{spawn}from'node:child_process';import{chromium}from'playwright';import assert from'node:assert/strict';
+const root=process.cwd(),out='assets/works/physical-universe-v100',frames='.verify/v32-100/frames';await fs.mkdir(out,{recursive:true});await fs.mkdir(frames,{recursive:true});
+const args=process.argv.slice(2),draft=args.includes('--draft');const b=await chromium.launch({channel:'msedge',headless:true}),p=await b.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:1});let errors=[];p.on('pageerror',e=>errors.push(e.message));
+await p.goto('http://localhost:8031/motion/physical-universe-v100/index.html?t=2.9',{waitUntil:'load'});await p.waitForFunction(()=>window.__filmReady);await p.evaluate(()=>document.fonts.ready);
+const shots=[['frame-01',2.4],['frame-02',6.4],['frame-03',10.2],['frame-04',13.1]];
+for(const[name,t]of shots){await p.evaluate(t=>__seek(t),t);await p.screenshot({path:out+'/'+name+'.png'});}await fs.writeFile(out+'/physics-record.json',JSON.stringify(await p.evaluate(()=>__physicsRecord)));
+if(draft){await b.close();console.log('Drafts saved');process.exit(0)}
+// Random access must be deterministic even after unrelated seeks.
+await p.evaluate(()=>__seek(2.9));const a=await p.screenshot();await p.evaluate(()=>{__seek(11.4);__seek(2.9)});const z=await p.screenshot();assert(a.equals(z),'Seek must be byte-identical');assert.deepEqual(errors,[]);
+for(let frame=0;frame<540;frame++){await p.evaluate(t=>__seek(t),frame/30);await p.screenshot({path:frames+'/'+String(frame).padStart(4,'0')+'.png'});if(frame%90===0)console.log('Native deterministic frame '+frame+'/540')}
+await b.close();
+const ff='F:/codex程序/FFmpeg-extracted/ffmpeg-8.1.2-essentials_build/bin/ffmpeg.exe';
+const run=(cmd,args)=>new Promise((resolve,reject)=>{const child=spawn(cmd,args,{stdio:'inherit'});child.on('error',reject);child.on('exit',code=>code?reject(Error('Process exit '+code)):resolve())});
+await run('C:/Users/HP/AppData/Local/Programs/Python/Python313/python.exe',['scripts/make-physical-audio-v100.py']);
+await run(ff,['-hide_banner','-loglevel','error','-y','-framerate','30','-i',frames+'/%04d.png','-i',out+'/soundtrack.wav','-c:v','ffv1','-level','3','-pix_fmt','bgr0','-c:a','pcm_s16le',out+'/master-lossless.mkv']);
+await run(ff,['-hide_banner','-loglevel','error','-y','-framerate','30','-i',frames+'/%04d.png','-i',out+'/soundtrack.wav','-c:v','libx264','-preset','medium','-crf','17','-pix_fmt','yuv420p','-c:a','aac','-b:a','256k','-movflags','+faststart',out+'/film.mp4']);
+for(const[name]of shots)await run(ff,['-hide_banner','-loglevel','error','-y','-i',out+'/'+name+'.png','-c:v','libwebp','-quality','96',out+'/'+name+'.webp']);
+await fs.copyFile(out+'/frame-04.webp',out+'/cover.webp');
+await fs.writeFile(out+'/manifest.json',JSON.stringify({title:'让画面发生',film:'film.mp4',gallerySelection:[0,1,2,3],frames:shots.map(([name,t])=>({image:name+'.webp',source:name+'.png',time:t,position:'50% 50%',fit:'cover'}))},null,2));
+await fs.writeFile('.verify/v32-100/production.json',JSON.stringify({passed:true,framework:'Native HTML + Canvas2D, no Remotion',duration:18,fps:30,frames:540,width:1920,height:1080,dpr:1,physicsHz:240,deterministicSeek:true,siteImagesUsed:0,errors,source:'motion/physical-universe-v100',losslessMaster:out+'/master-lossless.mkv',skill:'skills/physical-handfeel-film/SKILL.md'},null,2));await run(process.execPath,['scripts/physical-studies-v100.mjs']);console.log('Native film, wide studies and lossless master finished.');

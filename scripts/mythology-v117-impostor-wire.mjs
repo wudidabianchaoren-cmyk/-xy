@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+const p='src/odyssey-native-v117.ts';let s=await fs.readFile(p,'utf8');
+s=s.replace("const [land,cliffs,forest,fleet,figure,farLeaf]=await Promise.all(['island','cliffs','biome-web','fleet','cyclops','leaf-far']","const [land,cliffs,forest,fleet,figure]=await Promise.all(['island','cliffs','biome-web','fleet','cyclops']");
+s=s.replace("let farGeometry:THREE.BufferGeometry|undefined;farLeaf.scene.traverse(o=>{if(o instanceof THREE.Mesh)farGeometry=o.geometry;});",`const canopy=await new THREE.TextureLoader().loadAsync(folder+'canopy-impostor.png');canopy.colorSpace=THREE.SRGBColorSpace;canopy.anisotropy=8;
+ const cards=[0,Math.PI/3,Math.PI*2/3].map(a=>new THREE.PlaneGeometry(1.08,1.08).translate(0,.54,0).rotateY(a));const farGeometry=mergeGeometries(cards,false)!;
+ const farMaterial=new THREE.MeshBasicMaterial({map:canopy,alphaTest:.32,side:THREE.DoubleSide});farMaterial.name='V117 actual native full canopy render / distant crossed-card LOD';`);
+s=s.replace('new THREE.InstancedMesh(farGeometry,b.m,b.matrices.length)','new THREE.InstancedMesh(farGeometry,farMaterial,b.matrices.length)');
+s=s.replace('if(p.distanceTo(camera.position)<145)','if(p.distanceTo(camera.position)<65&&n<24)');
+s=s.replace("nativeFile:'blender/mythology-v32-117/05-complete-native-world.blend'","canopyLOD:'24 close complete leaf proxies maximum; distant full-native-render crossed cards',nativeFile:'blender/mythology-v32-117/08-final-local-world.blend'");
+await fs.writeFile(p,s);

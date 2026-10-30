@@ -1,0 +1,40 @@
+@font-face{font-family:YJHand;src:url('./motion/yangjian-v108/river/assets/fonts/Caveat-700-latin.woff2') format('woff2');font-weight:700;font-display:swap}
+:root{--art-width:min(72vw,1200px)}
+.cover{min-height:100svh;background:transparent}.cover-motion{height:100svh;min-height:0;overflow:visible;background:transparent}
+.cover-ink{display:none}.cover-shade{background:linear-gradient(0deg,#08080855,transparent 28%,transparent 75%,#0008)}
+.cover-title{left:0;right:0;top:6svh;text-align:center;will-change:transform,opacity;pointer-events:none}
+.cover-title h1{font:700 clamp(85px,8.4vw,146px)/.84 YJHand,cursive;letter-spacing:.025em;transform:none;-webkit-text-stroke:0;text-shadow:0 2px 20px #0005}
+.cover-title h1 span{display:block;transform:none;font-size:.38em;line-height:1.35;letter-spacing:.09em;margin-bottom:10px}
+.cover-title h2{font:400 17px/1.7 var(--serif);letter-spacing:.38em;margin:20px 0 0;color:#eee}
+.journey-shade{background:linear-gradient(0deg,#08080838,transparent 45%,#08080844)}
+#chapter-1>.chapter-heading{min-height:94svh;background:transparent;padding-top:14svh;padding-bottom:20svh}
+.chapter-heading{min-height:56svh;padding:12svh 10vw;text-align:center;gap:0}
+.chapter-heading>small{font:12px/1.5 var(--sans);letter-spacing:.36em;color:#ddd}
+.chapter-heading h2{font:400 clamp(46px,4.2vw,70px)/1.3 var(--serif);letter-spacing:.12em;margin:25px 0 22px}
+.chapter-heading>p{font:20px/1.9 var(--serif);color:#c7c7c7;letter-spacing:.06em}
+.copy{font-size:clamp(23px,1.63vw,28px);line-height:1.85;letter-spacing:.035em;width:min(60vw,880px);text-shadow:0 2px 12px #000a}
+.copy q,.speech q{font-family:var(--serif);font-weight:400;letter-spacing:.04em}
+.opening-summary{padding-top:8svh;gap:15svh}
+.opening-summary>.copy{align-self:center;margin:0;text-align:center;font-size:clamp(27px,2vw,33px);line-height:1.95;max-width:960px;width:72vw;padding:2svh 0 7svh}
+.beat{padding-top:5svh;padding-bottom:5svh;gap:4svh}
+.river-insert{padding-top:0;padding-bottom:6svh}
+.ink-paper{background:#eee;isolation:isolate}
+.ink-paper img{mix-blend-mode:normal;filter:grayscale(1);mask-image:none;opacity:1}
+.ink-panel img{filter:grayscale(1) invert(1)}
+.ink-panel img[data-ink-dark=true],.ink-panel img[data-ink-paper=true]{filter:grayscale(1)}
+.river-stage .ambient-video{opacity:.72}.river-stage .stage-haze{opacity:.32}
+.scene-stage{overflow:visible}.motion-root{backface-visibility:hidden}
+@media(max-width:800px){:root{--art-width:84vw}.cover-title{top:10svh}.cover-title h1{font-size:17vw}.cover-title h2{font-size:13px}.opening-summary>.copy,.copy{width:78vw;font-size:22px}.chapter-heading h2{font-size:42px}}
+@media(prefers-reduced-motion:reduce){.cover-title{will-change:auto}.motion-root,.ink-panel,.copy{will-change:auto}}
+
+/* Reset the older flex title and keep moving backgrounds under one fixed camera. */
+.cover-title{width:auto;max-width:none;left:0;right:0;display:block}
+.cover-title h1{display:block!important;align-items:normal;gap:0;width:auto}
+.cover-title h1 span{display:block!important;width:auto;flex:none;float:none}
+.journey-camera{background-image:url('./assets/yangjian-v115/video/opening-poster.png')}
+.chapter[data-chapter="5"]{background:transparent}
+.river-stage .stage-haze{display:none}
+.cover-title{top:3svh}
+.cover-title h1{font-size:clamp(66px,6.8vw,108px)}
+.cover-title h1 span{font-size:.34em;margin-bottom:7px}
+.cover-title h2{margin-top:12px;font-size:15px}

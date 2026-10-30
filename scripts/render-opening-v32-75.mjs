@@ -1,0 +1,18 @@
+import {createRequire} from 'node:module';
+import {mkdir,copyFile,writeFile,readFile} from 'node:fs/promises';
+import path from 'node:path';import {createHash} from 'node:crypto';import {spawnSync} from 'node:child_process';
+const modules='E:/Brain-Universe-assets/V32-72/video-tools/node_modules',require=createRequire(modules+'/remotion/package.json');
+const {bundle}=require('@remotion/bundler'),{renderFrames,selectComposition,renderStill}=require('@remotion/renderer');
+const folder='motion/remotion-v32-75';await mkdir(folder+'/public',{recursive:true});
+await copyFile('assets/loading-study/v32-72/expanded-scientific-atlas.png',folder+'/public/expanded-scientific-atlas.png');await copyFile('assets/loading-study/v32-71/perception-engraving-atlas.png',folder+'/public/perception-engraving-atlas.png');
+const serveUrl=await bundle({entryPoint:path.resolve(folder+'/src/index.tsx'),publicDir:path.resolve(folder+'/public'),webpackOverride:c=>({...c,resolve:{...c.resolve,modules:[...(c.resolve.modules||['node_modules']),modules]}})});
+const composition=await selectComposition({serveUrl,id:'MindUniverseOpening'});
+await renderStill({serveUrl,composition,output:'assets/loading-study/opening-poster-v32-75.png',frame:18,imageFormat:'png',timeoutInMilliseconds:180000});
+for(const [name,frame] of [['trace',52],['evolution',164],['perception',308],['worldmaking',441],['title',583]])await renderStill({serveUrl,composition,output:'.verify/v32-75/opening-'+name+'.png',frame,imageFormat:'png',timeoutInMilliseconds:180000});
+const frames='.verify/v32-75/remotion-frames';await mkdir(frames,{recursive:true});
+let last=-1;const rendered=await renderFrames({serveUrl,composition,outputDir:frames,inputProps:{},imageFormat:'jpeg',jpegQuality:95,concurrency:1,timeoutInMilliseconds:180000,imageSequencePattern:'frame-[frame].jpeg',onStart:()=>{},onFrameUpdate:n=>{const p=Math.floor(n/60);if(p!==last){last=p;console.log('Actual Remotion frames '+n+'/600');}}});
+console.log('Remotion completed '+rendered.frameCount+' frames.');
+const encoded=spawnSync('F:/codex程序/FFmpeg-extracted/ffmpeg-8.1.2-essentials_build/bin/ffmpeg.exe',['-hide_banner','-y','-threads','2','-framerate','30','-i',frames+'/frame-%03d.jpeg','-c:v','libx264','-threads','2','-crf','17','-pix_fmt','yuv420p','-movflags','+faststart','assets/loading-study/loading-study-v32-75.mp4'],{stdio:'inherit'});if(encoded.status!==0)throw Error('Opening encoding failed');
+const sha=x=>createHash('sha256').update(x).digest('hex');
+const result={passed:true,renderer:'Actual installed Remotion',frames:600,fps:30,duration:20,width:1536,height:864,chapters:5,continuousHumanEvolution:true,blackBackground:true,videoSha256:sha(await readFile('assets/loading-study/loading-study-v32-75.mp4')),sourceSha256:sha(await readFile('motion/loading-study-v6/opening.js'))};
+await writeFile('.verify/v32-75/opening-production.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));

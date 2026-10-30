@@ -1,0 +1,12 @@
+/* V116: keep the established ink layout, allow dialogue and prose to breathe. */
+.journey-camera{background-image:url('./assets/yangjian-v116/video/opening-poster.png')}
+.copy{line-height:2.2;letter-spacing:.045em}
+.copy p{margin-bottom:1.05em}
+.copy.large,.copy strong{line-height:2.1}
+.copy q,.speech q{line-height:2.05;margin-top:1.1em;margin-bottom:1.1em}
+.opening-summary>.copy{line-height:2.2}
+.chapter-heading>p{line-height:2.1}
+.chapter[data-chapter="2"]{background:transparent}
+.capture-stage .ambient-video,.capture-stage .ambient-video.is-playing{opacity:var(--capture-film-opacity,0)}
+.capture-stage .stage-haze{opacity:.42}
+@media(max-width:680px){.copy{line-height:2.1}.opening-summary>.copy{line-height:2.15}}

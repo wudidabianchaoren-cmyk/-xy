@@ -1,0 +1,8 @@
+/* Image-only FadeContent: preserve the existing paper page and reader. */
+.study-image[data-fade-content] { transform-origin: 50% 50%; }
+.study-image[data-fade-content] img { transition: none; }
+.study-image[data-fade-content]:hover img { transform: none; }
+.image-reader img { filter: none !important; opacity: 1 !important; visibility: visible !important; transform: none !important; }
+@media(prefers-reduced-motion:reduce){
+ .study-image[data-fade-content],.study-image[data-fade-content] img { filter:none!important;opacity:1!important;visibility:visible!important;transform:none!important; }
+}

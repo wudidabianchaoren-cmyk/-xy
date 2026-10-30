@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';import {createHash} from 'node:crypto';
+let s=await fs.readFile('yangjian.js','utf8');s=s.replace('async enable(){if(this.pending)return;',"async enable(){if(this.pending){if(this.ctx&&navigator.userActivation?.isActive)await this.ctx.resume().catch(()=>{});return;}");await fs.writeFile('yangjian.js',s);
+const p='E:/codex/脑海宇宙作品集/当前作品集_V32.110';await fs.copyFile('yangjian.js',p+'/项目/yangjian.js');const rows=JSON.parse(await fs.readFile(p+'/文件清单.json','utf8'));const r=rows.find(r=>r.path==='项目/yangjian.js');r.bytes=(await fs.stat('yangjian.js')).size;r.sha256=createHash('sha256').update(await fs.readFile('yangjian.js')).digest('hex');await fs.writeFile(p+'/文件清单.json',JSON.stringify(rows,null,2));

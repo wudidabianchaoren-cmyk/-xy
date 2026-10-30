@@ -1,0 +1,11 @@
+#ueCove{position:absolute;inset:0;overflow:hidden;cursor:grab;background:#1c292a url('./.verify/v32-149/ue-cove-refined.png') center/cover no-repeat;touch-action:none}
+#ueCove.is-dragging{cursor:grabbing}
+#ueCove video{display:block!important;position:absolute!important;width:100%!important;height:100%!important;inset:0!important;object-fit:cover!important;opacity:0;transition:opacity .5s}
+.ue-cove-live #ueCove video{opacity:1}
+.ue-cove-live #ueCove{background-image:none}
+.odyssey-preparing[hidden]{display:none!important}
+.odyssey-preparing{pointer-events:none;background:linear-gradient(transparent,#111d2370);justify-content:flex-end;padding-bottom:70px}
+.odyssey-preparing p{font-size:13px;letter-spacing:.12em}
+[data-ue-retry]{pointer-events:auto;background:#1f2d2cde;border:1px solid #b8a27870;color:#e1d0aa;padding:10px 20px;border-radius:3px;cursor:pointer;margin-top:12px}
+.ue-cove-help{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:12px;color:#d8d1bbb0;letter-spacing:.12em;pointer-events:none;text-shadow:0 1px 8px #000}
+.odyssey-heading,.coast-wind-label{pointer-events:none}

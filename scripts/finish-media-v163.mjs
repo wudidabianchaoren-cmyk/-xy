@@ -1,0 +1,5 @@
+import fs from'node:fs/promises';let p='scripts/ue_runtime_v162.py',s=await fs.readFile(p,'utf8');s=s.replaceAll('ue_room_media_v163','ue_room_media_v163b');await fs.writeFile(p,s);
+p='src/ue-native-surface-next-v162.ts';s=await fs.readFile(p,'utf8');s=s.replace('roomWork?:number;','roomTime?:number;roomWork?:number;').replace('roomWork:v.roomWork,','roomTime:v.roomTime===undefined?undefined:Math.round(v.roomTime*2)/2,roomWork:v.roomWork,');await fs.writeFile(p,s);
+p='src/directory-v141/room-v143.ts';s=await fs.readFile(p,'utf8');s=s.replace('desiredLook.set(windowAim.x,windowAim.y,-8)','desiredLook.set(windowAim.x,windowAim.y-1.4,-8)').replace('roomWork:screen.status.work,','roomTime:screen.status.videoTime,roomWork:screen.status.work,');await fs.writeFile(p,s);
+p='tools/pixel-streaming-v149/server-v162.cjs';s=await fs.readFile(p,'utf8');s=s.replace("'roomWork','roomTV'","'roomWork','roomTime','roomTV'");await fs.writeFile(p,s);
+p='scripts/start-ue-v162.ps1';s=await fs.readFile(p,'utf8');s=s.replace('$readyAttempt -lt 40','$readyAttempt -lt 120');await fs.writeFile(p,s);console.log('Upright cached CRT, playback sync and window framing wired');

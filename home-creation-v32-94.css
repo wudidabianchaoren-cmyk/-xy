@@ -1,0 +1,11 @@
+/* Keep the wall and both mirror folds on the same shared edges. */
+.home-creation .glass-frame{left:18%;top:20%;width:64%;height:60%}
+.home-creation .glass-reflection{height:20%}
+.home-creation .reflection-top{top:0;clip-path:polygon(0 0,100% 0,82% 100%,18% 100%)}
+.home-creation .reflection-bottom{top:80%;clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.home-creation .glass-reflection .glass-artwork{left:18%;width:64%;height:300%}
+.home-creation .reflection-top .glass-artwork{top:-200%}
+.home-creation .reflection-bottom .glass-artwork{top:0}
+.home-creation .glass-room img{object-fit:cover!important;object-position:50% 50%}
+.home-creation .home-gallery-fallback{left:18%;top:20%;width:64%;height:60%}
+.home-creation .home-gallery-fallback img{object-fit:cover}

@@ -1,0 +1,17 @@
+/* The introduction is one film. Normal controls return when this class ends. */
+body.home-intro-playing .topbar,
+body.home-intro-playing #experienceConsole,
+body.home-intro-playing #portfolioProgress,
+body.home-intro-playing .courtyard-inscription,
+body.home-intro-playing .home-discoveries,
+body.home-intro-playing .home-discovery-label,
+body.home-intro-playing .ambient-status,
+body.home-intro-playing .spatial-grid,
+body.home-intro-playing .stage-scan-system,
+body.home-intro-playing .hero,
+body.home-intro-playing .object-prompt,
+body.home-intro-playing .wxy-signature,
+body.home-intro-playing .logo-loop-field,
+body.home-intro-playing .home-town-preparing{
+ visibility:hidden!important;opacity:0!important;pointer-events:none!important;
+}

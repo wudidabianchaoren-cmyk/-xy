@@ -1,0 +1,6 @@
+import{pathToFileURL}from'node:url';import{writeFile,mkdir}from'node:fs/promises';
+const sdk='E:/Brain-Universe-assets/V32-72/video-tools/node_modules/@modelcontextprotocol/sdk/dist/esm/client/';
+const{Client}=await import(pathToFileURL(sdk+'index.js'));const{StdioClientTransport}=await import(pathToFileURL(sdk+'stdio.js'));
+const client=new Client({name:'native-v112-review',version:'32.112'}),transport=new StdioClientTransport({command:'C:/Users/HP/.local/bin/uvx.exe',args:['mcp-for-blender','--host','127.0.0.1','--port','9877'],env:{...process.env,UV_CACHE_DIR:'E:/Brain-Universe-assets/V32-73/uv-cache',BLENDER_MCP_DISABLE_TELEMETRY:'1'},stderr:'pipe'});
+await mkdir('.verify/v32-112',{recursive:true});
+try{await client.connect(transport);const result=await client.callTool({name:'look',arguments:{mode:'camera',shading:process.argv[3]||'solid',max_size:1280}},undefined,{timeout:120000});let i=0;for(const c of result.content||[])if(c.type==='image'){const p='.verify/v32-112/'+(process.argv[2]||'native-view')+'-'+i+++'.png';await writeFile(p,Buffer.from(c.data,'base64'));console.log(p);}await writeFile('.verify/v32-112/mcp-look-'+(process.argv[2]||'native-view')+'.json',JSON.stringify({...result,content:result.content?.filter(c=>c.type!=='image')},null,2));if(result.isError)throw Error('look failed');}finally{await client.close();}

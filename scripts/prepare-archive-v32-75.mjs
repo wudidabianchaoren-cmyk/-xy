@@ -1,0 +1,18 @@
+import {readFile,writeFile,copyFile} from 'node:fs/promises';
+const version=s=>s.replaceAll('32.74','32.75').replaceAll('v32-74','v32-75').replaceAll('V32-74','V32-75').replaceAll('(?!74)','(?!75)');
+let s=version(await readFile('scripts/save-current-v32-74.mjs','utf8'));
+s=s.replace("'v32-73.css','v32-75.css','reading.html','reading.css'","'v32-73.css','v32-74.css','v32-75.css','reading.html','reading.css','reading-v32-75.css','HOME-VISUAL-ACCEPTANCE.md'");
+s=s.replace('const pending={',"const oldV74Hash=await hash(root+'/当前作品集_V32.74/保存结果.json');\nconst pending={previousV74ArchiveSha256:oldV74Hash,");
+s=s.replace("await local('VIDEO-TOOLS-V32-72.md');","await add(path.join(source,'blender/reference-architecture-v21'),'项目/blender/reference-architecture-v21',r=>!r.endsWith('.blend1'));\nawait local('VIDEO-TOOLS-V32-72.md');");
+s=s.replace("for(const f of ['export-v73-input.mjs'","for(const f of ['verify-experience-v32-75.mjs','protected-v32-75.mjs'])await local('.verify/'+f);\nfor(const f of ['export-v73-input.mjs'");
+s=s.replace("await local('.verify/v32-75-before/'+f);","await local('.verify/v32-74-before/'+f);");
+s=s.replace("if(await hash(oldArchive)!==oldHash)","if(await hash(root+'/当前作品集_V32.74/保存结果.json')!==oldV74Hash)throw Error('Frozen V74 changed');\nif(await hash(oldArchive)!==oldHash)");
+await writeFile('scripts/save-current-v32-75.mjs',s);
+await copyFile('.verify/v32-74/protected-before.json','.verify/v32-75/protected-before.json');
+s=version(await readFile('scripts/verify-v32-74-package.mjs','utf8'));
+s=s.replace('const local=JSON.parse',"assert.equal(await hash(root+'/当前作品集_V32.74/保存结果.json'),saved.previousV74ArchiveSha256);\nconst local=JSON.parse");
+s=s.replace("await deck.click();await page.waitForTimeout(1000);assert.equal(await deck.getAttribute('aria-expanded'),'true');await deck.click();await page.waitForTimeout(1000);assert.equal(await deck.getAttribute('aria-expanded'),'false');", "await deck.locator('figure').first().click();await page.waitForTimeout(750);assert.equal(await deck.getAttribute('aria-expanded'),'true');await deck.locator('figure').nth(2).click();await page.waitForTimeout(750);assert.equal(await page.evaluate(()=>window.lifePurposeState.selectedCard),2);await deck.locator('figure').nth(2).click();await page.waitForTimeout(750);assert.equal(await page.evaluate(()=>window.lifePurposeState.selectedCard),-1);await page.locator('.life-deck-fold').click();await page.waitForTimeout(750);assert.equal(await deck.getAttribute('aria-expanded'),'false');");
+s=s.replace("await page.locator('#nextPage').click();await page.waitForFunction(()=>window.readingBookState.turns===1);", "await page.locator('#nextPage').click();await page.waitForFunction(()=>window.readingBookState.turns===1);assert.deepEqual(await page.evaluate(()=>window.readingBookState.pairedPages),[4,5]);");
+s=s.replace("await page.locator('#readerClose').click();await page.goto('http://localhost:8032/learning.html');", "assert.equal(await page.locator('#fullSpread img').count(),2);await page.locator('#readerClose').click();await page.goto('http://localhost:8032/learning.html');");
+await writeFile('scripts/verify-v32-75-package.mjs',s);
+console.log('V75 archive scripts prepared with UTF8 paths; no E package modified.');

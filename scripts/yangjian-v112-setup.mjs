@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+const p='motion/yangjian-v112/chapter-films';
+await fs.mkdir(p+'/assets',{recursive:true});
+await fs.mkdir('assets/yangjian-v112/video',{recursive:true});
+await fs.mkdir('assets/yangjian-v112/audio/originals',{recursive:true});
+await fs.mkdir('.verify/v32-112/yangjian/before',{recursive:true});
+for(const name of ['yangjian.html','yangjian.css','yangjian.js'])await fs.copyFile(name,'.verify/v32-112/yangjian/before/'+name);
+for(const name of ['package.json','hyperframes.json'])await fs.copyFile('motion/yangjian-v110/opening/'+name,p+'/'+name);
+await fs.copyFile('motion/yangjian-v110/opening/assets/gsap.min.js',p+'/assets/gsap.min.js');
+await fs.writeFile(p+'/BRIEF.md',`---\nworkflow: general-video\nflow: automation\nstoryboard: no\n---\n# 杨戬：四段水墨叙事动作\n延续已确认黑底白墨故事。8秒×4、1280×720、24fps。不是再做开篇，不改变原19图和八章剧情。第三章雪中脚印与手足相携；第四章负重举斧，斧刃回落；第六章长戟压下与斧背架开；第八章母亲与孩子的手缓慢靠近并相握。原创程序笔触、局部受力和墨雾，不复用参考站美术。声音使用已保留雨雷录音与有授权真实脚步，其他拟音如仍为合成则如实记录。\n`);
+console.log(p);

@@ -1,0 +1,15 @@
+/* The film stays the main image; status becomes one calm group below it. */
+#countdownPrelude .opening-progress{left:50%!important;right:auto!important;bottom:6.8%!important;transform:translateX(-50%)!important;width:430px!important;max-width:40vw!important}
+#countdownPrelude .thought-line-v158-host{min-height:108px}
+#countdownPrelude .opening-progress-track{display:none!important}
+#countdownPrelude .opening-progress-meta{top:0;font-size:18px;width:64px}
+#countdownPrelude .opening-film-title-mask{position:absolute;background:#000;pointer-events:none;z-index:3}
+#countdownPrelude .opening-film-chapter{position:absolute;left:9%;top:12%;z-index:4;color:#e7e4d8;pointer-events:none;max-width:30vw}
+#countdownPrelude .opening-film-chapter h2{font-family:"Bodoni MT","Times New Roman",serif;font-size:clamp(21px,1.7vw,29px);font-weight:400;letter-spacing:.025em;line-height:1.15;margin:0}
+#countdownPrelude .opening-film-chapter p{margin:11px 0 0;font:11px/1.4 Georgia,serif;letter-spacing:.09em;color:#b2aa8b}
+/* A truthful immediate image while a direct jump finishes GPU preparation. */
+.directory-first-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;background:#24221e;z-index:0}
+.directory-room-host,.directory-webgl{position:relative;z-index:1}
+.directory-pending{position:relative;background:#24221e url('./assets/native-v164/room.jpg?v=32.164') center/cover no-repeat!important}
+.directory-pending p,.directory-pending a{visibility:hidden}
+.directory-loading{background:transparent!important;pointer-events:none;opacity:0!important}

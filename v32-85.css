@@ -1,0 +1,22 @@
+.discovery-object{width:100%;height:218px;margin:14px 0 10px;overflow:hidden;border-radius:5px;box-shadow:inset 0 0 0 1px #d8b77630,0 14px 32px #0007}
+.discovery-object canvas{width:100%!important;height:100%!important;touch-action:none;cursor:grab}
+.home-discovery-panel p{font-size:12px;line-height:1.8;color:#bdb69f}
+/* The authored glow stays above the opaque original button, preserving its geometry. */
+#indexList .border-glow-card:before{z-index:3;pointer-events:none}
+#indexList .border-glow-card:after{z-index:2;pointer-events:none}
+#indexList .border-glow-card>.edge-light{z-index:4}
+#indexList .border-glow-inner{overflow:visible}
+.archive-hover:not(.home-secret-hit){box-shadow:inset 0 0 0 1px #ccad7080,0 0 18px #d8b57535!important;transition:box-shadow .22s ease}
+.life-note-card.archive-hover,.image-chapter figure.archive-hover{filter:drop-shadow(0 5px 15px #b28f4833)}
+.archive-click-sparks{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:10020}
+.photo-halftone-reveal{position:absolute;inset:0;pointer-events:none;z-index:5;animation:photo-reveal-release 1.8s both}
+@keyframes photo-reveal-release{0%,40%{opacity:1}100%{opacity:0}}
+.home-designed-intro{position:absolute;inset:0;z-index:12;pointer-events:none;background:transparent}
+.home-designed-intro>div{width:100%!important;height:100%!important}
+.home-designed-intro[hidden]{display:none}
+body.home-intro-playing .home-discoveries,body.home-intro-playing .courtyard-inscription{visibility:hidden}
+.home-designed-intro canvas{width:100%;height:100%}
+.rural-project-memory img{pointer-events:auto;cursor:zoom-in}
+.image-popout{pointer-events:none}
+.image-popout.is-open{pointer-events:auto}
+@media(prefers-reduced-motion:reduce){.photo-halftone-reveal{display:none}}

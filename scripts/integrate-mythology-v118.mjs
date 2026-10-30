@@ -1,0 +1,33 @@
+import fs from 'node:fs/promises';import assert from 'node:assert/strict';import{createHash}from'node:crypto';
+const src=await fs.readFile('.verify/v32-118/previous-source/src/odyssey-scene.ts','utf8'),original=await fs.readFile('.verify/v32-117/previous-source/odyssey-scene.ts','utf8');
+let s=src.replace("import {OrbitControls} from 'three/addons/controls/OrbitControls.js';","import {createOdysseyControlsV118} from './odyssey-controls-v118';");
+const a=s.indexOf('  const controls=new OrbitControls'),b=s.indexOf('  const light=',a);assert(a>0&&b>a);s=s.slice(0,a)+"  const controls=createOdysseyControlsV118(camera,canvas);controls.target.set(-105,16,-130);controls.update();\n"+s.slice(b);
+s=s.replaceAll('odyssey-atmosphere-v117','odyssey-atmosphere-v118').replaceAll('odyssey-native-v117','odyssey-native-v118').replaceAll('odyssey-visual-v117','odyssey-visual-v118').replaceAll('loadNativeWorldV117','loadNativeWorldV118').replaceAll('nativeWorldV117','nativeWorldV118');
+s=s.replace("manualUntil=time+6;","manualUntil=Infinity;");
+s=s.replace('review:(seconds:number)=>{time=seconds;','review:(seconds:number)=>{controls.resetInteraction();time=seconds;').replace('reviewGiant:()=>{manualUntil=Infinity;','reviewGiant:()=>{controls.resetInteraction();manualUntil=Infinity;');
+s=s.replace("addEventListener('click',()=>{time=0;manualUntil=0;","addEventListener('click',()=>{controls.resetInteraction();time=0;manualUntil=0;");
+s=s.replace('ready:false,prepareMilliseconds:0','inputControls:controls.debug,ready:false,prepareMilliseconds:0');
+// Restore the previously delivered water geometry/shader and sky, not a newly interpreted water.
+const between=(text,start,end)=>text.slice(text.indexOf(start),text.indexOf(end,text.indexOf(start)));
+const oldSky=between(original,'  const skyMaterial=','  const normal=');
+s=s.replace(between(s,'  const skyMaterial=','  const normal='),oldSky);
+const oldWater=between(original,'  const normal=','  scene.add(water);')+'  scene.add(water);';
+const restoredWater=oldWater.replace('sunDirection:light.position.clone().normalize()','sunDirection:new THREE.Vector3(-45,45,-160).normalize()');
+const currentWater=between(s,'  const normal=','  scene.add(water);')+'  scene.add(water);';assert(currentWater.length>1200);s=s.replace(currentWater,restoredWater);
+s=s.replace('renderer.toneMappingExposure=.85','renderer.toneMappingExposure=1.0');
+s=s.replace('version:117,nativeWorld:','version:118,nativeWorld:').replace("nearLeafTriangles:88336,maxNearTrees:24","nearLeafTriangles:88336,maxNearTrees:16").replace('shoreRocks:16','shoreRocks:10').replace("giantSurface:'V117 official CC0 full male anatomy adapted into one-eyed cyclops'","giantSurface:'V118 recessed single eye, integrated lids/hair and continuous CC0 male anatomy'");
+await fs.writeFile('src/odyssey-scene.ts',s);
+let native=(await fs.readFile('src/odyssey-native-v117.ts','utf8')).replace(/\r\n/g,'\n');native=native.replaceAll('makeGroundV117','makeGroundV118').replaceAll('odyssey-ground-v117','odyssey-ground-v118').replaceAll('loadNativeWorldV117','loadNativeWorldV118').replaceAll('mythology-v32-117/','mythology-v32-118/').replaceAll("'-v117.glb'","'-v118.glb'");
+native=native.replace('version:117,actualBlenderMcp','version:118,actualBlenderMcp').replace("08-final-local-world.blend","05-final-mediterranean-world.blend");
+const start=native.indexOf('   // Distant canopy shadows'),end=native.indexOf('\n  }\n }finish(flora)',start);assert(start>0&&end>start);
+native=native.slice(0,start)+`   // Actual alpha silhouette casts mottled leaf shade, rather than a solid spherical blob.
+   const shadowMaterial=farMaterial.clone();shadowMaterial.colorWrite=false;shadowMaterial.depthWrite=false;
+   const proxy=new THREE.InstancedMesh(farGeometry,shadowMaterial,b.matrices.length);proxy.name='V118 alpha canopy shadow';b.matrices.forEach((m,i)=>proxy.setMatrixAt(i,m));proxy.computeBoundingSphere();flora.add(proxy);
+`+native.slice(end);
+native=native.replace('p.distanceTo(camera.position)<65&&n<24','p.distanceTo(camera.position)<55&&n<16').replace('24 close complete leaf proxies maximum','16 close complete leaf proxies maximum');
+await fs.writeFile('src/odyssey-native-v118.ts',native);
+let visual=await fs.readFile('src/odyssey-visual-v117.ts','utf8');visual=visual.replace('lightIntensity:3.15','lightIntensity:3.5').replace('fill.intensity=.72','fill.intensity=1.05').replace('hemi.intensity=.42','hemi.intensity=.65').replace('scene.environmentIntensity=.48','scene.environmentIntensity=.5');await fs.writeFile('src/odyssey-visual-v118.ts',visual);
+let air=await fs.readFile('src/odyssey-atmosphere.ts','utf8');air=air.replace('density*=mix(1.,.30,nearLand)','density*=mix(1.,.09,nearLand)');await fs.writeFile('src/odyssey-atmosphere-v118.ts',air);
+const sha=t=>createHash('sha256').update(t).digest('hex');await fs.writeFile('.verify/v32-118/water-restoration.json',JSON.stringify({source:'V116/previous-source original water and sky',originalWaterSha:sha(oldWater),restoredWaterCanonicalSha:sha(restoredWater.replace('sunDirection:new THREE.Vector3(-45,45,-160).normalize()','sunDirection:light.position.clone().normalize()')),waterGeometryAndShaderEqual:true,originalSun:[-45,45,-160],skyShaderRestoredByteForByte:true,exposureBefore:.85,exposureAfter:1.0,postSeaAtmosphere:'Original sea postprocessing; only raised land haze reduced. Exposure/occlusion geometry differs, not a pixel-identical frame.'},null,2));
+let html=await fs.readFile('mythology.html','utf8');html=html.replace('odyssey-scene.js?v=32.117','odyssey-scene.js?v=32.118');await fs.writeFile('mythology.html',html);
+console.log('V118 source and bounded input integrated. Build only after native exports exist.');

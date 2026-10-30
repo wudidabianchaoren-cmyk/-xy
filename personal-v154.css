@@ -1,0 +1,27 @@
+/* V154: factual, readable personal archive; portrait and navigation retained. */
+#personalPage{--bio-ink:#30362f;--bio-secondary:#555c4f;grid-template-columns:minmax(210px,290px) minmax(0,820px);column-gap:clamp(52px,6vw,112px);align-content:start;padding:100px 7vw 48px;background:#d7d0bc;color:var(--bio-ink);scrollbar-color:#8b8c72 #d7d0bc}
+#personalPage .personal-portrait{position:sticky;top:0;grid-row:1 / 3;align-self:start}
+#personalPage .personal-portrait img{height:min(42vh,390px);object-fit:cover}
+#personalPage .personal-portrait h2{font:400 38px/1.3 var(--serif,'Noto Serif SC',serif);margin-bottom:8px}
+#personalPage .personal-portrait figcaption{border-color:#777d6666;padding-top:20px}
+#personalPage .personal-portrait figcaption>span{font-size:10px;letter-spacing:.04em}
+#personalPage .personal-introduction h3{font:400 clamp(28px,2.4vw,39px)/1.4 var(--serif,'Noto Serif SC',serif);margin:0 0 16px;letter-spacing:0}
+#personalPage .personal-introduction>p{font-size:15px;line-height:1.9;color:#555c4f}
+#personalPage .personal-resume-grid{grid-template-columns:1fr 1.18fr;gap:32px 48px;margin-top:34px}
+#personalPage .personal-resume-grid section{border-top:1px solid #72796255;padding-top:18px}
+#personalPage .personal-resume-grid h4{font:500 17px/1.5 var(--sans,sans-serif);margin:0 0 18px}
+#personalPage .personal-resume-grid dl{margin:0}
+#personalPage .personal-resume-grid dl>div+div{margin-top:18px}
+#personalPage .personal-resume-grid dt{font-size:12px;line-height:1.7;color:#62674e;margin:0 0 5px}
+#personalPage .personal-resume-grid dd{margin:0;font-size:14px;line-height:1.9;color:#30362f}
+#personalPage .personal-resume-grid p{font-size:14px;line-height:1.95;color:#555c4f;overflow-wrap:normal}
+#personalPage .personal-project h5{font-size:14px;font-weight:500;margin:0 0 5px}
+#personalPage .personal-project+.personal-project{margin-top:20px}
+#personalPage .personal-hobbies{font-size:13px;margin:25px 0 0;padding:11px 15px;border-color:#777d6677;border-radius:5px;box-shadow:none}
+#personalPage .personal-archive-note{display:none}
+#personalPage .personal-contact{border-color:#72796255;font-size:13px;margin-top:4px;gap:12px 24px}
+#personalPage .personal-contact>span{font-size:11px;color:#555c4f}
+#personalPage .standalone-close{color:#30362f}
+#personalPage ::selection{background:#55634a;color:#f6eedb}
+#personalPage :focus-visible{outline:2px solid #55634a;outline-offset:5px}
+@media(max-width:1200px){#personalPage{column-gap:45px;padding-left:5vw;padding-right:5vw}#personalPage .personal-resume-grid{column-gap:28px}}

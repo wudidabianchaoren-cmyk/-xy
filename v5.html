@@ -1,0 +1,1341 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WuXiangYu - Cinematic Archive V5</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3eadc;
+      --soft: rgba(243, 234, 220, .72);
+      --muted: rgba(243, 234, 220, .48);
+      --quiet: rgba(243, 234, 220, .25);
+      --hair: rgba(243, 234, 220, .17);
+      --bg: #030303;
+      --accent: #c98a44;
+      --accent2: #75654a;
+      --mx: .5;
+      --my: .5;
+      --title-font: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", Georgia, serif;
+      --ui-font: "Inter", "SF Pro Display", "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--ui-font);
+      cursor: none;
+    }
+
+    button,
+    label {
+      border: 0;
+      padding: 0;
+      color: inherit;
+      font: inherit;
+      background: transparent;
+      cursor: none;
+    }
+
+    .page {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      min-height: 760px;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at calc(var(--mx) * 100%) calc(var(--my) * 100%), color-mix(in srgb, var(--accent) 24%, transparent), transparent 24%),
+        linear-gradient(115deg, #030303, color-mix(in srgb, var(--accent2) 13%, #060606) 44%, #020202);
+    }
+
+    .image-atmosphere {
+      position: absolute;
+      inset: -8%;
+      z-index: -5;
+      pointer-events: none;
+      opacity: .46;
+      transform: translate3d(calc((var(--mx) - .5) * -26px), calc((var(--my) - .5) * -18px), 0) scale(1.06);
+      transition: opacity .6s ease, background-image .3s ease;
+      background:
+        radial-gradient(circle at 64% 46%, color-mix(in srgb, var(--accent) 42%, transparent), transparent 24%),
+        radial-gradient(circle at 26% 70%, color-mix(in srgb, var(--accent2) 38%, transparent), transparent 28%);
+      filter: blur(22px) saturate(1.08);
+    }
+
+    .image-atmosphere.has-image {
+      background-image: var(--bg-img);
+      background-size: cover;
+      background-position: center;
+      opacity: .34;
+    }
+
+    .veil {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.22) 23%, transparent 47%, rgba(0,0,0,.62)),
+        linear-gradient(0deg, rgba(0,0,0,.78), transparent 24%, transparent 78%, rgba(0,0,0,.62));
+    }
+
+    .grain {
+      position: absolute;
+      inset: -25%;
+      z-index: 20;
+      pointer-events: none;
+      opacity: .09;
+      mix-blend-mode: screen;
+      background-image:
+        radial-gradient(circle at 18% 30%, white 0 1px, transparent 1.2px),
+        radial-gradient(circle at 72% 64%, white 0 1px, transparent 1.2px),
+        radial-gradient(circle at 44% 82%, white 0 1px, transparent 1.2px);
+      background-size: 71px 59px, 101px 83px, 47px 41px;
+      animation: grain 1.3s steps(4) infinite;
+    }
+
+    @keyframes grain {
+      0% { transform: translate3d(0,0,0); }
+      25% { transform: translate3d(1.1%,-.7%,0); }
+      50% { transform: translate3d(-.8%,1.1%,0); }
+      75% { transform: translate3d(.5%,.6%,0); }
+      100% { transform: translate3d(0,0,0); }
+    }
+
+    .shell {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: grid;
+      grid-template-columns: minmax(230px, 18vw) minmax(0, 1fr);
+      grid-template-rows: 76px minmax(0, 1fr) 126px;
+      gap: 22px 32px;
+      padding: 28px 34px 30px;
+    }
+
+    .topbar {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: start;
+      gap: 20px;
+      pointer-events: none;
+    }
+
+    .brand {
+      width: max-content;
+      pointer-events: auto;
+    }
+
+    .brand-title {
+      display: block;
+      font-family: var(--title-font);
+      font-size: 23px;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .brand-meta,
+    .status,
+    .nav-meta,
+    .project-meta,
+    .small-text {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.5;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .brand-meta {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .status {
+      justify-self: center;
+      width: min(520px, 42vw);
+      pointer-events: auto;
+    }
+
+    .status-line {
+      position: relative;
+      height: 1px;
+      margin-top: 10px;
+      overflow: hidden;
+      background: rgba(243,234,220,.12);
+    }
+
+    .status-line::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: calc(var(--mx) * 100%);
+      background: linear-gradient(90deg, transparent, var(--accent), var(--accent2));
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    .tools {
+      justify-self: end;
+      display: flex;
+      gap: 9px;
+      pointer-events: auto;
+    }
+
+    .tool {
+      min-width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--hair);
+      background: rgba(0,0,0,.18);
+      color: var(--soft);
+      backdrop-filter: blur(12px);
+      transition: transform .22s ease, border-color .22s ease, color .22s ease, background .22s ease;
+    }
+
+    .tool:hover {
+      transform: translateY(-2px);
+      border-color: rgba(243,234,220,.55);
+      color: #fff;
+      background: rgba(243,234,220,.07);
+    }
+
+    .file { display: none; }
+
+    .side {
+      grid-column: 1;
+      grid-row: 2;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 0;
+      padding-top: 8px;
+    }
+
+    .work-list {
+      align-self: center;
+      display: grid;
+      gap: 8px;
+      pointer-events: auto;
+    }
+
+    .work-button {
+      position: relative;
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: baseline;
+      width: 100%;
+      padding: 8px 0;
+      text-align: left;
+      color: rgba(243,234,220,.44);
+      transition: color .28s ease, transform .32s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .work-button::after {
+      content: "";
+      position: absolute;
+      left: 40px;
+      right: 0;
+      bottom: 2px;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: left;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      transition: transform .38s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .work-button:hover,
+    .work-button.is-active {
+      color: var(--ink);
+      transform: translateX(7px);
+    }
+
+    .work-button:hover::after,
+    .work-button.is-active::after {
+      transform: scaleX(1);
+    }
+
+    .work-index {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .work-title {
+      display: block;
+      font-family: var(--title-font);
+      font-size: clamp(17px, 1.55vw, 27px);
+      line-height: 1.05;
+      font-weight: 500;
+    }
+
+    .work-en {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 9px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .glyph {
+      display: inline-block;
+      transition: transform .3s cubic-bezier(.16, 1, .3, 1), opacity .2s ease, color .2s ease;
+      will-change: transform;
+    }
+
+    .side-footer {
+      display: grid;
+      gap: 8px;
+      padding-bottom: 4px;
+    }
+
+    .route-button {
+      width: max-content;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      transition: color .22s ease, transform .22s ease;
+    }
+
+    .route-button:hover {
+      color: var(--ink);
+      transform: translateX(5px);
+    }
+
+    .stage {
+      grid-column: 2;
+      grid-row: 2;
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    .hero {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 28%);
+      gap: 28px;
+      align-items: end;
+    }
+
+    .projection {
+      position: relative;
+      align-self: stretch;
+      min-height: 0;
+      border: 1px solid rgba(243,234,220,.16);
+      overflow: hidden;
+      background: #090807;
+      box-shadow: 0 45px 120px rgba(0,0,0,.58);
+      clip-path: inset(1.5% 1.5% 1.5% 1.5%);
+      transform: translate3d(calc((var(--mx) - .5) * 18px), calc((var(--my) - .5) * 12px), 0);
+      transition: clip-path .55s cubic-bezier(.16, 1, .3, 1), border-color .25s ease, transform .14s ease-out;
+    }
+
+    .projection:hover {
+      clip-path: inset(0 0 0 0);
+      border-color: rgba(243,234,220,.44);
+    }
+
+    .main-image {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--fallback);
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.035);
+      transition: transform .75s cubic-bezier(.16, 1, .3, 1), filter .45s ease;
+    }
+
+    .projection:hover .main-image img {
+      transform: scale(1.07) translate3d(calc((var(--mx) - .5) * -15px), calc((var(--my) - .5) * -10px), 0);
+      filter: brightness(1.04) saturate(1.06);
+    }
+
+    .main-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at calc(var(--mx) * 100%) calc(var(--my) * 100%), transparent 0 18%, rgba(0,0,0,.22) 54%, rgba(0,0,0,.72)),
+        linear-gradient(0deg, rgba(0,0,0,.55), transparent 34%);
+    }
+
+    .projection.is-switching .main-image::after,
+    .projection.is-opening .main-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.36), transparent);
+      animation: scan .76s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    @keyframes scan {
+      from { transform: translateX(-100%); opacity: 0; filter: blur(8px); }
+      25% { opacity: .85; }
+      to { transform: translateX(100%); opacity: 0; filter: blur(0); }
+    }
+
+    .image-label {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      z-index: 4;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      pointer-events: none;
+      text-shadow: 0 3px 16px rgba(0,0,0,.85);
+    }
+
+    .project-panel {
+      position: relative;
+      align-self: end;
+      padding-bottom: 2px;
+      pointer-events: auto;
+    }
+
+    .project-kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .project-kicker::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .current-title {
+      margin: 14px 0 0;
+      font-family: var(--title-font);
+      font-size: clamp(34px, 4.4vw, 76px);
+      line-height: .94;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .current-desc {
+      margin: 14px 0 0;
+      color: var(--soft);
+      font-family: var(--title-font);
+      font-size: 17px;
+      line-height: 1.72;
+      text-wrap: pretty;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .keyword {
+      position: relative;
+      min-height: 31px;
+      padding: 0 9px;
+      border: 1px solid rgba(243,234,220,.16);
+      color: rgba(243,234,220,.66);
+      background: rgba(0,0,0,.14);
+      overflow: hidden;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      transition: color .2s ease, border-color .2s ease, transform .24s cubic-bezier(.16, 1, .3, 1), background .2s ease;
+    }
+
+    .keyword::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: color-mix(in srgb, var(--accent) 18%, transparent);
+      transform: translateY(101%);
+      transition: transform .26s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .keyword span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .keyword:hover,
+    .keyword.is-active {
+      color: #fff;
+      border-color: rgba(243,234,220,.5);
+      transform: translateY(-3px);
+      background: rgba(243,234,220,.05);
+    }
+
+    .keyword:hover::before,
+    .keyword.is-active::before {
+      transform: translateY(0);
+    }
+
+    .filmstrip {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr 1fr .82fr 1.05fr;
+      gap: 12px;
+      height: 100%;
+      pointer-events: auto;
+    }
+
+    .frame {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(243,234,220,.13);
+      opacity: .48;
+      clip-path: inset(19% 0 19% 0);
+      background: #090807;
+      transform: translateY(16px);
+      transition: opacity .26s ease, clip-path .34s cubic-bezier(.16, 1, .3, 1), transform .34s cubic-bezier(.16, 1, .3, 1), border-color .2s ease;
+    }
+
+    .frame:nth-child(2n) {
+      transform: translateY(3px);
+    }
+
+    .frame:hover,
+    .frame.is-active {
+      opacity: 1;
+      clip-path: inset(0);
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--accent) 62%, white);
+    }
+
+    .frame .thumb {
+      position: absolute;
+      inset: 0;
+      background: var(--fallback);
+      transition: transform .55s cubic-bezier(.16, 1, .3, 1), filter .25s ease;
+    }
+
+    .frame .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .frame:hover .thumb,
+    .frame.is-active .thumb {
+      transform: scale(1.08);
+      filter: saturate(1.08);
+    }
+
+    .frame strong {
+      position: absolute;
+      left: 10px;
+      bottom: 8px;
+      z-index: 2;
+      color: rgba(243,234,220,.9);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-shadow: 0 3px 14px rgba(0,0,0,.86);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .frame:hover strong,
+    .frame.is-active strong {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .chapter-strip {
+      position: fixed;
+      left: 34px;
+      right: 34px;
+      bottom: 30px;
+      z-index: 45;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: end;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(16px);
+      transition: opacity .26s ease, transform .32s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .page.has-keyword .chapter-strip {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .chapter-title {
+      font-family: var(--title-font);
+      font-size: clamp(30px, 4vw, 66px);
+      line-height: .95;
+      font-weight: 500;
+    }
+
+    .chapter-copy {
+      max-width: 680px;
+      margin-top: 10px;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .detail {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: grid;
+      grid-template-rows: 78px 1fr;
+      padding: 28px 34px 34px;
+      background: rgba(3,3,3,.86);
+      backdrop-filter: blur(18px);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(18px);
+      transition: opacity .32s ease, transform .42s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .page.is-detail .detail {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .detail-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 24px;
+    }
+
+    .close {
+      height: 36px;
+      padding: 0 13px;
+      border: 1px solid rgba(243,234,220,.22);
+      color: var(--soft);
+      background: rgba(0,0,0,.18);
+      transition: color .2s ease, border-color .2s ease, transform .2s ease;
+    }
+
+    .close:hover {
+      color: #fff;
+      border-color: rgba(243,234,220,.58);
+      transform: translateY(-2px);
+    }
+
+    .detail-body {
+      display: grid;
+      grid-template-columns: minmax(0, 58%) minmax(300px, 1fr);
+      gap: 30px;
+      min-height: 0;
+    }
+
+    .detail-image {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(243,234,220,.16);
+      background: var(--fallback);
+    }
+
+    .detail-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .detail-info {
+      align-self: end;
+      display: grid;
+      gap: 20px;
+    }
+
+    .detail-title {
+      font-family: var(--title-font);
+      font-size: clamp(42px, 5vw, 88px);
+      line-height: .92;
+      font-weight: 500;
+    }
+
+    .detail-copy {
+      color: var(--soft);
+      font-family: var(--title-font);
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    .detail-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      gap: 9px;
+    }
+
+    .tab {
+      min-height: 32px;
+      padding: 0 10px;
+      border: 1px solid rgba(243,234,220,.16);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      transition: color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease;
+    }
+
+    .tab:hover,
+    .tab.is-active {
+      color: #fff;
+      border-color: rgba(243,234,220,.5);
+      background: rgba(243,234,220,.06);
+      transform: translateY(-2px);
+    }
+
+    .cursor {
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      margin: -9px 0 0 -9px;
+      border: 1px solid rgba(243,234,220,.86);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate3d(calc(var(--cx, 0) * 1px), calc(var(--cy, 0) * 1px), 0);
+      mix-blend-mode: difference;
+      transition: width .2s ease, height .2s ease, margin .2s ease, background .2s ease;
+    }
+
+    .cursor.is-hot {
+      width: 76px;
+      height: 76px;
+      margin: -38px 0 0 -38px;
+      background: rgba(255,255,255,.12);
+    }
+
+    .cursor-label {
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate3d(calc(var(--cx, 0) * 1px + 28px), calc(var(--cy, 0) * 1px + 18px), 0);
+      color: rgba(243,234,220,.82);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      transition: opacity .18s ease;
+    }
+
+    .cursor-label.is-visible { opacity: 1; }
+
+    .touch-text {
+      transition: color .2s ease, opacity .2s ease, transform .24s cubic-bezier(.16, 1, .3, 1), text-shadow .2s ease;
+    }
+
+    .touch-text:hover {
+      color: #fff;
+      transform: translateY(-1px);
+      text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 34%, transparent);
+    }
+
+    .drop {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: grid;
+      place-items: center;
+      background: rgba(0,0,0,.68);
+      backdrop-filter: blur(18px);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+
+    .page.is-dragging .drop { opacity: 1; }
+
+    .drop strong {
+      display: block;
+      font-family: var(--title-font);
+      font-size: clamp(42px, 5vw, 82px);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .drop span {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    @media (max-width: 1080px) {
+      html, body { overflow: auto; cursor: auto; }
+      .page { height: auto; min-height: 100vh; }
+      .shell {
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        padding: 22px;
+      }
+      .topbar { grid-template-columns: 1fr; }
+      .status { justify-self: stretch; width: 100%; }
+      .tools { justify-self: start; }
+      .side, .stage, .filmstrip { grid-column: 1; grid-row: auto; }
+      .side { gap: 20px; }
+      .hero { position: relative; grid-template-columns: 1fr; gap: 18px; }
+      .projection { min-height: 58vh; }
+      .project-panel { max-width: 720px; }
+      .filmstrip { grid-template-columns: 1fr; height: auto; }
+      .frame { height: 96px; }
+      .detail-body { grid-template-columns: 1fr; }
+      .detail-image { min-height: 46vh; }
+      .cursor, .cursor-label { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" id="page">
+    <div class="image-atmosphere" id="atmosphere"></div>
+    <div class="veil"></div>
+    <div class="grain"></div>
+
+    <section class="shell">
+      <header class="topbar">
+        <button class="brand touch-text" id="homeBtn" type="button">
+          <span class="brand-title">脑海宇宙 / AI 影像档案</span>
+          <span class="brand-meta">visual-first cinematic portfolio<br>image as interface</span>
+        </button>
+        <button class="status touch-text" id="statusText" type="button">
+          <span id="statusLineText">home / select work / enter detail</span>
+          <span class="status-line"></span>
+        </button>
+        <div class="tools">
+          <button class="tool touch-text" id="detailBtn" type="button">页</button>
+          <label class="tool touch-text" for="imageInput">图</label>
+          <input class="file" id="imageInput" type="file" accept="image/*" multiple>
+        </div>
+      </header>
+
+      <aside class="side">
+        <div>
+          <div class="nav-meta touch-text">works / low voice index</div>
+        </div>
+        <nav class="work-list" id="workList" aria-label="作品导航"></nav>
+        <div class="side-footer">
+          <button class="route-button touch-text" type="button" data-route="about">about</button>
+          <button class="route-button touch-text" type="button" data-route="tags">tags index</button>
+          <button class="route-button touch-text" type="button" data-route="process">process archive</button>
+        </div>
+      </aside>
+
+      <section class="stage">
+        <div class="hero">
+          <button class="projection" id="projection" type="button">
+            <div class="main-image" id="mainImage"></div>
+            <div class="image-label">
+              <span class="small-text touch-text" id="imageType">AI Short Film</span>
+              <span class="small-text touch-text" id="imageCount">01 / 05</span>
+            </div>
+          </button>
+
+          <article class="project-panel">
+            <div class="project-kicker touch-text" id="kicker">memory field</div>
+            <h1 class="current-title touch-text" id="currentTitle">回不去的乡</h1>
+            <p class="current-desc touch-text" id="currentDesc">黄昏、背影、土地和远处的路。这里让影像成为第一视觉，文字退到导航和标注的位置。</p>
+            <div class="keywords" id="keywords"></div>
+          </article>
+        </div>
+      </section>
+
+      <div class="filmstrip" id="filmstrip"></div>
+    </section>
+
+    <section class="chapter-strip" id="chapterStrip">
+      <div>
+        <div class="chapter-title touch-text" id="chapterTitle">关键词章节</div>
+        <div class="chapter-copy touch-text" id="chapterCopy">关键词会进入当前作品内部章节，而不是普通按钮。</div>
+      </div>
+      <button class="close touch-text" id="clearKeyword" type="button">返回作品</button>
+    </section>
+
+    <section class="detail" id="detail">
+      <header class="detail-top">
+        <button class="brand touch-text" id="detailHome" type="button">
+          <span class="brand-title" id="detailBrand">作品详情</span>
+          <span class="brand-meta">/work/current / stills / process / symbols</span>
+        </button>
+        <button class="close touch-text" id="closeDetail" type="button">返回首页</button>
+      </header>
+
+      <div class="detail-body">
+        <div class="detail-image" id="detailImage"></div>
+        <article class="detail-info">
+          <div>
+            <div class="project-kicker touch-text" id="detailKicker">memory field</div>
+            <div class="detail-title touch-text" id="detailTitle">回不去的乡</div>
+            <div class="detail-copy touch-text" id="detailCopy">这里是作品详情页雏形：剧照组、分镜、色彩、角色设定、AI 生成流程会在这里展开。</div>
+          </div>
+          <nav class="detail-tabs" id="detailTabs">
+            <button class="tab touch-text is-active" type="button" data-tab="overview">overview</button>
+            <button class="tab touch-text" type="button" data-tab="stills">stills</button>
+            <button class="tab touch-text" type="button" data-tab="process">process</button>
+            <button class="tab touch-text" type="button" data-tab="symbols">symbols</button>
+          </nav>
+        </article>
+      </div>
+    </section>
+
+    <div class="drop">
+      <div>
+        <strong>放入你的 AI 剧照</strong>
+        <span>拖入 5 张图后，大图、背景、详情页会一起替换</span>
+      </div>
+    </div>
+  </main>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-label" id="cursorLabel">touch</div>
+
+  <script>
+    const works = [
+      {
+        id: "rural",
+        cn: "回不去的乡",
+        en: "Distant Homeland",
+        type: "AI Short Film",
+        kicker: "memory field",
+        desc: "黄昏、背影、土地和远处的路。这里让影像成为第一视觉，文字退到导航和标注的位置。",
+        tabs: {
+          overview: "作品概览：时代记忆、背影和土地构成第一层情绪。",
+          stills: "剧照组：远景、背影、村庄、黄昏和道路将组成横向影像序列。",
+          process: "生成流程：从乡土记忆关键词到镜头构图，再到最终短片。",
+          symbols: "视觉符号：树、路、背影、黄昏、远山。"
+        },
+        tags: [
+          ["乡土记忆", "进入记忆章节：地平线压低，页面聚焦土地、道路和旧时代痕迹。"],
+          ["黄昏", "进入色温章节：背景被暖色光洗过，文字和影像变得更安静。"],
+          ["背影", "进入人物章节：画面中心收缩到背影，周围信息退后。"],
+          ["时代残影", "进入残影章节：适合展示旧时代、家庭记忆和短片叙事。"]
+        ],
+        accent: "#c98a44",
+        accent2: "#75654a",
+        fallback: "linear-gradient(180deg,#d8a15b,#b1703c 44%,#382517 74%,#0e0a07)"
+      },
+      {
+        id: "palace",
+        cn: "东方玄幻",
+        en: "Oriental Fantasy",
+        type: "Scene Design",
+        kicker: "court drama",
+        desc: "宫殿、红衣、对峙和人物设定。主图负责戏剧张力，文字只做档案入口。",
+        tabs: {
+          overview: "作品概览：宫殿中轴、红衣角色和对峙关系构成主场景。",
+          stills: "剧照组：主场景、人物近景、三视图、道具与宫殿结构。",
+          process: "生成流程：Midjourney 角色设定、场景搭建、Seedance 运动设计。",
+          symbols: "视觉符号：红衣、王座、宫灯、金色木构、对称轴。"
+        },
+        tags: [
+          ["宫殿", "跳转到场景章节：展示宫殿结构和中轴构图。"],
+          ["红衣", "跳转到色彩章节：红衣成为画面唯一高能信号。"],
+          ["人物设定", "跳转到角色章节：展开三视图和角色关系。"],
+          ["古典张力", "跳转到叙事章节：展示两人对峙和空间压迫。"]
+        ],
+        accent: "#ce3528",
+        accent2: "#c48d3f",
+        fallback: "radial-gradient(ellipse at 50% 42%,rgba(255,197,85,.44),transparent 18%),linear-gradient(180deg,#31130c,#7c481f 50%,#202518)"
+      },
+      {
+        id: "rain",
+        cn: "雨夜与红",
+        en: "Wet Oriental Classicism",
+        type: "Color Study",
+        kicker: "rain and red",
+        desc: "蓝灰雨幕、红灯笼、湿地反射。这一页更像色彩方法论，而不是普通项目说明。",
+        tabs: {
+          overview: "作品概览：冷雨环境和红色焦点构成主要视觉矛盾。",
+          stills: "剧照组：雨夜街道、对峙、灯笼、地面反射。",
+          process: "生成流程：冷光设定、红色焦点控制、雨幕运动测试。",
+          symbols: "视觉符号：雨、红灯、剑光、湿地反射、蓝灰色。"
+        },
+        tags: [
+          ["冷光", "跳转到冷光章节：降低色温，突出人物关系的疏离。"],
+          ["红色焦点", "跳转到红色章节：所有情绪和危险集中到红色。"],
+          ["雨幕", "跳转到运动章节：展示雨线、方向和空间深度。"],
+          ["反射", "跳转到材质章节：展示湿地和灯光反射。"]
+        ],
+        accent: "#d94235",
+        accent2: "#80c7d2",
+        fallback: "linear-gradient(180deg,#b9dfe5,#5f8790 45%,#05212b)"
+      },
+      {
+        id: "abyss",
+        cn: "骸骨之岸",
+        en: "Echoes of the Abyss",
+        type: "Film Concept",
+        kicker: "black sea",
+        desc: "黑海、白瞳、骨骸岛和低饱和灾难史诗。这里应该进入一个更完整的暗黑影像世界。",
+        tabs: {
+          overview: "作品概览：黑海、白瞳与骨骸岛构成深海史诗感。",
+          stills: "剧照组：岛屿、海面、人物、骨骸结构和远景。",
+          process: "生成流程：低饱和控制、地貌生成、角色视觉测试。",
+          symbols: "视觉符号：白瞳、骨骸、黑海、雾、岛。"
+        },
+        tags: [
+          ["深海", "跳转到环境章节：降低运动速度，进入压力感背景。"],
+          ["白瞳", "跳转到角色章节：凝视、异化和神性。"],
+          ["骨骸岛", "跳转到地貌章节：展示岛屿与残骸结构。"],
+          ["低饱和", "跳转到色彩章节：解释灰黑绿的影像控制。"]
+        ],
+        accent: "#9eb7b2",
+        accent2: "#455456",
+        fallback: "radial-gradient(ellipse at 28% 48%,rgba(0,0,0,.82),transparent 18%),linear-gradient(180deg,#2d3637,#111819 48%,#020303)"
+      },
+      {
+        id: "folk",
+        cn: "民俗符号",
+        en: "Northeast Ritual System",
+        type: "Symbol Archive",
+        kicker: "ritual objects",
+        desc: "祭祀、器物、烟、布料和地域信仰。这一页应该像视觉标本室。",
+        tabs: {
+          overview: "作品概览：从东北民间民俗提取可进入影像系统的符号。",
+          stills: "剧照组：祭祀现场、器物、烟、布料和人物。",
+          process: "生成流程：民俗资料提炼、符号分类和场景转译。",
+          symbols: "视觉符号：鼓、香、布、火、烟、供桌。"
+        },
+        tags: [
+          ["祭祀", "跳转到仪式章节：展示场面调度和仪式空间。"],
+          ["器物", "跳转到标本章节：逐个放大器物图像。"],
+          ["烟", "跳转到氛围章节：用烟做空间层次和记忆感。"],
+          ["民间信仰", "跳转到世界观章节：解释信仰系统如何转译为影像。"]
+        ],
+        accent: "#d98b1d",
+        accent2: "#0f686d",
+        fallback: "radial-gradient(ellipse at 34% 38%,rgba(207,82,27,.62),transparent 15%),linear-gradient(180deg,#0e464c,#06272c 48%,#030707)"
+      }
+    ];
+
+    const page = document.querySelector("#page");
+    const atmosphere = document.querySelector("#atmosphere");
+    const workList = document.querySelector("#workList");
+    const mainImage = document.querySelector("#mainImage");
+    const filmstrip = document.querySelector("#filmstrip");
+    const keywords = document.querySelector("#keywords");
+    const projection = document.querySelector("#projection");
+    const statusLineText = document.querySelector("#statusLineText");
+    const imageType = document.querySelector("#imageType");
+    const imageCount = document.querySelector("#imageCount");
+    const kicker = document.querySelector("#kicker");
+    const currentTitle = document.querySelector("#currentTitle");
+    const currentDesc = document.querySelector("#currentDesc");
+    const chapterTitle = document.querySelector("#chapterTitle");
+    const chapterCopy = document.querySelector("#chapterCopy");
+    const clearKeyword = document.querySelector("#clearKeyword");
+    const detailBtn = document.querySelector("#detailBtn");
+    const detailImage = document.querySelector("#detailImage");
+    const detailTitle = document.querySelector("#detailTitle");
+    const detailCopy = document.querySelector("#detailCopy");
+    const detailKicker = document.querySelector("#detailKicker");
+    const detailBrand = document.querySelector("#detailBrand");
+    const closeDetail = document.querySelector("#closeDetail");
+    const detailHome = document.querySelector("#detailHome");
+    const detailTabs = document.querySelector("#detailTabs");
+    const imageInput = document.querySelector("#imageInput");
+    const cursor = document.querySelector("#cursor");
+    const cursorLabel = document.querySelector("#cursorLabel");
+
+    let active = 0;
+    let activeKeyword = null;
+    let activeTab = "overview";
+    const urls = new Array(works.length).fill("");
+
+    function glyphs(text) {
+      return Array.from(text).map((char) => `<span class="glyph">${char}</span>`).join("");
+    }
+
+    function imageMarkup(index, className = "") {
+      const work = works[index];
+      const style = `--fallback:${work.fallback}`;
+      if (!urls[index]) return `<div class="${className}" style="${style}"></div>`;
+      return `<div class="${className}" style="${style}"><img src="${urls[index]}" alt="${work.cn}"></div>`;
+    }
+
+    function renderWorkList() {
+      workList.innerHTML = "";
+      works.forEach((work, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `work-button touch-text${index === active ? " is-active" : ""}`;
+        button.innerHTML = `
+          <span class="work-index">${String(index + 1).padStart(2, "0")}</span>
+          <span>
+            <span class="work-title">${glyphs(work.cn)}</span>
+            <span class="work-en">${work.en}</span>
+          </span>
+        `;
+        button.addEventListener("pointerenter", () => setActive(index, false));
+        button.addEventListener("click", () => setActive(index, true));
+        workList.appendChild(button);
+      });
+    }
+
+    function renderFilmstrip() {
+      filmstrip.innerHTML = "";
+      works.forEach((work, index) => {
+        const frame = document.createElement("button");
+        frame.type = "button";
+        frame.className = `frame${index === active ? " is-active" : ""}`;
+        frame.innerHTML = `${imageMarkup(index, "thumb")}<strong>${String(index + 1).padStart(2, "0")} ${work.en}</strong>`;
+        frame.addEventListener("pointerenter", () => setActive(index, false));
+        frame.addEventListener("click", () => setActive(index, true));
+        filmstrip.appendChild(frame);
+      });
+    }
+
+    function renderKeywords() {
+      keywords.innerHTML = "";
+      works[active].tags.forEach(([tag, copy]) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `keyword touch-text${activeKeyword === tag ? " is-active" : ""}`;
+        button.innerHTML = `<span>${tag}</span>`;
+        button.addEventListener("pointerenter", () => {
+          statusLineText.textContent = `keyword preview / ${tag}`;
+        });
+        button.addEventListener("click", () => {
+          activeKeyword = tag;
+          chapterTitle.textContent = tag;
+          chapterCopy.textContent = copy;
+          statusLineText.textContent = `/work/${works[active].id}#${tag}`;
+          page.classList.add("has-keyword");
+          projection.classList.add("is-opening");
+          setTimeout(() => projection.classList.remove("is-opening"), 780);
+          renderKeywords();
+        });
+        keywords.appendChild(button);
+      });
+    }
+
+    function renderMain() {
+      const work = works[active];
+      page.style.setProperty("--accent", work.accent);
+      page.style.setProperty("--accent2", work.accent2);
+      page.style.setProperty("--fallback", work.fallback);
+      if (urls[active]) {
+        atmosphere.classList.add("has-image");
+        atmosphere.style.setProperty("--bg-img", `url("${urls[active]}")`);
+      } else {
+        atmosphere.classList.remove("has-image");
+        atmosphere.style.removeProperty("--bg-img");
+      }
+      mainImage.outerHTML = imageMarkup(active, "main-image");
+      document.querySelector(".main-image").id = "mainImage";
+      detailImage.innerHTML = imageMarkup(active, "detail-image-inner");
+      imageType.textContent = work.type;
+      imageCount.textContent = `${String(active + 1).padStart(2, "0")} / ${String(works.length).padStart(2, "0")}`;
+      kicker.textContent = work.kicker;
+      currentTitle.textContent = work.cn;
+      currentDesc.textContent = work.desc;
+      detailBrand.textContent = `作品详情 / ${work.cn}`;
+      detailKicker.textContent = work.kicker;
+      detailTitle.textContent = work.cn;
+      detailCopy.textContent = work.tabs[activeTab];
+    }
+
+    function setActive(index, commit) {
+      if (active !== index) {
+        active = index;
+        activeKeyword = null;
+        page.classList.remove("has-keyword");
+        statusLineText.textContent = `${works[active].en} / selected`;
+        renderMain();
+        renderWorkList();
+        renderFilmstrip();
+        renderKeywords();
+        projection.classList.add("is-switching");
+        setTimeout(() => projection.classList.remove("is-switching"), 780);
+      }
+      if (commit) openDetail();
+    }
+
+    function openDetail() {
+      statusLineText.textContent = `/work/${works[active].id}`;
+      page.classList.add("is-detail");
+      projection.classList.add("is-opening");
+      setTimeout(() => projection.classList.remove("is-opening"), 780);
+    }
+
+    function closeDetailPanel() {
+      page.classList.remove("is-detail");
+      statusLineText.textContent = "home / select work / enter detail";
+    }
+
+    function setTab(tab) {
+      activeTab = tab;
+      detailCopy.textContent = works[active].tabs[activeTab];
+      detailTabs.querySelectorAll(".tab").forEach((item) => {
+        item.classList.toggle("is-active", item.dataset.tab === activeTab);
+      });
+    }
+
+    function clearKeywordFocus() {
+      activeKeyword = null;
+      page.classList.remove("has-keyword");
+      statusLineText.textContent = `${works[active].en} / image as interface`;
+      renderKeywords();
+    }
+
+    function loadImages(files) {
+      Array.from(files).filter((file) => file.type.startsWith("image/")).slice(0, works.length).forEach((file, index) => {
+        if (urls[index]) URL.revokeObjectURL(urls[index]);
+        urls[index] = URL.createObjectURL(file);
+      });
+      renderMain();
+      renderFilmstrip();
+      projection.classList.add("is-switching");
+      setTimeout(() => projection.classList.remove("is-switching"), 780);
+    }
+
+    function updateTextHover(event) {
+      document.querySelectorAll(".touch-text:hover .glyph, .work-button.is-active .glyph").forEach((glyph, index) => {
+        const rect = glyph.getBoundingClientRect();
+        const gx = rect.left + rect.width / 2;
+        const gy = rect.top + rect.height / 2;
+        const dx = event.clientX - gx;
+        const dy = event.clientY - gy;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const force = Math.max(0, 1 - distance / 130);
+        glyph.style.transform = `translate3d(${(index % 2 ? 3 : -3) * force}px, ${-8 * force}px, 0) skewY(${(index % 2 ? -3 : 3) * force}deg)`;
+        glyph.style.opacity = String(.82 + force * .18);
+      });
+    }
+
+    function resetTextHover() {
+      document.querySelectorAll(".glyph").forEach((glyph) => {
+        glyph.style.transform = "";
+        glyph.style.opacity = "";
+      });
+    }
+
+    page.addEventListener("pointermove", (event) => {
+      const x = event.clientX / window.innerWidth;
+      const y = event.clientY / window.innerHeight;
+      page.style.setProperty("--mx", x.toFixed(3));
+      page.style.setProperty("--my", y.toFixed(3));
+      document.documentElement.style.setProperty("--cx", event.clientX.toFixed(1));
+      document.documentElement.style.setProperty("--cy", event.clientY.toFixed(1));
+      updateTextHover(event);
+    });
+
+    page.addEventListener("pointerleave", resetTextHover);
+
+    document.addEventListener("pointerover", (event) => {
+      const target = event.target.closest("button, label, .touch-text");
+      cursor.classList.toggle("is-hot", Boolean(target));
+      cursorLabel.classList.toggle("is-visible", Boolean(target));
+      if (target) cursorLabel.textContent = target.classList.contains("projection") ? "enter work" : "touch";
+    });
+
+    document.addEventListener("pointerout", (event) => {
+      if (!event.relatedTarget || !event.relatedTarget.closest("button, label, .touch-text")) {
+        cursor.classList.remove("is-hot");
+        cursorLabel.classList.remove("is-visible");
+      }
+    });
+
+    projection.addEventListener("click", openDetail);
+    detailBtn.addEventListener("click", openDetail);
+    closeDetail.addEventListener("click", closeDetailPanel);
+    detailHome.addEventListener("click", closeDetailPanel);
+    clearKeyword.addEventListener("click", clearKeywordFocus);
+    imageInput.addEventListener("change", (event) => loadImages(event.target.files));
+    detailTabs.addEventListener("click", (event) => {
+      const tab = event.target.closest(".tab");
+      if (tab) setTab(tab.dataset.tab);
+    });
+
+    ["dragenter", "dragover"].forEach((type) => {
+      page.addEventListener(type, (event) => {
+        event.preventDefault();
+        page.classList.add("is-dragging");
+      });
+    });
+
+    ["dragleave", "drop"].forEach((type) => {
+      page.addEventListener(type, (event) => {
+        event.preventDefault();
+        page.classList.remove("is-dragging");
+      });
+    });
+
+    page.addEventListener("drop", (event) => loadImages(event.dataTransfer.files));
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeDetailPanel();
+        clearKeywordFocus();
+      }
+      if (event.key === "ArrowRight" || event.key === "ArrowDown") setActive((active + 1) % works.length, false);
+      if (event.key === "ArrowLeft" || event.key === "ArrowUp") setActive((active - 1 + works.length) % works.length, false);
+    });
+
+    renderMain();
+    renderWorkList();
+    renderFilmstrip();
+    renderKeywords();
+  </script>
+</body>
+</html>

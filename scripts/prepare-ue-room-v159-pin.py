@@ -1,0 +1,7 @@
+from pathlib import Path
+p=Path(__file__).resolve().parents[1]
+s=(p/'scripts/ue-room-v159-final.py').read_text(encoding='utf-8').replace("OUT=P/'.verify/v32-159/ue-room-final'","OUT=P/'.verify/v32-159/ue-room-final-uv'")
+s=s.replace("u.MaterialEditingLibrary.connect_material_expressions(add,'',sample,'Coordinates');u.MaterialEditingLibrary.recompile_material(night)","uv_ok=u.MaterialEditingLibrary.connect_material_expressions(add,'',sample,'UVs');r['windowUVConnected']=uv_ok;r['windowInputNames']=list(u.MaterialEditingLibrary.get_material_expression_input_names(sample));u.MaterialEditingLibrary.recompile_material(night)")
+(p/'scripts/ue-room-v159-final-uv.py').write_text(s,encoding='utf-8');(p/'.verify/v32-159/ue-room-final-uv').mkdir(exist_ok=True)
+s=(p/'.verify/v32-159/verify-layout.mjs').read_text(encoding='utf-8');a=s.index('try{await p.goto(');b=s.index('for(const f of[.10',a);s=s[:a]+"try{await p.goto('http://127.0.0.1:8031/v31.html?return=1&v=32.159');\n"+s[b:];s=s.replace('await p.waitForTimeout(500);const shot=',"await p.waitForFunction(()=>[...document.querySelectorAll('.scroll-collage-images img')].filter(e=>e.complete&&e.naturalWidth).length===10,null,{timeout:10000});await p.waitForTimeout(150);const shot=");(p/'.verify/v32-159/verify-collage.mjs').write_text(s,encoding='utf-8')
+print('Fixed UE UV pin script and targeted collage check prepared; no runtime command loader.')

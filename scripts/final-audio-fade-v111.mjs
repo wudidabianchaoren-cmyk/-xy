@@ -1,0 +1,7 @@
+import fs from 'node:fs/promises';import {createHash} from 'node:crypto';
+let s=await fs.readFile('yangjian.js','utf8');s=s.replace('v.volume=.55*(1-journeyProgress*.56)','v.volume=.55*(1-journeyProgress*.56)*(1-ease(.76,.98,journeyProgress))');await fs.writeFile('yangjian.js',s);
+const dir='E:/codex/脑海宇宙作品集/当前作品集_V32.111';await fs.copyFile('yangjian.js',dir+'/项目/yangjian.js');let rows=JSON.parse(await fs.readFile(dir+'/文件清单.json','utf8'));const sha=createHash('sha256').update(await fs.readFile('yangjian.js')).digest('hex');const r=rows.find(r=>r.path==='项目/yangjian.js');r.sha256=sha;r.bytes=(await fs.stat('yangjian.js')).size;await fs.writeFile(dir+'/文件清单.json',JSON.stringify(rows,null,2));
+let f=await fs.readFile('scripts/final-record-v111.mjs','utf8');f=f.replace('checks.savedPackagePending=false;','checks.savedPackagePending=false;checks.packagePending=false;');await fs.writeFile('scripts/final-record-v111.mjs',f);
+await fs.appendFile('CURRENT-V32-111-RESUME.md','\n最终：E111保存结果双true、独立SHA和8032运行通过；原主页四光点与8章结构通过。首章结束前原生影片声音额外按阅读位置淡至0再暂停，防止切换硬断。额度最后实际剩余7%/周19%，没有扩展其它制作。参考研究自有9344已关闭；用户Edge、8031未动。\n');
+await fs.copyFile('CURRENT-V32-111-RESUME.md',dir+'/项目/CURRENT-V32-111-RESUME.md');await fs.copyFile('CURRENT-V32-111-RESUME.md',dir+'/接续说明.md');
+for(const key of ['项目/CURRENT-V32-111-RESUME.md','接续说明.md']){const b=await fs.readFile(dir+'/'+key);const row=rows.find(r=>r.path===key);row.bytes=b.length;row.sha256=createHash('sha256').update(b).digest('hex');}await fs.writeFile(dir+'/文件清单.json',JSON.stringify(rows,null,2));

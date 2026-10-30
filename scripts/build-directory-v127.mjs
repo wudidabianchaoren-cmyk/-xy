@@ -1,0 +1,4 @@
+import{createRequire}from'node:module';import fs from'node:fs/promises';
+const require=createRequire('E:/Brain-Universe-assets/V32-61/toolchain/node_modules/esbuild/package.json');
+const result=await require('esbuild').build({entryPoints:['src/directory-v127/app.tsx'],outdir:'scene-dist/directory-v127',bundle:true,format:'esm',target:'es2022',minify:true,sourcemap:true,jsx:'automatic',nodePaths:['E:/codex/toolchains/directory-v119/node_modules','E:/Brain-Universe-assets/V32-61/toolchain/node_modules'],metafile:true,loader:{'.ttf':'file'},assetNames:'assets/[name]-[hash]'});
+await fs.mkdir('.verify/v32-127',{recursive:true});await fs.writeFile('.verify/v32-127/build.json',JSON.stringify({react:'19.3.1',three:'0.180.0',scopedOnly:true,outputs:Object.keys(result.metafile.outputs)},null,2));console.log('V127 interactive room built.');

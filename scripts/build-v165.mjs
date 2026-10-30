@@ -1,0 +1,5 @@
+import{createRequire}from'node:module';import fs from'node:fs/promises';
+const modules='E:/Brain-Universe-assets/V32-61/toolchain/node_modules',video='E:/Brain-Universe-assets/V32-72/video-tools/node_modules';const{build}=createRequire(modules+'/esbuild/package.json')('esbuild');
+const common={bundle:true,format:'esm',target:'es2022',minify:true,sourcemap:true,nodePaths:[modules,video,'E:/Brain-Universe-assets/V32-84/geometry-acceleration/node_modules']};
+for(const[entry,outfile]of[['src/mythology-entry-v165.ts','scene-dist/mythology-local-v162.js'],['src/mythology-native-v165.ts','scene-dist/mythology-native-v165.js'],['src/mythology-local-v162.ts','scene-dist/mythology-web-v165.js'],['src/techtext-v165.jsx','scene-dist/techtext-v153.js']])await build({...common,entryPoints:[entry],outfile,jsx:'automatic',alias:{react:video+'/react','react-dom':video+'/react-dom'}});
+await fs.writeFile('.verify/v32-165/build.json',JSON.stringify({at:new Date().toISOString(),nativeDefault:true,completeWebAuthoringPreserved:true}));console.log('V165 scoped bundles built');

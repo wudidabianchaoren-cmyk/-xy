@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+const edit=async(p,f)=>fs.writeFile(p,f(await fs.readFile(p,'utf8')));
+await edit('src/mythology-local-v162.ts',s=>s.replace("source:'V146 genuine skeleton / separate PBR maps',bytes:5482116","source:'V162 medieval mail / CC0 anatomical hands / retained 14 rigs',bytes:15063752"));
+await edit('src/directory-v141/room-v143.ts',s=>s.replace('const nativeReady=!!(status as any).nativeUE?.ready;',"const nativeReady=!!(status as any).nativeUE?.ready&&heldBook<0&&heldTape<0&&!bookFlight&&!tapeFlight&&!tapeReturns.size&&!bookReturns.size;const nativeLayer=(status as any).nativeController?.layer;if(nativeLayer)nativeLayer.style.visibility=nativeReady?'visible':'hidden';").replace('disposed=true;active=false;syncBackingAudio();','disposed=true;active=false;(status as any).nativeController?.destroy();nativeDepth.dispose();syncBackingAudio();'));
+for(const p of ['v31.html','directory.html','mythology.html'])await edit(p,s=>s.replaceAll('32.161','32.162').replaceAll('mythology-local-v161.js','mythology-local-v162.js').replaceAll('mythology-offline-v161.js','mythology-offline-v162.js'));
+const old=JSON.parse(await fs.readFile('mythology-offline-manifest-v161.json','utf8'));
+const swap=s=>s.replaceAll('mythology-local-v161','mythology-local-v162').replaceAll('mythology-offline-manifest-v161','mythology-offline-manifest-v162').replaceAll('mythology-offline-v161','mythology-offline-v162').replace('/assets/odyssey/refit-v146/rigged-crew-web-v148.glb','/assets/odyssey/crew-v162/medieval-rowers.glb').replace('/assets/odyssey/refit-v146/vessel.glb','/assets/odyssey/crew-v162/vessel-oarports.glb');
+const files=old.files.map(swap);
+await fs.writeFile('mythology-offline-manifest-v162.json',JSON.stringify({version:162,files},null,2));
+await fs.writeFile('mythology-offline-v162.js',(await fs.readFile('mythology-offline-v161.js','utf8')).replaceAll('161','162'));
+let sw=(await fs.readFile('mythology-sw-v161.js','utf8')).replaceAll('mythology-v161','mythology-v162').replaceAll('myth-offline-161','myth-offline-162').replaceAll('myth-offline-status-161','myth-offline-status-162');
+sw=sw.replace(/const FILES=\[[^;]+;/,'const FILES='+JSON.stringify(files)+';');await fs.writeFile('mythology-sw-v162.js',sw);
+console.log('V162 formal HTML/offline entry and interaction restoration wired');

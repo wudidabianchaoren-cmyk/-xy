@@ -1,0 +1,12 @@
+﻿import fs from 'node:fs/promises';
+let save=await fs.readFile('scripts/save-current-v32-83.mjs','utf8');save=save.replace("previous=root+'/当前作品集_V32.82'","previous=root+'/当前作品集_V32.83'").replaceAll('32.83','32.84').replaceAll('v32-83','v32-84').replaceAll('study-v83','study-v84').replaceAll('CURRENT-V32-82-RESUME.md','CURRENT-V32-84-RESUME.md');
+save=save.replace("'v32-80.css','v32-84.css'","'v32-80.css','v32-83.css','v32-84.css'").replace("'vendor/threeui'","'vendor/threeui','vendor/react-bits','blender/mythology-v32-84','blender/home-camera-v32-84','assets/loading-study/discovery-more-v32-84.png'");
+save=save.replace("await add('E:/Brain-Universe-assets/V32-80/threeui-runtime'","await add('E:/Brain-Universe-assets/V32-84/react-motion','构建缓存/V32-84/react-motion');await add('E:/Brain-Universe-assets/V32-84/geometry-acceleration','构建缓存/V32-84/geometry-acceleration');await add('E:/Brain-Universe-assets/V32-80/threeui-runtime'");
+save=save.replace('V25原生钟盘及V24烘焙复用，本轮没有再次原生建模或渲染','V25原生钟盘及V24主页烘焙复用；神话实际Blender5.1.2原生/Cycles/AO文件在项目/blender/mythology-v32-84，生产脚本在scripts；新增motion/BVH缓存恢复到E:/Brain-Universe-assets/V32-84。无需重渲染即可查看');
+save=save.replace("previous=root+'/当前作品集_V32.84'","previous=root+'/当前作品集_V32.83'");await fs.writeFile('scripts/save-current-v32-84.mjs',save);
+let verify=await fs.readFile('scripts/verify-v32-83-package.mjs','utf8');verify=verify.replaceAll('32.83','32.84').replaceAll('v32-83','v32-84').replace("await run('.verify/v32-84/check-visual.mjs');","await run('.verify/v32-84/check-visual.mjs');await run('.verify/v32-84/check-new-effects.mjs');");
+verify=verify.replace("await p.waitForFunction(()=>window.odysseyState?.ready,null,{timeout:180000});await p.locator('.odyssey-painting-point').click();","await p.locator('.odyssey-painting-point').click();await p.waitForFunction(()=>window.odysseyState?.ready,null,{timeout:180000});");
+verify=verify.replace("await p.keyboard.press('Escape');assert(await p.locator('#odyssey').isHidden());","await p.keyboard.press('Escape');await p.waitForTimeout(400);assert(await p.locator('#odyssey').isHidden());");
+verify=verify.replace('flight:window.odysseyState.flightDuration','native:window.odysseyState.nativeRefinement,flight:window.odysseyState.flightDuration').replace('assert.equal(result.myth.flight,64);','assert.equal(result.myth.native.aoMaterials,8);assert.equal(result.myth.native.materials,253);assert.equal(result.myth.flight,64);');
+await fs.writeFile('scripts/verify-v32-84-package.mjs',verify);
+console.log('V32.84 independent archive scripts prepared');

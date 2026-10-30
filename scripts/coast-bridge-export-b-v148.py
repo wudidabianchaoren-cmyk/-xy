@@ -1,0 +1,7 @@
+﻿import bpy,json
+from pathlib import Path
+P=Path(__file__).resolve().parents[1];A=P/'assets/odyssey/refit-v148'
+bpy.ops.wm.open_mainfile(filepath=str(P/'blender/mythology-v32-148/coast-bridged-candidate-b.blend'))
+ob=next(o for o in bpy.context.scene.objects if o.type=='MESH' and o.name=='V148 scan-envelope bedrock with continuous back slope');bpy.ops.object.select_all(action='DESELECT');ob.select_set(True);bpy.context.view_layer.objects.active=ob
+bpy.ops.export_scene.fbx(filepath=str(A/'island-bridged-b.fbx'),use_selection=True,object_types={'MESH'},bake_anim=False,axis_forward='-Y',axis_up='Z')
+p=A/'grounding-statistics-b.json';d=json.loads(p.read_text());d['mesh']={'vertices':len(ob.data.vertices),'triangles':sum(len(f.vertices)-2 for f in ob.data.polygons),'GLBBytes':(A/'island-bridged.glb').stat().st_size,'grassGLBBytes':(A/'grass-grounded-b.glb').stat().st_size};d['review']={'localGeometryCandidate':True,'majorOpenTrenchFilled':True,'remaining':'Fine overlap lines at some scan crest joins; original broad smooth hill zones remain. Requires local material/browser review before final acceptance.','scansMoved':False,'treesXYScaleChanged':False,'grounding':'Highest final triangle among island, closed crest bridges and actual scans.','native':'blender/mythology-v32-148/coast-bridged-candidate-b.blend','FBXMaterialNote':'Gray review material in FBX; assign the existing UE stone/soil material explicitly.'};p.write_text(json.dumps(d,indent=2));print(json.dumps(d['mesh']))

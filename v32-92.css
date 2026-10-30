@@ -1,0 +1,30 @@
+﻿/* Desktop works: Chinese editorial hierarchy; the existing orbit timeline stays intact. */
+.works-orbit-archive{font-family:'Microsoft YaHei','PingFang SC',sans-serif;background:#e9e2d5;color:#30342c}
+.works-orbit-header{height:94px;background:#e9e2d5;padding:0 4.8vw;border-bottom:1px solid #756b5430}
+.works-orbit-header>div,.works-orbit-close,.works-orbit-index-trigger{font-family:inherit;font-size:14px;letter-spacing:.08em;line-height:1.5}
+.works-orbit-header>div span:first-child{font-size:16px;font-weight:500;letter-spacing:.14em}
+.works-orbit-header>div span:last-child{font-size:14px;color:#736959}
+.works-orbit-index-trigger b{font-size:14px;font-weight:400;letter-spacing:.08em}
+.works-orbit-scene-title{top:48%;left:5vw;max-width:23vw;gap:26px}
+.works-orbit-scene-title span{font:600 clamp(72px,5.1vw,98px)/1.12 'STSong','SimSun',serif;letter-spacing:.16em;color:#31382f}
+.works-orbit-scene-title small{font-family:inherit;font-size:14px;letter-spacing:.1em;padding-top:22px}
+.works-orbit-scene-title em{font:400 17px/1.6 'Microsoft YaHei',sans-serif;letter-spacing:.18em;color:#77664c}
+.works-orbit-archive.is-ring-preview .works-orbit-scene-title span{font-size:42px}
+.works-orbit-info-left{width:22vw;top:49%;gap:0}
+.works-orbit-info h2{font:600 clamp(34px,2.7vw,52px)/1.38 'STSong','SimSun',serif;letter-spacing:.03em;max-width:22vw;text-wrap:balance}
+.works-orbit-info-left>span{font-size:14px;margin-bottom:22px;letter-spacing:.08em}
+.works-orbit-info-left small{font:14px/1.5 'Microsoft YaHei',sans-serif;letter-spacing:.09em;margin-top:18px;color:#826c48}
+.works-orbit-description{font-size:14px;line-height:1.9;max-width:23vw;margin-top:24px;padding-top:20px}
+.works-orbit-info-right{right:4.8vw;width:14vw}
+.works-orbit-info-right span,.works-orbit-info-right small{font-family:inherit;font-size:13px;line-height:1.8;letter-spacing:.03em}
+.works-orbit-info-right strong{font:400 38px/1.2 'Times New Roman',serif}
+.works-orbit-title-list{right:4.8vw;top:14%;width:18vw;gap:12px}
+.works-orbit-title-list span,.works-orbit-title-list span:nth-child(n+3){font:14px/1.5 'Microsoft YaHei',sans-serif;letter-spacing:.03em;color:#978d7c}
+.works-orbit-title-list span.is-active,.works-orbit-title-list span:nth-child(n+3).is-active{color:#574a31}
+.works-orbit-guide{font:13px/1.5 'Microsoft YaHei',sans-serif;letter-spacing:.06em;bottom:35px}
+.works-orbit-guide span:last-child{font-size:12px}
+.works-orbit-intro-status{font:13px/1.5 'Microsoft YaHei',sans-serif;letter-spacing:.16em;color:#807256}
+.works-orbit-index{top:94px}
+.works-orbit-index-heading{font-family:inherit;font-size:13px}
+.works-orbit-index nav button strong{font:500 19px/1.5 'Microsoft YaHei',sans-serif;letter-spacing:.04em}
+.works-orbit-index nav button span{font-size:14px}

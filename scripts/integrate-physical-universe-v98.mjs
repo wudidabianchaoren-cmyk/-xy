@@ -1,0 +1,12 @@
+import fs from'node:fs/promises';
+const skill='skills/physical-handfeel-film';await fs.mkdir(skill+'/references',{recursive:true});
+for(const name of['SKILL1.jpg','SKILL2.jpg'])await fs.copyFile('C:/Users/HP/Desktop/9月初第三版AI作品集/图片/'+name,skill+'/references/'+name);
+await fs.cp(skill,'../.agents/skills/physical-handfeel-film',{recursive:true});
+let ring=await fs.readFile('v31-works-ring.js','utf8');
+if(!ring.includes('physical-universe.html')){ring=ring.replace('const COUNT = 5;','const COUNT = 6;').replace('    ["鹤洞遗骨",','    ["一触成形", "作品集宣传片", "物理手感", "原创影像 · 软体与力的叙事", "./assets/works/physical-universe/cover.webp", "./physical-universe.html?v=32.98"],\n    ["鹤洞遗骨",');}
+ring=ring.replaceAll('uPos[5]','uPos[${COUNT}]').replaceAll('uState[5]','uState[${COUNT}]').replaceAll('uRot[5]','uRot[${COUNT}]').replaceAll('uLinkA[5]','uLinkA[${COUNT}]').replaceAll('uLinkB[5]','uLinkB[${COUNT}]').replaceAll('uLinkPar[5]','uLinkPar[${COUNT}]').replaceAll('for(int i=0;i<5;i++)','for(int i=0;i<${COUNT};i++)').replace("['after-journey','rural-return','mid-autumn']","['after-journey','rural-return','mid-autumn','physical-universe']");
+await fs.writeFile('v31-works-ring.js',ring);let html=await fs.readFile('v31.html','utf8');html=html.replaceAll('32.97','32.98').replace('五项作品','六项作品');await fs.writeFile('v31.html',html);
+const note=`# CURRENT V32.98 / 一触成形\n\n预览：http://localhost:8031/v31.html?v=32.98 。宣传片：http://localhost:8031/physical-universe.html 。\n\n新增18秒、1920×1080、30fps原生Canvas物理宣传片，不调用Remotion，不引用任何站内图片。两张用户截图全部可见文字保存于 skills/physical-handfeel-film/references/source-transcript.md，原图留存；Skill复制到工作区 .agents/skills 便于后续发现。用户明确第5节剪辑自由设计。\n\n作品栏新增第六件“一触成形”，原五件全部保留。视频→无文字玻璃静帧→简介，原箭头返回、影片自动播放与画廊滚动复用。物理240Hz、二阶解析弹簧、软体48点、Verlet96点；参数化合成立体声音效。构建静帧、物理数据、音频、源程序、无损母版留存。具体网页检查与ffprobe结果见 .verify/v32-98/。既有主页刷新重播逻辑保持V97。\n\n额度工具本轮未返回可用读数（npx本地包缺失），不估计额度；复用已安装浏览器、FFmpeg和NumPy，不安装工具或生成外部素材。现有E97完整包冻结，E98独立校验通过才标记完成。\n`;
+await fs.writeFile('CURRENT-V32-98-RESUME.md',note);const instructions=await fs.readFile('AGENTS.md','utf8');if(!instructions.startsWith('# CURRENT V32.98'))await fs.writeFile('AGENTS.md',note+'\n'+instructions);
+await fs.writeFile('技能库记录.md','# 作品集技能库\n\n## 物理手感宣传片\n\n- 入口：`skills/physical-handfeel-film/SKILL.md`\n- 完整转录与原图：`skills/physical-handfeel-film/references/`\n- 首次作品：一触成形，18秒原创宣传片\n- 源程序与拆解：`motion/physical-universe-v98/`\n- 视频、四张构建图、无损母版与物理音频记录：`assets/works/physical-universe/`\n\n技能遵循用户截图的物理与时间轴规范；第5节剪辑由本次原创设计补充，不冒称截图原文。\n');
+console.log('New sixth work integrated; original five preserved; skill installed locally.');

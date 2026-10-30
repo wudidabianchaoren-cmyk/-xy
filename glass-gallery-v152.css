@@ -1,0 +1,44 @@
+/* Preserve the accepted V142 glass room; each original image defines its frame. */
+.project-gallery .glass-room .glass-track img {
+  background: #050505 !important;
+  object-fit: contain !important;
+}
+.project-gallery .glass-frame {
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+  isolation: auto;
+}
+.project-gallery .glass-wall {
+  background: #050505;
+  border: 0;
+}
+.project-gallery .glass-ceiling,
+.project-gallery .glass-floor {
+  display: block !important;
+  opacity: .30 !important;
+  border: 0 !important;
+  box-shadow: none;
+}
+.project-gallery .glass-ceiling { transform: rotateX(-88deg) !important; }
+.project-gallery .glass-floor { transform: rotateX(88deg) !important; }
+.project-gallery .glass-reflection {
+  opacity: .82 !important;
+  mix-blend-mode: screen !important;
+  transform: none !important;
+}
+.project-gallery .reflection-top {
+  clip-path: polygon(0 0,100% 0,var(--glass-right) 100%,var(--glass-left) 100%);
+  mask-image: linear-gradient(to bottom,transparent,#0001 22%,#0008 66%,#000);
+}
+.project-gallery .reflection-bottom {
+  clip-path: polygon(var(--glass-left) 0,var(--glass-right) 0,100% 100%,0 100%);
+  mask-image: linear-gradient(to bottom,#000,#0008 34%,#0001 78%,transparent);
+}
+.project-gallery .glass-reflection .glass-artwork {
+  filter: blur(.65px) saturate(.88) brightness(1.15);
+}
+/* White production boards keep the incumbent short, quieter reflection. */
+.project-gallery.code-gallery .glass-reflection { opacity: .34 !important; }
+.project-gallery.code-gallery .glass-ceiling,
+.project-gallery.code-gallery .glass-floor { opacity: .18 !important; }

@@ -1,0 +1,15 @@
+{
+  "name": "mind-universe-portfolio",
+  "private": true,
+  "description": "Desktop portfolio; existing toolchain caches are used by scripts.",
+  "scripts": {
+    "check": "node scripts/check-scenes.mjs",
+    "build": "node scripts/build-scenes.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.534",
+    "@remotion/player": "4.0.534"
+  }
+}

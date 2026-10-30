@@ -1,0 +1,10 @@
+import * as THREE from 'three';
+export const bookDescriptions={yangjian:'有声交互故事：以水墨动画、音乐与音效，讲述杨戬劈山救母。',odyssey:'实时三维神话：在海岛、船与风浪之间，探索一个可交互的小世界。',cinema:'电影美学读本：阅读导演风格、电影行业观察与对影像之美的赏析。'};
+export function readingDescriptions(stage:HTMLElement,canvas:HTMLCanvasElement,camera:THREE.Camera,volumes:THREE.Group[],cinema:THREE.Group,isOpen:()=>boolean){
+ const tip=document.createElement('div');tip.className='reading-book-description';tip.setAttribute('role','status');tip.setAttribute('aria-live','polite');stage.append(tip);cinema.userData.shelfVolume='cinema';let current='';const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();
+ function show(id:string){if(isOpen()){hide();return;}current=id;tip.textContent=bookDescriptions[id as keyof typeof bookDescriptions]||'';tip.dataset.open=String(!!tip.textContent);update();}
+ function hide(){current='';tip.dataset.open='false';}
+ function update(){if(!current)return;if(isOpen()){hide();return;}const center={yangjian:-2.66,odyssey:0,cinema:2.66}[current]??0,p=new THREE.Vector3(center,3.82,.35).project(camera);tip.style.left=((p.x*.5+.5)*stage.clientWidth)+'px';tip.style.top=Math.max(48,(-p.y*.5+.5)*stage.clientHeight-12)+'px';}
+ canvas.addEventListener('pointermove',e=>{if(isOpen())return hide();const r=canvas.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,1-(e.clientY-r.top)/r.height*2);ray.setFromCamera(pointer,camera);const hit=ray.intersectObjects([...volumes,cinema],true)[0];let o:THREE.Object3D|null=hit?.object||null;while(o&&!o.userData.shelfVolume)o=o.parent;if(o)show(o.userData.shelfVolume);else hide();});canvas.addEventListener('pointerleave',hide);
+ document.querySelectorAll<HTMLElement>('[data-shelf-book]').forEach(button=>{button.addEventListener('mouseenter',()=>show(button.dataset.shelfBook!));button.addEventListener('focus',()=>show(button.dataset.shelfBook!));button.addEventListener('mouseleave',hide);button.addEventListener('blur',hide);});return{update,descriptions:bookDescriptions,hide};
+}

@@ -1,0 +1,2 @@
+import bpy,json
+print(json.dumps([{'name':o.name,'pos':list(o.location),'scale':list(o.scale),'data':o.data.name,'bbox':[list(o.bound_box[0]),list(o.bound_box[6])]} for o in list(bpy.data.collections['V117_FOREST'].objects)[:9] if o and o.type=='MESH']))

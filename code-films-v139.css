@@ -1,0 +1,9 @@
+/* Only the code-film gallery: the full image owns the wall; bounded reflections follow its true ratio. */
+.code-gallery .glass-room .glass-track img{height:100%;width:100%;aspect-ratio:auto;object-fit:contain;background:#050505}
+.code-gallery .glass-plane{display:none}
+.code-gallery .glass-frame{border:1px solid #e9e7db26;box-shadow:0 12px 32px #0005}
+.code-gallery .glass-reflection{mix-blend-mode:normal;opacity:.34}
+.code-gallery .reflection-top{clip-path:polygon(12% 0,88% 0,82% 100%,18% 100%)}
+.code-gallery .reflection-bottom{clip-path:polygon(18% 0,82% 0,88% 100%,12% 100%)}
+.code-gallery .glass-reflection .glass-artwork{filter:blur(.7px) saturate(.86) brightness(.84)}
+.code-gallery .glass-reading-controls{bottom:24px}

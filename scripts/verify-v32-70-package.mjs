@@ -1,0 +1,81 @@
+import assert from 'node:assert/strict';
+import {createReadStream} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {readFile,writeFile,readdir,lstat,mkdir,copyFile} from 'node:fs/promises';
+import {spawn} from 'node:child_process';
+import {createRequire} from 'node:module';
+import path from 'node:path';
+const dest='E:/codex/脑海宇宙作品集/当前作品集_V32.70',root=path.dirname(dest),finalize=process.argv.includes('--finalize');
+const saved=JSON.parse(await readFile(dest+'/保存结果.json','utf8'));
+if(finalize&&saved.complete&&saved.currentPackageRunPassed)throw Error('Completed archive is frozen; verification only');
+const hash=async f=>{const h=createHash('sha256');for await(const b of createReadStream(f))h.update(b);return h.digest('hex');};
+const result={version:'V32.70',date:new Date().toISOString(),errors:[],missing:[],external:[],tests:[],actualAudioListeningPerformed:false};
+const records=JSON.parse(await readFile(dest+'/文件清单.json','utf8'));
+for(const r of records){const f=path.resolve(dest,r.path);assert(f.startsWith(path.resolve(dest)+path.sep));assert.equal((await lstat(f)).size,r.bytes,r.path);assert.equal(await hash(f),r.sha256.toLowerCase(),r.path);}
+result.manifestFilesChecked=records.length;result.tests.push('All copied file sizes and SHA256 match manifest');
+assert.equal(await hash(root+'/当前作品集_V32.65/保存结果.json'),saved.previousArchiveSha256);
+const local=JSON.parse(await readFile(dest+'/项目/.verify/v32-70-checks.json','utf8'));
+for(const c of local.checks){assert(c.passed);assert.equal(await hash(dest+'/项目/'+c.file),c.evidenceSha256,c.file);}
+for(const [f,h] of Object.entries(local.sourceHashes))assert.equal(await hash(dest+'/项目/'+f),h,f);
+result.tests.push('All 15 local evidence files and current source hashes match');
+const code=`import runpy\nx=runpy.run_path(${JSON.stringify(dest+'/项目/serve-preview.py')})\ns=x['ThreadingHTTPServer'](('127.0.0.1',8032),x['PreviewHandler'])\nprint('PACKAGE_READY',flush=True)\ns.serve_forever()`;
+const server=spawn('C:/Users/HP/AppData/Local/Programs/Python/Python313/python.exe',['-c',code],{windowsHide:true,stdio:['ignore','pipe','pipe']});
+let browser;
+try{
+ await new Promise((resolve,reject)=>{let stderr='';const t=setTimeout(()=>reject(Error('Package server timed out '+stderr)),10000);server.stdout.on('data',d=>{if(d.toString().includes('PACKAGE_READY')){clearTimeout(t);resolve();}});server.stderr.on('data',d=>stderr+=d);server.on('exit',c=>{clearTimeout(t);reject(Error('Package server exited '+c+' '+stderr));});});
+ const {chromium}=createRequire(dest+'/项目/node_modules/playwright/package.json')('playwright');
+ browser=await chromium.launch({headless:true,args:['--enable-gpu','--use-angle=d3d11']});const page=await browser.newPage({viewport:{width:1920,height:960}});
+ page.on('pageerror',e=>result.errors.push(e.message));page.on('console',m=>{if(m.type()==='error')result.errors.push(m.text());});page.on('response',r=>{if(r.status()>=400)result.missing.push(r.url());});
+ await page.route('**/*',r=>{const u=new URL(r.request().url());if(/^https?:/.test(u.protocol)&&u.hostname!=='localhost'){result.external.push(u.href);return r.abort();}return r.continue();});
+ await page.addInitScript(()=>{window.packageOpening={};window.addEventListener('v31:opening-started',()=>window.packageOpening.start=performance.now());window.addEventListener('v31:opening-complete',()=>{const v=document.querySelector('.prelude-opening-video'),q=v?.getVideoPlaybackQuality();window.packageOpening.end=performance.now();window.packageOpening.frames=q?.totalVideoFrames;window.packageOpening.dropped=q?.droppedVideoFrames;});});
+ await page.goto('http://localhost:8032/v31.html?v=32.70',{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>document.querySelector('.prelude-opening-video')?.currentTime>3,null,{timeout:60000});
+ result.openingProgress=await page.evaluate(()=>({counter:document.querySelector('[data-opening-counter]').textContent,clock:document.querySelector('[data-opening-time]').textContent}));assert(result.openingProgress.counter.endsWith('%'));assert(!/20|\d\.\d/.test(result.openingProgress.clock));
+ console.log('Independent package: opening playing');
+ await page.waitForFunction(()=>window.homeClockState?.ready&&window.homeArchitectureState?.started,null,{timeout:180000});
+ result.opening=await page.evaluate(()=>window.packageOpening);assert.equal(result.opening.frames,600);assert(result.opening.dropped/result.opening.frames<.03);assert((result.opening.end-result.opening.start)/1000<22);
+ result.home=await page.evaluate(()=>({elapsed:window.homeClockState.elapsed,interactions:window.homeClockState.interactions,ready:window.homeClockState.ready}));assert(result.home.ready);assert(result.home.elapsed<6,'No interaction needed to start the home intro');
+ await page.waitForFunction(()=>window.homeClockState.cameraLocked,null,{timeout:120000});
+ assert.equal(await page.locator('.courtyard-place').count(),5);
+ await page.locator('.courtyard-place').nth(2).focus();assert(await page.locator('.courtyard-card').isVisible());await page.keyboard.press('Escape');await page.waitForTimeout(250);assert(await page.locator('.courtyard-card').isHidden());
+ result.tests.push('Complete opening then automatic six-shot home intro and five-place navigation');console.log('Independent package: home complete, checking clicked mythology');
+ await page.evaluate(()=>window.__v31Lenis.scrollTo(document.getElementById('odysseyIntroduction'),{immediate:true,force:true}));await page.waitForTimeout(400);
+ assert(!await page.evaluate(()=>!!window.odysseyState));assert(await page.locator('#odyssey').isHidden());await page.locator('.odyssey-painting-point').click();
+ await page.waitForFunction(()=>window.odysseyState?.renderFrames>5,null,{timeout:180000});
+ result.mythology=await page.evaluate(()=>({flight:window.odysseyState.flightDuration,boats:window.odysseyState.boatLengths,eye:window.odysseyState.giantEye,holds:window.odysseyState.holdDepths(),birds:window.odysseyState.birds}));assert.equal(result.mythology.flight,64);assert.equal(result.mythology.boats.length,4);assert.equal(result.mythology.eye.eyeCount,1);assert.equal(result.mythology.eye.continuousBody,true);assert(result.mythology.holds.every(d=>d>.7));assert.equal(result.mythology.birds,11);
+ await page.keyboard.press('Escape');await page.waitForTimeout(350);assert(await page.locator('#odyssey').isHidden());result.tests.push('Painting click opens 64s scene with four boats and connected giant; Escape returns');
+ await page.evaluate(()=>window.__v31Lenis.scrollTo(document.getElementById('lifePurpose'),{immediate:true,force:true}));await page.waitForFunction(()=>window.lifePurposeState?.ready,null,{timeout:30000});
+ await page.evaluate(()=>document.getElementById('lifePurposeVideo').play());
+ await page.waitForFunction(()=>document.getElementById('lifePurposeVideo').readyState>=1,null,{timeout:30000});
+ await page.evaluate(()=>{const v=document.getElementById('lifePurposeVideo');v.pause();v.currentTime=38.2;});await page.waitForFunction(()=>!document.getElementById('lifePurposeVideo').seeking&&document.getElementById('lifePurposeVideo').readyState>=2);
+ result.film=await page.evaluate(()=>({duration:document.getElementById('lifePurposeVideo').duration,images:document.querySelectorAll('.life-process-grid img').length,last:document.querySelector('main > section:last-child').id}));assert.equal(result.film.duration,50);assert.equal(result.film.images,5);assert.equal(result.film.last,'lifePurpose');assert.equal(await page.locator('.life-process-grid figure:visible').count(),1);await page.locator('[data-life-process-next]').click();assert.equal(await page.locator('[data-life-process-count]').innerText(),'02 / 05');
+ await page.locator('[data-life-music]').click();await page.waitForFunction(()=>!window.lifePurposeState.withMusic&&document.getElementById('lifePurposeVideo').readyState>=1);assert.equal(await page.evaluate(()=>document.getElementById('lifePurposeVideo').duration),50);
+ result.tests.push('50s final film, both audio variants, and compact five-image process page');
+ for(const r of local.httpRanges){const response=await fetch('http://localhost:8032/'+r.file,{headers:{Range:'bytes=0-1023'}});assert.equal(response.status,206);assert.equal(response.headers.get('content-range'),r.contentRange);assert.equal(await hash(dest+'/项目/'+r.file),r.sha256);}
+ result.tests.push('Current encoded films serve HTTP206 and match verified production hashes');
+ await page.evaluate(()=>window.__v31Lenis.scrollTo(document.getElementById('lifePurpose'),{immediate:true,force:true}));await page.waitForTimeout(300);
+ if(finalize)await page.screenshot({path:dest+'/效果截图/封存包独立运行.png'});
+ assert.equal(result.errors.length,0);assert.equal(result.external.length,0);assert.equal(result.missing.length,0);assert.equal(await hash(root+'/当前作品集_V32.65/保存结果.json'),saved.previousArchiveSha256);result.passed=true;
+}catch(e){result.passed=false;result.failure=e.stack;process.exitCode=1;}finally{if(browser)await browser.close();server.kill();await new Promise(resolve=>{if(server.exitCode!==null||server.signalCode!==null)resolve();else server.once('exit',resolve);});}
+if(finalize){
+ await writeFile(dest+'/当前包运行检查.json',JSON.stringify(result,null,2));
+ if(result.passed){
+  for(const f of ['V31-CURRENT-HANDOFF.md','ODYSSEY-CURRENT-HANDOFF.md','blender/reference-architecture-v16/SESSION-STATE.md']){
+   const src=path.join(saved.source,f);let text=await readFile(src,'utf8');text=text.replace('E V32.65封存冻结，仅本地V32.70。','E V32.65封存冻结；V32.70已另存 E:/codex/脑海宇宙作品集/当前作品集_V32.70/，以保存结果双 true 为准。每次新更新均另存对应版本并核验。');await writeFile(src,text);await copyFile(src,dest+'/项目/'+f);
+  }
+  await copyFile(path.join(saved.source,'scripts/verify-v32-70-package.mjs'),dest+'/项目/scripts/verify-v32-70-package.mjs');
+  local.eArchiveUpdated=true;local.eArchivePackage=dest;local.eArchiveIndependentRunPassed=true;local.limitations=local.limitations.map(s=>s.startsWith('E V32.65 archive')?'E V32.65 remains frozen; V32.70 is independently verified in a new E package.':s);
+  for(const f of [path.join(saved.source,'.verify/v32-70-checks.json'),dest+'/项目/.verify/v32-70-checks.json',dest+'/当前检查结果/v32-70-checks.json'])await writeFile(f,JSON.stringify(local,null,2));
+  await copyFile(dest+'/当前包运行检查.json',path.join(saved.source,'.verify/v32-70-archive-results.json'));
+  const next=[];async function walk(dir,rel=''){for(const e of await readdir(dir)){const r=rel?rel+'/'+e:e;if(r==='文件清单.json'||r==='保存结果.json')continue;const f=path.join(dir,e),s=await lstat(f);if(s.isDirectory())await walk(f,r);else next.push({path:r,bytes:s.size,sha256:await hash(f)});}}
+  await walk(dest);await writeFile(dest+'/文件清单.json',JSON.stringify(next,null,2));
+  for(const r of next)assert.equal(await hash(dest+'/'+r.path),r.sha256,r.path);
+  const complete={...saved,complete:true,currentPackageRunPassed:true,saved:new Date().toISOString(),files:next.length,bytes:next.reduce((n,r)=>n+r.bytes,0),checks:local.checks.length,independentPackageChecks:result.tests.length,manifestSha256:await hash(dest+'/文件清单.json'),scope:'Current V32.70 website, source, native V16, assets, provenance, proofs and necessary build caches; old complete archives unchanged.',actualAudioListeningPerformed:false};
+  await writeFile(dest+'/保存结果.json',JSON.stringify(complete,null,2));
+  const entry='# 脑海宇宙作品集：当前接续入口\n\n## 当前完整 V32.70 / 2026-10-09\n\n当前完整接续包：`E:/codex/脑海宇宙作品集/当前作品集_V32.70/`。先读该目录的 **接续说明.md**、**保存结果.json**、**当前包运行检查.json**。保存结果的 complete 与 currentPackageRunPassed 双 true，且文件清单哈希通过，才表示完整保存。\n\n网站在 项目/，源码在 项目/src/ 与 项目/motion/，素材与当前成片在 项目/assets/，原生 V16 与必要依赖在 项目/blender/，构建缓存及恢复方法见 构建缓存/README.md。本地现有预览 http://localhost:8031/v31.html?v=32.70 已复用；独立 E 包用临时 8032 验证，结束后临时服务关闭。只查看无需重建或重渲染。\n\n本版保留 20 秒图像拼贴入口、自动一次六镜头、森林钟楼与五处导览、原三窗单亮动作；原画中央光点点击打开 64 秒神话子页面，连续头颈独眼巨人、四船及自然礁岛；末页 50 秒手绘拼贴影片、四脚修椅及紧凑五图过程页。首次 GPU 准备仍需时间；没有实际音频试听，不声称听感验收。\n\n用户要求：从 **V32.70 增量继续**。每次作品集更新完成都保存对应新版本到本 E 盘目录，逐文件校验并独立运行通过，再更新此入口；若中断，明确保存断点且不冒充完整版本。V32.65 及其他旧完整包保持冻结，仅作回滚，不覆盖最新版本。\n\n新会话发送：\n\n> 继续脑海宇宙作品集，从 V32.70 增量继续。先读 E:/codex/脑海宇宙作品集/当前作品集_V32.70/接续说明.md、保存结果.json 和当前包运行检查.json，复用现有网站，不从头重建、不重渲染看效果。保留原六镜头、三窗动作、64秒神话运镜光照、四船、七粒子及其他页。每次更新都把当前完整版本与核验结果保存到 E 盘 CODEX 记录，并更新当前入口。\n';
+  await writeFile(root+'/先读这里.md',entry);await writeFile(root+'/校验当前接续包_V32.70.mjs',"// Read-only file verification; does not alter the frozen package.\nimport {createReadStream} from 'node:fs';import {readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';\nconst root=new URL('./当前作品集_V32.70/',import.meta.url),hash=async u=>{const h=createHash('sha256');for await(const b of createReadStream(u))h.update(b);return h.digest('hex');};\nconst saved=JSON.parse(await readFile(new URL('保存结果.json',root),'utf8'));if(!saved.complete||!saved.currentPackageRunPassed)throw Error('Incomplete archive');if(await hash(new URL('文件清单.json',root))!==saved.manifestSha256)throw Error('Manifest mismatch');const files=JSON.parse(await readFile(new URL('文件清单.json',root),'utf8'));for(const f of files)if(await hash(new URL(f.path,root))!==f.sha256)throw Error('Mismatch '+f.path);console.log(JSON.stringify({version:saved.version,files:files.length,passed:true}));\n");
+  await writeFile(root+'/校验当前接续包.mjs',"// Current archive verification; old packages stay frozen.\nimport './校验当前接续包_V32.70.mjs';\n");
+  console.log(JSON.stringify({complete:true,currentPackageRunPassed:true,files:complete.files,bytes:complete.bytes,package:dest}));
+ }
+}
+console.log(JSON.stringify({passed:result.passed,tests:result.tests,errors:result.errors,missing:result.missing,failure:result.failure}));

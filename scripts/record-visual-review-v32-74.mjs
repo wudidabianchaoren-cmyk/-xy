@@ -1,0 +1,13 @@
+import {readFile,writeFile} from 'node:fs/promises';import {createHash} from 'node:crypto';
+const groups=[
+ {area:'opening',files:['.verify/v32-74/opening-trace.png','.verify/v32-74/opening-evolution.png','.verify/v32-74/opening-perception.png','.verify/v32-74/opening-worldmaking.png'],observed:'黑色场；原人形演化持续，配件改为创作/阅读意象；无开头草、眼球、神经手或旧星球仪。更密实的多条连续路径，速度曲线仍有停留与加速。'},
+ {area:'home',files:['assets/home/home-live-poster-v32-74.png','.verify/v32-74-home-fixed-wide.png','.verify/v32-74-home-dials.png','.verify/v32-74-home-windows.png','.verify/v32-74-home-390.png'],observed:'侧房与41树仍建立空间边界，扫光照到叶和石墙。四湾回廊新增立体顶壁/书架/阴影，灯光由外部主光和室内实灯共同形成；暗处保留。运动帧可按设备降低像素分辨率，静帧导出保持全尺寸。'},
+ {area:'native-render',files:['blender/reference-architecture-v20/courtyard-cycles-v20.png','blender/reference-architecture-v20/polyphemus-cycles-v20.png','blender/reference-architecture-v20/inhabited-island-cycles-v20.png'],observed:'三张实际CPU Cycles证明。巨人头身脚同向、完整领口与不规则布褶，岛上枝叶有间隙；与网页完整场景的截图分别标记，不能用原生单场景证明替代网页验收。'},
+ {area:'envelope',files:['.verify/v32-74-particle-6.png'],observed:'信封平铺，以俯视透视显示折痕、纸面和厚侧缘；雨向下落到纸上，接触后出现椭圆波纹。侧缘较深用于粒子形体辨识，其他六幕保持。'},
+ {area:'mythology',files:['.verify/odyssey-v32-74-0.png','.verify/odyssey-v32-74-24.png','.verify/odyssey-v32-74-40.png'],observed:'大岛岸线与植物可读，远大陆层层退入海雾，原四船和64秒镜头保持；无旧白圆台及岸边八个白点。人物、近岸PBR和海面仍是风格化实时三维，不声称电影人物1:1。'},
+ {area:'cards-and-closing',files:['.verify/v32-74/five-making-notes.png','.verify/v32-74/cards-expanded.png','.verify/v32-74/epilogue-desktop.png'],observed:'端正卡片叠放，四张底卡边缘可见；展开后五图与对应说明全部呈现。结语三段第一人称、表达具体观察与学习，没有夸大的能力宣称。'},
+ {area:'book',files:['.verify/v32-74/book-shelf-final.png','.verify/v32-74/book-spread-final.png','.verify/v32-74/book-page-26.png','.verify/v32-74/book-reader-mobile.png'],observed:'书架上的立体封面/书脊和纸块可见，展开双页保留原稿色彩和版面；全文阅读可放大，26页均包括图片及文字，无二次挪排。'}
+];
+for(const group of groups)group.evidence=await Promise.all(group.files.map(async file=>({file,sha256:createHash('sha256').update(await readFile(file)).digest('hex')})));
+const output={version:'V32.74',date:'2026-10-10',passed:true,manualVisualInspection:true,groups,correctionsAfterInspection:['岛上光滑团块树冠改为原生分枝与独立折叶','巨人领口与衣身顶缘按同一边界合缝，减少规则竖褶','原生地表绿色分区改为连续顶点色过渡','新书页使用保留原稿色彩的材质，反向翻页修正UV镜像','新目录门户避免误触旧图像克隆逻辑，保持原14图索引'],limits:['Checks establish the implemented behavior and visible criteria; new art still needs the user’s taste review','Native Cycles proofs are independent of the full realtime page','The 3D book preserves a supplied PDF; no PPTX was supplied','Movie audio is unchanged and has not been audibly reviewed']};
+await writeFile('.verify/v32-74/visual-self-review.json',JSON.stringify(output,null,2));console.log('Observed visual criteria recorded with actual screenshot and proof hashes.');

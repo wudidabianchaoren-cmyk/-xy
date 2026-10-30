@@ -1,0 +1,7 @@
+import fs from 'node:fs/promises';import {spawn} from 'node:child_process';import {chromium} from 'playwright';
+const out='assets/works/physical-universe-v102',b=await chromium.launch({channel:'msedge',headless:true}),p=await b.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:1});await p.goto('http://localhost:8031/motion/physical-universe-v102/index.html?study&t=4.45');await p.waitForFunction(()=>window.__filmReady);const shots=[4.45,7.95,10.6,13.4];
+for(let i=0;i<4;i++){await p.evaluate(t=>__seek(t),shots[i]);await p.screenshot({path:out+'/frame-0'+(i+1)+'.png',clip:{x:0,y:270,width:1920,height:540}})}
+const prints=await p.evaluate(()=>__graphicPrintPNGs());for(let i=0;i<prints.length;i++)await fs.writeFile(out+'/graphic-print-'+String(i+1).padStart(2,'0')+'.png',Buffer.from(prints[i].split(',')[1],'base64'));
+await b.close();
+const ff='F:/codex程序/FFmpeg-extracted/ffmpeg-8.1.2-essentials_build/bin/ffmpeg.exe';for(let i=1;i<=4;i++)await new Promise((resolve,reject)=>{const c=spawn(ff,['-hide_banner','-loglevel','error','-y','-i',out+'/frame-0'+i+'.png','-c:v','libwebp','-quality','96',out+'/frame-0'+i+'.webp'],{stdio:'inherit'});c.on('exit',code=>code?reject(Error('encode '+code)):resolve())});
+let manifest=JSON.parse(await fs.readFile(out+'/manifest.json','utf8'));manifest.galleryType='original text-free 32:9 graphic material studies';await fs.writeFile(out+'/manifest.json',JSON.stringify(manifest,null,2));console.log('Four native wide graphic studies saved');

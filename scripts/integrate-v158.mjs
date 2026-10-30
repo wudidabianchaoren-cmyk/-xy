@@ -1,0 +1,5 @@
+import fs from'node:fs/promises';
+let s=await fs.readFile('v31.html','utf8');s=s.replace(/<link rel="stylesheet" href="\.\/home-thought-line-v154\.css[^>]+>/,'');s=s.replaceAll('scene-dist/home-thought-line-v154.js?v=32.154','scene-dist/home-thought-line-v158.js?v=32.158').replace('</head>','<link rel="stylesheet" href="./scene-dist/home-thought-line-v158.css?v=32.158"></head>').replaceAll('home-designed-intro-v157.js?v=32.157','home-designed-intro-v158.js?v=32.158').replaceAll('app.js?v=32.157','app.js?v=32.158').replaceAll('app.css?v=32.157','app.css?v=32.158').replace(/(v31-motion-v144\.js\?v=)[\d.]+/,'$132.158').replace(/(scene-loader-v146\.js\?v=)[\d.]+/,'$132.158');await fs.writeFile('v31.html',s);
+for(const name of['directory.html','reading.html']){let h=await fs.readFile(name,'utf8');h=h.replaceAll('v=32.157','v=32.158');await fs.writeFile(name,h);}
+let build=await fs.readFile('scripts/build-home-v157.mjs','utf8');await fs.writeFile('scripts/build-home-v158.mjs',build.replaceAll('157','158'));
+let loader=await fs.readFile('src/scene-loader-v146.ts','utf8');await fs.writeFile('src/scene-loader-v146.ts',loader.replaceAll('v=32.157','v=32.158'));

@@ -1,0 +1,45 @@
+/* Desktop works layout. Orbit physics, entrances and routes remain in their original controller. */
+.works-orbit-archive{background:#eae3d6;color:#292a24}
+.works-orbit-archive::before{opacity:.08;background-size:6px 6px}
+.works-orbit-archive::after{box-shadow:inset 0 0 100px #6c51300a,inset 0 0 0 1px #53483320}
+.works-orbit-header{height:78px;padding:0 4.8vw;background:#eae3d6;border-color:#78644430}
+.works-orbit-header>div,.works-orbit-index-trigger,.works-orbit-close{font-size:10px}
+.works-orbit-header>div span:first-child{color:#403b30}
+.works-orbit-info-left{left:4.8vw;top:49%;width:22vw;grid-template-columns:1fr;gap:0}
+.works-orbit-info-left>span{color:#947747;font-size:12px;margin-bottom:26px}
+.works-orbit-info h2{font:400 clamp(32px,2.55vw,49px)/1.3 'STSong','SimSun',serif;letter-spacing:.035em;max-width:21vw}
+.works-orbit-info-left small{grid-column:1;font-size:11px;letter-spacing:.08em;line-height:1.5;color:#6b6254;margin-top:12px}
+.works-orbit-description{grid-column:1;max-width:230px;margin:32px 0 0;padding-top:18px;border-top:1px solid #8c76543b;font:12px/1.9 'Microsoft YaHei',sans-serif;color:#736b5e;letter-spacing:.025em}
+.works-orbit-info-right{right:4.8vw;top:49%;width:15vw;grid-template-columns:1fr;gap:17px;border-top:1px solid #8c76543b;padding-top:20px}
+.works-orbit-info-right strong{grid-column:1;grid-row:auto;font:400 34px/1.1 'Times New Roman',serif;color:#4e493d}
+.works-orbit-info-right span,.works-orbit-info-right small{font-size:10px;line-height:1.5;color:#736b5e;letter-spacing:.06em}
+.works-orbit-title-list{right:4.8vw;top:14%;width:15vw;gap:9px}
+.works-orbit-title-list span{font-size:11px;line-height:1.3;color:#928978}
+.works-orbit-title-list span.is-active{color:#6b522c}
+.works-orbit-title-list span:nth-child(n+3){font-size:10px;color:#9c9589}
+.works-orbit-guide{font-size:10px;color:#6b6254;bottom:36px;gap:18px}
+.works-orbit-guide span:last-child{font-size:9px;color:#8b806d}
+.works-orbit-guide i{background:#a58d5e80;width:58px}
+.works-orbit-index{top:78px;background:#171d19}
+.works-orbit-index nav button.is-active span{color:#c7ae79}
+.works-orbit-index nav button strong{font-size:13px;line-height:1.35}
+.works-orbit-index nav button span{font-size:10px}
+.works-orbit-exit-fold i{background:#eae3d6}
+/* UI accents only; imagery and content backgrounds keep their existing colors. */
+.elastic-track i{background:#b69b67!important;box-shadow:0 0 8px #b69b6730!important}
+.experience-console .slider-range{background:#b69b67!important;box-shadow:0 0 8px #b69b6730!important}
+body.is-paper-reading .experience-console .slider-range,body.hobby-reading .experience-console .slider-range,body.is-life-purpose .experience-console .slider-range{background:#8b744b!important;box-shadow:none!important}
+.portfolio-progress i b{background:#b69b67!important}
+body.is-paper-reading .elastic-track i,body.hobby-reading .elastic-track i,body.is-life-purpose .elastic-track i{background:#8b744b!important;box-shadow:none!important}
+body.is-paper-reading .portfolio-progress i b,body.is-sand-reading .portfolio-progress i b,body:has(.image-chapter.is-tone-active) .portfolio-progress i b{background:#8b744b!important}
+/* Readable methods replace dense bitmap boards, not the preserved original files. */
+.image-chapters>.prompt-research>.prompt-research-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.prompt-plate.method-note:last-child{grid-column:auto;max-width:none;width:auto;justify-self:stretch}
+.method-note{border-top:1px solid #9a8c734d;padding-top:24px}
+.method-visual{height:clamp(200px,19vw,300px);background:#e8e2d5;color:#817255;padding:18px;display:grid;place-items:center}
+.method-visual svg{display:block;width:100%;max-height:100%}
+.method-visual text{fill:#776c58;stroke:none;font:10px monospace;letter-spacing:.04em}
+.method-note .prompt-plate-caption{padding:26px 0 0}
+.method-note .prompt-plate-caption>small{position:static;display:block;margin-bottom:16px;font-size:10px;color:#817255}
+.method-note .prompt-plate-caption h3{font:500 21px/1.5 'Microsoft YaHei',sans-serif}
+.image-chapters .method-note .prompt-plate-caption p{font-size:14px;line-height:1.9;color:#5e6358;margin:14px 0 0;max-width:30em}

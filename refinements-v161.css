@@ -1,0 +1,46 @@
+/* Desktop refinement: preserve the existing stage and animated chapter buttons. */
+body.home-architecture-only .stage-scan-system{display:none!important}
+body.home-architecture-only .topbar{padding:28px 42px;align-items:flex-start}
+body.home-architecture-only .topbar .brand{display:flex;flex-direction:column;align-items:flex-start;gap:7px;text-align:left}
+body.home-architecture-only .topbar .brand strong{font-size:31px;line-height:1.2;letter-spacing:.09em}
+body.home-architecture-only .topbar .brand small{font-size:11px;letter-spacing:.08em;line-height:1.5}
+body.home-architecture-only #experienceConsole{top:112px;left:42px;width:140px;gap:9px;padding:0;border:0;box-shadow:none;background:none}
+body.home-architecture-only #experienceConsole .elastic-control{display:flex;width:140px;gap:9px;padding:0;border:0;min-height:20px}
+body.home-architecture-only #experienceConsole .elastic-end{width:17px;height:17px;flex:0 0 17px}
+body.home-architecture-only #experienceConsole .elastic-slider{width:106px;flex:0 0 106px;min-width:0;max-width:106px}
+body.home-architecture-only #experienceConsole output,body.home-architecture-only #experienceConsole .elastic-control>.elastic-limit:last-of-type{display:none!important}
+body.home-architecture-only #experienceConsole .value-indicator{display:none!important}
+body.home-architecture-only #experienceConsole.is-home-active{visibility:visible!important;opacity:.72!important;pointer-events:auto!important}
+body.home-architecture-only #experienceConsole .slider-container{width:106px!important;max-width:106px!important;gap:0!important}
+body.home-architecture-only #experienceConsole .slider-wrapper{gap:0!important}
+body.home-architecture-only #experienceConsole .slider-wrapper>div:first-child,body.home-architecture-only #experienceConsole .slider-wrapper>div:last-child{display:none}
+body.home-architecture-only #experienceConsole .slider-root{width:106px;max-width:106px;padding:8px 0}
+#countdownPrelude .opening-progress{bottom:3%!important;width:350px!important;max-width:40vw!important}
+.thought-line-v158-host{width:350px;min-height:138px}
+.thought-line-v158-host .thought-line__steps{max-height:96px;overflow:auto;scrollbar-width:none}
+#indexOverlay{inset:0 0 0 auto!important;width:440px;max-width:45vw;height:100dvh;padding:100px 36px 42px;display:flex!important;flex-direction:column;gap:38px;background:#e9e6df!important;color:#353b34!important;border-left:1px solid #b8b4a6;transform:translateX(100%);opacity:0;visibility:hidden;clip-path:none!important;transition:transform 420ms cubic-bezier(.22,1,.36,1),opacity 220ms,visibility 420ms;overflow-y:auto;box-shadow:-16px 0 70px #101b1824}
+#indexOverlay.v31-index-open{transform:translateX(0);opacity:1;visibility:visible}
+#indexOverlay .index-heading{position:static!important;transform:none!important;padding:0!important;max-width:none;text-align:left}
+#indexOverlay .index-heading small{font-size:9px;letter-spacing:.16em;color:#666c5e}
+#indexOverlay #indexTitle{font-size:29px;line-height:1.3;letter-spacing:.12em;margin:12px 0 0}
+#indexOverlay #indexList{display:flex!important;position:static!important;flex-direction:column;gap:0;width:100%;padding:0;margin:0;transform:none!important}
+#indexOverlay #indexList>.border-glow-card,#indexOverlay #indexList>.index-work{height:120px!important;min-height:120px!important;width:100%!important;flex:0 0 120px;margin:0!important}
+#indexOverlay #indexList>.archive-border-mount{height:120px!important;min-height:120px!important;width:100%!important;flex:0 0 120px;margin:0 0 12px!important}
+#indexOverlay #indexList .border-glow-card{background:#17231b;border-radius:10px;margin-bottom:12px!important}
+#indexOverlay #indexList .border-glow-inner{height:100%;background:#17231b}
+#indexOverlay #indexList .border-glow-card .index-work{color:#e6e3d4!important;height:100%!important;min-height:0!important;padding:22px!important;display:grid!important;grid-template-columns:24px 1fr 16px!important;grid-template-rows:auto auto!important;gap:8px 14px!important}
+#indexOverlay #indexList .index-work .title{font-size:24px!important}
+#indexOverlay #indexList .index-work .meta{font-size:10px!important;line-height:1.6!important}
+#indexOverlay #indexList .index-work{position:relative!important;display:flex!important;align-items:center;justify-content:flex-start;gap:18px;min-height:106px;width:100%;padding:22px 0!important;margin:0;border:0;border-bottom:1px solid #35463829!important;border-radius:0;background:transparent!important;color:inherit;box-shadow:none;text-align:left}
+#indexOverlay .index-work .title{font-size:24px;line-height:1.3}
+#indexOverlay .index-work .index-work-copy{display:none}
+#indexOverlay #indexClose{position:absolute;top:29px;right:31px;width:36px;height:36px;font-size:27px;color:#353b34;border:1px solid #35463855;border-radius:50%;background:transparent}
+.index-backdrop-v161{position:fixed;inset:0;z-index:139;background:#0b14183d;border:0;padding:0;opacity:0;visibility:hidden;transition:opacity 260ms,visibility 420ms;cursor:pointer}
+body.v31-index-open .index-backdrop-v161{opacity:1;visibility:visible}
+#indexOverlay{z-index:140!important}
+#indexOverlay{padding:88px 32px 36px!important;align-items:stretch!important;box-sizing:border-box!important}
+#indexOverlay #indexList{width:100%!important;max-width:100%!important;margin:0!important;padding:0!important}
+#indexOverlay .index-heading{width:100%!important;margin:0!important}
+#indexOverlay #indexList .index-work{display:grid!important;grid-template-columns:24px minmax(0,1fr) 16px!important;grid-template-rows:auto auto!important;gap:8px 14px!important;padding:22px!important;color:#e6e3d4!important;background:#17231b!important;border-radius:10px!important;box-sizing:border-box!important}
+#indexOverlay #indexList .index-work .title{white-space:nowrap!important}
+@media(prefers-reduced-motion:reduce){#indexOverlay,.index-backdrop-v161{transition:none}}

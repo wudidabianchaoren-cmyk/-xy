@@ -1,0 +1,8 @@
+import fs from 'node:fs/promises';
+const p='src/odyssey-scene.ts';let s=await fs.readFile(p,'utf8');
+s=s.replace("const textures=new Set<THREE.Texture>();scene.traverse(o=>", "const textures=new Set<THREE.Texture>();scene.traverseVisible(o=>");
+s=s.replace("const nativeWorldV118=await loadNativeWorldV118(scene,ships,visual.prepareMaterial);await yieldWork();", "const nativeWorldV118=await loadNativeWorldV118(scene,ships,visual.prepareMaterial);await yieldWork();\n  const clickBounds=ships.map(ship=>new THREE.Box3().setFromObject(ship.root));");
+s=s.replace("if(pick.intersectObjects(ships.map(s=>s.root),true).length)","if(ships.some((_s,i)=>pick.ray.intersectsBox(clickBounds[i])))");
+s=s.replace('reviewGiant:()=>{','reviewTreeBase:()=>{controls.resetInteraction();manualUntil=Infinity;const p=nativeWorldV118.treeBase;camera.position.copy(p).add(new THREE.Vector3(4,2.2,8));controls.target.copy(p).add(new THREE.Vector3(0,1,0));controls.update();},\n    reviewCaptain:()=>{controls.resetInteraction();manualUntil=Infinity;const p=nativeWorldV118.captainHead;camera.position.copy(p).add(new THREE.Vector3(2.2,.5,2.2));controls.target.copy(p);controls.update();},\n    reviewShore:()=>{controls.resetInteraction();manualUntil=Infinity;camera.position.set(-190,12,-53);controls.target.set(-157,12,-108);controls.update();},\n    reviewGiant:()=>{');
+await fs.writeFile(p,s);
+const a='src/odyssey-atmosphere-v118.ts';let air=await fs.readFile(a,'utf8');air=air.replace('float luminance=dot(color,vec3(.2126,.7152,.0722));','color=mix(color,image.rgb*occlusion,nearLand*.80);\n      float luminance=dot(color,vec3(.2126,.7152,.0722));');await fs.writeFile(a,air);

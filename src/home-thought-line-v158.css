@@ -1,0 +1,7 @@
+.thought-line-v158-host{width:360px;max-width:78vw;margin:0 auto;min-height:158px;text-align:left;font-family:Arial,Helvetica,sans-serif;letter-spacing:.015em;line-height:1.2;text-shadow:none}
+.thought-line-v158-host .thought-line{display:inline-flex;max-width:100%;margin:0;padding:0;overflow:visible;position:relative;min-height:0;letter-spacing:0;text-shadow:none}
+.thought-line-v158-host .thought-line__head:focus-visible{outline:1px solid #d9ba7f;outline-offset:5px}
+#countdownPrelude .opening-progress{bottom:3.5%;left:50%;right:auto;width:420px;max-width:86vw;transform:translateX(-50%);padding:0}
+#countdownPrelude .opening-progress-meta,#countdownPrelude .opening-progress-track,#countdownPrelude .opening-progress-footer{display:none!important}
+#countdownPrelude .countdown-video-slot,#countdownPrelude .countdown-mark{display:none!important}
+#countdownPrelude{background:#000}

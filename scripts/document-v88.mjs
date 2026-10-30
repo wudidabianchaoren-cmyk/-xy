@@ -1,0 +1,7 @@
+import fs from'node:fs/promises';
+const brief=await fs.readFile('CURRENT-V32-88-RESUME.md','utf8');
+for(const p of['AGENTS.md','../AGENTS.md']){const old=await fs.readFile(p,'utf8');await fs.writeFile(p,brief+'\n\n以下为历史，不覆盖V32.88。\n\n'+old);}
+const names=['home-close-first','home-handoff','home-tail','home-live','after-journey-glass-01','after-journey-glass-02','rural-return-film','rural-return-glass-01','rural-return-glass-02','camera-burr-removed-1920','workFlow-review','prompt-research-review','image-atlas-review','hobbyPage-review','personalPage-review','lifePurpose-review','portfolioEpilogue-review'];
+await fs.writeFile('.verify/v32-88/visual-review.html','<!doctype html><meta charset="utf-8"><title>V32.88实际桌面画面</title><style>body{background:#111;color:#eee;font:14px sans-serif;margin:30px}img{display:block;width:100%;height:auto}figure{margin:30px 0}figcaption{margin:12px 0;color:#cdb980}</style><h1>V32.88 · 实际桌面画面</h1><p>功能检查通过不替代用户视觉评审。</p><figure><figcaption>实际 Blender Cycles 2560×1440 · 192 samples</figcaption><img src="../../blender/home-intro-v32-88/clock-close-cycles.png"></figure>'+names.map(n=>'<figure><figcaption>实际网页 · '+n+'</figcaption><img src="./'+n+'.png" loading="lazy"></figure>').join(''));
+await fs.copyFile('.verify/v32-87/reference-gallery-observation.json','.verify/v32-88/reference-gallery-observation.json');
+console.log('V32.88 current state and visual review documented');

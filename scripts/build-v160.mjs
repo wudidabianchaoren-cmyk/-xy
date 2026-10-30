@@ -1,0 +1,7 @@
+import{createRequire}from'node:module';import fs from'node:fs/promises';
+const cache='E:/Brain-Universe-assets/V32-61/toolchain/node_modules',video='E:/Brain-Universe-assets/V32-72/video-tools/node_modules';const{build}=createRequire(cache+'/esbuild/package.json')('esbuild');
+const common={bundle:true,format:'esm',target:'es2022',minify:true,sourcemap:true,jsx:'automatic',nodePaths:[cache,video,'E:/Brain-Universe-assets/V32-84/react-motion/node_modules','E:/Brain-Universe-assets/V32-84/geometry-acceleration/node_modules']};
+await build({...common,entryPoints:['src/exhibition-dock.tsx'],outfile:'scene-dist/dock/exhibition-dock-v160.js',alias:{react:video+'/react','react-dom':video+'/react-dom'}});
+await build({...common,entryPoints:['src/directory-v141/app-v144.tsx'],outfile:'scene-dist/directory-v144/app.js',loader:{'.ttf':'file'}});
+await build({...common,entryPoints:['src/home-thought-line-v158.jsx'],outfile:'scene-dist/home-thought-line-v160.js',nodePaths:[...common.nodePaths,'E:/codex/toolchains/thought-line-v158/node_modules'],alias:{react:video+'/react','react-dom':video+'/react-dom'}});
+await fs.writeFile('.verify/v32-160/build.json',JSON.stringify({at:new Date().toISOString(),scope:['collage','room'],filmChanged:false}));console.log('V160 local bundles built.');

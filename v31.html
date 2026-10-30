@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071014">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080a0b'/%3E%3Cpath d='M7 24V8l9 11L25 8v16' fill='none' stroke='%23c6ad80' stroke-width='2'/%3E%3C/svg%3E">
+  <script src="./audio-focus-v141.js?v=32.172"></script><script>
+    // An old chapter hash or browser scroll restoration must never bypass the entry sequence.
+    history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    window.scrollTo(0, 0);
+  </script>
+  <title>造境手记 · 吴翔宇作品集</title>
+  <link rel="preload" as="image" href="./assets/journey/previews/journey-mountain-valley.webp">
+  <link rel="preload" as="image" href="./assets/home/home-live-poster-v32-84.png">
+  <link rel="preload" as="image" href="./blender/reference-architecture-v23/courtyard-clay-cycles.png">
+  <link rel="preload" as="image" href="./assets/journey/previews/cloud-stairway-02.webp">
+  <link rel="stylesheet" href="./assets/vendor/lenis-1.3.23.css">
+  <link rel="stylesheet" href="./v23.css">
+  <link rel="stylesheet" href="./v31-motion.css">
+  <link rel="stylesheet" href="./v31-final.css?v=32.172">
+  <link rel="stylesheet" href="./scene-dist/scenes.css?v=32.172">
+  <link rel="stylesheet" href="./v32-73.css?v=32.172">
+  <link rel="stylesheet" href="./v32-74.css?v=32.172">
+  <link rel="stylesheet" href="./v32-75.css?v=32.172">
+  <script type="importmap">
+    {"imports":{"three":"./c4d/hybrid-study/three.module.js"}}
+  </script>
+<link rel="stylesheet" href="./v32-79.css">  <link rel="stylesheet" href="./v32-80.css?v=32.172">
+  <link rel="stylesheet" href="./vendor/threeui/src/shaders/threeui.css">
+  <link rel="stylesheet" href="./v32-82.css?v=32.172">
+  <link rel="stylesheet" href="./v32-83.css?v=32.172">
+  <link rel="stylesheet" href="./v32-84.css?v=32.172">
+<link rel="stylesheet" href="./scene-dist/dock/archive-effects.css?v=32.172">
+<link rel="stylesheet" href="./v32-85.css?v=32.172">
+<link rel="stylesheet" href="./v32-86.css?v=32.172">
+<link rel="stylesheet" href="./v32-87.css?v=32.172">
+<link rel="stylesheet" href="./v32-88.css?v=32.172">
+<link rel="stylesheet" href="./v32-90.css?v=32.172">
+<link rel="stylesheet" href="./v32-91.css?v=32.172"><link rel="stylesheet" href="./v32-92.css?v=32.172">  <link rel="stylesheet" href="./v32-93.css?v=32.172">
+<!-- DIRECTORY V127 STYLE -->
+<link rel="stylesheet" href="./scene-dist/directory-v144/app.css?v=32.172">
+<!-- /DIRECTORY V127 STYLE -->
+  <link rel="stylesheet" href="./v32-121.css?v=32.172">
+<link rel="stylesheet" href="./site-refinements-v129.css?v=32.172"><link rel="stylesheet" href="./home-refinements-v131.css?v=32.172"><script src="./startup-v144.js?v=32.172"></script><link rel="stylesheet" href="./finish-v138.css?v=32.172"><link rel="stylesheet" href="./personal-v140.css?v=32.172"><link rel="stylesheet" href="./refinements-v141.css?v=32.172"><link rel="stylesheet" href="./refinements-v142.css?v=32.172"><link rel="stylesheet" href="./refinements-v143.css?v=32.172"><script src="./home-audio-policy-v143.js?v=32.172"></script><link rel="stylesheet" href="./refinements-v144.css?v=32.172"><link rel="stylesheet" href="./home-intro-v153.css?v=32.172"><link rel="stylesheet" href="./scene-dist/techtext-v153.css?v=32.172"><link rel="stylesheet" href="./personal-v154.css?v=32.172"><link rel="stylesheet" href="./home-opening-v155.css?v=32.172"><link rel="stylesheet" href="./scene-dist/home-thought-line-v160.css?v=32.172"><link rel="stylesheet" href="./refinements-v159.css?v=32.172"><link rel="stylesheet" href="./refinements-v160.css?v=32.172"><link rel="preload" as="image" href="./assets/native-v167/room.jpg?v=32.172"><link rel="stylesheet" href="./refinements-v161.css?v=32.172"><link rel="stylesheet" href="./refinements-v167.css?v=32.172"></head>
+<body data-skip-entry-gate="true" data-universe-renderer="off" data-home-architecture-only="true" class="home-architecture-only">
+  <aside class="portfolio-progress" id="portfolioProgress" aria-label="作品集阅读进度">
+    <span>READ</span>
+    <i><b id="portfolioProgressBar"></b></i>
+    <span id="portfolioProgressPercent">00%</span>
+  </aside>
+  <section class="countdown-prelude" id="countdownPrelude" aria-label="开场动画">
+    <div class="countdown-video-slot">Video slot / pending</div>
+    <div class="countdown-number" id="countdownNumber"></div>
+    <div class="countdown-mark">Mind Universe / pre-entry</div>
+  </section>
+
+  <div class="loader" id="loader" aria-live="polite">
+    <div class="loader-inner">
+      <b>正在建立视觉坐标</b>
+      <span>Reading surface / measuring gravitational response</span>
+      <div class="loader-track"><i id="loaderLine"></i></div>
+    </div>
+  </div>
+
+  <section class="entry-gate" id="entryGate" aria-label="进入造境手记">
+    <div class="entry-field" aria-hidden="true">
+      <i></i><i></i><i></i><i></i>
+    </div>
+    <div class="entry-code">
+      <span>吴翔宇 · 影像与三维叙事</span>
+      <span>作品 · 制作 · 持续记录</span>
+    </div>
+    <div class="entry-live-field" aria-hidden="true">
+      <span id="entryClock">00:00:00</span>
+      <span id="entryFlux">FLUX 000</span>
+      <span id="entryCoord">X 00.00 / Y 00.00</span>
+    </div>
+    <button class="entry-title" id="entryButton" type="button">
+      <span class="entry-title-line">
+        <i>造</i><i>境</i>
+      </span>
+      <span class="entry-title-line is-offset">
+        <i>手</i><i>记</i>
+      </span>
+      <small>进入影像与造境 <b>↘</b></small>
+    </button>
+    <div class="entry-axis" aria-hidden="true"><i></i><span>00:00:23</span></div>
+  </section>
+
+  <header class="topbar">
+    <button class="brand" id="homeButton" type="button" aria-label="返回造境手记起点">
+      <strong>造境手记</strong>
+      <small>吴翔宇 / AIGC 影像与三维叙事</small>
+    </button>
+    <button class="index-trigger" id="indexTrigger" type="button">展览目录</button>
+  </header>
+
+  <aside class="experience-console" id="experienceConsole" aria-label="声音与亮度">
+    <div class="elastic-control experience-audio" id="experienceAudio">
+      <button class="elastic-end elastic-action" id="musicToggle" type="button" aria-label="暂停背景音乐" title="播放或暂停背景音乐">
+        <i data-lucide="volume-1" aria-hidden="true"></i>
+      </button>
+      <div class="elastic-slider" id="volumeSlider" role="slider" tabindex="0" aria-label="背景音乐音量" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20">
+        <span class="elastic-track" aria-hidden="true"><i></i></span>
+      </div>
+      <span class="elastic-end elastic-limit" aria-hidden="true"><i data-lucide="volume-2"></i></span>
+      <output id="musicVolumeValue" for="volumeSlider">20</output>
+      <audio id="portfolioAudio" preload="auto" loop data-default-track="./assets/audio/wildflowers.mp3"></audio>
+    </div>
+    <div class="elastic-control experience-brightness">
+      <span class="elastic-end elastic-limit" aria-hidden="true"><i data-lucide="sun-dim"></i></span>
+      <div class="elastic-slider" id="brightnessSlider" role="slider" tabindex="0" aria-label="页面亮度" aria-valuemin="60" aria-valuemax="115" aria-valuenow="100">
+        <span class="elastic-track" aria-hidden="true"><i></i></span>
+      </div>
+      <span class="elastic-end elastic-limit" aria-hidden="true"><i data-lucide="sun"></i></span>
+      <output id="brightnessValue" for="brightnessSlider">100</output>
+    </div>
+  </aside>
+  <div class="brightness-veil" id="brightnessVeil" aria-hidden="true"></div>
+
+  <main>
+    <section class="voyage" id="voyage">
+      <div class="stage" id="stage">
+        <div class="home-architecture home-rendered-architecture" role="group" tabindex="0" aria-label="Architectural animation playback">
+          <video class="home-architecture-video" id="homeArchitectureVideo" muted playsinline preload="none" aria-hidden="true">
+          </video>
+          <div class="home-architecture-depth"></div>
+        </div>
+        <div class="spatial-grid" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="stage-scan-system" aria-hidden="true">
+          <i class="scan-main scan-main-x"></i>
+          <i class="scan-main scan-main-y"></i>
+          <i class="scan-branch scan-branch-x scan-branch-x-a"></i>
+          <i class="scan-branch scan-branch-x scan-branch-x-b"></i>
+          <i class="scan-branch scan-branch-y scan-branch-y-a"></i>
+          <i class="scan-branch scan-branch-y scan-branch-y-b"></i>
+        </div>
+        <div class="bg-plane bg-base" id="bgBase"><img src="./assets/journey/journey-mountain-valley.png" alt=""></div>
+        <div class="bg-plane bg-horizon" id="bgHorizon"><img src="./assets/journey/journey-mountain-valley.png" alt=""></div>
+        <div class="bg-plane bg-matter" id="bgMatter"><img src="./assets/journey/journey-mountain-valley.png" alt=""></div>
+        <div class="edge-depth"></div>
+        <canvas id="universe" aria-label="背景视觉场" aria-hidden="true"></canvas>
+
+        <div class="hero" id="hero">
+          <div class="hero-kicker">Mind universe / digital exhibition</div>
+          <div class="hero-index" aria-hidden="true">
+            <b>31</b>
+            <span>Current field<br>living digital archive</span>
+          </div>
+          <h1 aria-label="造境手记">
+            <span class="hero-line">
+              <span class="hero-char"><i>造</i></span>
+              <span class="hero-char"><i>境</i></span>
+            </span>
+            <span class="hero-line hero-line-offset">
+              <span class="hero-char"><i>手</i></span>
+              <span class="hero-char"><i>记</i></span>
+            </span>
+          </h1>
+          <div class="hero-coordinate">
+            <span>Archive 23</span>
+            <i></i>
+            <span>Exhibition system / ongoing</span>
+          </div>
+          <p class="hero-copy">
+            <span>真实作品图像已经接入这片脑内空间。</span>
+            <span>宇宙仍是入口，影像章节成为新的记忆坐标。</span>
+          </p>
+        </div>
+
+        <div class="object-prompt" id="objectPrompt">Approach / disturb matter</div>
+        <div class="galaxy-field" id="galaxyField" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <div class="meteor-field" id="meteorField" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </div>
+        <div class="ambient-status">
+          <span id="phaseCode">Form 01</span>
+          <i></i>
+          <span id="phaseStatus">Condensed matter / resting</span>
+        </div>
+        <button class="wxy-signature" id="wxySignature" type="button" aria-label="吴翔宇签名">
+          <span>wxy</span>
+        </button>
+        <div class="logo-loop-field" id="logoLoopField" aria-hidden="true"></div>
+
+        <div class="work-panel" id="workPanel" aria-live="polite">
+          <div class="work-sequence" id="workSequence">Chapter 01 / 05</div>
+          <h2 id="workTitle">作品</h2>
+          <div class="work-meta" id="workMeta">Works / Moving Image Archive</div>
+          <p class="work-summary" id="workSummary">影像作品被收进一个可继续进入的深空档案。</p>
+          <button class="enter-work" id="enterWork" type="button">
+            进入章节 <span>→</span>
+          </button>
+        </div>
+
+        <nav class="work-nav" id="workNav" aria-label="展览章节"></nav>
+        <div class="shockwave" id="shockwave"></div>
+      </div>
+    </section>
+
+    <section class="sand-narrative" id="sandNarrative" aria-labelledby="sandNarrativeTitle">
+      <div class="sand-narrative-sticky">
+        <header class="sand-narrative-masthead">
+          <span>10 / GENERATIVE FIELD</span>
+          <span>影像，在记忆中成形。</span>
+          <span>吴翔宇 / 2026</span>
+        </header>
+        <canvas class="sand-narrative-canvas" id="sandNarrativeCanvas" aria-hidden="true"></canvas>
+        <div class="sand-narrative-copy" aria-live="polite">
+          <p class="sand-narrative-kicker">IMAGE MAKING / 07 STUDIES</p>
+          <article class="sand-story-copy is-active" data-sand-copy="0">
+            <span>01 / CRAFT</span>
+            <h2 id="sandNarrativeTitle">Matter remembers<br>every strike.</h2>
+            <p>An image takes shape through choices: building, testing and refining until form carries an idea.</p>
+          </article>
+          <article class="sand-story-copy" data-sand-copy="1">
+            <span>02 / LENS</span>
+            <h2>Distance collapses<br>through the lens.</h2>
+            <p>Framing turns observation into a point of view. Light, distance and composition guide each image I make.</p>
+          </article>
+          <article class="sand-story-copy" data-sand-copy="2">
+            <span>03 / FLIGHT</span>
+            <h2>The body answers<br>what passes overhead.</h2>
+            <p>Imagined worlds become believable when movement has direction, scale and weight.</p>
+          </article>
+          <article class="sand-story-copy" data-sand-copy="3">
+            <span>04 / SCORE</span>
+            <h2>Gesture turns noise<br>into order.</h2>
+            <p>Editing and sound give images their rhythm: a pause, a movement, and the right moment to cut.</p>
+          </article>
+          <article class="sand-story-copy" data-sand-copy="4">
+            <span>05 / COMBAT</span>
+            <h2>Every strike<br>shifts the balance.</h2>
+            <p>Stories take shape through tension and release. Each gesture should move the emotion forward.</p>
+          </article>
+          <article class="sand-story-copy" data-sand-copy="5">
+            <span>06 / TERRAIN</span>
+            <h2>Terrain rises.<br>The camera circles.</h2>
+            <p>I build places for stories to inhabit, from the first simple forms to materials, light and atmosphere.</p>
+          </article>
+          <article class="sand-story-copy" data-sand-copy="6">
+            <span>07 / RAIN</span>
+            <h2>Rain signs<br>what remained unsaid.</h2>
+            <p>Rain, reflections and small traces of motion turn a setting into a world that feels alive.</p>
+          </article>
+        </div>
+        <div class="sand-narrative-progress" aria-hidden="true">
+          <span id="sandNarrativeIndex">01</span>
+          <i><b id="sandNarrativeProgress"></b></i>
+          <span>07</span>
+        </div>
+        <div class="sand-narrative-caption" aria-hidden="true">
+          <span>SCROLL TO PERFORM</span><i></i><span>PARTICLE FIGURE / MOTION SAMPLE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-flow scroll-collage" id="workFlow" data-presentation="scroll-collage" aria-label="图像、观察与记忆">
+      <div class="scroll-collage-stage">
+        <div class="scroll-collage-copy"><h2 lang="en">Images give ideas<br>their first shape.</h2><h2 lang="en">Observe the connections.<br>Give imagination a path.</h2><h2 lang="en">Let images carry memory<br>back into everyday life.</h2></div>
+        <div class="scroll-collage-images" aria-hidden="true"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-01.webp" alt="" style="left:-4%;top:19%;width:17%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-02.webp" alt="" style="left:42%;top:14%;width:7.5%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-03.webp" alt="" style="left:73%;top:10%;width:10.5%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-04.webp" alt="" style="left:88%;top:48%;width:17%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-05.webp" alt="" style="left:13%;top:58%;width:11.5%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-06.webp" alt="" style="left:43%;top:87%;width:11.5%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-07.webp" alt="" style="left:67%;top:80%;width:18%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-08.webp" alt="" style="left:15%;top:4%;width:15%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-09.webp" alt="" style="left:49%;top:-2%;width:11%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-10.webp" alt="" style="left:15%;top:87%;width:6%;height:auto;aspect-ratio:16/9;object-fit:cover"><img loading="lazy" decoding="async" src="./assets/atmosphere-v172/atmosphere-11.webp" alt="" style="left:1%;top:54%;width:12%;height:auto;aspect-ratio:16/9;object-fit:cover"></div>
+      </div>
+    </section>
+
+    <section class="image-chapters" id="imageChapters" aria-label="作品影像章节">
+
+
+
+
+
+
+      <article class="image-chapter is-palace is-wide">
+        <figure><img src="./assets/journey/cloud-stairway-02.png" alt="金色宫殿中红衣与黑衣角色对峙"></figure>
+        <div>
+          <small>Image chapter 04 / Oriental fantasy</small>
+          <h2>宫殿双强</h2>
+          <p>中轴、王座、红毯和双人对峙形成明确的视觉中心。V23 保留宇宙结构，同时让作品图像真正成为主角。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-cliff is-reverse">
+        <figure><img src="./assets/journey/sky-palace-blue.png" alt="悬崖边两位仙侠人物在日落下相对站立"></figure>
+        <div>
+          <small>Image chapter 05 / Cliff encounter</small>
+          <h2>崖边相遇</h2>
+          <p>关系从宫殿转向天地。海雾、松枝和远处夕光让人物对峙获得更开阔的空间压力。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-rain">
+        <figure><img src="./assets/journey/bamboo-sun-path.png" alt="暴雨中的东方宫殿、湿地反光和红灯笼"></figure>
+        <div>
+          <small>Image chapter 06 / Wet classicism</small>
+          <h2>雨夜宫殿</h2>
+          <p>雨幕、蓝灰冷光、红灯笼和湿地反射构成色彩研究。它对应实验章节里的材质与运动样本。</p>
+        </div>
+      </article>
+
+      <article class="image-chapter is-bamboo is-reverse">
+        <figure><img src="./assets/journey/crane-cave-skull.jpg" alt="金色光线穿过密集竹林"></figure>
+        <div>
+          <small>Image chapter 07 / Bamboo material</small>
+          <h2>竹林材质</h2>
+          <p>竹子的竖向密度、前景虚化和金色光雾形成材质章节。它不抢走宇宙，只补充作品集的真实肌理。</p>
+        </div>
+      </article>
+
+
+
+      
+
+      
+
+
+    </section>
+
+<section class="hobby-page" id="hobbyPage" aria-labelledby="photoTitle" data-photography-only="true" data-lenis-prevent data-lenis-prevent-wheel>
+<button class="standalone-close" id="hobbyPageClose" type="button" aria-label="关闭个人爱好档案" title="返回关于">×</button>
+<div id="hobbyPhotographyMount"></div>
+</section>
+
+    <section class="personal-page" id="personalPage" aria-labelledby="personalTitle" data-lenis-prevent data-lenis-prevent-wheel>
+      <button class="standalone-close" id="personalPageClose" type="button" aria-label="关闭个人介绍" title="返回关于">×</button>
+      <figure class="personal-portrait">
+        <img src="./assets/wu-xiangyu-portrait.png" alt="吴翔宇，黑色上衣正面肖像" loading="lazy">
+        <figcaption><h2 id="personalTitle">吴翔宇</h2><span>WU XIANGYU / 视觉传达 · AIGC</span></figcaption>
+      </figure>
+      <div class="personal-text-scene" id="personalTextScene" aria-label="吴翔宇个人介绍与履历">
+        <div class="personal-introduction">
+          <h3>从视觉设想到影像落地</h3>
+          <p>视觉传达设计专业 · 本科四年级<br>求职方向：AIGC 视觉设计 / AIGC 影视制作</p>
+        </div>
+        <div class="personal-resume-grid">
+          <section class="personal-tools"><h4>设计与空间</h4><dl><div><dt>平面设计与编排</dt><dd>Adobe Photoshop<br>Adobe Illustrator<br>Adobe InDesign</dd></div><div><dt>三维建模与场景</dt><dd>Maxon Cinema 4D<br>Blender</dd></div></dl></section>
+          <section class="personal-ai"><h4>生成与交互</h4><dl><div><dt>图像 · 视觉定调与资产制作</dt><dd>Nano Banana、Midjourney</dd></div><div><dt>视频 · 镜头生成与连续性调整</dt><dd>Seedance、MiniMax 等视频工具</dd></div><div><dt>网页 · 交互展示与实现</dt><dd>使用 Codex 搭建个人网站，连接影像、三维场景与浏览体验。</dd></div></dl></section>
+          <section class="personal-experience"><h4>影像实践</h4><div class="personal-project"><h5>《后西游记》</h5><p>参与剧本拆解、视觉定调及图像与视频生成；制作内容涉及首集开篇镜头与第 1—10 集片尾影像。</p></div><div class="personal-project"><h5>《代码物理宇宙》</h5><p>将动作、镜头节奏与声音写入代码，制作程序驱动的影像，并整理从脚本到成片的过程。</p></div></section>
+          <section class="personal-method"><h4>我的制作过程</h4><p>先拆解故事与镜头，再确定色彩、光线和角色尺度；建立资产与分镜，反复检查生成画面的一致性，最后通过剪辑、声音与展示方式组织完整体验。</p></section>
+        </div>
+        <button id="personalHobbies" class="personal-hobbies" type="button" data-open-standalone="hobbyPage">我的个人爱好<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button><p class="personal-archive-note">造境手记 / 持续生长的个人档案</p>
+      </div>
+      <footer class="personal-contact"><span>联系 / CONTACT</span><a href="tel:18928492291">18928492291</a><a href="mailto:wuxiaoyu7105@163.com">wuxiaoyu7105@163.com</a></footer>
+    </section>
+    <section class="portfolio-epilogue" id="portfolioEpilogue" aria-labelledby="epilogueTitle">
+      <div class="epilogue-topline"><span>A NOTE / THANK YOU FOR VISITING</span><span>WU XIANGYU · 造境手记</span></div>
+      <div class="epilogue-orbit" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+      <div class="epilogue-main"><small>写在最后</small><h2 id="epilogueTitle">跟上变化，<br>也留住自己的感受。</h2><p class="epilogue-lead">我想试着学会这些新工具，<br>也想把喜欢的画面和故事，认真做出来。</p>
+        <div class="epilogue-body"><p>做这个作品集，一开始是因为不想错过 AI 带来的变化。我想知道，原本只停在脑海里的画面，能不能借助新的工具，变成一段影像、一个可以走近的空间。</p><p>做着做着，我也发现，工具能帮我试得更快，但许多细节还是要慢慢看、反复改。一个人的姿态、一束光照到哪里、一张图片停留多久，都会影响看的人有什么感受。这里留下的，既有我喜欢的想象，也有还在学习的痕迹。</p><p>我希望自己能跟上这个时代，也不丢掉对日常生活的好奇。继续读书、观察，学着把一个小想法做完整。如果你在这里停了一会儿，看见了一个喜欢的画面，或者想起了一件自己的小事，我会很开心。谢谢你来看。</p></div>
+      </div>
+      <footer class="epilogue-footer"><span>THANK YOU. SEE YOU IN THE NEXT IDEA.</span><a href="#voyage" data-epilogue-return>回到宇宙的入口 ↗</a></footer>
+    </section>
+  </main>
+
+  <div class="progress"><i id="progressLine"></i></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-label" id="cursorLabel">Disturb</div>
+  <div class="background-ripple" id="backgroundRipple"></div>
+  <div class="image-cut" id="imageCut" aria-hidden="true"><span>Memory cut</span></div>
+  <div class="authority-field" id="authorityField" aria-hidden="true">
+    <i></i>
+    <span>Gravity lock</span>
+  </div>
+
+  <section class="index-overlay" id="indexOverlay" role="dialog" aria-modal="true" aria-labelledby="indexTitle">
+    <button class="overlay-close" id="indexClose" type="button" aria-label="关闭展览目录">×</button>
+    <div class="index-heading">
+      <small>Exhibition chapters / personal archive</small>
+      <h2 id="indexTitle">展览目录</h2>
+    </div>
+    <div class="index-list" id="indexList"></div>
+</section>
+
+  <section class="memory-overlay memory-composition" id="memoryOverlay" role="dialog" aria-modal="true" aria-labelledby="memoryTitle">
+    <button class="overlay-close" id="memoryClose" type="button" aria-label="关闭展览章节">×</button>
+    <div class="memory-visual">
+      <figure class="memory-image">
+        <img src="./assets/journey/journey-mountain-valley.png" alt="">
+        <div class="memory-signal" id="memorySignal">Memory signal 01</div>
+        <div class="memory-frame-code" id="memoryFrameCode">Master frame / 01</div>
+        <div class="memory-scan-field" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </div>
+        <i class="memory-scan"></i>
+      </figure>
+      <div class="memory-title-rail">
+        <small id="memoryKicker">AI Short Film / Distant Homeland</small>
+        <h2 id="memoryTitle">回不去的乡</h2>
+        <div class="memory-english" id="memoryEnglish">Distant Homeland</div>
+      </div>
+      <div class="memory-fragments" id="memoryFragments" aria-label="作品影像片段">
+        <figure><img src="./assets/journey/journey-mountain-valley.png" alt=""><figcaption>Fragment / 01</figcaption></figure>
+        <figure><img src="./assets/journey/journey-mountain-valley.png" alt=""><figcaption>Fragment / 02</figcaption></figure>
+        <figure><img src="./assets/journey/journey-mountain-valley.png" alt=""><figcaption>Fragment / 03</figcaption></figure>
+      </div>
+      <div class="memory-map" id="memoryMap" aria-label="章节内部坐标"></div>
+    </div>
+    <div class="memory-body" data-lenis-prevent>
+      <div class="memory-section-heading">
+        <span id="memoryOrdinal">01</span>
+        <small>Archive chamber</small>
+      </div>
+      <p class="memory-description memory-lead" id="memoryDescription"></p>
+      <div class="memory-sample-strip" id="memorySampleStrip" aria-label="章节采样信号"></div>
+      <div class="chapter-ledger" id="chapterLedger" aria-label="章节内容"></div>
+      <dl class="memory-facts">
+        <div><dt>Current focus</dt><dd id="memoryRole"></dd></div>
+        <div><dt>Archive structure</dt><dd id="memoryGoal"></dd></div>
+        <div><dt>Methods</dt><dd id="memoryTools"></dd></div>
+        <div><dt>Contents</dt><dd id="memoryOutput"></dd></div>
+        <div><dt>Ongoing</dt><dd id="memoryReflection"></dd></div>
+        <div><dt>Open edge</dt><dd id="memoryEdge"></dd></div>
+      </dl>
+      <div class="memory-process-axis" id="memoryProcessAxis" aria-label="创作过程">
+        <span><b>01</b>Collect</span>
+        <span><b>02</b>Distill</span>
+        <span><b>03</b>Compose</span>
+        <span><b>04</b>Remain open</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="works-orbit-archive" id="worksOrbitArchive" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="worksOrbitTitle">
+    <canvas class="works-ascii-field" id="worksAsciiField" aria-hidden="true"></canvas>
+    <div class="works-webgl-field" id="worksWebglField" aria-hidden="true"></div>
+    <div class="works-orbit-exit-fold" aria-hidden="true"><i></i><i></i><span></span></div>
+    <div class="works-orbit-scene-title" id="worksOrbitSceneTitle" aria-hidden="true"><small>作品选集 · 2026</small><span>作品</span><em>影像 · 空间 · 想象</em></div>
+    <header class="works-orbit-header">
+      <button class="works-orbit-close" id="worksOrbitClose" type="button" aria-label="关闭作品档案"><span aria-hidden="true">←</span> 造境手记</button>
+      <div><span>吴翔宇</span><span>作品选集 · 2026</span></div>
+      <button class="works-orbit-index-trigger" id="worksOrbitIndexTrigger" type="button" aria-expanded="false" aria-controls="worksOrbitIndex"><span>作品目录</span><b id="worksOrbitCounter">01 / 05</b></button>
+    </header>
+    <div class="works-orbit-info works-orbit-info-left" aria-live="polite">
+      <span id="worksOrbitOrdinal">01</span>
+      <h2 id="worksOrbitTitle">后西游记</h2>
+      <small id="worksOrbitEnglish">人工智能长剧</small><p id="worksOrbitDescription" class="works-orbit-description"></p>
+    </div>
+    <div class="works-orbit-title-list" id="worksOrbitTitleList" aria-hidden="true"></div>
+    <div class="works-orbit-info works-orbit-info-right">
+      <span id="worksOrbitType">神话叙事</span>
+      <strong id="worksOrbitYear">2026</strong>
+      <small id="worksOrbitMedium">长剧 · 场景与影像构建</small>
+    </div>
+<aside class="works-orbit-info-panel" id="worksOrbitInfoPanel" aria-hidden="true" aria-label="当前作品资料">
+      <div class="works-orbit-info-panel-head"><span id="worksOrbitInfoOrdinal">作品资料 / 01</span><button id="worksOrbitInfoClose" type="button" aria-label="关闭作品信息">×</button></div>
+      <h3 id="worksOrbitInfoTitle">后西游记</h3>
+      <p id="worksOrbitInfoEnglish">人工智能长剧</p>
+      <dl>
+        <div><dt>类型</dt><dd id="worksOrbitInfoType">神话叙事</dd></div>
+        <div><dt>创作形式</dt><dd id="worksOrbitInfoMedium">长剧 · 场景与影像构建</dd></div>
+        <div><dt>年份</dt><dd id="worksOrbitInfoYear">2026</dd></div>
+      </dl>
+      <div class="works-orbit-info-controls"><span>滚动</span><span>拖动</span><span>悬停</span></div>
+    </aside>
+    <div class="works-orbit-intro-status" id="worksOrbitIntroStatus">作品入场</div>
+    <div class="works-orbit-guide"><span>滚动 / 拖动</span><i></i><span>切换作品</span></div>
+    <aside class="works-orbit-index" id="worksOrbitIndex" aria-hidden="true">
+      <div class="works-orbit-index-heading"><span>作品目录</span><span>五项作品</span></div>
+      <nav id="worksOrbitIndexList" aria-label="完整作品索引"></nav>
+    </aside>
+  </section>
+
+  <div class="fallback" id="fallback">
+    动效库没有成功加载。请保持网络可用并刷新页面，以查看完整的作品集交互。
+  </div>
+
+  <script src="./assets/vendor/three-0.160.0.min.js"></script>
+  <script src="./assets/vendor/gsap-3.13.0.min.js"></script>
+  <script src="./assets/vendor/ScrollTrigger-3.13.0.min.js"></script>
+  <script src="./assets/vendor/lenis-1.3.23.min.js"></script>
+  <script src="./assets/vendor/lucide-0.468.0.min.js"></script>
+  <script src="./v23-v144.js?v=32.172"></script>
+  <script src="./v31-motion-v144.js?v=32.172"></script>
+  <script src="./v31-personal.js?v=32.172"></script>
+  
+  <script src="./v31-standalone-v140.js?v=32.172"></script>
+  
+  <script src="./v31-controls-v143.js?v=31.46"></script>
+  <script src="./v31-works-ring-v144.js?v=32.172"></script>
+  <script type="module" src="./scene-dist/scene-loader-v146.js?v=32.172"></script>
+  <script type="module" src="./scene-dist/dock/exhibition-dock-v160.js?v=32.172"></script>
+<script type="module" src="./scene-dist/dock/home-designed-intro-v160.js?v=32.172"></script>
+<script src="./home-creation-launch-v141.js?v=32.172"></script>
+<!-- DIRECTORY V127 BOOT -->
+<script async type="module" src="./scene-dist/directory-v144/app.js?v=32.172"></script>
+<!-- /DIRECTORY V127 BOOT -->
+<script defer src="./site-refinements-v129.js?v=32.172"></script><script src="./identity-v144.js?v=32.172"></script><script src="./navigation-v152.js?v=32.172"></script><script type="module" src="./scene-dist/techtext-v153.js?v=32.172"></script><script type="module" src="./scene-dist/home-thought-line-v160.js?v=32.172"></script><script src="./refinements-v161.js?v=32.172"></script><script type="module" src="./scene-dist/hobby-drift-v167.js?v=32.172"></script></body>
+</html>
+
+

@@ -1,0 +1,47 @@
+/* V129: local reading/layout repairs; no new palette or 3D treatment. */
+body #indexOverlay{overflow-x:hidden}
+body #indexList>*{min-width:0}
+.shelf-catalog{gap:12px;font-size:12px;flex-wrap:wrap}
+.shelf-catalog a,.shelf-catalog button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 6px}
+body:has(#bookStage)>header>a{display:inline-flex;align-items:center;min-height:44px}
+#readerControls button,#readerControls input,.reader-bar button{min-height:44px}
+.reader-bar button{font-size:12px}
+.reader-bar{min-height:68px}
+#pageReader .full-page{height:calc(100% - 68px)}
+.v129-magnet-active{will-change:translate}
+.project-return-arrow:hover{transform:none}
+@media(max-width:850px){
+  .project-about{grid-template-columns:minmax(0,1fr);gap:34px;padding:88px 8vw 72px}
+  .project-about .about-label>p{margin-top:20px}
+  .project-about .about-copy{min-width:0}
+  .project-about .about-copy>p{max-width:none}
+}
+@media(max-width:700px){
+  .code-film .film-heading{top:86px;left:8vw;right:6vw;gap:16px}
+  .code-film .film-name{flex:1;min-width:0}
+  .code-film .film-heading h1,.code-film .film-heading h2{overflow-wrap:anywhere}
+  .code-film .film-number{flex:none}
+  .code-film .film-number{font-size:62px}
+  .code-film .film-heading h1,.code-film .film-heading h2{font-size:20px}
+  .code-film .project-film-video,.code-film .film-poster{top:180px;height:calc(100% - 210px)}
+  .shelf-catalog{font-size:12px;gap:4px 8px;bottom:0}
+  .shelf-catalog a,.shelf-catalog button{padding-inline:4px}
+  .reader-bar{display:grid;grid-template-columns:1fr 1fr 44px;gap:4px;padding:8px}
+  #readerPageLabel{grid-column:1/-1;grid-row:1;text-align:center;font-size:11px}
+  #readerPrevious,#readerNext,#readerClose{grid-row:2;font-size:12px;padding:6px 3px}
+  #readerClose{font-size:0}
+  #readerClose::after{content:'×';font-size:22px}
+  #pageReader .full-page{height:calc(100% - 88px)}
+  #readerControls{padding-inline:0}
+  .code-gallery .glass-room{--mobile-wall-height:132px}
+  .code-gallery{height:clamp(360px,110vw,500px);min-height:0}
+  .code-gallery .glass-frame{height:var(--mobile-wall-height);top:calc(50% - var(--mobile-wall-height)/2)}
+  .code-gallery .glass-reflection{height:calc(var(--mobile-wall-height)/2)}
+  .code-gallery .reflection-top{top:calc(50% - var(--mobile-wall-height))}
+  .code-gallery .reflection-bottom{top:calc(50% + var(--mobile-wall-height)/2)}
+  .code-gallery .glass-reflection .glass-artwork{height:200%}
+  .code-gallery .reflection-top .glass-artwork{top:-100%}
+}
+@media(prefers-reduced-motion:reduce){
+  .v129-magnet-active{translate:none!important;will-change:auto}
+}

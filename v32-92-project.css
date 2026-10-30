@@ -1,0 +1,30 @@
+﻿/* Film presentation preserves natural aspect and the whole source image. */
+.project-film{background:#000}
+.project-film-video,.project-film .film-poster{inset:4vh 2.5vw;width:95vw;height:92vh;object-fit:contain;object-position:center;background:#000}
+.project-about{background:#e9e2d5}
+.about-label .eyebrow{font:500 15px/1.5 'Microsoft YaHei',sans-serif;letter-spacing:.1em;color:#8b754e}
+.about-label>p{font:600 25px/1.5 'STSong','SimSun',serif;letter-spacing:.06em}
+.about-label>p span{font:14px/1.6 'Microsoft YaHei',sans-serif;letter-spacing:.04em;color:#7c705e}
+.about-copy h1,.about-copy h2{font-weight:600;letter-spacing:.04em}
+.about-copy>p{font-size:16px;line-height:2.05}
+.about-imprint{display:flex;flex-direction:column;gap:12px;margin-top:48px;font-size:13px;color:#86765b}
+.project-lead{font-size:18px!important;line-height:2!important;color:#4d5146!important}
+.source-mark{font:11px 'Microsoft YaHei',sans-serif;color:#8b7044;vertical-align:super;text-decoration:none}
+.project-achievement-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:48px 0 54px;border-top:1px solid #86714b50;padding-top:28px}
+.project-achievement-grid article>small{font-size:13px;color:#8a7553;letter-spacing:.08em}
+.project-achievement-grid article>strong{display:block;font:600 clamp(27px,2vw,36px)/1.5 'STSong','SimSun',serif;margin:12px 0;color:#444d3c}
+.project-achievement-grid article>p{font-size:14px;line-height:1.9;color:#6e6b5b;margin:0}
+.project-note-block{border-top:1px solid #88785335;margin-top:46px;padding-top:28px}
+.project-note-block>small{font-size:13px;color:#8a7553;letter-spacing:.08em}
+.project-note-block h3{font:600 28px/1.5 'STSong','SimSun',serif;letter-spacing:.03em;margin:17px 0 20px;color:#3f4638}
+.project-note-block>p{font-size:16px;line-height:2.05;color:#626458}
+.project-workflow{display:grid;grid-template-columns:1fr 18px 1fr 18px 1fr;gap:12px;margin:30px 0;padding:25px 0;color:#7a704e}
+.project-workflow b{font-size:14px;font-weight:500;color:#444c3d}
+.project-workflow small{display:block;font-size:12px;line-height:1.8;margin-top:9px;color:#82765e}
+.project-workflow i{font-style:normal;align-self:center;color:#a18d66}
+.project-crew{margin:28px 0 0}
+.project-crew>div{display:grid;grid-template-columns:135px 1fr;border-bottom:1px solid #82755020;padding:17px 0;font-size:14px;line-height:1.8;gap:20px}
+.project-crew dt{color:#4d5742}
+.project-crew dd{margin:0;color:#766d5b}
+.project-topic-list{display:flex;flex-wrap:wrap;gap:14px 24px;margin:27px 0;color:#78623d;font-size:14px;line-height:1.7}
+.project-source-note{font-size:12px!important;line-height:1.9!important}

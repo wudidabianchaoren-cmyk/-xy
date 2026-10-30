@@ -1,0 +1,9 @@
+/* V32.79: calm wayfinding and continuous card gestures. */
+.courtyard-place i{border:0!important;transform:none!important;width:17px!important;height:17px!important;font:14px Georgia!important;color:#dac594!important}
+.courtyard-place i::before{content:attr(data-symbol)}
+.courtyard-place span{font:12px/1.5 system-ui!important;letter-spacing:.12em!important;text-shadow:0 2px 8px #000,0 0 15px #000}
+.courtyard-place{width:max-content!important;height:auto!important;min-height:38px;flex-direction:row!important;white-space:nowrap;padding:9px 11px!important;background:#08110a80;border-radius:2px;gap:8px!important}
+.courtyard-inscription{position:absolute;z-index:5;pointer-events:none;white-space:nowrap;text-align:left;color:#d0ae64;text-shadow:0 2px 7px #000a;font:400 clamp(16px,1.7vw,30px)/1.15 Georgia,'Times New Roman',serif;letter-spacing:.015em;transform:translate(-50%,-50%)}
+.courtyard-inscription small{display:block;font:8px/1.8 Georgia,serif;letter-spacing:.19em;margin-top:7px;color:#b6a585}
+.life-process-grid>figure{transition:transform .85s cubic-bezier(.22,1,.36,1),width .7s cubic-bezier(.22,1,.36,1),height .7s cubic-bezier(.22,1,.36,1),margin .7s cubic-bezier(.22,1,.36,1),opacity .5s,box-shadow .7s!important}
+@media(prefers-reduced-motion:reduce){.life-process-grid>figure{transition-duration:.01ms!important}}

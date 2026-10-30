@@ -1,0 +1,18 @@
+import fs from'node:fs/promises';
+let s=await fs.readFile('scripts/save-current-v32-89.mjs','utf8');
+s=s.replaceAll('32.89','32.90').replaceAll('32-89','32-90').replaceAll('32.88','32.89');
+s=s.replace("'v31-motion.js',",'');
+s=s.replace("'v23.js',",'');
+s=s.replace("const changed=['v31.html'", "const changed=['v23.js','v31-motion.js','v32-90.css','v32-90-gallery.css','design-review-v32-90.html','设计演示_V32.90.pdf','v31.html'");
+s=s.replace("'全站设计检查_V32.90.md'", "'设计调整说明_V32.90.md'");
+s=s.replace("'scripts/prepare-v32-90-assets.mjs','scripts/update-v32-90.mjs','scripts/document-v32-90.mjs'", "'scripts/restore-v32-90.mjs','scripts/update-v32-90.mjs','scripts/document-v32-90.mjs','scripts/prepare-v32-90-package.mjs'");
+s=s.replace('globalRedesignApplied:false','globalTypographyApplied:false,coreRestructureApplied:false,localWorksRedesignApplied:true');
+s=s.replace('sessionRemainingPercent:98,weeklyRemainingPercent:62','sessionRemainingPercent:89,weeklyRemainingPercent:61');
+s=s.replace("['Original images retain their supplied resolution.','Gallery uses existing CSS perspective and reflected image layers.','Global design issues were documented, not changed.']", "['Super-resolution can infer microtexture and is not recovery of a lost original master.','Gallery uses existing CSS perspective and reflected image layers.','Global typography, page order and particle timing await user review.']");
+s=s.replace('unchangedSha256:kept','unchangedSha256:kept,performance:JSON.parse(await fs.readFile(\'.verify/v32-90/performance.json\',\'utf8\')),quotaCheckpoint:{sessionRemainingPercent:75,weeklyRemainingPercent:58}');
+await fs.writeFile('scripts/save-current-v32-90.mjs',s);
+let v=await fs.readFile('scripts/verify-v32-89-package.mjs','utf8');v=v.replaceAll('32.89','32.90').replaceAll('32-89','32-90');
+await fs.writeFile('scripts/verify-v32-90-package.mjs',v);
+let html=await fs.readFile('v31.html','utf8');html=html.replace('脑海宇宙 V31 - 西游视觉星图与流动作品集','脑海宇宙 V31 · 吴翔宇作品集');await fs.writeFile('v31.html',html);
+for(const f of['设计调整说明_V32.90.md','AGENTS.md','../AGENTS.md'])await fs.writeFile(f,(await fs.readFile(f,'utf8')).replace('前三类场景在说明中','后三个场景在说明中'));
+console.log('Incremental archive scripts ready.');

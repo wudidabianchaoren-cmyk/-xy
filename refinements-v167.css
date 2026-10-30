@@ -1,0 +1,60 @@
+/* V167: changes stay within the six requested desktop surfaces. */
+:root{--works-ground:#dce3e5;--works-ink:#24343a;--catalog-face:#473b29;--catalog-ink:#eedbc1}
+#worksOrbitArchive{background:var(--works-ground)!important;color:var(--works-ink)}
+#worksOrbitArchive::before{opacity:0;background:none}
+#worksOrbitArchive::after{box-shadow:none}
+#worksOrbitArchive .works-orbit-header,#worksOrbitArchive .works-orbit-index,#worksOrbitArchive .works-orbit-info-panel{background:var(--works-ground)!important;color:var(--works-ink)}
+#worksOrbitArchive .works-orbit-exit-fold i{background:var(--works-ground)}
+#worksOrbitArchive .works-orbit-header{border-bottom:0}
+#worksOrbitArchive .works-orbit-guide,#worksOrbitArchive .works-orbit-description{color:#4c626b}
+#worksOrbitArchive .works-orbit-guide span,#worksOrbitArchive .works-orbit-title-list button,#worksOrbitArchive .works-orbit-info-right,#worksOrbitArchive .works-orbit-info-left>span,#worksOrbitArchive .works-orbit-info small{color:#586c72}
+body.photography-reading .experience-console{visibility:hidden;pointer-events:none}
+.topbar #indexTrigger{margin-top:5px;min-width:118px;min-height:44px;padding:10px 17px!important;gap:10px;border:0!important;border-radius:9px!important;background:var(--catalog-face)!important;color:var(--catalog-ink)!important;font:500 12px/1.5 'Microsoft YaHei',sans-serif!important;animation:none!important;text-shadow:none!important;opacity:1!important;box-shadow:0 2px 0 #211c14!important;transition:background 160ms ease,box-shadow 160ms ease!important}
+.topbar #indexTrigger::after{display:none!important}
+.topbar #indexTrigger::before{width:14px;height:14px!important;border:0!important;border-radius:0!important;background:currentColor!important;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='2' width='5' height='12' rx='1'/%3E%3Crect x='8' y='2' width='7' height='3' rx='1'/%3E%3Crect x='8' y='7' width='7' height='3' rx='1'/%3E%3Crect x='8' y='12' width='7' height='2' rx='1'/%3E%3C/svg%3E") center/contain no-repeat!important;content:''}
+.topbar #indexTrigger:hover{background:#635039!important;box-shadow:0 3px 0 #211c14!important;filter:none!important}
+.topbar #indexTrigger:active{background:#342b1d!important;box-shadow:0 1px 0 #211c14!important}
+.topbar #indexTrigger:focus-visible{outline:2px solid #e7c383;outline-offset:5px}
+body.is-paper-reading .topbar #indexTrigger,body.hobby-reading .topbar #indexTrigger{background:#33473f!important;color:#f1eee5!important;box-shadow:0 2px 0 #13251d!important}
+.ue-native-surface-v162,.ue-native-surface-v162 *{pointer-events:none!important}
+.ue-native-surface-v162 .ue-native-cover-v171,.ue-native-surface-v162 .ue-native-cover-v171 button{pointer-events:auto!important}
+.ue-native-surface-v162{position:absolute!important}
+.directory-controls{transition:opacity 160ms ease}
+.directory-app:has(.ue-native-cover-v164:not([hidden])) .directory-physical-hint{opacity:0}
+.directory-object-access{max-height:min(70vh,720px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#a48e64 #24251f}
+.hobby-page:has(#hobbyPhotography)>.standalone-close{background:#dce3e5;border:0;color:#20353a;backdrop-filter:none}
+#hobbyPhotography{position:relative;z-index:2;min-height:900px;height:100svh;background:#111d21;color:#e7edeb;overflow:hidden;isolation:isolate}
+#hobbyPhotography .photo-heading{position:absolute;z-index:2;top:15%;left:7%;width:30%;pointer-events:none}
+#hobbyPhotography h2{margin:0 0 25px;font:500 clamp(40px,3.9vw,64px)/1.24 'Noto Serif SC',SimSun,serif;letter-spacing:0;color:#e7edeb}
+#hobbyPhotography .photo-heading p{max-width:26em;margin:0;font:15px/1.9 'Microsoft YaHei',sans-serif;color:#bdcece}
+#hobbyPhotography .photo-heading small{display:block;margin-top:25px;font:12px/1.6 'Microsoft YaHei',sans-serif;color:#9aafaf}
+#hobbyPhotography .photo-footer{position:absolute;z-index:3;bottom:7%;left:7%;right:7%;display:flex;justify-content:space-between;align-items:center;color:#b9ccca;font:13px/1.6 'Microsoft YaHei',sans-serif}
+#hobbyPhotography .photo-footer p{margin:0}
+#hobbyPhotography .photo-footer button{padding:12px 18px;min-height:44px;border:0;border-radius:6px;background:#dbe4e0;color:#203b3c;font:14px/1.5 'Microsoft YaHei',sans-serif;cursor:pointer}
+#hobbyPhotography .photo-footer button:hover{background:#f0f3ea}
+#hobbyPhotography :focus-visible{outline:2px solid #e6c69d;outline-offset:5px}
+.photo-drift-wall{position:absolute;inset:0 -8% 0 32%;perspective:1200px;overflow:hidden;contain:layout paint;mask-image:linear-gradient(transparent,black 18%,black 78%,transparent)}
+.photo-drift-plane{position:absolute;left:50%;top:50%;display:flex;gap:18px;transform-style:preserve-3d;transform-origin:center;will-change:transform}
+.photo-drift-col{position:relative;width:200px;height:1200px;flex:0 0 200px;transform-style:preserve-3d}
+.photo-drift-track{display:flex;flex-direction:column;gap:18px;will-change:transform;transform-style:preserve-3d}
+.photo-drift-tile{position:relative;display:block;width:200px;height:132px;flex:0 0 132px;margin:0;border:0;border-radius:9px;overflow:hidden;transform:translateZ(0);opacity:.65;transition:transform 420ms cubic-bezier(.16,1,.3,1),opacity 250ms ease,box-shadow 420ms ease;outline-offset:5px}
+.photo-drift-inner{display:block;width:100%;height:100%;background:var(--photo-tile-color,#344b50)}
+.photo-drift-inner img{width:100%;height:100%;object-fit:cover}
+.photo-drift-tile.is-active{transform:translateZ(64px);opacity:1;box-shadow:0 20px 35px #020a0c66}
+.photo-drift-empty{position:absolute;inset:0;display:grid;place-items:center;color:#cbd7d3;font:12px/1.5 'Microsoft YaHei',sans-serif;opacity:0;transition:opacity 250ms ease}
+.photo-drift-tile.is-active .photo-drift-empty{opacity:1}
+@media(prefers-reduced-motion:reduce){.photo-drift-plane,.photo-drift-track{will-change:auto}.photo-drift-tile,.photo-drift-tile.is-active{transition:none;transform:none}}
+
+body.is-sand-reading .topbar #indexTrigger,body.is-paper-reading .topbar #indexTrigger,body.hobby-reading .topbar #indexTrigger{background:#473b29!important;color:#eedbc1!important;box-shadow:0 2px 0 #211c14!important}
+
+/* V170: every photograph keeps its original landscape or portrait ratio. */
+.photo-drift-tile{opacity:.88;cursor:zoom-in}
+.photo-drift-inner img{display:block;width:100%;height:100%;object-fit:contain}
+.photo-viewer-v170{padding:0;border:0;background:transparent;max-width:92vw;max-height:92vh;overflow:visible}
+.photo-viewer-v170::backdrop{background:#070d0ff0}
+.photo-viewer-v170 img{display:block;width:auto;height:auto;max-width:90vw;max-height:86vh;object-fit:contain}
+.photo-viewer-v170 button{position:absolute;right:0;top:-44px;background:#e5ebe7;color:#203b3c;border:0;border-radius:5px;padding:10px 16px;cursor:pointer}
+
+/* V171: the hobbies page contains only the original photography wall. */
+.hobby-page[data-photography-only]{background:#101d21}
+#hobbyPhotography .photo-heading .photo-purpose{margin-top:18px}

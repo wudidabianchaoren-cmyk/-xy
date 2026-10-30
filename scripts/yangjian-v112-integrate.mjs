@@ -1,0 +1,17 @@
+import fs from 'node:fs/promises';
+let h=await fs.readFile('yangjian.html','utf8'),j=await fs.readFile('yangjian.js','utf8'),css=await fs.readFile('yangjian.css','utf8');
+const descriptions={orphan:'雨滴落进碗里，年少杨戬的衣角和发束随风受力',training:'杨戬练功，手臂与兵刃受力，衣摆与山雾各自流动',guard:'斧背与长戟相接，人物承受推力，墨屑随接触迸开',reunion:'母子相握的双手缓慢收紧，腕间细线和衣料轻动'};
+for(const [kind,description]of Object.entries(descriptions)){
+ const old='data-motion="'+kind+'"><div class="motion-root"><div class="scene-stage quiet-stage"></div>';
+ const next='data-motion="'+kind+'"><div class="motion-root"><div class="scene-stage continuation-stage"><video class="ambient-video continuation-film" data-video="'+kind+'" data-source="./assets/yangjian-v112/video/'+kind+'.mp4" muted loop playsinline preload="none" poster="./assets/yangjian-v112/video/'+kind+'-poster.jpg" aria-label="'+description+'"></video><div class="stage-haze"></div></div>';
+ if(!h.includes(old))throw new Error('Missing exact chapter stage '+kind);h=h.replace(old,next);
+}
+h=h.replace('yangjian.css?v=32.111','yangjian.css?v=32.112').replace('yangjian.js?v=32.111','yangjian.js?v=32.112');
+j=j.replace("v.src=(v.dataset.video==='opening'?videoAsset:asset+'video/')+v.dataset.video+'.mp4?v=32.111'","v.src=(v.dataset.source||((v.dataset.video==='opening'?videoAsset:asset+'video/')+v.dataset.video+'.mp4'))+'?v=32.112'");
+j=j.replace("function syncOpeningSound(){for(const [v]of videoStates)if(v.dataset.video==='opening'){v.muted=!sound.enabled||hidden||videoAutoplayBlocked;v.volume=.55*(1-journeyProgress*.56)*(1-ease(.76,.98,journeyProgress))}}","function syncOpeningSound(){for(const [v]of videoStates){if(v.dataset.video==='opening'){v.muted=!sound.enabled||hidden||videoAutoplayBlocked;v.volume=.55*(1-journeyProgress*.56)*(1-ease(.76,.98,journeyProgress))}else if(v.dataset.source){v.muted=!sound.enabled||hidden||videoAutoplayBlocked;v.volume=.30}}}");
+j=j.replace("const files={thunder:'thunder',axe:'axe-hit',clatter:'wood-creak',step:'footstep',bird:'bird'};if(!this.effects[key])this.effects[key]=fetch(key==='thunder'?'./assets/yangjian-v111/audio/thunder.mp3':audioAsset+files[key]+'.mp3')","const files={thunder:'thunder',axe:'axe-hit',clatter:'wood-creak',step:'footstep-1',step2:'footstep-2',bird:'bird'};const real=key==='clatter'||key==='step'||key==='step2';if(!this.effects[key])this.effects[key]=fetch(key==='thunder'?'./assets/yangjian-v111/audio/thunder.mp3':(real?'./assets/yangjian-v112/audio/':audioAsset)+files[key]+'.mp3')");
+j=j.replace("const buffer=await this.prepareEffect(key);if(!buffer", "const variation=key==='step'&&((this.stepCount=(this.stepCount||0)+1)%2===0)?'step2':key;const buffer=await this.prepareEffect(variation);if(!buffer");
+j=j.replace("const dynamic=['river','capture','storm','split'].includes(r.kind)","const dynamic=['river','capture','storm','split','training','guard'].includes(r.kind)");
+css+='\n/* V112: four story-specific films, inside the original shared camera. */\n.continuation-stage .continuation-film{opacity:.21;object-position:50% 50%}.continuation-stage .continuation-film.is-playing{opacity:.30}.continuation-stage .stage-haze{background:linear-gradient(0deg,#080808 0%,#08080828 25%,#08080818 68%,#080808 100%),linear-gradient(90deg,#08080880,transparent 40%,transparent 65%,#08080870)}\n';
+await fs.writeFile('yangjian.html',h);await fs.writeFile('yangjian.js',j);await fs.writeFile('yangjian.css',css);
+console.log('Four chapter stages added; original art and 39 narrative beats retained. Actual footsteps alternate, timber foley replaced with recording.');

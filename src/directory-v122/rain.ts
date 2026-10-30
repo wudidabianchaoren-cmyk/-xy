@@ -1,0 +1,11 @@
+import * as THREE from'three';
+/** World-space rain outside the window. Five terminal-speed bands prevent synchronized scanlines. */
+export function createRain(scene:THREE.Scene){
+ const count=1400,positions=new Float32Array(count*6),bases=new Float32Array(count*6),speeds=new Float32Array(count*2),ends=new Float32Array(count*2),randoms=new Float32Array(count*2);
+ let seed=122731;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296};
+ for(let i=0;i<count;i++){const x=(random()-.5)*13,y=random()*7,z=-1.25-random()*7,speed=5.4+Math.floor(random()*5)*.53,r=random();for(let j=0;j<2;j++){const p=i*6+j*3;bases[p]=x;bases[p+1]=y;bases[p+2]=z;speeds[i*2+j]=speed;ends[i*2+j]=j;randoms[i*2+j]=r}}
+ const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setAttribute('base',new THREE.BufferAttribute(bases,3));geometry.setAttribute('speed',new THREE.BufferAttribute(speeds,1));geometry.setAttribute('end',new THREE.BufferAttribute(ends,1));geometry.setAttribute('random',new THREE.BufferAttribute(randoms,1));
+ const material=new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{time:{value:0}},vertexShader:`attribute vec3 base;attribute float speed,end,random;uniform float time;varying float alpha;void main(){float fall=mod(base.y-speed*time+70.,7.);vec3 p=vec3(base.x+.045*sin(time*.35+base.z),fall-.1,base.z);float streak=.08+.08*random;p.x+=end*.018;p.y-=end*streak;float d=length(cameraPosition-p);float nearFade=smoothstep(1.35,2.8,d);float farFade=1.-smoothstep(7.,12.,d);float gust=.65+.35*sin(time*.23+base.x*.3);alpha=(.07+.19*end)*nearFade*farFade*(.40+.6*random)*gust;gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`,fragmentShader:`varying float alpha;void main(){gl_FragColor=vec4(.30,.35,.40,alpha);}`});
+ const rain=new THREE.LineSegments(geometry,material);rain.frustumCulled=false;rain.name='Exterior rain / weighted world-space streaks';scene.add(rain);
+ return{update(t:number){material.uniforms.time.value=t},status:{count,speeds:[5.4,5.93,6.46,6.99,7.52],worldSpace:true,minimumDistanceFade:1.35},destroy(){geometry.dispose();material.dispose()}};
+}

@@ -1,0 +1,8 @@
+import bpy,json
+from pathlib import Path
+R=Path('C:/Users/HP/Desktop/codex 测试2/cinematic-ai-archive-prototype');O=R/'blender/mythology-v32-118';O.mkdir(parents=True,exist_ok=True)
+forest=bpy.data.collections['V117_FOREST'];rows=[]
+for o in list(forest.objects)[:3]:
+ me=o.data;low=[v.co for v in me.vertices if v.co.z<.035];rows.append({'name':o.name,'verts':len(me.vertices),'lowCount':len(low),'lowBounds':[[min(v[k] for v in low),max(v[k] for v in low)] for k in range(3)] if low else [],'facesNearGround':[{'index':p.index,'z':p.center.z,'normal':list(p.normal),'verts':len(p.vertices)} for p in me.polygons if p.center.z<.015][:12]})
+report={'scene':bpy.context.scene.name,'openFile':bpy.data.filepath,'treeBase':rows,'ships':[{'name':o.name,'type':o.type,'mat':[s.material.name if s.material else None for s in o.material_slots],'verts':len(o.data.vertices) if o.type=='MESH' else 0,'role':o.get('role')} for o in bpy.data.objects['V112_SHIP_0'].children_recursive if not o.hide_render][:95],'giant':[o.name for o in bpy.data.objects['V106_CYCLOPS / retained anatomical base, new male sculpt'].children_recursive if not o.hide_render]}
+(O/'native-inventory.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8');print(json.dumps({'scene':report['scene'],'openFile':report['openFile'],'treeBase':rows,'activeGiantParts':report['giant'],'visibleShip0Parts':len(report['ships'])}))

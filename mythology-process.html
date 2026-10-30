@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>海湾制作手记 · 造境手记</title><link rel="stylesheet" href="./after-journey.css?v=32.92"><link rel="stylesheet" href="./v32-91-project.css?v=32.92"><link rel="stylesheet" href="./v32-92-project.css?v=32.92"><link rel="stylesheet" href="./glass-gallery-v131.css?v=32.171"><link rel="stylesheet" href="./finish-v138.css?v=32.171"><link rel="stylesheet" href="./mythology-process-v142.css?v=32.171"><link rel="stylesheet" href="./refinements-v141.css?v=32.171"><link rel="stylesheet" href="./refinements-v142.css?v=32.171"><link rel="stylesheet" href="./refinements-v143.css?v=32.171"><link rel="stylesheet" href="./scene-dist/techtext-v153.css?v=32.171"></head>
+<body data-tone="dark" data-project="mythology-process" data-gallery-manifest="./assets/odyssey/process-v167/manifest.json">
+<a class="project-return-arrow" data-project-return href="./mythology.html?v=32.171" aria-label="回到海湾"><svg viewBox="0 0 40 28"><path d="M35 14H5M16 3 5 14l11 11"/></svg></a>
+<main><section class="process-intro" id="intro"><header class="process-intro-heading"><h1>让一幅画，<br>成为可以停留的地方。</h1><p class="process-standfirst">从透纳画中的归航意象出发，<br>走进现在这座有风、有海浪的小世界。</p></header>
+<div class="process-intro-spread"><figure><img src="./assets/odyssey/process-v167/current-cove.webp" alt="当前 UE 实时海湾：原来的岛屿、木船、船员、树林与山顶小屋"><figcaption>当前场景实录 · 岛、船与光照在同一个实时空间里。</figcaption></figure>
+<div class="process-intro-notes"><h2>为什么做一座海湾？</h2><p>我想尝试把观看一幅画的感受，转译成可以进入的空间。以《尤利西斯嘲弄波吕菲摩斯》中的离岛与归航为线索，让木船、海岸和远处的小屋，形成一处能够慢慢观察的地方。</p><p>这也是一次从影像构图走向实时叙事的练习：当观看者可以靠近、停下，或在白天与夜晚之间切换，材质、光线和运动该怎样共同维持这个世界的气氛？</p><ol class="process-stage-index"><li><span>起点</span>留存的早期空间白模</li><li><span>现在</span>当前海湾、木船、海岸与小屋实录</li><li><span>探索</span>光照、表面、风与可交互的观看</li></ol><a href="#gallery">沿着六幅画面，进入制作过程 ↓</a></div></div></section>
+<section id="gallery" class="project-gallery" data-before="intro" data-after="construction" aria-label="六幅海湾制作与当前场景实录"><div class="gallery-viewport"><div class="glass-stage" role="region" tabindex="0" aria-label="六幅海湾画面，逐幅浏览后继续阅读"><img src="./assets/odyssey/process-v142/process-01.webp" alt="留存的早期空间白模" loading="lazy"></div></div></section>
+<section id="construction" class="process-body"><header class="process-construction-heading"><h2>同一个世界里的细节。</h2><p>从空间关系，到可以被感知的运动。</p></header><div class="process-text">
+<article class="process-note"><h3>先建立空间之间的关系。</h3><p>从白模确定岛、船与树林的构图，再逐步加入岩岸、草木和山顶小屋。船留在前景，小屋成为远处的目的地；视线在两者之间移动，也让海面成为叙事的一部分。第一幅保留早期草模，其余五幅均取自现在的 UE 场景，分别呈现当前状态，并不把成图称作历史建模阶段。</p></article>
+<article class="process-note"><h3>船与人，共同给出尺度。</h3><p>原来的木船、帆和十四位船员一起保留。船体木纹、甲板、桨与人物的排列，帮助观看者读懂近处的尺度；远处的岩壁、树木和小屋，再把这种尺度推向整座岛。人物、衣料与船具分别处理表面，让材质之间的差异成为画面的一部分。</p></article>
+<article class="process-note"><h3>让表面回应同一束光。</h3><p>岩石、木板、织物与屋面分别使用颜色、粗糙度和法线信息，在 UE 的实时光照、阴影与反射下重新观察。暖光落在船和海岸上，海面与远景留出较冷的层次；靠近小屋时，也能沿着石墙和屋顶读到同一套光线。</p></article>
+<article class="process-note"><h3>把运动放回环境里。</h3><p>海面用程序化波形产生起伏，船体依据同一波场缓慢升沉与摇摆，帆面随风变化。岸边的水色与浪花、远处的雾和七只海鸟，共同构成这座小世界的呼吸。观看者可以前后靠近、暂停，也可以进入小屋的制作手记，再返回刚才的位置。</p></article>
+<article class="process-note process-tools"><h3>实际使用的工具，与想继续探索的事。</h3><dl>
+<dt>形体与资产</dt><dd>Blender、Python 与 glTF 用来组织岛体、船、船员、小屋和植被，整理几何、材质与尺度；早期 Cycles 的构图与材质研究也保留在制作记录中。</dd>
+<dt>实时画面</dt><dd>当前海湾由本机 Unreal Engine 5.8.4 渲染，使用实时全局光照、反射与体积雾；网页通过 Pixel Streaming 呈现这个场景。</dd>
+<dt>网页与交互</dt><dd>HTML、CSS、JavaScript 与 Three.js 负责网页界面、相机控制、拾取和原位返回。小屋内的画面继续使用原比例玻璃画廊，逐幅浏览。</dd>
+<dt>探索的方向</dt><dd>我关心的是，如何把影像里的构图、材质与气氛，延伸成一个可以由观看者决定停留时间的空间。让技术支持观看，也让每一个细节都回到场景本身。</dd>
+</dl></article>
+<div class="process-ending"><p class="process-end">看完手记，再向下滚动，回到刚才的小屋近景。</p><a data-project-return href="./mythology.html?v=32.171">回到海湾 ↙</a></div></div></section></main>
+<script src="./audio-focus-v141.js?v=32.171"></script><script src="./glass-gallery-v142.js?v=32.171"></script><script src="./navigation-v152.js?v=32.171"></script><script type="module" src="./scene-dist/techtext-v153.js?v=32.171"></script></body></html>

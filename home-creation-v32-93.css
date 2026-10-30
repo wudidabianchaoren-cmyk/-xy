@@ -1,0 +1,10 @@
+.home-creation .project-film{min-height:100vh;height:100vh;scroll-snap-align:start;background:#040606;padding:0}
+.home-creation .project-film-video{position:absolute;inset:4vh 2.5vw;width:95vw;height:92vh;object-fit:contain;background:#040606}
+.home-creation .project-film .film-poster{position:absolute;inset:4vh 2.5vw;width:95vw;height:92vh;object-fit:contain;filter:none;opacity:1}
+.home-creation .home-process .eyebrow{font:13px/1.5 'Microsoft YaHei',sans-serif;letter-spacing:.12em}
+.home-process-heading>p{font-size:15px;line-height:2;max-width:440px}
+.home-tool-list{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:26px 24px;padding-top:25px;border-top:1px solid #9a927839}
+.home-tool-list div{display:flex;flex-direction:column;gap:8px}
+.home-tool-list strong{font:500 17px/1.4 'Microsoft YaHei',sans-serif;letter-spacing:.03em}
+.home-tool-list span{font:13px/1.85 'Microsoft YaHei',sans-serif;color:var(--home-muted)}
+.home-creation #web{padding-top:100px;padding-bottom:80px}

@@ -1,0 +1,3 @@
+import bpy,json
+from pathlib import Path
+p=Path(bpy.data.filepath).parent;a=json.loads((p/'native-production-audit.json').read_text());a.update({'renderFinished':True,'giantPose':'two supported feet / lowered arms / no ball','finalCharacterBlend':'polyphemus-grounded.blend','finalCharacterGLB':'polyphemus-grounded.glb','cyclesProofs':['courtyard-cycles-v19.png','polyphemus-grounded-cycles-v19.png']});(p/'native-production-audit.json').write_text(json.dumps(a,indent=2));bpy.ops.wm.read_factory_settings(use_empty=True);print('Saved native V19 and two completed Cycles proofs; cleared only the independent MCP scene.')

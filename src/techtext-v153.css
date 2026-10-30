@@ -1,0 +1,5 @@
+.tech-text-v153-overlay{position:fixed;z-index:2147482500;pointer-events:none!important;overflow:visible;contain:layout style}
+.tech-text-v153-overlay *{pointer-events:none!important}
+.tech-text-v153-overlay .tech-text{touch-action:auto;user-select:none}
+#countdownPrelude .opening-film-chapter h2{pointer-events:auto}
+@media(prefers-reduced-motion:reduce){.tech-text-v153-overlay{display:none!important}}

@@ -1,0 +1,11 @@
+/* Align the reading room to the same frontal architectural axis as its copy. */
+body:not(:has(#readerControls:not([hidden]))) main{grid-template-columns:.9fr 1.1fr;gap:2vw}
+@media(min-width:701px){body:not(:has(#readerControls:not([hidden]))) main{height:calc(100svh - 82px);min-height:0;grid-template-rows:minmax(0,1fr) auto auto;padding-top:20px;padding-bottom:18px;row-gap:8px}body:not(:has(#readerControls:not([hidden]))) #bookStage{height:100%;min-height:0;max-height:660px}body:not(:has(#readerControls:not([hidden]))) .reading-tip{margin:0}body:not(:has(#readerControls:not([hidden]))) .original{margin:0 auto}}
+body:not(:has(#readerControls:not([hidden]))) .reading-title{border-left:1px solid #c0a36750;padding-left:24px;margin-left:3vw}
+body:not(:has(#readerControls:not([hidden]))) .shelf-action{margin-left:calc(3vw + 24px)}
+#fullSpread::after{display:none}
+#fullSpread{gap:0}
+#fullSpread img[hidden]{display:none!important}
+#fullSpread.single-page{aspect-ratio:1007 / 1429}
+#fullSpread.single-page img{width:100%;max-width:100%;object-position:center}
+@media(max-width:700px){body:not(:has(#readerControls:not([hidden]))) main{display:block}body:not(:has(#readerControls:not([hidden]))) .reading-title{border-left:0;padding:0;margin:0}body:not(:has(#readerControls:not([hidden]))) .shelf-action{margin:0}}

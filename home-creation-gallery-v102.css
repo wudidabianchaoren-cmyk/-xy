@@ -1,0 +1,2 @@
+/* Entry and exit are governed by one wheel gesture, not browser snap inertia. */
+html:has(body[data-project="home-creation"]){scroll-snap-type:none!important;scroll-padding-top:0}

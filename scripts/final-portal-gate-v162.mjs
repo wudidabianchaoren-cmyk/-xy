@@ -1,0 +1,1 @@
+import fs from'node:fs/promises';const p='src/directory-v141/room-v143.ts';let s=await fs.readFile(p,'utf8');s=s.replace('lamp:lampOn}),status)','lamp:lampOn,enabled:active&&visible}),status)');await fs.writeFile(p,s);console.log('The room releases the native scene while its portal or music overlay is active');

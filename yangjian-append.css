@@ -1,0 +1,147 @@
+/* V32.109: isolated black-and-white ink appendix; original sections untouched. */
+.yj-append {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  width: 100%;
+  margin: 0;
+  padding: 120px 8vw 110px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #f4f4f4;
+  color: #262626;
+}
+.yj-append, .yj-append * { box-sizing: border-box; }
+.yj-append-art {
+  position: absolute;
+  inset: 8% 0 8% 26%;
+  z-index: -3;
+  margin: 0;
+  pointer-events: none;
+}
+.yj-append-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 58% 50%;
+  mix-blend-mode: multiply;
+  filter: grayscale(1);
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+.yj-append[data-yj-append-art="ready"] .yj-append-art img { opacity: 1; }
+.yj-append::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: linear-gradient(90deg, #f4f4f4 0%, #f4f4f4e6 18%, transparent 40%);
+}
+.yj-append::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-top: 1px solid #29292925;
+  pointer-events: none;
+}
+.yj-append-copy { position: relative; max-width: 510px; }
+.yj-append-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 29px;
+  color: #626262;
+  font: 11px/1.8 "Microsoft YaHei", sans-serif;
+  letter-spacing: .22em;
+}
+.yj-append-eyebrow::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: #555555;
+}
+.yj-append-title {
+  margin: 0 0 24px;
+  color: #242424;
+  font-family: "KaiTi", "STKaiti", "STSong", "Songti SC", "SimSun", serif;
+  font-size: clamp(76px, 8vw, 150px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: .13em;
+  text-indent: -.07em;
+}
+.yj-append-subtitle {
+  margin: 0;
+  color: #525252;
+  font: 14px/2 "Microsoft YaHei", sans-serif;
+  letter-spacing: .22em;
+}
+.yj-append-line {
+  margin: 42px 0 35px;
+  color: #444444;
+  font: 15px/2 "STSong", "Songti SC", "SimSun", serif;
+  letter-spacing: .18em;
+}
+.yj-append-enter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  min-height: 56px;
+  padding: 14px 0;
+  border-top: 1px solid #3535357c;
+  border-bottom: 1px solid #35353547;
+  color: #292929;
+  text-decoration: none;
+  font: 12px/1.8 "Microsoft YaHei", sans-serif;
+  letter-spacing: .16em;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.yj-append-enter span { font: 24px/1 serif; letter-spacing: 0; }
+.yj-append-enter:hover { color: #555555; border-color: #353535; }
+.yj-append-enter:focus-visible { outline: 1px solid #555555; outline-offset: 9px; }
+.yj-append-colophon {
+  position: absolute;
+  left: 8vw;
+  right: 8vw;
+  bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #5353532b;
+  color: #626262;
+  font: 10px/1.8 "Microsoft YaHei", sans-serif;
+  letter-spacing: .17em;
+}
+@media (max-width: 760px) {
+  .yj-append { min-height: 100svh; padding: 110px 8vw 130px; }
+  .yj-append-art { inset: 45% -8% 8% 5%; }
+  .yj-append-art img { object-position: 64% 50%; }
+  .yj-append::before { background: linear-gradient(0deg, #f4f4f44d, transparent 65%); }
+  .yj-append-title { font-size: clamp(72px, 16vw, 112px); }
+  .yj-append-subtitle { font-size: 12px; }
+  .yj-append-line { font-size: 14px; }
+  .yj-append-colophon { font-size: 9px; bottom: 25px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .yj-append-art img, .yj-append-enter { transition: none; }
+}
+
+/* Match the story's continuous dark world. */
+.yj-append { background: #080808; color: #f4f4f4; }
+.yj-append-art img { filter: grayscale(1) invert(1); mix-blend-mode: screen; }
+.yj-append-art img[data-ink-dark="true"] { filter: grayscale(1); }
+.yj-append::before { background: linear-gradient(90deg, #080808 0%, #080808e6 18%, transparent 54%); }
+.yj-append::after { border-top-color: #dddddd25; }
+.yj-append-title { color: #f4f4f4; font-weight: 600; -webkit-text-stroke: .6px currentColor; }
+.yj-append-eyebrow, .yj-append-subtitle, .yj-append-line, .yj-append-colophon { color: #bcbcbc; }
+.yj-append-enter { color: #eeeeee; border-color: #eeeeee66; }
+.yj-append-enter:hover { color: #ffffff; border-color: #eeeeee; }
+.yj-append-colophon { border-top-color: #dddddd2b; }
+@media(max-width:760px) { .yj-append::before { background: linear-gradient(0deg,#08080844,transparent 65%); } }

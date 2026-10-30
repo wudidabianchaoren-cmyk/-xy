@@ -1,0 +1,1674 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071014">
+  <title>脑海宇宙 V10 - 无名航行体</title>
+  <link rel="preload" as="image" href="./assets/space-hero.png">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+  <style>
+    :root {
+      color-scheme: dark;
+      --space: #071014;
+      --space-deep: #030708;
+      --ink: #e9e3d8;
+      --soft: rgba(233, 227, 216, .66);
+      --muted: rgba(233, 227, 216, .4);
+      --hair: rgba(233, 227, 216, .22);
+      --gold: #d6ac7b;
+      --cold: #9fb7c5;
+      --serif: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", Georgia, serif;
+      --sans: "Inter", "SF Pro Display", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--space-deep);
+    }
+
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--space-deep);
+      color: var(--ink);
+      font-family: var(--sans);
+      overflow-x: hidden;
+    }
+
+    button,
+    a {
+      color: inherit;
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      padding: 0;
+      background: transparent;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 1px solid var(--gold);
+      outline-offset: 6px;
+    }
+
+    .loader {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      background: var(--space-deep);
+    }
+
+    .loader-copy {
+      width: min(420px, calc(100vw - 48px));
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    .loader-copy b {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .loader-track {
+      height: 1px;
+      margin-top: 14px;
+      overflow: hidden;
+      background: rgba(233, 227, 216, .13);
+    }
+
+    .loader-line {
+      width: 100%;
+      height: 100%;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: start;
+      padding: 24px 30px;
+      pointer-events: none;
+    }
+
+    .brand,
+    .coordinates,
+    .top-actions {
+      pointer-events: auto;
+    }
+
+    .brand {
+      justify-self: start;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .brand strong,
+    .brand small {
+      display: block;
+    }
+
+    .brand strong {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+    .brand small,
+    .coordinates,
+    .top-actions button {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .brand small {
+      margin-top: 4px;
+    }
+
+    .coordinates {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .coordinate-line {
+      width: 62px;
+      height: 1px;
+      background: var(--hair);
+      overflow: hidden;
+    }
+
+    .coordinate-line i {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .top-actions {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .top-actions button {
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      transition: color .25s ease, border-color .25s ease;
+    }
+
+    .top-actions button:hover {
+      color: var(--ink);
+      border-color: var(--gold);
+    }
+
+    .voyage {
+      position: relative;
+      height: 620vh;
+      background: var(--space-deep);
+    }
+
+    .cosmos-stage {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100svh;
+      min-height: 620px;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--space);
+    }
+
+    .cosmos-bg,
+    .cosmos-shade,
+    #universe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cosmos-bg {
+      z-index: 0;
+      object-fit: cover;
+      object-position: 52% center;
+      transform: scale(1.06);
+      filter: saturate(.86) contrast(1.04);
+      will-change: transform;
+    }
+
+    .cosmos-shade {
+      z-index: 1;
+      pointer-events: none;
+      background: rgba(3, 7, 8, .05);
+      box-shadow:
+        inset 110px 0 150px rgba(2, 5, 6, .45),
+        inset 0 -110px 140px rgba(2, 5, 6, .24),
+        inset 0 90px 120px rgba(2, 5, 6, .18);
+    }
+
+    #universe {
+      z-index: 2;
+      display: block;
+      pointer-events: none;
+    }
+
+    .title-block {
+      position: absolute;
+      top: 50%;
+      left: 7.5%;
+      z-index: 5;
+      width: 41%;
+      max-width: 660px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 23px;
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 112px;
+      font-weight: 400;
+      line-height: .96;
+    }
+
+    .title-line {
+      display: block;
+      overflow: hidden;
+    }
+
+    .title-line span {
+      display: block;
+      will-change: transform;
+    }
+
+    .title-block p {
+      width: 450px;
+      max-width: 100%;
+      margin: 26px 0 0;
+      color: var(--soft);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .title-block p span {
+      display: block;
+    }
+
+    .chapter-rail {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      z-index: 8;
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      transform: translateY(-50%);
+    }
+
+    .chapter-button {
+      position: relative;
+      display: grid;
+      grid-template-columns: 16px 58px;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-align: left;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color .35s ease;
+    }
+
+    .chapter-button::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      transition: background .35s ease, transform .35s ease;
+    }
+
+    .chapter-button.is-active {
+      color: var(--ink);
+    }
+
+    .chapter-button.is-active::before {
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: scale(1.5);
+    }
+
+    .signal-field {
+      position: absolute;
+      inset: 0;
+      z-index: 6;
+      pointer-events: none;
+    }
+
+    .signal {
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      width: 32px;
+      height: 32px;
+      margin: -16px 0 0 -16px;
+      border: 1px solid rgba(233, 227, 216, .36);
+      border-radius: 50%;
+      pointer-events: auto;
+      cursor: pointer;
+      opacity: .18;
+      transform: scale(.72);
+      transition: opacity .45s ease, transform .45s ease, border-color .45s ease;
+    }
+
+    .signal::before,
+    .signal::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .signal::before {
+      width: 5px;
+      height: 5px;
+      background: var(--signal-color);
+      box-shadow: 0 0 16px var(--signal-color);
+    }
+
+    .signal::after {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(233, 227, 216, .12);
+      animation: signalPulse 3.4s ease-out infinite;
+    }
+
+    .signal-label {
+      position: absolute;
+      top: 50%;
+      left: 46px;
+      width: 190px;
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 9px;
+      line-height: 1.7;
+      text-align: left;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(-50%) translateX(-8px);
+      transition: opacity .35s ease, transform .35s ease;
+      pointer-events: none;
+    }
+
+    .signal-label b {
+      display: block;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 400;
+      text-transform: none;
+    }
+
+    .signal.is-near {
+      opacity: .5;
+      transform: scale(.88);
+    }
+
+    .signal.is-active {
+      opacity: 1;
+      border-color: rgba(233, 227, 216, .84);
+      transform: scale(1);
+    }
+
+    .signal.is-active .signal-label {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    .work-caption {
+      position: absolute;
+      left: 7.5%;
+      bottom: 46px;
+      z-index: 7;
+      width: 460px;
+      max-width: calc(100vw - 180px);
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .5s ease, transform .5s ease;
+      pointer-events: none;
+    }
+
+    .cosmos-stage.has-departed .work-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .cosmos-stage:not(.has-departed) .signal {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .work-count,
+    .work-meta,
+    .scroll-note {
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    .work-count {
+      color: var(--gold);
+    }
+
+    .work-caption h2 {
+      margin: 8px 0 5px;
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .work-meta {
+      color: var(--soft);
+      line-height: 1.6;
+    }
+
+    .scroll-note {
+      position: absolute;
+      right: 30px;
+      bottom: 27px;
+      z-index: 8;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+    }
+
+    .scroll-note i {
+      position: relative;
+      display: block;
+      width: 1px;
+      height: 30px;
+      overflow: hidden;
+      background: rgba(233, 227, 216, .14);
+    }
+
+    .scroll-note i::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: var(--ink);
+      animation: scrollDrop 1.8s ease-in-out infinite;
+    }
+
+    .progress {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      height: 1px;
+      background: rgba(233, 227, 216, .08);
+      pointer-events: none;
+    }
+
+    .progress i {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .boundary {
+      position: relative;
+      z-index: 3;
+      min-height: 100svh;
+      display: grid;
+      align-content: center;
+      padding: 110px 7.5%;
+      overflow: hidden;
+      background: #05090a;
+    }
+
+    .boundary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 7.5%;
+      right: 7.5%;
+      height: 1px;
+      background: var(--hair);
+    }
+
+    .boundary-label {
+      margin-bottom: 24px;
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .boundary h2 {
+      width: 860px;
+      max-width: 100%;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 68px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .boundary p {
+      width: 520px;
+      max-width: 100%;
+      margin: 26px 0 0;
+      color: var(--soft);
+      font-family: var(--serif);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .memory {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      visibility: hidden;
+      display: grid;
+      grid-template-columns: minmax(280px, 42%) 1fr;
+      background: rgba(3, 7, 8, .96);
+      clip-path: inset(100% 0 0 0);
+    }
+
+    .memory.is-open {
+      visibility: visible;
+    }
+
+    .memory-visual {
+      position: relative;
+      overflow: hidden;
+      border-right: 1px solid var(--hair);
+    }
+
+    .memory-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 58% center;
+      opacity: .64;
+      transform: scale(1.18);
+    }
+
+    .memory-index {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    .memory-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 72px 8vw 58px 7vw;
+      overflow-y: auto;
+    }
+
+    .memory-kicker {
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .memory h2 {
+      margin: 18px 0 12px;
+      font-family: var(--serif);
+      font-size: 66px;
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    .memory-en {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .memory-description {
+      max-width: 640px;
+      margin: 36px 0 46px;
+      color: rgba(233, 227, 216, .78);
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .memory-facts {
+      max-width: 640px;
+      margin: 0;
+      border-top: 1px solid var(--hair);
+    }
+
+    .memory-facts div {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--hair);
+    }
+
+    .memory-facts dt {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    .memory-facts dd {
+      margin: 0;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .memory-close {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 2;
+      width: 36px;
+      height: 36px;
+      color: var(--soft);
+      font-family: var(--sans);
+      font-size: 27px;
+      font-weight: 200;
+      cursor: pointer;
+      transition: color .2s ease, transform .25s ease;
+    }
+
+    .memory-close:hover {
+      color: var(--ink);
+      transform: rotate(90deg);
+    }
+
+    .fallback {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 90;
+      display: none;
+      width: 300px;
+      padding: 14px;
+      border: 1px solid var(--hair);
+      background: rgba(3, 7, 8, .92);
+      color: var(--soft);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .fallback.is-visible {
+      display: block;
+    }
+
+    @keyframes signalPulse {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(.65); }
+      35% { opacity: .8; }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); }
+    }
+
+    @keyframes scrollDrop {
+      0% { transform: translateY(-12px); opacity: 0; }
+      35% { opacity: 1; }
+      100% { transform: translateY(34px); opacity: 0; }
+    }
+
+    @media (max-width: 980px) {
+      .title-block {
+        left: 6%;
+        width: 48%;
+      }
+
+      .title-block h1 {
+        font-size: 84px;
+      }
+
+      .work-caption {
+        left: 6%;
+      }
+
+      .memory h2 {
+        font-size: 54px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        grid-template-columns: 1fr auto;
+        padding: 18px 20px;
+      }
+
+      .coordinates {
+        display: none;
+      }
+
+      .top-actions button:first-child {
+        display: none;
+      }
+
+      .brand strong {
+        font-size: 15px;
+      }
+
+      .cosmos-stage {
+        min-height: 560px;
+      }
+
+      .cosmos-bg {
+        object-position: 59% center;
+        transform: scale(1.1);
+      }
+
+      .cosmos-shade {
+        background: rgba(3, 7, 8, .14);
+        box-shadow:
+          inset 0 180px 130px rgba(2, 5, 6, .55),
+          inset 0 -150px 150px rgba(2, 5, 6, .5);
+      }
+
+      .title-block {
+        top: 19%;
+        left: 20px;
+        width: calc(100% - 40px);
+        transform: none;
+      }
+
+      .eyebrow {
+        margin-bottom: 15px;
+        font-size: 8px;
+      }
+
+      .title-block h1 {
+        font-size: 56px;
+        line-height: .98;
+      }
+
+      .title-line {
+        display: inline-block;
+        margin-right: 7px;
+      }
+
+      .title-block p {
+        width: 290px;
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .title-block p span {
+        display: inline;
+      }
+
+      .chapter-rail {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        padding: 13px 14px 18px;
+        border-top: 1px solid var(--hair);
+        background: rgba(3, 7, 8, .82);
+        transform: none;
+      }
+
+      .chapter-button {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+        justify-content: center;
+        gap: 7px;
+        width: auto;
+        min-width: 0;
+        font-size: 8px;
+        text-align: center;
+      }
+
+      .chapter-button::before {
+        width: 3px;
+        height: 3px;
+      }
+
+      .signal {
+        width: 28px;
+        height: 28px;
+        margin: -14px 0 0 -14px;
+      }
+
+      .signal-label {
+        top: 40px;
+        left: 50%;
+        width: 150px;
+        transform: translateX(-50%) translateY(-6px);
+        text-align: center;
+      }
+
+      .signal.is-active .signal-label {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .signal-label b {
+        font-size: 15px;
+      }
+
+      .work-caption {
+        left: 20px;
+        bottom: 88px;
+        width: calc(100% - 40px);
+        max-width: none;
+      }
+
+      .work-caption h2 {
+        font-size: 28px;
+      }
+
+      .scroll-note {
+        display: none;
+      }
+
+      .boundary {
+        padding: 100px 20px;
+      }
+
+      .boundary::before {
+        left: 20px;
+        right: 20px;
+      }
+
+      .boundary h2 {
+        font-size: 42px;
+      }
+
+      .boundary p {
+        font-size: 15px;
+      }
+
+      .memory {
+        display: block;
+        overflow-y: auto;
+      }
+
+      .memory-visual {
+        height: 34svh;
+        min-height: 210px;
+        border-right: 0;
+        border-bottom: 1px solid var(--hair);
+      }
+
+      .memory-content {
+        display: block;
+        min-height: 66svh;
+        padding: 40px 20px 70px;
+        overflow: visible;
+      }
+
+      .memory h2 {
+        font-size: 42px;
+      }
+
+      .memory-description {
+        margin: 26px 0 34px;
+        font-size: 16px;
+      }
+
+      .memory-facts div {
+        grid-template-columns: 88px 1fr;
+        gap: 14px;
+      }
+
+      .memory-close {
+        position: fixed;
+        top: 14px;
+        right: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader" id="loader" aria-live="polite">
+    <div class="loader-copy">
+      <b>脑海宇宙正在获得焦点</b>
+      <span>Calibrating horizon / reading memory signals</span>
+      <div class="loader-track"><i class="loader-line" id="loaderLine"></i></div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <button class="brand" id="homeButton" type="button" aria-label="返回航行起点">
+      <strong>脑海宇宙</strong>
+      <small>Wu Xiangyu / moving image archive</small>
+    </button>
+
+    <div class="coordinates">
+      <span id="coordinateText">voyage 00.000</span>
+      <span class="coordinate-line"><i id="coordinateLine"></i></span>
+      <span id="velocityText">drift 0.00</span>
+    </div>
+
+    <div class="top-actions">
+      <button id="exploreButton" type="button">探索信号</button>
+      <button id="openActiveButton" type="button">进入记忆</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="voyage" id="voyage" aria-label="脑海宇宙航行">
+      <div class="cosmos-stage" id="cosmosStage">
+        <img class="cosmos-bg" id="cosmosBackground" src="./assets/space-hero.png" alt="">
+        <div class="cosmos-shade"></div>
+        <canvas id="universe" aria-hidden="true"></canvas>
+
+        <div class="title-block" id="titleBlock">
+          <div class="eyebrow">Mind universe / signal archive</div>
+          <h1>
+            <span class="title-line"><span>脑海</span></span>
+            <span class="title-line"><span>宇宙</span></span>
+          </h1>
+          <p>
+            <span>一个无名状的物体正在穿过雨和星尘。</span>
+            <span>作品是航行途中被读取出的记忆信号。</span>
+          </p>
+        </div>
+
+        <nav class="chapter-rail" id="chapterRail" aria-label="航行章节"></nav>
+        <div class="signal-field" id="signalField" aria-label="作品信号"></div>
+
+        <div class="work-caption" id="workCaption" aria-live="polite">
+          <div class="work-count" id="workCount">Signal 01 / 05</div>
+          <h2 id="workTitle">回不去的乡</h2>
+          <div class="work-meta" id="workMeta">Distant Homeland / AI Short Film</div>
+        </div>
+
+        <div class="scroll-note">
+          <span>Scroll to approach</span>
+          <i></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="boundary" id="boundary">
+      <div class="boundary-label">Map boundary / signal remains open</div>
+      <h2>地图抵达边界，宇宙没有给出结论。</h2>
+      <p>这里保存作品、实验、失败版本和仍未命名的想法。结束不是总结，只是一次暂时失去信号。</p>
+    </section>
+  </main>
+
+  <div class="progress" aria-hidden="true"><i id="progressLine"></i></div>
+
+  <section class="memory" id="memory" role="dialog" aria-modal="true" aria-labelledby="memoryTitle">
+    <button class="memory-close" id="memoryClose" type="button" aria-label="关闭记忆空间">×</button>
+    <div class="memory-visual">
+      <img src="./assets/space-hero.png" alt="">
+      <div class="memory-index" id="memoryIndex">Memory signal 01</div>
+    </div>
+    <div class="memory-content" data-lenis-prevent>
+      <div class="memory-kicker" id="memoryKicker">AI Short Film / Distant Homeland</div>
+      <h2 id="memoryTitle">回不去的乡</h2>
+      <div class="memory-en" id="memoryEnglish">Distant Homeland</div>
+      <p class="memory-description" id="memoryDescription"></p>
+      <dl class="memory-facts">
+        <div><dt>Visual symbols</dt><dd id="memorySymbols"></dd></div>
+        <div><dt>Motion role</dt><dd id="memoryMotion"></dd></div>
+        <div><dt>Process</dt><dd id="memoryProcess"></dd></div>
+        <div><dt>Open edge</dt><dd id="memoryEdge"></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="fallback" id="fallback">
+    WebGL 或动效库加载失败。背景图和基本内容仍然可阅读，连接网络后刷新可查看完整航行效果。
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  <script>
+    const chapters = [
+      { cn: "起点", en: "origin", progress: 0 },
+      { cn: "航行", en: "voyage", progress: .16 },
+      { cn: "作品", en: "works", progress: .34 },
+      { cn: "实验", en: "experiment", progress: .54 },
+      { cn: "折返", en: "failure", progress: .74 },
+      { cn: "未知", en: "unknown", progress: .94 }
+    ];
+
+    const works = [
+      {
+        cn: "回不去的乡",
+        en: "Distant Homeland",
+        type: "AI Short Film",
+        color: "#d6ac7b",
+        x: 61,
+        y: 57,
+        copy: "时代记忆、土地和背影被压成一枚缓慢发光的记忆星体。镜头穿过黄昏、道路和远山，但不替乡愁作出解释。",
+        symbols: "树、路、人物背影、黄昏、远山",
+        motion: "低速向地平线推进，每一次靠近都被记忆轻微拉回。",
+        process: "从乡土关键词、镜头构图到 AI 短片节奏测试。",
+        edge: "保留未完成的家庭影像、废弃镜头与声音采样。"
+      },
+      {
+        cn: "东方玄幻",
+        en: "Oriental Fantasy",
+        type: "Scene Design",
+        color: "#ba6655",
+        x: 72,
+        y: 48,
+        copy: "宫殿、红衣与对峙关系被组织成一条持续收紧的中轴线。它不是静止的设定图，而是一种正在逼近的戏剧压力。",
+        symbols: "红衣、王座、宫灯、金色木构、对称轴",
+        motion: "镜头像穿过宫门，红色信号在空间中心持续逼近。",
+        process: "角色设定、场景搭建、运动测试与镜头压力校正。",
+        edge: "继续扩展为角色关系图和可航行的场景结构。"
+      },
+      {
+        cn: "雨夜与红",
+        en: "Wet Oriental Classicism",
+        type: "Color Study",
+        color: "#9fb7c5",
+        x: 81,
+        y: 62,
+        copy: "蓝灰雨幕和红色焦点构成色彩矛盾。这个节点像一场湿润、发光、有深度的雨，冷色环境不断吞没暖色信号。",
+        symbols: "雨、红灯、剑光、湿地反射、蓝灰色",
+        motion: "雨线按深度分层，红色光源在接近时产生反射拖尾。",
+        process: "冷光设定、红色焦点控制、雨幕速度和地面反射测试。",
+        edge: "发展为可复用的东方影像色彩方法样本。"
+      },
+      {
+        cn: "骸骨之岸",
+        en: "Echoes of the Abyss",
+        type: "Film Concept",
+        color: "#c8d0d1",
+        x: 68,
+        y: 70,
+        copy: "黑海、白瞳、骨骸和雾共同形成一段灾难史诗。观众不是站在岸边观看，而是在缓慢沉入这段没有幸存者的历史。",
+        symbols: "黑海、白瞳、骨骸、雾、灾难遗迹",
+        motion: "镜头低贴海面漂移，远处结构在雾中逐层显露。",
+        process: "情绪图、世界观轮廓、尺度测试与运动预演。",
+        edge: "保留无法解释的史前痕迹，让故事继续向未知生长。"
+      },
+      {
+        cn: "民俗符号",
+        en: "Northeast Ritual System",
+        type: "Symbol Archive",
+        color: "#b79b72",
+        x: 88,
+        y: 51,
+        copy: "器物、布料、火、烟和供桌不再作为装饰出现，而是被保存为一套仍在生长的东北民俗视觉语法。",
+        symbols: "祭祀器物、布料、火、烟、供桌",
+        motion: "烟雾向上生长，器物在暗部中被短暂照亮后再次隐去。",
+        process: "田野关键词、器物采样、符号拆解与镜头组合。",
+        edge: "持续补充地域资料，避免符号被简化成表面奇观。"
+      }
+    ];
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const loader = document.getElementById("loader");
+    const fallback = document.getElementById("fallback");
+    const voyage = document.getElementById("voyage");
+    const cosmosStage = document.getElementById("cosmosStage");
+    const titleBlock = document.getElementById("titleBlock");
+    const signalField = document.getElementById("signalField");
+    const chapterRail = document.getElementById("chapterRail");
+    const progressLine = document.getElementById("progressLine");
+    const coordinateLine = document.getElementById("coordinateLine");
+    const coordinateText = document.getElementById("coordinateText");
+    const velocityText = document.getElementById("velocityText");
+    const workCount = document.getElementById("workCount");
+    const workTitle = document.getElementById("workTitle");
+    const workMeta = document.getElementById("workMeta");
+    const memory = document.getElementById("memory");
+    let lenis = null;
+    let activeWork = 0;
+    let lastFocus = null;
+    let travelProgress = 0;
+    let scrollVelocity = 0;
+    let renderer;
+    let scene;
+    let camera;
+    let objectGroup;
+    let starField;
+    let dustField;
+    let clock;
+    const pointer = { x: 0, y: 0, sx: 0, sy: 0 };
+
+    function buildInterface() {
+      chapters.forEach((chapter, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "chapter-button";
+        button.innerHTML = `<span>${chapter.cn}</span>`;
+        button.setAttribute("aria-label", `${chapter.cn} / ${chapter.en}`);
+        button.addEventListener("click", () => scrollToProgress(chapter.progress));
+        chapterRail.appendChild(button);
+      });
+
+      works.forEach((work, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "signal";
+        button.style.setProperty("--x", `${work.x}%`);
+        button.style.setProperty("--y", `${work.y}%`);
+        button.style.setProperty("--signal-color", work.color);
+        button.innerHTML = `<span class="signal-label"><b>${work.cn}</b>${work.en} / ${work.type}</span>`;
+        button.setAttribute("aria-label", `进入作品：${work.cn}`);
+        button.addEventListener("click", () => {
+          setActiveWork(index, true);
+          openMemory(index, button);
+        });
+        signalField.appendChild(button);
+      });
+
+      setActiveWork(0, false);
+      updateChapter(0);
+    }
+
+    function setActiveWork(index, animate) {
+      if (index === activeWork && animate !== false) return;
+      activeWork = index;
+      const work = works[index];
+      const signals = [...document.querySelectorAll(".signal")];
+      signals.forEach((signal, signalIndex) => {
+        signal.classList.toggle("is-active", signalIndex === index);
+        signal.classList.toggle("is-near", Math.abs(signalIndex - index) === 1);
+      });
+
+      const applyText = () => {
+        workCount.textContent = `Signal ${String(index + 1).padStart(2, "0")} / ${String(works.length).padStart(2, "0")}`;
+        workTitle.textContent = work.cn;
+        workMeta.textContent = `${work.en} / ${work.type}`;
+      };
+
+      if (!animate || !window.gsap || reducedMotion) {
+        applyText();
+        return;
+      }
+
+      gsap.to("#workCaption", {
+        y: 12,
+        opacity: 0,
+        duration: .22,
+        ease: "power2.in",
+        onComplete: () => {
+          applyText();
+          gsap.fromTo("#workCaption", { y: -10 }, {
+            y: 0,
+            opacity: 1,
+            duration: .42,
+            ease: "power3.out"
+          });
+        }
+      });
+    }
+
+    function updateChapter(progress) {
+      let active = 0;
+      chapters.forEach((chapter, index) => {
+        if (progress >= chapter.progress) active = index;
+      });
+      [...chapterRail.children].forEach((button, index) => {
+        button.classList.toggle("is-active", index === active);
+      });
+    }
+
+    function scrollToProgress(progress) {
+      const target = voyage.offsetTop + progress * Math.max(0, voyage.offsetHeight - window.innerHeight);
+      if (lenis) {
+        lenis.scrollTo(target, { duration: 1.45, lock: false });
+      } else {
+        window.scrollTo({ top: target, behavior: reducedMotion ? "auto" : "smooth" });
+      }
+    }
+
+    function openMemory(index, trigger) {
+      const work = works[index];
+      lastFocus = trigger;
+      document.getElementById("memoryIndex").textContent = `Memory signal ${String(index + 1).padStart(2, "0")}`;
+      document.getElementById("memoryKicker").textContent = `${work.type} / ${work.en}`;
+      document.getElementById("memoryTitle").textContent = work.cn;
+      document.getElementById("memoryEnglish").textContent = work.en;
+      document.getElementById("memoryDescription").textContent = work.copy;
+      document.getElementById("memorySymbols").textContent = work.symbols;
+      document.getElementById("memoryMotion").textContent = work.motion;
+      document.getElementById("memoryProcess").textContent = work.process;
+      document.getElementById("memoryEdge").textContent = work.edge;
+      memory.classList.add("is-open");
+      lenis?.stop();
+
+      if (!window.gsap || reducedMotion) {
+        memory.style.clipPath = "inset(0% 0 0 0)";
+      } else {
+        const timeline = gsap.timeline();
+        timeline
+          .fromTo(memory, { clipPath: "inset(100% 0 0 0)" }, {
+            clipPath: "inset(0% 0 0 0)",
+            duration: 1,
+            ease: "power4.inOut"
+          })
+          .fromTo(".memory-visual img", { scale: 1.22, xPercent: -4 }, {
+            scale: 1.08,
+            xPercent: 0,
+            duration: 1.4,
+            ease: "power3.out"
+          }, "-=.7")
+          .fromTo(".memory-content > *", { y: 28, opacity: 0 }, {
+            y: 0,
+            opacity: 1,
+            duration: .7,
+            stagger: .07,
+            ease: "power3.out"
+          }, "-=1");
+      }
+      document.getElementById("memoryClose").focus();
+    }
+
+    function closeMemory() {
+      const finish = () => {
+        memory.classList.remove("is-open");
+        memory.style.clipPath = "";
+        lenis?.start();
+        lastFocus?.focus();
+      };
+
+      if (!window.gsap || reducedMotion) {
+        finish();
+        return;
+      }
+
+      gsap.to(memory, {
+        clipPath: "inset(0 0 100% 0)",
+        duration: .72,
+        ease: "power3.inOut",
+        onComplete: finish
+      });
+    }
+
+    function initThree() {
+      if (!window.THREE) {
+        fallback.classList.add("is-visible");
+        return;
+      }
+
+      const canvas = document.getElementById("universe");
+      renderer = new THREE.WebGLRenderer({
+        canvas,
+        alpha: true,
+        antialias: true,
+        powerPreference: "high-performance"
+      });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.7));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.06;
+
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(52, window.innerWidth / window.innerHeight, .1, 100);
+      camera.position.set(0, 0, 7);
+      clock = new THREE.Clock();
+
+      scene.add(new THREE.AmbientLight(0x9fb7c5, 1.1));
+      const warmLight = new THREE.PointLight(0xd6ac7b, 28, 30);
+      warmLight.position.set(4, -1.5, 3);
+      scene.add(warmLight);
+      const coldLight = new THREE.PointLight(0x9fb7c5, 22, 28);
+      coldLight.position.set(-4, 2, 2);
+      scene.add(coldLight);
+
+      createNamelessObject();
+      createParticles();
+      resizeThree();
+      renderer.setAnimationLoop(renderThree);
+    }
+
+    function createNamelessObject() {
+      objectGroup = new THREE.Group();
+
+      const core = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(.72, 3),
+        new THREE.MeshPhysicalMaterial({
+          color: 0x10191d,
+          emissive: 0x243a42,
+          emissiveIntensity: .7,
+          metalness: .72,
+          roughness: .24,
+          clearcoat: 1,
+          clearcoatRoughness: .2
+        })
+      );
+      core.scale.set(1.18, .76, 1.55);
+      objectGroup.add(core);
+
+      const shell = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(1.02, 2),
+        new THREE.MeshBasicMaterial({
+          color: 0xe9e3d8,
+          wireframe: true,
+          transparent: true,
+          opacity: .2
+        })
+      );
+      shell.scale.set(1.26, .72, 1.62);
+      objectGroup.add(shell);
+
+      for (let index = 0; index < 4; index++) {
+        const ring = new THREE.Mesh(
+          new THREE.TorusGeometry(1.08 + index * .16, .008, 6, 96),
+          new THREE.MeshBasicMaterial({
+            color: index % 2 ? 0x9fb7c5 : 0xd6ac7b,
+            transparent: true,
+            opacity: .28
+          })
+        );
+        ring.rotation.x = Math.PI / 2 + index * .27;
+        ring.rotation.y = index * .34;
+        ring.scale.y = .55;
+        objectGroup.add(ring);
+      }
+
+      for (let index = 0; index < 9; index++) {
+        const shard = new THREE.Mesh(
+          new THREE.TetrahedronGeometry(.1 + Math.random() * .1, 1),
+          new THREE.MeshStandardMaterial({
+            color: index % 3 === 0 ? 0xd6ac7b : 0x9fb7c5,
+            emissive: index % 3 === 0 ? 0x7f5c37 : 0x334a56,
+            emissiveIntensity: .9,
+            roughness: .3,
+            metalness: .6
+          })
+        );
+        const angle = index / 9 * Math.PI * 2;
+        shard.position.set(Math.cos(angle) * 1.35, Math.sin(angle * 1.7) * .7, Math.sin(angle) * .7);
+        shard.userData = { angle, speed: .35 + Math.random() * .45 };
+        objectGroup.add(shard);
+      }
+
+      objectGroup.position.set(-1.15, -.55, .1);
+      objectGroup.rotation.set(.2, -.4, .12);
+      scene.add(objectGroup);
+    }
+
+    function createParticles() {
+      const starPositions = new Float32Array(900 * 3);
+      for (let index = 0; index < 900; index++) {
+        starPositions[index * 3] = (Math.random() - .5) * 18;
+        starPositions[index * 3 + 1] = (Math.random() - .5) * 11;
+        starPositions[index * 3 + 2] = -Math.random() * 24;
+      }
+      const starGeometry = new THREE.BufferGeometry();
+      starGeometry.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
+      starField = new THREE.Points(
+        starGeometry,
+        new THREE.PointsMaterial({
+          color: 0xdce5e7,
+          size: .018,
+          transparent: true,
+          opacity: .55,
+          depthWrite: false
+        })
+      );
+      scene.add(starField);
+
+      const dustPositions = new Float32Array(220 * 3);
+      for (let index = 0; index < 220; index++) {
+        dustPositions[index * 3] = (Math.random() - .5) * 13;
+        dustPositions[index * 3 + 1] = (Math.random() - .5) * 7;
+        dustPositions[index * 3 + 2] = -Math.random() * 10 + 2;
+      }
+      const dustGeometry = new THREE.BufferGeometry();
+      dustGeometry.setAttribute("position", new THREE.BufferAttribute(dustPositions, 3));
+      dustField = new THREE.Points(
+        dustGeometry,
+        new THREE.PointsMaterial({
+          color: 0xd6ac7b,
+          size: .026,
+          transparent: true,
+          opacity: .32,
+          depthWrite: false
+        })
+      );
+      scene.add(dustField);
+    }
+
+    function renderThree() {
+      if (!renderer) return;
+      const time = clock.getElapsedTime();
+      const progress = travelProgress;
+      const widthFactor = window.innerWidth < 720 ? .58 : 1;
+      pointer.sx += (pointer.x - pointer.sx) * .035;
+      pointer.sy += (pointer.y - pointer.sy) * .035;
+
+      const arc = Math.sin(progress * Math.PI);
+      objectGroup.position.x = (-1.15 + progress * 3.1) * widthFactor + pointer.sx * .16;
+      objectGroup.position.y = -.55 + Math.sin(progress * Math.PI * 2.4) * .42 - progress * .2 + pointer.sy * .1;
+      objectGroup.position.z = .1 - progress * 3.8;
+      objectGroup.rotation.x = .2 + time * .09 + progress * 1.3;
+      objectGroup.rotation.y = -.4 + time * .12 + progress * 2.1;
+      objectGroup.rotation.z = .12 + Math.sin(time * .35) * .16;
+      const mobileScale = window.innerWidth < 720 ? .82 : 1;
+      objectGroup.scale.setScalar((.92 + arc * .22) * mobileScale);
+
+      objectGroup.children.forEach((child, index) => {
+        if (child.userData.speed) {
+          const angle = child.userData.angle + time * child.userData.speed;
+          child.position.x = Math.cos(angle) * 1.35;
+          child.position.y = Math.sin(angle * 1.7) * .7;
+          child.position.z = Math.sin(angle) * .7;
+          child.rotation.x += .008;
+          child.rotation.y += .012;
+        } else if (index > 1) {
+          child.rotation.z += .0015 * (index % 2 ? 1 : -1);
+        }
+      });
+
+      starField.position.z = (progress * 10) % 12;
+      starField.rotation.z = progress * .08;
+      dustField.position.z = (progress * 5) % 6;
+      dustField.rotation.z = -progress * .12;
+      camera.position.x = pointer.sx * .08;
+      camera.position.y = pointer.sy * .06;
+      renderer.render(scene, camera);
+    }
+
+    function resizeThree() {
+      if (!renderer || !camera) return;
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, window.innerWidth < 720 ? 1.35 : 1.7));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function initMotion() {
+      if (!window.gsap || !window.ScrollTrigger) {
+        fallback.classList.add("is-visible");
+        loader.style.display = "none";
+        return;
+      }
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      if (window.Lenis && !reducedMotion) {
+        lenis = new Lenis({
+          duration: 1.15,
+          smoothWheel: true,
+          syncTouch: false,
+          anchors: true
+        });
+        lenis.on("scroll", (event) => {
+          scrollVelocity = event.velocity;
+          ScrollTrigger.update();
+        });
+        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
+      }
+
+      ScrollTrigger.create({
+        trigger: voyage,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: reducedMotion ? false : .8,
+        onUpdate: (self) => {
+          travelProgress = self.progress;
+          cosmosStage.classList.toggle("has-departed", self.progress > .045);
+          const workIndex = Math.min(works.length - 1, Math.floor(self.progress * works.length));
+          if (workIndex !== activeWork) setActiveWork(workIndex, true);
+          updateChapter(self.progress);
+          gsap.set(progressLine, { scaleX: self.progress });
+          gsap.set(coordinateLine, { scaleX: self.progress });
+          coordinateText.textContent = `voyage ${(self.progress * 100).toFixed(3)}`;
+          velocityText.textContent = `drift ${Math.abs(scrollVelocity).toFixed(2)}`;
+        }
+      });
+
+      gsap.to("#cosmosBackground", {
+        scale: 1.16,
+        xPercent: -2.4,
+        yPercent: -.8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: voyage,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1.2
+        }
+      });
+
+      gsap.to(titleBlock, {
+        y: -80,
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: voyage,
+          start: "top top",
+          end: "18% top",
+          scrub: .7
+        }
+      });
+
+      gsap.from(".boundary > *", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: .12,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#boundary",
+          start: "top 75%"
+        }
+      });
+
+      const intro = gsap.timeline({
+        defaults: { ease: "power3.out" },
+        onComplete: () => loader.setAttribute("aria-hidden", "true")
+      });
+      intro
+        .to("#loaderLine", { scaleX: 1, duration: .9, ease: "power2.inOut" })
+        .to(loader, { yPercent: -100, duration: 1, ease: "power4.inOut" })
+        .fromTo("#cosmosBackground", { scale: 1.13 }, { scale: 1.06, duration: 1.8 }, "-=.85")
+        .from(".title-line span", { yPercent: 108, duration: 1.05, stagger: .1 }, "-=1.35")
+        .from(".eyebrow, .title-block p", { y: 18, opacity: 0, duration: .7, stagger: .1 }, "-=.7")
+        .from(".chapter-button, #workCaption", { opacity: 0, y: 10, duration: .55, stagger: .05 }, "-=.55");
+    }
+
+    function bindEvents() {
+      window.addEventListener("pointermove", (event) => {
+        pointer.x = event.clientX / window.innerWidth * 2 - 1;
+        pointer.y = -(event.clientY / window.innerHeight * 2 - 1);
+      }, { passive: true });
+
+      window.addEventListener("resize", () => {
+        resizeThree();
+        window.ScrollTrigger?.refresh();
+      });
+
+      document.getElementById("homeButton").addEventListener("click", () => scrollToProgress(0));
+      document.getElementById("exploreButton").addEventListener("click", () => scrollToProgress(.34));
+      document.getElementById("openActiveButton").addEventListener("click", (event) => openMemory(activeWork, event.currentTarget));
+      document.getElementById("memoryClose").addEventListener("click", closeMemory);
+      memory.addEventListener("click", (event) => {
+        if (event.target === memory) closeMemory();
+      });
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && memory.classList.contains("is-open")) closeMemory();
+      });
+    }
+
+    function init() {
+      buildInterface();
+      bindEvents();
+      initThree();
+      initMotion();
+
+      const previewProgress = Number(new URLSearchParams(window.location.search).get("preview"));
+      if (Number.isFinite(previewProgress) && previewProgress > 0) {
+        setTimeout(() => {
+          loader.style.display = "none";
+          loader.setAttribute("aria-hidden", "true");
+          scrollToProgress(Math.min(previewProgress, 1));
+        }, 600);
+      }
+    }
+
+    window.addEventListener("load", init, { once: true });
+    setTimeout(() => {
+      if (!loader.getAttribute("aria-hidden") && !window.gsap) {
+        loader.style.display = "none";
+        fallback.classList.add("is-visible");
+      }
+    }, 5000);
+  </script>
+</body>
+</html>

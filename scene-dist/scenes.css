@@ -1,0 +1,45 @@
+.loading-study {position:relative;min-height:100vh;padding:100px 6% 70px;background:#020302;color:#dfdbb1;box-sizing:border-box;}
+.loading-study-heading {max-width:1300px;margin:0 auto 26px;}
+.loading-study-heading small {font:9px var(--mono,monospace);color:#a99560;}
+.loading-study-heading h2 {font:400 24px/1.5 var(--serif,serif);margin:10px 0;letter-spacing:0;}
+.loading-study-heading p {font-size:12px;color:#8b8c76;margin:0;}
+.loading-study-frame {max-width:1300px;aspect-ratio:16/9;margin:auto;overflow:hidden;background:#020302;}
+.loading-study-frame canvas {display:block;width:100%;height:100%;}
+.loading-study-tools {max-width:1300px;margin:22px auto 0;display:flex;align-items:center;gap:16px;font:10px var(--mono,monospace);}
+.loading-study-tools button {border:1px solid #5e5637;background:#0b0c08;color:#dfdbb1;padding:10px 14px;cursor:pointer;white-space:nowrap;}
+.loading-study-tools input {min-width:50px;flex:1;accent-color:#cfbf75;}
+.loading-study-tools output {min-width:108px;text-align:right;}
+.loading-study-tools a {color:#cfbf75;font:10px var(--mono,monospace);white-space:nowrap;}
+.loading-study-index {display:block;margin:25px 0 0 auto;border:1px solid #827754;background:transparent;color:#d6c99e;padding:12px 18px;font:11px var(--mono,monospace);cursor:pointer;}
+@media(max-width:650px){.loading-study{padding:110px 4% 60px;min-height:100vh;}.loading-study-tools{flex-wrap:wrap;gap:8px;}.loading-study-tools input{order:3;flex-basis:100%;}.loading-study-tools output{margin-left:auto;font-size:9px;}}
+.home-live-clock {position:absolute;pointer-events:none;z-index:1;display:block;}
+.home-live-world {position:absolute;z-index:1;display:block;touch-action:pan-y;}
+.home-rendered-architecture:has(.home-live-world) .home-architecture-video {display:none;}
+.odyssey-section {position:relative;height:220vh;min-height:1100px;background:#1b292b;}
+.odyssey-stage {position:sticky;top:0;height:100vh;width:100%;overflow:hidden;background:#293b3b;}
+.odyssey-canvas {display:block;width:100%;height:100%;touch-action:pan-y;cursor:grab;outline-offset:-4px;}
+.odyssey-canvas:active {cursor:grabbing;}
+.odyssey-heading {position:absolute;z-index:2;left:6%;top:24%;max-width:290px;pointer-events:none;color:#c8ae78;text-shadow:0 1px 8px #151f1b;}
+.odyssey-heading h2 {display:grid;gap:5px;font-family:var(--serif,serif);font-size:21px;font-weight:400;line-height:1.55;margin:13px 0 14px;letter-spacing:0;}
+.odyssey-scene-index,.odyssey-scene-credit {display:block;font-family:var(--mono,monospace);font-size:8px;line-height:1.5;letter-spacing:0;}
+.odyssey-prologue {position:relative;background:#202924;color:#d7d7c8;padding:130px 6% 125px;}
+.odyssey-prologue-inner {max-width:1500px;margin:auto;display:grid;grid-template-columns:minmax(0,1.38fr) minmax(300px,.8fr);align-items:center;gap:8%;}
+.odyssey-prologue figure {margin:0;min-width:0;}
+.odyssey-prologue figure img {display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;}
+.odyssey-prologue figcaption {display:flex;justify-content:space-between;gap:15px;margin-top:17px;color:#acaa96;font-family:var(--mono,monospace);font-size:9px;line-height:1.6;}
+.odyssey-prologue a {color:inherit;text-decoration:none;}
+.odyssey-prologue figcaption a,.odyssey-enter {display:inline-flex;align-items:center;gap:8px;}
+.odyssey-prologue svg {width:15px;height:15px;}
+.odyssey-prologue-copy small {font:9px var(--mono,monospace);color:#b7a16f;}
+.odyssey-prologue-copy h2 {font:400 31px/1.5 var(--serif,serif);letter-spacing:0;color:#e0d3ae;margin:18px 0 10px;}
+.odyssey-prologue-copy p {font-size:13px;line-height:2;color:#b6bdb0;margin:18px 0;}
+.odyssey-prologue-copy .odyssey-original-name {font:italic 15px/1.5 Georgia,serif;color:#a49b80;margin-bottom:29px;}
+.odyssey-reinterpretation {border-top:1px solid #76847546;padding-top:20px;margin-top:25px;}
+.odyssey-reinterpretation h3 {font:400 15px/1.5 var(--serif,serif);color:#d4c49d;margin:0;}
+.odyssey-prologue-copy .odyssey-enter {font-size:11px;color:#cdb174;margin-top:12px;padding:8px 0;border-bottom:1px solid #b59a5a80;}
+.odyssey-prologue::after {content:"";position:absolute;bottom:0;left:0;right:0;height:75px;background:linear-gradient(transparent,#1b292b);pointer-events:none;}
+.odyssey-tools {position:absolute;z-index:3;right:6%;top:19%;display:flex;gap:8px;}
+.odyssey-tools button {display:grid;place-items:center;width:34px;height:34px;padding:0;border:1px solid #d2c7a270;border-radius:4px;background:#1d292ac9;color:#e3d7b6;cursor:pointer;}
+.odyssey-tools button:hover {background:#35403f;}
+.odyssey-tools svg {width:15px;height:15px;}
+@media(max-width:700px) {.odyssey-heading {top:23%;left:6%;max-width:190px;}.odyssey-heading h2 {font-size:16px;}.odyssey-scene-index,.odyssey-scene-credit {font-size:7px;}.odyssey-prologue {padding:100px 7% 95px;}.odyssey-prologue-inner {grid-template-columns:minmax(0,1fr);gap:38px;}.odyssey-prologue-copy h2 {font-size:27px;}.odyssey-prologue figcaption {flex-wrap:wrap;font-size:8px;}}

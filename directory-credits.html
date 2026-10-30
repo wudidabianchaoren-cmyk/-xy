@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>工作台的设计与素材来源 · 脑海宇宙</title><link rel="stylesheet" href="./directory-credits-v132.css?v=32.132"></head><body><main>
+<header><button id="backToDesk" type="button">← 回到工作台</button><h1>工作台的设计与素材来源</h1><p class="byline">脑海宇宙 · 吴翔宇 / 制作说明与参考文献</p></header>
+<p class="abstract">这间工作台将作品、阅读、学习与个人介绍放进同一处日常空间。以下列出设计参考、外部素材及其使用方式，区分本地制作内容与第三方资源。</p>
+<h2>设计与制作方法</h2><p>空间交互参考 Felix Rieseberg 的实体房间呈现。房间、桌面、CRT、台灯与主要物件为本作品集重新建模，通过 React、Three.js 和本地 Blender Cycles 烘焙呈现。未取得参考作者的原生工程，不属于逐像素复刻。</p><p>窗外照片映射到远景圆柱；窗框与雨水是独立的三维层。电视播放既有影片、电影美学书页和杨戬片段。尤利西斯在电视中呈现现有 Cycles 静帧，进入原内容后展示实时三维场景。</p>
+<h2>参考文献与素材</h2><ol class="sources">
+<li><strong>Felix Rieseberg：实体房间与交互设计参考</strong><a href="https://felixrieseberg.com/">个人网站</a> · <a href="https://felixrieseberg.com/made-by-mechanical-means/">Made by Mechanical Means</a><span class="source-meta">使用范围：空间叙事、物件导航的创意参考；未复制参考站素材和音频。</span></li>
+<li><strong>Billie Grace Ward：Berlin Skyline</strong><a href="https://commons.wikimedia.org/wiki/File:Berin_Skyline_(39941687570).jpg">Wikimedia Commons 来源</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a><span class="source-meta">窗外城市背景。已有照片衍生版本经过裁切、调色与圆柱映射。</span></li>
+<li><strong>Rico Cilliers：Potted Plant 02</strong><a href="https://polyhaven.com/a/potted_plant_02">Poly Haven 资源页面</a><span class="source-meta">CC0。扫描盆栽模型与贴图。</span></li>
+<li><strong>Amal Kumar：Wood Planks</strong><a href="https://polyhaven.com/a/wood_planks">Poly Haven 资源页面</a><span class="source-meta">CC0。裁取单板内部并结合暖木色，构成桌面木纹。</span></li>
+<li><strong>Rough Linen：布面纹理</strong><a href="https://polyhaven.com/a/rough_linen">资源页面</a> · <a href="./assets/odyssey/rough_linen/SOURCE.json">本地记录</a><span class="source-meta">CC0。使用既有本地法线与粗糙度纹理。</span></li>
+<li><strong>Ma Shan Zheng：手写字体</strong><a href="https://github.com/google/fonts/tree/main/ofl/mashanzheng">字体来源</a> · <a href="./assets/directory-v119/FONT-OFL.txt">SIL Open Font License</a><span class="source-meta">工作手记及原场景文字。</span></li>
+<li><strong>ezwa：Rain；木材动作声与程序音效</strong><a href="https://commons.wikimedia.org/wiki/File:Rain_(1).ogg">雨声来源</a> · <a href="./assets/yangjian-v112/audio/SOURCE.json">木材声音来源与处理记录</a><span class="source-meta">雨声为作者公开领域奉献，使用本作品集既有处理版。灯与遥控器短开关声为程序合成。</span></li>
+</ol><section class="production"><h2 style="margin-top:0">制作记录</h2><p><a href="./assets/directory-v127/PRODUCTION.md">本地制作记录</a>与<a href="./.verify/v32-126/reference/REA-V126-layout-lighting-startup.md">实际参考及交互核对记录</a>保留资产、建模和运行依据。</p></section><footer>本页沿用已有素材来源记录，未编造发表信息或参考文献日期。</footer>
+</main><script>document.getElementById('backToDesk').onclick=()=>{if(window.parent!==window){window.parent.postMessage({type:'directory:close-sources'},location.origin);}else if(history.length>1){history.back();}else{location.replace('./v31.html?return=1&v=32.132#archiveDirectory');}};</script></body></html>

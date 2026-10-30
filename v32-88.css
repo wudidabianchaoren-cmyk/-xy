@@ -1,0 +1,6 @@
+/* Let the home typography and discoveries join the exact-camera handoff. */
+.courtyard-inscription,.home-discoveries{transition:opacity 900ms ease}
+body.home-intro-playing .courtyard-inscription,body.home-intro-playing .home-discoveries{opacity:0}
+body.home-intro-playing.home-intro-settling .courtyard-inscription,body.home-intro-playing.home-intro-settling .home-discoveries{visibility:visible;opacity:1;pointer-events:none}
+/* Reserve the same top-left space occupied by the persistent volume controls. */
+.image-chapters>.prompt-research{padding-top:180px!important}

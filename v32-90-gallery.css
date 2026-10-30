@@ -1,0 +1,5 @@
+.gallery-caption{pointer-events:auto}
+.gallery-caption .gallery-scroll-hint{color:#b2a58e;font-size:10px;letter-spacing:.06em}
+.gallery-caption .gallery-auto-toggle{margin-left:8px;font:11px ArchiveMono,monospace;border-bottom:1px solid #a9926550;padding:9px 3px;color:#c6ad80}
+.gallery-caption .gallery-auto-toggle:hover,.gallery-caption .gallery-auto-toggle:focus-visible{color:#eee5d5;border-color:#c6ad80}
+@media(prefers-reduced-motion:reduce){.gallery-caption .gallery-auto-toggle{display:none}}

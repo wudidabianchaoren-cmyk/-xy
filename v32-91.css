@@ -1,0 +1,23 @@
+.works-orbit-header{height:88px}
+.works-orbit-header>div,.works-orbit-index-trigger,.works-orbit-close{font-size:12px;line-height:1.4}
+.works-orbit-header>div span:first-child{font-size:14px;letter-spacing:.02em}
+.works-orbit-header>div{gap:24px}
+.works-orbit-close>span{font-size:25px}
+.works-orbit-index{top:88px}
+.works-orbit-scene-title{left:5.5vw;top:49%;gap:20px;max-width:22vw;color:#39392f}
+.works-orbit-scene-title span{font:400 clamp(37px,3vw,57px)/1.2 'STSong','SimSun',serif;letter-spacing:.06em}
+.works-orbit-scene-title small{font:11px/1.5 ArchiveMono,monospace;letter-spacing:.07em;color:#94764d;border-top:1px solid #a38c643d;padding-top:20px}
+.works-orbit-scene-title em{font:italic 21px/1.6 'Times New Roman',serif;color:#786d58;letter-spacing:.015em}
+.works-orbit-archive.is-ring-preview .works-orbit-scene-title span{font-size:28px}
+.works-orbit-archive.is-ring-preview .works-orbit-scene-title em{display:none}
+.works-orbit-title-list span:nth-child(3){font-size:11px;color:#928978}
+.works-orbit-title-list span:nth-child(3).is-active{color:#6b522c}
+/* Restore the actual original diagrams; only surrounding layout is adjusted. */
+.image-chapters>.prompt-research>.prompt-research-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 36px}
+.prompt-research .prompt-plate:last-child{grid-column:1/-1;width:100%;max-width:1160px;justify-self:center}
+.prompt-research .prompt-plate figure{background:#ece7dc;border:1px solid #a694702e}
+.prompt-research .prompt-plate figure img{display:block;width:100%;height:auto;object-fit:contain}
+.prompt-research .prompt-plate-caption h3{font-size:23px;line-height:1.5}
+.prompt-research .prompt-plate-caption p{font-size:14px;line-height:1.95;color:#606256}
+.prompt-research-heading>div>small,.prompt-research-heading>span{font-size:11px;color:#827256}
+.is-project-active .home-discoveries,.is-project-leaving .home-discoveries{visibility:hidden}

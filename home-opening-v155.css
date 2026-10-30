@@ -1,0 +1,5 @@
+/* Preserve the film and ThoughtLine; remove only the requested progress UI. */
+.opening-progress-meta [data-opening-phase],.opening-progress-track{display:none!important}
+.opening-progress-meta{justify-content:flex-end;margin-bottom:0}
+.opening-progress-footer{font-size:10px;letter-spacing:1.1px}
+.opening-film-credit-cover{position:absolute;left:68%;top:79.2%;width:19%;height:3%;background:#000;z-index:2;pointer-events:none}

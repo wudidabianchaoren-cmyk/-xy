@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a0b">
+  <title>中世纪西欧庭院构建全流程 · 脑海宇宙</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080a0b'/%3E%3Cpath d='M7 24V8l9 11L25 8v16' fill='none' stroke='%23c6ad80' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./after-journey.css?v=32.94">
+  <link rel="stylesheet" href="./v32-91-project.css?v=32.94">
+  <link rel="stylesheet" href="./home-creation-v32-93.css?v=32.94">
+  <style>
+    html:has(body[data-project="home-creation"]){scroll-padding-top:0;scroll-snap-type:y proximity}
+    body[data-project="home-creation"]{--home-paper:#eeeae1;--home-ink:#302e28;--home-muted:#737065;--home-copper:#94734d}
+    .home-creation .project-gallery{height:100vh;min-height:0;padding:0}
+    .home-creation .gallery-viewport{height:100%}
+    .home-creation .glass-frame{left:30%;top:12%;width:40%;height:76%}
+    .home-creation .glass-room img{object-fit:contain;background:#050505}
+    .home-creation .glass-reflection{height:12%}
+    .home-creation .reflection-top{top:0;clip-path:polygon(0 0,100% 0,70% 100%,30% 100%)}
+    .home-creation .reflection-bottom{top:88%;clip-path:polygon(30% 0,70% 0,100% 100%,0 100%)}
+    .home-creation .glass-reflection .glass-artwork{left:30%;width:40%;height:633.333333333%}
+    .home-creation .reflection-top .glass-artwork{top:-533.333333333%}
+    .home-creation .reflection-bottom .glass-artwork{top:0}
+    .home-gallery-fallback{position:absolute;left:30%;top:12%;width:40%;height:76%;display:grid;grid-template-rows:1fr 1fr;background:#050505}
+    .home-gallery-fallback img{display:block;width:100%;height:100%;min-height:0;object-fit:contain}
+    .home-creation .is-ready .home-gallery-fallback{display:none}
+    .home-creation #returnWorks{position:fixed;top:22px;left:26px;width:64px;height:64px;display:grid;place-items:center;z-index:30;color:#efe9dc;mix-blend-mode:difference}
+    .home-creation #returnWorks svg{width:38px;height:38px;stroke:currentColor;stroke-width:1.4;fill:none;transition:transform .2s}
+    .home-creation #returnWorks:hover svg{transform:translateX(-5px)}
+    .home-creation .home-process{min-height:100vh;padding:105px 7.5vw 88px;background:var(--home-paper);color:var(--home-ink);display:flex;flex-direction:column;justify-content:center}
+    .home-creation .home-process .eyebrow{color:var(--home-copper);font-size:10px;letter-spacing:.12em}
+    .home-process-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:6vw;margin:0 0 44px}
+    .home-process-heading h2{font-family:'STSong','SimSun',serif;font-weight:400;font-size:clamp(36px,3.15vw,62px);line-height:1.4;letter-spacing:.055em;margin:18px 0 0}
+    .home-process-heading>p{max-width:400px;margin:0 0 6px;font-size:14px;line-height:1.95;color:var(--home-muted)}
+    .home-material-pair{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+    .home-material-pair figure,.home-native-figure{margin:0;min-width:0}
+    .home-material-pair img{width:100%;height:auto;display:block;background:#10110e}
+    .home-process figcaption{display:grid;grid-template-columns:30px 1fr;gap:12px;padding-top:20px;border-top:1px solid #9a927839;margin-top:21px}
+    .home-process figcaption>span{font:10px ArchiveMono,monospace;color:var(--home-copper);padding-top:5px}
+    .home-process figcaption h3{font-family:'STSong','SimSun',serif;font-weight:400;font-size:20px;line-height:1.5;letter-spacing:.04em;margin:0 0 10px}
+    .home-process figcaption p{font-size:13px;line-height:1.95;color:var(--home-muted);margin:0;max-width:580px}
+    .home-native-layout{display:grid;grid-template-columns:minmax(0,1.72fr) minmax(300px,.78fr);gap:4vw;align-items:center}
+    .home-native-figure img{display:block;width:100%;height:auto;background:#31312e}
+    .home-native-figure figcaption{font-size:11px;line-height:1.8;color:var(--home-muted);display:block;border:0;margin:0;padding-top:14px}
+    .home-native-copy h2{font-family:'STSong','SimSun',serif;font-weight:400;font-size:clamp(35px,2.8vw,54px);line-height:1.5;letter-spacing:.04em;margin:22px 0 26px}
+    .home-native-copy p{font-size:14px;line-height:2;color:var(--home-muted);margin:0 0 19px}
+    .home-native-copy .home-native-note{border-top:1px solid #9a927839;padding-top:22px;margin-top:28px;font-size:12px;line-height:1.95}
+    .home-creation .home-web{background:#e5dfd3}
+    .home-web-layout{display:grid;grid-template-columns:.76fr 1.56fr;gap:6vw;align-items:center}
+    .home-web-copy h2{font-family:'STSong','SimSun',serif;font-size:clamp(36px,2.8vw,54px);font-weight:400;line-height:1.5;letter-spacing:.04em;margin:22px 0 27px}
+    .home-web-copy p{font-size:14px;line-height:2;color:var(--home-muted);margin:0 0 20px}
+    .home-web-image{margin:0}
+    .home-web-image img{display:block;width:100%;height:auto;background:#0c0e09}
+    .home-web-image figcaption{display:block;font-size:11px;line-height:1.8;margin:0;border:0;padding-top:14px;color:var(--home-muted)}
+    .home-creation .home-facts{display:flex;gap:40px;border-top:1px solid #9a927839;padding-top:25px;margin-top:32px;color:var(--home-copper);font-size:11px;line-height:1.8}
+    .home-facts span{display:block;font-family:'STSong','SimSun',serif;font-size:16px;color:var(--home-ink);margin-top:8px}
+    .home-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-height:850px) and (min-width:1000px){.home-creation .home-process{padding-top:85px;padding-bottom:65px}.home-process-heading{margin-bottom:30px}.home-process-heading h2{font-size:42px}.home-native-copy h2,.home-web-copy h2{font-size:38px}}
+    @media(prefers-reduced-motion:reduce){.home-creation #returnWorks svg{transition:none}}
+  </style>
+  <link rel="stylesheet" href="./home-creation-v32-94.css?v=32.94">
+  <link rel="stylesheet" href="./assets/works/home-creation-v101/gallery-v101.css?v=32.101">
+  <link rel="stylesheet" href="./home-creation-gallery-v103.css?v=32.103">
+<link rel="stylesheet" href="./glass-gallery-v131.css?v=32.131"><link rel="stylesheet" href="./finish-v138.css?v=32.138"><link rel="stylesheet" href="./refinements-v141.css?v=32.141"><link rel="stylesheet" href="./scene-dist/techtext-v153.css?v=32.153"></head>
+<body class="home-creation" data-project="home-creation" data-gallery-manifest="./assets/works/home-creation-v103/manifest.json" data-gallery-autoplay="true">
+  <a id="returnWorks" class="project-return" data-project-return href="./v31.html?v=32.94&amp;return=1" aria-label="返回主页" title="返回主页"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M30 20H10M20 10 10 20l10 10"/></svg></a>
+  <main>
+    <section id="film" class="project-film" aria-label="十四秒庭院构建动画">
+      <img class="film-poster" src="./blender/home-construction-v32-93/proof-0420.png" alt="庭院构建动画的最终渲染" fetchpriority="high">
+      <video id="projectFilm" class="project-film-video" autoplay playsinline preload="metadata" poster="./blender/home-construction-v32-93/proof-0420.png" data-src="./assets/works/home-creation-v103/construction-v32-103.mp4" aria-label="从立方体、钟楼、侧楼与树林，到材质和灯光的构建动画"></video>
+    </section>
+    <section id="gallery" class="project-gallery" aria-labelledby="projectTitle">
+      <h1 id="projectTitle" class="home-sr-only">中世纪西欧庭院构建全流程</h1>
+      <div class="gallery-viewport">
+        <div id="glassStage" class="glass-stage" role="region" tabindex="0" aria-label="四幅庭院构建图与两幅建筑拼贴，原比例同宽；自动向下观看，滚轮可随时前进或返回">
+          <div class="home-gallery-fallback" aria-hidden="true"><img id="glassFallback" src="./assets/works/home-creation/frame-01.webp" alt="" fetchpriority="high"><img src="./assets/works/home-creation/frame-02.webp" alt="" fetchpriority="high"></div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="home-process" aria-labelledby="aboutTitle">
+      <div class="home-process-heading">
+        <div><span class="eyebrow">01 / 庭院构建全流程</span><h2 id="aboutTitle">中世纪西欧庭院，<br>从立方体到一个世界。</h2></div>
+        <p>以西欧历史建筑为视觉灵感，钟楼、书房与回廊围成一处庭院。前面的十四秒动画依据完整 Blender 原生模型重新编排：从单一立方体开始，逐步展开建筑、树林、材质与光照，鼓点对应空间生长的节奏。</p>
+      </div>
+      <div class="home-material-pair">
+        <figure><img src="./assets/works/home-creation/frame-01.webp" width="1294" height="716" alt="白模阶段的庭院建筑，展示钟楼、屋顶、拱门与场景层次" loading="lazy" decoding="async"><figcaption><span>01</span><div><h3>用白模确认空间</h3><p>先看建筑的轮廓、尺度和前后关系：钟楼作为中心，书房与回廊把视线引回庭院。减少材质干扰后，结构本身更容易判断。</p></div></figcaption></figure>
+        <figure><img src="./assets/works/home-creation/frame-02.webp" width="1294" height="730" alt="Cycles 渲染阶段的庭院，铜钟盘、暖光和地面反射形成整体氛围" loading="lazy" decoding="async"><figcaption><span>02</span><div><h3>让材质与光线互相回应</h3><p>石墙、铜钟盘、树木与灯具逐步进入画面。暖光和地面反射把分散的建筑连成一个整体，也为后来网页中的明暗关系留下参照。</p></div></figcaption></figure>
+      </div>
+    </section>
+    <section id="native" class="home-process home-native" aria-labelledby="nativeTitle">
+      <div class="home-native-layout">
+        <figure class="home-native-figure"><img src="./assets/works/home-creation/frame-03.webp" width="1920" height="1080" alt="Blender 5.1.2 原生场景工作视图，完整保留建筑、树木、相机、灯光和对象界面" loading="lazy" decoding="async"><figcaption>原生 Blender 场景工作视图 · 完整界面保留，记录模型与场景的组织。</figcaption></figure>
+        <div class="home-native-copy"><span class="eyebrow">02 / 原生建模与场景组织</span><h2 id="nativeTitle">画面背后，<br>是一整个场景。</h2><p>建筑、植被、相机与灯光在原生 Blender 工程中组织起来。这里保留工作视图，让模型的范围、空间关系和制作环境能够被看见。</p><p>白模图和渲染图呈现两个制作阶段；工作界面则把目光拉回它们背后的场景。它们共同记录主页从结构到氛围的形成。</p><p class="home-native-note">这张图是原生场景的制作记录。前面的 Cycles 静帧用于展示材质与光线阶段，当前浏览器中的主页另由实时渲染运行。</p></div>
+      </div>
+    </section>
+    <section id="web" class="home-process home-web" aria-labelledby="webTitle">
+      <div class="home-web-layout">
+        <div class="home-web-copy"><span class="eyebrow">03 / 从离线渲染到实时交互</span><h2 id="webTitle">把它带进网页，<br>让人可以发现。</h2><p>原生场景的几何与材质被接入浏览器。静态间接光和接触遮蔽使用实际烘焙；移动的直接光、阴影以及场景中的交互继续实时计算。</p><p>钟盘、窗中的光和庭院里的入口，让观看延伸为探索。制作时逐步建立的空间与气氛，也成为主页中可以亲自经过的路径。</p><div class="home-tool-list"><div><strong>Blender 5.1.2</strong><span>原生模型、几何节点构建动画、材质节点与灯光编排。</span></div><div><strong>Cycles</strong><span>离线动画渲染；石材、铜与玻璃在同一场景中回应光线。</span></div><div><strong>Three.js / WebGL</strong><span>主页实时渲染、钟盘运动、动态光影与四处鼠标交互。</span></div><div><strong>Python / FFmpeg</strong><span>阶段动画编排、原创鼓点配乐、剪辑与视频编码。</span></div><div><strong>React / Remotion</strong><span>主页视觉开场，将四处探索入口串成一条光的路径。</span></div><div><strong>HTML / CSS / JavaScript</strong><span>制作图的玻璃反射画廊、滚动切换与页面转场。</span></div></div></div>
+        <figure class="home-web-image"><img src="./assets/works/home-creation/frame-02.webp" width="1294" height="730" alt="庭院的 Cycles 材质与灯光阶段静帧" loading="lazy" decoding="async"><figcaption>材质与灯光阶段 · Cycles 静帧。网页中的动态光照与交互在浏览器里运行。</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <div class="project-arrival" aria-hidden="true"></div>
+  <script src="./work-project.js?v=32.94"></script>
+  <script src="./glass-gallery-v131.js?v=32.131"></script>
+<script src="./navigation-v141.js?v=32.141"></script><script type="module" src="./scene-dist/techtext-v153.js?v=32.153"></script></body>
+</html>
