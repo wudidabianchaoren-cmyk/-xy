@@ -176,8 +176,12 @@ export async function createRoom(host:HTMLElement,paper:HTMLElement,events:Event
    (status as any).directProgram={visible:nativeTV.visible&&screen.status.category===0,sourceFrames:screen.status.videoFrames,droppedFrames:screen.status.videoDroppedFrames,frameIntervalMs:screen.status.videoFrameIntervalMs,originalSource:true};
    const exterior=nativeOverlay.getObjectByName('V132 layered exterior rain / gravity and drag');if(exterior)exterior.visible=!moving&&poseAligned;
    paperMesh.visible=paperBack.visible=noteOpen||paperAmount>.001;
-   if(nativeReady&&(freshProgramFrame||ms-lastNativeDraw>=1000/30-1)){
-    lastNativeDraw=ms;
+   const liveProgram=nativeTV.visible&&screen.status.videoReady&&!noteOpen&&paperAmount<.001;
+   const screenVisibilityChanged=nativeTV.visible!==(status as any).programVisible;
+   // A 25/30 FPS film already drives its own updates. Do not interleave another
+   // 30 Hz redraw clock and turn one film into 50/60 costly texture uploads.
+   if(nativeReady&&(screenVisibilityChanged||freshProgramFrame||!liveProgram&&ms-lastNativeDraw>=1000/30-1)){
+    lastNativeDraw=ms;(status as any).programVisible=nativeTV.visible;
     const source=nativeLayer?.querySelector('video') as HTMLVideoElement|null;
     if(source&&source!==wetSource){wetTexture?.dispose();wetSource=source;wetTexture=new THREE.VideoTexture(source);wetTexture.colorSpace=THREE.NoColorSpace;wetGlassMaterial.uniforms.nativeImage.value=wetTexture;}
     wetGlass.visible=!!wetTexture&&!moving&&poseAligned;wetGlassMaterial.uniforms.wetTime.value=elapsed;wetGlassMaterial.uniforms.viewport.value.set(renderer.domElement.width,renderer.domElement.height);

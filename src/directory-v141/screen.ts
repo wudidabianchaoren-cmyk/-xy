@@ -43,7 +43,7 @@ export async function createScreen(options:{nativeVideo?:boolean}={}){
   else{video.pause();if(status.category===1){if(status.book===0){image(COVER);const p=Math.max(1,status.page);for(let i=Math.max(1,p-2);i<=Math.min(26,p+3);i++)image(pageURL(i));}else image(GIANT);}else image(status.category===2?LEARNING:PORTRAIT);}
  }
  function pageURL(p:number){return `./assets/reading/cinema-aesthetics/page-${String(p).padStart(3,'0')}.jpg`;}
- function reset(){dirty=true;videoLayer.active.value=0;lastAverage=-1;lastAdvance=lastT;welcomeUntil=0;mediaForState();notifyReader();}
+ function reset(){dirty=true;videoLayer.active.value=0;status.videoReady=false;lastAverage=-1;lastAdvance=lastT;welcomeUntil=0;mediaForState();notifyReader();}
  function select(i:number){status.category=Math.max(0,Math.min(3,i|0));status.page=0;readerAuto=false;turn=null;reset();}
  function book(i:number){status.category=1;status.book=((i|0)%3+3)%3;status.page=0;status.auto=false;readerAuto=false;turn=null;reset();}
  function work(i:number){status.category=0;status.work=((i|0)%WORKS.length+WORKS.length)%WORKS.length;readerAuto=false;turn=null;reset();}
@@ -92,7 +92,7 @@ export async function createScreen(options:{nativeVideo?:boolean}={}){
   osd('电影美学',status.reader.pageLabel);
  }
  function sampleAverage(source:CanvasImageSource,t:number){lastAverage=t;sample.drawImage(source,0,0,24,18);const data=sample.getImageData(0,0,24,18).data;let r=0,g=0,b=0;for(let i=0;i<data.length;i+=4){r+=data[i];g+=data[i+1];b+=data[i+2];}const n=data.length/4*255;average.setRGB(r/n,g/n,b/n,THREE.SRGBColorSpace);}
- let powered=true;function power(on:boolean){dirty=true;powered=on;if(!on)videoLayer.active.value=0;if(on&&powered)mediaForState();else video.pause();notifyReader();}
+ let powered=true;function power(on:boolean){dirty=true;powered=on;if(!on){videoLayer.active.value=0;status.videoReady=false;}if(on&&powered)mediaForState();else video.pause();notifyReader();}
  function update(t:number){if(!active||disposed)return;lastT=t;status.videoTime=Number.isFinite(video.currentTime)?video.currentTime:0;if(!powered){if(dirty){ctx.fillStyle='#020303';ctx.fillRect(0,0,1024,768);texture.needsUpdate=true;average.setRGB(.001,.001,.001);dirty=false;}return;}
   if(lastAdvance<0)lastAdvance=t;
   if(isReader()){if(readerAuto&&t-lastAdvance>4){turnPage(1,false);lastAdvance=t;}}else if(status.auto&&t-lastAdvance>16){next();lastAdvance=t;}
@@ -118,7 +118,7 @@ export async function createScreen(options:{nativeVideo?:boolean}={}){
   if(!hasVideo&&t-lastAverage>.5)sampleAverage(canvas,t);
   texture.needsUpdate=true;
  }
- function setActive(on:boolean){active=on;if(on&&powered){dirty=true;mediaForState();}else{videoLayer.active.value=0;video.pause();}}
+ function setActive(on:boolean){active=on;if(on&&powered){dirty=true;mediaForState();}else{videoLayer.active.value=0;status.videoReady=false;video.pause();}}
   function destroy(){disposed=true;active=false;readerListener=undefined;turn=null;videoLayer.active.value=0;video.cancelVideoFrameCallback(videoFrameCallback);video.pause();video.removeAttribute('src');video.load();texture.dispose();videoTexture.dispose();imageCache.clear();pending.clear();}
  await Promise.race([imageInitial(),new Promise<void>(r=>setTimeout(r,1200))]);mediaForState();
  async function imageInitial(){image(WORKS[0].poster);await pending.get(WORKS[0].poster);}
