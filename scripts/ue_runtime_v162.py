@@ -82,6 +82,7 @@ def tick(dt):
        while isinstance(source,u.MaterialInstanceDynamic):source=source.get_editor_property('parent')
        if source and any(s in source.get_name().lower()for s in['historicalmail','wool']):crewMID.append(m if isinstance(m,u.MaterialInstanceDynamic)else c.create_dynamic_material_instance(i))
   if not active or paused:
+   if roomMedia and roomMedia['player'].is_playing():roomMedia['player'].pause()
    import ue_stream_v164
    ue_stream_v164.set_active(False)
    if realtime is not False:
@@ -145,8 +146,8 @@ def tick(dt):
      for part,lag,amp in[('Inner',0,.22),('Outer',-.72,.14)]:
       wing=cache.get('V162 Gull '+str(i)+' Gull'+part+name)
       if wing:wing.set_actor_relative_rotation(u.Rotator(pitch=side*math.degrees(math.sin(clock*(2.2+i*.06)+i*1.37+lag)*amp),yaw=0,roll=0),False,False)
-  # Realtime already draws the active viewport. Invalidating every tick also
-  # invalidates editor hit proxies, causing unnecessary synchronous redraw work.
+  # Force a fresh original viewport frame even after an editor realtime override.
+  levels.editor_invalidate_viewports()
   if now-lastReport>1:lastReport=now;ue_io_v173.report({'scene':scene,'time':clock,'paused':paused,'active':active,'at':time.time(),'actors':len(cache),'boatPose':boatPose,'mirrorReady':bool(mirror),'homeLeafMaterials':len(homeLeafMID),'gulls':sum('GullBody'in k for k in cache)},'motion')
  except (PermissionError,FileNotFoundError,json.JSONDecodeError):pass
  except Exception as e:

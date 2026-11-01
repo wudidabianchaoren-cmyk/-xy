@@ -50,7 +50,7 @@ def run():
         import ue_io_v173
         io_source = Path(ue_io_v173.__file__)
         io_tree = ast.parse(io_source.read_text(encoding='utf-8-sig'))
-        io_functions = [node for node in io_tree.body if isinstance(node, ast.FunctionDef) and node.name in ('report', 'job')]
+        io_functions = [node for node in io_tree.body if isinstance(node, ast.FunctionDef) and node.name in ('report', 'job', 'control')]
         exec(compile(ast.Module(body=io_functions, type_ignores=[]), str(io_source), 'exec'), ue_io_v173.__dict__)
         # Leave the running control-reader thread intact. Its old report slot
         # is no longer used; the independent writer also works before input exists.
@@ -95,6 +95,40 @@ def run():
             graph[package] = dependencies
             pending.extend(name for name in dependencies if name not in graph)
         (OUT / 'studio-registry-dependencies.json').write_text(json.dumps({'entry': '/Game/V162/Studio', 'readOnly': True, 'packages': sorted(graph), 'graph': graph}, indent=2), encoding='utf-8')
+    elif kind == 'tv-clear':
+        import ue_room_display_v174, ue_runtime_v162
+        state = ue_runtime_v162.roomMedia
+        assert state, 'Open the native room before updating its CRT'
+        result = importlib.reload(ue_room_display_v174).prepare(ue_runtime_v162.cache, state)
+        (P / '.verify/v32-174/tv-clear.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
+    elif kind == 'capture-inspect':
+        captures = []
+        for capture in u.ObjectIterator(u.MediaCapture):
+            if 'PixelStreaming' not in capture.get_class().get_name():
+                continue
+            captures.append({'name': capture.get_name(), 'class': capture.get_class().get_name(), 'state': str(capture.get_state())})
+        outputs = [{'name': output.get_name(), 'class': output.get_class().get_name(), 'buffers': output.get_editor_property('number_of_texture_buffers')} for output in u.ObjectIterator(u.MediaOutput) if 'PixelStreaming' in output.get_class().get_name()]
+        (P / '.verify/v32-174/captures.json').write_text(json.dumps({'captures': captures, 'outputs': outputs}, indent=2), encoding='utf-8')
+    elif kind == 'v174-inspect':
+        import ue_io_v173, ue_realtime_v174, ue_runtime_v162
+        rt = ue_realtime_v174.latest[1] or {}
+        disk = ue_io_v173.latest[1] or {}
+        media = ue_runtime_v162.roomMedia or {}
+        material = u.load_asset('/Game/V173/NativeCRT_Contain')
+        properties = {}
+        for key in ('has_pixel_animation', 'enable_responsive_aa', 'shading_model'):
+            try: properties[key] = str(material.get_editor_property(key))
+            except Exception as exc: properties[key] = str(exc)
+        texture = media.get('texture')
+        texture_properties = {}
+        if texture:
+            for key in ('srgb', 'auto_clear', 'enable_gen_mips', 'new_style_output', 'output_format'):
+                try: texture_properties[key] = str(texture.get_editor_property(key))
+                except Exception as exc: texture_properties[key] = str(exc)
+        result = {'realtime': {'seq': rt.get('seq'), 'at': rt.get('at'), 'error': ue_realtime_v174.error, 'workerAlive': ue_realtime_v174.worker.is_alive() if ue_realtime_v174.worker else False},
+                  'file': {'seq': disk.get('seq'), 'at': disk.get('at')}, 'material': properties, 'texture': texture_properties,
+                  'cvars': {key: u.SystemLibrary.get_console_variable_string_value(key) for key in ('PixelStreaming2.Encoder.LatencyMode', 'PixelStreaming2.Encoder.QualityPreset', 'PixelStreaming2.DecoupleFramerate', 'r.ScreenPercentage', 'r.TSR.History.SampleCount')}}
+        (P / '.verify/v32-174/native-inspect.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
     elif kind == 'quality-read':
         from ue_stability_v163 import QUALITY
         from ue_art_v164 import QUALITY as LATER_QUALITY

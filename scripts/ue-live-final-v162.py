@@ -85,7 +85,8 @@ def tick(dt):
    if v.get('night',False)!=lastNight:
     lastNight=v.get('night',False)
     for a,power,col in sunDay:a.light_component.set_intensity(.4 if lastNight else power);a.light_component.set_light_color(u.LinearColor(.35,.48,.75,1)if lastNight else col)
-   report.update(cameraWrites=cameraWrites,verticalFov=bool(v.get('verticalFov')),horizontalFov=hfov)
+   if nextStamp!=stamp:report['controlAgeMs']=max(0.,time.time()*1000-v.get('at',time.time()*1000))
+   report.update(inputDelivery='loopback-udp'if v.get('bridgeProtocol')=='portfolio-numeric-v174'else'file',cameraWrites=cameraWrites,verticalFov=bool(v.get('verticalFov')),horizontalFov=hfov)
    stamp=nextStamp;report.update(seq=v.get('seq'),scene=scene,map=maps[scene],camera=p,target=t,night=v.get('night',False),at=time.time());note()
   import ue_frame_stats_v173
   _,latest_input=ue_io_v173.control()

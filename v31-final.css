@@ -2854,3 +2854,7 @@ body.odyssey-dialog-open { overflow:hidden; }
  .life-process-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 13px!important; }
  .life-process-grid img { height:105px!important; aspect-ratio:auto!important; }
 }
+
+/* V174: raising scene brightness preserves black, instead of adding a white veil. */
+body.is-display-raised .home-rendered-architecture,
+body.is-display-raised .directory-room-host { filter: brightness(var(--scene-display-gain,1)); }

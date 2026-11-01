@@ -40,3 +40,5 @@
 **/*token*
 **/*.pem
 **/*.key
+
+!tools/pixel-streaming-v149/realtime-control-v174.cjs

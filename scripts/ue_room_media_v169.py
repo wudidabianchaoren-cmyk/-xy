@@ -6,7 +6,7 @@ FILES=['assets/works/physical-universe-v103/film.mp4','assets/works/after-journe
 SESSION={}
 def pair():
  player=u.new_object(u.MediaPlayer);player.set_desired_player_name('ElectraPlayer');player.set_editor_property('play_on_open',True);player.set_looping(True)
- texture=u.new_object(u.MediaTexture);texture.set_editor_property('new_style_output',True);texture.set_media_player(player);texture.update_resource()
+ texture=u.new_object(u.MediaTexture);texture.set_editor_property('new_style_output',True);texture.set_editor_property('enable_gen_mips',True);texture.set_media_player(player);texture.update_resource()
  return player,texture
 def update(cache,data,state):
  # Resolve the existing screen once per room visit. Repeating reflected mesh
@@ -21,10 +21,10 @@ def update(cache,data,state):
  work=max(0,min(4,int(data.get('roomWork',0))));on=bool(data.get('roomTV',True))
  if not state.get('containConfigured'):
   import ue_room_display_v173
-  material=u.load_asset('/Game/V173/NativeCRT_Contain')
+  material=u.load_asset('/Game/V174/NativeCRT_Clear')or u.load_asset('/Game/V173/NativeCRT_Contain')
   if material:
    screen=next(a for a in cache.values()if isinstance(a,u.StaticMeshActor)and a.static_mesh_component.static_mesh and a.static_mesh_component.static_mesh.get_name()=='CRT_live_screen')
-   state['mid']=screen.static_mesh_component.create_dynamic_material_instance(0,material);state['mid'].set_texture_parameter_value('Program',state['texture']);state['on']=None;state['containConfigured']=True
+   state['mid']=screen.static_mesh_component.create_dynamic_material_instance(0,material);state['mid'].set_texture_parameter_value('Program',state['texture']);state['on']=None;state['containConfigured']=True;state['clearConfigured']=material.get_name()=='NativeCRT_Clear'
  if state['pending'] is not None and state['pending']!=work and state['work']==work:
   state['standby'].close();state['pending']=None;state['prepared']=False
  if state['work']!=work and state['pending']!=work:

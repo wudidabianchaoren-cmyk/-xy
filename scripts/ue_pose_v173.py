@@ -17,7 +17,7 @@ def blend(a, b, fraction):
         return b
     output = dict(b)
     for name in ('camera', 'target'):
-        if name in a and name in b:
+        if name in a and name in b and not (b.get('scene')=='room' and b.get('directCamera', False)):
             output[name] = vector(a[name], b[name], fraction)
     originals = {item['id']: item for item in a.get('roomProps', [])}
     props = []

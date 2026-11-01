@@ -18,6 +18,7 @@ function createControlServer(options={}){
  let nextSeq=Number.isSafeInteger(controls.seq)?controls.seq:0,tail=Promise.resolve(),signalling=null;
  const completed=new Map();
  const stats={accepted:0,committed:0,invalid:0,failed:0,retries:0,writeAttempts:0,pending:0,lastSeq:nextSeq,lastError:null};
+ const realtime=options.realtimePort?require('./realtime-control-v174.cjs').realtimeControl({port:options.realtimePort,commit,stats}):null;
  const status=()=>({...stats,inputFile});
  async function commit(snapshot){
   const temporary=inputFile+'.tmp-'+process.pid+'-'+snapshot.seq;
@@ -46,11 +47,11 @@ function createControlServer(options={}){
    if(input.active===false&&input.clientId&&controls.ownerClient!==input.clientId){stats.pending--;return{ok:true,ignored:true,owned:false,seq:controls.seq};}
    if(input.active!==false&&input.clientId&&controls.ownerClient&&controls.ownerClient!==input.clientId&&controls.active!==false&&Date.now()-controls.at<5000&&!input.claim){stats.pending--;return{ok:true,owned:false,seq:controls.seq};}
    const snapshot={...controls,seq:++nextSeq,at:Date.now(),ownerClient:input.clientId||controls.ownerClient};
-   for(const key of ['theta','phi','radius','night','paused','camera','target','scene','fov','verticalFov','roomWork','roomTime','roomTV','roomProps','lamp','active','homeParts','homeKey','homeWest'])if(Object.hasOwn(input,key))snapshot[key]=input[key];
+   for(const key of ['theta','phi','radius','night','paused','camera','target','scene','fov','verticalFov','roomWork','roomTime','roomTV','roomProps','lamp','active','homeParts','homeKey','homeWest','directCamera'])if(Object.hasOwn(input,key))snapshot[key]=input[key];
    if(input.reset)snapshot.reset++;
    try{
-    const attempts=await commit(snapshot);controls=snapshot;stats.committed++;stats.lastSeq=snapshot.seq;stats.lastError=null;
-    return{ok:true,owned:true,seq:snapshot.seq,persisted:true,attempts};
+    const attempts=await (realtime?realtime.send(snapshot):commit(snapshot));controls=snapshot;stats.committed++;stats.lastSeq=snapshot.seq;stats.lastError=null;
+    return{ok:true,owned:true,seq:snapshot.seq,persisted:!realtime,delivery:realtime?'loopback-udp':'file',attempts};
    }catch(error){stats.failed++;stats.lastError={code:error.code||'UNKNOWN',message:error.message,seq:snapshot.seq,at:Date.now()};throw error;}
    finally{stats.pending--;}
   });
@@ -74,7 +75,7 @@ function createControlServer(options={}){
     req.on('end',()=>{
      if(tooLarge)return;let input;
      try{input=JSON.parse(body);}catch{stats.invalid++;return reply(res,400,{ok:false,code:'INVALID_JSON',retryable:false});}
-     const valid=input&&typeof input==='object'&&!Array.isArray(input)&&['theta','phi','radius'].every(k=>!Object.hasOwn(input,k)||Number.isFinite(input[k]))&&['night','paused','reset','homeWest','claim','roomTV','verticalFov'].every(k=>!Object.hasOwn(input,k)||typeof input[k]==='boolean');
+     const valid=input&&typeof input==='object'&&!Array.isArray(input)&&['theta','phi','radius'].every(k=>!Object.hasOwn(input,k)||Number.isFinite(input[k]))&&['night','paused','reset','homeWest','claim','roomTV','verticalFov','directCamera','active'].every(k=>!Object.hasOwn(input,k)||typeof input[k]==='boolean');
      if(input.roomProps&&(!Array.isArray(input.roomProps)||input.roomProps.length>9||input.roomProps.some(d=>!/^book[0-2]$|^tape[0-4]$|^notepad$/.test(d.id)||typeof d.visible!=='boolean'||![['p',3],['q',4],['s',3]].every(([k,n])=>Array.isArray(d[k])&&d[k].length===n&&d[k].every(x=>Number.isFinite(x)&&Math.abs(x)<1000)))))return reply(res,400,{ok:false,code:'INVALID_ROOM_PROPS'});
      if(input.roomProps?.some(d=>(d.commit!==undefined&&typeof d.commit!=='boolean')||(d.glow!==undefined&&(!Array.isArray(d.glow)||d.glow.length!==4||!d.glow.every(x=>Number.isFinite(x)&&Math.abs(x)<1000)||d.glow[3]<0||d.glow[3]>1))))return reply(res,400,{ok:false,code:'INVALID_ROOM_TRANSFER'});
      if(input.homeParts&&(!Array.isArray(input.homeParts)||input.homeParts.length>64||input.homeParts.some(d=>typeof d.id!=='string'||d.id.length>160||![['p',3],['q',4],['s',3]].every(([k,n])=>Array.isArray(d[k])&&d[k].length===n&&d[k].every(x=>Number.isFinite(x)&&Math.abs(x)<100000)))))return reply(res,400,{ok:false,code:'INVALID_PARTS'});
@@ -85,7 +86,8 @@ function createControlServer(options={}){
   res.writeHead(404);res.end();
  });
  if(options.signalling!==false)signalling=new SignallingServer({httpServer:server,streamerPort:8888,streamerWsOptions:{host:'127.0.0.1'},peerOptions:{iceServers:[]},maxSubscribers:3});
- return{server,status,inputFile,settled:()=>tail};
+ if(realtime)server.once('close',()=>realtime.close());
+ return{server,status,inputFile,settled:async()=>{await tail;if(realtime)await realtime.settled();}};
 }
 module.exports={createControlServer};
-if(require.main===module){const{server}=createControlServer();server.listen(8089,'127.0.0.1',()=>console.log('Cove local UE signalling/control: 127.0.0.1:8089; streamer 127.0.0.1:8888'));}
+if(require.main===module){const{server}=createControlServer({realtimePort:8891});server.listen(8089,'127.0.0.1',()=>console.log('Cove local UE signalling/control: 127.0.0.1:8089; streamer 127.0.0.1:8888'));}

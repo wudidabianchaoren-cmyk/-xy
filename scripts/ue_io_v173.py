@@ -34,7 +34,8 @@ def start():
 
 def control():
     start()
-    return latest
+    import ue_realtime_v174
+    return ue_realtime_v174.current(latest)
 
 
 def report(data, name='live'):

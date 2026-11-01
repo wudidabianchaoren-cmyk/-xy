@@ -146,12 +146,14 @@
   function setBrightness(value) {
     const level = Math.max(60, Math.min(115, Math.round(value)));
     const raised = level > 100;
-    const opacity = level < 100 ? (100 - level) / 40 * .24 : raised ? (level - 100) / 15 * .12 : 0;
+    const opacity = level < 100 ? (100 - level) / 40 * .24 : 0;
     brightnessValue.value = String(level);
-    veil.style.background = raised ? "#ffffff" : "#020405";
+    veil.style.background = "#020405";
+    document.documentElement.style.setProperty("--scene-display-gain", String(raised ? 1 + (level - 100) / 15 * .18 : 1));
+    document.body.classList.toggle("is-display-raised", raised);
     veil.style.opacity = opacity.toFixed(3);
     veil.style.visibility = opacity > 0 ? "visible" : "hidden";
-    document.body.classList.toggle("is-display-adjusted", opacity > 0);
+    document.body.classList.toggle("is-display-adjusted", opacity > 0 || raised);
     storage.set("v31-brightness", String(level));
   }
   const savedBrightness = Number(storage.get("v31-brightness", "100"));

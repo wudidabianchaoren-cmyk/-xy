@@ -1,6 +1,6 @@
 import './ue-socket-v169';
 import {Config,PixelStreaming} from '../tools/pixel-streaming-v149/node_modules/@epicgames-ps/lib-pixelstreamingfrontend-ue5.8/dist/esm/pixelstreamingfrontend.js';
-type View={position:number[];target:number[];fov:number;roomTime?:number;roomWork?:number;roomTV?:boolean;roomProps?:any[];night?:boolean;paused?:boolean;lamp?:boolean;enabled?:boolean;homeParts?:any[];homeKey?:number[];homeWest?:boolean};
+type View={position:number[];target:number[];fov:number;roomTime?:number;roomWork?:number;roomTV?:boolean;roomProps?:any[];night?:boolean;paused?:boolean;lamp?:boolean;enabled?:boolean;homeParts?:any[];homeKey?:number[];homeWest?:boolean;directCamera?:boolean};
 type Surface=any;
 const rootWindow=(()=>{try{return window.top as any}catch{return window as any}})();
 
@@ -49,21 +49,22 @@ function hub(){
   if(!h.connected){if(performance.now()>h.retryAt){h.connecting=true;h.connectingAt=performance.now();h.retryAt=performance.now()+12000;h.connections++;player.connect();}return;}
   watch();if(h.sending)return;
   const v=s.camera(),round=(p:number[])=>p.map(n=>Math.round(n*100000)/100000);
-  const data={scene:s.scene,camera:round(v.position),target:round(v.target),fov:v.fov,verticalFov:true,roomTime:v.roomTime===undefined?undefined:Math.round(v.roomTime*2)/2,roomWork:v.roomWork,roomTV:v.roomTV,roomProps:v.roomProps,night:v.night??false,paused:v.paused??(!s.visible()&&!!s.warmed&&performance.now()-s.status.readyAt>1200),lamp:v.lamp??true,homeParts:v.homeParts??[],homeKey:v.homeKey,homeWest:v.homeWest,active:true,claim:h.claim,clientId:h.id,clientSeq:++h.seq};
-  h.outputPaused=data.paused;const key=JSON.stringify({...data,clientSeq:0,claim:false});if(key===h.last&&performance.now()-h.sentAt<1000){if(performance.now()-h.lastHealth>(s.status.ready?250:80))void health();return;}
+  const data={scene:s.scene,camera:round(v.position),target:round(v.target),fov:v.fov,verticalFov:true,directCamera:v.directCamera??false,roomTime:v.roomTime===undefined?undefined:Math.round(v.roomTime*2)/2,roomWork:v.roomWork,roomTV:v.roomTV,roomProps:v.roomProps,night:v.night??false,paused:v.paused??(!s.visible()&&!!s.warmed&&performance.now()-s.status.readyAt>1200),lamp:v.lamp??true,homeParts:v.homeParts??[],homeKey:v.homeKey,homeWest:v.homeWest,active:true,claim:h.claim,clientId:h.id,clientSeq:++h.seq};
+  h.outputPaused=data.paused;const key=JSON.stringify({...data,clientSeq:0,claim:false});if(key===h.last&&performance.now()-h.sentAt<1000){if(performance.now()-h.lastHealth>(v.directCamera||s.status.appliedSeq<s.status.lastSeq?22:s.status.ready?180:80))void health();return;}
   h.sending=true;const controlAbort=new AbortController();h.controlAbort=controlAbort;
   try{const r=await fetch(endpoint+'/control',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:AbortSignal.any([AbortSignal.timeout(1600),controlAbort.signal])}).then(r=>r.json());if(!r.ok)throw Error(r.code||'Camera update failed');if(s!==h.owner)return;if(r.owned===false){s.status.blocked=true;hide(s);s.caption.textContent='点击画面继续';return;}
    if(s.status.lastTransportError)s.status.lastRecoveredAt=performance.now();s.status.lastTransportError='';s.status.blocked=false;s.status.connected=true;s.status.sent++;s.status.lastSeq=r.seq;if(!s.firstSeq)s.firstSeq=r.seq;h.claim=false;h.last=key;h.sentAt=performance.now();
-   if(performance.now()-h.lastHealth>(s.status.ready?50:50))void health();
+   if(performance.now()-h.lastHealth>(v.directCamera?22:50))void health();
    const video=transport.querySelector('video');if(video&&(!data.paused||!s.status.ready)&&video.paused)void video.play().catch(()=>{});
    // The engine freezes its scene clock; keep the WebRTC decoder consuming frames.
   }catch(e){if(s!==h.owner||controlAbort.signal.aborted)return;s.status.lastTransportError=String(e);s.status.lastTransportFailureAt=performance.now();s.status.transientRetries++;if(!s.status.ready&&performance.now()-s.status.switchedAt>6000)s.caption.textContent='正在连接实时场景 · 点击重试';}finally{if(h.controlAbort===controlAbort)h.controlAbort=null;h.sending=false;}
  }
  h.update=update;h.health=health;h.hide=hide;
- player.addEventListener('videoInitialized',()=>{watch();player.play();});
+ const reduceReceiverDelay=()=>{try{const pc=(player as any)._webRtcController?.peerConnectionController?.peerConnection as RTCPeerConnection|undefined;let count=0;for(const receiver of pc?.getReceivers()??[]){if(receiver.track?.kind!=='video')continue;const r=receiver as any;const local=/^(127\.0\.0\.1|localhost)$/.test(new URL(endpoint).hostname);if('jitterBufferTarget'in r){r.jitterBufferTarget=local?0:30;count++;}if('playoutDelayHint'in r){r.playoutDelayHint=local?0:.03;count++;}}h.receiverPolicy={propertiesSet:count,localTargetMs:0};}catch(e){h.receiverPolicyError=String(e);}};
+ player.addEventListener('videoInitialized',()=>{reduceReceiverDelay();watch();player.play();});
  const resize=()=>{if(h.destroyed||!h.owner||!h.channelOpen)return;const width=Math.max(1280,Math.min(1920,Math.ceil(h.owner.host.clientWidth*rootWindow.devicePixelRatio/32)*32)),height=width*9/16,video=transport.querySelector('video');h.owner.status.displayResolution=[width,height];if(video?.videoWidth===width&&video?.videoHeight===height)return;player.emitCommand({'Resolution.Width':width,'Resolution.Height':height});};h.resize=resize;
  player.addEventListener('dataChannelOpen',()=>{h.channelOpen=true;resize();setTimeout(resize,500);});
- const connected=()=>{if(h.destroyed)return;h.connected=true;h.connecting=false;h.connectedAt=performance.now();h.retryAt=0;watch();void update();};
+ const connected=()=>{if(h.destroyed)return;h.connected=true;h.connecting=false;h.connectedAt=performance.now();h.retryAt=0;reduceReceiverDelay();watch();void update();};
  player.addEventListener('playStream',connected);
  player.addEventListener('webRtcConnected',connected);
  player.addEventListener('webRtcDisconnected',()=>{h.connected=h.connecting=h.channelOpen=h.serviceReady=false;h.retryAt=performance.now()+1200;h.claim=true;hide(h.owner);h.last='';});
