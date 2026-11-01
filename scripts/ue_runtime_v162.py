@@ -16,16 +16,22 @@ def living_sea(x,y,t):
 def vec(a):return u.Vector(a[0]*100,a[2]*100,a[1]*100)
 def tick(dt):
  global world,cache,clock,last,lastReport,mirror,seaMID,crewMID,nightVolume,nightBlend,realtime,transformCache,keyCache,roomMedia,sailMID,homeLeafMID,cachedScene,mirrorCache,boatPose
- now=time.monotonic()
+ now=time.perf_counter()
  if getattr(builtins,'_zaojing_ue_busy',False):return
  if now-last<1/60:return
  delta=min(.05,now-last)if last else 0;last=now;builtins._zaojing_ue_busy=True
  try:
-  data=json.loads((OUT/'ue-camera-input.json').read_text(encoding='utf-8-sig'));active=data.get('active',True)and time.time()-data.get('at',0)/1000<5.;paused=data.get('paused',False);scene=data.get('scene','myth');ed=u.get_editor_subsystem(u.UnrealEditorSubsystem);levels=u.get_editor_subsystem(u.LevelEditorSubsystem);w=ed.get_editor_world()
+  import ue_io_v173
+  _,data=ue_io_v173.control()
+  if data is None:return
+  active=data.get('active',True)and time.time()-data.get('at',0)/1000<5.;paused=data.get('paused',False);scene=data.get('scene','myth');ed=u.get_editor_subsystem(u.UnrealEditorSubsystem);levels=u.get_editor_subsystem(u.LevelEditorSubsystem);w=ed.get_editor_world()
   import ue_worlds_v165
   resident=w.get_name()=='PortfolioLiveV165'and ue_worlds_v165.active==scene
   if not resident and w.get_name()!={'home':'Courtyard','room':'Studio','myth':'FullCoveV162'}.get(scene):return
   if w!=world or scene!=cachedScene:
+   if cachedScene=='room':
+    import ue_room_props_v167
+    ue_room_props_v167.hide_glow()
    if nightVolume:
     try:nightVolume.set_editor_property('blend_weight',0.)
     except Exception:pass
@@ -83,7 +89,12 @@ def tick(dt):
    return
   import ue_stream_v164
   ue_stream_v164.set_active(True)
-  if realtime is not True:u.SystemLibrary.execute_console_command(w,'t.MaxFPS 45');realtime=True
+  if realtime is not True:
+   # The subsystem's True path removes its named override, so pair it with
+   # False first to avoid a missing-override ensure in long-running sessions.
+   levels.editor_set_viewport_realtime(False)
+   levels.editor_set_viewport_realtime(True)
+   u.SystemLibrary.execute_console_command(w,'t.MaxFPS 45');realtime=True
   if not paused:clock+=delta
   if scene=='home':
    for material in homeLeafMID:material.set_scalar_parameter_value('NativeHomeWindTime',clock)
@@ -132,9 +143,8 @@ def tick(dt):
      for part,lag,amp in[('Inner',0,.22),('Outer',-.72,.14)]:
       wing=cache.get('V162 Gull '+str(i)+' Gull'+part+name)
       if wing:wing.set_actor_relative_rotation(u.Rotator(pitch=side*math.degrees(math.sin(clock*(2.2+i*.06)+i*1.37+lag)*amp),yaw=0,roll=0),False,False)
-  # The editor streamer needs an explicit redraw while the editor is in the
-  # background. Invalidate requests a frame; camera cuts are guarded separately.
-  levels.editor_invalidate_viewports()
+  # Realtime already draws the active viewport. Invalidating every tick also
+  # invalidates editor hit proxies, causing unnecessary synchronous redraw work.
   if now-lastReport>1:lastReport=now;(OUT/'native-motion.json').write_text(json.dumps({'scene':scene,'time':clock,'paused':paused,'active':active,'at':time.time(),'actors':len(cache),'boatPose':boatPose,'mirrorReady':bool(mirror),'homeLeafMaterials':len(homeLeafMID),'gulls':sum('GullBody'in k for k in cache)}))
  except (PermissionError,FileNotFoundError,json.JSONDecodeError):pass
  except Exception as e:

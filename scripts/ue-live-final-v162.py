@@ -7,7 +7,9 @@ levels=u.get_editor_subsystem(u.LevelEditorSubsystem);actors=u.get_editor_subsys
 maps={'myth':'/Game/Cove/FullCoveV162','room':'/Game/V162/Studio','home':'/Game/V162/Courtyard'}
 report={'engine':u.SystemLibrary.get_engine_version(),'visibleEditor':False,'offscreen':True,'processId':os.getpid(),'maps':maps,'startedAt':time.time(),'phase':'native viewport starting','errors':[],'mode':'complete native UE viewport / serialized scene ownership'}
 current='myth';stamp=0;jobStamp=0;last=0.;heartbeat=0.;sunDay=[];lastCameraPose=None;lastLamp=None;lastNight=None;cameraWrites=0
-def note():(OUT/'ue-live.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+def note():
+ import ue_io_v173
+ ue_io_v173.report(report)
 def vec(p):return u.Vector(p[0]*100,p[2]*100,p[1]*100)
 def load(scene):
  global current,sunDay,lastCameraPose,lastLamp,lastNight
@@ -17,7 +19,7 @@ def load(scene):
  if scene=='myth':assert {'Vessel','Island'}.issubset(labels),'Cove scene identity failed'
  if scene=='room':assert len(loaded)>300,'Studio scene identity failed'
  if scene=='home':assert sum('HomePart_'in name for name in labels)>80,'Courtyard scene identity failed'
- 
+
  for a in loaded:
   if isinstance(a,u.PostProcessVolume):
    settings=a.get_editor_property('settings');settings.set_editor_property('override_film_grain_intensity',True);settings.set_editor_property('film_grain_intensity',0.);a.set_editor_property('settings',settings)
@@ -33,7 +35,7 @@ initialP=[37,17,49]if initialScene=='myth'else[.02,1.82,3.08]if initialScene=='r
 def tick(dt):
  global stamp,jobStamp,last,heartbeat,lastCameraPose,lastLamp,lastNight,cameraWrites,sunDay
  if getattr(builtins,'_zaojing_ue_busy',False):return
- now=time.monotonic()
+ now=time.perf_counter()
  if now-last<1/120:return
  last=now;builtins._zaojing_ue_busy=True
  try:
@@ -53,9 +55,10 @@ def tick(dt):
      report['phase']='native viewport live';note();lastNight=None;lastLamp=None;lastCameraPose=None;sunDay=[(a,a.light_component.intensity,a.light_component.get_light_color())for a in actors.get_all_level_actors()if isinstance(a,u.DirectionalLight)]
     stamp=0
    job.unlink(missing_ok=True)
-  f=OUT/'ue-camera-input.json'
-  if f.exists()and f.stat().st_mtime_ns!=stamp:
-   nextStamp=f.stat().st_mtime_ns;v=json.loads(f.read_text(encoding='utf-8-sig'));scene=v.get('scene','myth');p=v.get('camera',[37,17,49]);t=v.get('target',[-6,9,-16])
+  import ue_io_v173
+  nextStamp,v=ue_io_v173.control()
+  if v is not None and nextStamp!=stamp:
+   scene=v.get('scene','myth');p=v.get('camera',[37,17,49]);t=v.get('target',[-6,9,-16])
    if scene not in maps:raise ValueError('Unsupported scene')
    if scene!=current:load(scene)
    if len(p)!=3 or len(t)!=3 or not all(isinstance(x,(int,float))and math.isfinite(x)and abs(x)<100000 for x in p+t):raise ValueError('Invalid numeric camera')

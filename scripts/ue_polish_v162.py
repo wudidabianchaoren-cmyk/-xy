@@ -3,6 +3,10 @@ import unreal as u,json
 from pathlib import Path
 P=Path(__file__).resolve().parents[1];OUT=P/'.verify/v32-162'
 def audit():
+ if (P/'.verify/v32-173/request.json').exists():
+  import ue_review_v173,importlib
+  importlib.reload(ue_review_v173).run()
+  return
  if (P/'.verify/v32-172/request.json').exists():
   import ue_review_v172,importlib
   importlib.reload(ue_review_v172).run()

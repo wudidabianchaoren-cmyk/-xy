@@ -1,4 +1,4 @@
-const CACHE='zaojing-native-v171';
+const CACHE='zaojing-native-v173';
 const FILES=['/mythology.html','/scene-dist/mythology-local-v162.js','/scene-dist/mythology-native-v165.js','/assets/odyssey/native-v165/collision.bin.gz','/assets/odyssey/native-v165/collision.json','/assets/native-v171/myth.jpg','/navigation-v152.js','/scene-dist/techtext-v153.js'];
 const ALLOW=new Set(FILES);
 self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);for(const path of FILES){const response=await fetch(path,{cache:'reload'});if(response.ok)await cache.put(path,response);}await self.skipWaiting();})()));

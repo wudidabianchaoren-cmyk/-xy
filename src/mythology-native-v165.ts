@@ -36,14 +36,25 @@ canvas.addEventListener('dblclick',()=>choose(0));
 document.addEventListener('visibilitychange',wake);new MutationObserver(wake).observe(document.body,{attributes:true,attributeFilter:['class']});addEventListener('portfolio:child-return',()=>{controls.resetInteraction();wake();});
 
 async function boot(){
+ const began=performance.now();state.preparation={began,navigationReady:false};
+ // Transfer navigation data while WebRTC connects. Neither decompression nor
+ // BVH construction needs to block the first real scene or the dolly controls.
+ const navigationBytes=fetch('./assets/odyssey/native-v165/collision.bin.gz').then(async response=>{if(!response.ok)throw Error('Coastal navigation data unavailable');return new Response(response.body!.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();});
  const native=await nativeUESurface(host,'myth',()=>({position:camera.position.toArray(),target:controls.lookTarget.toArray(),fov:34,night:!!state.nightMix,paused:state.paused,enabled:!suspended()}),state);state.nativeController=native;
- const response=await fetch('./assets/odyssey/native-v165/collision.bin.gz');if(!response.ok)throw Error('Coastal navigation data unavailable');const bytes=await new Response(response.body!.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer(),header=new Uint32Array(bytes,0,2),positions=new Float32Array(bytes,8,header[0]*3),indices=new Uint32Array(bytes,8+header[0]*12,header[1]);
- geometry=new BufferGeometry();geometry.setAttribute('position',new BufferAttribute(positions,3));geometry.setIndex(new BufferAttribute(indices,1));(geometry as any).boundsTree=new MeshBVH(geometry,{indirect:true});
- land=new Mesh(geometry,new MeshBasicMaterial({side:DoubleSide}));land.raycast=acceleratedRaycast;land.updateMatrixWorld(true);scene.add(land);
- state.navigation={mode:'bounded forward/backward only',fixedDirection:true,source:'original island / no scene rebuild',triangles:indices.length/3};
- const hint=document.querySelector<HTMLElement>('.odyssey-hint');if(hint)hint.textContent='滚轮前后 · 上下拖动靠近或退远 · 左右轻拖环顾 · 双击复位';
+ state.navigation={mode:'bounded dolly / horizontal look +/-15 degrees',fixedDirection:false,source:'original island / no scene rebuild',pending:true};
+ for(const hint of document.querySelectorAll<HTMLElement>('.odyssey-hint,.local-cove-help'))hint.textContent='滚轮前后 · 上下拖动靠近或退远 · 左右轻拖环顾 · 双击复位';
+ canvas.setAttribute('aria-label','实时海湾：滚轮或上下拖动前后观看，左右轻拖各15度环顾，双击复位');
  state.ready=true;state.readyAt=performance.now();state.cameraSettled=true;state.components={sea:true,ship:true,crew:true,island:true,trees:true,shrubs:true,shoreline:true};state.ships=1;state.giant=false;
- processEntry=cottageProcessEntry(scene,camera,canvas,cottage.toArray(),state);document.querySelector<HTMLButtonElement>('[data-odyssey-night]')!.disabled=false;
+ document.querySelector<HTMLButtonElement>('[data-odyssey-night]')!.disabled=false;
  const label=host.querySelector<HTMLElement>('.local-cove-renderer');if(label)label.textContent='本机实时海湾';dispatchEvent(new Event('portfolio:progress'));wake();
+ void navigationBytes.then(async bytes=>{
+  // Let the browser present its controls before the one-time navigation index.
+  await new Promise<void>(resolve=>requestAnimationFrame(()=>setTimeout(resolve,0)));
+  const header=new Uint32Array(bytes,0,2),positions=new Float32Array(bytes,8,header[0]*3),indices=new Uint32Array(bytes,8+header[0]*12,header[1]);
+  geometry=new BufferGeometry();geometry.setAttribute('position',new BufferAttribute(positions,3));geometry.setIndex(new BufferAttribute(indices,1));(geometry as any).boundsTree=new MeshBVH(geometry,{indirect:true});
+  land=new Mesh(geometry,new MeshBasicMaterial({side:DoubleSide}));land.raycast=acceleratedRaycast;land.updateMatrixWorld(true);scene.add(land);
+  state.navigation.pending=false;state.navigation.triangles=indices.length/3;state.preparation.navigationReady=true;state.preparation.navigationReadyAt=performance.now();
+  processEntry=cottageProcessEntry(scene,camera,canvas,cottage.toArray(),state);wake();
+ }).catch(error=>{state.navigation.error=String(error);console.error(error);});
 }
 boot().catch(error=>{state.error=String(error);console.error(error);const text=document.querySelector('.odyssey-preparing p');if(text)text.textContent='海湾连接未完成，请重新连接';});
