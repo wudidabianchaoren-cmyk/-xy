@@ -55,12 +55,16 @@ def frame(next_stamp, data, now):
         stamp = next_stamp; source = target = presented = data; moving = False; changed = True
         return presented
     if stamp != next_stamp:
-        old = blend(source, target, min(1., max(0., (now-began)/duration))) if source is not None else data
-        same_scene = old.get('scene') == data.get('scene') and old.get('active', True) and not old.get('paused', False)
-        duration = min(.040, max(.015, now-began))
-        source = old if same_scene else data
-        target = data; stamp = next_stamp; began = now; changed = True
-        moving = any(source.get(name) != target.get(name) for name in ('camera', 'target', 'roomProps'))
+        pose_changed = target is None or any(target.get(name) != data.get(name) for name in ('scene', 'camera', 'target', 'roomProps'))
+        if pose_changed:
+            old = blend(source, target, min(1., max(0., (now-began)/duration))) if source is not None else data
+            same_scene = old.get('scene') == data.get('scene') and old.get('active', True) and not old.get('paused', False)
+            duration = min(.040, max(.015, now-began))
+            source = old if same_scene else data
+            began = now
+            moving = any(source.get(name) != data.get(name) for name in ('camera', 'target', 'roomProps'))
+        # Metadata/heartbeats must not restart a finished disc's arrival clock.
+        target = data; stamp = next_stamp; changed = True
     fraction = min(1., max(0., (now-began)/duration))
     presented = blend(source, target, fraction)
     moving = moving and fraction < 1
