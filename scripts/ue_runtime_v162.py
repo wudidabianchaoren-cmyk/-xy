@@ -24,6 +24,8 @@ def tick(dt):
   import ue_io_v173
   _,data=ue_io_v173.control()
   if data is None:return
+  import ue_pose_v173
+  data=ue_pose_v173.current(data)
   active=data.get('active',True)and time.time()-data.get('at',0)/1000<5.;paused=data.get('paused',False);scene=data.get('scene','myth');ed=u.get_editor_subsystem(u.UnrealEditorSubsystem);levels=u.get_editor_subsystem(u.LevelEditorSubsystem);w=ed.get_editor_world()
   import ue_worlds_v165
   resident=w.get_name()=='PortfolioLiveV165'and ue_worlds_v165.active==scene
@@ -85,7 +87,7 @@ def tick(dt):
    if realtime is not False:
     u.SystemLibrary.execute_console_command(w,'t.MaxFPS 10');realtime=False
    levels.editor_invalidate_viewports()
-   if now-lastReport>1:lastReport=now;(OUT/'native-motion.json').write_text(json.dumps({'scene':scene,'time':clock,'paused':paused,'active':active,'at':time.time(),'mirrorReady':bool(mirror),'homeLeafMaterials':len(homeLeafMID),'gulls':sum('GullBody'in k for k in cache)}))
+   if now-lastReport>1:lastReport=now;ue_io_v173.report({'scene':scene,'time':clock,'paused':paused,'active':active,'at':time.time(),'mirrorReady':bool(mirror),'homeLeafMaterials':len(homeLeafMID),'gulls':sum('GullBody'in k for k in cache)},'motion')
    return
   import ue_stream_v164
   ue_stream_v164.set_active(True)
@@ -145,7 +147,7 @@ def tick(dt):
       if wing:wing.set_actor_relative_rotation(u.Rotator(pitch=side*math.degrees(math.sin(clock*(2.2+i*.06)+i*1.37+lag)*amp),yaw=0,roll=0),False,False)
   # Realtime already draws the active viewport. Invalidating every tick also
   # invalidates editor hit proxies, causing unnecessary synchronous redraw work.
-  if now-lastReport>1:lastReport=now;(OUT/'native-motion.json').write_text(json.dumps({'scene':scene,'time':clock,'paused':paused,'active':active,'at':time.time(),'actors':len(cache),'boatPose':boatPose,'mirrorReady':bool(mirror),'homeLeafMaterials':len(homeLeafMID),'gulls':sum('GullBody'in k for k in cache)}))
+  if now-lastReport>1:lastReport=now;ue_io_v173.report({'scene':scene,'time':clock,'paused':paused,'active':active,'at':time.time(),'actors':len(cache),'boatPose':boatPose,'mirrorReady':bool(mirror),'homeLeafMaterials':len(homeLeafMID),'gulls':sum('GullBody'in k for k in cache)},'motion')
  except (PermissionError,FileNotFoundError,json.JSONDecodeError):pass
  except Exception as e:
   world=None;cache={};mirror=None;seaMID=None;crewMID=[];(OUT/'native-motion-error.txt').write_text(str(e))

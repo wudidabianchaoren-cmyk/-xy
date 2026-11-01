@@ -39,9 +39,10 @@ def tick(dt):
  if now-last<1/120:return
  last=now;builtins._zaojing_ue_busy=True
  try:
-  job=OUT/'asset-update.json'
-  if job.exists()and job.stat().st_mtime_ns!=jobStamp:
-   jobStamp=job.stat().st_mtime_ns;kind=json.loads(job.read_text(encoding='utf-8-sig')).get('kind');report['phase']='updating '+str(kind);note();restore=current
+  import ue_io_v173
+  job=OUT/'asset-update.json';nextJobStamp,jobData=ue_io_v173.job()
+  if jobData is not None and nextJobStamp!=jobStamp:
+   jobStamp=nextJobStamp;kind=jobData.get('kind');report['phase']='updating '+str(kind);note();restore=current
    try:
     if kind in ['polish','audit']:
      import ue_polish_v162
@@ -53,11 +54,17 @@ def tick(dt):
     if ed.get_editor_world().get_name()!=maps[restore].rsplit('/',1)[1]:load(restore)
     else:
      report['phase']='native viewport live';note();lastNight=None;lastLamp=None;lastCameraPose=None;sunDay=[(a,a.light_component.intensity,a.light_component.get_light_color())for a in actors.get_all_level_actors()if isinstance(a,u.DirectionalLight)]
+    # The resident world has a different name from its source sublevel. Restore
+    # readiness in both branches so a completed local check cannot trigger an
+    # unnecessary browser reconnect while waiting for the next heartbeat.
+    report['phase']='native viewport live';report['heartbeat']=time.time();note()
     stamp=0
    job.unlink(missing_ok=True)
   import ue_io_v173
   nextStamp,v=ue_io_v173.control()
-  if v is not None and nextStamp!=stamp:
+  import ue_pose_v173
+  v=ue_pose_v173.frame(nextStamp,v,now)
+  if v is not None and (nextStamp!=stamp or ue_pose_v173.changed):
    scene=v.get('scene','myth');p=v.get('camera',[37,17,49]);t=v.get('target',[-6,9,-16])
    if scene not in maps:raise ValueError('Unsupported scene')
    if scene!=current:load(scene)
@@ -80,6 +87,11 @@ def tick(dt):
     for a,power,col in sunDay:a.light_component.set_intensity(.4 if lastNight else power);a.light_component.set_light_color(u.LinearColor(.35,.48,.75,1)if lastNight else col)
    report.update(cameraWrites=cameraWrites,verticalFov=bool(v.get('verticalFov')),horizontalFov=hfov)
    stamp=nextStamp;report.update(seq=v.get('seq'),scene=scene,map=maps[scene],camera=p,target=t,night=v.get('night',False),at=time.time());note()
+  import ue_frame_stats_v173
+  _,latest_input=ue_io_v173.control()
+  frame_active=bool(latest_input and latest_input.get('active',True)and not latest_input.get('paused',False)and time.time()-latest_input.get('at',0)/1000<5)
+  performance=ue_frame_stats_v173.update(current,frame_active,now)
+  if performance:report['performance']=performance
   if now-heartbeat>1:heartbeat=now;size=ed.get_level_viewport_size();report.update(heartbeat=time.time(),phase='native viewport live',viewport=[size.x,size.y]);note()
  except (PermissionError,FileNotFoundError,json.JSONDecodeError):pass
  except Exception:

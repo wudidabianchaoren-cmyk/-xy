@@ -19,12 +19,6 @@ def _work():
                 data = json.loads(INPUT.read_text(encoding='utf-8-sig'))
                 if INPUT.stat().st_mtime_ns == stamp:
                     latest = (stamp, data)
-            payload = pending_report
-            if payload is not None:
-                pending_report = None
-                temporary = OUT / 'ue-live.v173-tmp'
-                temporary.write_text(json.dumps(payload), encoding='utf-8')
-                os.replace(temporary, OUT / 'ue-live.json')
             error = ''
         except (OSError, ValueError) as exc:
             error = str(exc)
@@ -43,7 +37,12 @@ def control():
     return latest
 
 
-def report(data):
-    global pending_report
-    pending_report = dict(data)
+def report(data, name='live'):
+    import ue_status_v173
+    ue_status_v173.report(data, name)
+
+
+def job():
+    import ue_status_v173
+    return ue_status_v173.job()
 

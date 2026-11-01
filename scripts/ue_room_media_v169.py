@@ -43,5 +43,6 @@ def update(cache,data,state):
   state['player'].play()if on else state['player'].pause();state['mid'].set_scalar_parameter_value('Power',1. if on else 0.);state['on']=on
  if on and state['player'].is_ready()and not state['player'].is_playing():state['player'].play()
  if time.monotonic()-state.get('reported',0)>1:
-  state['reported']=time.monotonic();(P/'.verify/v32-163/room-media.json').write_text(json.dumps({'work':state['work'],'pending':state['pending'],'on':on,'opened':state.get('opened'),'playing':state['player'].is_playing(),'ready':state['player'].is_ready(),'seconds':u.MathLibrary.get_total_seconds(state['player'].get_time()),'textureWidth':state['texture'].get_width(),'textureHeight':state['texture'].get_height(),'fitSize':state.get('fitSize'),'commit':commit,'prepared':state.get('prepared'),'switchedAt':state.get('switched_at'),'nativeScreenSharesRoomCamera':True,'persistentPair':True,'shaderRecompiledOnReturn':False}))
+  import ue_io_v173
+  state['reported']=time.monotonic();ue_io_v173.report({'work':state['work'],'pending':state['pending'],'on':on,'opened':state.get('opened'),'playing':state['player'].is_playing(),'ready':state['player'].is_ready(),'seconds':u.MathLibrary.get_total_seconds(state['player'].get_time()),'textureWidth':state['texture'].get_width(),'textureHeight':state['texture'].get_height(),'fitSize':state.get('fitSize'),'commit':commit,'prepared':state.get('prepared'),'switchedAt':state.get('switched_at'),'nativeScreenSharesRoomCamera':True,'persistentPair':True,'shaderRecompiledOnReturn':False},'media')
  return state

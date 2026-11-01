@@ -47,6 +47,19 @@ def run():
         if frame is None:
             raise RuntimeError('Live control callback scope unavailable')
         scope = frame.f_globals
+        import ue_io_v173
+        io_source = Path(ue_io_v173.__file__)
+        io_tree = ast.parse(io_source.read_text(encoding='utf-8-sig'))
+        io_functions = [node for node in io_tree.body if isinstance(node, ast.FunctionDef) and node.name in ('report', 'job')]
+        exec(compile(ast.Module(body=io_functions, type_ignores=[]), str(io_source), 'exec'), ue_io_v173.__dict__)
+        # Leave the running control-reader thread intact. Its old report slot
+        # is no longer used; the independent writer also works before input exists.
+        ue_io_v173.pending_report = None
+        import ue_pose_v173
+        pose_source = Path(ue_pose_v173.__file__)
+        pose_tree = ast.parse(pose_source.read_text(encoding='utf-8-sig'))
+        pose_functions = [node for node in pose_tree.body if isinstance(node, ast.FunctionDef) and node.name in ('vector', 'blend', 'frame', 'current')]
+        exec(compile(ast.Module(body=pose_functions, type_ignores=[]), str(pose_source), 'exec'), ue_pose_v173.__dict__)
         source = P / 'scripts/ue-live-final-v162.py'
         tree = ast.parse(source.read_text(encoding='utf-8-sig'))
         selected = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name in ('tick', 'note')]
@@ -66,6 +79,22 @@ def run():
         import ue_io_v173
         ue_io_v173.start()
         (OUT / 'reload-control.json').write_text(json.dumps({'sameWorld': world.get_name(), 'at': time.time(), 'playersRetained': bool(runtime.roomMedia)}))
+    elif kind == 'studio-dependencies':
+        registry = u.AssetRegistryHelpers.get_asset_registry()
+        options = u.AssetRegistryDependencyOptions()
+        options.set_editor_property('include_hard_package_references', True)
+        options.set_editor_property('include_soft_package_references', True)
+        pending = ['/Game/V162/Studio']; graph = {}
+        while pending:
+            package = pending.pop()
+            if package in graph:
+                continue
+            if len(graph) >= 2000:
+                raise RuntimeError('Studio dependency traversal exceeded bounds')
+            dependencies = sorted(str(name) for name in registry.get_dependencies(package, options) if str(name).startswith('/Game/'))
+            graph[package] = dependencies
+            pending.extend(name for name in dependencies if name not in graph)
+        (OUT / 'studio-registry-dependencies.json').write_text(json.dumps({'entry': '/Game/V162/Studio', 'readOnly': True, 'packages': sorted(graph), 'graph': graph}, indent=2), encoding='utf-8')
     elif kind == 'quality-read':
         from ue_stability_v163 import QUALITY
         from ue_art_v164 import QUALITY as LATER_QUALITY
@@ -116,6 +145,11 @@ def run():
         importlib.reload(ue_room_props_v167)
         ue_room_props_v167.originals = old_originals
         (OUT / 'media-fix.json').write_text(json.dumps({'at': time.time(), 'material': material.get_path_name(), 'glow': glow.get_path_name(), 'originalMediaBytesUnchanged': True}))
+    elif kind in ('slate-cache', 'slate-reset'):
+        before = u.SystemLibrary.get_console_variable_int_value('Slate.EnableGlobalInvalidation')
+        value = 1 if kind == 'slate-cache' else 0
+        u.SystemLibrary.execute_console_command(world, 'Slate.EnableGlobalInvalidation ' + str(value))
+        (OUT / (kind + '.json')).write_text(json.dumps({'before': before, 'after': value, 'sessionOnly': True, 'qualityChanged': False}))
     elif kind == 'scheduling':
         names = ['r.VSync', 'r.VSyncEditor', 'r.OneFrameThreadLag', 'r.FinishCurrentFrame', 'r.GTSyncType', 'rhi.SyncInterval']
         before = {key: u.SystemLibrary.get_console_variable_int_value(key) for key in names}
@@ -123,8 +157,8 @@ def run():
             u.SystemLibrary.execute_console_command(world, command)
         (OUT / 'native-scheduling.json').write_text(json.dumps({'before': before, 'at': time.time()}))
     elif kind == 'trace':
-        u.SystemLibrary.execute_console_command(world, 'Trace.File E:/codex/unreal/ZaOjIngV146/Saved/Profiling/v173-room-cpu.utrace cpu,frame,bookmark')
-        deadline = time.monotonic() + 7
+        u.SystemLibrary.execute_console_command(world, 'Trace.File E:/codex/unreal/ZaOjIngV146/Saved/Profiling/v173-main-cpu.utrace cpu,frame,bookmark')
+        deadline = time.monotonic() + 20
         holder = {}
         def finish_trace(dt):
             if time.monotonic() < deadline:
