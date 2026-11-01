@@ -1,4 +1,4 @@
-"""Bounded live diagnostics; no scene rebuilding, quality changes or code inbox."""
+"""Allowlisted live diagnostics and temporal-rendering recovery; no scene rebuilding or code inbox."""
 from pathlib import Path
 import cProfile, io, json, pstats, time, importlib, inspect, ast
 import unreal as u
@@ -15,7 +15,19 @@ def run():
     data = json.loads(request.read_text(encoding='utf-8-sig'))
     kind = data['kind']
     world = u.get_editor_subsystem(u.UnrealEditorSubsystem).get_editor_world()
-    if kind == 'profile':
+    if kind == 'v175-realtime':
+        import ue_viewport_v175, ue_session_v171
+        settings = importlib.reload(ue_session_v171).apply()
+        result = importlib.reload(ue_viewport_v175).ensure()
+        result['sessionSettings'] = settings
+        (P / '.verify/v32-175/realtime-applied.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
+    elif kind == 'v175-final':
+        import ue_quality_v175, ue_stream_v164, ue_session_v171, ue_viewport_v175
+        u.SystemLibrary.execute_console_command(world, 'MediaIO.EnableExperimentalScheduling 0')
+        result = {'quality': importlib.reload(ue_quality_v175).apply(), 'session': importlib.reload(ue_session_v171).apply(), 'viewport': importlib.reload(ue_viewport_v175).ensure()}
+        importlib.reload(ue_stream_v164).ensure(refresh=True)
+        (P / '.verify/v32-175/final-policy.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
+    elif kind == 'profile':
         label = data.get('label', 'baseline')
         if label not in ('baseline', 'after', 'realtime', 'scheduling', 'myth', 'capture-off', 'vp8'):
             raise ValueError('Unsupported profile label')

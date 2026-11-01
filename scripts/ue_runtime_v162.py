@@ -93,10 +93,8 @@ def tick(dt):
   import ue_stream_v164
   ue_stream_v164.set_active(True)
   if realtime is not True:
-   # The subsystem's True path removes its named override, so pair it with
-   # False first to avoid a missing-override ensure in long-running sessions.
-   levels.editor_set_viewport_realtime(False)
-   levels.editor_set_viewport_realtime(True)
+   import ue_viewport_v175
+   ue_viewport_v175.ensure()
    u.SystemLibrary.execute_console_command(w,'t.MaxFPS 45');realtime=True
   if not paused:clock+=delta
   if scene=='home':
@@ -146,8 +144,7 @@ def tick(dt):
      for part,lag,amp in[('Inner',0,.22),('Outer',-.72,.14)]:
       wing=cache.get('V162 Gull '+str(i)+' Gull'+part+name)
       if wing:wing.set_actor_relative_rotation(u.Rotator(pitch=side*math.degrees(math.sin(clock*(2.2+i*.06)+i*1.37+lag)*amp),yaw=0,roll=0),False,False)
-  # Force a fresh original viewport frame even after an editor realtime override.
-  levels.editor_invalidate_viewports()
+  # True realtime maintains temporal history without forced viewport invalidation.
   if now-lastReport>1:lastReport=now;ue_io_v173.report({'scene':scene,'time':clock,'paused':paused,'active':active,'at':time.time(),'actors':len(cache),'boatPose':boatPose,'mirrorReady':bool(mirror),'homeLeafMaterials':len(homeLeafMID),'gulls':sum('GullBody'in k for k in cache)},'motion')
  except (PermissionError,FileNotFoundError,json.JSONDecodeError):pass
  except Exception as e:

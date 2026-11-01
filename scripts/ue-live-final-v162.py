@@ -108,6 +108,8 @@ from ue_runtime_v162 import ensure_runtime
 ensure_runtime()
 from ue_art_v164 import QUALITY as QUALITY_V164
 for command in QUALITY_V164+['MediaIO.EnableExperimentalScheduling 0']:u.SystemLibrary.execute_console_command(ed.get_editor_world(),command)
+from ue_quality_v175 import apply as apply_full_resolution
+apply_full_resolution()
 from ue_stream_v164 import ensure as ensure_native_capture
 ensure_native_capture(refresh=True)
 u.SystemLibrary.execute_console_command(ed.get_editor_world(),'PixelStreaming2.Encoder.Codec VP9')

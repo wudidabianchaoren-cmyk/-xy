@@ -26,13 +26,8 @@ def run():
         request.unlink()
         return
     component = getattr(builtins, '_zaojing_native_capture_v164', None)
-    if component:
-        component.set_editor_property('stream_fps_override', 45)
-        component.set_editor_property('signalling_server_url', 'ws://127.0.0.1:8888')
-        component.start_streaming()
-    else:
-        import ue_stream_v164
-        ue_stream_v164.ensure(refresh=True)
+    import ue_stream_v164, importlib
+    importlib.reload(ue_stream_v164).ensure(refresh=True)
     u.SystemLibrary.execute_console_command(world, 't.MaxFPS 45')
     u.get_editor_subsystem(u.LevelEditorSubsystem).editor_invalidate_viewports()
     (OUT / 'rebind-native.json').write_text(json.dumps({

@@ -4,12 +4,18 @@ from pathlib import Path
 def ensure(refresh=False):
  c=getattr(builtins,'_zaojing_native_capture_v164',None)
  if c and c.get_editor_property('stream_fps_override')==45 and not refresh:return
- if not c:c=u.new_object(u.PixelStreaming2StreamerComponent)
- c.set_editor_property('streamer_id','Editor')
+ if not c:
+  c=u.new_object(u.PixelStreaming2StreamerComponent)
+  c.set_editor_property('streamer_id','Editor')
  c.set_editor_property('signalling_server_url','ws://127.0.0.1:8888')
  c.set_editor_property('stream_fps_override',45)
+ c.set_editor_property('couple_framerate',True)
  # With no explicit producer this uses FVideoProducerMediaCapture::CreateActiveViewportCapture,
  # capturing the 1920 x 1080 RHI surface, without the Slate back-buffer crop.
+ # StartStreaming replaces the producer. Explicitly retire old MediaIO captures
+ # while realtime is drawing, so reconnects cannot accumulate GPU copy work.
+ for previous in u.ObjectIterator(u.MediaCapture):
+  if previous.get_class().get_name()=='PixelStreaming2MediaIOCapture' and previous.get_state()==u.MediaCaptureState.CAPTURING:previous.stop_capture(False)
  c.start_streaming();builtins._zaojing_native_capture_v164=c;builtins._zaojing_capture_active_v164=True
  (Path(__file__).resolve().parents[1]/'.verify/v32-164/stream-source.json').write_text(json.dumps({'streamer':'Editor','source':'native active viewport MediaIO capture','dpiResamplingBypassed':True}))
 
