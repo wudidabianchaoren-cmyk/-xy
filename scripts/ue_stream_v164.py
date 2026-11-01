@@ -14,9 +14,13 @@ def ensure(refresh=False):
  # capturing the 1920 x 1080 RHI surface, without the Slate back-buffer crop.
  # StartStreaming replaces the producer. Explicitly retire old MediaIO captures
  # while realtime is drawing, so reconnects cannot accumulate GPU copy work.
+ import ue_capture_v176
  for previous in u.ObjectIterator(u.MediaCapture):
-  if previous.get_class().get_name()=='PixelStreaming2MediaIOCapture' and previous.get_state()==u.MediaCaptureState.CAPTURING:previous.stop_capture(False)
+  if previous.get_class().get_name()=='PixelStreaming2MediaIOCapture' and previous.get_state()==u.MediaCaptureState.CAPTURING:
+   ue_capture_v176.prepare_for_stop(previous)
+   previous.stop_capture(False)
  c.start_streaming();builtins._zaojing_native_capture_v164=c;builtins._zaojing_capture_active_v164=True
+ ue_capture_v176.schedule()
  (Path(__file__).resolve().parents[1]/'.verify/v32-164/stream-source.json').write_text(json.dumps({'streamer':'Editor','source':'native active viewport MediaIO capture','dpiResamplingBypassed':True}))
 
 def set_active(active):

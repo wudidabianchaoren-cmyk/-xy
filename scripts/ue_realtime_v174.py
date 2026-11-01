@@ -19,7 +19,7 @@ def valid(data):
         values = data.get(key)
         if not isinstance(values, list) or len(values) != 3 or not all(isinstance(x, (int, float)) and math.isfinite(x) and abs(x) < 100000 for x in values):
             return False
-    for key in ('active', 'paused', 'night', 'lamp', 'roomTV', 'directCamera'):
+    for key in ('active', 'paused', 'night', 'lamp', 'roomTV', 'roomDirectVideo', 'directCamera'):
         if key in data and not isinstance(data[key], bool):
             return False
     for key, limit in (('roomProps', 9), ('homeParts', 64)):

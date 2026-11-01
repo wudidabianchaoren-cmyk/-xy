@@ -18,7 +18,7 @@ def update(cache,data,state):
   material=u.load_asset('/Game/V163/NativeCRT_Electra')or u.load_asset('/Game/V163/NativeCRT');assert material,'Existing CRT material is required'
   player,texture=pair();standby,standby_texture=pair();mid=screen.static_mesh_component.create_dynamic_material_instance(0,material);mid.set_texture_parameter_value('Program',texture)
   state={'player':player,'texture':texture,'standby':standby,'standby_texture':standby_texture,'mid':mid,'work':None,'pending':None,'on':None,'source':None};SESSION[identity]=state
- work=max(0,min(4,int(data.get('roomWork',0))));on=bool(data.get('roomTV',True))
+ work=max(0,min(4,int(data.get('roomWork',0))));on=bool(data.get('roomTV',True));direct=bool(data.get('roomDirectVideo',False))
  if not state.get('containConfigured'):
   import ue_room_display_v173
   material=u.load_asset('/Game/V174/NativeCRT_Clear')or u.load_asset('/Game/V173/NativeCRT_Contain')
@@ -39,10 +39,24 @@ def update(cache,data,state):
  if state.get('containConfigured'):
   import ue_room_display_v173
   ue_room_display_v173.set_fit(state)
- if state['on']!=on:
-  state['player'].play()if on else state['player'].pause();state['mid'].set_scalar_parameter_value('Power',1. if on else 0.);state['on']=on
- if on and state['player'].is_ready()and not state['player'].is_playing():state['player'].play()
+ if state['on']!=on or state.get('direct')!=direct:
+  if on and not direct:
+   reference=float(data.get('roomTime',0.))
+   if state.get('direct')and reference>0 and state['player'].is_ready():state['player'].seek(u.MathLibrary.from_seconds(reference))
+   state['player'].play()
+  else:state['player'].pause()
+  state['mid'].set_scalar_parameter_value('Power',1. if on else 0.);state['on']=on;state['direct']=direct
+ if on and not direct and state['player'].is_ready()and not state['player'].is_playing():state['player'].play()
+ # The browser presents original film frames on the settled screen. Keep the
+ # native screen on that same clock for camera moves and disc handoffs.
+ reference=float(data.get('roomTime',0.))
+ now=time.monotonic()
+ if on and not direct and commit and state['pending'] is None and reference>0 and now-state.get('clock_checked',0.)>.5:
+  state['clock_checked']=now
+  actual=u.MathLibrary.get_total_seconds(state['player'].get_time())
+  if abs(actual-reference)>.75 and now-state.get('clock_seek',0.)>3. and now-state.get('switched_at',now)>.3:
+   state['player'].seek(u.MathLibrary.from_seconds(reference));state['clock_seek']=now
  if time.monotonic()-state.get('reported',0)>1:
   import ue_io_v173
-  state['reported']=time.monotonic();ue_io_v173.report({'work':state['work'],'pending':state['pending'],'on':on,'opened':state.get('opened'),'playing':state['player'].is_playing(),'ready':state['player'].is_ready(),'seconds':u.MathLibrary.get_total_seconds(state['player'].get_time()),'textureWidth':state['texture'].get_width(),'textureHeight':state['texture'].get_height(),'fitSize':state.get('fitSize'),'commit':commit,'prepared':state.get('prepared'),'switchedAt':state.get('switched_at'),'nativeScreenSharesRoomCamera':True,'persistentPair':True,'shaderRecompiledOnReturn':False},'media')
+  state['reported']=time.monotonic();ue_io_v173.report({'work':state['work'],'pending':state['pending'],'on':on,'opened':state.get('opened'),'playing':state['player'].is_playing(),'ready':state['player'].is_ready(),'seconds':u.MathLibrary.get_total_seconds(state['player'].get_time()),'textureWidth':state['texture'].get_width(),'textureHeight':state['texture'].get_height(),'fitSize':state.get('fitSize'),'commit':commit,'prepared':state.get('prepared'),'switchedAt':state.get('switched_at'),'directVideo':direct,'clockOwner':'browser'if direct else'native','at':time.time(),'nativeScreenSharesRoomCamera':True,'persistentPair':True,'shaderRecompiledOnReturn':False},'media')
  return state

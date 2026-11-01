@@ -18,9 +18,12 @@ export async function createScreen(options:{nativeVideo?:boolean}={}){
  const ctx=canvas.getContext('2d',{alpha:false})!;ctx.scale(1.5,1.5);
  const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.minFilter=THREE.LinearFilter;texture.magFilter=THREE.LinearFilter;texture.generateMipmaps=false;
  const average=new THREE.Color(.05,.09,.20);
- const status={category:0,work:0,book:0,page:0,auto:false,videoTime:0,reader:{visible:false,auto:false,pageLabel:'封面',pagesLeft:0,pagesRight:0,canPrevious:false,canNext:true} as ReaderState};
+ const status={category:0,work:0,book:0,page:0,auto:false,videoTime:0,videoFrames:0,videoDroppedFrames:0,videoReady:false,videoFrameIntervalMs:0,reader:{visible:false,auto:false,pageLabel:'封面',pagesLeft:0,pagesRight:0,canPrevious:false,canNext:true} as ReaderState};
  const video=document.createElement('video');video.muted=true;video.loop=true;video.playsInline=true;video.preload='auto';video.setAttribute('playsinline','');video.setAttribute('muted','');
  const videoTexture=new THREE.VideoTexture(video);videoTexture.colorSpace=THREE.SRGBColorSpace;videoTexture.minFilter=THREE.LinearFilter;videoTexture.magFilter=THREE.LinearFilter;videoTexture.generateMipmaps=false;
+ let videoFrameCallback=0,lastVideoFrame=0;
+ const observeVideo=(now:number)=>{status.videoFrames++;status.videoFrameIntervalMs=lastVideoFrame?now-lastVideoFrame:0;lastVideoFrame=now;status.videoDroppedFrames=video.getVideoPlaybackQuality().droppedVideoFrames;videoFrameCallback=video.requestVideoFrameCallback(observeVideo);};
+ videoFrameCallback=video.requestVideoFrameCallback(observeVideo);
  const videoLayer={active:{value:0},scale:{value:new THREE.Vector2(1,1)},texture:{value:videoTexture}};
  const imageCache=new Map<string,HTMLImageElement>();const pending=new Map<string,Promise<HTMLImageElement|null>>();
  let active=true,disposed=false,dirty=true,currentVideo='',lastAdvance=-1,lastAverage=-1,lastT=0,welcomeUntil=1.0,pageChangedAt=-1,readerAuto=false,bootVisible=true;
@@ -96,8 +99,9 @@ export async function createScreen(options:{nativeVideo?:boolean}={}){
   const boot=t<welcomeUntil;if(boot!==bootVisible){bootVisible=boot;dirty=true;}
   const expectedVideo=status.category===0?WORKS[status.work].src:status.category===1&&status.book===1?YANGJIAN:'';
   const hasVideo=!boot&&!!expectedVideo&&currentVideo===expectedVideo&&video.readyState>=2&&video.videoWidth>0&&video.videoHeight>0;
+  status.videoReady=hasVideo&&!video.paused;
   if(videoLayer.active.value!==(hasVideo?1:0)){videoLayer.active.value=hasVideo?1:0;dirty=true;}
-  if(hasVideo){const fit=Math.min(1024/video.videoWidth,768/video.videoHeight);videoLayer.scale.value.set(video.videoWidth*fit/1024,video.videoHeight*fit/768);if(t-lastAverage>.5)sampleAverage(video,t);}
+  if(hasVideo){const aspect=video.videoWidth/video.videoHeight,screenAspect=.55/.40;videoLayer.scale.value.set(Math.min(1,aspect/screenAspect),Math.min(1,screenAspect/aspect));if(t-lastAverage>.5)sampleAverage(video,t);}
   const moving=!!turn||boot;
   if(!dirty&&!moving)return;
   dirty=false;
@@ -115,7 +119,7 @@ export async function createScreen(options:{nativeVideo?:boolean}={}){
   texture.needsUpdate=true;
  }
  function setActive(on:boolean){active=on;if(on&&powered){dirty=true;mediaForState();}else{videoLayer.active.value=0;video.pause();}}
- function destroy(){disposed=true;active=false;readerListener=undefined;turn=null;videoLayer.active.value=0;video.pause();video.removeAttribute('src');video.load();texture.dispose();videoTexture.dispose();imageCache.clear();pending.clear();}
+  function destroy(){disposed=true;active=false;readerListener=undefined;turn=null;videoLayer.active.value=0;video.cancelVideoFrameCallback(videoFrameCallback);video.pause();video.removeAttribute('src');video.load();texture.dispose();videoTexture.dispose();imageCache.clear();pending.clear();}
  await Promise.race([imageInitial(),new Promise<void>(r=>setTimeout(r,1200))]);mediaForState();
  async function imageInitial(){image(WORKS[0].poster);await pending.get(WORKS[0].poster);}
  return{texture,videoTexture,videoLayer,update,select,work,book,next,previous,readingAuto,onReaderChange,hit,power,auto(on:boolean){if(isReader())readingAuto(on);else{status.auto=on;lastAdvance=lastT;}},setActive,average,status,destroy};

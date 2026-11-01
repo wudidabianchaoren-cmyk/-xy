@@ -1,4 +1,4 @@
-﻿"""Print the Shanghai date on the original world-space paper; use room light, never emission."""
+"""Print the Shanghai date on the original world-space paper; use room light, never emission."""
 import unreal as u,time,json,subprocess,shutil,os
 from pathlib import Path
 from datetime import datetime,timedelta,timezone
@@ -16,6 +16,8 @@ def update(cache):
   if not mat:
    mat=u.AssetToolsHelpers.get_asset_tools().create_asset('PrintedCalendar','/Game/V170',u.Material,u.MaterialFactoryNew());mat.set_editor_property('two_sided',True);sample=mel.create_material_expression(mat,u.MaterialExpressionTextureSampleParameter2D);sample.set_editor_property('parameter_name','PrintedDate');sample.texture=texture;mel.connect_material_property(sample,'RGB',u.MaterialProperty.MP_BASE_COLOR)
    rough=mel.create_material_expression(mat,u.MaterialExpressionConstant);rough.r=1.;mel.connect_material_property(rough,'',u.MaterialProperty.MP_ROUGHNESS);mel.recompile_material(mat);u.EditorAssetLibrary.save_loaded_asset(mat)
+  import ue_calendar_v176
+  mat=ue_calendar_v176.material(texture)
   matches=[]
   for a in cache.values():
    if isinstance(a,u.StaticMeshActor)and a.static_mesh_component.static_mesh and a.static_mesh_component.static_mesh.get_name()=='Live_clean_white_calendar_page___Asia_Shanghai':

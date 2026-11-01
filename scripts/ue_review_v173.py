@@ -15,7 +15,21 @@ def run():
     data = json.loads(request.read_text(encoding='utf-8-sig'))
     kind = data['kind']
     world = u.get_editor_subsystem(u.UnrealEditorSubsystem).get_editor_world()
-    if kind == 'v175-realtime':
+    if kind == 'v176-inspect':
+        result = {'captures': [{'name': item.get_name(), 'state': str(item.get_state())} for item in u.ObjectIterator(u.MediaCapture) if item.get_class().get_name() == 'PixelStreaming2MediaIOCapture'], 'outputs': [{'name': item.get_name(), 'buffers': item.get_editor_property('number_of_texture_buffers')} for item in u.ObjectIterator(u.MediaOutput) if item.get_class().get_name() == 'PixelStreaming2MediaIOOutput']}
+        (P / '.verify/v32-176/capture-inspect.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
+    elif kind in ('v176-capture4', 'v176-capture8'):
+        import ue_capture_v176
+        try:
+            result = importlib.reload(ue_capture_v176).configure(int(kind[-1]))
+        except Exception as exc:
+            result = {'error': str(exc)}
+        (P / ('.verify/v32-176/' + kind + '.json')).write_text(json.dumps(result, indent=2), encoding='utf-8')
+    elif kind == 'v176-calendar':
+        import ue_runtime_v162, ue_calendar_v176
+        result = importlib.reload(ue_calendar_v176).apply(ue_runtime_v162.cache)
+        (P / '.verify/v32-176/calendar.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
+    elif kind == 'v175-realtime':
         import ue_viewport_v175, ue_session_v171
         settings = importlib.reload(ue_session_v171).apply()
         result = importlib.reload(ue_viewport_v175).ensure()
@@ -67,6 +81,11 @@ def run():
         # Leave the running control-reader thread intact. Its old report slot
         # is no longer used; the independent writer also works before input exists.
         ue_io_v173.pending_report = None
+        import ue_realtime_v174
+        realtime_source = Path(ue_realtime_v174.__file__)
+        realtime_tree = ast.parse(realtime_source.read_text(encoding='utf-8-sig'))
+        validators = [node for node in realtime_tree.body if isinstance(node, ast.FunctionDef) and node.name == 'valid']
+        exec(compile(ast.Module(body=validators, type_ignores=[]), str(realtime_source), 'exec'), ue_realtime_v174.__dict__)
         import ue_pose_v173
         pose_source = Path(ue_pose_v173.__file__)
         pose_tree = ast.parse(pose_source.read_text(encoding='utf-8-sig'))
