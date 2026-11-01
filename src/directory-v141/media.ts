@@ -107,7 +107,7 @@ export async function createMedia(loader: THREE.TextureLoader, linenNormal: THRE
     books.push(g); bookStarts.push(g.position.clone());
   }
   const names = ['让画面发生', '后西游记', '中秋之夜', '乡土归途', '潮湿东南亚'];
-  const arts = await Promise.all(['./assets/works/covers-v161/code-films.webp', './assets/works/after-journey/cover-v32-92.webp', './assets/works/covers-v137/mid-autumn.webp', './assets/works/covers-v137/rural.webp', './assets/works/humid-southeast-asia/cover.webp'].map(u => loader.loadAsync(u)));
+  const arts = await Promise.all(['./assets/works/covers-v177/code-films.webp', './assets/works/after-journey/cover-v32-92.webp', './assets/works/covers-v137/mid-autumn.webp', './assets/works/covers-v137/rural.webp', './assets/works/humid-southeast-asia/cover.webp'].map(u => loader.loadAsync(u)));
   for (let i = 0; i < names.length; i++) {
     const g = new THREE.Group(); g.name = 'Individually selectable film CD / ' + names[i];
     g.userData.pickKey = 'tape' + i; g.userData.materialKind = 'moulded polycarbonate case / printed paper insert / aluminium optical disc';

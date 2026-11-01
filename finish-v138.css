@@ -30,3 +30,6 @@ button:not(.directory-scene-input):not(.hobby-orbit-card):not(.works-orbit-card)
 button:not(.directory-scene-input):not(.hobby-orbit-card),.project-return-arrow{transition:box-shadow 160ms ease,filter 160ms ease}
 .portfolio-curtain-v138{position:fixed;inset:0;background:#050706;z-index:2147483000;pointer-events:none;opacity:0;contain:strict;will-change:clip-path,opacity}
 @media(prefers-reduced-motion:reduce){.portfolio-progress i b{transition:none}button{transition:none!important}}
+
+/* The visible child owns its progress, never draw a second parent rail. */
+body.portfolio-portal-open > .portfolio-progress{visibility:hidden;pointer-events:none}

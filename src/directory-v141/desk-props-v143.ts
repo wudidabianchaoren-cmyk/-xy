@@ -79,7 +79,7 @@ export function refineDeskPropsV143(scene: THREE.Scene, model: THREE.Object3D, s
   for(let i=0;i<7;i++){const a=i*2.3999,r=i===0?0:.027;const stick=rounded('V161 flat wooden fortune slip '+i,[.014,.15+(i%3)*.014,.0055],slip,[Math.cos(a)*r,.145+(i%3)*.007,Math.sin(a)*r],.0015,pens);stick.rotation.z=(i-3)*.025;}
 
   // The measured table plane is y=.752. Four compressed rubber feet meet that plane exactly.
-  const phone = new THREE.Group(); phone.name = 'V143 landline, grounded on desk'; phone.position.set(1.41, .752, -.68); group.add(phone);
+  const phone = new THREE.Group(); phone.name = 'V143 landline, grounded on desk';phone.userData.pickKey='about'; phone.position.set(1.41, .752, -.68); group.add(phone);
   for (const x of [-.125, .125]) for (const z of [-.084, .084]) rounded('V143 landline rubber contact foot', [.034, .004, .026], foot, [x, .002, z], .0017, phone);
   rounded('V143 landline lower chassis', [.325, .029, .247], recess, [0, .019, 0], .012, phone);
   const shell = new RoundedBoxGeometry(.333, .079, .257, 5, .015);
@@ -134,5 +134,5 @@ export function refineDeskPropsV143(scene: THREE.Scene, model: THREE.Object3D, s
   const status = { version: 143, removedTriangles: removed, penFinish: 'continuous satin bronze / closed wall, open mouth / no emissive stripe', telephone: 'soft wedge ABS shell, chassis seam, curved handset, twelve labeled keys, acoustic holes, four contact feet', phoneContactPlaneY: .752, phoneFootBottomY: .752, replacesOnlyTwoProps: true };
   group.userData.refinementV143 = status;
   Object.assign(status,{version:161,fortunePotPosition:pens.position.toArray(),fortunePotScale:1.65,woodenSlips:7,slipSection:[.014,.0055],realGeometryPicking:true});
-  return { status,pens,destroy() { scene.remove(group); geometries.forEach(g => g.dispose()); extraMaterials.forEach(m => m.dispose()); textures.forEach(t => t.dispose()); } };
+  return { status,pens,phone,destroy() { scene.remove(group); geometries.forEach(g => g.dispose()); extraMaterials.forEach(m => m.dispose()); textures.forEach(t => t.dispose()); } };
 }

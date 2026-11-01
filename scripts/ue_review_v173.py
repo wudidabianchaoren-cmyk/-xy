@@ -15,7 +15,13 @@ def run():
     data = json.loads(request.read_text(encoding='utf-8-sig'))
     kind = data['kind']
     world = u.get_editor_subsystem(u.UnrealEditorSubsystem).get_editor_world()
-    if kind == 'v176-inspect':
+    if kind == 'v177-inspect':
+        import ue_visual_v177
+        importlib.reload(ue_visual_v177).inspect_scene()
+    elif kind == 'v177-apply':
+        import ue_visual_v177
+        importlib.reload(ue_visual_v177).apply()
+    elif kind == 'v176-inspect':
         result = {'captures': [{'name': item.get_name(), 'state': str(item.get_state())} for item in u.ObjectIterator(u.MediaCapture) if item.get_class().get_name() == 'PixelStreaming2MediaIOCapture'], 'outputs': [{'name': item.get_name(), 'buffers': item.get_editor_property('number_of_texture_buffers')} for item in u.ObjectIterator(u.MediaOutput) if item.get_class().get_name() == 'PixelStreaming2MediaIOOutput']}
         (P / '.verify/v32-176/capture-inspect.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
     elif kind in ('v176-capture4', 'v176-capture8'):

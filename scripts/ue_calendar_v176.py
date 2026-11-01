@@ -3,7 +3,7 @@ import unreal as u
 
 
 def material(texture):
-    path = '/Game/V176/PrintedCalendarUpright'
+    path = '/Game/V177/PrintedCalendarUpright2'
     result = u.load_asset(path)
     if result:
         return result

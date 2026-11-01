@@ -97,6 +97,9 @@ def tick(dt):
    ue_viewport_v175.ensure()
    u.SystemLibrary.execute_console_command(w,'t.MaxFPS 45');realtime=True
   if not paused:clock+=delta
+  if scene!='myth':
+   import ue_visual_v177
+   if ue_visual_v177.window_mid is not None:ue_visual_v177.cottage(0.)
   if scene=='home':
    for material in homeLeafMID:material.set_scalar_parameter_value('NativeHomeWindTime',clock)
    import ue_mirror_v162
@@ -124,6 +127,8 @@ def tick(dt):
    roomMedia=ue_room_media_v163b.update(cache,data,roomMedia)
   elif scene=='myth':
    nightBlend+=(float(bool(data.get('night')))-nightBlend)*(1-math.exp(-delta*4));nightVolume.set_editor_property('blend_weight',nightBlend)
+   import ue_visual_v177
+   ue_visual_v177.cottage(nightBlend)
    if seaMID:seaMID.set_scalar_parameter_value('NativeSeaTime',clock)
    for m in crewMID:m.set_scalar_parameter_value('NativeLifeTime',clock)
    for m in sailMID:m.set_scalar_parameter_value('NativeWindTime',clock)

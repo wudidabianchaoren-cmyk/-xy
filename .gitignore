@@ -3,6 +3,14 @@
 !/.gitignore
 !/README-PUBLISH.md
 !/DEPLOY-CLOUDFLARE.md
+!/DEPLOY-MEOO.md
+!/RELEASE-V32-177.md
+!/assets/
+/assets/*
+!/assets/works/
+/assets/works/*
+!/assets/works/covers-v177/
+!/assets/works/covers-v177/code-films.webp
 !/package.json
 !/*.html
 !/*.css

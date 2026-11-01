@@ -12,7 +12,7 @@
     ["后西游记", "人工智能长剧", "神话叙事", "长剧 · 场景与影像构建", "./assets/works/after-journey/cover-v32-92.webp", "./after-journey.html?v=32.139"],
     ["乡土归途", "乡土影像", "土地与记忆", "短片 · 环境与人物", "./assets/works/covers-v137/rural.webp", "./rural-return.html?v=32.139"],
     ["湖南卫视中秋之夜", "虚拟现实舞台", "中秋舞台", "虚拟现实 · 人工智能影像", "./assets/works/covers-v137/mid-autumn.webp", "./mid-autumn.html?v=32.139"],
-    ["让画面发生", "代码影像双作", "图形与叙事", "代码创作 · 物理手感与手绘拼贴", "./assets/works/covers-v161/code-films.webp", "./physical-universe.html?v=32.139"],
+    ["让画面发生", "代码影像双作", "图形与叙事", "代码创作 · 物理手感与手绘拼贴", "./assets/works/covers-v177/code-films.webp", "./physical-universe.html?v=32.139"],
     ["潮湿东南亚", "环保公益短片", "越南 · 水环境", "AI 影像 · 塑料袋的旅程", "./assets/works/humid-southeast-asia/cover.webp", "./humid-southeast-asia.html?v=32.139"]
   ].map((item, index) => ({
     title: item[0], english: item[1], type: item[2], medium: item[3], src: item[4], href:item[5], year: "2026"

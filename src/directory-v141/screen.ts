@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 const WORKS=[
- {title:'让画面发生',src:'./assets/works/physical-universe-v103/film.mp4',poster:'./assets/works/covers-v161/code-films.webp'},
+ {title:'让画面发生',src:'./assets/works/physical-universe-v103/film.mp4',poster:'./assets/works/covers-v177/code-films.webp'},
  {title:'后西游记',src:'./assets/works/after-journey/trailer-v32-92.mp4',poster:'./assets/works/after-journey/cover-v32-92.webp'},
  {title:'湖南卫视中秋之夜',src:'./assets/works/mid-autumn/mid-autumn-web.mp4',poster:'./assets/works/covers-v137/mid-autumn.webp'},
  {title:'乡土归途',src:'./assets/works/rural-return/film-sr-v32-92.mp4',poster:'./assets/works/covers-v137/rural.webp'},

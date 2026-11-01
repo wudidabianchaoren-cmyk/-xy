@@ -2,3 +2,6 @@
 :root{--paper:#e9e5dc;--ink:#282b29;--muted:#596255;--wash:#dfded4;--focus:#436352}
 .image-reader{background:var(--paper)}
 ::-webkit-scrollbar-thumb{border-color:var(--paper)}
+
+/* One reading indicator; scrolling remains available by wheel, keys and touch. */
+html{scrollbar-width:none}html::-webkit-scrollbar{display:none;width:0}
