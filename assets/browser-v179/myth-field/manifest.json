@@ -1,0 +1,446 @@
+{
+  "version": 179,
+  "scene": "myth",
+  "threeRevision": "180",
+  "originalAssetsModified": false,
+  "qualityApproved": false,
+  "poses": [
+    {
+      "id": "coast",
+      "captures": [
+        {
+          "night": false,
+          "nativeFrameTime": 9.320215
+        },
+        {
+          "night": true,
+          "nativeFrameTime": 15.778843
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.15,
+      "far": 5000,
+      "fov": 34,
+      "position": [
+        37,
+        17,
+        49
+      ],
+      "direction": [
+        -0.5488516997650299,
+        -0.10211194414233114,
+        -0.8296595461564406
+      ],
+      "viewProjection": [
+        1.5344737566402131,
+        -0.1842759175826186,
+        -0.5488846318549785,
+        -0.54885169976503,
+        0,
+        3.2537555912698415,
+        -0.10211807104278668,
+        -0.10211194414233114,
+        -1.0151134082389102,
+        -0.27855661960163275,
+        -0.8297093272226418,
+        -0.8296595461564406,
+        -7.034971991981288,
+        -34.84636174055041,
+        62.40048662000102,
+        62.69673370339133
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 9.320215,
+      "nativeFrameTimes": [
+        8.796584,
+        9.041813,
+        9.320215
+      ],
+      "medianSamples": 3,
+      "sourceScene": "myth",
+      "sourceAppliedCamera": [
+        37,
+        17,
+        49
+      ],
+      "sourceTarget": [
+        -6,
+        9,
+        -16
+      ],
+      "sourceTimestamp": 1793633169.629376,
+      "depth": "coast-depth.bin.gz",
+      "on": "coast-day.webp",
+      "off": "coast-night.webp"
+    },
+    {
+      "id": "coast-left",
+      "captures": [
+        {
+          "night": false,
+          "nativeFrameTime": 22.968705
+        },
+        {
+          "night": true,
+          "nativeFrameTime": 28.822493
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.15,
+      "far": 5000,
+      "fov": 34,
+      "position": [
+        37,
+        17,
+        49
+      ],
+      "direction": [
+        -0.31541834010929554,
+        -0.10211194414233118,
+        -0.9434428554958538
+      ],
+      "viewProjection": [
+        1.7449185142927486,
+        -0.10590110966388645,
+        -0.3154372657774721,
+        -0.31541834010929554,
+        1.2766555853425466e-17,
+        3.2537555912698415,
+        -0.10211807104278671,
+        -0.10211194414233117,
+        -0.5833732252017839,
+        -0.31675914998112104,
+        -0.9434994637654315,
+        -0.9434428554958538,
+        -35.976696993944266,
+        -35.87430564494858,
+        59.33865076572997,
+        59.6350815537604
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 22.968705,
+      "nativeFrameTimes": [
+        22.493271,
+        22.726215,
+        22.968705
+      ],
+      "medianSamples": 3,
+      "sourceScene": "myth",
+      "sourceAppliedCamera": [
+        37,
+        17,
+        49
+      ],
+      "sourceTarget": [
+        12.28843,
+        9,
+        -24.9144
+      ],
+      "sourceTimestamp": 1793633183.3656394,
+      "depth": "coast-left-depth.bin.gz",
+      "on": "coast-left-day.webp",
+      "off": "coast-left-night.webp"
+    },
+    {
+      "id": "coast-right",
+      "captures": [
+        {
+          "night": false,
+          "nativeFrameTime": 35.809813
+        },
+        {
+          "night": true,
+          "nativeFrameTime": 41.488983
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.15,
+      "far": 5000,
+      "fov": 34,
+      "position": [
+        37,
+        17,
+        49
+      ],
+      "direction": [
+        -0.7448817231020968,
+        -0.10211194414233116,
+        -0.6593363098236928
+      ],
+      "viewProjection": [
+        1.2194571483104284,
+        -0.25009262624844775,
+        -0.7449264173463098,
+        -0.7448817231020965,
+        0,
+        3.2537555912698406,
+        -0.10211807104278665,
+        -0.10211194414233112,
+        -1.3776752900587792,
+        -0.22137091593287264,
+        -0.6593758711891231,
+        -0.6593363098236928,
+        22.386174725394337,
+        -35.21324299968396,
+        61.307693337537856,
+        61.60400598655814
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 35.809813,
+      "nativeFrameTimes": [
+        35.328123,
+        35.568426,
+        35.809813
+      ],
+      "medianSamples": 3,
+      "sourceScene": "myth",
+      "sourceAppliedCamera": [
+        37,
+        17,
+        49
+      ],
+      "sourceTarget": [
+        -21.35805,
+        9,
+        -2.65596
+      ],
+      "sourceTimestamp": 1793633196.1728528,
+      "depth": "coast-right-depth.bin.gz",
+      "on": "coast-right-day.webp",
+      "off": "coast-right-night.webp"
+    },
+    {
+      "id": "coast-near",
+      "captures": [
+        {
+          "night": false,
+          "nativeFrameTime": 48.688541
+        },
+        {
+          "night": true,
+          "nativeFrameTime": 54.156385
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.15,
+      "far": 5000,
+      "fov": 34,
+      "position": [
+        24.18684348707665,
+        14.616156927828214,
+        29.631275038604237
+      ],
+      "direction": [
+        -0.5488516997650301,
+        -0.1021119441423312,
+        -0.8296595461564407
+      ],
+      "viewProjection": [
+        1.5344737566402131,
+        -0.18427591758261871,
+        -0.5488846318549786,
+        -0.5488516997650301,
+        -1.2766555853425466e-17,
+        3.2537555912698415,
+        -0.10211807104278675,
+        -0.10211194414233121,
+        -1.0151134082389104,
+        -0.27855661960163286,
+        -0.8297093272226418,
+        -0.8296595461564406,
+        -7.034971991981281,
+        -34.84636174055041,
+        39.0536967114259,
+        39.35134456018776
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 48.688541,
+      "nativeFrameTimes": [
+        48.212605,
+        48.451105,
+        48.688541
+      ],
+      "medianSamples": 3,
+      "sourceScene": "myth",
+      "sourceAppliedCamera": [
+        24.186840000000004,
+        14.61616,
+        29.63128
+      ],
+      "sourceTarget": [
+        -6,
+        9,
+        -16
+      ],
+      "sourceTimestamp": 1793633209.0814888,
+      "depth": "coast-near-depth.bin.gz",
+      "on": "coast-near-day.webp",
+      "off": "coast-near-night.webp"
+    },
+    {
+      "id": "coast-far",
+      "captures": [
+        {
+          "night": false,
+          "nativeFrameTime": 60.961698
+        },
+        {
+          "night": true,
+          "nativeFrameTime": 66.350081
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.15,
+      "far": 5000,
+      "fov": 34,
+      "position": [
+        42.29894957932264,
+        17.98585108452514,
+        57.01004006176677
+      ],
+      "direction": [
+        -0.5488516997650299,
+        -0.10211194414233113,
+        -0.8296595461564406
+      ],
+      "viewProjection": [
+        1.5344737566402131,
+        -0.18427591758261858,
+        -0.5488846318549785,
+        -0.54885169976503,
+        0,
+        3.2537555912698415,
+        -0.10211807104278667,
+        -0.10211194414233113,
+        -1.0151134082389102,
+        -0.2785566196016327,
+        -0.8297093272226418,
+        -0.8296595461564406,
+        -7.034971991981287,
+        -34.84636174055041,
+        72.05567677082769,
+        72.35134456018777
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 60.961698,
+      "nativeFrameTimes": [
+        60.497734,
+        60.73057,
+        60.961698
+      ],
+      "medianSamples": 3,
+      "sourceScene": "myth",
+      "sourceAppliedCamera": [
+        42.29895,
+        17.98585,
+        57.01004
+      ],
+      "sourceTarget": [
+        -6,
+        9,
+        -16
+      ],
+      "sourceTimestamp": 1793633221.3786929,
+      "depth": "coast-far-depth.bin.gz",
+      "on": "coast-far-day.webp",
+      "off": "coast-far-night.webp"
+    },
+    {
+      "id": "cottage",
+      "captures": [
+        {
+          "night": false,
+          "nativeFrameTime": 73.347014
+        },
+        {
+          "night": true,
+          "nativeFrameTime": 79.374435
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.15,
+      "far": 5000,
+      "fov": 34,
+      "position": [
+        9.5,
+        20.498784101853953,
+        -38.5
+      ],
+      "direction": [
+        -0.5886141462938789,
+        -0.09631867848445277,
+        -0.8026556540371077
+      ],
+      "viewProjection": [
+        1.4836679393924967,
+        -0.1863056933395437,
+        -0.5886494642021936,
+        -0.5886141462938788,
+        1.2766555853425463e-17,
+        3.255644944216274,
+        -0.09632445777854062,
+        -0.09631867848445275,
+        -1.0880231555544975,
+        -0.2540532181902869,
+        -0.8027038148211733,
+        -0.8026556540371076,
+        -55.98373691307687,
+        -74.74790763738214,
+        -23.63740169723389,
+        -23.335992495408114
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 73.347014,
+      "nativeFrameTimes": [
+        72.858786,
+        73.101827,
+        73.347014
+      ],
+      "medianSamples": 3,
+      "sourceScene": "myth",
+      "sourceAppliedCamera": [
+        9.5,
+        20.49878,
+        -38.5
+      ],
+      "sourceTarget": [
+        4,
+        19.59878,
+        -46
+      ],
+      "sourceTimestamp": 1793633233.7039604,
+      "depth": "cottage-depth.bin.gz",
+      "on": "cottage-day.webp",
+      "off": "cottage-night.webp"
+    }
+  ],
+  "packing": {
+    "codec": "WebP lossless",
+    "resolutionPreserved": true,
+    "decodedPixelsVerified": true
+  }
+}

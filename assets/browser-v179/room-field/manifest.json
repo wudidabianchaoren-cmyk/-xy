@@ -1,0 +1,663 @@
+{
+  "version": 179,
+  "scene": "room",
+  "threeRevision": "180",
+  "engineSource": "original UE 5.8.4 native output; captured locally once",
+  "originalAssetsModified": false,
+  "qualityApproved": false,
+  "poses": [
+    {
+      "id": "desk",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 5.765783
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 9.18447
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        0.02,
+        1.82,
+        3.08
+      ],
+      "direction": [
+        -0.02130446461836813,
+        -0.19782717145627554,
+        -0.9800053724449341
+      ],
+      "viewProjection": [
+        1.6807381885985064,
+        -0.012850074659284507,
+        -0.02131630372068454,
+        -0.021304464618368133,
+        1.4581524282662719e-18,
+        2.9296193288605714,
+        -0.19793710597778502,
+        -0.19782717145627554,
+        -0.03653778670866318,
+        -0.5911034343270875,
+        -0.9805499711514889,
+        -0.9800053724449341,
+        0.07892161929071248,
+        -3.511051599305624,
+        3.3307518773525824,
+        3.378888088473186
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 5.765783,
+      "nativeFrameTimes": [
+        5.285049,
+        5.522319,
+        5.765783
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        0.02,
+        1.82,
+        3.08
+      ],
+      "sourceTarget": [
+        -0.05,
+        1.17,
+        -0.14
+      ],
+      "sourceTimestamp": 1793631924.5629857,
+      "depth": "desk-depth.bin.gz",
+      "on": "desk-on.webp",
+      "off": "desk-off.webp"
+    },
+    {
+      "id": "desk-left",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 15.037377
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 18.90966
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        -0.13929,
+        1.82,
+        3.08
+      ],
+      "direction": [
+        -0.4662205895847643,
+        -0.1750511984554358,
+        -0.8671767061946203
+      ],
+      "viewProjection": [
+        1.4807044305380872,
+        -0.24773922992080377,
+        -0.4664796729910354,
+        -0.46622058958476426,
+        -2.333043885226035e-17,
+        2.9425376700076393,
+        -0.17514847614282422,
+        -0.1750511984554358,
+        -0.796071766774727,
+        -0.46079837355371683,
+        -0.8676586048921444,
+        -0.8671767061946202,
+        2.658148361795809,
+        -3.9706671662041253,
+        2.876168883248838,
+        2.9245575703450615
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 15.037377,
+      "nativeFrameTimes": [
+        14.578868,
+        14.804224,
+        15.037377
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        -0.13929,
+        1.82,
+        3.08
+      ],
+      "sourceTarget": [
+        -1.87046,
+        1.17,
+        -0.14
+      ],
+      "sourceTimestamp": 1793631933.213533,
+      "depth": "desk-left-depth.bin.gz",
+      "on": "desk-left-on.webp",
+      "off": "desk-left-off.webp"
+    },
+    {
+      "id": "desk-right",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 24.526134
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 28.512129
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        0.17929,
+        1.82,
+        3.08
+      ],
+      "direction": [
+        0.4359333547290607,
+        -0.17808070826743183,
+        -0.8821844317248161
+      ],
+      "viewProjection": [
+        1.5071620335413938,
+        0.2357843648923574,
+        0.43617560721849075,
+        0.4359333547290608,
+        -2.3330438852260356e-17,
+        2.940913477704624,
+        -0.1781796694834738,
+        -0.17808070826743186,
+        0.744767395313683,
+        -0.4771493020565942,
+        -0.8826746703642856,
+        -0.8821844317248163,
+        -2.564102658559781,
+        -3.9251164578696556,
+        2.914709165815733,
+        2.9630764475897866
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 24.526134,
+      "nativeFrameTimes": [
+        24.058715,
+        24.291562,
+        24.526134
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        0.17929000000000003,
+        1.82,
+        3.08
+      ],
+      "sourceTarget": [
+        1.77046,
+        1.17,
+        -0.14
+      ],
+      "sourceTimestamp": 1793631942.7059178,
+      "depth": "desk-right-depth.bin.gz",
+      "on": "desk-right-on.webp",
+      "off": "desk-right-off.webp"
+    },
+    {
+      "id": "tv",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 33.301929
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 37.256341
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        -0.25,
+        1.3,
+        1.13
+      ],
+      "direction": [
+        0,
+        -0.03224129401095807,
+        -0.9994801143396996
+      ],
+      "viewProjection": [
+        1.6811352915428777,
+        0,
+        0,
+        0,
+        0,
+        2.9871311882876075,
+        -0.03225921081785496,
+        -0.032241294010958065,
+        0,
+        -0.09635907058992288,
+        -1.0000355353535033,
+        -0.9994801143396994,
+        0.4202838228857194,
+        -3.774384795007277,
+        1.1219632362646843,
+        1.1713262114181056
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 33.301929,
+      "nativeFrameTimes": [
+        32.830227,
+        33.056953,
+        33.301929
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        -0.24999910503071004,
+        1.30000089496929,
+        1.1300040273618046
+      ],
+      "sourceTarget": [
+        -0.25,
+        1.27,
+        0.2
+      ],
+      "sourceTimestamp": 1793631952.4815578,
+      "depth": "tv-depth.bin.gz",
+      "on": "tv-on.webp",
+      "off": "tv-off.webp"
+    },
+    {
+      "id": "window",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 42.190253
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 46.193281
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        0.77,
+        2.15,
+        -0.72
+      ],
+      "direction": [
+        0,
+        -0.01373496800656509,
+        -0.9999056708779377
+      ],
+      "viewProjection": [
+        1.6811352915428777,
+        0,
+        0,
+        0,
+        0,
+        2.988403042714237,
+        -0.013742600664529286,
+        -0.01373496800656509,
+        0,
+        -0.041049492344975826,
+        -1.000461328377731,
+        -0.9999056708779377,
+        -1.294474174488016,
+        -6.4546221763239915,
+        -0.7407994577512138,
+        -0.6904019018180001
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 42.190253,
+      "nativeFrameTimes": [
+        41.709111,
+        41.951262,
+        42.190253
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        0.77,
+        2.15,
+        -0.72
+      ],
+      "sourceTarget": [
+        0.77,
+        2.05,
+        -8
+      ],
+      "sourceTimestamp": 1793631961.3602483,
+      "depth": "window-depth.bin.gz",
+      "on": "window-on.webp",
+      "off": "window-off.webp"
+    },
+    {
+      "id": "phone",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 51.154067
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 55.033773
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        1.72,
+        1.12,
+        -0.1
+      ],
+      "direction": [
+        -0.44871023585325126,
+        -0.3763376171672432,
+        -0.8105733292832926
+      ],
+      "viewProjection": [
+        1.470813848351,
+        -0.5447365063026968,
+        -0.44895958858226126,
+        -0.4487102358532513,
+        0,
+        2.768964598414575,
+        -0.3765467517141547,
+        -0.3763376171672431,
+        -0.8142005231943036,
+        -0.9840401404177749,
+        -0.8110237729227946,
+        -0.8105733292832927,
+        -2.611219871483151,
+        -2.2626975734254637,
+        1.0628265842410776,
+        1.1122224039665753
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 51.154067,
+      "nativeFrameTimes": [
+        50.686792,
+        50.92113,
+        51.154067
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        1.72,
+        1.12,
+        -0.1
+      ],
+      "sourceTarget": [
+        1.41,
+        0.86,
+        -0.66
+      ],
+      "sourceTimestamp": 1793631969.3000271,
+      "depth": "phone-depth.bin.gz",
+      "on": "phone-on.webp",
+      "off": "phone-off.webp"
+    },
+    {
+      "id": "books",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 59.751297
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 63.673435
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        0.93,
+        1.3,
+        0.57
+      ],
+      "direction": [
+        0.16978789760923366,
+        -0.2996257016633535,
+        -0.9388271985451742
+      ],
+      "viewProjection": [
+        1.6542992859639252,
+        0.15936453774767165,
+        0.16988225042813293,
+        0.16978789760923363,
+        0,
+        2.8513753077402026,
+        -0.2997922066378817,
+        -0.2996257016633535,
+        0.2991817857594333,
+        -0.8811921498988902,
+        -0.9393489141320289,
+        -0.938827198545174,
+        -1.7090319538293273,
+        -3.352717394725231,
+        0.7171543640383535,
+        0.7667421705565215
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 59.751297,
+      "nativeFrameTimes": [
+        59.288008,
+        59.529652,
+        59.751297
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        0.93,
+        1.3,
+        0.57
+      ],
+      "sourceTarget": [
+        1.1,
+        1,
+        -0.37
+      ],
+      "sourceTimestamp": 1793631978.8907819,
+      "depth": "books-depth.bin.gz",
+      "on": "books-on.webp",
+      "off": "books-off.webp"
+    },
+    {
+      "id": "cds",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 68.570997
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 72.685319
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        0.55,
+        1.23,
+        1.18
+      ],
+      "direction": [
+        0,
+        -0.20829198036780217,
+        -0.9780666904227232
+      ],
+      "viewProjection": [
+        1.6811352915428777,
+        0,
+        0,
+        0,
+        0,
+        2.923133210226102,
+        -0.20840773028742865,
+        -0.20829198036780217,
+        0,
+        -0.6225191095851883,
+        -0.9786102117844476,
+        -0.9780666904227232,
+        -0.9246244103485828,
+        -2.860881299267583,
+        1.3610876654111999,
+        1.41031783055121
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 68.570997,
+      "nativeFrameTimes": [
+        68.131214,
+        68.35502,
+        68.570997
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        0.55,
+        1.23,
+        1.17999925876935
+      ],
+      "sourceTarget": [
+        0.55,
+        1,
+        0.1
+      ],
+      "sourceTimestamp": 1793631986.7598026,
+      "depth": "cds-depth.bin.gz",
+      "on": "cds-on.webp",
+      "off": "cds-off.webp"
+    },
+    {
+      "id": "pens",
+      "captures": [
+        {
+          "lamp": true,
+          "nativeFrameTime": 77.427572
+        },
+        {
+          "lamp": false,
+          "nativeFrameTime": 81.832483
+        }
+      ],
+      "width": 1920,
+      "height": 1080,
+      "depthWidth": 1920,
+      "depthHeight": 1080,
+      "near": 0.025,
+      "far": 90,
+      "fov": 37,
+      "position": [
+        -1.18,
+        1.04,
+        0.84
+      ],
+      "direction": [
+        -0.41130637283031146,
+        -0.24678382369818688,
+        -0.8774535953713307
+      ],
+      "viewProjection": [
+        1.522198972283316,
+        -0.3130450690079393,
+        -0.4115349398616148,
+        -0.41130637283031146,
+        -4.66608777045207e-17,
+        2.8962466014141928,
+        -0.24692096391696894,
+        -0.2467838236981869,
+        -0.7135307682578047,
+        -0.6678294805502704,
+        -0.8779412050381113,
+        -0.8774535953713308,
+        2.3955606326308687,
+        -2.8205128832379014,
+        0.4586432929209701,
+        0.5083746768182648
+      ],
+      "depthFormat": "RGBA packed perspective depth / bottom-up / alpha-tested geometry / no colorspace transform",
+      "threeRevision": "180",
+      "nativeFrameTime": 77.427572,
+      "nativeFrameTimes": [
+        76.953412,
+        77.185601,
+        77.427572
+      ],
+      "medianSamples": 3,
+      "sourceScene": "room",
+      "sourceAppliedCamera": [
+        -1.18,
+        1.04,
+        0.84
+      ],
+      "sourceTarget": [
+        -1.48,
+        0.86,
+        0.2
+      ],
+      "sourceTimestamp": 1793631995.576802,
+      "depth": "pens-depth.bin.gz",
+      "on": "pens-on.webp",
+      "off": "pens-off.webp"
+    }
+  ],
+  "packing": {
+    "codec": "WebP lossless",
+    "resolutionPreserved": true,
+    "decodedPixelsVerified": true
+  }
+}

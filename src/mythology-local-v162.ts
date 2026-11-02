@@ -1,3 +1,5 @@
+import {attachBakedLightingV179} from './directory-v141/baked-lighting-v179';
+import {captureLightingV179} from './directory-v141/capture-lighting-v179';
 import{nativeUESurface}from'./ue-native-surface-v162';
 import{coastalAirV161}from'./coastal-air-v161';
 import{attachUEIslandV161}from'./ue-island-v161';
@@ -15,7 +17,7 @@ import {RGBELoader} from 'three/addons/loaders/RGBELoader.js';
 
 import {Water} from 'three/addons/objects/Water.js';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
-import {createOdysseyControlsV154} from './odyssey-controls-v154';
+import {createDollyV166 as createOdysseyControlsV154} from './odyssey-dolly-v169';
 import {coastalLifeV158,seaGridV155} from './coastal-life-v158';
 import {attachUECoveReflectionV158} from './ue-cove-reflection-v158';
 
@@ -31,26 +33,26 @@ async function boot(){
  state.gpu=ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):'';
  const integrated=/Intel|Iris|UHD|SwiftShader/i.test(state.gpu);state.integrated=integrated;
  renderer.setPixelRatio(Math.min(devicePixelRatio,integrated?1:1.5));
- renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.AgXToneMapping;renderer.toneMappingExposure=1.0;
+ renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.85;
  renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;renderer.shadowMap.autoUpdate=false;
  const windTime={value:0};const scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0xd6ddd5,.00155);
  const camera=new THREE.PerspectiveCamera(34,1,.15,5000),controls=createOdysseyControlsV154(camera,canvas);
  const start=new THREE.Vector3(37,17,49),aim=new THREE.Vector3(-6,9,-16);
  camera.position.copy(start);controls.target.copy(aim);controls.update();
- camera.aspect=host.clientWidth/Math.max(1,host.clientHeight);camera.updateProjectionMatrix();const nativeRequired=new URLSearchParams(location.search).get('renderer')!=='web';canvas.style.opacity=nativeRequired?'0':'1';state.nativeSurfaceChanged=(ready:boolean)=>{canvas.style.opacity=nativeRequired?'0':state.ready?'1':'0';if(ready){const loading=host.querySelector<HTMLElement>('.odyssey-preparing');if(loading)loading.hidden=true;state.firstNativeFrameAt??=performance.now();}};
- if(new URLSearchParams(location.search).get('renderer')!=='web')void nativeUESurface(host,'myth',()=>({position:camera.position.toArray(),target:controls.target.toArray(),fov:camera.fov,night:(state.nightMix??0)>.5,paused:state.paused}),state).then(api=>{state.nativeController=api;state.renderer='Unreal Engine 5.8.4 complete live viewport / original controls and collision';}).catch(e=>{state.nativeFallback=String(e)});
+ camera.aspect=host.clientWidth/Math.max(1,host.clientHeight);camera.updateProjectionMatrix();const bakeCapture=new URLSearchParams(location.search).get('bakeCapture')==='myth',nativeRequired=bakeCapture||new URLSearchParams(location.search).get('renderer')!=='web';canvas.style.opacity=nativeRequired?'0':'1';state.nativeSurfaceChanged=(ready:boolean)=>{canvas.style.opacity=nativeRequired?'0':state.ready?'1':'0';if(ready){const loading=host.querySelector<HTMLElement>('.odyssey-preparing');if(loading)loading.hidden=true;state.firstNativeFrameAt??=performance.now();}};
+ if(nativeRequired)void nativeUESurface(host,'myth',()=>({position:camera.position.toArray(),target:controls.lookTarget.toArray(),fov:camera.fov,night:(state.nightMix??0)>.5,paused:state.paused}),state).then(api=>{state.nativeController=api;state.renderer='Unreal Engine 5.8.4 complete live viewport / original controls and collision';}).catch(e=>{state.nativeFallback=String(e)});
  const earlyControl=()=>{if(state.ready)return;if(!document.hidden)controls.update();requestAnimationFrame(earlyControl);};requestAnimationFrame(earlyControl);
 
- const sunDirection=new THREE.Vector3(-.68,.62,.39).normalize();
- const sun=new THREE.DirectionalLight(0xffdfac,4.9);sun.target.position.set(-7,8,-20);sun.position.copy(sun.target.position).addScaledVector(sunDirection,120);
- sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
- Object.assign(sun.shadow.camera,{left:-60,right:60,top:58,bottom:-58,near:1,far:230});sun.shadow.normalBias=.045;sun.shadow.bias=-.00015;
- const coastalAmbient=new THREE.HemisphereLight(0xc6e2f1,0xa79568,.92);scene.add(sun,sun.target,coastalAmbient);
- const sunBounce=new THREE.DirectionalLight(0xd4e6ed,.62);sunBounce.name='V158 golden hour sea-bounce';sunBounce.position.set(45,55,75);sunBounce.target.position.set(-6,5,-20);scene.add(sunBounce,sunBounce.target);
+ const sunDirection=new THREE.Vector3(-83,42,45).normalize();
+ const sun=new THREE.DirectionalLight(new THREE.Color().setRGB(1,.69,.36),9.5);sun.target.position.set(-7,8,-20);sun.position.copy(sun.target.position).addScaledVector(sunDirection,120);
+ sun.castShadow=true;sun.shadow.mapSize.set(4096,4096);sun.shadow.radius=2;
+ Object.assign(sun.shadow.camera,{left:-60,right:60,top:58,bottom:-58,near:1,far:230});sun.shadow.normalBias=.015;sun.shadow.bias=-.00004;
+ const coastalAmbient=new THREE.HemisphereLight(0xe2cbaa,0x5b503d,.08);scene.add(sun,sun.target,coastalAmbient);
+ const sunBounce=new THREE.DirectionalLight(0xd4e6ed,.06);sunBounce.name='V158 golden hour sea-bounce';sunBounce.position.set(45,55,75);sunBounce.target.position.set(-6,5,-20);scene.add(sunBounce,sunBounce.target);
  const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder),textures=new THREE.TextureLoader(),folder='./assets/odyssey/compact-v134/';
  const [land,ship,vegetation,placements,hdr,normal,heightData,grass,newCrew,crewProduction]=await Promise.all([
   loader.loadAsync('./assets/odyssey/refit-v148/island-bridged-web-c.glb'),loader.loadAsync('./assets/odyssey/crew-v163/vessel-coherent.glb'),loader.loadAsync(folder+'vegetation.glb'),
-  fetch('./assets/odyssey/refit-v148/vegetation-grounded-c.json').then(r=>r.json()),new RGBELoader().loadAsync('./assets/odyssey/refit-v145/daylight.hdr'),textures.loadAsync('./assets/odyssey/waternormals.jpg'),fetch(folder+'height.json').then(r=>r.json()),loader.loadAsync('./assets/odyssey/refit-v148/grass-grounded-c.glb'),loader.loadAsync('./assets/odyssey/crew-v162/medieval-rowers.glb'),fetch('./assets/odyssey/refit-v141/production.json').then(r=>r.json())
+  fetch('./assets/odyssey/refit-v148/vegetation-grounded-c.json').then(r=>r.json()),new RGBELoader().loadAsync('./assets/odyssey/venice_sunset_1k.hdr'),textures.loadAsync('./assets/odyssey/waternormals.jpg'),fetch(folder+'height.json').then(r=>r.json()),loader.loadAsync('./assets/odyssey/refit-v148/grass-grounded-c.glb'),loader.loadAsync('./assets/odyssey/crew-v162/medieval-rowers.glb'),fetch('./assets/odyssey/refit-v141/production.json').then(r=>r.json())
  ]);
  const lowerShore=(h:number)=>h-.65*(1-THREE.MathUtils.smoothstep(h,-.3,.75));
  heightData.heights=heightData.heights.map(lowerShore);
@@ -64,7 +66,7 @@ async function boot(){
   p.needsUpdate=true;g.computeVertexNormals();g.computeBoundingSphere();});
  state.shorelineFix='terrain extends beneath troughs; original shoreline retained; shared-wave wet sand and broken low-contrast wash replace isobath outline';
  const pmrem=new THREE.PMREMGenerator(renderer);hdr.mapping=THREE.EquirectangularReflectionMapping;
- scene.environment=pmrem.fromEquirectangular(hdr).texture;scene.environmentIntensity=.62;pmrem.dispose();
+ scene.environment=pmrem.fromEquirectangular(hdr).texture;scene.environmentIntensity=.45;pmrem.dispose();
 
  // Restore the incumbent maritime sky: real HDR upper sky plus restrained drifting clouds.
  const skyClock={value:0},seaSun=sunDirection.clone();
@@ -75,16 +77,14 @@ async function boot(){
  float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1)),f.x),f.y);}
  float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=noise(p)*a;p=p*2.03+vec2(13.1,7.3);a*=.5;}return v;}
  void main(){vec3 d=normalize(direction);float h=pow(max(0.,1.-abs(d.y)),13.);float g=pow(max(dot(d,sun),0.),32.);
- vec3 top=vec3(.11,.34,.67),horizon=vec3(1.36,1.04,.62);vec3 clear=mix(top,horizon,h);clear+=vec3(1.85,1.31,.73)*g*.45;
- vec2 drift=vec2(d.x*4.+d.z*2.+time*.003,d.y*10.);float cloud=fbm(drift+vec2(1.,3.))+fbm(drift*2.2)*.13;
- float mass=smoothstep(.61,.77,cloud),rim=smoothstep(.52,.62,cloud)*(1.-smoothstep(.62,.79,cloud));
- vec3 clouds=mix(vec3(.69,.76,.80),vec3(1.34,1.22,.94),h*.56+g*.44);vec3 sky=mix(clear,clouds,mass*.40);sky+=vec3(.65,.66,.59)*rim*(g+.11)*h;
- sky+=vec3(4.8,2.6,.9)*smoothstep(.99965,.99995,dot(d,sun));
- sky=mix(sky,vec3(1.12,1.02,.80),pow(1.-smoothstep(-.02,.15,d.y),2.)*.24);gl_FragColor=vec4(sky,1.);
+ // Same source HDR and lower-hemisphere clamp as UE EveningSky.
+ vec3 nativeDirection=normalize(vec3(d.x,max(d.y,length(d.xz)*.38),d.z));
+ vec2 nativeUV=vec2(atan(nativeDirection.z,nativeDirection.x)/6.28318530718+.5,asin(clamp(nativeDirection.y,-1.,1.))/3.14159265359+.5);
+ float mass=0.;vec3 sky=texture2D(map,nativeUV).rgb*.7;gl_FragColor=vec4(sky,1.);
  #include <tonemapping_fragment>
  #include <colorspace_fragment>
  }`});
- scene.add(new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial));
+const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);skyDome.userData.nativeLightingSurface=true;skyDome.userData.nativeLightingExcluded=true;scene.add(skyDome);
 
  // Original island silhouette is retained; the new terrain uses actual material albedo.
  scene.add(land.scene);
@@ -109,6 +109,7 @@ async function boot(){
   const list=groups.get(mats[0])||[];list.push(g);groups.set(mats[0],list);
  });
  const boat=new THREE.Group(),clock={value:0},floatPivot=new THREE.Vector3(0,0,8),rotatedPivot=new THREE.Vector3();let boatTriangles=0,heave=0;
+ boat.userData.nativeLightingExcluded=true;
  const seaHeight=(x:number,z:number,t:number)=>.13*Math.sin(t*.04)+.16*Math.sin((x-z)*.1485-t*.45)+.09*Math.sin((x+z)*.233-t*.372);
  for(const [mat,parts]of groups){const geometry=mergeGeometries(parts,false);if(!geometry)continue;const mesh=new THREE.Mesh(geometry,mat);
   mesh.castShadow=true;mesh.receiveShadow=true;boat.add(mesh);boatTriangles+=geometry.attributes.position.count/3;parts.forEach(g=>g.dispose());
@@ -181,10 +182,11 @@ async function boot(){
  state.foliageBatches=foliageMeshes.length;state.leaves=leafStats;state.trees=34;state.shrubs=98;
 
  normal.wrapS=normal.wrapT=THREE.RepeatWrapping;
- const water=new Water(seaGridV155(),{textureWidth:512,textureHeight:512,waterNormals:normal,sunDirection:seaSun,sunColor:0xffc575,waterColor:0x062e2b,distortionScale:4.2,fog:true});
- water.rotation.x=-Math.PI/2;water.position.y=-.15;water.receiveShadow=true;
+ const water=new Water(seaGridV155(),{textureWidth:512,textureHeight:512,waterNormals:normal,sunDirection:seaSun,sunColor:0xffc575,waterColor:0x062e2b,distortionScale:.65,fog:true});
+ water.userData.coastalWater=true;water.rotation.x=-Math.PI/2;water.position.y=-.15;water.receiveShadow=true;
  water.material.vertexShader=water.material.vertexShader.replace('void main() {',`void main() {vec3 displaced=position;float waveDetail=1.-smoothstep(180.,450.,length(position.xy));displaced.z+=(.13*sin(time*.0666667)+.16*sin((position.x+position.y)*.1485-time*.75)+.09*sin((position.x-position.y)*.233-time*.62))*waveDetail;`).replaceAll('vec4( position, 1.0 )','vec4( displaced, 1.0 )');
- water.material.uniforms.size.value=2.4;
+ water.material.uniforms.size.value=1.6;
+ water.material.fragmentShader=water.material.fragmentShader.replace('vec3 surfaceNormal = normalize( noise.xzy * vec3( 1.5, 1.0, 1.5 ) );','vec3 geometricSeaNormal=normalize(cross(dFdx(worldPosition.xyz),dFdy(worldPosition.xyz)));if(geometricSeaNormal.y<0.)geometricSeaNormal=-geometricSeaNormal;vec3 surfaceNormal=normalize(geometricSeaNormal+vec3(noise.x*.055,0.,noise.y*.055));');
  water.material.fragmentShader=water.material.fragmentShader.replace('sunColor * diffuseLight * 0.3','sunColor * diffuseLight * 0.10').replace('float rf0 = 0.3;','float rf0 = 0.045;')
  .replace('vec3( 0.1 ) + reflectionSample * 0.9 + reflectionSample * specularLight','vec3( 0.012 ) + reflectionSample * 0.70 + reflectionSample * specularLight')
  .replace('sunLight( surfaceNormal, eyeDirection, 100.0, 2.0, 0.5, diffuseLight, specularLight );',`float rippleVariance=max(length(fwidth(surfaceNormal)),.0);float seaDistance=length(worldToEye);surfaceNormal=normalize(mix(surfaceNormal,vec3(0.,1.,0.),smoothstep(80.,850.,seaDistance)*.30));float seaShininess=mix(120.,80.,clamp(rippleVariance*2.,0.,1.));sunLight(surfaceNormal,eyeDirection,seaShininess,1.65,.5,diffuseLight,specularLight);`);
@@ -208,21 +210,21 @@ async function boot(){
  outgoingLight=mix(outgoingLight,waterColor*.58,.16);gl_FragColor=vec4(outgoingLight,alpha);`);
  const hullWater=shipWaterExclusion(water,boat);
  let lastMirror=-Infinity;const reflect=water.onBeforeRender.bind(water);
- water.onBeforeRender=(...args)=>{if(performance.now()-lastMirror>(integrated?180:65)){lastMirror=performance.now();reflect(...args);}};scene.add(water);
+ water.onBeforeRender=(...args)=>{if(performance.now()-lastMirror>(integrated?120:16)){lastMirror=performance.now();reflect(...args);}};scene.add(water);
 
  
  cottageRoot.updateMatrixWorld(true);const cottageBox=new THREE.Box3().setFromObject(cottageRoot).expandByScalar(.4);const collisionRay=new THREE.Raycaster(),testMove=new THREE.Vector3(),testDir=new THREE.Vector3();(collisionRay as any).firstHitOnly=true;
  controls.setCollider((from,to)=>{testMove.copy(to);const ground=terrainAt(to.x,to.z);testMove.y=Math.max(testMove.y,ground+.85,.45);testDir.copy(testMove).sub(from);const distance=testDir.length();if(distance>0){collisionRay.set(from,testDir.normalize());collisionRay.far=distance+.45;const hit=collisionRay.intersectObject(land.scene,true)[0];if(hit&&hit.distance<distance+.4)testMove.copy(from).addScaledVector(testDir,Math.max(0,hit.distance-.5));}if(cottageBox.containsPoint(testMove)&&!cottageBox.containsPoint(from))testMove.copy(from);return testMove;});state.navigation={mode:'free-look / pan / dolly',minimumOrbitRadius:0,groundCollision:true,cottageCollision:true};
  state.worldExplore={doubleClickApproach:true,keyboard:'W A S D / Q E',pan:true};
  const processEntry=cottageProcessEntry(scene,camera,canvas,state.cottage.position,state);
- const life=await coastalLifeV158(scene,loader,clock,state,camera);
+ const beforeLife=new Set(scene.children);const life=await coastalLifeV158(scene,loader,clock,state,camera);for(const object of scene.children)if(!beforeLife.has(object))object.userData.nativeLightingExcluded=true;
  const ueReflection=await attachUECoveReflectionV158(water,boat,state);
  const ueIsland=await attachUEIslandV161([land.scene,cottageRoot,meadow],state);state.updateUEReflection=(night:number)=>{ueReflection.update(night);ueIsland.update(night);};
  const weather=dayNight(scene,renderer,sun,coastalAmbient,skyMaterial,water,boat,state.cottage.position,state);const air=coastalAirV161(scene,sun,windTime,state);
  const cc=crewProduction.actors[0].corseletCenter;const captainAnchor=new THREE.Vector3(cc[0]-1,cc[2]+.38,-cc[1]+5.5);state.captainAnchor=captainAnchor.toArray();state.boatBounds=new THREE.Box3().setFromObject(boat).getCenter(new THREE.Vector3()).toArray();
  const poses=[{p:start,t:aim},{p:new THREE.Vector3(29,11,40),t:new THREE.Vector3(1,3,8)},{p:new THREE.Vector3(21,22,13),t:new THREE.Vector3(-12,14,-34)},{p:new THREE.Vector3(site.x+5.5,site.hi+2.7,site.z+7.5),t:new THREE.Vector3(site.x,site.hi+1.8,site.z)},{p:captainAnchor.clone().add(new THREE.Vector3(-3.3,1.5,4.5)),t:captainAnchor.clone()}];
  let dirty=true,pose=0,transition=0,fromP=start.clone(),fromT=aim.clone();controls.addEventListener('change',()=>{dirty=true;wake();});
- function choose(i:number){dirty=true;lastMirror=-Infinity;pose=i;state.viewIndex=i;fromP.copy(camera.position);fromT.copy(controls.target);transition=performance.now();controls.resetInteraction();wake();document.querySelectorAll('[data-coast-view]').forEach((b,j)=>b.setAttribute('aria-pressed',String(i===j)));}
+ function choose(i:number){controls.debug.minDistance=i===3?5:55;controls.debug.maxDistance=i===3?24:88;dirty=true;lastMirror=-Infinity;pose=i;state.viewIndex=i;fromP.copy(camera.position);fromT.copy(controls.target);transition=performance.now();controls.resetInteraction();wake();document.querySelectorAll('[data-coast-view]').forEach((b,j)=>b.setAttribute('aria-pressed',String(i===j)));}
  document.querySelectorAll<HTMLButtonElement>('[data-coast-view]').forEach((b,i)=>b.onclick=()=>choose(i));
  canvas.addEventListener('dblclick',e=>{const b=canvas.getBoundingClientRect(),r=new THREE.Raycaster();r.setFromCamera(new THREE.Vector2((e.clientX-b.left)/b.width*2-1,1-(e.clientY-b.top)/b.height*2),camera);if(r.intersectObject(cottageRoot,true).length)choose(3);else if(r.intersectObject(boat,true).length)choose(1);else{const hit=r.intersectObject(land.scene,true)[0];if(hit){const direction=hit.point.clone().sub(camera.position).normalize(),destination=hit.point.clone().addScaledVector(direction,-4);destination.y=Math.max(destination.y,terrainAt(destination.x,destination.z)+1.7);poses.push({p:destination,t:hit.point.clone().add(new THREE.Vector3(0,1,0))});choose(poses.length-1);}}});
  document.querySelector<HTMLButtonElement>('[data-odyssey-reset]')!.onclick=()=>choose(0);document.querySelector<HTMLButtonElement>('[data-odyssey-house]')!.onclick=()=>choose(3);
@@ -231,25 +233,33 @@ async function boot(){
  let zoomEndAt=0;
  function resize(){dirty=true;const w=host.clientWidth,h=host.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();wake();}
  new ResizeObserver(resize).observe(host);resize();
+ let nativeLighting:Awaited<ReturnType<typeof attachBakedLightingV179>>|null=null;
+ if(!nativeRequired&&new URLSearchParams(location.search).get('nativeLightfield')==='1'){
+  const [daySky,nightSky]=await Promise.all(['day','night'].map(mode=>textures.loadAsync('./assets/browser-v179/myth-field/sky-'+mode+'.png')));for(const texture of [daySky,nightSky]){texture.colorSpace=THREE.SRGBColorSpace;texture.generateMipmaps=false;texture.minFilter=texture.magFilter=THREE.LinearFilter;}
+  skyMaterial.uniforms.nativeDaySky={value:daySky};skyMaterial.uniforms.nativeNightSky={value:nightSky};
+  skyMaterial.fragmentShader=`uniform sampler2D nativeDaySky,nativeNightSky;uniform float nightFactor;varying vec3 direction;void main(){vec3 d=normalize(direction);vec2 uv=vec2(clamp(d.y/.25,0.,1.),.5);gl_FragColor=vec4(mix(texture2D(nativeDaySky,uv).rgb,texture2D(nativeNightSky,uv).rgb,nightFactor),1.);\n#include <colorspace_fragment>\n}`;skyMaterial.needsUpdate=true;
+  nativeLighting=await attachBakedLightingV179(scene,'./assets/browser-v179/myth-field/manifest.json',state,renderer);nativeLighting.update(camera,1);
+ }
  if(!nativeRequired){await renderer.compileAsync(scene,camera);renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);}
 
  state.ready=true;document.querySelector<HTMLButtonElement>('[data-odyssey-night]')?.removeAttribute('disabled');document.querySelector('.odyssey-preparing')?.remove();canvas.style.opacity=nativeRequired?'0':'1';
  let last=performance.now(),lastRender=0,time=0,shadowAt=-Infinity,frameHandle=0;const deltaFrames:number[]=[];
  function wake(){if(!state.ready||frameHandle||document.hidden||document.body.classList.contains('portfolio-surface-suspended'))return;frameHandle=requestAnimationFrame(render);state.scheduled=true;}
- function render(now:number){frameHandle=0;state.scheduled=false;if(document.hidden||document.body.classList.contains('portfolio-surface-suspended')){last=now;return;}if(state.paused&&!transition&&!controls.dragging&&!dirty&&!weather.changing)return;if(now-lastRender<(controls.dragging||transition?25:40)){wake();return;}
+ function render(now:number){frameHandle=0;state.scheduled=false;if(document.hidden||document.body.classList.contains('portfolio-surface-suspended')){last=now;return;}if(state.paused&&!transition&&!controls.dragging&&!dirty&&!weather.changing)return;
   dirty=false;const dt=THREE.MathUtils.clamp((now-last)/1000,0,.05);last=now;if(!state.paused)time+=dt;
-  if(!state.paused)crewMixer.update(dt);windTime.value=time;weather.update(dt,time);if(state.nativeGroundNight)state.nativeGroundNight.value=state.nightMix||0;clock.value=time;skyClock.value=time;life.update(time);state.coastClock.value=time;state.waterTime=time;heave=THREE.MathUtils.damp(heave,seaHeight(-1,13.5,time),1.8,dt);const pitch=THREE.MathUtils.clamp((seaHeight(6,13.5,time)-seaHeight(-8,13.5,time))/14,-.022,.022),roll=THREE.MathUtils.clamp(-(seaHeight(-1,15,time)-seaHeight(-1,12,time))/3,-.026,.026);boat.rotation.z=THREE.MathUtils.damp(boat.rotation.z,pitch,1.6,dt);boat.rotation.x=THREE.MathUtils.damp(boat.rotation.x,roll,1.6,dt);boat.position.copy(floatPivot).sub(rotatedPivot.copy(floatPivot).applyQuaternion(boat.quaternion));boat.position.x-=1;boat.position.y+=heave;boat.position.z+=5.5;hullWater.update();state.buoyancy={heave,roll:boat.rotation.x,pitch:boat.rotation.z,source:'same sea wave sampled at bow/stern and port/starboard; damped around waterline pivot'};water.material.uniforms.time.value=time*.6;
+  if(!state.paused)crewMixer.update(dt);windTime.value=time;weather.update(dt,time);if(state.nativeGroundNight)state.nativeGroundNight.value=state.nightMix||0;clock.value=time;skyClock.value=time;life.update(time);state.coastClock.value=time;state.waterTime=time;heave=THREE.MathUtils.damp(heave,seaHeight(-1,13.5,time),1.8,dt);const pitch=THREE.MathUtils.clamp((seaHeight(6,13.5,time)-seaHeight(-8,13.5,time))/14,-.022,.022),roll=THREE.MathUtils.clamp(-(seaHeight(-1,15,time)-seaHeight(-1,12,time))/3,-.026,.026);boat.rotation.z=THREE.MathUtils.damp(boat.rotation.z,pitch,1.6,dt);boat.rotation.x=THREE.MathUtils.damp(boat.rotation.x,roll,1.6,dt);boat.position.copy(floatPivot).sub(rotatedPivot.copy(floatPivot).applyQuaternion(boat.quaternion));boat.position.y+=heave;hullWater.update();state.buoyancy={heave,roll:boat.rotation.x,pitch:boat.rotation.z,source:'same sea wave sampled at bow/stern and port/starboard; damped around waterline pivot'};water.material.uniforms.time.value=time*.6;
   if(transition){const u=THREE.MathUtils.smoothstep((now-transition)/1200,0,1);camera.position.lerpVectors(fromP,poses[pose].p,u);controls.target.lerpVectors(fromT,poses[pose].t,u);if(u>=1)transition=0;}
-  controls.update();state.cameraTarget=controls.target.toArray();state.cameraSettled=!transition;processEntry.update();renderer.shadowMap.needsUpdate=time-shadowAt>.08||weather.changing;if(renderer.shadowMap.needsUpdate)shadowAt=time;state.shadowPolicy='2048 PCF / maximum 12.5 updates per second';
-  air.update(state.nightMix??0);renderer.info.reset();if(!nativeRequired)renderer.render(scene,camera);canvas.style.opacity=nativeRequired?'0':'1';state.frames++;state.calls=renderer.info.render.calls;state.triangles=renderer.info.render.triangles;state.camera=camera.position.toArray();
+  controls.update();state.cameraTarget=controls.lookTarget.toArray();state.cameraSettled=!transition;processEntry.update();renderer.shadowMap.needsUpdate=!state.paused||weather.changing;if(renderer.shadowMap.needsUpdate)shadowAt=time;state.shadowPolicy='4096 PCF / synchronized animated shadows';
+  air.update(state.nightMix??0);nativeLighting?.update(camera,1-(state.nightMix??0));renderer.info.reset();if(!nativeRequired)renderer.render(scene,camera);canvas.style.opacity=nativeRequired?'0':'1';state.frames++;state.calls=renderer.info.render.calls;state.triangles=renderer.info.render.triangles;state.camera=camera.position.toArray();
   if(lastRender)deltaFrames.push(now-lastRender);if(deltaFrames.length>120)deltaFrames.shift();state.fps=1000/(deltaFrames.reduce((a,b)=>a+b,0)/deltaFrames.length);lastRender=now;
   if(!state.paused||transition||controls.dragging||dirty||weather.changing)wake();
  }
  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frameHandle);frameHandle=0;state.scheduled=false;}else{last=performance.now();dirty=true;wake();}});
  new MutationObserver(()=>{if(document.body.classList.contains('portfolio-surface-suspended')){cancelAnimationFrame(frameHandle);frameHandle=0;state.scheduled=false;}else{last=performance.now();dirty=true;wake();}}).observe(document.body,{attributes:true,attributeFilter:['class']});
  document.querySelector('[data-odyssey-night]')?.addEventListener('click',()=>{dirty=true;wake();});wake();
+ if(bakeCapture)state.exportNativeBake=()=>captureLightingV179(renderer,scene,camera,state.nativeController?.layer.querySelector('video'),'myth');
  state.exportCraft=async()=>{const {GLTFExporter}=await import('three/addons/exporters/GLTFExporter.js');const out=new THREE.Group();out.add(cottageRoot.clone(true));const mg=new THREE.Group();mg.name='V161 physical coastal grasses';const matrix=new THREE.Matrix4();const parts:THREE.BufferGeometry[]=[];for(let i=0;i<meadow.count;i++){meadow.getMatrixAt(i,matrix);const g=meadow.geometry.clone().applyMatrix4(matrix);const color=g.getAttribute('color'),tint=new THREE.Color();meadow.getColorAt(i,tint);for(let j=0;j<color.count;j++)color.setXYZ(j,color.getX(j)*tint.r,color.getY(j)*tint.g,color.getZ(j)*tint.b);parts.push(g);}const g=mergeGeometries(parts,false)!;parts.forEach(p=>p.dispose());const m=(meadow.material as THREE.MeshStandardMaterial).clone();m.onBeforeCompile=()=>{};mg.add(new THREE.Mesh(g,m));out.add(mg);out.updateMatrixWorld(true);const binary=await new GLTFExporter().parseAsync(out,{binary:true,onlyVisible:true}) as ArrayBuffer;return binary;};
- state.inspectLighting=()=>({sun:{intensity:sun.intensity,color:sun.color.getHexString(),position:sun.position.toArray()},ambient:coastalAmbient.intensity,environment:scene.environmentIntensity,exposure:renderer.toneMappingExposure,sky:skyMaterial.fragmentShader});state.materials=()=>{const out:any[]=[];scene.traverse(o=>{if(o instanceof THREE.Mesh)out.push({name:o.name,mat:(o.material as any).name,type:(o.material as any).type,color:(o.material as any).color?.getHexString(),triangles:o.geometry.index?o.geometry.index.count/3:o.geometry.attributes.position.count/3});});return out;};
+ state.browserMigration={qualityApproved:false,originalPreserved:true,sourceHDR:'same Venice sunset HDR as UE',nativeKey:[1,.69,.36],nativeSun:9.5,displayCalibration:'ACES pilot / comparison required'};state.inspectLighting=()=>({sun:{intensity:sun.intensity,color:sun.color.getHexString(),position:sun.position.toArray()},ambient:coastalAmbient.intensity,environment:scene.environmentIntensity,exposure:renderer.toneMappingExposure,sky:skyMaterial.fragmentShader});state.materials=()=>{const out:any[]=[];scene.traverse(o=>{if(o instanceof THREE.Mesh)out.push({name:o.name,mat:(o.material as any).name,type:(o.material as any).type,color:(o.material as any).color?.getHexString(),triangles:o.geometry.index?o.geometry.index.count/3:o.geometry.attributes.position.count/3});});return out;};
  state.inspectCamera=(p:number[],t:number[])=>{transition=0;pose=3;state.viewIndex=3;camera.position.fromArray(p);controls.target.fromArray(t);controls.update();dirty=true;wake();};state.capture=()=>{renderer.render(scene,camera);return canvas.toDataURL();};state.view=choose;
  window.addEventListener('portfolio:child-return',()=>{zoomEndAt=0;last=performance.now();dirty=true;controls.resetInteraction();wake();});
  state.crewRefit={actors:14,armor:true,source:'actual local Blender GLB',independentBreathing:true,closedFootwear:true,animatedMaterials:animatedMaterials.size,stages:'actual native reassembly'};state.components={sea:true,ship:true,crew:true,island:true,trees:foliageMeshes.length>0,shrubs:foliageMeshes.length>0,shoreline:true};state.readyAt=performance.now();window.dispatchEvent(new Event("portfolio:progress"));

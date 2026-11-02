@@ -1,0 +1,247 @@
+{
+  "at": "2026-11-02T16:46:47.956908+00:00",
+  "version": 179,
+  "candidateBranch": "deploy/netlify-browser-v179",
+  "originalAppCommit": "e17e93bf7406976aebc8b2f88e737e753c2fd323",
+  "originalPreserved": true,
+  "deployed": false,
+  "overallVisualQualityApproved": false,
+  "fullSiteVerified": false,
+  "room": {
+    "errors": [],
+    "consoleErrors": [],
+    "httpErrors": [],
+    "nativeRequests": [],
+    "calendar": {
+      "date": "2026-11-03",
+      "day": "3",
+      "month": "November",
+      "weekday": "Tuesday",
+      "timeZone": "Asia/Shanghai",
+      "live": true
+    },
+    "performanceSample": {
+      "seconds": 6.003000000023843,
+      "sceneFrames": 792,
+      "videoFrames": 180,
+      "videoDroppedFrames": 0,
+      "rafMedianMs": 6.900000000001455,
+      "rafP95Ms": 13.900000000001455,
+      "maxGapMs": 20.900000000001455
+    },
+    "workArrivalBeforeContent": true,
+    "works": [
+      {
+        "index": 0,
+        "duringWork": 0,
+        "afterWork": 0,
+        "afterVideoReady": true
+      },
+      {
+        "index": 1,
+        "duringWork": 0,
+        "afterWork": 1,
+        "afterVideoReady": true
+      },
+      {
+        "index": 2,
+        "duringWork": 1,
+        "afterWork": 2,
+        "afterVideoReady": true
+      },
+      {
+        "index": 3,
+        "duringWork": 2,
+        "afterWork": 3,
+        "afterVideoReady": true
+      },
+      {
+        "index": 4,
+        "duringWork": 3,
+        "afterWork": 4,
+        "afterVideoReady": true
+      }
+    ],
+    "books": [
+      {
+        "held": 0,
+        "category": 1,
+        "book": 0
+      },
+      {
+        "held": 1,
+        "category": 1,
+        "book": 1
+      },
+      {
+        "held": 2,
+        "category": 1,
+        "book": 2
+      }
+    ],
+    "phonePopupVerified": false
+  },
+  "myth": {
+    "errors": [],
+    "consoleErrors": [],
+    "httpErrors": [],
+    "nativeRequests": [],
+    "samples": [
+      {
+        "name": "coast",
+        "field": {
+          "version": 179,
+          "source": "locally captured original UE output",
+          "qualityApproved": false,
+          "geometryPreserved": true,
+          "originalTexturesPreserved": true,
+          "sourcePoses": 6,
+          "loadedPoses": 6,
+          "materials": 27,
+          "liveVideoExcluded": true,
+          "depthChecked": true
+        },
+        "fps": 56.529112492933834,
+        "camera": [
+          37,
+          17,
+          49
+        ],
+        "target": [
+          -6,
+          9,
+          -16
+        ],
+        "native": false
+      },
+      {
+        "name": "left",
+        "field": {
+          "version": 179,
+          "source": "locally captured original UE output",
+          "qualityApproved": false,
+          "geometryPreserved": true,
+          "originalTexturesPreserved": true,
+          "sourcePoses": 6,
+          "loadedPoses": 6,
+          "materials": 27,
+          "liveVideoExcluded": true,
+          "depthChecked": true
+        },
+        "fps": 59.23585743903645,
+        "camera": [
+          37,
+          17,
+          49
+        ],
+        "target": [
+          12.28842740123391,
+          9,
+          -24.914397648197834
+        ],
+        "native": false
+      },
+      {
+        "name": "right",
+        "field": {
+          "version": 179,
+          "source": "locally captured original UE output",
+          "qualityApproved": false,
+          "geometryPreserved": true,
+          "originalTexturesPreserved": true,
+          "sourcePoses": 6,
+          "loadedPoses": 6,
+          "materials": 27,
+          "liveVideoExcluded": true,
+          "depthChecked": true
+        },
+        "fps": 66.5299107390364,
+        "camera": [
+          37,
+          17,
+          49
+        ],
+        "target": [
+          -21.358048462093784,
+          9,
+          -2.655959769381049
+        ],
+        "native": false
+      },
+      {
+        "name": "cottage",
+        "field": {
+          "version": 179,
+          "source": "locally captured original UE output",
+          "qualityApproved": false,
+          "geometryPreserved": true,
+          "originalTexturesPreserved": true,
+          "sourcePoses": 6,
+          "loadedPoses": 6,
+          "materials": 27,
+          "liveVideoExcluded": true,
+          "depthChecked": true
+        },
+        "fps": 80.82985315910018,
+        "camera": [
+          9.5,
+          20.498784101853953,
+          -38.5
+        ],
+        "target": [
+          4,
+          19.598784101853955,
+          -46
+        ],
+        "native": false
+      },
+      {
+        "name": "cottage-night",
+        "field": {
+          "version": 179,
+          "source": "locally captured original UE output",
+          "qualityApproved": false,
+          "geometryPreserved": true,
+          "originalTexturesPreserved": true,
+          "sourcePoses": 6,
+          "loadedPoses": 6,
+          "materials": 27,
+          "liveVideoExcluded": true,
+          "depthChecked": true
+        },
+        "fps": 80.08542445274972,
+        "camera": [
+          9.5,
+          20.498784101853953,
+          -38.5
+        ],
+        "target": [
+          4,
+          19.598784101853955,
+          -46
+        ],
+        "native": false
+      }
+    ]
+  },
+  "losslessTextures": {
+    "count": 30,
+    "sourceBytes": 61721781,
+    "bytes": 29653216,
+    "allDecodedPixelIdentical": true
+  },
+  "visibleUnresolved": [
+    "sky/ocean horizon join",
+    "foliage silhouette",
+    "sail shading and dynamic reflection differences",
+    "room off-axis projection seams"
+  ],
+  "notYetVerified": [
+    "full portfolio without native services",
+    "phone popup interaction",
+    "large media public byte-range delivery",
+    "independent visitors",
+    "mainland and overseas access"
+  ],
+  "limits": "RTX4060/D3D11 desktop local short samples; frame counts do not prove universal smoothness or visual parity."
+}

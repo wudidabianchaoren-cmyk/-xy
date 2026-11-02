@@ -1,0 +1,302 @@
+[
+  {
+    "scene": "room",
+    "pose": "desk",
+    "state": "on",
+    "file": "desk-on.webp",
+    "sourceBytes": 3082183,
+    "bytes": 1487618,
+    "decodedPixelSHA256": "e7f5f1340d7c2585dc69c171dfbc047d0bd4895eadbe4a6c5e0aac9e5ca0cc30",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "desk",
+    "state": "off",
+    "file": "desk-off.webp",
+    "sourceBytes": 2169818,
+    "bytes": 1035298,
+    "decodedPixelSHA256": "e14b6adbe90b71b6ac9b335e68740494c6af05ffc1940428153b3a85d0690b72",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "desk-left",
+    "state": "on",
+    "file": "desk-left-on.webp",
+    "sourceBytes": 2210306,
+    "bytes": 1033140,
+    "decodedPixelSHA256": "185f3385563ef1857afa1745d1c6e812c4f5a549781d99dc4ff5597b494f3064",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "desk-left",
+    "state": "off",
+    "file": "desk-left-off.webp",
+    "sourceBytes": 1407723,
+    "bytes": 659474,
+    "decodedPixelSHA256": "80192b3872dc50d99c1c809718e18d10af73c3d81cdeca2b3df8c8f4e91b1727",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "desk-right",
+    "state": "on",
+    "file": "desk-right-on.webp",
+    "sourceBytes": 2145887,
+    "bytes": 994582,
+    "decodedPixelSHA256": "6472f3b6ee9a817d25642021f805cb279e638f6832fbea476dd863cef8d7c6af",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "desk-right",
+    "state": "off",
+    "file": "desk-right-off.webp",
+    "sourceBytes": 1571384,
+    "bytes": 719176,
+    "decodedPixelSHA256": "3fe021a201b053ad61c3ba2e6eac94eb27dc0e75b79c364bce567f0958d3eef7",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "tv",
+    "state": "on",
+    "file": "tv-on.webp",
+    "sourceBytes": 1658526,
+    "bytes": 771528,
+    "decodedPixelSHA256": "eb4f4d057cc36d80585acc04b4ac6db606b708a341337b218154f7e7c8783581",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "tv",
+    "state": "off",
+    "file": "tv-off.webp",
+    "sourceBytes": 1317059,
+    "bytes": 617096,
+    "decodedPixelSHA256": "ce5cbab00162dd210cc6fefa4d7d7e02cbb99b8470c43b314d400119ba05cbf4",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "window",
+    "state": "on",
+    "file": "window-on.webp",
+    "sourceBytes": 3187481,
+    "bytes": 1507662,
+    "decodedPixelSHA256": "3de15e4c5d9d94f12ba7e7b49845a70e23a52f4e686b1bccb58e991aacadb35a",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "window",
+    "state": "off",
+    "file": "window-off.webp",
+    "sourceBytes": 3405329,
+    "bytes": 1735334,
+    "decodedPixelSHA256": "5ef2ea6e7299cb8a5ade7f43a0f37dd09156f0af7e61f9d98abef31a07d1a650",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "phone",
+    "state": "on",
+    "file": "phone-on.webp",
+    "sourceBytes": 1816444,
+    "bytes": 809892,
+    "decodedPixelSHA256": "47d42fc86aca75fd1e25e87e73e7213fa5a62b793c2b820a8d3b7664050c316b",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "phone",
+    "state": "off",
+    "file": "phone-off.webp",
+    "sourceBytes": 1518218,
+    "bytes": 682348,
+    "decodedPixelSHA256": "67abfc3d77dab3d316bc8744f571af6329ce6499ae8d70026aeb62afb4b2c601",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "books",
+    "state": "on",
+    "file": "books-on.webp",
+    "sourceBytes": 2743594,
+    "bytes": 1239132,
+    "decodedPixelSHA256": "9f703bf353b553088168842b978daca9aac51ba478391037db14846d4799b4fc",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "books",
+    "state": "off",
+    "file": "books-off.webp",
+    "sourceBytes": 1706774,
+    "bytes": 750874,
+    "decodedPixelSHA256": "7c073dc101c7468ce4bf72c7193dc624521280771a3a60394b36266ebd23dbd3",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "cds",
+    "state": "on",
+    "file": "cds-on.webp",
+    "sourceBytes": 2791664,
+    "bytes": 1327452,
+    "decodedPixelSHA256": "7dbd3b872e09e64c5563197aa80a5024480bfcd24f91db712c3c64c8538ff4f5",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "cds",
+    "state": "off",
+    "file": "cds-off.webp",
+    "sourceBytes": 1966332,
+    "bytes": 916750,
+    "decodedPixelSHA256": "d5989142e9255fa60662abdda1cecba5c3d7ca865fc58b8386433028c2b25f1d",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "pens",
+    "state": "on",
+    "file": "pens-on.webp",
+    "sourceBytes": 2203407,
+    "bytes": 1026924,
+    "decodedPixelSHA256": "46f92a8c8d9566ad583edadd6018b7fbb00aac9da15bef6f7c86080ddb820cf9",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "room",
+    "pose": "pens",
+    "state": "off",
+    "file": "pens-off.webp",
+    "sourceBytes": 758846,
+    "bytes": 325712,
+    "decodedPixelSHA256": "a1e418c503ee51b021d1d5622aeb67283dd6ab78a51022d0bb112b8fb633ec9f",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast",
+    "state": "on",
+    "file": "coast-day.webp",
+    "sourceBytes": 2961681,
+    "bytes": 1530060,
+    "decodedPixelSHA256": "6e26ccd3acf137d8f375ac60fb96d55a53360b947a8873250232f3efcbdbe1e5",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast",
+    "state": "off",
+    "file": "coast-night.webp",
+    "sourceBytes": 717983,
+    "bytes": 309310,
+    "decodedPixelSHA256": "584088a5c2906f0eb2d492ee69fe7e8ba76753e6a2081515c062ea84760f1db5",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast-left",
+    "state": "on",
+    "file": "coast-left-day.webp",
+    "sourceBytes": 3218248,
+    "bytes": 1652822,
+    "decodedPixelSHA256": "e77bf58a373a502dd5e83f5f6327533ea7261e105bbdbd094be0581c9100cc16",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast-left",
+    "state": "off",
+    "file": "coast-left-night.webp",
+    "sourceBytes": 772823,
+    "bytes": 329998,
+    "decodedPixelSHA256": "5ceb59a51eabdfd7fecef73329aaf223ba9b9e58e0b9ab1e3db6bbcd8c73b742",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast-right",
+    "state": "on",
+    "file": "coast-right-day.webp",
+    "sourceBytes": 2795214,
+    "bytes": 1381574,
+    "decodedPixelSHA256": "5edad664cf42a5ccae2546eb6dcb0ab30f2195b398dfbde5f7aadc370fd5bd5b",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast-right",
+    "state": "off",
+    "file": "coast-right-night.webp",
+    "sourceBytes": 726801,
+    "bytes": 310596,
+    "decodedPixelSHA256": "5c38870af06f2c370220bf54a7e9da71456f76f67a0b1601b4e6be937c8d8609",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast-near",
+    "state": "on",
+    "file": "coast-near-day.webp",
+    "sourceBytes": 3712629,
+    "bytes": 1975162,
+    "decodedPixelSHA256": "5490b07894070324d4568ac58260ff3144e8a70fb173d99bdf5684e8ce03b7aa",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast-near",
+    "state": "off",
+    "file": "coast-near-night.webp",
+    "sourceBytes": 628743,
+    "bytes": 272564,
+    "decodedPixelSHA256": "7d531909f347e557a95f45ecee64fb083bf6096c7c529d26227f941c93312d51",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast-far",
+    "state": "on",
+    "file": "coast-far-day.webp",
+    "sourceBytes": 2963971,
+    "bytes": 1507546,
+    "decodedPixelSHA256": "7e511fee034b62f226d9cdcb72f1388cc68e528f1ed46676e0e167971f2a8aa8",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "coast-far",
+    "state": "off",
+    "file": "coast-far-night.webp",
+    "sourceBytes": 728371,
+    "bytes": 313054,
+    "decodedPixelSHA256": "61260a3e5266b1315dd40c069218fd5ace251caff53bdd6bcb9eb5d7986f6bc5",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "cottage",
+    "state": "on",
+    "file": "cottage-day.webp",
+    "sourceBytes": 4135652,
+    "bytes": 2131682,
+    "decodedPixelSHA256": "198de0dda9f8feb89b80dd3df348ff1ab1afd7e714017604fd37bb62ea13b741",
+    "pixelIdentical": true
+  },
+  {
+    "scene": "myth",
+    "pose": "cottage",
+    "state": "off",
+    "file": "cottage-night.webp",
+    "sourceBytes": 698690,
+    "bytes": 298856,
+    "decodedPixelSHA256": "1eecde380a9aafd7865d4fb67b6eaf2bc7e9f507f2adc743f37032f4a1a68750",
+    "pixelIdentical": true
+  }
+]

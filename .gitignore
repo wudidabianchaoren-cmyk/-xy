@@ -6,6 +6,7 @@
 !/DEPLOY-MEOO.md
 !/DEPLOY-NETLIFY.md
 !/RELEASE-V32-179.md
+!/BROWSER-MIGRATION-V179.md
 !/RELEASE-V32-177.md
 !/RELEASE-V32-178.md
 !/assets/
@@ -14,6 +15,8 @@
 /assets/works/*
 !/assets/works/covers-v177/
 !/assets/works/covers-v177/code-films.webp
+!/assets/browser-v179/
+!/assets/browser-v179/**
 !/package.json
 !/*.html
 !/*.css

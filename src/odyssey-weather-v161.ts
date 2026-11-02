@@ -45,11 +45,11 @@ export function dayNight(scene:THREE.Scene,renderer:THREE.WebGLRenderer,sun:THRE
  if(button)button.onclick=()=>setNight(!target);state.setNight=setNight;state.wind={from:'northwest',toward:'southeast',vector:northwestWind.toArray(),sailsPinnedAtEdges:true,sharedGust:true,independentNormalizedWindUV:true};
  function update(dt:number,time:number){factor.value=THREE.MathUtils.damp(factor.value,target,2.3,dt);if(Math.abs(factor.value-target)<.001)factor.value=target;const n=factor.value;state.nightMix=n;state.timeOfDay=n>.5?'night':'day';
   sun.color.copy(dayColor).lerp(moonColor,n);sun.intensity=THREE.MathUtils.lerp(dayPower,.55,n);const dir=dayDirection.clone().lerp(moonDirection,n).normalize();sun.position.copy(sun.target.position).addScaledVector(dir,120);
-  ambient.color.copy(daySky).lerp(new THREE.Color(0x526a93),n);ambient.groundColor.copy(dayGround).lerp(new THREE.Color(0x111724),n);ambient.intensity=THREE.MathUtils.lerp(dayAmbient,.22,n);
-  scene.environmentIntensity=THREE.MathUtils.lerp(.62,.075,n);(scene.fog as THREE.FogExp2).color.set(0xd6ddd5).lerp(new THREE.Color(0x101d2d),n);const bounce=scene.getObjectByName('V158 golden hour sea-bounce') as THREE.DirectionalLight;if(bounce)bounce.intensity=THREE.MathUtils.lerp(.62,.025,n);
+  ambient.color.copy(daySky).lerp(new THREE.Color(0x526a93),n);ambient.groundColor.copy(dayGround).lerp(new THREE.Color(0x111724),n);ambient.intensity=THREE.MathUtils.lerp(dayAmbient,.06,n);
+  scene.environmentIntensity=THREE.MathUtils.lerp(.45,.075,n);(scene.fog as THREE.FogExp2).color.set(0xd6ddd5).lerp(new THREE.Color(0x101d2d),n);const bounce=scene.getObjectByName('V158 golden hour sea-bounce') as THREE.DirectionalLight;if(bounce)bounce.intensity=THREE.MathUtils.lerp(.06,.012,n);
   const tint=new THREE.Color(1,1,1).lerp(new THREE.Color(.105,.16,.25),n);for(const {m,c}of baked)m.color.copy(c).multiply(tint);
-  const w=water.material as THREE.ShaderMaterial;w.uniforms.sunDirection.value.copy(dayDirection.clone()).lerp(moonDirection,n).normalize();w.uniforms.sunColor.value.set(0xffdfaa).lerp(new THREE.Color(.10,.15,.22),n);w.uniforms.waterColor.value.set(0x1c4f48).lerp(new THREE.Color(0x061321),n);
-  const flame=.96+.035*Math.sin(time*3.1)+.015*Math.sin(time*7.3);lights.forEach((l,i)=>l.intensity=(i<2?13:4.5)*n*flame);lampMaterials.forEach(m=>m.opacity=n*.95);glassMaterials.forEach(m=>m.opacity=n*.82);renderer.toneMappingExposure=THREE.MathUtils.lerp(1.15,1.,n);
+  const w=water.material as THREE.ShaderMaterial;w.uniforms.sunDirection.value.copy(dayDirection.clone()).lerp(moonDirection,n).normalize();w.uniforms.sunColor.value.setRGB(1,.69,.36).lerp(new THREE.Color(.10,.15,.22),n);w.uniforms.waterColor.value.set(0x064a50).lerp(new THREE.Color(0x061321),n);
+  const flame=.96+.035*Math.sin(time*3.1)+.015*Math.sin(time*7.3);lights.forEach((l,i)=>l.intensity=(i<2?13:4.5)*n*flame);lampMaterials.forEach(m=>m.opacity=n*.95);glassMaterials.forEach(m=>m.opacity=n*.82);renderer.toneMappingExposure=THREE.MathUtils.lerp(.85,1.,n);
   state.updateUEReflection?.(n);
   state.nightLights={shipLanterns:2,cottageShutterWindows:2,active:n>.05};
  }
