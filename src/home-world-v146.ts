@@ -56,7 +56,7 @@ if(surface){
   const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:false,powerPreference:'high-performance'});
   mark('WebGL context ready');const startupGPUInfo=renderer.getContext().getExtension('WEBGL_debug_renderer_info');const gpuName=startupGPUInfo?renderer.getContext().getParameter(startupGPUInfo.UNMASKED_RENDERER_WEBGL):'';const integrated=/Intel|Iris|UHD|SwiftShader/i.test(gpuName);
   renderer.setPixelRatio(Math.min(devicePixelRatio,1));renderer.toneMapping=THREE.AgXToneMapping;renderer.toneMappingExposure=Math.pow(2,-.30);
-  const lookControls={secondaryFillScale:1.3,keyScale:.0075,areaIntensity:21,reflectionGain:.72,ambient:.10,keyWidth:5.0,keyHeight:5.6,forestScale:2.2};
+  const lookControls={secondaryFillScale:1.3,keyScale:.0069,areaIntensity:18.8,reflectionGain:.72,ambient:.10,keyWidth:5.0,keyHeight:5.6,forestScale:2.2};
   renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;renderer.transmissionResolutionScale=.35;
   renderer.info.autoReset=false;
   const scene=new THREE.Scene();scene.background=new THREE.Color(0x050807);scene.fog=new THREE.FogExp2(0x15201b,.016);scene.environmentIntensity=.07;
@@ -327,7 +327,7 @@ if(surface){
     ao.enabled=false; // Native baked contact occlusion stays; coarse screen AO crawled on moving clock engraving.
     if(close!==highDetail){const maps=close?closeAshlar:ashlar;for(const m of detailedMaterials)Object.assign(m,maps);highDetail=close;state.surfaceDetail=close?'4K close / anisotropic':'2K wide / mipmapped';}
     const key=f.lights['V10 / moving warm to cool key'];
-    if(key){const n=next.lights['V10 / moving warm to cool key'];sun.position.fromArray(key.p).lerp(new THREE.Vector3().fromArray(n.p),mix);sun.position.x=-6.8+sun.position.x*.15;sun.position.y=Math.max(6.8,sun.position.y*.55+3.8);sun.target.position.set(-.15,4.35,-.85);sun.color.setRGB(1,.64,.30);sun.intensity=THREE.MathUtils.lerp(key.energy,n.energy,mix)*lookControls.keyScale;}
+    if(key){const n=next.lights['V10 / moving warm to cool key'];sun.position.fromArray(key.p).lerp(new THREE.Vector3().fromArray(n.p),mix);sun.position.x=-9.6+sun.position.x*.07;sun.position.y=5.4;sun.position.z=5.8;sun.target.position.set(-.15,4.35,-.85);sun.color.setRGB(1,.64,.30);sun.intensity=THREE.MathUtils.lerp(key.energy,n.energy,mix)*lookControls.keyScale;}
     sun.angle=.94;sun.penumbra=.58;
     nativeBroadKey.position.copy(sun.position);nativeBroadKey.lookAt(sun.target.position);nativeBroadKey.intensity=lookControls.areaIntensity;nativeBroadKey.width=lookControls.keyWidth;nativeBroadKey.height=lookControls.keyHeight;
     // Mirror the native key across the courtyard: a broad, low-power warm bounce

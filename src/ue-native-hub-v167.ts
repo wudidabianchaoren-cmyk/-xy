@@ -22,7 +22,7 @@ function hub(){
   const candidates=[...h.surfaces].filter((s:any)=>s.alive&&s.visible());
   const browserHome=String(rootWindow.homeClockState?.renderer||'').startsWith('Three.js');
   const warming=browserHome&&!!rootWindow.homeClockState?.ready&&h.focused&&!rootWindow.document.hidden?[...h.surfaces].filter((s:any)=>s.alive&&s.scene!=='home'):[];
-  const next=candidates.at(-1)||warming.filter((s:any)=>!s.warmed).at(-1)||warming.find((s:any)=>s.scene==='room')||null;if(next===h.owner)return;
+  const next=candidates.at(-1)||warming.filter((s:any)=>!s.warmed).at(-1)||null;if(next===h.owner)return;
   h.controlAbort?.abort();const previous=h.owner;hide(previous);h.owner=next;h.last='';h.claim=true;h.native=null;
   if(next){next.layer.prepend(transport);watch(true);hide(next);next.firstSeq=0;next.status.switchedAt=performance.now();void transport.querySelector('video')?.play().catch(()=>{});h.resize?.();}
   else if(previous)void fetch(endpoint+'/control',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({clientId:h.id,clientSeq:++h.seq,active:false})}).catch(()=>{});
@@ -45,7 +45,9 @@ function hub(){
    if(s&&response.native?.scene&&response.native.scene!==s.scene){hide(s);h.last='';}
   }catch(e){if(h.owner)h.owner.status.lastTransportError=String(e);}finally{h.healthPending=false;}
  }
- async function update(){if(h.destroyed)return;h.focused=rootWindow.document.hasFocus();choose();const s=h.owner;if(!h.serviceReady&&!rootWindow.document.hidden)void ensureNative();if(!s)return;
+ async function update(){if(h.destroyed)return;h.focused=rootWindow.document.hasFocus();choose();const s=h.owner;
+  if(!s){if(!h.idleAt)h.idleAt=performance.now();const grace=rootWindow.document.hidden?1000:3000;if((h.connected||h.connecting)&&performance.now()-h.idleAt>=grace){h.idleReleased=true;h.idleReleases=(h.idleReleases||0)+1;h.controlAbort?.abort();h.connected=h.connecting=h.serviceReady=false;h.last='';player.disconnect();}return;}
+  h.idleAt=0;h.idleReleased=false;if(!h.serviceReady&&!rootWindow.document.hidden)void ensureNative();
   if(!h.connected){if(performance.now()>h.retryAt){h.connecting=true;h.connectingAt=performance.now();h.retryAt=performance.now()+12000;h.connections++;player.connect();}return;}
   watch();if(h.sending)return;
   const v=s.camera(),round=(p:number[])=>p.map(n=>Math.round(n*100000)/100000);
