@@ -1,5 +1,15 @@
 # Netlify deployment record — 2026-11-02
 
+## 2026-11-03: isolated browser pilot backed up; visual gate not passed
+
+The original UE project and app remain unchanged. The isolated browser candidate is backed up in this same repository on [`deploy/netlify-browser-v179`](https://github.com/wudidabianchaoren-cmyk/-xy/tree/deploy/netlify-browser-v179), checkpoint `4284d01`. Read that branch's `BROWSER-MIGRATION-V179.md` and `deploy/browser-v179-verification.json`; it is a tested local pilot, not a completed migration or public release.
+
+The pilot preserves original geometry/textures and uses locally captured original lighting with depth checks. Thirty derived images were packed losslessly with decoded pixel equality verified. Scoped static-server tests made zero native runtime requests and reported zero sampled JS/shader/HTTP errors. Final room film sample: 180 frames in 6 seconds, zero dropped frames. Five discs and three books ran; arrival-before-content ordering was checked. Phone popup and the complete cross-page portfolio have not been verified.
+
+Visual comparison still fails the overall quality gate: sky/ocean join, foliage edges, sail/reflection differences and some room off-axis seams remain. Do not merge or publish it as the complete portfolio. Source, derived lighting, authoring scripts and limitations are backed up on the candidate branch; original raw media/UE assets remain locally preserved as before.
+
+Netlify API was rechecked after the candidate push: `stop_builds=true`, production deploy still `6ae837168a4f56e2249bc9b1`. The old incomplete draft was not promoted. No paid resource was opened. Local comparison is at http://127.0.0.1:8050/.verify/v32-179/visual-review.html and requires this computer to remain on. Automatic approval review rejected the optional combined command to stop temporary preview helpers and open Edge (`blocked by policy`); it was not retried or bypassed.
+
 ## Latest checkpoint: conditional browser migration authorized
 
 The user explicitly permitted migration to a browser-run version, provided the original is preserved and the result does not show an obvious loss of visual quality or completeness. This supersedes the previous prohibition on a separately tested browser renderer. It does not authorize publishing the old web fallback without a quality review.
