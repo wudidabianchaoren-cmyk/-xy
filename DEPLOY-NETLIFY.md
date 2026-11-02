@@ -1,5 +1,17 @@
 # Netlify deployment record — 2026-11-02
 
+## Latest checkpoint: conditional browser migration authorized
+
+The user explicitly permitted migration to a browser-run version, provided the original is preserved and the result does not show an obvious loss of visual quality or completeness. This supersedes the previous prohibition on a separately tested browser renderer. It does not authorize publishing the old web fallback without a quality review.
+
+The static draft `6ae85cd81221c0b29f9af0fb` reached `ready` at https://6ae85cd81221c0b29f9af0fb--eloquent-puffpuff-c8613b.netlify.app . It is a draft, `published_at=null`, and has 1,379 files. It excludes four failed large uploads: the island radiance EXR, island craft GLB, humid Southeast Asia film and Mid-Autumn film. `release-status.json` explicitly records those omissions and the missing independent UE runtime. The production deploy was not replaced. This draft is not a complete public portfolio.
+
+The final full static plan before those four omissions contained 1,382 files / 2,802,477,904 bytes. Two unused offline production sources were excluded, without modifying the originals. Repeated large-file uploads returned connection errors/502. All upload helpers have been stopped. An alternative media release `portfolio-media-v32-178`, GitHub release ID `431409815`, was created as an unpublished draft; its upload helper was also stopped. Do not publish that unfinished media draft or resume uploads blindly.
+
+Actual same-camera UE/browser comparisons completed on the existing local server. Four pages reported ready with zero sampled JavaScript/HTTP failures. Browser graphics used the RTX 4060 through D3D11. Screenshots under `.verify/netlify-v179/{room,myth}-{ue,browser}-baseline.png` show substantial lighting, reflections, sky/water and shading differences. The old fallback fails the user's quality condition and must not be shipped as the completed migration.
+
+Next work is an isolated browser candidate, retaining the original source/UE project, with visual comparison before a complete Netlify release. No paid resource has been opened. Annual budget remains CNY 20.
+
 The user selected the existing Netlify project and requested no further artwork or interface changes. Work on other hosting providers is stopped.
 
 - GitHub: https://github.com/wudidabianchaoren-cmyk/-xy
