@@ -13,7 +13,9 @@ for row in range(360):
  vy=(1-2*(row+.5)/1080)*math.tan(math.radians(17));vx=(2*50.5/1920-1)*math.tan(math.radians(17))*16/9
  ray=normalized([direction[j]+up[j]*vy+right[j]*vx for j in range(3)]);slopes.append(ray[1])
 for mode in ['day','night']:
- image=Image.open(folder/f'coast-{mode}.png').convert('RGB')
+ source=folder/f'coast-{mode}.png'
+ if not source.exists():source=Path('.verify/v32-179/source-captures/myth')/source.name
+ image=Image.open(source).convert('RGB')
  colors=[[statistics.median(image.getpixel((x,y))[c] for x in range(10,90)) for c in range(3)] for y in range(360)]
  output=Image.new('RGB',(256,1))
  for i in range(256):
