@@ -33,12 +33,12 @@
   function clear(video){const previous=players.get(video);if(previous){players.delete(video);previous.disposed=true;previous.hls?.destroy();}}
   function attach(video,path){
     clear(video);const record={path,disposed:false,hls:null};players.set(video,record);
-    if(video.canPlayType('application/vnd.apple.mpegurl')){diagnostics.segmentedVideos++;descriptor.set.call(video,path);return;}
+    if(!window.Hls?.isSupported()&&video.canPlayType('application/vnd.apple.mpegurl')){diagnostics.segmentedVideos++;diagnostics.playerEngine='native HLS';descriptor.set.call(video,path);return;}
     descriptor.set.call(video,'');
     queueMicrotask(()=>{
       if(record.disposed)return;
       if(!window.Hls?.isSupported()){diagnostics.errors.push('This browser does not support segmented media');video.dispatchEvent(new Event('error'));return;}
-      const hls=new Hls({enableWorker:true,backBufferLength:12,maxBufferLength:12,maxMaxBufferLength:24,capLevelToPlayerSize:false});record.hls=hls;
+      const opening=path.includes('/courtyard-intro/');const hls=new Hls({enableWorker:true,backBufferLength:12,maxBufferLength:opening?30:18,maxMaxBufferLength:opening?30:36,capLevelToPlayerSize:false});record.hls=hls;diagnostics.playerEngine='HLS.js 1.7.4 / MediaSource';
       hls.on(Hls.Events.MEDIA_ATTACHED,()=>{if(!record.disposed)hls.loadSource(path);});
       hls.on(Hls.Events.ERROR,(_event,data)=>{if(data.fatal)diagnostics.errors.push('Media: '+data.type+'/'+data.details);});
       hls.attachMedia(video);diagnostics.segmentedVideos++;
