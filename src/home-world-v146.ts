@@ -234,7 +234,7 @@ if(surface){
     // compilation/uploads. Its final frame remains until this world is ready;
     // the navigation and other portfolio content are already usable then.
     const introWindow=window as any;
-    if(introWindow.PORTFOLIO_BROWSER_ONLY&&!new URLSearchParams(location.search).has('return')&&introWindow.homeDesignedIntroState&&!introWindow.homeDesignedIntroState.finished){
+    if(introWindow.PORTFOLIO_BROWSER_ONLY&&document.body.dataset.returnedFromChild!=='true'&&!new URLSearchParams(location.search).has('return')&&introWindow.homeDesignedIntroState&&!introWindow.homeDesignedIntroState.finished){
       await new Promise<void>(resolve=>window.addEventListener('v85:home-intro-finished',()=>resolve(),{once:true}));
     }
     const warmTarget=new THREE.WebGLRenderTarget(16,16);renderer.setRenderTarget(warmTarget);

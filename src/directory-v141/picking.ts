@@ -6,12 +6,12 @@ export function pickRoom(ray: THREE.Raycaster, roots: THREE.Object3D[]) {
   let index = cache.get(roots);
   if (!index || index.count !== roots.length) {
     const meshes: THREE.Mesh[] = [];
-    for (const root of roots) root.traverse(o => { if (o instanceof THREE.Mesh) { o.geometry.computeBoundingBox(); meshes.push(o); } });
+    for (const root of roots) root.traverse(o => { if (o instanceof THREE.Mesh && !(o instanceof THREE.BatchedMesh)) { o.geometry.computeBoundingBox(); meshes.push(o); } });
     index = { count: roots.length, meshes }; cache.set(roots, index);
   }
   const candidates: { mesh: THREE.Mesh; near: number }[] = [];
   for (const mesh of index.meshes) {
-    let shown = true; for (let n: THREE.Object3D | null = mesh; n; n = n.parent) if (!n.visible) { shown = false; break; }
+    let shown = true; for (let n: THREE.Object3D | null = mesh; n; n = n.parent) if (!n.visible && !(n===mesh&&n.userData.renderBatched)) { shown = false; break; }
     if (!shown || !mesh.geometry.boundingBox) continue;
     inverse.copy(mesh.matrixWorld).invert(); localRay.copy(ray.ray).applyMatrix4(inverse);
     if (!localRay.intersectBox(mesh.geometry.boundingBox, point)) continue;

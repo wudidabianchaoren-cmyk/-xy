@@ -13,6 +13,6 @@ if(section&&!section.dataset.collageReady){
   cards.forEach((img,i)=>{const stagger=ease(-.035+i*.009,.30+i*.009,p),end=ease(.90,1,p),[x,y]=layouts[i],dx=x>.5?1:-1,dy=y<.5?-1:1;img.style.opacity=String(stagger*(1-end*.12));img.style.transform=`translate(${(reduced?0:dx*(1-stagger)*innerWidth*.34)}px,${(reduced?0:dy*(1-stagger)*innerHeight*.42-end*innerHeight*.07)}px) scale(${reduced?1:1.09-.09*stagger})`;});
  }
  const request=()=>{if(!scheduled)scheduled=requestAnimationFrame(draw);};
- const observer=new IntersectionObserver(([e])=>{active=e.isIntersecting;if(active){for(const image of cards){image.loading='eager';void image.decode().then(request).catch(()=>{});}draw();}},{rootMargin:'400px'});observer.observe(section);
+ const observer=new IntersectionObserver(([e])=>{active=e.isIntersecting;if(active){for(const image of cards){image.loading='eager';image.decoding='async';void image.decode().then(request).catch(()=>{});}draw();}},{rootMargin:'2200px'});observer.observe(section);
  window.addEventListener('scroll',()=>{if(active)request();},{passive:true});window.addEventListener('resize',request);draw();section.dataset.collageReady='178';window.addEventListener('pageshow',draw);document.fonts.ready.then(draw);
 }

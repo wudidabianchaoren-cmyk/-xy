@@ -1,0 +1,683 @@
+{
+  "noResize": true,
+  "noLossyEncoding": true,
+  "sourceOriginalsPreserved": true,
+  "converted": [
+    {
+      "source": "/assets/wu-xiangyu-portrait.png",
+      "target": "/assets/browser-v183/images/d6862ea204186288f90b.webp",
+      "originalBytes": 20227943,
+      "bytes": 15710706,
+      "width": 3072,
+      "height": 5504,
+      "pixelsIdentical": true,
+      "pixelSHA256": "9e43b5c684360250f19feb6ce5f653654d187c3327cd0fe0926c36b607de94e8"
+    },
+    {
+      "source": "/assets/odyssey/restored-v159/island-native-rgbe.png",
+      "target": "/assets/browser-v183/images/b58211b03ea5cf5e9186.webp",
+      "originalBytes": 13865809,
+      "bytes": 10290846,
+      "width": 2048,
+      "height": 2048,
+      "pixelsIdentical": true,
+      "pixelSHA256": "cc7474cccedb35b810efff682cd341f25756c8998a141534da4514f745e4159c"
+    },
+    {
+      "source": "/assets/journey/journey-mountain-valley.png",
+      "target": "/assets/browser-v183/images/45beb4b5eff4666246b3.webp",
+      "originalBytes": 7786309,
+      "bytes": 5758804,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "5f692c3479009f43117e4f1cea76af3b77ed7483685ec9a2ae86ef0d4ea7f7b4"
+    },
+    {
+      "source": "/assets/journey/dark-bamboo-tall.png",
+      "target": "/assets/browser-v183/images/93863dfa66f64b7f055a.webp",
+      "originalBytes": 7691875,
+      "bytes": 6052852,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "cf1968e0c82bc4e66cac7b0308363096e6ec23d78a9b9f56249d333b48d5b0fb"
+    },
+    {
+      "source": "/assets/journey/forest-dusk-red-02.png",
+      "target": "/assets/browser-v183/images/e5dd9ac0c1ffdb15c0e5.webp",
+      "originalBytes": 7500501,
+      "bytes": 5908354,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "b95235c021984edc46221edee3a6690b8cbcf17905402307d885875bfbd2c5cc"
+    },
+    {
+      "source": "/assets/journey/warm-bamboo-glade.png",
+      "target": "/assets/browser-v183/images/f011eafe59e777ad84ce.webp",
+      "originalBytes": 7395997,
+      "bytes": 5982550,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "75deff61841a1729a2902d509cd99a41aa653a032b7861183ce6c07b24ec68ae"
+    },
+    {
+      "source": "/assets/journey/bamboo-sun-path.png",
+      "target": "/assets/browser-v183/images/d78ec7e760476e0e253e.webp",
+      "originalBytes": 7387648,
+      "bytes": 5559550,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "80ccf4442e2315ddba3e6c9e3ec24182a68dbabc09c51d4faef4e9c942c6c02a"
+    },
+    {
+      "source": "/assets/journey/snow-campfire.png",
+      "target": "/assets/browser-v183/images/5ffc78888b970a9f163c.webp",
+      "originalBytes": 6984582,
+      "bytes": 5458620,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "fa479162ca3092e7367503f93b6b9d74e11444105e835faf5876e1c6676f877a"
+    },
+    {
+      "source": "/assets/journey/cold-bamboo-concept.png",
+      "target": "/assets/browser-v183/images/e2bd6f4dc7f01bafbe79.webp",
+      "originalBytes": 6969205,
+      "bytes": 5184530,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "c7be376b8490b892a882fbacb6b5f5103cae6b3ece9a13e7f2f1efa52fda4e44"
+    },
+    {
+      "source": "/assets/works/rural-bridge.png",
+      "target": "/assets/browser-v183/images/9e9459afa7225c104f9e.webp",
+      "originalBytes": 6818152,
+      "bytes": 4497454,
+      "width": 3168,
+      "height": 1344,
+      "pixelsIdentical": true,
+      "pixelSHA256": "e6243f639f4e28b97b07eeb69f25c492c73f7a82a8506ca850867cd36c68ebde"
+    },
+    {
+      "source": "/assets/works/rural-field.png",
+      "target": "/assets/browser-v183/images/0eea44c08a34a812d412.webp",
+      "originalBytes": 6774713,
+      "bytes": 4949634,
+      "width": 3168,
+      "height": 1344,
+      "pixelsIdentical": true,
+      "pixelSHA256": "56ba6610f38878940260314ec4380070f4d0bd7c5d8de76412c72ca47433650e"
+    },
+    {
+      "source": "/assets/works/xianxia-duel.png",
+      "target": "/assets/browser-v183/images/e1aad81c973a20794486.webp",
+      "originalBytes": 6696645,
+      "bytes": 4979298,
+      "width": 2752,
+      "height": 1536,
+      "pixelsIdentical": true,
+      "pixelSHA256": "a3e1ccbbb291add76fe55557076b4593646502bf50e0ee077a2d47e31a952117"
+    },
+    {
+      "source": "/assets/journey/forest-dusk-red-01.png",
+      "target": "/assets/browser-v183/images/6baa2fb70659ff910ae8.webp",
+      "originalBytes": 6373137,
+      "bytes": 5091840,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "45ddb3e10a798e503f99f7471c48fc2388dc5db64494ae44aab60270e5fda9cf"
+    },
+    {
+      "source": "/assets/journey/mist-palace-dusk.png",
+      "target": "/assets/browser-v183/images/3a68ce041d94949b41c3.webp",
+      "originalBytes": 6165069,
+      "bytes": 4791368,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "89b258fa732d098cd567fd5d6cbcd0379206f674d2b860cc7a762698168f95f4"
+    },
+    {
+      "source": "/assets/works/bamboo-forest.png",
+      "target": "/assets/browser-v183/images/6eb586d1dcd064231050.webp",
+      "originalBytes": 6146377,
+      "bytes": 4665330,
+      "width": 2752,
+      "height": 1536,
+      "pixelsIdentical": true,
+      "pixelSHA256": "2dccc3516a59454f655db7c9d3e6c72917a4965dc63fec3c6142e7ad2a1b4190"
+    },
+    {
+      "source": "/assets/journey/sky-palace-blue.png",
+      "target": "/assets/browser-v183/images/5b6d90c496ea686d6057.webp",
+      "originalBytes": 6022725,
+      "bytes": 4931552,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "98520ba363a0553c6a5caf1d884328c932609274f0fef14b38da6de858880c62"
+    },
+    {
+      "source": "/assets/journey/cloud-stairway-01.png",
+      "target": "/assets/browser-v183/images/bbc8e532e1b771b32f14.webp",
+      "originalBytes": 5876041,
+      "bytes": 5197990,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "6a08e9887f57e72e87a7255cc2bb48831e88f984ac15941ee3c0fbdc06dc89e7"
+    },
+    {
+      "source": "/assets/journey/cloud-stairway-02.png",
+      "target": "/assets/browser-v183/images/8176fd810103b5ac841c.webp",
+      "originalBytes": 5855814,
+      "bytes": 4817906,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "5d918a057bab217738867a6f7e05de53d98f3540da10714a044c27d57010f9be"
+    },
+    {
+      "source": "/assets/journey/horror-bamboo-01.png",
+      "target": "/assets/browser-v183/images/2c546b58e955ec544837.webp",
+      "originalBytes": 4588499,
+      "bytes": 3406282,
+      "width": 3376,
+      "height": 1440,
+      "pixelsIdentical": true,
+      "pixelSHA256": "967ea12fe1f9dab5ff662c6e73ca0eb0f9e490aef220f7ec0e3415ceae7ac757"
+    },
+    {
+      "source": "/assets/void-object-v28-cutout.png",
+      "target": "/assets/browser-v183/images/69e8f284f6c180b0ed7e.webp",
+      "originalBytes": 2809261,
+      "bytes": 1221498,
+      "width": 1254,
+      "height": 1254,
+      "pixelsIdentical": true,
+      "pixelSHA256": "a1ad9600d3bbecb14af8afb0682cfc6c7af2e378c0e09d7167f4ade0dc7edb42"
+    }
+  ],
+  "aliasCount": 58,
+  "pageImages": {
+    "/after-journey.html": [
+      "/assets/works/after-journey/cover-v32-92.webp",
+      "/assets/works/after-journey/frame-05.webp"
+    ],
+    "/rural-return.html": [
+      "/assets/works/rural-return/poster.webp",
+      "/assets/works/rural-return/elements-v131/element-01.webp"
+    ],
+    "/mid-autumn.html": [
+      "/assets/works/mid-autumn/still-live-stage.webp",
+      "/assets/works/mid-autumn/still-ai-musicians.webp"
+    ],
+    "/physical-universe.html": [
+      "/assets/works/covers-v161/code-films.webp",
+      "/assets/works/physical-universe-v103/frame-01.webp"
+    ],
+    "/humid-southeast-asia.html": [],
+    "/reading.html": [
+      "/assets/reading/cinema-aesthetics/page-001.jpg",
+      "/assets/reading/cinema-aesthetics/page-002.jpg"
+    ],
+    "/learning.html": [
+      "/assets/prompt-lab/prompt-structure.webp",
+      "/assets/prompt-lab/production-pipeline.webp"
+    ]
+  },
+  "responsivePreviews": [
+    {
+      "source": "/assets/wu-xiangyu-portrait.png",
+      "width": 640,
+      "height": 1147,
+      "src": "/assets/browser-v183/images/d6862ea204186288f90b-640.webp",
+      "bytes": 685916,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/wu-xiangyu-portrait.png",
+      "width": 1280,
+      "height": 2293,
+      "src": "/assets/browser-v183/images/d6862ea204186288f90b-1280.webp",
+      "bytes": 2901520,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/wu-xiangyu-portrait.png",
+      "width": 1920,
+      "height": 3440,
+      "src": "/assets/browser-v183/images/d6862ea204186288f90b-1920.webp",
+      "bytes": 6584710,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/journey-mountain-valley.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/45beb4b5eff4666246b3-640.webp",
+      "bytes": 256584,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/journey-mountain-valley.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/45beb4b5eff4666246b3-1280.webp",
+      "bytes": 946642,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/journey-mountain-valley.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/45beb4b5eff4666246b3-1920.webp",
+      "bytes": 2039510,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/dark-bamboo-tall.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/93863dfa66f64b7f055a-640.webp",
+      "bytes": 211924,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/dark-bamboo-tall.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/93863dfa66f64b7f055a-1280.webp",
+      "bytes": 888908,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/dark-bamboo-tall.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/93863dfa66f64b7f055a-1920.webp",
+      "bytes": 2033412,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/forest-dusk-red-02.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/e5dd9ac0c1ffdb15c0e5-640.webp",
+      "bytes": 181090,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/forest-dusk-red-02.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/e5dd9ac0c1ffdb15c0e5-1280.webp",
+      "bytes": 811552,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/forest-dusk-red-02.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/e5dd9ac0c1ffdb15c0e5-1920.webp",
+      "bytes": 1921202,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/warm-bamboo-glade.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/f011eafe59e777ad84ce-640.webp",
+      "bytes": 224720,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/warm-bamboo-glade.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/f011eafe59e777ad84ce-1280.webp",
+      "bytes": 845020,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/warm-bamboo-glade.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/f011eafe59e777ad84ce-1920.webp",
+      "bytes": 1881254,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/bamboo-sun-path.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/d78ec7e760476e0e253e-640.webp",
+      "bytes": 263704,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/bamboo-sun-path.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/d78ec7e760476e0e253e-1280.webp",
+      "bytes": 933004,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/bamboo-sun-path.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/d78ec7e760476e0e253e-1920.webp",
+      "bytes": 1965936,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/snow-campfire.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/5ffc78888b970a9f163c-640.webp",
+      "bytes": 178270,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/snow-campfire.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/5ffc78888b970a9f163c-1280.webp",
+      "bytes": 765204,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/snow-campfire.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/5ffc78888b970a9f163c-1920.webp",
+      "bytes": 1806504,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cold-bamboo-concept.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/e2bd6f4dc7f01bafbe79-640.webp",
+      "bytes": 197136,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cold-bamboo-concept.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/e2bd6f4dc7f01bafbe79-1280.webp",
+      "bytes": 781378,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cold-bamboo-concept.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/e2bd6f4dc7f01bafbe79-1920.webp",
+      "bytes": 1753986,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/rural-bridge.png",
+      "width": 640,
+      "height": 272,
+      "src": "/assets/browser-v183/images/9e9459afa7225c104f9e-640.webp",
+      "bytes": 196982,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/rural-bridge.png",
+      "width": 1280,
+      "height": 543,
+      "src": "/assets/browser-v183/images/9e9459afa7225c104f9e-1280.webp",
+      "bytes": 807156,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/rural-bridge.png",
+      "width": 1920,
+      "height": 815,
+      "src": "/assets/browser-v183/images/9e9459afa7225c104f9e-1920.webp",
+      "bytes": 1818964,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/rural-field.png",
+      "width": 640,
+      "height": 272,
+      "src": "/assets/browser-v183/images/0eea44c08a34a812d412-640.webp",
+      "bytes": 212554,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/rural-field.png",
+      "width": 1280,
+      "height": 543,
+      "src": "/assets/browser-v183/images/0eea44c08a34a812d412-1280.webp",
+      "bytes": 846894,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/rural-field.png",
+      "width": 1920,
+      "height": 815,
+      "src": "/assets/browser-v183/images/0eea44c08a34a812d412-1920.webp",
+      "bytes": 1885640,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/xianxia-duel.png",
+      "width": 640,
+      "height": 357,
+      "src": "/assets/browser-v183/images/e1aad81c973a20794486-640.webp",
+      "bytes": 291454,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/xianxia-duel.png",
+      "width": 1280,
+      "height": 714,
+      "src": "/assets/browser-v183/images/e1aad81c973a20794486-1280.webp",
+      "bytes": 1120924,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/xianxia-duel.png",
+      "width": 1920,
+      "height": 1072,
+      "src": "/assets/browser-v183/images/e1aad81c973a20794486-1920.webp",
+      "bytes": 2442550,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/forest-dusk-red-01.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/6baa2fb70659ff910ae8-640.webp",
+      "bytes": 212782,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/forest-dusk-red-01.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/6baa2fb70659ff910ae8-1280.webp",
+      "bytes": 804782,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/forest-dusk-red-01.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/6baa2fb70659ff910ae8-1920.webp",
+      "bytes": 1758130,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/mist-palace-dusk.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/3a68ce041d94949b41c3-640.webp",
+      "bytes": 139620,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/mist-palace-dusk.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/3a68ce041d94949b41c3-1280.webp",
+      "bytes": 685476,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/mist-palace-dusk.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/3a68ce041d94949b41c3-1920.webp",
+      "bytes": 1618350,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/bamboo-forest.png",
+      "width": 640,
+      "height": 357,
+      "src": "/assets/browser-v183/images/6eb586d1dcd064231050-640.webp",
+      "bytes": 302408,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/bamboo-forest.png",
+      "width": 1280,
+      "height": 714,
+      "src": "/assets/browser-v183/images/6eb586d1dcd064231050-1280.webp",
+      "bytes": 1106002,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/works/bamboo-forest.png",
+      "width": 1920,
+      "height": 1072,
+      "src": "/assets/browser-v183/images/6eb586d1dcd064231050-1920.webp",
+      "bytes": 2336324,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/sky-palace-blue.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/5b6d90c496ea686d6057-640.webp",
+      "bytes": 193260,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/sky-palace-blue.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/5b6d90c496ea686d6057-1280.webp",
+      "bytes": 827902,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/sky-palace-blue.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/5b6d90c496ea686d6057-1920.webp",
+      "bytes": 1814132,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cloud-stairway-01.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/bbc8e532e1b771b32f14-640.webp",
+      "bytes": 185042,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cloud-stairway-01.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/bbc8e532e1b771b32f14-1280.webp",
+      "bytes": 857546,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cloud-stairway-01.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/bbc8e532e1b771b32f14-1920.webp",
+      "bytes": 1919192,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cloud-stairway-02.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/8176fd810103b5ac841c-640.webp",
+      "bytes": 178440,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cloud-stairway-02.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/8176fd810103b5ac841c-1280.webp",
+      "bytes": 809018,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/cloud-stairway-02.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/8176fd810103b5ac841c-1920.webp",
+      "bytes": 1800666,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/horror-bamboo-01.png",
+      "width": 640,
+      "height": 273,
+      "src": "/assets/browser-v183/images/2c546b58e955ec544837-640.webp",
+      "bytes": 211654,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/horror-bamboo-01.png",
+      "width": 1280,
+      "height": 546,
+      "src": "/assets/browser-v183/images/2c546b58e955ec544837-1280.webp",
+      "bytes": 691916,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/journey/horror-bamboo-01.png",
+      "width": 1920,
+      "height": 819,
+      "src": "/assets/browser-v183/images/2c546b58e955ec544837-1920.webp",
+      "bytes": 1356694,
+      "resampledPixelsIdentical": true
+    },
+    {
+      "source": "/assets/void-object-v28-cutout.png",
+      "width": 640,
+      "height": 640,
+      "src": "/assets/browser-v183/images/69e8f284f6c180b0ed7e-640.webp",
+      "bytes": 302858,
+      "resampledPixelsIdentical": true
+    }
+  ],
+  "previewNote": "DOM display previews use proportional Lanczos resizing then lossless encoding; original full-resolution images remain available for zoom. WebGL/data textures are never resized.",
+  "excludedDataOutputs": [
+    "/assets/odyssey/restored-v159/island-native-rgbe.png"
+  ],
+  "publishedSemanticFullImages": 19,
+  "noResizeScope": "Unchanged-dimension full-resolution derivatives only; responsive previews are proportionally resized."
+}

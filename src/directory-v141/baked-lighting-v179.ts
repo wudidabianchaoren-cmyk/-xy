@@ -65,14 +65,46 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
    shader.vertexShader='varying vec3 vNativeLightingWorld;\n'+shader.vertexShader;
    if(shader.vertexShader.includes('#include <worldpos_vertex>'))shader.vertexShader=shader.vertexShader.replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
     vec4 nativePosition=vec4(transformed,1.);
+    #ifdef USE_BATCHING
+     nativePosition=batchingMatrix*nativePosition;
+    #endif
     #ifdef USE_INSTANCING
      nativePosition=instanceMatrix*nativePosition;
     #endif
     vNativeLightingWorld=(modelMatrix*nativePosition).xyz;`);
    else shader.vertexShader=shader.vertexShader.replace(/void main\(\)\s*\{/,'void main(){vNativeLightingWorld=(modelMatrix*vec4(position,1.)).xyz;');
    let visibilityCode=water?projectionGLSL.replace('.018+p.w*.002','.35+p.w*.02'):projectionGLSL;
+   if(manifest.scene==='room')visibilityCode=visibilityCode.replace('vec3 colour=mix(',`// Reject source colour that straddles a foreground/background depth edge.
+    // Linear colour filtering must not smear a TV or window frame onto the city.
+    vec2 texel=1./vec2(textureSize(depthImage,0));
+    for(int edge=0;edge<4;edge++){
+     vec2 delta=edge==0?vec2(texel.x,0.):edge==1?vec2(-texel.x,0.):edge==2?vec2(0.,texel.y):vec2(0.,-texel.y);
+     float z=dot(texture2D(depthImage,uv+delta),vec4((255./256.),(255./256.)/256.,(255./256.)/65536.,1./16777216.));
+     float neighbourDistance=-(nf.x*nf.y)/((nf.y-nf.x)*z-nf.y);
+     visible*=1.-smoothstep(tolerance*2.,tolerance*6.,abs(neighbourDistance-sourceDistance));
+    }
+    vec3 colour=mix(`);
    if((old as T.MeshStandardMaterial).alphaMap)visibilityCode=visibilityCode.replace('return vec4(colour*visible*weight,visible*weight);','visible*=1.-smoothstep(.28,.45,dot(colour,vec3(.2126,.7152,.0722)));return vec4(colour*visible*weight,visible*weight);');
    shader.fragmentShader=visibilityCode+shader.fragmentShader;
+   if(!water&&old instanceof T.MeshStandardMaterial&&!(old as T.MeshPhysicalMaterial).transmission){
+    // The final preserved-lighting mix already replaces these pixels completely.
+    // Skip lights/IBL/scattering only in that exact case; keep the full PBR path
+    // for disocclusions and incomplete coverage. Source pixels stay identical.
+    shader.fragmentShader=shader.fragmentShader.replace('#include <lights_physical_fragment>',`
+     vec4 nativeFastA=readNativeLighting(nativeColour0,nativeDepth0,nativeVP0,nativeNF0,nativeWeight0);
+     vec4 nativeFastB=readNativeLighting(nativeColour1,nativeDepth1,nativeVP1,nativeNF1,nativeWeight1);
+     float nativeFastCoverage=nativeFastA.a+nativeFastB.a;
+     if(nativeFastCoverage>=.5){
+      #ifdef OPAQUE
+       diffuseColor.a=1.;
+      #endif
+      gl_FragColor=vec4(linearToOutputTexel(vec4((nativeFastA.rgb+nativeFastB.rgb)/nativeFastCoverage,1.)).rgb,diffuseColor.a);
+      #include <dithering_fragment>
+      return;
+     }
+     #include <lights_physical_fragment>
+    `);
+   }
    const output=water?applyGLSL.replace('clamp(nativeCoverage*2.,0.,1.)','clamp(nativeCoverage*2.,0.,mix(.86,1.,smoothstep(80.,250.,length(vNativeLightingWorld-cameraPosition))))'):applyGLSL;
    if(water){const end=shader.fragmentShader.lastIndexOf('}');shader.fragmentShader=shader.fragmentShader.slice(0,end)+output+'\n'+shader.fragmentShader.slice(end);}
    else if(shader.fragmentShader.includes('#include <dithering_fragment>'))shader.fragmentShader=shader.fragmentShader.replace('#include <dithering_fragment>',output+'\n#include <dithering_fragment>');
@@ -103,5 +135,5 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
  // a texture upload or a first-use shader compilation in the middle of a drag.
  const remaining:Pose[]=manifest.poses.slice(1);await Promise.all([0,1].map(async()=>{while(remaining.length){const pose=remaining.shift();if(pose)await load(pose);}}));
  state.bakedLighting.loadedPoses=loaded.length;
- return{update,dispose(){alive=false;materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());empty.dispose();}};
+ return{update,visibilityFields:()=>loaded.map(item=>({pose:item.pose,data:item.depth.image.data as Uint8Array})),dispose(){alive=false;materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());empty.dispose();}};
 }

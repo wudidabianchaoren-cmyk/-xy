@@ -21,7 +21,7 @@ const prefetchHome=()=>{if(new URLSearchParams(location.search).get('homeRendere
 }};
 // Let the entry film obtain its first buffer before the large native model competes for bandwidth.
 let homeLoaded=false;
-const loadHome=()=>{if(homeLoaded||!home)return;homeLoaded=true;idle(()=>{void(async()=>{const path=new URLSearchParams(location.search).get('homeRenderer')==='native'?'./home-native-v165.js?v=32.176':'./home-world-v146.js?v=32.176';for(let attempt=0;attempt<3;attempt++){try{await import(/* @vite-ignore */ (path+(attempt?'&moduleRetry='+attempt:'')));return;}catch(error){if(attempt===2){console.error('Homepage could not initialise',error);(window as any).portfolioBoot?.fail('home',error);return;}await new Promise(resolve=>setTimeout(resolve,500*(attempt+1)));}}})();});};
+const loadHome=()=>{if(homeLoaded||!home)return;homeLoaded=true;idle(()=>{void(async()=>{const path=new URLSearchParams(location.search).get('homeRenderer')==='native'?'./home-native-v165.js?v=32.183':'./home-world-v146.js?v=32.183';for(let attempt=0;attempt<3;attempt++){try{await import(/* @vite-ignore */ (path+(attempt?'&moduleRetry='+attempt:'')));return;}catch(error){if(attempt===2){console.error('Homepage could not initialise',error);(window as any).portfolioBoot?.fail('home',error);return;}await new Promise(resolve=>setTimeout(resolve,500*(attempt+1)));}}})();});};
 const homeWhenVisible=()=>{
   if(!home)return;
   const observe=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observe.disconnect();loadHome();}},{rootMargin:'250px'});
@@ -36,7 +36,7 @@ else{prefetchHome();loadHome();}
 window.addEventListener('v31:opening-complete',()=>{prefetchHome();loadHome();},{once:true});
 const observe=(target:HTMLElement|null,margin:string,load:()=>void)=>{if(!target)return;const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();idle(load);}},{rootMargin:margin});observer.observe(target);};
 let sandNear=false,sandLoaded=false;
-const loadSand=()=>{if(sandLoaded||!(window as any).homeClockState?.ready)return;sandLoaded=true;idle(()=>{const script=document.createElement('script');script.src='./v31-sand-story.js?v=32.176';script.async=true;document.body.append(script);});};
+const loadSand=()=>{if(sandLoaded||!(window as any).homeClockState?.ready)return;sandLoaded=true;idle(()=>{const script=document.createElement('script');script.src='./v31-sand-story.js?v=32.183';script.async=true;document.body.append(script);});};
 // Prepare the next chapter as the visitor approaches it. Its separate graphics
 // context must not compete with the loading film or the courtyard's first play.
 window.addEventListener('v31:opening-complete',()=>idle(loadSand),{once:true});window.addEventListener('v85:home-intro-finished',()=>idle(loadSand),{once:true});window.addEventListener('v163:background-gpu-release',()=>idle(loadSand),{once:true});
