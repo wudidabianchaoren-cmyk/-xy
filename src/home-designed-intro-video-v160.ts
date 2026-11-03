@@ -24,7 +24,7 @@ if(surface){
    if(document.body.dataset.openingHandoffPending!=='true')await play();
   }catch(error){state.error=String(error);end('startup-error');}
  }
- async function play(){if(!running)return;state.startedAt=performance.now();lastFrameAt=0;await video.play();watchdog=window.setInterval(()=>{if(!document.hidden&&performance.now()-state.startedAt>120000)end('playback-timeout');},1000);}
+ async function play(){if(!running)return;state.startedAt=performance.now();lastFrameAt=0;await video.play();watchdog=window.setInterval(()=>{if(!document.hidden&&performance.now()-(lastFrameAt||state.startedAt)>180000)end('playback-timeout');},1000);}
  function prepare(){clearTimeout(checking);if(skip()){state.finished=true;return;}if(document.body.dataset.openingComplete==='true'&&w.homeClockState?.ready)void start();else checking=window.setTimeout(prepare,120);}
  state.waitForMedia=()=>video.readyState>=2?Promise.resolve():new Promise<void>((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Native intro media unavailable')),90000);video.addEventListener('loadeddata',()=>{clearTimeout(timer);resolve();},{once:true});video.addEventListener('error',()=>{clearTimeout(timer);reject(Error('Native intro media decoding failed'));},{once:true});});
  state.prepareForOpening=()=>{clearTimeout(checking);if(skip()){state.finished=true;return Promise.resolve({mode:'skipped'});}if(!running)void start();return paintPromise;};state.cancelOpeningPreparation=()=>end('entry-prepare-timeout');

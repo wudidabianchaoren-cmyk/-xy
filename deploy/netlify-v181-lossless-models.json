@@ -1,0 +1,120 @@
+[
+  {
+    "source": "blender/reference-architecture-v24/baked-architecture.glb",
+    "sourceBytes": 45162076,
+    "optimizedBytes": 27770476,
+    "packedBytes": 25396771,
+    "originalSourceSHA256": "c96dbf21185735fce7451b0c0403875fef1067d4728a324e51fc3edce699b4a0",
+    "sha256": "a50f98dc46fe6ce32dbba8a5e264759b0d944aab6d0f23ede8bba64f75004d9e",
+    "geometryBuffersIdentical": true,
+    "sceneTablesIdentical": true,
+    "imagePixelsIdentical": true,
+    "images": [
+      {
+        "image": 0,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 11502176,
+        "bytes": 8662590,
+        "pixelsIdentical": true,
+        "pixelSHA256": "5566e3dc082acf3fb86158664ffd2d8f5056ba59087b44aaad2b798b4723c702"
+      },
+      {
+        "image": 1,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 11011836,
+        "bytes": 6262894,
+        "pixelsIdentical": true,
+        "pixelSHA256": "96ffd2e43741605d603c9877984516998e5d2a9c8d09bd20c86f5dbf04bc58b4"
+      },
+      {
+        "image": 2,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 4870596,
+        "bytes": 2427506,
+        "pixelsIdentical": true,
+        "pixelSHA256": "e71b539e0b15352a996af5a551f98bdf6134ddc67dbdd251b8fffd842086286e"
+      },
+      {
+        "image": 3,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 4870596,
+        "bytes": 2427506,
+        "pixelsIdentical": true,
+        "pixelSHA256": "e71b539e0b15352a996af5a551f98bdf6134ddc67dbdd251b8fffd842086286e"
+      },
+      {
+        "image": 6,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 4869948,
+        "bytes": 2380218,
+        "pixelsIdentical": true,
+        "pixelSHA256": "57a1521276d2d1ab2c5f2d5c39f3420f90f826f4d0fe2297c452c8222ecdb14b"
+      }
+    ],
+    "encoding": "gzip",
+    "bytes": 27770476,
+    "parts": [
+      "/assets/browser-v181/baked-architecture/part-000.bin",
+      "/assets/browser-v181/baked-architecture/part-001.bin",
+      "/assets/browser-v181/baked-architecture/part-002.bin",
+      "/assets/browser-v181/baked-architecture/part-003.bin",
+      "/assets/browser-v181/baked-architecture/part-004.bin",
+      "/assets/browser-v181/baked-architecture/part-005.bin",
+      "/assets/browser-v181/baked-architecture/part-006.bin"
+    ]
+  },
+  {
+    "source": "blender/reference-architecture-v16/architecture-world.glb",
+    "sourceBytes": 24494976,
+    "optimizedBytes": 22428184,
+    "packedBytes": 20662196,
+    "originalSourceSHA256": "aef127d1eed128d3138d4ea5326a16813a372a8f262c3b4182ea6cea8f8bc2b5",
+    "sha256": "229f2344128aa43aa1096d6884d3a99c8ec998f505d508737b6bd29326fcebbb",
+    "geometryBuffersIdentical": true,
+    "sceneTablesIdentical": true,
+    "imagePixelsIdentical": true,
+    "images": [
+      {
+        "image": 0,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 3693828,
+        "bytes": 2857050,
+        "pixelsIdentical": true,
+        "pixelSHA256": "5d7b8bada52e12485b71ea2d166b98ba7018d76bda5175c7f8912959f9b3eb01"
+      },
+      {
+        "image": 1,
+        "width": 1024,
+        "height": 1024,
+        "originalBytes": 610817,
+        "bytes": 355936,
+        "pixelsIdentical": true,
+        "pixelSHA256": "f4a6f9eadb0343486206ae8981b59078dace51689a316cf843a6ec16ef669e5e"
+      },
+      {
+        "image": 2,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 2354146,
+        "bytes": 1378806,
+        "pixelsIdentical": true,
+        "pixelSHA256": "aeda8adafdfb7dc9259c074c1b1f9cb053e7d7add625abb909b00f9416606148"
+      }
+    ],
+    "encoding": "gzip",
+    "bytes": 22428184,
+    "parts": [
+      "/assets/browser-v181/architecture-world/part-000.bin",
+      "/assets/browser-v181/architecture-world/part-001.bin",
+      "/assets/browser-v181/architecture-world/part-002.bin",
+      "/assets/browser-v181/architecture-world/part-003.bin",
+      "/assets/browser-v181/architecture-world/part-004.bin"
+    ]
+  }
+]

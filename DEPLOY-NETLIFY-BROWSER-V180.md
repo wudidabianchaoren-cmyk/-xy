@@ -4,10 +4,10 @@ This is the separately authorized browser migration. The original UE project, or
 
 ## Delivery package
 
-- Current candidate deploy: `6ae90502cb8f7ec7e615e6c1` in the existing Netlify project `eloquent-puffpuff-c8613b`.
-- Static manifest: 1,747 files / 2,809,749,606 bytes at the final staging checkpoint. Large originals referenced by the application are delivered through their mapped fragments.
+- Current candidate deploy: `6ae972b2bc0e22989d914f59` in the existing Netlify project `eloquent-puffpuff-c8613b`.
+- Static manifest: 1,760 files / 2,855,815,562 bytes at the final staging checkpoint. Large originals referenced by the application are delivered through their mapped fragments.
 - Six movie streams use HLS/fMP4 containers with `-c copy`; demuxed video SHA256 matches each original. No video re-encode or frame downscaling was used. The 16-second intro uses dependent fragments for continuous playback; it retains its original keyframes and 480 source frames.
-- Thirty large binary assets use gzip and 4 MiB fragments. Decompression was byte-checked against each original. The browser reconstructs original bytes for the existing loaders, with bounded retries before exposing a chunk to the stream.
+- Thirty large binary paths use gzip and 4 MiB fragments. Twenty-eight reconstruct their original files exactly. Two home models use an independently verified container repack: identical geometry buffers, scene tables and decoded texture pixels, with PNG-to-lossless-WebP packing and no resize. These two optimized GLB containers differ from their originals. The browser reconstructs original bytes for the existing loaders, with bounded retries and three ordered in-flight segments before exposing each chunk to the stream.
 - The generated resource map and early runtime bridge apply consistently to all deployed HTML pages. The current v31 page is published as the root entry. Authoring-only native capture query remains local-only.
 - Runtime material probes and sand-story motion atlases omitted by the old collector are included. Source `.blend`, engine executables, private verification files, tokens and account configuration are excluded.
 - HLS.js 1.7.4 is locally vendored with its license; no public CDN is needed to load the player.
@@ -25,7 +25,7 @@ Public checks, final production identity and Git hashes are written to `deploy/b
 1. Keep work isolated from the original checkout; never overwrite linked source asset folders.
 2. Build `scripts/build-v161-ui.mjs` and `scripts/build-v165.mjs` with the installed toolchain.
 3. Run `scripts/browser-v179/prepare-netlify-v180.py` to verify stream-copy and byte-identical fragments.
-4. Run `scripts/browser-v179/stage-netlify-v180.py` to construct a release containing the actual static inputs. Do not publish the raw Git root.
+4. Run `scripts/browser-v179/optimize-home-lossless-v181.py`, then `scripts/browser-v179/stage-netlify-v180.py` to construct a release containing the actual static inputs. Do not publish the raw Git root.
 5. Upload via Netlify's authenticated CLI/API. Refresh the digest manifest to obtain the actual missing hashes; do not infer completion from an empty GET response field. Honor 429 retry headers, use low concurrency and do not launch competing upload helpers.
 6. Run the browser checks against the real anonymous HTTPS origin before publishing. API `ready` alone is not a runtime test.
 

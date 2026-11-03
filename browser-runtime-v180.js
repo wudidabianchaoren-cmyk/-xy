@@ -13,15 +13,20 @@
     const url=new URL(request?.url||String(input),location.href),record=url.origin===location.origin?resources.binary[url.pathname]:null;
     if(!record)return originalFetch(input,options);
     const signal=options?.signal||request?.signal;
-    let index=0;
+    let index=0;const pending=new Map();
+    const segment=async position=>{
+      for(let attempt=0;attempt<3;attempt++){
+        try{const response=await originalFetch(record.parts[position],{signal,priority:'high'});if(!response.ok)throw Error('Resource segment unavailable: '+response.status);return new Uint8Array(await response.arrayBuffer());}
+        catch(error){if(signal?.aborted||attempt===2)throw error;await new Promise(resolve=>setTimeout(resolve,250*(attempt+1)));}
+      }
+    };
+    const prefetch=()=>{for(let next=index;next<Math.min(index+3,record.parts.length);next++)if(!pending.has(next)){const job=segment(next);job.catch(()=>{});pending.set(next,job);}};
+    prefetch();
     const stream=new ReadableStream({
       async pull(controller){
         try{
           if(index>=record.parts.length){controller.close();return;}
-          for(let attempt=0;attempt<3;attempt++){
-            try{const response=await originalFetch(record.parts[index],{signal});if(!response.ok)throw Error('Resource segment unavailable: '+response.status);const bytes=await response.arrayBuffer();controller.enqueue(new Uint8Array(bytes));index++;return;}
-            catch(error){if(signal?.aborted||attempt===2)throw error;await new Promise(resolve=>setTimeout(resolve,250*(attempt+1)));}
-          }
+          controller.enqueue(await pending.get(index));pending.delete(index++);prefetch();
         }catch(error){diagnostics.errors.push(String(error));controller.error(error);}
       },
       cancel(){index=record.parts.length;}
@@ -38,7 +43,7 @@
     queueMicrotask(()=>{
       if(record.disposed)return;
       if(!window.Hls?.isSupported()){diagnostics.errors.push('This browser does not support segmented media');video.dispatchEvent(new Event('error'));return;}
-      const opening=path.includes('/courtyard-intro/');const hls=new Hls({enableWorker:true,backBufferLength:12,maxBufferLength:opening?30:18,maxMaxBufferLength:opening?30:36,capLevelToPlayerSize:false});record.hls=hls;diagnostics.playerEngine='HLS.js 1.7.4 / MediaSource';
+      const opening=path.includes('/courtyard-intro/');const hls=new Hls({enableWorker:true,progressive:true,backBufferLength:12,maxBufferLength:opening?30:18,maxMaxBufferLength:opening?30:36,capLevelToPlayerSize:false});record.hls=hls;diagnostics.playerEngine='HLS.js 1.7.4 / progressive MediaSource';
       hls.on(Hls.Events.MEDIA_ATTACHED,()=>{if(!record.disposed)hls.loadSource(path);});
       hls.on(Hls.Events.ERROR,(_event,data)=>{if(data.fatal)diagnostics.errors.push('Media: '+data.type+'/'+data.details);});
       hls.attachMedia(video);diagnostics.segmentedVideos++;

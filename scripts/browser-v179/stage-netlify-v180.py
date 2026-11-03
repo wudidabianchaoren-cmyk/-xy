@@ -24,8 +24,8 @@ for name in list(paths):
   if entry.is_file() and entry.suffix.lower() in {'.png','.jpg','.jpeg','.webp','.hdr','.exr','.bin','.gz','.json','.glb','.gltf','.mp4','.webm','.mp3','.ogg','.wav','.woff2','.ttf','.js','.css','.html','.svg'}:paths.add(reference)
   elif entry.is_dir() and reference.rstrip('/') not in ['assets','blender','motion','vendor','assets/odyssey','assets/works']:
    paths.update(p.relative_to(root).as_posix() for p in entry.rglob('*') if p.is_file() and p.suffix.lower() in {'.png','.jpg','.jpeg','.webp','.hdr','.exr','.bin','.gz','.json','.glb','.gltf','.mp4','.webm','.mp3','.ogg','.wav','.woff2','.ttf'})
-for folder in ['assets/browser-v179','assets/browser-v180']:
- paths.update(p.relative_to(root).as_posix() for p in (root/folder).rglob('*') if p.is_file() and p.name!='complete.json')
+for folder in ['assets/browser-v179','assets/browser-v180','assets/browser-v181']:
+ paths.update(p.relative_to(root).as_posix() for p in (root/folder).rglob('*') if p.is_file() and p.name!='complete.json' and not (folder=='assets/browser-v181' and p.suffix=='.glb'))
 # Native-derived material probes use a concatenated filename prefix.
 for folder in ['assets/ue-v161','assets/sand-story']:
  paths.update(p.relative_to(root).as_posix() for p in (root/folder).rglob('*') if p.is_file())
@@ -40,6 +40,12 @@ for name in sorted(paths):
  if source.suffix=='.html':
   text=source.read_text(encoding='utf-8-sig')
   text=re.sub(r'(<head\b[^>]*>)',lambda m:m.group(1)+head,text,count=1,flags=re.I)
+  if name in {'v31.html','index.html'}:
+   # Offscreen pictures retain their original pixels. They must not compete
+   # with the first visible scene and the original opening media.
+   text=re.sub(r'<link\b(?=[^>]*rel="preload")(?=[^>]*as="image")[^>]*>','',text,flags=re.I)
+   text=re.sub(r'<img\b([^>]*?)>',lambda m:'<img'+re.sub(r'\s+(?:loading|decoding|fetchpriority)="[^"]*"','',m.group(1))+' loading="lazy" decoding="async" fetchpriority="low">',text,flags=re.I)
+   text=text.replace('<audio id="portfolioAudio" preload="auto"','<audio id="portfolioAudio" preload="none"')
   for originalURL in resources['media']:
    text=re.sub(r'(?<![\w-])src="'+re.escape('.'+originalURL)+r'"','data-portfolio-media-src=".'+originalURL+'"',text)
   target.write_text(text,encoding='utf-8')
@@ -61,6 +67,7 @@ files=[]
 for p in sorted(stage.rglob('*')):
  if p.is_file() and p.suffix.lower() not in {'.blend','.py','.exe','.dll','.map','.pem','.key'}:
   relative=p.relative_to(stage).as_posix()
+  if relative.startswith('assets/browser-v181/') and p.suffix=='.glb':continue
   if relative in replaced or relative in {'blender/reference-architecture-v22/current-complete-courtyard.glb','assets/works/mid-autumn/source-original.mp4'}:continue
   if any(x in relative.split('/') for x in ['.git','.verify','node_modules']):raise RuntimeError('Private directory in release')
   with p.open('rb')as f:sha=hashlib.file_digest(f,'sha1').hexdigest()

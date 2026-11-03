@@ -1736,6 +1736,71 @@
       "sha1": "3d637975fd8f16bb0048d3d51afad7617a2ca654"
     },
     {
+      "path": "assets/browser-v181/architecture-world/part-000.bin",
+      "bytes": 4194304,
+      "sha1": "d01b9afcef6e53264a4d48fbfc5f584a48c84b36"
+    },
+    {
+      "path": "assets/browser-v181/architecture-world/part-001.bin",
+      "bytes": 4194304,
+      "sha1": "b43aaa544f7738c25dc72e63917c2650ea628e60"
+    },
+    {
+      "path": "assets/browser-v181/architecture-world/part-002.bin",
+      "bytes": 4194304,
+      "sha1": "16a450464346dabfbe5395306a043cf28cd504ab"
+    },
+    {
+      "path": "assets/browser-v181/architecture-world/part-003.bin",
+      "bytes": 4194304,
+      "sha1": "37cf621c0b7f3a762fb3d0b3ae13876235092fd8"
+    },
+    {
+      "path": "assets/browser-v181/architecture-world/part-004.bin",
+      "bytes": 3884980,
+      "sha1": "8c3f3ceac57ebf59e14d55d85b4310c051c51b2f"
+    },
+    {
+      "path": "assets/browser-v181/baked-architecture/part-000.bin",
+      "bytes": 4194304,
+      "sha1": "c32d72d130f9ca069eecdb1d97a82f29fd6092ca"
+    },
+    {
+      "path": "assets/browser-v181/baked-architecture/part-001.bin",
+      "bytes": 4194304,
+      "sha1": "6c5f3b41766c6b1c5b7f76d689361b084c0fab3b"
+    },
+    {
+      "path": "assets/browser-v181/baked-architecture/part-002.bin",
+      "bytes": 4194304,
+      "sha1": "a6bb4e76c0b6e04cb859d3b4e99a975bc2d1777a"
+    },
+    {
+      "path": "assets/browser-v181/baked-architecture/part-003.bin",
+      "bytes": 4194304,
+      "sha1": "18022cc7b4f4ae862e3073f695b64241eb1f729b"
+    },
+    {
+      "path": "assets/browser-v181/baked-architecture/part-004.bin",
+      "bytes": 4194304,
+      "sha1": "693f3a549502254f0c9cb7b27d0538bba4025dbb"
+    },
+    {
+      "path": "assets/browser-v181/baked-architecture/part-005.bin",
+      "bytes": 4194304,
+      "sha1": "df681f7d8435550fea668c654da7391cba1438db"
+    },
+    {
+      "path": "assets/browser-v181/baked-architecture/part-006.bin",
+      "bytes": 230947,
+      "sha1": "2f19831eacdd95ffd2f39fc80d374525633c4b18"
+    },
+    {
+      "path": "assets/browser-v181/verification.json",
+      "bytes": 4095,
+      "sha1": "a0158f6035646b86b0e540ae993e08757f17a356"
+    },
+    {
       "path": "assets/directory-v119/berlin-night.jpg",
       "bytes": 2674368,
       "sha1": "c523b5e2484f2ec5cecf7f5fde341d72b8007a97"
@@ -6532,13 +6597,13 @@
     },
     {
       "path": "browser-resources-v180.js",
-      "bytes": 17350,
-      "sha1": "59573266fd4573742d881e4fff60b586a1bc0cfa"
+      "bytes": 18820,
+      "sha1": "f9b98bdb4565a4ce429d69ed92e6604eb7b23a0d"
     },
     {
       "path": "browser-runtime-v180.js",
-      "bytes": 4517,
-      "sha1": "e02956cbcf492f33bd9b8ebeddb0a795811e9da2"
+      "bytes": 5052,
+      "sha1": "c933a183544305c42f6fafd1558dc1fedbd395e7"
     },
     {
       "path": "c4d/hybrid-study/architecture-master.png",
@@ -8152,8 +8217,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 33229,
-      "sha1": "df76cbf61a5b182cc56593d511bee09a600bcbee"
+      "bytes": 33620,
+      "sha1": "a58eeed46d05cc022310a90c19b9e3719748756b"
     },
     {
       "path": "learning-fade-v153.js",
@@ -8417,8 +8482,8 @@
     },
     {
       "path": "scene-dist/directory-v144/app.js",
-      "bytes": 1567344,
-      "sha1": "011b91e50b7f6d4ccd203da1b600a73a7648c995"
+      "bytes": 1567445,
+      "sha1": "633c7e187d4714645bf75643f53ae4a62b6425d6"
     },
     {
       "path": "scene-dist/directory-v144/handwriting-CNCCLKZF.ttf",
@@ -8452,8 +8517,8 @@
     },
     {
       "path": "scene-dist/dock/home-designed-intro-v160.js",
-      "bytes": 8972,
-      "sha1": "2e5c058f0e9c8612622e78a44c02f7a4b65f5826"
+      "bytes": 8978,
+      "sha1": "0a4958a57ea8c72ce1226b8c08bc769b0e6aef57"
     },
     {
       "path": "scene-dist/hobby-drift-v167.js",
@@ -8582,8 +8647,8 @@
     },
     {
       "path": "v31.html",
-      "bytes": 33229,
-      "sha1": "df76cbf61a5b182cc56593d511bee09a600bcbee"
+      "bytes": 33620,
+      "sha1": "a58eeed46d05cc022310a90c19b9e3719748756b"
     },
     {
       "path": "v32-121.css",
@@ -8736,5 +8801,5 @@
       "sha1": "29cb79c5829026cfcc3b515efa2b0cf00243c4c3"
     }
   ],
-  "bytes": 2809749606
+  "bytes": 2855815562
 }
