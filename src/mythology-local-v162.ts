@@ -183,7 +183,7 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
 
  normal.wrapS=normal.wrapT=THREE.RepeatWrapping;
  const water=new Water(seaGridV155(),{textureWidth:512,textureHeight:512,waterNormals:normal,sunDirection:seaSun,sunColor:0xffc575,waterColor:0x062e2b,distortionScale:.65,fog:true});
- water.userData.coastalWater=true;water.rotation.x=-Math.PI/2;water.position.y=-.15;water.receiveShadow=true;
+ water.userData.coastalWater=true;water.userData.nativeLightingExcluded=true;water.rotation.x=-Math.PI/2;water.position.y=-.15;water.receiveShadow=true;
  water.material.vertexShader=water.material.vertexShader.replace('void main() {',`void main() {vec3 displaced=position;float waveDetail=1.-smoothstep(180.,450.,length(position.xy));displaced.z+=(.13*sin(time*.0666667)+.16*sin((position.x+position.y)*.1485-time*.75)+.09*sin((position.x-position.y)*.233-time*.62))*waveDetail;`).replaceAll('vec4( position, 1.0 )','vec4( displaced, 1.0 )');
  water.material.uniforms.size.value=1.6;
  water.material.fragmentShader=water.material.fragmentShader.replace('vec3 surfaceNormal = normalize( noise.xzy * vec3( 1.5, 1.0, 1.5 ) );','vec3 geometricSeaNormal=normalize(cross(dFdx(worldPosition.xyz),dFdy(worldPosition.xyz)));if(geometricSeaNormal.y<0.)geometricSeaNormal=-geometricSeaNormal;vec3 surfaceNormal=normalize(geometricSeaNormal+vec3(noise.x*.055,0.,noise.y*.055));');
@@ -237,6 +237,20 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
  if(!nativeRequired&&new URLSearchParams(location.search).get('nativeLightfield')==='1'){
   const [daySky,nightSky]=await Promise.all(['day','night'].map(mode=>textures.loadAsync('./assets/browser-v179/myth-field/sky-'+mode+'.png')));for(const texture of [daySky,nightSky]){texture.colorSpace=THREE.SRGBColorSpace;texture.generateMipmaps=false;texture.minFilter=texture.magFilter=THREE.LinearFilter;}
   skyMaterial.uniforms.nativeDaySky={value:daySky};skyMaterial.uniforms.nativeNightSky={value:nightSky};
+  // Keep the sea as real moving water with a live planar reflection. A
+  // perspective photograph on this plane leaves rectangular projection seams.
+  water.material.uniforms.nativeDaySky={value:daySky};water.material.uniforms.nativeNightSky={value:nightSky};water.material.uniforms.nativeSeaNight=skyMaterial.uniforms.nightFactor;
+  water.material.fragmentShader='uniform sampler2D nativeDaySky,nativeNightSky;uniform float nativeSeaNight;\n'+water.material.fragmentShader;
+  const waterEnd=water.material.fragmentShader.lastIndexOf('}');
+  water.material.fragmentShader=water.material.fragmentShader.slice(0,waterEnd)+`
+   float seaLuminance=dot(gl_FragColor.rgb,vec3(.2126,.7152,.0722));
+   vec3 maritimeTint=seaLuminance*vec3(.38,1.10,1.12);
+   vec3 seaColour=mix(gl_FragColor.rgb,maritimeTint,.65*(1.-nativeSeaNight));
+   vec3 horizonLinear=mix(texture2D(nativeDaySky,vec2(0.,.5)).rgb,texture2D(nativeNightSky,vec2(0.,.5)).rgb,nativeSeaNight);
+   vec3 horizonColour=linearToOutputTexel(vec4(horizonLinear,1.)).rgb;
+   float seaHaze=1.-exp(-pow(length(cameraPosition-worldPosition.xyz)/850.,1.35));
+   gl_FragColor.rgb=mix(seaColour,horizonColour,seaHaze);
+  `+water.material.fragmentShader.slice(waterEnd);water.material.needsUpdate=true;
   skyMaterial.fragmentShader=`uniform sampler2D nativeDaySky,nativeNightSky;uniform float nightFactor;varying vec3 direction;void main(){vec3 d=normalize(direction);vec2 uv=vec2(clamp(d.y/.25,0.,1.),.5);gl_FragColor=vec4(mix(texture2D(nativeDaySky,uv).rgb,texture2D(nativeNightSky,uv).rgb,nightFactor),1.);\n#include <colorspace_fragment>\n}`;skyMaterial.needsUpdate=true;
   nativeLighting=await attachBakedLightingV179(scene,'./assets/browser-v179/myth-field/manifest.json',state,renderer);nativeLighting.update(camera,1);
  }

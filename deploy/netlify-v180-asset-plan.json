@@ -8552,8 +8552,8 @@
     },
     {
       "path": "scene-dist/mythology-web-v165.js",
-      "bytes": 1089205,
-      "sha1": "7ed535bce75fe75249d4e6ced72bd187fb7c7ed7"
+      "bytes": 1090564,
+      "sha1": "d7bb1988c7142e97f9abea9a16a344ffd29027fd"
     },
     {
       "path": "scene-dist/reading-book-v155.js",
@@ -8801,5 +8801,5 @@
       "sha1": "29cb79c5829026cfcc3b515efa2b0cf00243c4c3"
     }
   ],
-  "bytes": 2855816075
+  "bytes": 2855817434
 }

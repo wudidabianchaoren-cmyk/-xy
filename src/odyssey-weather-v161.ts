@@ -36,6 +36,11 @@ export function dayNight(scene:THREE.Scene,renderer:THREE.WebGLRenderer,sun:THRE
   const light=new THREE.PointLight(0xffba70,0,10,2);light.position.y=.01;lantern.add(light);lights.push(light);
  }
  const[hx,hy,hz]=house;
+ // The current cottage faces +Z. Keep its door-jamb light visible from the
+ // arrival camera, in addition to the two side shutters.
+ const doorwayGlow=new THREE.MeshBasicMaterial({name:'Cottage warm door-jamb light',color:0xffb34f,transparent:true,opacity:0,depthWrite:false,toneMapped:false,side:THREE.DoubleSide});glassMaterials.push(doorwayGlow);
+ for(const side of[-1,1]){const slit=new THREE.Mesh(new THREE.PlaneGeometry(.035,1.87),doorwayGlow);slit.position.set(hx+side*.57,hy+1.24,hz+2.145);scene.add(slit);}
+ const lintelGlow=new THREE.Mesh(new THREE.PlaneGeometry(1.30,.034),doorwayGlow);lintelGlow.position.set(hx,hy+2.20,hz+2.145);scene.add(lintelGlow);
  for(const side of [-1,1]){
   const glow=new THREE.MeshBasicMaterial({name:'V139 warm light through cottage shutters',color:0xffc885,transparent:true,opacity:0,depthWrite:false});glassMaterials.push(glow);
   for(let j=0;j<5;j++){const slit=new THREE.Mesh(new THREE.PlaneGeometry(.82,.032),glow);slit.rotation.y=side*Math.PI/2;slit.position.set(hx+side*2.57,hy+1.64+j*.13,hz-.26);scene.add(slit);}
