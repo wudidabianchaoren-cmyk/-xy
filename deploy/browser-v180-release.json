@@ -1,0 +1,124 @@
+{
+  "version": 180,
+  "deployedAt": "2026-11-03T06:39:49.903016+00:00",
+  "provider": "Netlify",
+  "siteId": "faee03e7-3e2a-4967-ac0e-f218a7efa8ab",
+  "deployId": "6ae97dfdd0e427878b274a08",
+  "url": "https://eloquent-puffpuff-c8613b.netlify.app",
+  "state": "ready",
+  "productionVerified": true,
+  "anonymousHTTPS": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "browser-runtime-v180.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "browser-resources-v180.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "scene-dist/mythology-web-v165.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "assets/browser-v180/courtyard-intro/index.m3u8",
+      "status": 200,
+      "sha1Matches": true
+    }
+  ],
+  "browserRuntime": true,
+  "workstationBackendRequired": false,
+  "originalUEPreserved": true,
+  "originalVideoCodecStreamsPreserved": true,
+  "sourceBranch": "deploy/netlify-browser-v179",
+  "files": 1760,
+  "bytes": 2855817434,
+  "runtimeQA": {
+    "home": {
+      "ready": true,
+      "loadMs": 161027.5,
+      "intro": {
+        "reason": "ended",
+        "quality": {
+          "totalVideoFrames": 345,
+          "droppedVideoFrames": 16
+        }
+      },
+      "opening": {
+        "total": 600,
+        "dropped": 2
+      },
+      "delivery": {
+        "version": 180,
+        "browserOnly": true,
+        "segmentedVideos": 1,
+        "assembledResources": 6,
+        "errors": [],
+        "playerEngine": "HLS.js 1.7.4 / progressive MediaSource"
+      },
+      "body": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+    },
+    "room": {
+      "ready": true,
+      "native": false,
+      "calendar": {
+        "date": "2026-11-03",
+        "day": "3",
+        "month": "November",
+        "weekday": "Tuesday",
+        "timeZone": "Asia/Shanghai",
+        "live": true
+      }
+    },
+    "myth": {
+      "ready": true,
+      "fps": 58.98675705693982,
+      "reportedFPS": 56.15874204417852,
+      "native": false,
+      "delivery": {
+        "version": 180,
+        "browserOnly": true,
+        "segmentedVideos": 0,
+        "assembledResources": 2,
+        "errors": []
+      },
+      "night": 1
+    },
+    "humid": {
+      "ready": 4,
+      "time": 3.438046,
+      "quality": {
+        "total": 105,
+        "dropped": 0
+      }
+    },
+    "errors": [],
+    "http": [],
+    "native": [],
+    "pageCount": 9
+  },
+  "limits": [
+    "Browser rendering can differ from native UE; original UE is preserved.",
+    "First visit downloads large original assets; cold loading can take minutes on slower connections.",
+    "Not a guarantee of every mainland/overseas network or every GPU.",
+    "No paid resource was opened; free-hosting quotas still apply."
+  ],
+  "userVisualAcceptance": false,
+  "validation": {
+    "fullRuntimeOrigin": "https://6ae97517a5833283f829d31f--eloquent-puffpuff-c8613b.netlify.app",
+    "fullRuntimeResult": "pass",
+    "changedSceneOrigin": "https://6ae97dfdd0e427878b274a08--eloquent-puffpuff-c8613b.netlify.app",
+    "changedSceneResult": "pass",
+    "onlyChangedArtifact": "scene-dist/mythology-web-v165.js",
+    "unchangedOtherFiles": 1759
+  },
+  "sourceCommit": "9b81fc5aee789acb5a820d99c47ddaea7d9149d1"
+}
