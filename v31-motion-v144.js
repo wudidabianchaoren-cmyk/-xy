@@ -716,6 +716,15 @@
         const message=prelude.querySelector('.opening-progress-footer');
         if(message)message.textContent='正在衔接庭院首帧';
         await window.homeDesignedIntroState?.waitForMedia?.();
+        if(window.PORTFOLIO_BROWSER_ONLY){
+          const until=performance.now()+360000;
+          while(!window.homeClockState?.ready){
+            const failure=window.portfolioBoot?.entries.get('home');
+            if(failure?.state==='error')throw Error(failure.error);
+            if(performance.now()>until)throw Error('Courtyard preparation timed out');
+            await new Promise(resolve=>setTimeout(resolve,80));
+          }
+        }
       } catch(error) {
         const retry=document.createElement('button');retry.type='button';retry.textContent='Preparation paused · Retry';retry.style.cssText='position:absolute;bottom:9%;left:50%;transform:translateX(-50%);padding:14px 24px;color:#eee8db;background:#18201b;border:1px solid #8b744b;cursor:pointer';retry.onclick=()=>location.reload();prelude.append(retry);console.error(error);return;
       }
@@ -780,7 +789,7 @@
     video.addEventListener("canplaythrough", playOpening, { once: true });
     video.addEventListener("canplay", playOpening, { once: true });
     // A complete small local film buffer cannot stall when the native model starts prefetching.
-    fetch(openingSource).then(response => {
+    fetch(openingSource,{priority:'high'}).then(response => {
       if (!response.ok) throw new Error("Opening film unavailable");
       return response.blob();
     }).then(blob => {
@@ -793,7 +802,7 @@
       video.src = openingSource;
       video.load();
     });
-    fallbackTimer = window.setTimeout(() => { if (!started) finishPrelude(); }, 30000);
+    fallbackTimer = window.setTimeout(() => { if (!started) finishPrelude(); }, window.PORTFOLIO_BROWSER_ONLY?300000:30000);
   }
 
   function initCountdownPreludeLegacy() {

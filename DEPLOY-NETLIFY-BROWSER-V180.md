@@ -4,8 +4,8 @@ This is the separately authorized browser migration. The original UE project, or
 
 ## Delivery package
 
-- Current candidate deploy: `6ae972b2bc0e22989d914f59` in the existing Netlify project `eloquent-puffpuff-c8613b`.
-- Static manifest: 1,760 files / 2,855,815,562 bytes at the final staging checkpoint. Large originals referenced by the application are delivered through their mapped fragments.
+- Current candidate deploy: `6ae97517a5833283f829d31f` in the existing Netlify project `eloquent-puffpuff-c8613b`.
+- Static manifest: 1,760 files / 2,855,816,075 bytes at the final staging checkpoint. Large originals referenced by the application are delivered through their mapped fragments.
 - Six movie streams use HLS/fMP4 containers with `-c copy`; demuxed video SHA256 matches each original. No video re-encode or frame downscaling was used. The 16-second intro uses dependent fragments for continuous playback; it retains its original keyframes and 480 source frames.
 - Thirty large binary paths use gzip and 4 MiB fragments. Twenty-eight reconstruct their original files exactly. Two home models use an independently verified container repack: identical geometry buffers, scene tables and decoded texture pixels, with PNG-to-lossless-WebP packing and no resize. These two optimized GLB containers differ from their originals. The browser reconstructs original bytes for the existing loaders, with bounded retries and three ordered in-flight segments before exposing each chunk to the stream.
 - The generated resource map and early runtime bridge apply consistently to all deployed HTML pages. The current v31 page is published as the root entry. Authoring-only native capture query remains local-only.
