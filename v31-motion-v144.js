@@ -702,6 +702,7 @@
     function releaseEntryGate() {
       const gate=document.getElementById('entryGate');
       if(gate){gate.setAttribute('aria-hidden','true');gate.style.display='none';}
+      const legacyLoader=document.getElementById('loader');if(legacyLoader){legacyLoader.style.display='none';legacyLoader.style.pointerEvents='none';legacyLoader.setAttribute('aria-hidden','true');}
       document.getElementById('entryButton')?.click();
       document.body.classList.add('experience-entered');
       window.__v31ResumeExperience?.();
@@ -716,15 +717,6 @@
         const message=prelude.querySelector('.opening-progress-footer');
         if(message)message.textContent='正在衔接庭院首帧';
         await window.homeDesignedIntroState?.waitForMedia?.();
-        if(window.PORTFOLIO_BROWSER_ONLY){
-          const until=performance.now()+360000;
-          while(!window.homeClockState?.ready){
-            const failure=window.portfolioBoot?.entries.get('home');
-            if(failure?.state==='error')throw Error(failure.error);
-            if(performance.now()>until)throw Error('Courtyard preparation timed out');
-            await new Promise(resolve=>setTimeout(resolve,80));
-          }
-        }
       } catch(error) {
         const retry=document.createElement('button');retry.type='button';retry.textContent='Preparation paused · Retry';retry.style.cssText='position:absolute;bottom:9%;left:50%;transform:translateX(-50%);padding:14px 24px;color:#eee8db;background:#18201b;border:1px solid #8b744b;cursor:pointer';retry.onclick=()=>location.reload();prelude.append(retry);console.error(error);return;
       }

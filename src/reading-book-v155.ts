@@ -1,6 +1,8 @@
 import {shelfProps} from './reading-shelf-props-v155';
 import{readingDescriptions}from'./reading-descriptions-v139';
 import * as THREE from 'three';
+import {installTextureNetworkRetry} from './texture-network-retry-v182';
+installTextureNetworkRetry(THREE);
 import {readingNook} from './reading-nook-v157';
 import {storyVolumes,shelfVolumes} from './reading-story-volumes-v139';
 type Page={number:number;image:string;width:number;height:number;sha256:string};

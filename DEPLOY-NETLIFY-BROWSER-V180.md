@@ -1,3 +1,5 @@
+> Superseded: the user rejected this V180 delivery. Read DEPLOY-NETLIFY-BROWSER-V182.md and CURRENT-V32-182-RESUME.md; the old local/standalone checks below were insufficient.
+
 # V32.180 Netlify browser deployment
 
 This is the separately authorized browser migration. The original UE project, original website checkout and raw media remain preserved. This branch uses original geometry, textures and locally captured original lighting; it does not require this workstation's UE, Python, Node or signaling server for visitors.

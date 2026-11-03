@@ -12,6 +12,8 @@ import {coastV161} from './coast-v161';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 import {MeshBVH,acceleratedRaycast} from 'three-mesh-bvh';
 import * as THREE from 'three';
+import {installTextureNetworkRetry} from './texture-network-retry-v182';
+installTextureNetworkRetry(THREE);
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {RGBELoader} from 'three/addons/loaders/RGBELoader.js';
 

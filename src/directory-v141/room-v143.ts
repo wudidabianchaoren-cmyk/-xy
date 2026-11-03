@@ -11,6 +11,8 @@ import{roomWorldV160}from'./room-world-v160';
 import{refineDeskPropsV143}from'./desk-props-v143';
 import{cityWeather}from'./weather';
 import * as THREE from 'three';
+import {installTextureNetworkRetry} from '../texture-network-retry-v182';
+installTextureNetworkRetry(THREE);
 import{GLTFLoader}from'three/addons/loaders/GLTFLoader.js';
 import{RectAreaLightUniformsLib}from'three/addons/lights/RectAreaLightUniformsLib.js';
 import{createMedia}from'./media';import{createCalendar}from'./calendar';import{loadRoomEnvironmentV160 as loadRoomEnvironment}from'./environment-v160';import{createSurfaces}from'./surfaces';import{createFortune}from'./fortune';import{roomReflections}from'./reflections';

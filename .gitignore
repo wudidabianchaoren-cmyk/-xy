@@ -57,3 +57,6 @@
 **/*.key
 
 !tools/pixel-streaming-v149/realtime-control-v174.cjs
+
+!/DEPLOY-NETLIFY-BROWSER-V182.md
+!/CURRENT-V32-182-RESUME.md

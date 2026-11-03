@@ -14,6 +14,8 @@ import {nativeDisplayPass} from './home-native-display';
 import {architecturalCamera,loadArchitecturalCamera} from './home-camera-v23';
 import {replaceCourtyardInscription} from './home-inscription';
 import * as THREE from 'three';
+import {installTextureNetworkRetry} from './texture-network-retry-v182';
+installTextureNetworkRetry(THREE);
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
@@ -228,6 +230,13 @@ if(surface){
       try{await connectNativeHome(surface!,canvas,camera,objects,state);const until=performance.now()+5000;while(!state.nativeUE?.ready&&performance.now()<until)await new Promise(r=>setTimeout(r,40));}catch(e){state.nativeFallback=String(e)}
     }
     if(webHome){
+    // Preserve the original cinematic playback before submitting expensive
+    // compilation/uploads. Its final frame remains until this world is ready;
+    // the navigation and other portfolio content are already usable then.
+    const introWindow=window as any;
+    if(introWindow.PORTFOLIO_BROWSER_ONLY&&!new URLSearchParams(location.search).has('return')&&introWindow.homeDesignedIntroState&&!introWindow.homeDesignedIntroState.finished){
+      await new Promise<void>(resolve=>window.addEventListener('v85:home-intro-finished',()=>resolve(),{once:true}));
+    }
     const warmTarget=new THREE.WebGLRenderTarget(16,16);renderer.setRenderTarget(warmTarget);
     // Compile for the scene-linear targets actually used by the composer and mirror.
     // Spread first uploads and auxiliary passes across frames while the native poster stays visible.

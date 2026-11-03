@@ -1,0 +1,19 @@
+{
+  "source": "/assets/home-intro-v170/courtyard-16s.mp4",
+  "bytes": 25344593,
+  "encoding": "identity",
+  "media": true,
+  "parts": [
+    "/assets/browser-v182/original-intro/part-000.bin",
+    "/assets/browser-v182/original-intro/part-001.bin",
+    "/assets/browser-v182/original-intro/part-002.bin",
+    "/assets/browser-v182/original-intro/part-003.bin",
+    "/assets/browser-v182/original-intro/part-004.bin",
+    "/assets/browser-v182/original-intro/part-005.bin",
+    "/assets/browser-v182/original-intro/part-006.bin"
+  ],
+  "sha256": "0952b05bcb424c07a2b39c962f910c84eceb84faf6782d6f50920e5e1b5b1398",
+  "reconstructedBytesIdentical": true,
+  "originalDurationSeconds": 16,
+  "originalFrames": 480
+}

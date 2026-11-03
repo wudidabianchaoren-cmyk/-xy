@@ -42,7 +42,11 @@
   if(portalFrame){portalFrame.hidden=true;portalFrame.inert=true;portalFrame.setAttribute('aria-hidden','true');portalFrame.contentWindow?.postMessage({type:'portfolio:surface-suspend'},location.origin);}
   const key=cacheKey(target),retained=key&&cachedFrames.get(key),entry=retained||newFrame(target),frame=entry.frame;frame.dataset.portalDepth=String(portalStack.length+1);frame.hidden=false;frame.inert=false;frame.removeAttribute('aria-hidden');delete frame.dataset.cached;portalFrame=frame;portalStack.push(entry);state.portalDepth=portalStack.length;
   frame.focus({preventScroll:true});frame.contentWindow?.postMessage({type:'portfolio:child-return'},location.origin);
-  if(new URL(target).pathname.endsWith('/mythology.html')){if(!entry.ready)await new Promise(resolve=>{const check=()=>{if(frame.contentWindow?.odysseyState?.ready){entry.ready=true;resolve();}else if(performance.now()-began>60000)resolve();else setTimeout(check,40);};check();});frame.contentWindow?.postMessage({type:'portfolio:child-return'},location.origin);state.lastMythEntryMs=performance.now()-began;state.lastMythReused=!!retained;}
+  if(new URL(target).pathname.endsWith('/mythology.html')){
+   const waitForWorld=()=>new Promise(resolve=>{const check=()=>{if(frame.contentWindow?.odysseyState?.ready){entry.ready=true;state.lastMythSceneReadyMs=performance.now()-began;resolve();}else if(!frame.isConnected||performance.now()-began>480000)resolve();else setTimeout(check,80);};check();});
+   if(!entry.ready){if(window.PORTFOLIO_BROWSER_ONLY){void waitForWorld();if(!retained)await new Promise(resolve=>{const timer=setTimeout(resolve,1500);frame.addEventListener('load',()=>{clearTimeout(timer);resolve();},{once:true});});}else await waitForWorld();}
+   frame.contentWindow?.postMessage({type:'portfolio:child-return'},location.origin);state.lastMythEntryMs=performance.now()-began;state.lastMythReused=!!retained;
+  }
   else if(!retained)await new Promise(resolve=>{const timer=setTimeout(resolve,1000);frame.addEventListener('load',()=>{clearTimeout(timer);resolve();},{once:true});});
  }
  async function closePortal(){if(!portal)return;for(const entry of portalStack)retire(entry);portal.dataset.parked='true';portal.setAttribute('aria-hidden','true');portalFrame=null;portalStack=[];state.portalDepth=0;document.body.classList.remove('portfolio-portal-open');window.portfolioAudioFocus?.release('portal');scrollTo(0,portalScroll);portalFocus?.focus?.({preventScroll:true});resumeSurface();}
@@ -77,7 +81,7 @@
   if(event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
   const back=event.target.closest('[data-project-return],[data-odyssey-close],.reading-header a,.learning-header a,[data-yj-return]');
   if(back){event.preventDefault();event.stopImmediatePropagation();window.portfolioReturn({leaveBook:true});return;}
-  const link=event.target.closest('a[href]');if(!link||link.download||link.target==='_blank'||link.closest('[data-open-standalone]'))return;
+  const link=event.target.closest('a[href]');if(!link||link.download||link.target==='_blank'||link.closest('[data-open-standalone],.directory-notepad'))return;
   const url=new URL(link.href,location.href);if(url.origin!==location.origin||!url.pathname.endsWith('.html')||url.pathname===location.pathname)return;
   event.preventDefault();event.stopImmediatePropagation();window.portfolioNavigate(url.href);
  },true);
@@ -123,7 +127,7 @@
  // frames still make subsequent entries immediate.
  state.mythWarmPolicy='preload navigation and media after the original opening; share the live decoder on entry';
  const warmBay=()=>{const run=()=>window.portfolioWarmMythology().catch(()=>{});if('requestIdleCallback'in window)requestIdleCallback(run,{timeout:1200});else setTimeout(run,200);};
- if(mainDocument){addEventListener('v85:home-intro-finished',warmBay,{once:true});if(new URLSearchParams(location.search).has('return'))setTimeout(warmBay,1500);}else if(!portalChild&&location.pathname.endsWith('/reading.html'))setTimeout(warmBay,600);
+ if(!window.PORTFOLIO_BROWSER_ONLY){if(mainDocument){addEventListener('v85:home-intro-finished',warmBay,{once:true});if(new URLSearchParams(location.search).has('return'))setTimeout(warmBay,1500);}else if(!portalChild&&location.pathname.endsWith('/reading.html'))setTimeout(warmBay,600);}else state.mythWarmPolicy='prepare the complete bay only when the visitor enters it; preserve it for return';
 })();
 
 ;(()=>{if(!document.querySelector('script[data-heading-v157]')){const s=document.createElement('script');s.src='./heading-interaction-v157.js?v=32.157';s.dataset.headingV157='true';document.head.append(s);}})();

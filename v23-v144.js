@@ -1,4 +1,16 @@
-(() => {
+(function bootPortfolioInterface() {
+  // Classic scripts can finish their network retry after this dependent file.
+  // Wait before constructing THREE values at module scope as well as in init.
+  if (window.PORTFOLIO_BROWSER_ONLY && (!window.THREE || !window.gsap || !window.ScrollTrigger)) {
+    if ((window.__portfolioInterfaceBootAttempts = (window.__portfolioInterfaceBootAttempts || 0) + 1) < 120) {
+      setTimeout(bootPortfolioInterface, 500);
+    } else {
+      const loading = document.getElementById('loader');
+      if (loading) loading.style.display = 'none';
+      document.getElementById('fallback')?.classList.add('is-visible');
+    }
+    return;
+  }
   "use strict";
 
   const projectWorks = [
@@ -3164,9 +3176,11 @@
     chapters.forEach((chapter) => observer.observe(chapter));
   }
 
+  let frameworkRetries=0;
   function init() {
     if (window.__v31InterfaceReady) return;
     if (!window.THREE || !window.gsap || !window.ScrollTrigger) {
+      if(window.PORTFOLIO_BROWSER_ONLY&&frameworkRetries++<120){setTimeout(init,500);return;}
       loader.style.display = "none";
       fallback.classList.add("is-visible");
       return;
@@ -3193,13 +3207,14 @@
 
   if (document.body.dataset.openingComplete === "true") {
     init();
-  } else if (document.title.includes("V31") && document.getElementById("countdownPrelude")) {
+  } else if (document.getElementById("countdownPrelude")) {
     window.addEventListener("v31:opening-complete", init, { once: true });
   } else {
     if (document.readyState === "complete") init();
     else window.addEventListener("load", init, { once: true });
   }
   window.addEventListener("v31:archive-open", () => renderer?.setAnimationLoop(null));
+  window.addEventListener('portfolio:script-recovered',()=>{if(document.body.dataset.openingComplete==='true')init();});
   window.addEventListener("v31:archive-close", () => renderer?.setAnimationLoop(renderThree));
   setTimeout(() => {
     if (!window.THREE || !window.gsap) {

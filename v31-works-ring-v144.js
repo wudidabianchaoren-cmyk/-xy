@@ -1,9 +1,11 @@
-(() => {
+(function bootWorksOrbit() {
   "use strict";
 
   const archive = document.getElementById("worksOrbitArchive");
   const field = document.getElementById("worksWebglField");
-  if (!archive || !field || !window.THREE) return;
+  if (!archive || !field || window.__portfolioWorksBooted) return;
+  if(!window.THREE){if((window.__portfolioWorksBootAttempts=(window.__portfolioWorksBootAttempts||0)+1)<120)setTimeout(bootWorksOrbit,500);return;}
+  window.__portfolioWorksBooted=true;
 
   const T = window.THREE;
   const COUNT = 5;
@@ -51,7 +53,7 @@
     year: document.getElementById("worksOrbitInfoYear")
   };
   const cursorLabel = document.getElementById("cursorLabel");
-  let projectLeaving=false;
+  let projectLeaving=false,projectReadyCleanup=()=>{};
   const setText=(node,text)=>{if(node&&node.textContent!==text)node.textContent=text;};
 
   let renderer=null;
@@ -939,6 +941,7 @@
     performProjectReturn();
   }
   function performProjectReturn(){
+    projectReadyCleanup();
     projectFrame?.remove();projectFrame=null;document.querySelector('.works-project-transition')?.remove();
     document.body.classList.remove('is-project-leaving','is-project-active');projectLeaving=false;
     try{const s=JSON.parse(sessionStorage.getItem('brain-universe-work-return')||'null');if(s){s.active=false;sessionStorage.setItem('brain-universe-work-return',JSON.stringify(s));}}catch{}
@@ -953,10 +956,11 @@
     document.body.classList.add('is-project-leaving');
     // Keep the existing world and its GPU resources alive across this child route.
     // The child is a real standalone document; direct links and refresh still work.
-    projectFrame=document.createElement('iframe');projectFrame.id='workProjectFrame';projectFrame.className='work-project-frame';projectFrame.title=work.title+' · 独立作品页';projectFrame.src=work.href+'&embedded=1';projectFrame.setAttribute('allow','autoplay');
-    let loaded=false,curtainClosed=false;
-    const reveal=()=>{if(!loaded||!curtainClosed||!projectFrame)return;document.body.classList.add('is-project-active');projectFrame.classList.add('is-visible');projectFrame.focus();projectFrame.contentWindow.postMessage({type:'brain-universe:project-visible'},location.origin);veil.animate([{opacity:1},{opacity:0}],{duration:reducedMotion?1:300,fill:'forwards'}).finished.then(()=>veil.remove());};
-    projectFrame.addEventListener('load',()=>{loaded=true;reveal();},{once:true});document.body.appendChild(projectFrame);
+    projectFrame=document.createElement('iframe');projectFrame.id='workProjectFrame';projectFrame.className='work-project-frame';projectFrame.title=work.title+' · 独立作品页';projectFrame.src=work.href+'&embedded=1';projectFrame.setAttribute('allow','autoplay; fullscreen');
+    let loaded=false,curtainClosed=false,revealed=false;
+    const reveal=()=>{if(revealed||!loaded||!curtainClosed||!projectFrame)return;revealed=true;document.body.classList.add('is-project-active');projectFrame.classList.add('is-visible');projectFrame.focus();projectFrame.contentWindow.postMessage({type:'brain-universe:project-visible'},location.origin);veil.animate([{opacity:1},{opacity:0}],{duration:reducedMotion?1:300,fill:'forwards'}).finished.then(()=>veil.remove());};
+    const documentReady=event=>{if(event.origin===location.origin&&event.source===projectFrame?.contentWindow&&event.data?.type==='brain-universe:project-ready'){projectReadyCleanup();loaded=true;reveal();}};addEventListener('message',documentReady);projectReadyCleanup=()=>removeEventListener('message',documentReady);
+    projectFrame.addEventListener('load',()=>{projectReadyCleanup();loaded=true;reveal();},{once:true});document.body.appendChild(projectFrame);
     if(pushHistory)history.pushState({brainWork:url.searchParams.get('work')},'',new URL('./v31.html?v=32.152',location.href));
     setTimeout(()=>{curtainClosed=true;reveal();},reducedMotion?100:820);
   }

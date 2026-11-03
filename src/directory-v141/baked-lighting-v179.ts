@@ -101,7 +101,7 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
  }
  // Finish GPU uploads before controls become ready; a new view must not cause
  // a texture upload or a first-use shader compilation in the middle of a drag.
- for(const pose of manifest.poses.slice(1))await load(pose);
+ const remaining:Pose[]=manifest.poses.slice(1);await Promise.all([0,1].map(async()=>{while(remaining.length){const pose=remaining.shift();if(pose)await load(pose);}}));
  state.bakedLighting.loadedPoses=loaded.length;
  return{update,dispose(){alive=false;materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());empty.dispose();}};
 }

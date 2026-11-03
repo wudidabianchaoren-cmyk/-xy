@@ -41,9 +41,7 @@ function boot(){const preview=document.getElementById('directoryPreviewRoot'),ra
  (window as any).portfolioBoot?.required?.delete('directory');
  // A delayed module can arrive after the geometry event but before home.ready.
  // Starting CPU preparation here is safe: createRoom serializes its GPU work with homeGPU().
- beginWarm();
- window.addEventListener('v154:home-phase',(e:Event)=>{if((e as CustomEvent).detail?.name==='courtyard geometry prepared')beginWarm();});
- window.addEventListener('v31:opening-complete',beginWarm,{once:true});if((window as any).homeClockState?.ready||document.body.dataset.openingComplete==='true')beginWarm();
+ if(!(window as any).PORTFOLIO_BROWSER_ONLY){beginWarm();window.addEventListener('v154:home-phase',(e:Event)=>{if((e as CustomEvent).detail?.name==='courtyard geometry prepared')beginWarm();});window.addEventListener('v31:opening-complete',beginWarm,{once:true});if((window as any).homeClockState?.ready||document.body.dataset.openingComplete==='true')beginWarm();}
 
  const target=new URLSearchParams(location.search).get('directory');if(target==='works'||target==='personal'){let called=false;const open=()=>{if(called)return;called=true;enter(target==='works'?0:3);const consumed=new URL(location.href);consumed.searchParams.delete('directory');history.replaceState(history.state,'',consumed.pathname+consumed.search+consumed.hash)};if(document.body.classList.contains('experience-entered'))setTimeout(open,800);else window.addEventListener('v31:opening-complete',open,{once:true})}}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
