@@ -24,3 +24,5 @@ Reproduce source builds with build-v161-ui.mjs, build-v165.mjs, build-reading-v1
 Single agent, original -xy repo, candidate branch deploy/netlify-browser-v179. Every Git call uses the matching absolute safe.directory and correct checkout cwd/-C. Original UE project and app are preserved; asset junctions are INPUTS. Candidate browser-v179/v180/v181/v182 are real derived outputs; do not overwrite linked source assets. Do not recover quarantined SimplyStream CLI or restart unrelated suspended tests.
 
 Original8031/Python19892, Node4896 and UE33288 were left untouched. Candidate stage8052/Python15164 can show the same static artifact. The public site itself has no dependency on these processes and remains hosted when this workstation is off. Browser rendering is a separate implementation and can differ from native UE; native originals are still preserved.
+
+GitHub repaired application source is pushed on deploy/netlify-browser-v179 at 5ec5bd1af52e904b3c09097a67373661b5c32dc2. Main receives delivery metadata only; original app source is preserved.
