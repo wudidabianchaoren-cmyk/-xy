@@ -1,0 +1,270 @@
+{
+  "version": 183,
+  "provider": "Netlify",
+  "siteId": "faee03e7-3e2a-4967-ac0e-f218a7efa8ab",
+  "deployId": "6ae9f57e53ad686e2755daca",
+  "previousDeploy": "6ae9c04ce6729863c69998c3",
+  "url": "https://zaojing-wxy.netlify.app",
+  "published": true,
+  "publishedAt": "2026-11-03T15:32:25.759Z",
+  "verifiedAt": "2026-11-03T15:32:52.366657+00:00",
+  "anonymousHTTPS": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "browser-runtime-v180.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "browser-resources-v180.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "navigation-v152.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "reading.html",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "scene-dist/mythology-web-v165.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "scene-dist/directory-v144/app.js",
+      "status": 200,
+      "sha1Matches": true
+    }
+  ],
+  "processingSettings": {
+    "html": {
+      "pretty_urls": false
+    },
+    "ignore_html_forms": true
+  },
+  "automaticBuildsStopped": true,
+  "badge": {
+    "enabled": true,
+    "removeRequestStatus": 422,
+    "removeRequestMessage": "Removing the Netlify badge is not available on this plan"
+  },
+  "publicCandidateFlow": {
+    "pass": true,
+    "steps": [
+      {
+        "name": "main-ready",
+        "pass": true,
+        "milliseconds": 60568
+      },
+      {
+        "name": "reading-entry",
+        "pass": true,
+        "milliseconds": 22058
+      },
+      {
+        "name": "cinema-book",
+        "pass": true,
+        "milliseconds": 6567
+      },
+      {
+        "name": "myth-entry",
+        "pass": true,
+        "milliseconds": 114437
+      },
+      {
+        "name": "myth-night-return",
+        "pass": true,
+        "milliseconds": 8019
+      },
+      {
+        "name": "main-desktop",
+        "pass": true,
+        "milliseconds": 179753
+      },
+      {
+        "name": "work-0",
+        "pass": true,
+        "milliseconds": 21529
+      },
+      {
+        "name": "work-1",
+        "pass": true,
+        "milliseconds": 18746
+      },
+      {
+        "name": "work-2",
+        "pass": true,
+        "milliseconds": 22503
+      },
+      {
+        "name": "work-3",
+        "pass": true,
+        "milliseconds": 18543
+      },
+      {
+        "name": "work-4",
+        "pass": true,
+        "milliseconds": 32058
+      },
+      {
+        "name": "return-home-live",
+        "pass": true,
+        "milliseconds": 3345
+      }
+    ],
+    "entry": {
+      "milliseconds": 59053.40000009537,
+      "introReason": "ended",
+      "introQuality": {
+        "totalVideoFrames": 480,
+        "droppedVideoFrames": 8
+      },
+      "opening": {
+        "total": 600,
+        "dropped": 3
+      },
+      "homeReady": false,
+      "english": true,
+      "translate": false,
+      "hiddenMyth": false
+    },
+    "desktopFilm": {
+      "time": 1.628172,
+      "frames": 3222,
+      "calendar": {
+        "date": "2026-11-03",
+        "day": "3",
+        "month": "November",
+        "weekday": "Tuesday",
+        "timeZone": "Asia/Shanghai",
+        "live": true
+      },
+      "native": false
+    },
+    "films": {
+      "films0": [
+        {
+          "id": "projectFilm",
+          "time": 1.658558,
+          "ready": 4,
+          "width": 1280,
+          "height": 546,
+          "duration": 139.56,
+          "midpointTime": 70.048388
+        }
+      ],
+      "films1": [
+        {
+          "id": "projectFilm",
+          "time": 1.749333,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 83.06666499999997,
+          "midpointTime": 41.830503
+        }
+      ],
+      "films2": [
+        {
+          "id": "projectFilm",
+          "time": 1.694124,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 208.63333100000008,
+          "midpointTime": 104.618618
+        }
+      ],
+      "films3": [
+        {
+          "id": "projectFilm",
+          "time": 1.673564,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 18,
+          "midpointTime": 9.284177
+        },
+        {
+          "id": "lifePurposeVideo",
+          "time": 1.703755,
+          "ready": 4,
+          "width": 1600,
+          "height": 900,
+          "duration": 50,
+          "midpointTime": 25.29653
+        }
+      ],
+      "films4": [
+        {
+          "id": "projectFilm",
+          "time": 3.037781,
+          "ready": 4,
+          "width": 3360,
+          "height": 1440,
+          "duration": 191.26666500000002,
+          "midpointTime": 95.972303
+        }
+      ]
+    },
+    "homeFinal": {
+      "ready": true,
+      "renderer": "Three.js / original geometry and local PBR",
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "native": false,
+      "interfaceReady": true,
+      "delivery": {
+        "version": 183,
+        "browserOnly": true,
+        "segmentedVideos": 1,
+        "assembledResources": 7,
+        "errors": [],
+        "imagesPrepared": 24,
+        "legacyWorkerCleanup": {
+          "removed": 0,
+          "complete": true
+        },
+        "originalVideos": 1,
+        "playerEngine": "HLS.js 1.7.4 / progressive MediaSource"
+      },
+      "retained": true
+    },
+    "pageErrors": [],
+    "consoleErrors": [],
+    "httpErrors": [],
+    "nativeRequests": []
+  },
+  "localFlowPassed": true,
+  "sourceOriginalsPreserved": true,
+  "userVisualAcceptance": false,
+  "paidServicesOpened": false,
+  "limitations": [
+    "Mythology still has low frame rate on the default Intel Iris Xe; requested mature fluidity is not achieved.",
+    "Browser views are not pixel-identical native UE, especially off-axis/disoccluded surfaces.",
+    "First visits still prepare substantial source media/models; no instant loading promise.",
+    "No universal mainland/overseas network or all-GPU guarantee.",
+    "Lower-left window edge projection patches remain visible; changed camera route does not eliminate every artifact."
+  ],
+  "performanceQualityTargetMet": false,
+  "performanceSample": {
+    "context": "Separate default Edge, Intel Iris Xe, 1920x1080; isolated room and isolated mythology. Not whole-site sustained FPS or native parity acceptance.",
+    "deskFPS": 23.452508670501388,
+    "windowFPS": {
+      "window-tr": 90.8474247767581,
+      "window-bl": 83.02583025682196,
+      "window-br": 85.21877803401159,
+      "window-tl": 93.43698609713154
+    },
+    "mythDayFPS": 9.585430146132172,
+    "mythNightFPS": 11.159824631327222
+  }
+}

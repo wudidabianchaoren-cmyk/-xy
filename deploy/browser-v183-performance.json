@@ -1,0 +1,761 @@
+{
+  "testContext": "Separate default Edge, Intel Iris Xe, 1920x1080; isolated room and isolated mythology. Not whole-site sustained FPS or native parity acceptance.",
+  "windowRuntime": {
+    "name": "final-windows",
+    "origin": "http://127.0.0.1:8052",
+    "errors": [],
+    "network": [],
+    "roomPreparationMs": 20692,
+    "desk": {
+      "fps": 23.452508670501388,
+      "callsPerFrame": 269,
+      "camera": [
+        0.02,
+        1.82,
+        3.08
+      ],
+      "look": [
+        -0.05,
+        1.17,
+        -0.14
+      ],
+      "triangles": 62336,
+      "batches": [
+        {
+          "label": "phone",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "pen stand",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "studio furniture",
+          "sourceMeshes": 18,
+          "batchedMeshes": 9,
+          "drawBatches": 1,
+          "skinnedPreserved": 0,
+          "triangles": 18,
+          "multiDraw": true
+        }
+      ],
+      "bakedLighting": {
+        "version": 179,
+        "source": "locally captured original UE output",
+        "qualityApproved": false,
+        "geometryPreserved": true,
+        "originalTexturesPreserved": true,
+        "sourcePoses": 9,
+        "loadedPoses": 9,
+        "materials": 269,
+        "liveVideoExcluded": true,
+        "depthChecked": true
+      },
+      "renderInfo": {
+        "frames": 98,
+        "calls": 270,
+        "triangles": 213780,
+        "cpuMs": 6.5,
+        "gpuMs": 33.305937,
+        "geometries": 334,
+        "textures": 84,
+        "cpuP95Ms": 94.39999997615814
+      },
+      "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+      "load": 20388.5
+    },
+    "window-tr": {
+      "fps": 90.8474247767581,
+      "callsPerFrame": 20,
+      "camera": [
+        0.7699999999999999,
+        2.15,
+        -0.7200000000000001
+      ],
+      "look": [
+        0.77,
+        2.05,
+        -8
+      ],
+      "triangles": 62336,
+      "batches": [
+        {
+          "label": "phone",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "pen stand",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "studio furniture",
+          "sourceMeshes": 18,
+          "batchedMeshes": 9,
+          "drawBatches": 1,
+          "skinnedPreserved": 0,
+          "triangles": 18,
+          "multiDraw": true
+        }
+      ],
+      "bakedLighting": {
+        "version": 179,
+        "source": "locally captured original UE output",
+        "qualityApproved": false,
+        "geometryPreserved": true,
+        "originalTexturesPreserved": true,
+        "sourcePoses": 9,
+        "loadedPoses": 9,
+        "materials": 269,
+        "liveVideoExcluded": true,
+        "depthChecked": true
+      },
+      "renderInfo": {
+        "frames": 588,
+        "calls": 20,
+        "triangles": 20218,
+        "cpuMs": 28.299999952316284,
+        "gpuMs": 7.697239,
+        "geometries": 334,
+        "textures": 84,
+        "cpuP95Ms": 6.900000095367432
+      },
+      "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+      "load": 20388.5
+    },
+    "window-bl": {
+      "fps": 83.02583025682196,
+      "callsPerFrame": 22,
+      "camera": [
+        -0.77,
+        1.3500000000000003,
+        -0.7200000000000001
+      ],
+      "look": [
+        -0.77,
+        1.25,
+        -8
+      ],
+      "triangles": 62336,
+      "batches": [
+        {
+          "label": "phone",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "pen stand",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "studio furniture",
+          "sourceMeshes": 18,
+          "batchedMeshes": 9,
+          "drawBatches": 1,
+          "skinnedPreserved": 0,
+          "triangles": 18,
+          "multiDraw": true
+        }
+      ],
+      "bakedLighting": {
+        "version": 179,
+        "source": "locally captured original UE output",
+        "qualityApproved": false,
+        "geometryPreserved": true,
+        "originalTexturesPreserved": true,
+        "sourcePoses": 9,
+        "loadedPoses": 9,
+        "materials": 269,
+        "liveVideoExcluded": true,
+        "depthChecked": true
+      },
+      "renderInfo": {
+        "frames": 1267,
+        "calls": 22,
+        "triangles": 33342,
+        "cpuMs": 5.5,
+        "gpuMs": 10.370989,
+        "geometries": 334,
+        "textures": 84,
+        "cpuP95Ms": 6
+      },
+      "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+      "load": 20388.5
+    },
+    "window-br": {
+      "fps": 85.21877803401159,
+      "callsPerFrame": 24,
+      "camera": [
+        0.77,
+        1.3500000000000003,
+        -0.7200000000000001
+      ],
+      "look": [
+        0.77,
+        1.25,
+        -8
+      ],
+      "triangles": 62336,
+      "batches": [
+        {
+          "label": "phone",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "pen stand",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "studio furniture",
+          "sourceMeshes": 18,
+          "batchedMeshes": 9,
+          "drawBatches": 1,
+          "skinnedPreserved": 0,
+          "triangles": 18,
+          "multiDraw": true
+        }
+      ],
+      "bakedLighting": {
+        "version": 179,
+        "source": "locally captured original UE output",
+        "qualityApproved": false,
+        "geometryPreserved": true,
+        "originalTexturesPreserved": true,
+        "sourcePoses": 9,
+        "loadedPoses": 9,
+        "materials": 269,
+        "liveVideoExcluded": true,
+        "depthChecked": true
+      },
+      "renderInfo": {
+        "frames": 1916,
+        "calls": 24,
+        "triangles": 38334,
+        "cpuMs": 4.299999952316284,
+        "gpuMs": 8.98677,
+        "geometries": 334,
+        "textures": 84,
+        "cpuP95Ms": 6.199999928474426
+      },
+      "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+      "load": 20388.5
+    },
+    "window-tl": {
+      "fps": 93.43698609713154,
+      "callsPerFrame": 20,
+      "camera": [
+        -0.77,
+        2.15,
+        -0.7200000000000001
+      ],
+      "look": [
+        -0.77,
+        2.05,
+        -8
+      ],
+      "triangles": 62336,
+      "batches": [
+        {
+          "label": "phone",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "pen stand",
+          "sourceMeshes": 0,
+          "batchedMeshes": 0,
+          "drawBatches": 0,
+          "skinnedPreserved": 0,
+          "triangles": 0,
+          "multiDraw": true
+        },
+        {
+          "label": "studio furniture",
+          "sourceMeshes": 18,
+          "batchedMeshes": 9,
+          "drawBatches": 1,
+          "skinnedPreserved": 0,
+          "triangles": 18,
+          "multiDraw": true
+        }
+      ],
+      "bakedLighting": {
+        "version": 179,
+        "source": "locally captured original UE output",
+        "qualityApproved": false,
+        "geometryPreserved": true,
+        "originalTexturesPreserved": true,
+        "sourcePoses": 9,
+        "loadedPoses": 9,
+        "materials": 269,
+        "liveVideoExcluded": true,
+        "depthChecked": true
+      },
+      "renderInfo": {
+        "frames": 2614,
+        "calls": 20,
+        "triangles": 20218,
+        "cpuMs": 4.200000047683716,
+        "gpuMs": 8.073177,
+        "geometries": 334,
+        "textures": 84,
+        "cpuP95Ms": 6.5
+      },
+      "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+      "load": 20388.5
+    },
+    "pass": true
+  },
+  "mythRuntime": {
+    "errors": [],
+    "day": {
+      "measuredFPS": 9.585430146132172,
+      "foliageOrdering": {
+        "sourceTriangles": 1992000,
+        "retainedTriangles": 1992000,
+        "bins": 96,
+        "updates": 1,
+        "geometryReduced": false
+      },
+      "shadowCache": {
+        "resolution": [
+          4096,
+          4096
+        ],
+        "staticCasters": 120,
+        "dynamicCasters": 452,
+        "prepared": 2,
+        "restores": 49,
+        "originalGeometry": true,
+        "active": true
+      },
+      "performance": {
+        "frames": 49,
+        "calls": 563,
+        "triangles": 11333702,
+        "cpuMs": 11.399999976158142,
+        "gpuMs": 97.093958,
+        "geometries": 221,
+        "textures": 85,
+        "cpuP95Ms": 22
+      },
+      "fps": 3.30269169373039,
+      "inventory": {
+        "meshes": 219,
+        "triangles": 5533564,
+        "largest": [
+          {
+            "name": "Mesh",
+            "triangles": 1176000,
+            "instances": 98,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 816000,
+            "instances": 34,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 725868,
+            "instances": 132,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 702900,
+            "instances": 132,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 grounded fine coastal meadow",
+            "triangles": 647500,
+            "instances": 18500,
+            "skinned": false,
+            "shadow": false,
+            "materials": 1
+          },
+          {
+            "name": "Embedded_coastal_cliff_04",
+            "triangles": 180000,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V145_coast_rocks_02",
+            "triangles": 180000,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Embedded_coastal_cliff_02",
+            "triangles": 179999,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V148_scan-envelope_bedrock_with_continuous_back_slope",
+            "triangles": 170072,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 100352,
+            "instances": 1,
+            "skinned": false,
+            "shadow": false,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 43588,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 weathered limestone 3",
+            "triangles": 17400,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 weathered limestone 0",
+            "triangles": 16500,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 weathered limestone 5",
+            "triangles": 16200,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 weathered limestone 2",
+            "triangles": 15600,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 15482,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Preserved rig / V162 warm natural anatomical skin",
+            "triangles": 15132,
+            "instances": 1,
+            "skinned": true,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Preserved rig / V162 warm natural anatomical skin",
+            "triangles": 15132,
+            "instances": 1,
+            "skinned": true,
+            "shadow": true,
+            "materials": 1
+          }
+        ]
+      },
+      "skin": {
+        "sourceParts": 322,
+        "mergedParts": 311,
+        "drawBatches": 98,
+        "triangles": 352920,
+        "bindTransformsPreserved": true,
+        "skeletonsPreserved": true
+      },
+      "batches": {
+        "label": "original crew armour and equipment",
+        "sourceMeshes": 12,
+        "batchedMeshes": 12,
+        "drawBatches": 1,
+        "skinnedPreserved": 109,
+        "triangles": 912,
+        "multiDraw": true
+      }
+    },
+    "night": {
+      "measuredFPS": 11.159824631327222,
+      "foliageOrdering": {
+        "sourceTriangles": 1992000,
+        "retainedTriangles": 1992000,
+        "bins": 96,
+        "updates": 1,
+        "geometryReduced": false
+      },
+      "shadowCache": {
+        "resolution": [
+          4096,
+          4096
+        ],
+        "staticCasters": 120,
+        "dynamicCasters": 452,
+        "prepared": 2,
+        "restores": 100,
+        "originalGeometry": true,
+        "active": true
+      },
+      "performance": {
+        "frames": 161,
+        "calls": 346,
+        "triangles": 5948672,
+        "cpuMs": 10.900000095367432,
+        "gpuMs": 72.360468,
+        "geometries": 221,
+        "textures": 85,
+        "cpuP95Ms": 35.60000002384186
+      },
+      "fps": 9.712038071189241,
+      "inventory": {
+        "meshes": 219,
+        "triangles": 5533564,
+        "largest": [
+          {
+            "name": "Mesh",
+            "triangles": 1176000,
+            "instances": 98,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 816000,
+            "instances": 34,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 725868,
+            "instances": 132,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 702900,
+            "instances": 132,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 grounded fine coastal meadow",
+            "triangles": 647500,
+            "instances": 18500,
+            "skinned": false,
+            "shadow": false,
+            "materials": 1
+          },
+          {
+            "name": "Embedded_coastal_cliff_04",
+            "triangles": 180000,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V145_coast_rocks_02",
+            "triangles": 180000,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Embedded_coastal_cliff_02",
+            "triangles": 179999,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V148_scan-envelope_bedrock_with_continuous_back_slope",
+            "triangles": 170072,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 100352,
+            "instances": 1,
+            "skinned": false,
+            "shadow": false,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 43588,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 weathered limestone 3",
+            "triangles": 17400,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 weathered limestone 0",
+            "triangles": 16500,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 weathered limestone 5",
+            "triangles": 16200,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "V161 weathered limestone 2",
+            "triangles": 15600,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Mesh",
+            "triangles": 15482,
+            "instances": 1,
+            "skinned": false,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Preserved rig / V162 warm natural anatomical skin",
+            "triangles": 15132,
+            "instances": 1,
+            "skinned": true,
+            "shadow": true,
+            "materials": 1
+          },
+          {
+            "name": "Preserved rig / V162 warm natural anatomical skin",
+            "triangles": 15132,
+            "instances": 1,
+            "skinned": true,
+            "shadow": true,
+            "materials": 1
+          }
+        ]
+      },
+      "skin": {
+        "sourceParts": 322,
+        "mergedParts": 311,
+        "drawBatches": 98,
+        "triangles": 352920,
+        "bindTransformsPreserved": true,
+        "skeletonsPreserved": true
+      },
+      "batches": {
+        "label": "original crew armour and equipment",
+        "sourceMeshes": 12,
+        "batchedMeshes": 12,
+        "drawBatches": 1,
+        "skinnedPreserved": 109,
+        "triangles": 912,
+        "multiDraw": true
+      }
+    }
+  },
+  "visualReview": {
+    "windowCameraRouteChanged": true,
+    "lowerLeftWindowProjectionPatchesRemain": true,
+    "mythOffAxisSourceFieldAndWaterBoundariesRemain": true,
+    "userVisualAcceptance": false
+  },
+  "qualityTargetMet": false
+}
