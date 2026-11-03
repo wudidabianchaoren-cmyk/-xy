@@ -26,7 +26,7 @@ def image_tag(match):
   elif target!=path:attrs=attrs[:source.start()]+attrs[source.start():].replace(source[0],'src="'+target+'"',1)
  return '<img'+attrs+' loading="lazy" decoding="async">'
 
-head='<meta charset="utf-8"><meta name="google" content="notranslate"><script src="/browser-resources-v180.js?v=32.183"></script><script src="/browser-runtime-v180.js?v=32.183"></script>'
+head='<meta charset="utf-8"><meta name="google" content="notranslate"><script src="/browser-resources-v180.js?v=32.184"></script><script src="/browser-runtime-v180.js?v=32.184"></script>'
 paths={x['path'] for x in plan['files']}|{'browser-resources-v180.js','browser-runtime-v180.js','vendor/hls-1.7.4.min.js','vendor/hls-1.7.4-LICENSE'}
 # Follow browser modules, including lazy imports introduced after the old plan
 # was captured. A build can stop inlining an import without changing its URL.
@@ -71,7 +71,7 @@ for name in sorted(paths):
   text=source.read_text(encoding='utf-8-sig')
   text=re.sub(r'<html\b([^>]*)>',lambda m:'<html'+m.group(1)+' translate="no" class="notranslate">',text,count=1,flags=re.I)
   text=re.sub(r'(<head\b[^>]*>)',lambda m:m.group(1)+head,text,count=1,flags=re.I)
-  text=re.sub(r'((?:src|href)="\./[^"?]+\.(?:js|css))\?v=[^"&]+',r'\1?v=32.183',text)
+  text=re.sub(r'((?:src|href)="\./[^"?]+\.(?:js|css))\?v=[^"&]+',r'\1?v=32.184',text)
   text=re.sub(r'<img\b([^>]*?)>',image_tag,text,flags=re.I)
   if name in {'v31.html','index.html'}:
    # Offscreen pictures retain their original pixels. They must not compete
@@ -96,7 +96,7 @@ shutil.copyfile(stage/'v31.html',stage/'index.html')
 headers=['/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n','/assets/browser-v179/*\n  Cache-Control: public, max-age=31536000, immutable\n','/assets/browser-v180/*\n  Cache-Control: public, max-age=31536000, immutable\n','/assets/browser-v182/*\n  Cache-Control: public, max-age=31536000, immutable\n','/assets/browser-v183/*\n  Cache-Control: public, max-age=31536000, immutable\n']
 for name in ['mid-autumn','humid-southeast-asia']:headers.append(f'/assets/browser-v180/{name}/index.m3u8\n  Content-Type: application/vnd.apple.mpegurl\n')
 (stage/'_headers').write_text('\n'.join(headers),encoding='utf-8')
-record={'version':183,'artifactType':'browser-release','requiresRuntimeVerification':True,'runtime':'browser / static Netlify; no workstation backend','originalSourcePreserved':True,'mediaEncoding':'original codec streams; HLS container only'}
+record={'version':184,'artifactType':'browser-release','requiresRuntimeVerification':True,'runtime':'browser / static Netlify; no workstation backend','originalSourcePreserved':True,'mediaEncoding':'original codec streams; HLS container only'}
 (stage/'release-status.json').write_text(json.dumps(record,indent=2),encoding='utf-8')
 files=[]
 for p in sorted(stage.rglob('*')):

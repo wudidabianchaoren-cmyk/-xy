@@ -698,6 +698,26 @@
     let fallbackTimer = 0;
     let started = false;
     let openingBlobUrl = "";
+    let recoveryButton=null,mediaRetries=0,lastMediaActivity=performance.now(),lastMediaTime=0,resumeAfterRetry=0,mediaWatchdog=0;
+    const entry=window.portfolioEntryState={version:184,startedAt:performance.now(),mediaRetries:0,phase:'loading-film',failure:null};
+    function offerRecovery(message,action){
+      entry.phase='needs-recovery';entry.failure=message;
+      if(!recoveryButton){recoveryButton=document.createElement('button');recoveryButton.type='button';recoveryButton.dataset.entryRecovery='true';recoveryButton.style.cssText='position:absolute;z-index:12;pointer-events:auto;bottom:9%;left:50%;transform:translateX(-50%);padding:14px 24px;color:#eee8db;background:#18201b;border:1px solid #8b744b;cursor:pointer';}
+      const recoveryHost=prelude.isConnected&&prelude.style.visibility!=='hidden'?prelude:document.querySelector('.home-rendered-architecture');if(recoveryHost&&recoveryButton.parentElement!==recoveryHost)recoveryHost.append(recoveryButton);
+      recoveryButton.textContent=message;recoveryButton.onclick=action;
+    }
+    function reloadPreparation(){const url=new URL(location.href);url.searchParams.set('entryRetry',String(Date.now()));location.replace(url.href);}
+    function homeFailure(){const failure=window.portfolioBoot?.entries.get('home');if(failure?.state==='error'){entry.homeError=failure.error;offerRecovery('Courtyard preparation failed · Retry loading',reloadPreparation);}else if(failure?.state==='ready')window.removeEventListener('v132:boot-progress',homeFailure);}
+    window.addEventListener('v132:boot-progress',homeFailure);
+    function retryFilm(reason){
+      if(finished)return;
+      entry.failure=reason;
+      if(mediaRetries>=2){entry.phase='media-error';offerRecovery('Opening film unavailable · Retry loading',reloadPreparation);return;}
+      mediaRetries++;entry.mediaRetries=mediaRetries;resumeAfterRetry=Math.max(lastMediaTime,entry.mediaTime||0);started=false;lastMediaActivity=performance.now();
+      const address=new URL(openingSource,location.href);address.searchParams.set('mediaRetry',String(mediaRetries));video.src=address.href;video.load();
+    }
+    for(const name of ['progress','loadedmetadata','loadeddata','playing'])video.addEventListener(name,()=>{lastMediaActivity=performance.now();});
+    video.addEventListener('timeupdate',()=>{if(video.currentTime!==lastMediaTime){lastMediaTime=video.currentTime;lastMediaActivity=performance.now();entry.mediaTime=video.currentTime;}});
 
     function releaseEntryGate() {
       const gate=document.getElementById('entryGate');
@@ -710,6 +730,7 @@
 
     async function finishPrelude() {
       if (finished) return;
+      if(window.portfolioBoot?.entries.get('home')?.state==='error'){finished=true;clearInterval(mediaWatchdog);homeFailure();return;}
       finished = true;
       document.body.dataset.openingFilmEnded='true';const filmQuality=video.getVideoPlaybackQuality?.();window.openingFilmQuality=filmQuality?{total:filmQuality.totalVideoFrames,dropped:filmQuality.droppedVideoFrames}:null;
       if(document.body.dataset.openingStarted!=='true'){document.body.dataset.openingStarted='true';window.dispatchEvent(new CustomEvent('v31:opening-started'));}
@@ -718,9 +739,10 @@
         if(message)message.textContent='正在衔接庭院首帧';
         await window.homeDesignedIntroState?.waitForMedia?.();
       } catch(error) {
-        const retry=document.createElement('button');retry.type='button';retry.textContent='Preparation paused · Retry';retry.style.cssText='position:absolute;bottom:9%;left:50%;transform:translateX(-50%);padding:14px 24px;color:#eee8db;background:#18201b;border:1px solid #8b744b;cursor:pointer';retry.onclick=()=>location.reload();prelude.append(retry);console.error(error);return;
+        entry.handoffError=String(error);offerRecovery('Courtyard film unavailable · Retry loading',reloadPreparation);console.error(error);return;
       }
       window.clearTimeout(fallbackTimer);
+      window.clearInterval(mediaWatchdog);
       // Keep the loading film opaque while the original 16-second intro mounts.
       // Its first decoded frame replaces the loading layer in the same task.
       const handoff=window.openingHandoffState={version:'32.151',beganAt:performance.now(),mode:'preparing',loadingOpaque:true};
@@ -748,6 +770,7 @@
       prelude.style.visibility='hidden';
       prelude.style.pointerEvents='none';
       prelude.classList.add("is-hidden");
+      if(entry.homeError)homeFailure();
       handoff.revealedAt=performance.now();handoff.loadingOpaque=false;handoff.introFrame=window.homeDesignedIntroState?.frame??null;
       window.setTimeout(() => {
         prelude.remove();
@@ -757,44 +780,35 @@
     }
 
     async function playOpening() {
-      if (started || finished || video.readyState < 3) return;
+      if (started || finished || video.readyState < 2 || entry.playError) return;
       started = true;
       // Let the room establish its shared GPU context before starting the film clock.
       // Geometry and shader preparation continue during the authored 20 seconds.
       if(new URLSearchParams(location.search).get('renderer')!=='web'&&!window.directoryContextReadyAt){const until=performance.now()+1200;while(!window.directoryContextReadyAt&&performance.now()<until)await new Promise(resolve=>setTimeout(resolve,20));}
       await new Promise(requestAnimationFrame);await new Promise(requestAnimationFrame);if(finished)return;
       window.clearTimeout(fallbackTimer);
-      video.play().catch(() => {
-        video.muted = true;
-        started = false;
-        fallbackTimer = window.setTimeout(playOpening, 300);
-      });
+      try{if(resumeAfterRetry>0){video.currentTime=resumeAfterRetry;resumeAfterRetry=0;}video.muted=true;await video.play();entry.phase='playing-film';entry.failure=null;delete entry.playError;if(recoveryButton&&!entry.homeError){recoveryButton.remove();recoveryButton=null;}}
+      catch(error){started=false;entry.playError=String(error);offerRecovery('Click to enter',()=>{delete entry.playError;lastMediaActivity=performance.now();void playOpening();});}
     }
 
     video.addEventListener("ended", finishPrelude, { once: true });
-    video.addEventListener("error", finishPrelude, { once: true });
+    video.addEventListener("error",()=>retryFilm(video.error?.message||'Opening film download failed'));
     video.addEventListener("playing", () => {
       window.portfolioOpeningTimeline={startedAt:performance.now(),finishedAt:0,clock:'performance.now / actual opening film playback'};
       document.body.dataset.openingStarted = "true";
       window.dispatchEvent(new CustomEvent("v31:opening-started"));
     }, { once: true });
-    video.addEventListener("canplaythrough", playOpening, { once: true });
-    video.addEventListener("canplay", playOpening, { once: true });
-    // A complete small local film buffer cannot stall when the native model starts prefetching.
-    fetch(openingSource,{priority:'high'}).then(response => {
-      if (!response.ok) throw new Error("Opening film unavailable");
-      return response.blob();
-    }).then(blob => {
-      if (finished) return;
-      openingBlobUrl = URL.createObjectURL(blob);
-      video.src = openingBlobUrl;
-      video.load();
-    }).catch(() => {
-      if (finished) return;
-      video.src = openingSource;
-      video.load();
-    });
-    fallbackTimer = window.setTimeout(() => { if (!started) finishPrelude(); }, window.PORTFOLIO_BROWSER_ONLY?300000:30000);
+    video.addEventListener("canplay", playOpening);
+    video.addEventListener("loadeddata", playOpening);
+    // The original fast-start MP4 supports byte ranges. Start decoding its first
+    // frames immediately instead of requiring the complete 7.36MB as a Blob.
+    video.src=openingSource;video.load();
+    mediaWatchdog=window.setInterval(()=>{
+      if(finished){clearInterval(mediaWatchdog);return;}
+      if(document.hidden){lastMediaActivity=performance.now();return;}
+      if(performance.now()-lastMediaActivity>25000&&!entry.playError)retryFilm('Opening film stopped receiving data');
+      homeFailure();
+    },1000);
   }
 
   function initCountdownPreludeLegacy() {

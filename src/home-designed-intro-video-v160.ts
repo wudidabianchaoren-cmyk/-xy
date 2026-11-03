@@ -8,14 +8,14 @@ if(surface){
  const video=document.createElement('video');video.src='./assets/home-intro-v170/courtyard-16s.mp4?v=32.170';video.preload='auto';video.muted=true;video.playsInline=true;video.controls=false;video.disablePictureInPicture=true;video.disableRemotePlayback=true;video.setAttribute('aria-label','Courtyard opening');Object.assign(video.style,{display:'block',width:'100%',height:'100%',objectFit:'fill'});host.append(video);
  const w=window as any,state=w.homeDesignedIntroState={version:160,active:false,frame:0,duration:16,framework:'Native video / original Remotion composition rendered offline',finished:false,handoff:'same camera / original outer dissolve / cover-fit',preparing:false,firstFrameReady:false,playbackGaps:[] as number[],presentationDelays:[] as any[],sourceFrames:480,renderedMaster:true};
  const holdWheel=(e:WheelEvent)=>{if(state.active&&!state.finished)e.preventDefault();};window.addEventListener('wheel',holdWheel,{passive:false,capture:true});
- let running=false,paintPromise:Promise<any>|null=null,resolvePaint:((v:any)=>void)|null=null,checking=0,lastFrameAt=0,watchdog=0,ending=false;
+ let running=false,paintPromise:Promise<any>|null=null,resolvePaint:((v:any)=>void)|null=null,checking=0,lastFrameAt=0,watchdog=0,ending=false,playRequest=false,resumeButton:HTMLButtonElement|null=null;
  const fit=()=>{const {width,height}=surface.getBoundingClientRect(),scale=Math.max(width/1600,height/900);Object.assign(host.style,{width:1600*scale+'px',height:900*scale+'px',left:(width-1600*scale)/2+'px',top:(height-900*scale)/2+'px',right:'auto',bottom:'auto'});};new ResizeObserver(fit).observe(surface);fit();
  const ease=(x:number)=>{let lo=0,hi=1;for(let i=0;i<12;i++){const t=(lo+hi)/2,a=1-t,v=3*a*a*t*.19+3*a*t*t*.25+t*t*t;if(v<x)lo=t;else hi=t;}return 1-Math.pow(1-(lo+hi)/2,3);};
  function paintReady(mode:string){state.firstFrameReady=mode==='painted';state.firstFrameReadyAt=performance.now();state.handoffMode=mode;resolvePaint?.({mode,at:state.firstFrameReadyAt});resolvePaint=null;dispatchEvent(new CustomEvent('v151:home-intro-ready',{detail:{mode,at:state.firstFrameReadyAt}}));}
  function end(reason:any='ended'){
   if(ending)return;const natural=reason==='ended'||reason?.type==='ended';
   if(natural&&!w.PORTFOLIO_BROWSER_ONLY&&!w.homeClockState?.ready&&w.portfolioBoot?.entries.get('home')?.state!=='error'){state.awaitingLive=true;host.style.opacity='1';window.setTimeout(()=>end('ended'),120);return;}
-  ending=true;window.removeEventListener('wheel',holdWheel,true);running=false;clearTimeout(checking);clearInterval(watchdog);video.pause();
+  ending=true;resumeButton?.remove();state.waitingForGesture=false;window.removeEventListener('wheel',holdWheel,true);running=false;clearTimeout(checking);clearInterval(watchdog);video.pause();
   const retainLastFrame=natural&&w.PORTFOLIO_BROWSER_ONLY&&!w.homeClockState?.ready;host.hidden=!retainLastFrame;host.style.opacity='1';state.awaitingLive=retainLastFrame;state.active=false;state.preparing=false;state.finished=true;state.endReason=typeof reason==='string'?reason:'ended';const q=video.getVideoPlaybackQuality?.();state.playbackQuality=q?{totalVideoFrames:q.totalVideoFrames,droppedVideoFrames:q.droppedVideoFrames}:null;state.mediaSize=[video.videoWidth,video.videoHeight];document.body.classList.remove('home-intro-playing','home-intro-settling');
   if(retainLastFrame){surface!.setAttribute('aria-busy','true');const reveal=()=>{if(!w.homeClockState?.ready)return;removeEventListener('v154:home-phase',reveal);state.awaitingLive=false;surface!.removeAttribute('aria-busy');void host.animate([{opacity:1},{opacity:0}],{duration:350,easing:'ease-out',fill:'forwards'}).finished.then(()=>{host.hidden=true;});};addEventListener('v154:home-phase',reveal);reveal();}
   try{sessionStorage.setItem('brain-universe-home-intro-seen','1');}catch{}document.body.dataset.homeIntroReplay='false';if(resolvePaint)paintReady('failed');dispatchEvent(new Event('v85:home-intro-finished'));
@@ -31,7 +31,12 @@ if(surface){
    if(document.body.dataset.openingHandoffPending!=='true')await play();
   }catch(error){state.error=String(error);end('startup-error');}
  }
- async function play(){if(!running)return;state.startedAt=performance.now();lastFrameAt=0;await video.play();watchdog=window.setInterval(()=>{if(!document.hidden&&performance.now()-(lastFrameAt||state.startedAt)>180000)end('playback-timeout');},1000);}
+ async function play(){
+  if(!running||playRequest)return;playRequest=true;
+  try{await video.play();state.waitingForGesture=false;resumeButton?.remove();state.startedAt=performance.now();lastFrameAt=0;clearInterval(watchdog);watchdog=window.setInterval(()=>{if(!document.hidden&&performance.now()-(lastFrameAt||state.startedAt)>180000)end('playback-timeout');},1000);}
+  catch(error){state.playError=String(error);state.waitingForGesture=true;if(!resumeButton){resumeButton=document.createElement('button');resumeButton.type='button';resumeButton.textContent='Click to continue';resumeButton.style.cssText='position:absolute;z-index:12;pointer-events:auto;bottom:9%;left:50%;transform:translateX(-50%);padding:14px 24px;color:#eee8db;background:#18201b;border:1px solid #8b744b;cursor:pointer';resumeButton.onclick=()=>void play();}host.append(resumeButton);}
+  finally{playRequest=false;}
+ }
  function prepare(){clearTimeout(checking);if(skip()){state.finished=true;return;}if(document.body.dataset.openingComplete==='true'&&w.homeClockState?.ready)void start();else checking=window.setTimeout(prepare,120);}
  state.waitForMedia=()=>video.readyState>=2?Promise.resolve():new Promise<void>((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Native intro media unavailable')),90000);video.addEventListener('loadeddata',()=>{clearTimeout(timer);resolve();},{once:true});video.addEventListener('error',()=>{clearTimeout(timer);reject(Error('Native intro media decoding failed'));},{once:true});});
  state.prepareForOpening=()=>{clearTimeout(checking);if(skip()){state.finished=true;return Promise.resolve({mode:'skipped'});}if(!running)void start();return paintPromise;};state.cancelOpeningPreparation=()=>end('entry-prepare-timeout');

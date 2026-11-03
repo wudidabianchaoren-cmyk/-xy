@@ -1,0 +1,2010 @@
+{
+  "version": 184,
+  "scope": "Entry media playback and failure recovery only; no artwork/geometry/media conversion",
+  "url": "https://zaojing-wxy.netlify.app",
+  "siteId": "faee03e7-3e2a-4967-ac0e-f218a7efa8ab",
+  "deployId": "6aea209888437f0ae482bc78",
+  "previousDeploy": "6ae9f57e53ad686e2755daca",
+  "published": true,
+  "publishedAt": "2026-11-03T18:09:23.139Z",
+  "verifiedAt": "2026-11-03T18:09:39.991435+00:00",
+  "confirmedIncident": "Ordinary Edge UI Automation showed courtyard preparation error, frozen opening at0percent and retry. The failed resource from that old tab was not available; do not claim a specific file was proven to cause the original incident.",
+  "confirmedCodeDefects": [
+    "Preparation timer used paused film time, hiding network wait.",
+    "Opening required complete7.36MB Blob before decoding first frame.",
+    "No explicit click recovery after blocked autoplay in both original films.",
+    "Early texture failure could reject before a handler was attached."
+  ],
+  "anonymousProductionChecks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "browser-runtime-v180.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "v31-motion-v144.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "scene-dist/home-world-v146.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "scene-dist/dock/home-designed-intro-v160.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "scene-dist/home-thought-line-v160.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "release-status.json",
+      "status": 200,
+      "sha1Matches": true
+    }
+  ],
+  "tests": {
+    "recover": {
+      "origin": "http://127.0.0.1:8052",
+      "mode": "recover",
+      "errors": [],
+      "console": [
+        "Failed to load resource: net::ERR_CONNECTION_RESET"
+      ],
+      "badHTTP": [],
+      "steps": [
+        {
+          "name": "document",
+          "milliseconds": 606,
+          "state": {
+            "at": 807.4000000953674,
+            "entry": {
+              "version": 184,
+              "startedAt": 596.3000000715256,
+              "mediaRetries": 0,
+              "phase": "loading-film",
+              "failure": null
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 806.6000000238419,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": false,
+              "removed": false,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait"
+            },
+            "home": {},
+            "intro": {
+              "finished": false
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 1,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 2
+            }
+          }
+        },
+        {
+          "name": "visible-click-to-enter",
+          "milliseconds": 378,
+          "state": {
+            "at": 1199.7000000476837,
+            "entry": {
+              "version": 184,
+              "startedAt": 596.3000000715256,
+              "mediaRetries": 1,
+              "phase": "playing-film",
+              "failure": null
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 806.6000000238419,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": false,
+              "removed": false,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 0.3075
+            },
+            "home": {},
+            "intro": {
+              "finished": false
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 2,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 13,
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction"
+            }
+          }
+        },
+        {
+          "name": "authored-films-complete",
+          "milliseconds": 36634,
+          "state": {
+            "at": 37857.90000009537,
+            "entry": {
+              "version": 184,
+              "startedAt": 596.3000000715256,
+              "mediaRetries": 1,
+              "phase": "playing-film",
+              "failure": null,
+              "mediaTime": 20
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 806.6000000238419,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 2898.7000000476837,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 4586.400000095367,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms",
+                    "Preparing tower stone, bronze and warm light"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": true,
+              "removed": true,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 20.5325,
+              "settledAt": 21339,
+              "displayedSeconds": 20.5
+            },
+            "home": {
+              "ready": false,
+              "phases": [
+                {
+                  "name": "module start",
+                  "at": 1469.8000000715256
+                },
+                {
+                  "name": "WebGL context ready",
+                  "at": 1479.8000000715256
+                },
+                {
+                  "name": "native decoded",
+                  "at": 2801.100000023842
+                },
+                {
+                  "name": "courtyard geometry prepared",
+                  "at": 3245.600000023842
+                },
+                {
+                  "name": "textures and environment ready",
+                  "at": 4586.200000047684
+                },
+                {
+                  "name": "entry film released shader preparation",
+                  "at": 37742.60000002384
+                }
+              ]
+            },
+            "intro": {
+              "finished": true,
+              "reason": "ended",
+              "quality": {
+                "totalVideoFrames": 480,
+                "droppedVideoFrames": 1
+              }
+            },
+            "opening": {
+              "total": 600,
+              "dropped": 0
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 7,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 13,
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction"
+            }
+          }
+        },
+        {
+          "name": "live-home-ready",
+          "milliseconds": 52578,
+          "state": {
+            "at": 90444.90000009537,
+            "entry": {
+              "version": 184,
+              "startedAt": 596.3000000715256,
+              "mediaRetries": 1,
+              "phase": "playing-film",
+              "failure": null,
+              "mediaTime": 20
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 806.6000000238419,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 2898.7000000476837,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 4586.400000095367,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms",
+                    "Preparing tower stone, bronze and warm light"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": true,
+              "removed": true,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 20.5325,
+              "settledAt": 21339,
+              "displayedSeconds": 20.5
+            },
+            "home": {
+              "ready": true,
+              "phases": [
+                {
+                  "name": "module start",
+                  "at": 1469.8000000715256
+                },
+                {
+                  "name": "WebGL context ready",
+                  "at": 1479.8000000715256
+                },
+                {
+                  "name": "native decoded",
+                  "at": 2801.100000023842
+                },
+                {
+                  "name": "courtyard geometry prepared",
+                  "at": 3245.600000023842
+                },
+                {
+                  "name": "textures and environment ready",
+                  "at": 4586.200000047684
+                },
+                {
+                  "name": "entry film released shader preparation",
+                  "at": 37742.60000002384
+                },
+                {
+                  "name": "surface shaders compiled",
+                  "at": 85400.40000009537
+                },
+                {
+                  "name": "entry film released GPU uploads",
+                  "at": 85400.60000002384
+                },
+                {
+                  "name": "colour buffers uploaded",
+                  "at": 89782.70000004768
+                },
+                {
+                  "name": "geometry buffers uploaded",
+                  "at": 89784
+                },
+                {
+                  "name": "postprocess shaders compiled",
+                  "at": 89831.10000002384
+                },
+                {
+                  "name": "complete lighting variants prepared",
+                  "at": 90274.40000009537
+                },
+                {
+                  "name": "live frame revealed",
+                  "at": 90396.60000002384
+                }
+              ]
+            },
+            "intro": {
+              "finished": true,
+              "reason": "ended",
+              "quality": {
+                "totalVideoFrames": 480,
+                "droppedVideoFrames": 1
+              }
+            },
+            "opening": {
+              "total": 600,
+              "dropped": 0
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "ready",
+                  "at": 90398.20000004768
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 7,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 13,
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction"
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "final": {
+        "at": 91542.5,
+        "entry": {
+          "version": 184,
+          "startedAt": 596.3000000715256,
+          "mediaRetries": 1,
+          "phase": "playing-film",
+          "failure": null,
+          "mediaTime": 20
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [
+            {
+              "at": 806.6000000238419,
+              "steps": [
+                "Reading the clock-tower geometry"
+              ],
+              "home": "pending"
+            },
+            {
+              "at": 2898.7000000476837,
+              "steps": [
+                "Reading the clock-tower geometry",
+                "Assembling the clock mechanisms"
+              ],
+              "home": "pending"
+            },
+            {
+              "at": 4586.400000095367,
+              "steps": [
+                "Reading the clock-tower geometry",
+                "Assembling the clock mechanisms",
+                "Preparing tower stone, bronze and warm light"
+              ],
+              "home": "pending"
+            }
+          ],
+          "settled": true,
+          "removed": true,
+          "english": true,
+          "clock": "actual elapsed preparation time, including network wait",
+          "elapsed": 20.5325,
+          "settledAt": 21339,
+          "displayedSeconds": 20.5
+        },
+        "home": {
+          "ready": true,
+          "phases": [
+            {
+              "name": "module start",
+              "at": 1469.8000000715256
+            },
+            {
+              "name": "WebGL context ready",
+              "at": 1479.8000000715256
+            },
+            {
+              "name": "native decoded",
+              "at": 2801.100000023842
+            },
+            {
+              "name": "courtyard geometry prepared",
+              "at": 3245.600000023842
+            },
+            {
+              "name": "textures and environment ready",
+              "at": 4586.200000047684
+            },
+            {
+              "name": "entry film released shader preparation",
+              "at": 37742.60000002384
+            },
+            {
+              "name": "surface shaders compiled",
+              "at": 85400.40000009537
+            },
+            {
+              "name": "entry film released GPU uploads",
+              "at": 85400.60000002384
+            },
+            {
+              "name": "colour buffers uploaded",
+              "at": 89782.70000004768
+            },
+            {
+              "name": "geometry buffers uploaded",
+              "at": 89784
+            },
+            {
+              "name": "postprocess shaders compiled",
+              "at": 89831.10000002384
+            },
+            {
+              "name": "complete lighting variants prepared",
+              "at": 90274.40000009537
+            },
+            {
+              "name": "live frame revealed",
+              "at": 90396.60000002384
+            }
+          ]
+        },
+        "intro": {
+          "finished": true,
+          "reason": "ended",
+          "quality": {
+            "totalVideoFrames": 480,
+            "droppedVideoFrames": 1
+          }
+        },
+        "opening": {
+          "total": 600,
+          "dropped": 0
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "ready",
+              "at": 90398.20000004768
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 184,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 7,
+          "errors": [],
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "imagesPrepared": 13,
+          "originalVideos": 1,
+          "playerEngine": "Original MP4 / byte-identical reconstruction"
+        }
+      }
+    },
+    "home-failure": {
+      "origin": "http://127.0.0.1:8052",
+      "mode": "home-failure",
+      "errors": [],
+      "console": [
+        "Failed to load resource: net::ERR_CONNECTION_RESET",
+        "Failed to load resource: net::ERR_CONNECTION_RESET",
+        "Failed to load resource: net::ERR_CONNECTION_RESET",
+        "Native homepage world failed Error: Texture download failed: /assets/home/Marble012_diff_2k.jpg\n    at http://127.0.0.1:8052/scene-dist/home-world-v146.js?v=32.184:4318:5224\n    at HTMLImageElement.c (http://127.0.0.1:8052/scene-dist/home-world-v146.js?v=32.184:40:123383)"
+      ],
+      "badHTTP": [],
+      "steps": [
+        {
+          "name": "document",
+          "milliseconds": 610,
+          "state": {
+            "at": 821.2999999523163,
+            "entry": {
+              "version": 184,
+              "startedAt": 598.5,
+              "mediaRetries": 0,
+              "phase": "loading-film",
+              "failure": null
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 820.3999999761581,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": false,
+              "removed": false,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait"
+            },
+            "home": {},
+            "intro": {
+              "finished": false
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 1,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 10
+            }
+          }
+        },
+        {
+          "name": "visible-home-failure",
+          "milliseconds": 3515,
+          "state": {
+            "at": 4347.599999904633,
+            "entry": {
+              "version": 184,
+              "startedAt": 598.5,
+              "mediaRetries": 0,
+              "phase": "needs-recovery",
+              "failure": "Courtyard preparation failed · Retry loading",
+              "mediaTime": 3.2416,
+              "homeError": "Error: Texture download failed: /assets/home/Marble012_diff_2k.jpg"
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 820.3999999761581,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 2530.1999999284744,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 4217.399999976158,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms",
+                    "Preparation paused — please retry"
+                  ],
+                  "home": "error"
+                }
+              ],
+              "settled": false,
+              "removed": false,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 3.5027000000476836
+            },
+            "home": {
+              "ready": false,
+              "error": "Error: Texture download failed: /assets/home/Marble012_diff_2k.jpg",
+              "phases": [
+                {
+                  "name": "module start",
+                  "at": 1440.7999999523163
+                },
+                {
+                  "name": "WebGL context ready",
+                  "at": 1452.5
+                },
+                {
+                  "name": "native decoded",
+                  "at": 2462
+                },
+                {
+                  "name": "courtyard geometry prepared",
+                  "at": 2872.5999999046326
+                }
+              ]
+            },
+            "intro": {
+              "finished": false
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "error",
+                  "error": "Error: Texture download failed: /assets/home/Marble012_diff_2k.jpg"
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "recovery": "Courtyard preparation failed · Retry loading",
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 7,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 13,
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction",
+              "recoveredTextureAttempts": [
+                {
+                  "url": "./assets/home/Marble012_diff_2k.jpg",
+                  "attempt": 1
+                },
+                {
+                  "url": "./assets/home/Marble012_diff_2k.jpg",
+                  "attempt": 2
+                }
+              ],
+              "textureFailures": [
+                {
+                  "url": "/assets/home/Marble012_diff_2k.jpg",
+                  "attempts": 3
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "authored-films-complete",
+          "milliseconds": 36430,
+          "state": {
+            "at": 36892,
+            "entry": {
+              "version": 184,
+              "startedAt": 214.80000007152557,
+              "mediaRetries": 0,
+              "phase": "playing-film",
+              "failure": null,
+              "mediaTime": 20
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 275.39999997615814,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 1812.3000000715256,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 3467.8000000715256,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms",
+                    "Preparing tower stone, bronze and warm light"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": true,
+              "removed": true,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 20.33840000009537,
+              "settledAt": 20613.800000071526,
+              "displayedSeconds": 20.3
+            },
+            "home": {
+              "ready": false,
+              "phases": [
+                {
+                  "name": "module start",
+                  "at": 922.5
+                },
+                {
+                  "name": "WebGL context ready",
+                  "at": 941.5
+                },
+                {
+                  "name": "native decoded",
+                  "at": 1738.8999999761581
+                },
+                {
+                  "name": "courtyard geometry prepared",
+                  "at": 2160.2000000476837
+                },
+                {
+                  "name": "textures and environment ready",
+                  "at": 3467.2000000476837
+                },
+                {
+                  "name": "entry film released shader preparation",
+                  "at": 36779.300000071526
+                }
+              ]
+            },
+            "intro": {
+              "finished": true,
+              "reason": "ended",
+              "quality": {
+                "totalVideoFrames": 480,
+                "droppedVideoFrames": 9
+              }
+            },
+            "opening": {
+              "total": 600,
+              "dropped": 0
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 7,
+              "errors": [],
+              "imagesPrepared": 13,
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction"
+            }
+          }
+        },
+        {
+          "name": "live-home-ready",
+          "milliseconds": 40257,
+          "state": {
+            "at": 77162.20000004768,
+            "entry": {
+              "version": 184,
+              "startedAt": 214.80000007152557,
+              "mediaRetries": 0,
+              "phase": "playing-film",
+              "failure": null,
+              "mediaTime": 20
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 275.39999997615814,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 1812.3000000715256,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms"
+                  ],
+                  "home": "pending"
+                },
+                {
+                  "at": 3467.8000000715256,
+                  "steps": [
+                    "Reading the clock-tower geometry",
+                    "Assembling the clock mechanisms",
+                    "Preparing tower stone, bronze and warm light"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": true,
+              "removed": true,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 20.33840000009537,
+              "settledAt": 20613.800000071526,
+              "displayedSeconds": 20.3
+            },
+            "home": {
+              "ready": true,
+              "phases": [
+                {
+                  "name": "module start",
+                  "at": 922.5
+                },
+                {
+                  "name": "WebGL context ready",
+                  "at": 941.5
+                },
+                {
+                  "name": "native decoded",
+                  "at": 1738.8999999761581
+                },
+                {
+                  "name": "courtyard geometry prepared",
+                  "at": 2160.2000000476837
+                },
+                {
+                  "name": "textures and environment ready",
+                  "at": 3467.2000000476837
+                },
+                {
+                  "name": "entry film released shader preparation",
+                  "at": 36779.300000071526
+                },
+                {
+                  "name": "surface shaders compiled",
+                  "at": 72208.60000002384
+                },
+                {
+                  "name": "entry film released GPU uploads",
+                  "at": 72208.89999997616
+                },
+                {
+                  "name": "colour buffers uploaded",
+                  "at": 76453.70000004768
+                },
+                {
+                  "name": "geometry buffers uploaded",
+                  "at": 76454.60000002384
+                },
+                {
+                  "name": "postprocess shaders compiled",
+                  "at": 76518.39999997616
+                },
+                {
+                  "name": "complete lighting variants prepared",
+                  "at": 77015.10000002384
+                },
+                {
+                  "name": "live frame revealed",
+                  "at": 77112.39999997616
+                }
+              ]
+            },
+            "intro": {
+              "finished": true,
+              "reason": "ended",
+              "quality": {
+                "totalVideoFrames": 480,
+                "droppedVideoFrames": 9
+              }
+            },
+            "opening": {
+              "total": 600,
+              "dropped": 0
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "ready",
+                  "at": 77112.89999997616
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 7,
+              "errors": [],
+              "imagesPrepared": 13,
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction"
+            }
+          }
+        }
+      ],
+      "expectedResourceFailure": true,
+      "pass": true,
+      "final": {
+        "at": 78585.20000004768,
+        "entry": {
+          "version": 184,
+          "startedAt": 214.80000007152557,
+          "mediaRetries": 0,
+          "phase": "playing-film",
+          "failure": null,
+          "mediaTime": 20
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [
+            {
+              "at": 275.39999997615814,
+              "steps": [
+                "Reading the clock-tower geometry"
+              ],
+              "home": "pending"
+            },
+            {
+              "at": 1812.3000000715256,
+              "steps": [
+                "Reading the clock-tower geometry",
+                "Assembling the clock mechanisms"
+              ],
+              "home": "pending"
+            },
+            {
+              "at": 3467.8000000715256,
+              "steps": [
+                "Reading the clock-tower geometry",
+                "Assembling the clock mechanisms",
+                "Preparing tower stone, bronze and warm light"
+              ],
+              "home": "pending"
+            }
+          ],
+          "settled": true,
+          "removed": true,
+          "english": true,
+          "clock": "actual elapsed preparation time, including network wait",
+          "elapsed": 20.33840000009537,
+          "settledAt": 20613.800000071526,
+          "displayedSeconds": 20.3
+        },
+        "home": {
+          "ready": true,
+          "phases": [
+            {
+              "name": "module start",
+              "at": 922.5
+            },
+            {
+              "name": "WebGL context ready",
+              "at": 941.5
+            },
+            {
+              "name": "native decoded",
+              "at": 1738.8999999761581
+            },
+            {
+              "name": "courtyard geometry prepared",
+              "at": 2160.2000000476837
+            },
+            {
+              "name": "textures and environment ready",
+              "at": 3467.2000000476837
+            },
+            {
+              "name": "entry film released shader preparation",
+              "at": 36779.300000071526
+            },
+            {
+              "name": "surface shaders compiled",
+              "at": 72208.60000002384
+            },
+            {
+              "name": "entry film released GPU uploads",
+              "at": 72208.89999997616
+            },
+            {
+              "name": "colour buffers uploaded",
+              "at": 76453.70000004768
+            },
+            {
+              "name": "geometry buffers uploaded",
+              "at": 76454.60000002384
+            },
+            {
+              "name": "postprocess shaders compiled",
+              "at": 76518.39999997616
+            },
+            {
+              "name": "complete lighting variants prepared",
+              "at": 77015.10000002384
+            },
+            {
+              "name": "live frame revealed",
+              "at": 77112.39999997616
+            }
+          ]
+        },
+        "intro": {
+          "finished": true,
+          "reason": "ended",
+          "quality": {
+            "totalVideoFrames": 480,
+            "droppedVideoFrames": 9
+          }
+        },
+        "opening": {
+          "total": 600,
+          "dropped": 0
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "ready",
+              "at": 77112.89999997616
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 184,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 7,
+          "errors": [],
+          "imagesPrepared": 13,
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "originalVideos": 1,
+          "playerEngine": "Original MP4 / byte-identical reconstruction"
+        }
+      }
+    },
+    "stall": {
+      "origin": "http://127.0.0.1:8052",
+      "mode": "stall",
+      "errors": [],
+      "console": [],
+      "badHTTP": [],
+      "steps": [
+        {
+          "name": "document",
+          "milliseconds": 752,
+          "state": {
+            "at": 939.6000000238419,
+            "entry": {
+              "version": 184,
+              "startedAt": 735.1999999284744,
+              "mediaRetries": 0,
+              "phase": "loading-film",
+              "failure": null
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 938.8999999761581,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": false,
+              "removed": false,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait"
+            },
+            "home": {},
+            "intro": {
+              "finished": false
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 1,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 2
+            }
+          }
+        },
+        {
+          "name": "stalled-film-retried",
+          "milliseconds": 24871,
+          "state": {
+            "at": 25819.899999976158,
+            "entry": {
+              "version": 184,
+              "startedAt": 735.1999999284744,
+              "mediaRetries": 1,
+              "phase": "playing-film",
+              "failure": null
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 938.8999999761581,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": false,
+              "removed": false,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 24.801899999976158
+            },
+            "home": {},
+            "intro": {
+              "finished": false
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 2,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 13,
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction"
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "final": {
+        "at": 26135.5,
+        "entry": {
+          "version": 184,
+          "startedAt": 735.1999999284744,
+          "mediaRetries": 1,
+          "phase": "playing-film",
+          "failure": null,
+          "mediaTime": 0.2581
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [
+            {
+              "at": 938.8999999761581,
+              "steps": [
+                "Reading the clock-tower geometry"
+              ],
+              "home": "pending"
+            }
+          ],
+          "settled": false,
+          "removed": false,
+          "english": true,
+          "clock": "actual elapsed preparation time, including network wait",
+          "elapsed": 25.1055
+        },
+        "home": {},
+        "intro": {
+          "finished": false
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 184,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 2,
+          "errors": [],
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "imagesPrepared": 13,
+          "originalVideos": 1,
+          "playerEngine": "Original MP4 / byte-identical reconstruction"
+        }
+      }
+    },
+    "public": {
+      "origin": "https://6aea209888437f0ae482bc78--zaojing-wxy.netlify.app",
+      "mode": "public",
+      "errors": [],
+      "console": [
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED"
+      ],
+      "badHTTP": [],
+      "steps": [
+        {
+          "name": "document",
+          "milliseconds": 20581,
+          "state": {
+            "at": 20707,
+            "entry": {
+              "version": 184,
+              "startedAt": 20566.400000095367,
+              "mediaRetries": 0,
+              "phase": "loading-film",
+              "failure": null
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [],
+              "settled": false,
+              "removed": false,
+              "english": true
+            },
+            "home": {},
+            "intro": {
+              "finished": false
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 1,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 2
+            }
+          }
+        },
+        {
+          "name": "authored-films-complete",
+          "milliseconds": 83238,
+          "state": {
+            "at": 103954.10000002384,
+            "entry": {
+              "version": 184,
+              "startedAt": 20566.400000095367,
+              "mediaRetries": 1,
+              "phase": "playing-film",
+              "failure": null,
+              "mediaTime": 20
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 20741.100000023842,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": true,
+              "removed": true,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 66.776,
+              "settledAt": 87516.90000009537,
+              "displayedSeconds": 66.8
+            },
+            "home": {
+              "ready": false,
+              "phases": [
+                {
+                  "name": "module start",
+                  "at": 69748.10000002384
+                },
+                {
+                  "name": "WebGL context ready",
+                  "at": 69761.20000004768
+                }
+              ]
+            },
+            "intro": {
+              "finished": true,
+              "reason": "ended",
+              "quality": {
+                "totalVideoFrames": 484,
+                "droppedVideoFrames": 3
+              }
+            },
+            "opening": {
+              "total": 604,
+              "dropped": 0
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 3,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 13,
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction"
+            }
+          }
+        },
+        {
+          "name": "live-home-ready",
+          "milliseconds": 92532,
+          "state": {
+            "at": 196497.5,
+            "entry": {
+              "version": 184,
+              "startedAt": 20566.400000095367,
+              "mediaRetries": 1,
+              "phase": "playing-film",
+              "failure": null,
+              "mediaTime": 20
+            },
+            "thought": {
+              "version": 161,
+              "source": "user supplied complete ThoughtLine / real film and preparation clock",
+              "updates": [
+                {
+                  "at": 20741.100000023842,
+                  "steps": [
+                    "Reading the clock-tower geometry"
+                  ],
+                  "home": "pending"
+                }
+              ],
+              "settled": true,
+              "removed": true,
+              "english": true,
+              "clock": "actual elapsed preparation time, including network wait",
+              "elapsed": 66.776,
+              "settledAt": 87516.90000009537,
+              "displayedSeconds": 66.8
+            },
+            "home": {
+              "ready": true,
+              "phases": [
+                {
+                  "name": "module start",
+                  "at": 69748.10000002384
+                },
+                {
+                  "name": "WebGL context ready",
+                  "at": 69761.20000004768
+                },
+                {
+                  "name": "native decoded",
+                  "at": 120395.5
+                },
+                {
+                  "name": "courtyard geometry prepared",
+                  "at": 121821.5
+                },
+                {
+                  "name": "textures and environment ready",
+                  "at": 152659.30000007153
+                },
+                {
+                  "name": "entry film released shader preparation",
+                  "at": 152669.5
+                },
+                {
+                  "name": "surface shaders compiled",
+                  "at": 190478
+                },
+                {
+                  "name": "entry film released GPU uploads",
+                  "at": 190478.10000002384
+                },
+                {
+                  "name": "colour buffers uploaded",
+                  "at": 195814.10000002384
+                },
+                {
+                  "name": "geometry buffers uploaded",
+                  "at": 195816.20000004768
+                },
+                {
+                  "name": "postprocess shaders compiled",
+                  "at": 195861.10000002384
+                },
+                {
+                  "name": "complete lighting variants prepared",
+                  "at": 196342.40000009537
+                },
+                {
+                  "name": "live frame revealed",
+                  "at": 196476.70000004768
+                }
+              ]
+            },
+            "intro": {
+              "finished": true,
+              "reason": "ended",
+              "quality": {
+                "totalVideoFrames": 484,
+                "droppedVideoFrames": 3
+              }
+            },
+            "opening": {
+              "total": 604,
+              "dropped": 0
+            },
+            "boot": [
+              [
+                "home",
+                {
+                  "state": "ready",
+                  "at": 196477.20000004768
+                }
+              ],
+              [
+                "directory",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ],
+              [
+                "mythology",
+                {
+                  "state": "pending",
+                  "error": ""
+                }
+              ]
+            ],
+            "delivery": {
+              "version": 184,
+              "browserOnly": true,
+              "segmentedVideos": 0,
+              "assembledResources": 7,
+              "errors": [],
+              "legacyWorkerCleanup": {
+                "removed": 0,
+                "complete": true
+              },
+              "imagesPrepared": 13,
+              "originalVideos": 1,
+              "playerEngine": "Original MP4 / byte-identical reconstruction"
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "final": {
+        "at": 197733.30000007153,
+        "entry": {
+          "version": 184,
+          "startedAt": 20566.400000095367,
+          "mediaRetries": 1,
+          "phase": "playing-film",
+          "failure": null,
+          "mediaTime": 20
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [
+            {
+              "at": 20741.100000023842,
+              "steps": [
+                "Reading the clock-tower geometry"
+              ],
+              "home": "pending"
+            }
+          ],
+          "settled": true,
+          "removed": true,
+          "english": true,
+          "clock": "actual elapsed preparation time, including network wait",
+          "elapsed": 66.776,
+          "settledAt": 87516.90000009537,
+          "displayedSeconds": 66.8
+        },
+        "home": {
+          "ready": true,
+          "phases": [
+            {
+              "name": "module start",
+              "at": 69748.10000002384
+            },
+            {
+              "name": "WebGL context ready",
+              "at": 69761.20000004768
+            },
+            {
+              "name": "native decoded",
+              "at": 120395.5
+            },
+            {
+              "name": "courtyard geometry prepared",
+              "at": 121821.5
+            },
+            {
+              "name": "textures and environment ready",
+              "at": 152659.30000007153
+            },
+            {
+              "name": "entry film released shader preparation",
+              "at": 152669.5
+            },
+            {
+              "name": "surface shaders compiled",
+              "at": 190478
+            },
+            {
+              "name": "entry film released GPU uploads",
+              "at": 190478.10000002384
+            },
+            {
+              "name": "colour buffers uploaded",
+              "at": 195814.10000002384
+            },
+            {
+              "name": "geometry buffers uploaded",
+              "at": 195816.20000004768
+            },
+            {
+              "name": "postprocess shaders compiled",
+              "at": 195861.10000002384
+            },
+            {
+              "name": "complete lighting variants prepared",
+              "at": 196342.40000009537
+            },
+            {
+              "name": "live frame revealed",
+              "at": 196476.70000004768
+            }
+          ]
+        },
+        "intro": {
+          "finished": true,
+          "reason": "ended",
+          "quality": {
+            "totalVideoFrames": 484,
+            "droppedVideoFrames": 3
+          }
+        },
+        "opening": {
+          "total": 604,
+          "dropped": 0
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "ready",
+              "at": 196477.20000004768
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 184,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 7,
+          "errors": [],
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "imagesPrepared": 13,
+          "originalVideos": 1,
+          "playerEngine": "Original MP4 / byte-identical reconstruction"
+        }
+      }
+    }
+  },
+  "observedTransportErrors": [
+    "Failed to load resource: net::ERR_HTTP2_PING_FAILED"
+  ],
+  "transportRecoveryVerified": true,
+  "paidServicesOpened": false,
+  "originalsPreserved": true,
+  "ordinaryProfileAfterPublication": {
+    "initialGuard": "Different active tab; no input sent.",
+    "subsequentAction": "Selected the unique existing non-discarded portfolio tab, verified origin, invoked its observed Retry control.",
+    "openingAdvancedToPercent": 54,
+    "laterObservation": {
+      "at": "2026-11-04T02:26:25.0461010+08:00",
+      "originVerified": true,
+      "textExcerpt": "进度 92%\n造境手记\n吴翔宇 / AIGC 影像与三维叙事\n展览目录\n播放背景音乐\n背景音乐音量\n页面亮度\nArchitectural animation playback\nFORM 02\nPERSONAL FIELD / OPEN COORDINATE\nIMAGE MAKING / 07 STUDIES\nImages give ideas\ntheir first shape.\nObserve the connections.\nGive imagination a path.\nLet images carry memory\nback into everyday life.\n￼\n￼\n￼\nA NOTE / THANK YOU FOR VISITING\nWU XIANGYU · 造境手记\n写在最后\n跟上变化，\n也留住自己的感受。\n我想试着学会这些新工具，\n也想把喜欢的画面和故事，认真做出来。\n"
+    },
+    "fullOwnClickRuntimeFlow": false,
+    "discardedDuplicateLeftUntouched": true
+  },
+  "limitations": [
+    "First live courtyard preparation remains slow and varies with network/GPU.",
+    "Previous V183 desk/mythology performance and off-axis visual defects remain unresolved.",
+    "No universal network/GPU or zero-failure guarantee."
+  ],
+  "preservation": {
+    "changedMediaOrModelAssets": [],
+    "note": "Four audio-source HTML metadata pages only received the shared delivery-script version update; binary artwork/media/models unchanged."
+  }
+}

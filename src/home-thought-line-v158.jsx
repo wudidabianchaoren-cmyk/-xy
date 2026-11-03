@@ -7,7 +7,9 @@ function Preparation(){
  const [steps,setSteps]=useState(['Preparing the opening film']),[working,setWorking]=useState(true),[elapsed,setElapsed]=useState(0);
  useEffect(()=>{
   let settled=false,indexStarted=false,indexReady=false;
-  const elapsedNow=()=>Math.min(20,document.querySelector('.prelude-opening-video')?.currentTime??0);
+  const preparationBegan=performance.now();
+  const elapsedNow=()=>Math.max(0,(performance.now()-preparationBegan)/1000);
+  audit.clock='actual elapsed preparation time, including network wait';
   const update=()=>{if(settled)return;const phases=window.homeClockState?.preparePhases||[],has=n=>phases.some(p=>p.name===n),home=window.portfolioBoot?.entries.get('home')?.state,roomRequired=window.portfolioBoot?.required?.has('directory'),roomReady=window.portfolioBoot?.entries.get('directory')?.state==='ready';
    const names=['Reading the clock-tower geometry'];
    if(has('native decoded'))names.push('Assembling the clock mechanisms');
@@ -22,7 +24,7 @@ function Preparation(){
    const visible=names.slice(-3);setSteps(previous=>{if(previous.join('|')===visible.join('|'))return previous;audit.updates.push({at:performance.now(),steps:[...names],home});return visible;});
   };
   const finish=()=>{if(settled)return;settled=true;audit.settled=true;audit.settledAt=performance.now();audit.elapsed=elapsedNow();if(window.portfolioOpeningTimeline)window.portfolioOpeningTimeline.finishedAt=audit.settledAt;setElapsed(audit.elapsed);setWorking(false);};
-  const timer=setInterval(()=>{if(!settled)setElapsed(elapsedNow())},100);
+  const timer=setInterval(()=>{if(!settled){audit.elapsed=elapsedNow();setElapsed(audit.elapsed)}},100);
   window.addEventListener('v154:home-phase',update);window.addEventListener('v132:boot-progress',update);window.addEventListener('v31:opening-complete',finish,{once:true});update();
   return()=>{clearInterval(timer);window.removeEventListener('v154:home-phase',update);window.removeEventListener('v132:boot-progress',update);window.removeEventListener('v31:opening-complete',finish);audit.removed=true;};
  },[]);

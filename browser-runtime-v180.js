@@ -15,7 +15,7 @@
   for(const method of ['pushState','replaceState']){const original=history[method].bind(history);history[method]=function(state,title,address){if(address!=null){const url=new URL(String(address),location.href);if(url.origin===location.origin){for(const[key,value]of[['renderer','web'],['nativeLightfield','1'],['homeRenderer','web']])url.searchParams.set(key,value);address=url.href;}}return original(state,title,address);};}
   const resources=window.PORTFOLIO_RESOURCES_V180||{media:{},binary:{}};
   const originalFetch=window.fetch.bind(window);
-  const diagnostics=window.portfolioDeliveryState={version:183,browserOnly:true,segmentedVideos:0,assembledResources:0,errors:[]};
+  const diagnostics=window.portfolioDeliveryState={version:184,browserOnly:true,segmentedVideos:0,assembledResources:0,errors:[]};
   const backgroundRoot=()=>!!document.getElementById('voyage')&&((window.homeDesignedIntroState&&!window.homeDesignedIntroState.finished)||document.body?.matches('.portfolio-portal-open,.works-orbit-open'));
   document.addEventListener('error',event=>{const script=event.target;if(!(script instanceof HTMLScriptElement)||!script.src||script.dataset.deliveryPlayer)return;const source=new URL(script.src,location.href),attempt=Number(script.dataset.moduleRecovery||0);if(source.origin!==location.origin||attempt>=2)return;const retry=document.createElement('script');for(const attribute of script.attributes)if(attribute.name!=='src')retry.setAttribute(attribute.name,attribute.value);if(script.nonce)retry.nonce=script.nonce;source.searchParams.set('moduleRecovery',String(attempt+1));retry.src=source.href;retry.dataset.moduleRecovery=String(attempt+1);retry.onload=()=>dispatchEvent(new Event('portfolio:script-recovered'));(diagnostics.recoveredScriptAttempts??=[]).push({url:source.pathname,attempt:attempt+1});setTimeout(()=>script.replaceWith(retry),400*(attempt+1));},true);
   if('serviceWorker'in navigator)void(async()=>{try{const registrations=await navigator.serviceWorker.getRegistrations();let removed=0;for(const registration of registrations){const script=registration.active?.scriptURL||registration.waiting?.scriptURL||registration.installing?.scriptURL;if(script&&/\/mythology-sw-v\d+\.js$/.test(new URL(script).pathname)){await registration.unregister();removed++;}}if('caches'in window)for(const key of await caches.keys())if(/^zaojing-(?:native|mythology)-v\d+$/.test(key))await caches.delete(key);diagnostics.legacyWorkerCleanup={removed,complete:true};}catch(error){diagnostics.legacyWorkerCleanup={complete:false,error:String(error)};}})();
@@ -25,7 +25,7 @@
     if(!record){
       if(url.origin!==location.origin||!/^https?:$/.test(url.protocol)||!/^GET$/i.test(options?.method||request?.method||'GET')||!(/\.(?:json|glb|gltf|hdr|exr|bin|gz|ttf|woff2?|mp4)$/i.test(url.pathname)))return originalFetch(input,options);
       for(let attempt=0;attempt<3;attempt++)try{
-        const response=await originalFetch(input,{...options,...(backgroundRoot()&&!url.pathname.endsWith('.mp4')?{priority:'low'}:{}),...(attempt?{cache:'reload'}:{})});if(!response.ok){if(attempt<2&&[408,429,500,502,503,504].includes(response.status))throw Error('Asset response '+response.status);return response;}
+        const response=await originalFetch(input,{...options,...(backgroundRoot()&&!url.pathname.endsWith('.mp4')?{priority:'low'}:{}),...(attempt||query.has('entryRetry')?{cache:'reload'}:{})});if(!response.ok){if(attempt<2&&[408,429,500,502,503,504].includes(response.status))throw Error('Asset response '+response.status);return response;}
         const bytes=await response.arrayBuffer(),headers=new Headers(response.headers);headers.delete('Content-Encoding');headers.set('Content-Length',String(bytes.byteLength));const complete=new Response(bytes,{status:response.status,statusText:response.statusText,headers});Object.defineProperty(complete,'url',{value:response.url});return complete;
       }catch(error){if(options?.signal?.aborted||request?.signal?.aborted||attempt===2)throw error;(diagnostics.recoveredFetchAttempts??=[]).push({url:url.pathname,attempt:attempt+1});await new Promise(resolve=>setTimeout(resolve,400*(attempt+1)));}
     }
@@ -33,7 +33,7 @@
     let index=0;const pending=new Map();
     const segment=async position=>{
       for(let attempt=0;attempt<3;attempt++){
-        try{const response=await originalFetch(record.parts[position],{signal,priority:record.media?'high':backgroundRoot()?'low':'auto'});if(!response.ok)throw Error('Resource segment unavailable: '+response.status);return new Uint8Array(await response.arrayBuffer());}
+        try{const response=await originalFetch(record.parts[position],{signal,priority:record.media?'high':backgroundRoot()?'low':'auto',...(attempt||query.has('entryRetry')?{cache:'reload'}:{})});if(!response.ok)throw Error('Resource segment unavailable: '+response.status);return new Uint8Array(await response.arrayBuffer());}
         catch(error){if(signal?.aborted||attempt===2)throw error;await new Promise(resolve=>setTimeout(resolve,250*(attempt+1)));}
       }
     };

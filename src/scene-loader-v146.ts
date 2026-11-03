@@ -21,7 +21,7 @@ const prefetchHome=()=>{if(new URLSearchParams(location.search).get('homeRendere
 }};
 // Let the entry film obtain its first buffer before the large native model competes for bandwidth.
 let homeLoaded=false;
-const loadHome=()=>{if(homeLoaded||!home)return;homeLoaded=true;idle(()=>{void(async()=>{const path=new URLSearchParams(location.search).get('homeRenderer')==='native'?'./home-native-v165.js?v=32.183':'./home-world-v146.js?v=32.183';for(let attempt=0;attempt<3;attempt++){try{await import(/* @vite-ignore */ (path+(attempt?'&moduleRetry='+attempt:'')));return;}catch(error){if(attempt===2){console.error('Homepage could not initialise',error);(window as any).portfolioBoot?.fail('home',error);return;}await new Promise(resolve=>setTimeout(resolve,500*(attempt+1)));}}})();});};
+const loadHome=()=>{if(homeLoaded||!home)return;homeLoaded=true;idle(()=>{void(async()=>{const path=new URLSearchParams(location.search).get('homeRenderer')==='native'?'./home-native-v165.js?v=32.184':'./home-world-v146.js?v=32.184';for(let attempt=0;attempt<3;attempt++){try{await import(/* @vite-ignore */ (path+(attempt?'&moduleRetry='+attempt:'')));return;}catch(error){if(attempt===2){console.error('Homepage could not initialise',error);(window as any).portfolioBoot?.fail('home',error);return;}await new Promise(resolve=>setTimeout(resolve,500*(attempt+1)));}}})();});};
 const homeWhenVisible=()=>{
   if(!home)return;
   const observe=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observe.disconnect();loadHome();}},{rootMargin:'250px'});
