@@ -4,7 +4,7 @@ This is the separately authorized browser migration. The original UE project, or
 
 ## Delivery package
 
-- Current candidate deploy: `6ae97dfdd0e427878b274a08` in the existing Netlify project `eloquent-puffpuff-c8613b`.
+- Published deployment: `6ae97dfdd0e427878b274a08` in the existing Netlify project `eloquent-puffpuff-c8613b`.
 - Static manifest: 1,760 files / 2,855,817,434 bytes at the final staging checkpoint. Large originals referenced by the application are delivered through their mapped fragments.
 - Six movie streams use HLS/fMP4 containers with `-c copy`; demuxed video SHA256 matches each original. No video re-encode or frame downscaling was used. The 16-second intro uses dependent fragments for continuous playback; it retains its original keyframes and 480 source frames.
 - Thirty large binary paths use gzip and 4 MiB fragments. Twenty-eight reconstruct their original files exactly. Two home models use an independently verified container repack: identical geometry buffers, scene tables and decoded texture pixels, with PNG-to-lossless-WebP packing and no resize. These two optimized GLB containers differ from their originals. The browser reconstructs original bytes for the existing loaders, with bounded retries and three ordered in-flight segments before exposing each chunk to the stream.
@@ -13,6 +13,8 @@ This is the separately authorized browser migration. The original UE project, or
 - HLS.js 1.7.4 is locally vendored with its license; no public CDN is needed to load the player.
 
 The sea retains live planar reflections and real moving geometry rather than a perspective-projected source photograph, which created visible rectangle seams. Native-derived lighting on the static island remains separate from live water, boat, video and calendar.
+
+Production is now published. Read `deploy/browser-v180-release.json` and `CURRENT-V32-180-RESUME.md` for actual public evidence and cold-load / renderer limits. The package release-status.json is build-time metadata, not the current site publication pointer.
 
 ## Validation and limits
 

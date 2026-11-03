@@ -1,3 +1,9 @@
+# Superseded checkpoint: V32.180 browser release is now published
+
+Read CURRENT-V32-180-RESUME.md and deploy/browser-v180-release.json. Historical failures below remain as evidence and do not replace the newer release record. Native originals remain preserved; renderer / loading limits are still disclosed.
+
+---
+
 # 浏览器迁移 V32.179：原版保留，候选版未发布
 
 用户允许迁移为浏览器版本，条件是不明显降低质感、不损失完整交互。这个条件尚未全部通过，不能将候选版合入原版或发布为完整成品。
