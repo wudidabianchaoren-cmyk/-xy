@@ -9,7 +9,7 @@ export function sailWind(material:THREE.MeshStandardMaterial,time:Clock){
   float pressure=1.05+.24*sin(windTime*.63)+.10*sin(windTime*1.19);
   float flutter=.035*sin(windTime*2.1+position.y*2.2+position.x*.7);
   transformed+=windDirection*edgePin*(0.48*pressure+flutter);
-  transformed.y-=edgePin*.025*(1.+sin(windTime*.63));`);s.fragmentShader=s.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nnormal=normalize(cross(dFdx(vViewPosition),dFdy(vViewPosition)))*faceDirection;');};material.customProgramCacheKey=()=> 'v144-restrained-sail-billowing';
+  transformed.y-=edgePin*.025*(1.+sin(windTime*.63));`);};material.customProgramCacheKey=()=> 'v144-restrained-sail-billowing';
 }
 export function foliageWind(material:THREE.MeshStandardMaterial,time:Clock,index:number){
  const old=material.onBeforeCompile,key=material.customProgramCacheKey();material.onBeforeCompile=(s,r)=>{old.call(material,s,r);s.uniforms.woodlandTime=time;s.vertexShader=s.vertexShader.replace('#include <common>','#include <common>\nuniform float woodlandTime;');s.vertexShader=s.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>

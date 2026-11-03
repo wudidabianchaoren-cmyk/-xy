@@ -73,8 +73,8 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
    let visibilityCode=water?projectionGLSL.replace('.018+p.w*.002','.35+p.w*.02'):projectionGLSL;
    if((old as T.MeshStandardMaterial).alphaMap)visibilityCode=visibilityCode.replace('return vec4(colour*visible*weight,visible*weight);','visible*=1.-smoothstep(.28,.45,dot(colour,vec3(.2126,.7152,.0722)));return vec4(colour*visible*weight,visible*weight);');
    shader.fragmentShader=visibilityCode+shader.fragmentShader;
-   const output=water?applyGLSL.replace('clamp(nativeCoverage*2.,0.,1.)','clamp(nativeCoverage*2.,0.,.86)'):applyGLSL;
-   if(water&&shader.fragmentShader.includes('#include <fog_fragment>'))shader.fragmentShader=shader.fragmentShader.replace('#include <fog_fragment>','#include <fog_fragment>\n'+output);
+   const output=water?applyGLSL.replace('clamp(nativeCoverage*2.,0.,1.)','clamp(nativeCoverage*2.,0.,mix(.86,1.,smoothstep(80.,250.,length(vNativeLightingWorld-cameraPosition))))'):applyGLSL;
+   if(water){const end=shader.fragmentShader.lastIndexOf('}');shader.fragmentShader=shader.fragmentShader.slice(0,end)+output+'\n'+shader.fragmentShader.slice(end);}
    else if(shader.fragmentShader.includes('#include <dithering_fragment>'))shader.fragmentShader=shader.fragmentShader.replace('#include <dithering_fragment>',output+'\n#include <dithering_fragment>');
    else if(shader.fragmentShader.includes('#include <colorspace_fragment>'))shader.fragmentShader=shader.fragmentShader.replace('#include <colorspace_fragment>','#include <colorspace_fragment>\n'+output);
    else throw Error('Unrecognized native lighting material output');
