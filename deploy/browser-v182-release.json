@@ -1,0 +1,273 @@
+{
+  "version": 182,
+  "provider": "Netlify",
+  "siteId": "faee03e7-3e2a-4967-ac0e-f218a7efa8ab",
+  "deployId": "6ae9c04ce6729863c69998c3",
+  "previousRejectedDeploy": "6ae97dfdd0e427878b274a08",
+  "url": "https://eloquent-puffpuff-c8613b.netlify.app",
+  "published": true,
+  "publishedAt": "2026-11-03T11:24:58.888Z",
+  "verifiedAt": "2026-11-03T11:25:47.172801+00:00",
+  "anonymousHTTPS": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "browser-runtime-v180.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "browser-resources-v180.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "navigation-v152.js",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "reading.html",
+      "status": 200,
+      "sha1Matches": true
+    },
+    {
+      "path": "scene-dist/mythology-web-v165.js",
+      "status": 200,
+      "sha1Matches": true
+    }
+  ],
+  "processingSettings": {
+    "html": {
+      "pretty_urls": false
+    },
+    "ignore_html_forms": true
+  },
+  "automaticBuildsStopped": true,
+  "publicCandidateFlow": {
+    "pass": true,
+    "steps": [
+      {
+        "name": "main-ready",
+        "pass": true,
+        "milliseconds": 61377
+      },
+      {
+        "name": "reading-entry",
+        "pass": true,
+        "milliseconds": 22458
+      },
+      {
+        "name": "cinema-book",
+        "pass": true,
+        "milliseconds": 5886
+      },
+      {
+        "name": "myth-entry",
+        "pass": true,
+        "milliseconds": 125672
+      },
+      {
+        "name": "myth-night-return",
+        "pass": true,
+        "milliseconds": 22423
+      },
+      {
+        "name": "main-desktop",
+        "pass": true,
+        "milliseconds": 113832
+      },
+      {
+        "name": "work-0",
+        "pass": true,
+        "milliseconds": 13122
+      },
+      {
+        "name": "work-1",
+        "pass": true,
+        "milliseconds": 13913
+      },
+      {
+        "name": "work-2",
+        "pass": true,
+        "milliseconds": 15872
+      },
+      {
+        "name": "work-3",
+        "pass": true,
+        "milliseconds": 13834
+      },
+      {
+        "name": "work-4",
+        "pass": true,
+        "milliseconds": 25984
+      },
+      {
+        "name": "return-home-live",
+        "pass": true,
+        "milliseconds": 2348
+      }
+    ],
+    "entry": {
+      "milliseconds": 59860.700000047684,
+      "introReason": "ended",
+      "introQuality": {
+        "totalVideoFrames": 480,
+        "droppedVideoFrames": 9
+      },
+      "opening": {
+        "total": 600,
+        "dropped": 6
+      },
+      "homeReady": false,
+      "english": true,
+      "translate": false,
+      "hiddenMyth": false
+    },
+    "desktopFilm": {
+      "time": 1.682785,
+      "frames": 1514,
+      "calendar": {
+        "date": "2026-11-03",
+        "day": "3",
+        "month": "November",
+        "weekday": "Tuesday",
+        "timeZone": "Asia/Shanghai",
+        "live": true
+      },
+      "native": false
+    },
+    "films": {
+      "films0": [
+        {
+          "id": "projectFilm",
+          "time": 1.724322,
+          "ready": 4,
+          "width": 1280,
+          "height": 546,
+          "duration": 139.56,
+          "midpointTime": 70.030953
+        }
+      ],
+      "films1": [
+        {
+          "id": "projectFilm",
+          "time": 1.697723,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 83.06666499999997,
+          "midpointTime": 41.826856
+        }
+      ],
+      "films2": [
+        {
+          "id": "projectFilm",
+          "time": 1.663993,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 208.63333100000008,
+          "midpointTime": 104.619907
+        }
+      ],
+      "films3": [
+        {
+          "id": "projectFilm",
+          "time": 1.687724,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 18,
+          "midpointTime": 9.30155
+        },
+        {
+          "id": "lifePurposeVideo",
+          "time": 1.687431,
+          "ready": 4,
+          "width": 1600,
+          "height": 900,
+          "duration": 50,
+          "midpointTime": 25.271522
+        }
+      ],
+      "films4": [
+        {
+          "id": "projectFilm",
+          "time": 1.677083,
+          "ready": 4,
+          "width": 3360,
+          "height": 1440,
+          "duration": 191.26666500000002,
+          "midpointTime": 95.924548
+        }
+      ]
+    },
+    "homeFinal": {
+      "ready": true,
+      "renderer": "Three.js / original geometry and local PBR",
+      "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "native": false,
+      "interfaceReady": true,
+      "delivery": {
+        "version": 182,
+        "browserOnly": true,
+        "segmentedVideos": 1,
+        "assembledResources": 7,
+        "errors": [],
+        "legacyWorkerCleanup": {
+          "removed": 0,
+          "complete": true
+        },
+        "originalVideos": 1,
+        "playerEngine": "HLS.js 1.7.4 / progressive MediaSource"
+      },
+      "retained": true
+    },
+    "pageErrors": [],
+    "consoleErrors": [],
+    "httpErrors": [],
+    "nativeRequests": []
+  },
+  "originalSourcePreserved": true,
+  "userVisualAcceptance": false,
+  "ordinaryEdgeVerification": {
+    "existingUserProfile": true,
+    "openingObserved": true,
+    "originalEnglishObserved": true,
+    "desktopControlsObservedAfterPreparation": true,
+    "completeFlowInExistingProfile": false,
+    "method": "Windows UI Automation, guarded to the authorised portfolio origin. Full actual-click flow uses a separate default Edge profile."
+  },
+  "paidServicesOpened": false,
+  "limitations": [
+    "First visits still download original media and large models; entry sample includes the authored 20s+16s sequence.",
+    "Browser rendering is not pixel-identical native UE.",
+    "No universal mainland/overseas network or all-GPU guarantee."
+  ],
+  "artifact": {
+    "files": 1770,
+    "bytes": 2882517937
+  },
+  "localRecoveryTest": {
+    "pass": true,
+    "failuresDeliberatelyInjected": [
+      "legacy Three vendor",
+      "home module",
+      "marble texture",
+      "HLS player"
+    ],
+    "pageErrors": 0,
+    "httpErrors": 0,
+    "allTwelveStepsPassed": true
+  },
+  "sourceBackup": {
+    "repository": "https://github.com/wudidabianchaoren-cmyk/-xy",
+    "branch": "deploy/netlify-browser-v179",
+    "sourceCommit": "5ec5bd1af52e904b3c09097a67373661b5c32dc2",
+    "pushConfirmed": true
+  }
+}
