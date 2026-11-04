@@ -1,3 +1,7 @@
+# Latest continuation: V32.188 / Cloudflare published
+
+Read CURRENT-V32-188-RESUME.md first. Formal https://xy-crg.pages.dev/ is published; quality remains partial. Netlify is quota-paused503. Old Netlify-only/availability statements below are historical. No paid resources.
+
 # CURRENT V32.183 / 2026-11-03 - PARTIAL REPAIR PUBLISHED
 
 Resume URL https://zaojing-wxy.netlify.app . Existing Netlify site faee03e7-3e2a-4967-ac0e-f218a7efa8ab renamed, no new service. Production deploy6ae9f57e53ad686e2755daca, published2026-11-03T15:32:25Z. Old generated domain is replaced. No paid plan/domain/resources; annual TOTAL CNY20. Actual owner badge-disable request rejectedHTTP422: Removing the Netlify badge is not available on this plan. Badge remains; no CSS bypass or upgrade.

@@ -1,0 +1,3084 @@
+{
+  "origin": "https://dfeb05c5.xy-crg.pages.dev",
+  "errors": [],
+  "console": [],
+  "http": [],
+  "steps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 46822,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 0,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films"
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 779606726,
+          "total": 842958458
+        }
+      }
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 9367,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 834898851,
+          "total": 907379091
+        }
+      }
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 13146,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": false
+            }
+          }
+        ],
+        "memory": {
+          "used": 953309251,
+          "total": 1019469875
+        }
+      }
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 52554,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 2,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 2,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1058114592,
+          "total": 1130817188
+        }
+      }
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 5880,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1044250400,
+          "total": 1131911496
+        }
+      }
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 15517,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1088650072,
+          "total": 1159416488
+        }
+      }
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 18335,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 5,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1108812490,
+          "total": 1174303698
+        }
+      }
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 19831,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 6,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1103308691,
+          "total": 1116772611
+        }
+      }
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 17260,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 7,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1204166389,
+          "total": 1215877977
+        }
+      }
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 61224,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 8,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1027684521,
+          "total": 1041780025
+        }
+      }
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 21330,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1058230492,
+          "total": 1067734512
+        }
+      }
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 4664,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 5319.100000023842
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 5336
+          },
+          {
+            "name": "native decoded",
+            "at": 20895.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 21486.900000095367
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 29484.600000023842
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 30206.100000023842
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 30206.200000047684
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 30206.300000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 38611.90000009537
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 38612.90000009537
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 38637.10000002384
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 38965.700000047684
+          },
+          {
+            "name": "live frame revealed",
+            "at": 39032.5
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-close",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active is-paper-reading"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 31.299999952316284,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 51689.199999928474,
+          "mythWarmReady": true,
+          "mythWarmMs": 69036
+        },
+        "frames": [
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://dfeb05c5.xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1061503328,
+          "total": 1071649436
+        }
+      }
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/2ccdd6e0115f2b1f/part-0087.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/22289cb489cd305a/part-0012.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/22289cb489cd305a/part-0066.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/fd6a349ede716b6a/part-0131.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/life-purpose/v32-72/life-purpose-with-music.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0004.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0125.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "native": [],
+  "entry": {
+    "milliseconds": 45261.300000071526,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 480,
+      "droppedVideoFrames": 31
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 41
+    },
+    "homeReady": true,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "liveEntry": {
+    "at": 45302.5,
+    "phases": [
+      {
+        "name": "module start",
+        "at": 5319.100000023842
+      },
+      {
+        "name": "WebGL context ready",
+        "at": 5336
+      },
+      {
+        "name": "native decoded",
+        "at": 20895.700000047684
+      },
+      {
+        "name": "courtyard geometry prepared",
+        "at": 21486.900000095367
+      },
+      {
+        "name": "entry film released shader preparation",
+        "at": 29484.600000023842
+      },
+      {
+        "name": "surface shaders compiled",
+        "at": 30206.100000023842
+      },
+      {
+        "name": "textures and environment ready",
+        "at": 30206.200000047684
+      },
+      {
+        "name": "entry film released GPU uploads",
+        "at": 30206.300000071526
+      },
+      {
+        "name": "colour buffers uploaded",
+        "at": 38611.90000009537
+      },
+      {
+        "name": "geometry buffers uploaded",
+        "at": 38612.90000009537
+      },
+      {
+        "name": "postprocess shaders compiled",
+        "at": 38637.10000002384
+      },
+      {
+        "name": "complete lighting variants prepared",
+        "at": 38965.700000047684
+      },
+      {
+        "name": "live frame revealed",
+        "at": 39032.5
+      }
+    ],
+    "textures": {
+      "requested": 26,
+      "finished": 26,
+      "failed": [],
+      "mode": "compile unchanged materials while original images download"
+    },
+    "discoveryButtons": 4
+  },
+  "mythDepth": {
+    "verified": [
+      {
+        "id": "coast",
+        "decodedBytes": 8294400,
+        "SHA256": "ffd804f7225ace5af886ca36c87efad4693839f6f9cd3b3a59c561cbc4d68cae",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-left",
+        "decodedBytes": 8294400,
+        "SHA256": "437205ae256340d8e81bedeb52bd5c43cf3a85a87c1d558ace4cce3e3017f285",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-right",
+        "decodedBytes": 8294400,
+        "SHA256": "46f45d5f2782043a5551187f2c6b9e3b2854edf0381386e8ec48b8a5e8ab5ba3",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-near",
+        "decodedBytes": 8294400,
+        "SHA256": "683e81e31559e340aec976f6590830a042ff6b80fc48086f6a80e82b070e6aae",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-far",
+        "decodedBytes": 8294400,
+        "SHA256": "79c9ffa9e22e406d463262c8f66c9ed5fc95540fec6a1e990b7b06c58181ccf3",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "cottage",
+        "decodedBytes": 8294400,
+        "SHA256": "ff1beae60eea199cedebe3751b3a4e1e69a35b4914ac33d5954b72e2106232fd",
+        "originalBytesVerified": true
+      }
+    ]
+  },
+  "desktopFilm": {
+    "time": 1.686657,
+    "frames": 118,
+    "calendar": {
+      "date": "2026-11-05",
+      "day": "5",
+      "month": "November",
+      "weekday": "Thursday",
+      "timeZone": "Asia/Shanghai",
+      "live": true
+    },
+    "native": false
+  },
+  "films0": [
+    {
+      "id": "projectFilm",
+      "time": 1.718525,
+      "ready": 4,
+      "width": 1280,
+      "height": 546,
+      "duration": 139.70158700000002,
+      "midpointTime": 70.166192,
+      "sustained": {
+        "wallSeconds": 6.128799999952316,
+        "mediaSeconds": 6.128407999999993,
+        "frames": 154,
+        "dropped": 0
+      }
+    }
+  ],
+  "films1": [
+    {
+      "id": "projectFilm",
+      "time": 2.096391,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 83.14782299999999,
+      "midpointTime": 43.975247,
+      "sustained": {
+        "wallSeconds": 6.1115,
+        "mediaSeconds": 6.111302000000002,
+        "frames": 183,
+        "dropped": 0
+      }
+    }
+  ],
+  "films2": [
+    {
+      "id": "projectFilm",
+      "time": 2.06979,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 208.721587,
+      "midpointTime": 104.645787,
+      "sustained": {
+        "wallSeconds": 6.148600000023841,
+        "mediaSeconds": 6.148552999999993,
+        "frames": 185,
+        "dropped": 0
+      }
+    }
+  ],
+  "films3": [
+    {
+      "id": "projectFilm",
+      "time": 1.710795,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 18,
+      "midpointTime": 9.301522,
+      "sustained": {
+        "wallSeconds": 6.123199999928475,
+        "mediaSeconds": 6.123360999999999,
+        "frames": 184,
+        "dropped": 0
+      }
+    },
+    {
+      "id": "lifePurposeVideo",
+      "time": 1.706004,
+      "ready": 4,
+      "width": 1600,
+      "height": 900,
+      "duration": 50,
+      "midpointTime": 25.33416,
+      "sustained": {
+        "wallSeconds": 6.085600000023842,
+        "mediaSeconds": 6.086031000000002,
+        "frames": 146,
+        "dropped": 0
+      }
+    }
+  ],
+  "films4": [
+    {
+      "id": "projectFilm",
+      "time": 1.737348,
+      "ready": 4,
+      "width": 3360,
+      "height": 1440,
+      "duration": 191.375873,
+      "midpointTime": 96.023021,
+      "sustained": {
+        "wallSeconds": 6.1195,
+        "mediaSeconds": 6.119809000000004,
+        "frames": 183,
+        "dropped": 0
+      }
+    }
+  ],
+  "homeFinal": {
+    "ready": true,
+    "renderer": "Three.js / original geometry and local PBR",
+    "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "native": false,
+    "interfaceReady": true,
+    "delivery": {
+      "version": 187,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 6,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 24,
+      "progressiveMedia": [
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+          "bytes": 6707738,
+          "requests": 17,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 7509.300000071526,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/manifest.json",
+          "bytes": 7362849,
+          "requests": 23,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 8666.5,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/fd6a349ede716b6a/manifest.json",
+          "bytes": 9851210,
+          "requests": 16,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 145088.90000009537,
+          "ready": true,
+          "failed": false
+        }
+      ]
+    },
+    "retained": true
+  },
+  "resourceTiming": [
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-000.bin",
+      "duration": 1841,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-001.bin",
+      "duration": 2203,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/audio-focus-v141.js?v=32.187",
+      "duration": 619.2000000476837,
+      "bytes": 463
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/home-designed-intro-v160.js",
+      "duration": 1213,
+      "bytes": 3684
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/home-thought-line-v160.js",
+      "duration": 1258.1999999284744,
+      "bytes": 4273
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/home-world-v146.js",
+      "duration": 1258.3000000715256,
+      "bytes": 48331
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/scene-loader-v146.js",
+      "duration": 1229,
+      "bytes": 1631
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-32475FOM.js",
+      "duration": 1239.1000000238419,
+      "bytes": 57846
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-C6N56PU3.js",
+      "duration": 1541.2999999523163,
+      "bytes": 103257
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-LZ7QSBR5.js",
+      "duration": 1426.6000000238419,
+      "bytes": 181749
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-DGU5PTFW.js",
+      "duration": 1627.1000000238419,
+      "bytes": 15238
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-ME7QVHGR.js",
+      "duration": 1257,
+      "bytes": 306
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-MG6POSIJ.js",
+      "duration": 1227.5,
+      "bytes": 8308
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-NK3IH7V4.js",
+      "duration": 1229.4000000953674,
+      "bytes": 2648
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-PQUBCPGM.js",
+      "duration": 1228.7000000476837,
+      "bytes": 10471
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-R5XT465O.js",
+      "duration": 1257,
+      "bytes": 69638
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-RGYTE4B5.js",
+      "duration": 1257.6999999284744,
+      "bytes": 48206
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-RTTFH4P3.js",
+      "duration": 1227.6000000238419,
+      "bytes": 393
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-SXRZKL2H.js",
+      "duration": 1226.1999999284744,
+      "bytes": 723
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-W3TROUU3.js",
+      "duration": 1227.1000000238419,
+      "bytes": 5883
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-XL3CMSHR.js",
+      "duration": 1226.7000000476837,
+      "bytes": 10946
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-YRQ74F3T.js",
+      "duration": 1211.6000000238419,
+      "bytes": 37777
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-XM4RMFZ3.js",
+      "duration": 1228.3999999761581,
+      "bytes": 1169
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/scene-loader-v146.js?v=32.187",
+      "duration": 1572.2000000476837,
+      "bytes": 55
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/dock/exhibition-dock-v160.js?v=32.187",
+      "duration": 1574.2000000476837,
+      "bytes": 58
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/home-creation-launch-v141.js?v=32.187",
+      "duration": 1570.8999999761581,
+      "bytes": 1377
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/dock/home-designed-intro-v160.js?v=32.187",
+      "duration": 1572.6000000238419,
+      "bytes": 61
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/directory-v144/app.js?v=32.187",
+      "duration": 1576.3999999761581,
+      "bytes": 53
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/refinements-v161.js?v=32.187",
+      "duration": 1573.2999999523163,
+      "bytes": 675
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/techtext-v153.js?v=32.187",
+      "duration": 1574.6000000238419,
+      "bytes": 49
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/home-thought-line-v160.js?v=32.187",
+      "duration": 1575.7999999523163,
+      "bytes": 60
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/site-refinements-v129.js?v=32.187",
+      "duration": 2030.3999999761581,
+      "bytes": 1572
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/hobby-drift-v167.js?v=32.187",
+      "duration": 1575.1999999284744,
+      "bytes": 55
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/home-live-poster-v32-77.png",
+      "duration": 1728.0999999046326,
+      "bytes": 2263493
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/wordmark-v142/wordmark.ttf",
+      "duration": 1490.6000000238419,
+      "bytes": 6552
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v183/images/d6862ea204186288f90b-1280.webp",
+      "duration": 2401.399999976158,
+      "bytes": 2901520
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v183/images/45beb4b5eff4666246b3-1280.webp",
+      "duration": 1899.9000000953674,
+      "bytes": 946642
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-002.bin",
+      "duration": 1726.7000000476837,
+      "bytes": 2655205
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/heading-interaction-v157.js?v=32.157",
+      "duration": 588.7999999523163,
+      "bytes": 1041
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/geometry-delivery/c455d984619ad440b4742a32-000.bin",
+      "duration": 12838.600000023842,
+      "bytes": 1162847
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/exhibition-dock-v160.js",
+      "duration": 467.2999999523163,
+      "bytes": 13611
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/directory-app.js",
+      "duration": 1059.3999999761581,
+      "bytes": 61227
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/hobby-drift-v167.js",
+      "duration": 423.2999999523163,
+      "bytes": 3798
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/techtext-v153.js",
+      "duration": 583.5,
+      "bytes": 9376
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v16/world-track.json",
+      "duration": 1609.5,
+      "bytes": 491802
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/home-world-v146.js?v=32.184",
+      "duration": 358.2999999523163,
+      "bytes": 48331
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/native-v165/home.jpg?v=32.165",
+      "duration": 1202.7999999523163,
+      "bytes": 705603
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/f1c1ca57d221240f2118144e.avif",
+      "duration": 1462.6999999284744,
+      "bytes": 1167046
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/7a917fde7616e6d944ebcdcf.webp",
+      "duration": 1187.3999999761581,
+      "bytes": 355936
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/fd2654a75471a5adb54a8966.webp",
+      "duration": 1645.6000000238419,
+      "bytes": 1378806
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/transfer/ef5a077afd8fadc255d0.avif",
+      "duration": 12739.100000023842,
+      "bytes": 3168578
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/transfer/1b55932dd51c21b2337f.avif",
+      "duration": 8429.799999952316,
+      "bytes": 533660
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 11916.399999976158,
+      "bytes": 2870078
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/Marble012_rough_2k.jpg",
+      "duration": 12885.199999928474,
+      "bytes": 2166701
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/sandstone_cracks_rough_2k.jpg",
+      "duration": 16923.199999928474,
+      "bytes": 1569280
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 15322,
+      "bytes": 4545235
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 15340.899999976158,
+      "bytes": 3085891
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 15343.299999952316,
+      "bytes": 2573376
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/white_sandstone_blocks_02_rough_2k.jpg",
+      "duration": 18081.899999976158,
+      "bytes": 2545799
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_rough_1k.jpg",
+      "duration": 17097.200000047684,
+      "bytes": 299757
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 17364.800000071526,
+      "bytes": 652441
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 17931.300000071526,
+      "bytes": 609525
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-01.webp",
+      "duration": 17666.600000023842,
+      "bytes": 605542
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-02.webp",
+      "duration": 17436.599999904633,
+      "bytes": 298316
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp",
+      "duration": 17437.199999928474,
+      "bytes": 380998
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-04.webp",
+      "duration": 17565.600000023842,
+      "bytes": 266104
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-05.webp",
+      "duration": 17437.200000047684,
+      "bytes": 127628
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-06.webp",
+      "duration": 17565.899999976158,
+      "bytes": 106468
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-08.webp",
+      "duration": 17666.600000023842,
+      "bytes": 141034
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-09.webp",
+      "duration": 17666.899999976158,
+      "bytes": 238268
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-11.webp",
+      "duration": 17973.600000023842,
+      "bytes": 405472
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-10.webp",
+      "duration": 17974.699999928474,
+      "bytes": 461886
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/progressive-media-v187.js",
+      "duration": 1106.1000000238419,
+      "bytes": 2271
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/loading-study/opening-poster-v32-84.png",
+      "duration": 1493.2999999523163,
+      "bytes": 247482
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/03-tile.webp",
+      "duration": 17766.899999976158,
+      "bytes": 128310
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/21-tile.webp",
+      "duration": 17767.099999904633,
+      "bytes": 97698
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/01-tile.webp",
+      "duration": 16935.200000047684,
+      "bytes": 16646
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/08-tile.webp",
+      "duration": 16936.5,
+      "bytes": 24298
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/10-tile.webp",
+      "duration": 17767.100000023842,
+      "bytes": 55816
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/12-tile.webp",
+      "duration": 17838.600000023842,
+      "bytes": 91114
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/06-tile.webp",
+      "duration": 16935,
+      "bytes": 95022
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/02-tile.webp",
+      "duration": 16934.100000023842,
+      "bytes": 48430
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/17-tile.webp",
+      "duration": 17838.700000047684,
+      "bytes": 100818
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/19-tile.webp",
+      "duration": 17839.100000023842,
+      "bytes": 68946
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-IPDBCHYA.js",
+      "duration": 1050.6999999284744,
+      "bytes": 8484
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v23/material-calibration.json",
+      "duration": 763.3999999761581,
+      "bytes": 2767
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v180/clock-engraving-17eda6a1/part-000.bin",
+      "duration": 1844,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/draco/draco_wasm_wrapper.js",
+      "duration": 454.39999997615814,
+      "bytes": 11702
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v180/clock-engraving-17eda6a1/part-001.bin",
+      "duration": 854.6000000238419,
+      "bytes": 1379959
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0000.m4s",
+      "duration": 923.2000000476837,
+      "bytes": 1088868
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0001.m4s",
+      "duration": 619.6999999284744,
+      "bytes": 479008
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0002.m4s",
+      "duration": 1543,
+      "bytes": 688822
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0003.m4s",
+      "duration": 1632.3999999761581,
+      "bytes": 309264
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0000.m4s",
+      "duration": 1625.2000000476837,
+      "bytes": 160762
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/native-v164/room.jpg?v=32.164",
+      "duration": 17794.799999952316,
+      "bytes": 548298
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/directory-hand-2JQHWOL5.woff2",
+      "duration": 1618.1999999284744,
+      "bytes": 603820
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0001.m4s",
+      "duration": 1459.6000000238419,
+      "bytes": 211524
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0002.m4s",
+      "duration": 1240.6000000238419,
+      "bytes": 266231
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0003.m4s",
+      "duration": 1178.5999999046326,
+      "bytes": 382705
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0004.m4s",
+      "duration": 831.5,
+      "bytes": 1092500
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0005.m4s",
+      "duration": 559.1000000238419,
+      "bytes": 539955
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/look-calibration.json",
+      "duration": 548.2999999523163,
+      "bytes": 3535
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/bake-audit.json",
+      "duration": 547.5,
+      "bytes": 662
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/native-v24-prefiltered-v158.json",
+      "duration": 546.5,
+      "bytes": 205
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0004.m4s",
+      "duration": 571.2999999523163,
+      "bytes": 411862
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/native-v24-prefiltered-v158.bin.gz",
+      "duration": 615.7000000476837,
+      "bytes": 201723
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0005.m4s",
+      "duration": 520.8999999761581,
+      "bytes": 275754
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0006.m4s",
+      "duration": 483.09999990463257,
+      "bytes": 260411
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0007.m4s",
+      "duration": 623,
+      "bytes": 307719
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shaders/home-programs.json",
+      "duration": 540.7000000476837,
+      "bytes": 118688
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/geometry-delivery/df2d97e1e0a32015be34a9b4-000.bin",
+      "duration": 432.7000000476837,
+      "bytes": 30759
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/934eaa61851a3c21fe784e56-000.bin",
+      "duration": 420.2999999523163,
+      "bytes": 28581
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0008.m4s",
+      "duration": 521.6999999284744,
+      "bytes": 47057
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/geometry-delivery/032cac85f53b6e8651b7c552-000.bin",
+      "duration": 1158.8999999761581,
+      "bytes": 83432
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0009.m4s",
+      "duration": 1312.2000000476837,
+      "bytes": 658991
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/display-transform.json",
+      "duration": 1292.7999999523163,
+      "bytes": 256
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/display-transform.bin",
+      "duration": 1274.5,
+      "bytes": 143748
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0010.m4s",
+      "duration": 1206.5,
+      "bytes": 538224
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/draco/draco_decoder.wasm",
+      "duration": 1154.3999999761581,
+      "bytes": 59649
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 2802.600000023842,
+      "bytes": 2573376
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0011.m4s",
+      "duration": 2779.100000023842,
+      "bytes": 366184
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0012.m4s",
+      "duration": 2413,
+      "bytes": 418007
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 6508.899999976158,
+      "bytes": 3085891
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/064aadedc37c6b8386f19d95.avif",
+      "duration": 6515.600000023842,
+      "bytes": 1832659
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0013.m4s",
+      "duration": 2604.8000000715256,
+      "bytes": 283305
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 1977.3999999761581,
+      "bytes": 4545235
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0014.m4s",
+      "duration": 1738.5,
+      "bytes": 613925
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0015.m4s",
+      "duration": 829.3000000715256,
+      "bytes": 630552
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0016.m4s",
+      "duration": 1676.3999999761581,
+      "bytes": 570716
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0017.m4s",
+      "duration": 791.7999999523163,
+      "bytes": 115114
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 1447.8000000715256,
+      "bytes": 2870078
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/367eecd041a14d01853d0c5b.webp",
+      "duration": 1438.6000000238419,
+      "bytes": 2379556
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/architecture-ao-0.png",
+      "duration": 7427.400000095367,
+      "bytes": 500917
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/architecture-ao-1.png",
+      "duration": 7326.5,
+      "bytes": 349089
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/architecture-ao-2.png",
+      "duration": 7827.300000071526,
+      "bytes": 201116
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 2208.100000023842,
+      "bytes": 652441
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 2316.1999999284744,
+      "bytes": 609525
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0018.m4s",
+      "duration": 2628.2999999523163,
+      "bytes": 447341
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/a734e5926bddab54febbe837.webp",
+      "duration": 1795.6000000238419,
+      "bytes": 296148
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0019.m4s",
+      "duration": 2040.5,
+      "bytes": 318866
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0020.m4s",
+      "duration": 2014.7999999523163,
+      "bytes": 72523
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0021.m4s",
+      "duration": 1001.7999999523163,
+      "bytes": 3806
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-BAB33W6C.js",
+      "duration": 1409.8999999761581,
+      "bytes": 10147
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/deb7a3dccbcf3c63232a6f39.avif",
+      "duration": 2710.5999999046326,
+      "bytes": 4965912
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/ca8ae6850dec30134624b83c.avif",
+      "duration": 3018,
+      "bytes": 3095908
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/9242e59be05fa19c99b7f279.avif",
+      "duration": 1727.6000000238419,
+      "bytes": 1630451
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/browser-v187/shared-RUKHF5KC.js",
+      "duration": 1622.4000000953674,
+      "bytes": 16352
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/a473259e9d3b583100cb77b7.jpg",
+      "duration": 1556.1000000238419,
+      "bytes": 2275944
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/40edce9d6c49355fad3d72ce.jpg",
+      "duration": 863.1000000238419,
+      "bytes": 2006484
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v186/shared/3d1dd79242c34c98fa7a5666.avif",
+      "duration": 861.1000000238419,
+      "bytes": 1607858
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v22/courtyard-cavity-volume.json",
+      "duration": 986.5999999046326,
+      "bytes": 297
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v22/courtyard-cavity-volume.bin",
+      "duration": 994.4000000953674,
+      "bytes": 122880
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/architecture-indirect-1.bin.z",
+      "duration": 884.2999999523163,
+      "bytes": 2337390
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/architecture-indirect-0.bin.z",
+      "duration": 1260.7999999523163,
+      "bytes": 2971697
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/reference-architecture-v24/architecture-indirect-2.bin.z",
+      "duration": 925.4000000953674,
+      "bytes": 1652784
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/04-tile.webp",
+      "duration": 885.2999999523163,
+      "bytes": 36642
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/05-tile.webp",
+      "duration": 893.3999999761581,
+      "bytes": 20352
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/11-tile.webp",
+      "duration": 1250.2000000476837,
+      "bytes": 90396
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/13-tile.webp",
+      "duration": 1259.1000000238419,
+      "bytes": 110424
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/14-tile.webp",
+      "duration": 1218.6000000238419,
+      "bytes": 45308
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/22-tile.webp",
+      "duration": 1401.6999999284744,
+      "bytes": 17576
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/09-tile.webp",
+      "duration": 1303.7000000476837,
+      "bytes": 30834
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/15-tile.webp",
+      "duration": 1338.2000000476837,
+      "bytes": 56070
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/23-tile.webp",
+      "duration": 1318,
+      "bytes": 28544
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/16-tile.webp",
+      "duration": 1330.7999999523163,
+      "bytes": 50114
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/24-tile.webp",
+      "duration": 1693.2999999523163,
+      "bytes": 104560
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/25-tile.webp",
+      "duration": 1801.8999999761581,
+      "bytes": 28068
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/26-tile.webp",
+      "duration": 1692.5,
+      "bytes": 25730
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/07-tile.webp",
+      "duration": 1703.6000000238419,
+      "bytes": 23076
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/18-tile.webp",
+      "duration": 1724.1000000238419,
+      "bytes": 25542
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/27-tile.webp",
+      "duration": 1734.5,
+      "bytes": 26824
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/20-tile.webp",
+      "duration": 1800.1000000238419,
+      "bytes": 52922
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/photography-v170/28-tile.webp",
+      "duration": 2028.3999999761581,
+      "bytes": 19968
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/ue-v159/clock-mix-ue5-cubeuv.json",
+      "duration": 1182.5,
+      "bytes": 640
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/ue-v159/clock-mix-ue5-cubeuv.bin.gz",
+      "duration": 1318,
+      "bytes": 225523
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/blender/home-camera-v32-84/camera-v84.json",
+      "duration": 487.7000000476837,
+      "bytes": 369
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0006.m4s",
+      "duration": 698.8999999761581,
+      "bytes": 677852
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0007.m4s",
+      "duration": 454.2000000476837,
+      "bytes": 17898
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0008.m4s",
+      "duration": 715.6999999284744,
+      "bytes": 466508
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0009.m4s",
+      "duration": 405.89999997615814,
+      "bytes": 10632
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0010.m4s",
+      "duration": 1563.2999999523163,
+      "bytes": 352708
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0011.m4s",
+      "duration": 1105,
+      "bytes": 15580
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0012.m4s",
+      "duration": 1164.7999999523163,
+      "bytes": 360005
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0013.m4s",
+      "duration": 513,
+      "bytes": 130713
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0014.m4s",
+      "duration": 998.5,
+      "bytes": 475426
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0015.m4s",
+      "duration": 500.09999990463257,
+      "bytes": 1162
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/v31-sand-story.js?v=32.183",
+      "duration": 667.3999999761581,
+      "bytes": 18504
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/craft-raised.webp",
+      "duration": 878.5,
+      "bytes": 53060
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/craft-strike.webp",
+      "duration": 572.1000000238419,
+      "bytes": 47962
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/camera-operator.webp",
+      "duration": 1029.4000000953674,
+      "bytes": 33030
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/applause-open.webp",
+      "duration": 719.2000000476837,
+      "bytes": 32204
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/applause-airplane.webp",
+      "duration": 888.2999999523163,
+      "bytes": 19216
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/violin-duet.webp",
+      "duration": 889.5,
+      "bytes": 36368
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/violin-return.webp",
+      "duration": 886.8999999761581,
+      "bytes": 62940
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/boxing-ring.webp",
+      "duration": 1268.7000000476837,
+      "bytes": 119672
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/boxing-left-jab.webp",
+      "duration": 1241.8999999761581,
+      "bytes": 119454
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/european-castle-simple-v2.webp",
+      "duration": 1481.3999999761581,
+      "bytes": 94884
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/envelope-volume-v32-72.png",
+      "duration": 1797.6000000238419,
+      "bytes": 1827291
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/boxing-right-jab.webp",
+      "duration": 1805.2000000476837,
+      "bytes": 115020
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/craft-motion-atlas.webp",
+      "duration": 1425.1999999284744,
+      "bytes": 442456
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/applause-motion-atlas.webp",
+      "duration": 1862.5,
+      "bytes": 318152
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/violin-motion-atlas.webp",
+      "duration": 2027.4000000953674,
+      "bytes": 702754
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/boxing-motion-atlas.webp",
+      "duration": 2385.3000000715256,
+      "bytes": 1703180
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/sand-story/camera-operator.webp",
+      "duration": 317.7000000476837,
+      "bytes": 33030
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/works/after-journey/cover-v32-92.webp",
+      "duration": 1483.6000000238419,
+      "bytes": 1354530
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/works/rural-return/poster.webp",
+      "duration": 582.2000000476837,
+      "bytes": 17938
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/journey/previews/journey-mountain-valley.webp",
+      "duration": 919.3999999761581,
+      "bytes": 174082
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/journey/previews/mist-palace-dusk.webp",
+      "duration": 577.8999999761581,
+      "bytes": 12286
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/works/mid-autumn/still-live-stage.webp",
+      "duration": 944.4000000953674,
+      "bytes": 226042
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/room-atlas/layout.json",
+      "duration": 650.7000000476837,
+      "bytes": 4656
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/room-atlas/on.webp",
+      "duration": 3364.100000023842,
+      "bytes": 4305708
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v185/room-atlas/off.webp",
+      "duration": 3569.6999999284744,
+      "bytes": 3342062
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/room-static.glb",
+      "duration": 1699,
+      "bytes": 2205652
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/room-off.png",
+      "duration": 4199.400000095367,
+      "bytes": 3124633
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/room-lamp.png",
+      "duration": 4204.799999952316,
+      "bytes": 1094829
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/room-tv.png",
+      "duration": 4653.700000047684,
+      "bytes": 1582941
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v119/berlin-night.jpg",
+      "duration": 5173.699999928474,
+      "bytes": 2674368
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/room-lighting.json",
+      "duration": 644.6000000238419,
+      "bytes": 4884
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/works/covers-v177/code-films.webp",
+      "duration": 4212.299999952316,
+      "bytes": 487956
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v120/plant/potted-plant-02.glb",
+      "duration": 1723.0999999046326,
+      "bytes": 3752232
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/room-collision.glb",
+      "duration": 3366.600000023842,
+      "bytes": 4335328
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/room-normal.png",
+      "duration": 4419.200000047684,
+      "bytes": 825693
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v123/remote-detail.glb",
+      "duration": 662.7000000476837,
+      "bytes": 486708
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 4869.599999904633,
+      "bytes": 652441
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 5556.800000071526,
+      "bytes": 609525
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "duration": 5631.399999976158,
+      "bytes": 916843
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/rough_linen/rough_linen_rough_1k.jpg",
+      "duration": 5774.899999976158,
+      "bytes": 1083725
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v123/plant/potted_plant_02_pot_diff_2k.jpg",
+      "duration": 5848,
+      "bytes": 596006
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v123/plant/potted_plant_02_pot_nor_gl_2k.jpg",
+      "duration": 5903.299999952316,
+      "bytes": 494387
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v123/plant/potted_plant_02_pot_rough_2k.jpg",
+      "duration": 5948.400000095367,
+      "bytes": 426559
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/works/covers-v161/code-films.webp",
+      "duration": 4763.800000071526,
+      "bytes": 274692
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/reading/cinema-aesthetics/page-001.jpg",
+      "duration": 4908.399999976158,
+      "bytes": 474206
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/works/covers-v137/rural.webp",
+      "duration": 4963.5,
+      "bytes": 422394
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/works/covers-v137/mid-autumn.webp",
+      "duration": 5129.700000047684,
+      "bytes": 602530
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/works/humid-southeast-asia/cover.webp",
+      "duration": 5186.600000023842,
+      "bytes": 401962
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/home-lod-worker.js?v=32.75",
+      "duration": -671.4000000953674,
+      "bytes": 10067
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/chunk-AOQCOLWL.js",
+      "duration": 974.6000000238419,
+      "bytes": 2067
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/scene-dist/chunk-CTVPEMRS.js",
+      "duration": 982.5,
+      "bytes": 156150
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/brass-normal.png",
+      "duration": 493,
+      "bytes": 277526
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/brass-roughness.png",
+      "duration": 499,
+      "bytes": 176095
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/aluminium-normal.png",
+      "duration": 1297,
+      "bytes": 224973
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/aluminium-roughness.png",
+      "duration": 1372.6000000238419,
+      "bytes": 159641
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/abs-normal.png",
+      "duration": 1423.3999999761581,
+      "bytes": 389797
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/abs-roughness.png",
+      "duration": 1498.7000000476837,
+      "bytes": 189601
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/paper-normal.png",
+      "duration": 1589.1999999284744,
+      "bytes": 418460
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/paper-roughness.png",
+      "duration": 1593.3999999761581,
+      "bytes": 177168
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/porcelain-normal.png",
+      "duration": 1828.6000000238419,
+      "bytes": 282688
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/rubber-normal.png",
+      "duration": 1927.3999999761581,
+      "bytes": 483924
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/directory-v127/materials/rubber-roughness.png",
+      "duration": 1938.8999999761581,
+      "bytes": 194572
+    },
+    {
+      "name": "https://dfeb05c5.xy-crg.pages.dev/assets/prompt-lab/prompt-structure.webp",
+      "duration": 2006.8999999761581,
+      "bytes": 278786
+    }
+  ],
+  "pass": true
+}

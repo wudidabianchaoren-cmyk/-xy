@@ -1,0 +1,216 @@
+{
+  "origin": "https://dfeb05c5.xy-crg.pages.dev",
+  "pages": [
+    {
+      "path": "learning.html",
+      "title": "\u521b\u4f5c\u7814\u4e60 \u00b7 \u9020\u5883\u624b\u8bb0",
+      "heading": "\u6162\u6162\u5b66\uff0c\u6162\u6162\u8bb0\u3002",
+      "images": [
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/prompt-lab/prompt-structure.webp",
+          "width": 2049,
+          "height": 1152
+        },
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/prompt-lab/production-pipeline.webp",
+          "width": 2049,
+          "height": 1152
+        },
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/prompt-lab/director-orchestration.webp",
+          "width": 2049,
+          "height": 1152
+        }
+      ]
+    },
+    {
+      "path": "yangjian.html",
+      "title": "\u5288\u5c71 \u00b7 \u6768\u622c\u6551\u6bcd | \u9020\u5883\u624b\u8bb0",
+      "heading": "SPLIT THE\nMOUNTAIN",
+      "images": [
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/yangjian-v108/art/scene-02.webp",
+          "width": 826,
+          "height": 460
+        },
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/yangjian-v108/art/scene-03.webp",
+          "width": 826,
+          "height": 460
+        }
+      ],
+      "storyBefore": {
+        "ready": true,
+        "activeChapter": 0,
+        "automatic": false,
+        "soundEnabled": true,
+        "soundError": null,
+        "autoAudioStatus": "running",
+        "journeyProgress": 0,
+        "journeyWanted": true,
+        "loadedArt": [
+          "02",
+          "03",
+          "01"
+        ],
+        "requestedArt": [
+          "01",
+          "02",
+          "03"
+        ],
+        "loaderMs": 334.2000000476837,
+        "scrollY": 0,
+        "maxScroll": 41075,
+        "chapters": 8,
+        "beats": 40,
+        "render": "Shared CSS3D perspective camera, world-depth picture/text planes, native reversible scroll and scene-synchronized video/audio",
+        "reducedMotion": false,
+        "videoStates": [
+          {
+            "kind": "opening",
+            "paused": false,
+            "time": 0,
+            "ready": 0,
+            "wanted": true,
+            "segment": 0,
+            "segmentEnd": null
+          }
+        ],
+        "mediaFailures": [],
+        "audio": {
+          "mixVersion": 141,
+          "scene": 0,
+          "realFoley": [
+            "stone-strike",
+            "bell",
+            "forest",
+            "footstep",
+            "wood",
+            "thunder"
+          ],
+          "enabled": true,
+          "error": null,
+          "context": "running",
+          "tracks": {
+            "rain": {
+              "gain": 0,
+              "paused": false,
+              "wanted": true
+            },
+            "water": {
+              "gain": 0,
+              "paused": false,
+              "wanted": true
+            },
+            "wind": {
+              "gain": 0,
+              "paused": false,
+              "wanted": true
+            },
+            "forest": {
+              "gain": 0,
+              "paused": true,
+              "wanted": false
+            }
+          }
+        }
+      },
+      "storyAfter": {
+        "ready": true,
+        "activeChapter": 1,
+        "automatic": false,
+        "soundEnabled": true,
+        "soundError": null,
+        "autoAudioStatus": "running",
+        "journeyProgress": 0.10482256596906278,
+        "journeyWanted": true,
+        "loadedArt": [
+          "02",
+          "03",
+          "01"
+        ],
+        "requestedArt": [
+          "01",
+          "02",
+          "03"
+        ],
+        "loaderMs": 334.2000000476837,
+        "scrollY": 900,
+        "maxScroll": 41075,
+        "chapters": 8,
+        "beats": 40,
+        "render": "Shared CSS3D perspective camera, world-depth picture/text planes, native reversible scroll and scene-synchronized video/audio",
+        "reducedMotion": false,
+        "videoStates": [
+          {
+            "kind": "opening",
+            "paused": false,
+            "time": 0.0215,
+            "ready": 4,
+            "wanted": true,
+            "segment": 0,
+            "segmentEnd": null
+          }
+        ],
+        "mediaFailures": [],
+        "audio": {
+          "mixVersion": 141,
+          "scene": 1,
+          "realFoley": [
+            "stone-strike",
+            "bell",
+            "forest",
+            "footstep",
+            "wood",
+            "thunder"
+          ],
+          "enabled": true,
+          "error": null,
+          "context": "running",
+          "tracks": {
+            "rain": {
+              "gain": 0.0693475529551506,
+              "paused": false,
+              "wanted": true
+            },
+            "water": {
+              "gain": 0.07705290615558624,
+              "paused": false,
+              "wanted": true
+            },
+            "wind": {
+              "gain": 0,
+              "paused": true,
+              "wanted": false
+            },
+            "forest": {
+              "gain": 0.12328461557626724,
+              "paused": false,
+              "wanted": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "mythology-process.html",
+      "title": "\u6d77\u6e7e\u5236\u4f5c\u624b\u8bb0 \u00b7 \u9020\u5883\u624b\u8bb0",
+      "heading": "\u8ba9\u4e00\u5e45\u753b\uff0c\n\u6210\u4e3a\u53ef\u4ee5\u505c\u7559\u7684\u5730\u65b9\u3002",
+      "images": [
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/process-v167/current-cove.webp",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "source": "https://dfeb05c5.xy-crg.pages.dev/assets/odyssey/process-v142/process-01.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "pass": true
+}

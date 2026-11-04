@@ -1,0 +1,26 @@
+{
+  "origin": "https://dfeb05c5.xy-crg.pages.dev",
+  "responses": [
+    {
+      "url": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v187/media/1be16e321875224432c93f78.mp4",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable",
+        "etag": "\"9a8bbf00305aa3c5ffca4d0f9b91f8e1\"",
+        "content-length": "7362857",
+        "content-type": "video/mp4"
+      }
+    }
+  ],
+  "errors": [],
+  "firstPlaybackMs": 813,
+  "seekMs": 10210,
+  "video": {
+    "source": "https://dfeb05c5.xy-crg.pages.dev/assets/browser-v187/media/1be16e321875224432c93f78.mp4",
+    "width": 1536,
+    "height": 864,
+    "time": 10.2071,
+    "duration": 20
+  },
+  "pass": true
+}
