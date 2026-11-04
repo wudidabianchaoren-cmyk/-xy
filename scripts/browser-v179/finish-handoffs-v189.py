@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('navigation-v152.js');s=p.read_text(encoding='utf-8');old="if(frame.contentDocument?.readyState==='complete')void painted().then(done);";new="if(frame.contentWindow?.portfolioSurfacePainted189)void painted().then(done);";assert old in s;p.write_text(s.replace(old,new),encoding='utf-8')
+p=Path('v31-works-ring-v144.js');s=p.read_text(encoding='utf-8');old="projectFrame.addEventListener('load',()=>{projectReadyCleanup();loaded=true;reveal();},{once:true});";new="projectFrame.addEventListener('load',()=>{if(projectFrame?.contentWindow?.portfolioSurfacePainted189){projectReadyCleanup();loaded=true;requestAnimationFrame(()=>requestAnimationFrame(reveal));}},{once:true});";assert old in s;p.write_text(s.replace(old,new),encoding='utf-8')

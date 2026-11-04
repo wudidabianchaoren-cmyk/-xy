@@ -1,4 +1,8 @@
 /* The introduction is one film. Normal controls return when this class ends. */
+/* Decode and composite the next film behind the opaque opening. The old blanket
+   visibility rule otherwise prevents the two warm-up frames from being painted. */
+body[data-opening-handoff-pending="true"] #voyage .home-designed-intro,
+body[data-opening-handoff-pending="true"] #voyage .home-designed-intro video{visibility:visible!important}
 body.home-intro-playing .topbar,
 body.home-intro-playing #experienceConsole,
 body.home-intro-playing #portfolioProgress,

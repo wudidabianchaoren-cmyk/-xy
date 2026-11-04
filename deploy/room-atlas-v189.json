@@ -1,0 +1,19 @@
+{
+  "version": 189,
+  "charts": 7590,
+  "geometryAndUVUnchanged": true,
+  "modes": {
+    "on": {
+      "correctedCharts": 2327,
+      "correctedPixels": 2360989,
+      "bytes": 4182742,
+      "preservedCoveredPixels": true
+    },
+    "off": {
+      "correctedCharts": 2327,
+      "correctedPixels": 2360989,
+      "bytes": 3025368,
+      "preservedCoveredPixels": true
+    }
+  }
+}

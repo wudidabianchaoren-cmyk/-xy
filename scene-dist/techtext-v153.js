@@ -1,1 +1,1 @@
-export * from "./browser-v187/techtext-v153.js";
+export * from "./browser-v189/techtext-v153.js";

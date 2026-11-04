@@ -960,7 +960,7 @@
     let loaded=false,curtainClosed=false,revealed=false;
     const reveal=()=>{if(revealed||!loaded||!curtainClosed||!projectFrame)return;revealed=true;document.body.classList.add('is-project-active');projectFrame.classList.add('is-visible');projectFrame.focus();projectFrame.contentWindow.postMessage({type:'brain-universe:project-visible'},location.origin);veil.animate([{opacity:1},{opacity:0}],{duration:reducedMotion?1:300,fill:'forwards'}).finished.then(()=>veil.remove());};
     const documentReady=event=>{if(event.origin===location.origin&&event.source===projectFrame?.contentWindow&&event.data?.type==='brain-universe:project-ready'){projectReadyCleanup();loaded=true;reveal();}};addEventListener('message',documentReady);projectReadyCleanup=()=>removeEventListener('message',documentReady);
-    projectFrame.addEventListener('load',()=>{projectReadyCleanup();loaded=true;reveal();},{once:true});document.body.appendChild(projectFrame);
+    projectFrame.addEventListener('load',()=>{if(projectFrame?.contentWindow?.portfolioSurfacePainted189){projectReadyCleanup();loaded=true;requestAnimationFrame(()=>requestAnimationFrame(reveal));}},{once:true});document.body.appendChild(projectFrame);
     if(pushHistory)history.pushState({brainWork:url.searchParams.get('work')},'',new URL('./v31.html?v=32.152',location.href));
     setTimeout(()=>{curtainClosed=true;reveal();},reducedMotion?100:820);
   }

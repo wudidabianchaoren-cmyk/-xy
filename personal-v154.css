@@ -25,3 +25,5 @@
 #personalPage ::selection{background:#55634a;color:#f6eedb}
 #personalPage :focus-visible{outline:2px solid #55634a;outline-offset:5px}
 @media(max-width:1200px){#personalPage{column-gap:45px;padding-left:5vw;padding-right:5vw}#personalPage .personal-resume-grid{column-gap:28px}}
+
+#personalPage .personal-contact{align-items:center;gap:12px 24px}#personalPage .personal-contact>a,#personalPage .personal-contact>.personal-wechat{font:inherit;white-space:nowrap;color:inherit}#personalPage .personal-contact>a>span{color:#62674e}

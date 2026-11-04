@@ -76,3 +76,7 @@
 /assets/browser-v186/*
 !/assets/browser-v186/shaders/
 !/assets/browser-v186/shaders/**
+!/CURRENT-V32-189-RESUME.md
+!/DEPLOY-CLOUDFLARE-BROWSER-V189.md
+!/assets/browser-v189/
+!/assets/browser-v189/**
