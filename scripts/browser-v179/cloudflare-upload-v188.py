@@ -21,7 +21,7 @@ for f in files:
  if batch and size+f['bytes']>8*1024*1024:batches.append(batch);batch=[];size=0
  batch.append(f);size+=f['bytes']
 if batch:batches.append(batch)
-print(json.dumps({'files':len(files),'MiB':round(sum(f['bytes']for f in files)/1048576,1),'batches':len(batches),'workers':4,'directCloudflareTransport':True,'previouslyIndexed':len(unique)-len(missing)}),flush=True)
+print(json.dumps({'files':len(files),'MiB':round(sum(f['bytes']for f in files)/1048576,1),'batches':len(batches),'workers':8,'directCloudflareTransport':True,'previouslyIndexed':len(unique)-len(missing)}),flush=True)
 results=[];started=time.monotonic()
 def upload(batch):
  global jwt
@@ -34,7 +34,7 @@ def upload(batch):
    if attempt:return{'ok':False,'paths':[f['path']for f in batch],'error':type(error).__name__,'detail':str(error)[:120]}
    if isinstance(error,urllib.error.HTTPError)and error.code in[401,403]:
     with lock:jwt=request(endpoint)['jwt']
-with concurrent.futures.ThreadPoolExecutor(max_workers=4)as pool:
+with concurrent.futures.ThreadPoolExecutor(max_workers=8)as pool:
  for job in concurrent.futures.as_completed([pool.submit(upload,b)for b in batches]):
   result=job.result()
   if result.get('cancelled'):continue

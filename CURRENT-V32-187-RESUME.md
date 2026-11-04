@@ -1,3 +1,7 @@
+# Latest continuation: V32.188 / Cloudflare published
+
+Read CURRENT-V32-188-RESUME.md first. Formal https://xy-crg.pages.dev/ is published; quality remains partial. Netlify is quota-paused503. Old Netlify-only/availability statements below are historical. No paid resources.
+
 # V32.187 / 2026-11-04 / NETLIFY ACCOUNT PAUSED, LOCAL CANDIDATE
 
 URGENT: Formal URL currently returns503 usage_exceeded. Authenticated API confirms disabled=true, disabled_reason='Account usage exceeded for credits', enforced at2026-11-04T12:57:46.878Z (20:57Shanghai). Free300credits exhausted. Next usage period2026-12-02T00:00:00-08:00 (16:00Shanghai). Previous published-deploy ID remains, but do NOT call the site currently available. Draft1 remained preparing because account is paused; its early uploader exit was not upload success. No further public QA/uploads/promotions while paused. Local source later superseded draft1's frozen manifest; do not resume draft1 with changed files.

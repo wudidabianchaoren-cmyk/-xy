@@ -1,0 +1,121 @@
+{
+  "version": 188,
+  "status": "published-partial-repair",
+  "url": "https://xy-crg.pages.dev/",
+  "project": "xy",
+  "productionId": "ff815b36-8aa9-41e9-a345-733898862c9e",
+  "publishedAtUTC": "2026-11-04T19:26:38.32559Z",
+  "publishedAtShanghai": "2026-11-05 03:26:38",
+  "previewId": "dfeb05c5-3b96-4626-b23c-faa17af22e41",
+  "sourceBranch": "deploy/netlify-browser-v179",
+  "applicationSourceCommit": "a6c87179762e45a32760d7c0ee6cdbccc4da8353",
+  "migrationPreparationCommit": "4fa0023",
+  "originalPreserved": true,
+  "workstationBackendRequired": false,
+  "usesFunctions": false,
+  "annualBudgetCNY": 20,
+  "purchases": false,
+  "automaticGitDeployments": false,
+  "artifact": {
+    "files": 3083,
+    "bytes": 3966969700,
+    "largestFileBytes": 25344593,
+    "excludedUnusedSourceCopies": [
+      "assets/odyssey/compact-v134/island-radiance.png",
+      "assets/works/rural-return/original-film-v32-92.mp4"
+    ]
+  },
+  "verification": {
+    "previewFullFlowPass": true,
+    "previewSteps": 12,
+    "previewNativeRequests": [],
+    "sixFilmSustainedSamples": [
+      {
+        "wallSeconds": 6.128799999952316,
+        "mediaSeconds": 6.128407999999993,
+        "frames": 154,
+        "dropped": 0
+      },
+      {
+        "wallSeconds": 6.1115,
+        "mediaSeconds": 6.111302000000002,
+        "frames": 183,
+        "dropped": 0
+      },
+      {
+        "wallSeconds": 6.148600000023841,
+        "mediaSeconds": 6.148552999999993,
+        "frames": 185,
+        "dropped": 0
+      },
+      {
+        "wallSeconds": 6.123199999928475,
+        "mediaSeconds": 6.123360999999999,
+        "frames": 184,
+        "dropped": 0
+      },
+      {
+        "wallSeconds": 6.085600000023842,
+        "mediaSeconds": 6.086031000000002,
+        "frames": 146,
+        "dropped": 0
+      },
+      {
+        "wallSeconds": 6.1195,
+        "mediaSeconds": 6.119809000000004,
+        "frames": 183,
+        "dropped": 0
+      }
+    ],
+    "extraPreviewPagesPass": true,
+    "productionHashesAllMatch": true,
+    "productionHashCount": 51,
+    "browserHTTPStatus": 200,
+    "directBrowserHTTPStatus": 200,
+    "productionSystemRouteAll12ActionsPassed": true,
+    "productionSystemStrictPass": false,
+    "productionSystemConsole": [
+      "Failed to load resource: net::ERR_CONNECTION_CLOSED https://xy-crg.pages.dev/assets/native-v171/room.jpg?v=32.171"
+    ],
+    "productionDirectStrictPass": false,
+    "productionDirectFailure": "frame.waitForFunction: Timeout 120000ms exceeded.",
+    "productionDirectConsole": [
+      "THREE.WebGLProgram: Shader Error 1282 - VALIDATE_STATUS false\n\nMaterial Name: \nMaterial Type: MeshDepthMaterial\n\nProgram Info Log: \n\n https://xy-crg.pages.dev/scene-dist/browser-v187/shared-LZ7QSBR5.js",
+      "THREE.WebGLProgram: Shader Error 1282 - VALIDATE_STATUS false\n\nMaterial Name: \nMaterial Type: MeshDepthMaterial\n\nProgram Info Log: \n\n https://xy-crg.pages.dev/scene-dist/browser-v187/shared-LZ7QSBR5.js",
+      "THREE.WebGLProgram: Shader Error 1282 - VALIDATE_STATUS false\n\nMaterial Name: \nMaterial Type: MeshDepthMaterial\n\nProgram Info Log: \n\n https://xy-crg.pages.dev/scene-dist/browser-v187/shared-LZ7QSBR5.js"
+    ],
+    "nativeFallbackPlaybackAndSeekPassed": true,
+    "byteRangeResponseStatus": 200
+  },
+  "performance": {
+    "previewHomeLiveSeconds": 45.3025,
+    "previewFilmsEndSeconds": 45.26130000007153,
+    "previewStepsSeconds": {
+      "main-ready": 46.822,
+      "reading-entry": 9.367,
+      "cinema-book": 13.146,
+      "myth-entry": 52.554,
+      "myth-night-return": 5.88,
+      "main-desktop": 15.517,
+      "work-0": 18.335,
+      "work-1": 19.831,
+      "work-2": 17.26,
+      "work-3": 61.224,
+      "work-4": 21.33,
+      "return-home-live": 4.664
+    },
+    "formalSystemFilmsEndSeconds": 42.95889999997616,
+    "originalNativePixelParity": false,
+    "universalZeroStutter": false
+  },
+  "allRequirementsComplete": false,
+  "qualityApproved": false,
+  "remaining": [
+    "Prior Iris Xe default myth performance around13-15FPS; original off-axis seams remain.",
+    "Formal system route had1ERR_CONNECTION_CLOSED on a backup room poster despite all12actions passing.",
+    "Formal direct-route comparison had3MeshDepthMaterial validation errors and final-film midpoint seek timed out120s.",
+    "Opening/intro frame drops and cold preparation still occur.",
+    "Fetch Range returns200whole file; actual native fallback plays and seeks, but HTTP206 support is not established."
+  ],
+  "noFurtherProductionLoop": true
+}

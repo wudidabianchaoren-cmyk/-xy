@@ -10,22 +10,27 @@
     "previewDeploymentSetting": "none"
   },
   "latestDeployment": {
-    "id": "7bbb14d0-8638-4479-814a-94dfd836c270",
-    "url": "https://7bbb14d0.xy-crg.pages.dev",
+    "id": "ff815b36-8aa9-41e9-a345-733898862c9e",
+    "url": "https://ff815b36.xy-crg.pages.dev",
     "environment": "production",
     "latest_stage": {
-      "name": "build",
-      "started_on": "2026-11-04T15:51:35.078067Z",
-      "ended_on": "2026-11-04T15:51:40.935151Z",
-      "status": "failure"
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-11-04T19:26:38.32559Z",
+      "status": "success"
     },
-    "uses_functions": null
+    "uses_functions": false
   },
   "canonicalDeployment": {
-    "id": null,
-    "url": null,
-    "environment": null,
-    "latest_stage": null,
-    "uses_functions": null
+    "id": "ff815b36-8aa9-41e9-a345-733898862c9e",
+    "url": "https://ff815b36.xy-crg.pages.dev",
+    "environment": "production",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-11-04T19:26:38.32559Z",
+      "status": "success"
+    },
+    "uses_functions": false
   }
 }
