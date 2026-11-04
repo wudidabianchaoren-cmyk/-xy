@@ -1,0 +1,60 @@
+{
+  "version": 186,
+  "productionURL": "https://zaojing-wxy.netlify.app",
+  "candidateDeploy": "6aeb132267752522e800789e",
+  "published": true,
+  "productionRuntimeSmokePass": true,
+  "allRequirementsComplete": false,
+  "qualityApproved": false,
+  "findSkillsInstalledAndUsed": true,
+  "annualBudgetCNY": 20,
+  "purchases": 0,
+  "originalInputsPreserved": true,
+  "publicDraftFunctionalFlowPass": true,
+  "publicDraftHomeSeconds": 55.9814,
+  "publicDraftFilmsSeconds": 61.6897,
+  "knownLimits": [
+    "formal cold mythology still about79s",
+    "integrated GPU myth about15FPS in latest8second baseline",
+    "source-field/off-axis seam limitations remain",
+    "formal first entry still longer than authored36second films"
+  ],
+  "publishedAt": "2026-11-04T11:34:11.510Z",
+  "productionDeploy": "6aeb132267752522e800789e",
+  "sourceCommit": "b7e778297ef8b9d69626c5f5a9e7aaf3dcf64894",
+  "productionArtifactHashesVerified": true,
+  "productionHashCount": 50,
+  "productionFullFlowPass": true,
+  "productionFilmContinuityPass": true,
+  "productionHomeLiveSeconds": 59.896600000023845,
+  "productionFilmsCompleteSeconds": 62.27470000004768,
+  "productionMythStepSeconds": 78.863,
+  "productionInitialFilmFrames": {
+    "milliseconds": 62274.700000047684,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 484,
+      "droppedVideoFrames": 6
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 11
+    },
+    "homeReady": true,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "performanceCriteriaPass": false,
+  "stop_builds": true,
+  "formalFlowSustainedFrameCounters": "null due DOM object serialization in first flow recorder; explicit counters corrected and six standalone film samples independently passed",
+  "unpublishedDepthCandidate": {
+    "deploy": "6aeb26289e44d1c1a50e1a77",
+    "published": false,
+    "localOriginalDepthSHA256Pass": true,
+    "publicFlowPass": false,
+    "publicStepsPassed": 12,
+    "consoleErrors": 18,
+    "failure": "HTTP2 protocol errors; cold home199.10s; not promoted"
+  }
+}

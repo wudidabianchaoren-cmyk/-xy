@@ -1,0 +1,39 @@
+{
+  "version": 186,
+  "installedAt": "2026-11-04",
+  "scope": "existing user skill root",
+  "skills": [
+    {
+      "name": "find-skills",
+      "source": "https://github.com/vercel-labs/skills/tree/main/skills/find-skills",
+      "installed": true,
+      "readAndUsed": true,
+      "SKILLSHA256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f"
+    },
+    {
+      "name": "threejs-performance",
+      "source": "https://github.com/cloudai-x/threejs-skills/tree/main/skills/threejs-performance",
+      "installed": true,
+      "readAndUsed": true,
+      "SKILLSHA256": "dacbf6a43ed280bdfcda2ce9fcf7a3f0ae54c25ed264e62f6e9a0117d6534285"
+    },
+    {
+      "name": "web-perf",
+      "source": "https://github.com/cloudflare/skills/tree/main/skills/web-perf",
+      "installed": true,
+      "readAndUsed": true,
+      "SKILLSHA256": "0160c9e7f1b73eb80347efd899a6082219d43bb9de30424667c8017628a48469"
+    }
+  ],
+  "findCommands": [
+    "npx.cmd --yes skills find web performance",
+    "npx.cmd --yes skills find threejs performance"
+  ],
+  "browserPerfMCPAvailable": false,
+  "measurementTools": [
+    "Playwright Edge",
+    "ResourceTiming",
+    "EXT_disjoint_timer_query_webgl2",
+    "KHR_parallel_shader_compile"
+  ]
+}
