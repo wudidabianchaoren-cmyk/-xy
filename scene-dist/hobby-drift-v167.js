@@ -1,1 +1,1 @@
-export * from "./browser-v186/hobby-drift-v167.js";
+export * from "./browser-v187/hobby-drift-v167.js";

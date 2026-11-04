@@ -8,7 +8,7 @@ export function sortedFoliage(sources:T.InstancedMesh[],camera:T.Camera,state:an
   const material=source.material as T.MeshStandardMaterial,index=source.geometry.index,position=source.geometry.getAttribute('position');
   if(!material.alphaMap||!index||index.count%6)continue;
   const centers=new Float32Array(index.count/6*3);for(let i=0;i<index.count;i+=6)for(let j=0;j<6;j++){const id=index.getX(i+j);for(let c=0;c<3;c++)centers[i/6*3+c]+=position.getComponent(id,c)/6;}
-  source.geometry.computeBoundingSphere();source.updateWorldMatrix(true,false);const matrices=Array.from({length:source.count},(_,i)=>{source.getMatrixAt(i,matrix);return matrix.clone();});
+  if(!source.geometry.userData.indexedBounds187)source.geometry.computeBoundingSphere();source.updateWorldMatrix(true,false);const matrices=Array.from({length:source.count},(_,i)=>{source.getMatrixAt(i,matrix);return matrix.clone();});
   const colors=source.instanceColor?Array.from({length:source.count},(_,i)=>{source.getColorAt(i,colour);return colour.clone();}):null;
   const bins:T.InstancedMesh[]=[];
   for(let elevation=0;elevation<3;elevation++)for(let azimuth=0;azimuth<16;azimuth++){

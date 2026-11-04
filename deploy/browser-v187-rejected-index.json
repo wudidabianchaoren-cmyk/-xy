@@ -1,0 +1,353 @@
+{
+  "errors": [],
+  "published": false,
+  "index": {
+    "records": [
+      {
+        "vertices": 18432,
+        "unique": 12288,
+        "indexEntries": 18432,
+        "changedReferences": 6144,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 130764,
+        "unique": 28191,
+        "indexEntries": 130764,
+        "changedReferences": 102573,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 8712,
+        "unique": 6120,
+        "indexEntries": 8712,
+        "changedReferences": 2592,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 14040,
+        "unique": 6422,
+        "indexEntries": 14040,
+        "changedReferences": 7618,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 528,
+        "unique": 288,
+        "indexEntries": 528,
+        "changedReferences": 240,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 2916,
+        "unique": 1121,
+        "indexEntries": 2916,
+        "changedReferences": 1795,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 46446,
+        "unique": 11067,
+        "indexEntries": 46446,
+        "changedReferences": 35379,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 2592,
+        "unique": 973,
+        "indexEntries": 2592,
+        "changedReferences": 1619,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 2592,
+        "unique": 1004,
+        "indexEntries": 2592,
+        "changedReferences": 1588,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 2592,
+        "unique": 1012,
+        "indexEntries": 2592,
+        "changedReferences": 1580,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 11880,
+        "unique": 2004,
+        "indexEntries": 11880,
+        "changedReferences": 9876,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 6528,
+        "unique": 1100,
+        "indexEntries": 6528,
+        "changedReferences": 5428,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 9360,
+        "unique": 1578,
+        "indexEntries": 9360,
+        "changedReferences": 7782,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 7548,
+        "unique": 1272,
+        "indexEntries": 7548,
+        "changedReferences": 6276,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 2586,
+        "unique": 1205,
+        "indexEntries": 2586,
+        "changedReferences": 1381,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 11664,
+        "unique": 1952,
+        "indexEntries": 11664,
+        "changedReferences": 9712,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 10800,
+        "unique": 1804,
+        "indexEntries": 10800,
+        "changedReferences": 8996,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 16680,
+        "unique": 2856,
+        "indexEntries": 16680,
+        "changedReferences": 13824,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 11736,
+        "unique": 2424,
+        "indexEntries": 11736,
+        "changedReferences": 9312,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 76,
+        "unique": 54,
+        "indexEntries": 144,
+        "changedReferences": 22,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 76,
+        "unique": 54,
+        "indexEntries": 144,
+        "changedReferences": 22,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 40,
+        "unique": 30,
+        "indexEntries": 72,
+        "changedReferences": 10,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 40,
+        "unique": 30,
+        "indexEntries": 72,
+        "changedReferences": 10,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 40,
+        "unique": 30,
+        "indexEntries": 72,
+        "changedReferences": 10,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 40,
+        "unique": 30,
+        "indexEntries": 72,
+        "changedReferences": 10,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 76,
+        "unique": 54,
+        "indexEntries": 144,
+        "changedReferences": 22,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 76,
+        "unique": 54,
+        "indexEntries": 144,
+        "changedReferences": 22,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 40,
+        "unique": 30,
+        "indexEntries": 72,
+        "changedReferences": 10,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 40,
+        "unique": 30,
+        "indexEntries": 72,
+        "changedReferences": 10,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 40,
+        "unique": 30,
+        "indexEntries": 72,
+        "changedReferences": 10,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 40,
+        "unique": 30,
+        "indexEntries": 72,
+        "changedReferences": 10,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 10848,
+        "unique": 9640,
+        "indexEntries": 10848,
+        "changedReferences": 1208,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 9000,
+        "unique": 8000,
+        "indexEntries": 9000,
+        "changedReferences": 1000,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 11700,
+        "unique": 10400,
+        "indexEntries": 11700,
+        "changedReferences": 1300,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 9648,
+        "unique": 8133,
+        "indexEntries": 9648,
+        "changedReferences": 1515,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 4068,
+        "unique": 1200,
+        "indexEntries": 4068,
+        "changedReferences": 2868,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 3288,
+        "unique": 968,
+        "indexEntries": 3288,
+        "changedReferences": 2320,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 4356,
+        "unique": 1284,
+        "indexEntries": 4356,
+        "changedReferences": 3072,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 2916,
+        "unique": 864,
+        "indexEntries": 2916,
+        "changedReferences": 2052,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 4356,
+        "unique": 1284,
+        "indexEntries": 4356,
+        "changedReferences": 3072,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      },
+      {
+        "vertices": 2323,
+        "unique": 2202,
+        "indexEntries": 11688,
+        "changedReferences": 113,
+        "trianglesPreserved": true,
+        "attributeBitsCompared": true
+      }
+    ],
+    "geometries": 617,
+    "attributeSets": 521,
+    "triangleOrderPreserved": true,
+    "sourceAssetsModified": false
+  },
+  "indexed": {
+    "fps": 13.958995450863089,
+    "profile": {
+      "frames": 137,
+      "calls": 157,
+      "triangles": 4990944,
+      "cpuMs": 17.700000047683716,
+      "gpuMs": 59.226666,
+      "geometries": 124,
+      "textures": 83,
+      "cpuP95Ms": 28
+    }
+  }
+}

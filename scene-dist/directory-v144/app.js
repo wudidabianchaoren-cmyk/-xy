@@ -1,1 +1,1 @@
-export * from "../browser-v186/directory-app.js";
+export * from "../browser-v187/directory-app.js";

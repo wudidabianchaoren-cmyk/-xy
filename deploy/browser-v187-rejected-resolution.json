@@ -1,0 +1,63 @@
+{
+  "diagnosticOnly": true,
+  "originalAssetsModified": false,
+  "errors": [],
+  "samples": [
+    {
+      "scale": 1,
+      "fps": 12.966287651988901,
+      "profile": {
+        "frames": 118,
+        "calls": 203,
+        "triangles": 5461070,
+        "cpuMs": 15.200000047683716,
+        "gpuMs": 60.960781,
+        "geometries": 124,
+        "textures": 83,
+        "cpuP95Ms": 24.100000023841858
+      }
+    },
+    {
+      "scale": 0.75,
+      "fps": 18.71958068139274,
+      "profile": {
+        "frames": 292,
+        "calls": 152,
+        "triangles": 5006152,
+        "cpuMs": 12.300000071525574,
+        "gpuMs": 45.281666,
+        "geometries": 124,
+        "textures": 83,
+        "cpuP95Ms": 23.800000071525574
+      }
+    },
+    {
+      "scale": 0.6,
+      "fps": 22.35348477077489,
+      "profile": {
+        "frames": 503,
+        "calls": 167,
+        "triangles": 4983352,
+        "cpuMs": 13,
+        "gpuMs": 38.215677,
+        "geometries": 124,
+        "textures": 83,
+        "cpuP95Ms": 21.5
+      }
+    },
+    {
+      "scale": 0.5,
+      "fps": 24.97783217424312,
+      "profile": {
+        "frames": 734,
+        "calls": 162,
+        "triangles": 4975736,
+        "cpuMs": 6.899999976158142,
+        "gpuMs": 35.208125,
+        "geometries": 124,
+        "textures": 83,
+        "cpuP95Ms": 19.5
+      }
+    }
+  ]
+}

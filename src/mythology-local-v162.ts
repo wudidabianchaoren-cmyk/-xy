@@ -35,6 +35,7 @@ import {coastalLifeV158,seaGridV155} from './coastal-life-v158';
 import {attachUECoveReflectionV158} from './ue-cove-reflection-v158';
 
 const host=document.getElementById('odysseyScene')!,canvas=host.querySelector('canvas')!;
+const nativeFieldManifest187=new URLSearchParams(location.search).get('legacyDepth187')==='1'?'./assets/browser-v179/myth-field/manifest.json':'./assets/browser-v186/depth-fields/manifest.json';
  const state:any={version:164,ready:false,frames:0,giant:false,ships:1,scope:'compact coastal cove',native:'blender/mythology-v32-146/rigged-fleet-v148.blend',renderer:new URLSearchParams(location.search).get('renderer')==='web'?'explicit web authoring view':'native UE viewport connecting',paused:new URLSearchParams(location.search).get('freezeScene')==='1'};
 (window as any).odysseyState=state;
 const help=host.querySelector<HTMLElement>('.local-cove-help');if(help)help.textContent='左键环顾 · 右键平移 · 滚轮前后 · 双击岸上靠近';
@@ -55,7 +56,7 @@ async function boot(){
  camera.aspect=host.clientWidth/Math.max(1,host.clientHeight);camera.updateProjectionMatrix();const bakeCapture=new URLSearchParams(location.search).get('bakeCapture')==='myth',nativeRequired=bakeCapture||new URLSearchParams(location.search).get('renderer')!=='web';canvas.style.opacity=nativeRequired?'0':'1';state.nativeSurfaceChanged=(ready:boolean)=>{canvas.style.opacity=nativeRequired?'0':state.ready?'1':'0';if(ready){const loading=host.querySelector<HTMLElement>('.odyssey-preparing');if(loading)loading.hidden=true;state.firstNativeFrameAt??=performance.now();}};
  if(nativeRequired)void nativeUESurface(host,'myth',()=>({position:camera.position.toArray(),target:controls.lookTarget.toArray(),fov:camera.fov,night:(state.nightMix??0)>.5,paused:state.paused}),state).then(api=>{state.nativeController=api;state.renderer='Unreal Engine 5.8.4 complete live viewport / original controls and collision';}).catch(e=>{state.nativeFallback=String(e)});
  const earlyControl=()=>{if(state.ready)return;if(!document.hidden)controls.update();requestAnimationFrame(earlyControl);};requestAnimationFrame(earlyControl);
- const fieldNetworkReady=!nativeRequired&&new URLSearchParams(location.search).get('nativeLightfield')==='1'?preloadNativeLighting186('./assets/browser-v179/myth-field/manifest.json').then(pack=>Promise.all([...pack.parts.values()])):Promise.resolve();fieldNetworkReady.catch(()=>{});
+ const fieldNetworkReady=!nativeRequired&&new URLSearchParams(location.search).get('nativeLightfield')==='1'?preloadNativeLighting186(nativeFieldManifest187).then(pack=>Promise.all([...pack.parts.values()])):Promise.resolve();fieldNetworkReady.catch(()=>{});
 
  const sunDirection=new THREE.Vector3(-83,42,45).normalize();
  const sun=new THREE.DirectionalLight(new THREE.Color().setRGB(1,.69,.36),9.5);sun.target.position.set(-7,8,-20);sun.position.copy(sun.target.position).addScaledVector(sunDirection,120);
@@ -270,7 +271,7 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
   `+water.material.fragmentShader.slice(waterEnd);water.material.needsUpdate=true;
   skyMaterial.fragmentShader=`uniform sampler2D nativeDaySky,nativeNightSky;uniform float nightFactor;varying vec3 direction;void main(){vec3 d=normalize(direction);vec2 uv=vec2(clamp(d.y/.25,0.,1.),.5);gl_FragColor=vec4(mix(texture2D(nativeDaySky,uv).rgb,texture2D(nativeNightSky,uv).rgb,nightFactor),1.);\n#include <colorspace_fragment>\n}`;skyMaterial.needsUpdate=true;
   if(new URLSearchParams(location.search).has('leafLambert185')){const converted=new Map<THREE.Material,THREE.Material>();for(const o of[...foliageMeshes,meadow]){const old=o.material as THREE.MeshStandardMaterial;let m=converted.get(old);if(!m){m=new THREE.MeshLambertMaterial({color:old.color,emissive:old.emissive,emissiveIntensity:old.emissiveIntensity,vertexColors:old.vertexColors,map:old.map,alphaMap:old.alphaMap,alphaTest:old.alphaTest,side:old.side,transparent:old.transparent,opacity:old.opacity});m.name=old.name;m.alphaToCoverage=old.alphaToCoverage;m.onBeforeCompile=old.onBeforeCompile;m.customProgramCacheKey=old.customProgramCacheKey;converted.set(old,m);}o.material=m;}state.leafDiffuseVertexLighting=true;}
-  nativeLighting=await attachBakedLightingV179(scene,'./assets/browser-v179/myth-field/manifest.json',state,renderer);nativeLighting.update(camera,1);
+  nativeLighting=await attachBakedLightingV179(scene,nativeFieldManifest187,state,renderer);nativeLighting.update(camera,1);
   if(new URLSearchParams(location.search).has('nativeLeafRadiance186'))try{leafRadiance=await applyLeafRadiance186(foliageMeshes,state);}catch(error){state.leafRadianceError=String(error);}
  }
  if(!nativeRequired){await renderer.compileAsync(scene,camera);renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);}

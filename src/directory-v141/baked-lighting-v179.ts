@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {readNativeDepth186} from '../native-depth-delivery-v186';
 
 type Pose={id:string;on:string;off:string;depth:string;depthWidth:number;depthHeight:number;near:number;far:number;position:number[];direction:number[];viewProjection:number[];sourceScene:string};
 type Loaded={pose:Pose;colour:T.Texture;depth:T.DataTexture;position:T.Vector3;direction:T.Vector3;matrix:T.Matrix4};
@@ -57,7 +58,7 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
   if(pose.sourceScene!==manifest.scene)throw Error('Wrong source scene in native lighting field');
   const [on,off,res]=await(preloaded?.parts.get(pose.id)||Promise.all([loader.loadAsync(new URL(pose.on,url).href),loader.loadAsync(new URL(pose.off,url).href),fetch(new URL(pose.depth,url))]));
   if(!res.ok)throw Error('Native lighting visibility data unavailable');
-  const bytes=await new Response(res.body!.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+  const bytes=await readNativeDepth186(res,pose,state);
   if(bytes.byteLength!==pose.depthWidth*pose.depthHeight*4)throw Error('Incomplete native lighting visibility data');
   const atlas=document.createElement('canvas');atlas.width=on.image.width;atlas.height=on.image.height*2;const context=atlas.getContext('2d')!;context.drawImage(on.image,0,0);context.drawImage(off.image,0,on.image.height);
   const colour=new T.CanvasTexture(atlas);colour.colorSpace=T.SRGBColorSpace;colour.anisotropy=8;colour.minFilter=T.LinearMipmapLinearFilter;colour.magFilter=T.LinearFilter;on.dispose();off.dispose();

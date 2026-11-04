@@ -19,7 +19,7 @@ export async function uploadTextureCooperatively(renderer:THREE.WebGLRenderer,te
  const channels=texture.format===THREE.RGBAFormat?4:texture.format===THREE.RGBFormat?3:0;
  if(!channels){renderer.initTexture(texture);return;}
  if(sharePrepared&&!raw&&channels===4&&typeof Worker!=='undefined'&&typeof OffscreenCanvas!=='undefined')try{raw=await texturePixels186(originalImage,width,height);workerPixels=true;}catch{/* Keep the original bounded strip path on unsupported browsers. */}
- const canvas=!raw?new OffscreenCanvas(width,64):null,context=canvas?.getContext('2d',{willReadFrequently:true});
+ const canvas=!raw?(typeof OffscreenCanvas!=='undefined'?new OffscreenCanvas(width,64):Object.assign(document.createElement('canvas'),{width,height:64})):null,context=canvas?.getContext('2d',{willReadFrequently:true});
  // glTF texture transforms clone Texture objects while sharing their Source.
  // A temporary allocation image must never replace that shared source's pixels.
  texture.source=new THREE.Source(originalImage);

@@ -1,0 +1,136 @@
+{
+  "version": 187,
+  "fallbackImages": [
+    {
+      "source": "/assets/browser-v185/transfer/035d371d707cdf8cd137.avif",
+      "target": "/assets/browser-v187/images/035d371d707cdf8cd137cd5e.webp",
+      "width": 4096,
+      "height": 4096,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 12205343,
+      "bytes": 22221478
+    },
+    {
+      "source": "/assets/browser-v185/transfer/049c276b5157c1a06b5a.avif",
+      "target": "/assets/browser-v187/images/049c276b5157c1a06b5a5d07.webp",
+      "width": 4096,
+      "height": 4096,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 8792362,
+      "bytes": 20160572
+    },
+    {
+      "source": "/assets/browser-v185/transfer/1b55932dd51c21b2337f.avif",
+      "target": "/assets/browser-v187/images/1b55932dd51c21b2337f165f.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 533660,
+      "bytes": 676682
+    },
+    {
+      "source": "/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "target": "/assets/browser-v187/images/5d8d876b666354a866f35312.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 2573376,
+      "bytes": 5801562
+    },
+    {
+      "source": "/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "target": "/assets/browser-v187/images/85ab21c309bd8f0999155c99.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 3085891,
+      "bytes": 5504532
+    },
+    {
+      "source": "/assets/browser-v185/transfer/ef5a077afd8fadc255d0.avif",
+      "target": "/assets/browser-v187/images/ef5a077afd8fadc255d020dc.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 3168578,
+      "bytes": 5800212
+    },
+    {
+      "source": "/assets/browser-v186/shared/064aadedc37c6b8386f19d95.avif",
+      "target": "/assets/browser-v187/images/064aadedc37c6b8386f19d95.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 1832659,
+      "bytes": 4287944
+    },
+    {
+      "source": "/assets/browser-v186/shared/3d1dd79242c34c98fa7a5666.avif",
+      "target": "/assets/browser-v187/images/3d1dd79242c34c98fa7a5666.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 1607858,
+      "bytes": 3604264
+    },
+    {
+      "source": "/assets/browser-v186/shared/9242e59be05fa19c99b7f279.avif",
+      "target": "/assets/browser-v187/images/9242e59be05fa19c99b7f279.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 1630451,
+      "bytes": 3745810
+    },
+    {
+      "source": "/assets/browser-v186/shared/ca8ae6850dec30134624b83c.avif",
+      "target": "/assets/browser-v187/images/ca8ae6850dec30134624b83c.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 3095908,
+      "bytes": 6298492
+    },
+    {
+      "source": "/assets/browser-v186/shared/deb7a3dccbcf3c63232a6f39.avif",
+      "target": "/assets/browser-v187/images/deb7a3dccbcf3c63232a6f39.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 4965912,
+      "bytes": 8645882
+    },
+    {
+      "source": "/assets/browser-v186/shared/f1c1ca57d221240f2118144e.avif",
+      "target": "/assets/browser-v187/images/f1c1ca57d221240f2118144e.webp",
+      "width": 2048,
+      "height": 2048,
+      "decodedPixelsPreserved": true,
+      "sourceBytes": 1167046,
+      "bytes": 2976014
+    },
+    {
+      "source": "/assets/loading-study/loading-study-v32-84.mp4",
+      "target": "/assets/browser-v187/media/1be16e321875224432c93f78.mp4",
+      "bytes": 7362857,
+      "SHA256": "1be16e321875224432c93f78e9981b6f6a653d7df80eedfa78e4157605c37cee",
+      "videoBytesUnchanged": true
+    },
+    {
+      "source": "/assets/home-intro-v170/courtyard-16s.mp4",
+      "target": "/assets/browser-v187/media/0952b05bcb424c07a2b39c96.mp4",
+      "bytes": 25344593,
+      "SHA256": "0952b05bcb424c07a2b39c962f910c84eceb84faf6782d6f50920e5e1b5b1398",
+      "videoBytesUnchanged": true
+    },
+    {
+      "source": "/assets/works/after-journey/trailer-v32-92.mp4",
+      "target": "/assets/browser-v187/media/2ccdd6e0115f2b1f9f5879a6.mp4",
+      "bytes": 20959138,
+      "SHA256": "2ccdd6e0115f2b1f9f5879a6aca14562410b6c45ece27763bc34b2ede4858dce",
+      "videoBytesUnchanged": true
+    }
+  ],
+  "capabilityBasedSelection": true,
+  "sourceInputsChanged": false
+}
