@@ -1,0 +1,34 @@
+{
+  "errors": [],
+  "http": [],
+  "image": {
+    "source": "/assets/browser-v185/transfer/035d371d707cdf8cd137.avif",
+    "actual": "http://127.0.0.1:8054/assets/browser-v187/images/035d371d707cdf8cd137cd5e.webp",
+    "width": 4096,
+    "height": 4096,
+    "capability": {
+      "avif": false,
+      "ready": true
+    }
+  },
+  "video": {
+    "source": "http://127.0.0.1:8054/assets/browser-v187/media/1be16e321875224432c93f78.mp4",
+    "time": 0.5431,
+    "width": 1536,
+    "height": 864,
+    "delivery": {
+      "version": 187,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 0,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 1,
+      "rangeMedia187": 1
+    }
+  },
+  "pass": true
+}

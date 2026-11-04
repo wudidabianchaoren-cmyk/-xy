@@ -1,3 +1,7 @@
+# LATEST USER CORRECTION: DESKTOP ONLY
+
+User cancelled mobile work, requires desktop only and careful time/token use. Stop Android/iPhone expansion. Published production remains6aeb132267752522e800789e. Mobile prototype format/media changes were archived under.verify/v32-187/cancelled-mobile.patch and removed from default runtime/resources/upload helper. WebKit test browser installed but no mobile build was published. Resume desktop loading/GPU performance only; no more skill installs or platform expansion.
+
 # CURRENT V32.186 / 2026-11-04 - USER ADDED ANDROID/IPHONE SCOPE
 
 LATEST USER STEERING at20:56 Asia/Shanghai: explicitly requires Android and Apple/iPhone support across different compute/GPU capacities. This supersedes earlier desktop-only scope and turn-closing assumption. Mobile layout/touch/media compatibility and performance are NEW work and NOT verified; do not claim physical phone coverage from desktop emulation. Existing formal production remains below. Preserve original effects; no paid resources. Continue from installed Find Skills/performance tools without restarting completed art/native work. Existing Playwright WebKit executable is absent; Chromium/Edge mobile emulation available. No mobile change published yet.

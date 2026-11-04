@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-04T15:21:44.105194+00:00",
+  "siteId": "faee03e7-3e2a-4967-ac0e-f218a7efa8ab",
+  "url": "https://zaojing-wxy.netlify.app",
+  "publishedDeploy": "6aeb132267752522e800789e",
+  "disabled": true,
+  "disabledReason": "Account usage exceeded for credits",
+  "buildsStopped": true,
+  "account": {
+    "ai_usage_limit_credits": null,
+    "ai_usage_limit_enforced": false,
+    "per_user_agent_runner_credit_limit": null,
+    "current_billing_period_start": "2026-11-02T00:00:00.000-08:00",
+    "current_usage_period_start": "2026-11-02T00:00:00.000-08:00",
+    "lifecycle_state": "active",
+    "next_billing_period_start": "2026-12-02T00:00:00.000-08:00",
+    "next_usage_period_start": "2026-12-02T00:00:00.000-08:00",
+    "sites_with_usage_exceeded": [],
+    "usages_exceeded": [
+      {
+        "usage_type": "credits",
+        "limit_type": "enforced",
+        "exceeded_at": "2026-11-04T12:57:46.878Z"
+      }
+    ],
+    "billing_details": null,
+    "ai_usage_enabled_setting": "enabled",
+    "ai_gateway_available_on_plan": true,
+    "credit_alert_percentage": 100,
+    "plan_credits": 300,
+    "swar_auto_topup_credits": 400,
+    "configurable_limits_exceeded": []
+  },
+  "public": {
+    "status": 503
+  }
+}

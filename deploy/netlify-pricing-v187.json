@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-04T15:34:00Z",
+  "source": "Authenticated read-only GET https://api.netlify.com/api/v1/accounts/types",
+  "plans": [
+    {
+      "name": "Free",
+      "slug": "credit-free",
+      "USDPerMonth": "0",
+      "creditsPerMonth": 300,
+      "available": false
+    },
+    {
+      "name": "Personal",
+      "slug": "credit-personal",
+      "USDPerMonth": "9",
+      "creditsPerMonth": 1000,
+      "available": true
+    },
+    {
+      "name": "Pro",
+      "slug": "credit-pro",
+      "USDPerMonth": "20",
+      "creditsPerMonth": 3000,
+      "available": true
+    }
+  ],
+  "publicReferences": [
+    "https://www.netlify.com/pricing/",
+    "https://docs.netlify.com/manage/accounts-and-billing/billing/resume-paused-projects/"
+  ],
+  "annualBasePersonalUSD": 108,
+  "taxAndCheckoutNotQuoted": true,
+  "planChanged": false,
+  "paymentAdded": false,
+  "automaticRechargeEnabled": false,
+  "userDecision": "Check paid Netlify plans before deciding budget; no Cloudflare migration authorized"
+}

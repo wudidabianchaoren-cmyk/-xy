@@ -1,0 +1,32 @@
+{
+  "errors": [],
+  "queue": {
+    "enabled": true,
+    "maxActive": 8,
+    "maxImages": 3,
+    "reservedMedia": 2,
+    "active": 0,
+    "queued": 0,
+    "peakActive": 4,
+    "completed": 13,
+    "failed": 0,
+    "bytes": 52,
+    "cancelled": true,
+    "finished": [
+      "image0",
+      "image1",
+      "image2",
+      "film",
+      "image3",
+      "image4",
+      "image5",
+      "image6",
+      "image7",
+      "image8",
+      "image9",
+      "image10",
+      "image11"
+    ]
+  },
+  "pass": true
+}
