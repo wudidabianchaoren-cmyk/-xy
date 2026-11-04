@@ -1,3 +1,5 @@
+Latest scoped release: read CURRENT-V32-189-RESUME.md first. Same Cloudflare URL; V189 repairs published, local non-VPN route still unresolved.
+
 # CURRENT V32.185 / 2026-11-04 - PARTIAL REPAIR PUBLISHED
 
 Stable URL https://zaojing-wxy.netlify.app . Production deploy **6aea93d2d423076a58d663df**, published2026-11-04T02:22:45.589Z, existing site faee03e7-3e2a-4967-ac0e-f218a7efa8ab. Twenty-one production hashes match the exact tested package, including room layout/on/off and all packed classic bundles. Auto Git builds stop_builds=true. No paid resources/provider/domain changes, annual TOTAL20CNY. Badge retained due actual plan422. Single agent, desktop only.

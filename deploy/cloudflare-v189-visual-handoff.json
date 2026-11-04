@@ -1,0 +1,469 @@
+{
+  "errors": [],
+  "samples": [
+    {
+      "at": 20110.199999999255,
+      "opening": 19.0839,
+      "body": "home-architecture-only home-intro-playing",
+      "intro": {
+        "frame": 0,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 0,
+        "ready": 4
+      },
+      "top": [
+        "VIDEO.prelude-opening-video",
+        "DIV.countdown-number",
+        "SECTION.countdown-prelude is-video-mode",
+        "BODY.home-architecture-only home-intro-playing",
+        "HTML.notranslate"
+      ]
+    },
+    {
+      "at": 20357.699999999255,
+      "opening": 19.3315,
+      "body": "home-architecture-only home-intro-playing",
+      "intro": {
+        "frame": 0,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 0,
+        "ready": 4
+      },
+      "top": [
+        "VIDEO.prelude-opening-video",
+        "DIV.countdown-number",
+        "SECTION.countdown-prelude is-video-mode",
+        "BODY.home-architecture-only home-intro-playing",
+        "HTML.notranslate"
+      ]
+    },
+    {
+      "at": 20540.599999999627,
+      "opening": 19.5144,
+      "body": "home-architecture-only home-intro-playing",
+      "intro": {
+        "frame": 0,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 0,
+        "ready": 4
+      },
+      "top": [
+        "VIDEO.prelude-opening-video",
+        "DIV.countdown-number",
+        "SECTION.countdown-prelude is-video-mode",
+        "BODY.home-architecture-only home-intro-playing",
+        "HTML.notranslate"
+      ]
+    },
+    {
+      "at": 20947.599999999627,
+      "opening": 19.9213,
+      "body": "home-architecture-only home-intro-playing",
+      "intro": {
+        "frame": 0,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 0,
+        "ready": 4
+      },
+      "top": [
+        "VIDEO.prelude-opening-video",
+        "DIV.countdown-number",
+        "SECTION.countdown-prelude is-video-mode",
+        "BODY.home-architecture-only home-intro-playing",
+        "HTML.notranslate"
+      ]
+    },
+    {
+      "at": 22609,
+      "opening": 20.066666,
+      "body": "home-architecture-only home-intro-playing is-home-architecture-live experience-entered",
+      "complete": "true",
+      "intro": {
+        "frame": 31,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 1.0333,
+        "ready": 4
+      },
+      "top": [
+        "CANVAS.home-live-world",
+        "DIV.home-architecture home-rendered-architecture",
+        "DIV.stage layout-0",
+        "SECTION.voyage",
+        "MAIN.",
+        "BODY.home-architecture-only home-intro-playing is-home-architecture-live experience-entered"
+      ]
+    },
+    {
+      "at": 22781.099999999627,
+      "opening": 20.066666,
+      "body": "home-architecture-only home-intro-playing is-home-architecture-live experience-entered",
+      "complete": "true",
+      "intro": {
+        "frame": 36,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 1.2054,
+        "ready": 4
+      },
+      "top": [
+        "CANVAS.home-live-world",
+        "DIV.home-architecture home-rendered-architecture",
+        "DIV.stage layout-0",
+        "SECTION.voyage",
+        "MAIN.",
+        "BODY.home-architecture-only home-intro-playing is-home-architecture-live experience-entered"
+      ]
+    },
+    {
+      "at": 22953.099999999627,
+      "opening": 20.066666,
+      "body": "home-architecture-only home-intro-playing is-home-architecture-live experience-entered",
+      "complete": "true",
+      "intro": {
+        "frame": 41,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 1.3774,
+        "ready": 4
+      },
+      "top": [
+        "CANVAS.home-live-world",
+        "DIV.home-architecture home-rendered-architecture",
+        "DIV.stage layout-0",
+        "SECTION.voyage",
+        "MAIN.",
+        "BODY.home-architecture-only home-intro-playing is-home-architecture-live experience-entered"
+      ]
+    },
+    {
+      "at": 23136.89999999944,
+      "opening": 20.066666,
+      "body": "home-architecture-only home-intro-playing is-home-architecture-live experience-entered",
+      "complete": "true",
+      "intro": {
+        "frame": 46,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 1.5611,
+        "ready": 4
+      },
+      "top": [
+        "CANVAS.home-live-world",
+        "DIV.home-architecture home-rendered-architecture",
+        "DIV.stage layout-0",
+        "SECTION.voyage",
+        "MAIN.",
+        "BODY.home-architecture-only home-intro-playing is-home-architecture-live experience-entered"
+      ]
+    },
+    {
+      "at": 23279.599999999627,
+      "body": "home-architecture-only home-intro-playing is-home-architecture-live experience-entered",
+      "complete": "true",
+      "intro": {
+        "frame": 50,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 1.7039,
+        "ready": 4
+      },
+      "top": [
+        "CANVAS.home-live-world",
+        "DIV.home-architecture home-rendered-architecture",
+        "DIV.stage layout-0",
+        "SECTION.voyage",
+        "MAIN.",
+        "BODY.home-architecture-only home-intro-playing is-home-architecture-live experience-entered"
+      ]
+    },
+    {
+      "at": 23432.299999999814,
+      "body": "home-architecture-only home-intro-playing is-home-architecture-live experience-entered",
+      "complete": "true",
+      "intro": {
+        "frame": 55,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 1.8566,
+        "ready": 4
+      },
+      "top": [
+        "CANVAS.home-live-world",
+        "DIV.home-architecture home-rendered-architecture",
+        "DIV.stage layout-0",
+        "SECTION.voyage",
+        "MAIN.",
+        "BODY.home-architecture-only home-intro-playing is-home-architecture-live experience-entered"
+      ]
+    },
+    {
+      "at": 23587.699999999255,
+      "body": "home-architecture-only home-intro-playing is-home-architecture-live experience-entered",
+      "complete": "true",
+      "intro": {
+        "frame": 60,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 2.0119,
+        "ready": 4
+      },
+      "top": [
+        "CANVAS.home-live-world",
+        "DIV.home-architecture home-rendered-architecture",
+        "DIV.stage layout-0",
+        "SECTION.voyage",
+        "MAIN.",
+        "BODY.home-architecture-only home-intro-playing is-home-architecture-live experience-entered"
+      ]
+    },
+    {
+      "at": 23729,
+      "body": "home-architecture-only home-intro-playing is-home-architecture-live experience-entered",
+      "complete": "true",
+      "intro": {
+        "frame": 64,
+        "active": true,
+        "ready": true
+      },
+      "style": {
+        "visibility": "visible",
+        "opacity": "1",
+        "display": "block"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "left": 0
+      },
+      "video": {
+        "time": 2.1532,
+        "ready": 4
+      },
+      "top": [
+        "CANVAS.home-live-world",
+        "DIV.home-architecture home-rendered-architecture",
+        "DIV.stage layout-0",
+        "SECTION.voyage",
+        "MAIN.",
+        "BODY.home-architecture-only home-intro-playing is-home-architecture-live experience-entered"
+      ]
+    }
+  ],
+  "room": {
+    "state": {
+      "frames": 250,
+      "calls": 109,
+      "triangles": 173430,
+      "cpuMs": 17.90000000037253,
+      "gpuMs": null,
+      "geometries": 267,
+      "textures": 66,
+      "cpuP95Ms": 46.90000000037253
+    },
+    "lighting": {
+      "version": 189,
+      "source": "preserved native captures / isolated UV-chart illumination continuation",
+      "cameraIndependent": true,
+      "geometryPreserved": true,
+      "meshes": 211,
+      "sourcePoses": 9
+    }
+  }
+}

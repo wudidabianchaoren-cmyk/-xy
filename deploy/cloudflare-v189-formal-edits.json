@@ -1,0 +1,269 @@
+{
+  "errors": [],
+  "layouts": [
+    {
+      "progress": 0.12008101851851852,
+      "images": [
+        {
+          "x": -0.07887837092081705,
+          "y": 0.17167900933159722,
+          "w": 0.14699767430623373,
+          "loaded": true,
+          "opacity": 0.444495,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-01.webp"
+        },
+        {
+          "x": 0.11256810824076334,
+          "y": -0.005066709165219907,
+          "w": 0.15276460647583007,
+          "loaded": true,
+          "opacity": 0.404617,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-02.webp"
+        },
+        {
+          "x": 0.7757938385009766,
+          "y": -0.13157985122115523,
+          "w": 0.14270477294921874,
+          "loaded": true,
+          "opacity": 0.365293,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp"
+        },
+        {
+          "x": 1.073898188273112,
+          "y": 0.03723155834056713,
+          "w": 0.1537806193033854,
+          "loaded": true,
+          "opacity": 0.326756,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-04.webp"
+        },
+        {
+          "x": 1.1016528447469076,
+          "y": 0.9585174277976707,
+          "w": 0.1489538828531901,
+          "loaded": true,
+          "opacity": 0.289237,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-05.webp"
+        },
+        {
+          "x": 0.9289899508158366,
+          "y": 1.1687436139142071,
+          "w": 0.15474351247151694,
+          "loaded": true,
+          "opacity": 0.252971,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-06.webp"
+        },
+        {
+          "x": 0.16917773087819418,
+          "y": 1.1433491459599248,
+          "w": 0.15519741376241047,
+          "loaded": true,
+          "opacity": 0.218189,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-08.webp"
+        },
+        {
+          "x": -0.07705777486165365,
+          "y": 1.0322362829137732,
+          "w": 0.15026569366455078,
+          "loaded": true,
+          "opacity": 0.185124,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-09.webp"
+        },
+        {
+          "x": -0.15764005184173585,
+          "y": 1.2353073685257523,
+          "w": 0.1398945967356364,
+          "loaded": true,
+          "opacity": 0.154009,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-10.webp"
+        },
+        {
+          "x": 1.0724737803141275,
+          "y": -0.24747337765163846,
+          "w": 0.1402331034342448,
+          "loaded": true,
+          "opacity": 0.125077,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-11.webp"
+        }
+      ]
+    },
+    {
+      "progress": 0.5,
+      "images": [
+        {
+          "x": 0.10999348958333334,
+          "y": 0.40499131944444444,
+          "w": 0.13999837239583332,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-01.webp"
+        },
+        {
+          "x": 0.31499837239583334,
+          "y": 0.24499421296296298,
+          "w": 0.1449951171875,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-02.webp"
+        },
+        {
+          "x": 0.5599934895833333,
+          "y": 0.13499710648148147,
+          "w": 0.13499348958333332,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp"
+        },
+        {
+          "x": 0.8449951171875,
+          "y": 0.319994212962963,
+          "w": 0.1449951171875,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-04.webp"
+        },
+        {
+          "x": 0.8599934895833333,
+          "y": 0.6599971064814815,
+          "w": 0.13999837239583332,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-05.webp"
+        },
+        {
+          "x": 0.675,
+          "y": 0.8549913194444444,
+          "w": 0.1449951171875,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-06.webp"
+        },
+        {
+          "x": 0.43499348958333334,
+          "y": 0.8149884259259259,
+          "w": 0.1449951171875,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-08.webp"
+        },
+        {
+          "x": 0.2,
+          "y": 0.6899884259259259,
+          "w": 0.13999837239583332,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-09.webp"
+        },
+        {
+          "x": 0.12999674479166667,
+          "y": 0.8799913194444444,
+          "w": 0.12999674479166667,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-10.webp"
+        },
+        {
+          "x": 0.775,
+          "y": 0.11999421296296296,
+          "w": 0.12999674479166667,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-11.webp"
+        }
+      ],
+      "centroid": {
+        "x": 0.49049641927083343,
+        "y": 0.5124927662037038
+      }
+    },
+    {
+      "progress": 0.8200231481481481,
+      "images": [
+        {
+          "x": 0.10999348958333334,
+          "y": 0.40499131944444444,
+          "w": 0.13999837239583332,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-01.webp"
+        },
+        {
+          "x": 0.31499837239583334,
+          "y": 0.24499421296296298,
+          "w": 0.1449951171875,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-02.webp"
+        },
+        {
+          "x": 0.5599934895833333,
+          "y": 0.13499710648148147,
+          "w": 0.13499348958333332,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp"
+        },
+        {
+          "x": 0.8449951171875,
+          "y": 0.319994212962963,
+          "w": 0.1449951171875,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-04.webp"
+        },
+        {
+          "x": 0.8599934895833333,
+          "y": 0.6599971064814815,
+          "w": 0.13999837239583332,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-05.webp"
+        },
+        {
+          "x": 0.675,
+          "y": 0.8549913194444444,
+          "w": 0.1449951171875,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-06.webp"
+        },
+        {
+          "x": 0.43499348958333334,
+          "y": 0.8149884259259259,
+          "w": 0.1449951171875,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-08.webp"
+        },
+        {
+          "x": 0.2,
+          "y": 0.6899884259259259,
+          "w": 0.13999837239583332,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-09.webp"
+        },
+        {
+          "x": 0.12999674479166667,
+          "y": 0.8799913194444444,
+          "w": 0.12999674479166667,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-10.webp"
+        },
+        {
+          "x": 0.775,
+          "y": 0.11999421296296296,
+          "w": 0.12999674479166667,
+          "loaded": true,
+          "opacity": 1,
+          "source": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-11.webp"
+        }
+      ]
+    }
+  ],
+  "personal": {
+    "removedSections": 0,
+    "contact": "联系 / CONTACT电话：18928492291邮箱：wuxiaoyu7105@163.com微信：vvChi7"
+  },
+  "pass": true
+}

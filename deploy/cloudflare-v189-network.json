@@ -1,0 +1,233 @@
+{
+  "diagnosticDate": "2026-11-04T22:35:02.616061+00:00",
+  "systemProxyActive": true,
+  "TUNActive": true,
+  "previousNoProxyFlagWasNotVPNOffProof": true,
+  "noGlobalNetworkSettingsChanged": true,
+  "customDomains": [],
+  "domainQuestionPending": true,
+  "physicalPages": [
+    {
+      "host": "xy-crg.pages.dev",
+      "ip": "172.66.47.145",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "tcp",
+      "error": "TimeoutError: timed out",
+      "seconds": 12.01
+    },
+    {
+      "host": "xy-crg.pages.dev",
+      "ip": "172.66.44.111",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "tcp",
+      "error": "TimeoutError: timed out",
+      "seconds": 12.01
+    },
+    {
+      "host": "www.baidu.com",
+      "ip": "103.235.46.96",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "http",
+      "tcpSeconds": 0.2084110999994664,
+      "tlsSeconds": 0.6890235000000757,
+      "response": "HTTP/1.1 200 OK",
+      "seconds": 0.9
+    }
+  ],
+  "physicalAlternateNotDeployed": [
+    {
+      "host": "zaojing.wudidabianchaoren.workers.dev",
+      "ip": "172.67.142.57",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "tls",
+      "tcpSeconds": 0.2065588999994361,
+      "error": "ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+      "seconds": 0.27
+    },
+    {
+      "host": "zaojing.wudidabianchaoren.workers.dev",
+      "ip": "104.21.39.23",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "tls",
+      "tcpSeconds": 0.24852430000009917,
+      "error": "ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+      "seconds": 0.27
+    },
+    {
+      "host": "www.baidu.com",
+      "ip": "103.235.47.188",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "http",
+      "tcpSeconds": 0.22299759999987145,
+      "tlsSeconds": 0.6766600999999355,
+      "response": "HTTP/1.1 200 OK",
+      "seconds": 0.88
+    }
+  ],
+  "regional": [
+    {
+      "country": "CN",
+      "city": "Beijing",
+      "network": "Shenzhen Tencent Computer Systems Company",
+      "asn": 45090,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.44.111",
+      "timings": {
+        "total": 787,
+        "dns": 170,
+        "tcp": 177,
+        "tls": 194,
+        "firstByte": 246,
+        "download": 0
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Shenzhen",
+      "network": "Hangzhou Alibaba Advertising",
+      "asn": 37963,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.47.145",
+      "timings": {
+        "total": 746,
+        "dns": 107,
+        "tcp": 161,
+        "tls": 201,
+        "firstByte": 276,
+        "download": 1
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Guangzhou",
+      "network": "Shenzhen Tencent Computer Systems Company",
+      "asn": 45090,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.47.145",
+      "timings": {
+        "total": 772,
+        "dns": 111,
+        "tcp": 157,
+        "tls": 170,
+        "firstByte": 334,
+        "download": 0
+      }
+    },
+    {
+      "country": "US",
+      "city": "Buffalo",
+      "network": "HostPapa",
+      "asn": 36352,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.47.145",
+      "timings": {
+        "total": 345,
+        "dns": 57,
+        "tcp": 14,
+        "tls": 46,
+        "firstByte": 227,
+        "download": 1
+      }
+    },
+    {
+      "country": "DE",
+      "city": "Falkenstein",
+      "network": "Hetzner Online",
+      "asn": 24940,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.44.111",
+      "timings": {
+        "total": 617,
+        "dns": 20,
+        "tcp": 6,
+        "tls": 32,
+        "firstByte": 558,
+        "download": 1
+      }
+    },
+    {
+      "country": "SG",
+      "city": "Singapore",
+      "network": "LeaseWeb",
+      "asn": 59253,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.44.111",
+      "timings": {
+        "total": 667,
+        "dns": 37,
+        "tcp": 2,
+        "tls": 9,
+        "firstByte": 619,
+        "download": 0
+      }
+    }
+  ],
+  "carrier": [
+    {
+      "country": "CN",
+      "city": "Meikeng",
+      "network": "Chinanet Backbone",
+      "asn": 4134,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.47.145",
+      "timings": {
+        "total": 951,
+        "dns": 355,
+        "tcp": 167,
+        "tls": 180,
+        "firstByte": 249,
+        "download": 0
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Nanning",
+      "network": "CHINA UNICOM China169 Backbone",
+      "asn": 4837,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.47.145",
+      "timings": {
+        "total": 975,
+        "dns": 364,
+        "tcp": 170,
+        "tls": 196,
+        "firstByte": 244,
+        "download": 1
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Nanning",
+      "network": "China Mobile Communications Group",
+      "asn": 9808,
+      "status": "finished",
+      "httpStatus": 200,
+      "resolvedAddress": "172.66.47.145",
+      "timings": {
+        "total": 1099,
+        "dns": 376,
+        "tcp": 165,
+        "tls": 195,
+        "firstByte": 363,
+        "download": 0
+      }
+    }
+  ],
+  "regionalMeasurementId": "2fhde95TPNuTqKu0G00021RcR",
+  "carrierMeasurementId": "2dDr0NRQJyQZEh8gV00021Rcb",
+  "interpretation": "Selected public probes returned200, but local physical Pages TCP times out while domestic control works. Not proof of worldwide availability; local non-VPN requirement remains unresolved. Worker alternate TLS reset, not deployed. No service/domain purchased."
+}

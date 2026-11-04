@@ -1,0 +1,118 @@
+{
+  "version": 189,
+  "url": "https://xy-crg.pages.dev/",
+  "provider": "Cloudflare Pages",
+  "applicationSource": "de165cf69d73ddfdb1220f77201163de9c13fb94",
+  "project": "xy",
+  "production": {
+    "id": "0afdba01-5650-4d0d-97f4-38b45e6bc08e",
+    "url": "https://0afdba01.xy-crg.pages.dev",
+    "environment": "production",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-11-04T21:57:21.191174Z",
+      "status": "success"
+    },
+    "uses_functions": false
+  },
+  "previewURL": "https://52dee142.xy-crg.pages.dev",
+  "previewPass": true,
+  "formalRuntimeSmokePass": true,
+  "productionArtifactHashesVerified": true,
+  "hashesChecked": 54,
+  "personalAndCollageFormalPass": true,
+  "networkRequirementComplete": false,
+  "qualityApproved": false,
+  "allRequirementsComplete": false,
+  "annualBudgetCNY": 20,
+  "purchases": false,
+  "nativeSourcePreserved": true,
+  "desktopOnly": true,
+  "formalEntry": {
+    "milliseconds": 46566.700000000186,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 480,
+      "droppedVideoFrames": 15
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 0
+    },
+    "homeReady": false,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "formalLiveHomeMilliseconds": 68650.40000000037,
+  "formalSteps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 70171
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 22891
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 4673
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 58332
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 5028
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 14770
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 16787
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 16288
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 15430
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 59784
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 26862
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 3055
+    }
+  ],
+  "remaining": [
+    "Local physical non-VPN route fails; selected China/overseas probes200 do not prove universal reachability.",
+    "Cold live home68.65s incl authored36s; selected reading22.9s/myth58.3s still slow. No blanket instant-load claim.",
+    "Intro15/480drops remain; current room edge repair is not native1:1 or universal zero-stutter certification."
+  ],
+  "networkEvidence": "deploy/cloudflare-v189-network.json",
+  "formalRoom14Pass": true
+}

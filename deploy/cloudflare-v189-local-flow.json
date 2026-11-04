@@ -1,0 +1,3048 @@
+{
+  "origin": "http://127.0.0.1:8056",
+  "errors": [],
+  "console": [],
+  "http": [],
+  "steps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 39320,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 0,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films"
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 832638568,
+          "total": 868265680
+        }
+      }
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 7942,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 885311587,
+          "total": 940523947
+        }
+      }
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 9270,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1,
+          "mythAssetsPrepared": true
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": false
+            }
+          }
+        ],
+        "memory": {
+          "used": 975486080,
+          "total": 1042782628
+        }
+      }
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 30323,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 2,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 2,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1157151774,
+          "total": 1226896550
+        }
+      }
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 5099,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 0,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1138681810,
+          "total": 1227467894
+        }
+      }
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 14203,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1186628114,
+          "total": 1257830854
+        }
+      }
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 14341,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 5,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1039519257,
+          "total": 1048896965
+        }
+      }
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 13867,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 6,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1115652213,
+          "total": 1123450405
+        }
+      }
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 14236,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 7,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1051586970,
+          "total": 1059581326
+        }
+      }
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 23169,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 8,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1054443353,
+          "total": 1060930437
+        }
+      }
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 15798,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1052740279,
+          "total": 1061213127
+        }
+      }
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 2503,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 950.1000000000931
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 962.6000000000931
+          },
+          {
+            "name": "native decoded",
+            "at": 3756.2000000001863
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 5597.600000000093
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 8790.700000000186
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 11070.399999999907
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 11070.600000000093
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 16961.799999999814
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 16962.299999999814
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 16985.600000000093
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 17260.299999999814
+          },
+          {
+            "name": "live frame revealed",
+            "at": 17308.600000000093
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-close",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active"
+          },
+          "portalDepth": 0,
+          "mythAssetsPrepared": true,
+          "lastMythEntryMs": 10.699999999720603,
+          "lastMythReused": true,
+          "lastMythSceneReadyMs": 29076.200000000186
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8056/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8056/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "http://127.0.0.1:8056/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1056574699,
+          "total": 1066335259
+        }
+      }
+    }
+  ],
+  "failed": [
+    {
+      "url": "http://127.0.0.1:8056/assets/works/physical-universe-v103/film.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:8056/assets/audio/wildflowers.mp3",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:8056/assets/life-purpose/v32-72/life-purpose-with-music.mp4",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "native": [],
+  "entry": {
+    "milliseconds": 37752.39999999991,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 480,
+      "droppedVideoFrames": 23
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 34
+    },
+    "homeReady": true,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "liveEntry": {
+    "at": 37792.799999999814,
+    "phases": [
+      {
+        "name": "module start",
+        "at": 950.1000000000931
+      },
+      {
+        "name": "WebGL context ready",
+        "at": 962.6000000000931
+      },
+      {
+        "name": "native decoded",
+        "at": 3756.2000000001863
+      },
+      {
+        "name": "courtyard geometry prepared",
+        "at": 5597.600000000093
+      },
+      {
+        "name": "entry film released shader preparation",
+        "at": 8790.700000000186
+      },
+      {
+        "name": "surface shaders compiled",
+        "at": 11070.399999999907
+      },
+      {
+        "name": "textures and environment ready",
+        "at": 11070.600000000093
+      },
+      {
+        "name": "entry film released GPU uploads",
+        "at": 11070.600000000093
+      },
+      {
+        "name": "colour buffers uploaded",
+        "at": 16961.799999999814
+      },
+      {
+        "name": "geometry buffers uploaded",
+        "at": 16962.299999999814
+      },
+      {
+        "name": "postprocess shaders compiled",
+        "at": 16985.600000000093
+      },
+      {
+        "name": "complete lighting variants prepared",
+        "at": 17260.299999999814
+      },
+      {
+        "name": "live frame revealed",
+        "at": 17308.600000000093
+      }
+    ],
+    "textures": {
+      "requested": 26,
+      "finished": 26,
+      "failed": [],
+      "mode": "compile unchanged materials while original images download"
+    },
+    "discoveryButtons": 4
+  },
+  "mythDepth": {
+    "verified": [
+      {
+        "id": "coast",
+        "decodedBytes": 8294400,
+        "SHA256": "ffd804f7225ace5af886ca36c87efad4693839f6f9cd3b3a59c561cbc4d68cae",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-left",
+        "decodedBytes": 8294400,
+        "SHA256": "437205ae256340d8e81bedeb52bd5c43cf3a85a87c1d558ace4cce3e3017f285",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-right",
+        "decodedBytes": 8294400,
+        "SHA256": "46f45d5f2782043a5551187f2c6b9e3b2854edf0381386e8ec48b8a5e8ab5ba3",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-near",
+        "decodedBytes": 8294400,
+        "SHA256": "683e81e31559e340aec976f6590830a042ff6b80fc48086f6a80e82b070e6aae",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-far",
+        "decodedBytes": 8294400,
+        "SHA256": "79c9ffa9e22e406d463262c8f66c9ed5fc95540fec6a1e990b7b06c58181ccf3",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "cottage",
+        "decodedBytes": 8294400,
+        "SHA256": "ff1beae60eea199cedebe3751b3a4e1e69a35b4914ac33d5954b72e2106232fd",
+        "originalBytesVerified": true
+      }
+    ]
+  },
+  "desktopFilm": {
+    "time": 1.644298,
+    "frames": 46,
+    "calendar": {
+      "date": "2026-11-05",
+      "day": "5",
+      "month": "November",
+      "weekday": "Thursday",
+      "timeZone": "Asia/Shanghai",
+      "live": true
+    },
+    "native": false
+  },
+  "films0": [
+    {
+      "id": "projectFilm",
+      "time": 1.664207,
+      "ready": 4,
+      "width": 1280,
+      "height": 546,
+      "duration": 139.70158700000002,
+      "midpointTime": 70.138813,
+      "sustained": {
+        "wallSeconds": 6.073799999999814,
+        "mediaSeconds": 6.073547999999988,
+        "frames": 152,
+        "dropped": 0
+      }
+    }
+  ],
+  "films1": [
+    {
+      "id": "projectFilm",
+      "time": 1.874624,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 83.14782299999999,
+      "midpointTime": 41.874769,
+      "sustained": {
+        "wallSeconds": 6.035600000000559,
+        "mediaSeconds": 6.035471000000001,
+        "frames": 181,
+        "dropped": 0
+      }
+    }
+  ],
+  "films2": [
+    {
+      "id": "projectFilm",
+      "time": 2.045786,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 208.721587,
+      "midpointTime": 104.782787,
+      "sustained": {
+        "wallSeconds": 6.093200000000186,
+        "mediaSeconds": 6.093331000000006,
+        "frames": 183,
+        "dropped": 0
+      }
+    }
+  ],
+  "films3": [
+    {
+      "id": "projectFilm",
+      "time": 1.702383,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 18,
+      "midpointTime": 9.299711,
+      "sustained": {
+        "wallSeconds": 6.070099999999628,
+        "mediaSeconds": 6.070194000000001,
+        "frames": 182,
+        "dropped": 0
+      }
+    },
+    {
+      "id": "lifePurposeVideo",
+      "time": 1.674597,
+      "ready": 4,
+      "width": 1600,
+      "height": 900,
+      "duration": 50,
+      "midpointTime": 25.272342,
+      "sustained": {
+        "wallSeconds": 6.097099999999627,
+        "mediaSeconds": 6.098136,
+        "frames": 145,
+        "dropped": 0
+      }
+    }
+  ],
+  "films4": [
+    {
+      "id": "projectFilm",
+      "time": 1.677661,
+      "ready": 4,
+      "width": 3360,
+      "height": 1440,
+      "duration": 191.375873,
+      "midpointTime": 95.914684,
+      "sustained": {
+        "wallSeconds": 6.0662999999998135,
+        "mediaSeconds": 6.065850999999995,
+        "frames": 182,
+        "dropped": 1
+      }
+    }
+  ],
+  "homeFinal": {
+    "ready": true,
+    "renderer": "Three.js / original geometry and local PBR",
+    "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "native": false,
+    "interfaceReady": true,
+    "delivery": {
+      "version": 187,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 6,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 24,
+      "progressiveMedia": [
+        {
+          "source": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+          "bytes": 6707738,
+          "requests": 17,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 719.2999999998137,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/manifest.json",
+          "bytes": 7362849,
+          "requests": 23,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 718.5,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "http://127.0.0.1:8056/assets/browser-v185/media/fd6a349ede716b6a/manifest.json",
+          "bytes": 11032148,
+          "requests": 17,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 105756.90000000037,
+          "ready": true,
+          "failed": false
+        }
+      ]
+    },
+    "retained": true
+  },
+  "resourceTiming": [
+    {
+      "name": "http://127.0.0.1:8056/audio-focus-v141.js?v=32.189",
+      "duration": 8.399999999906868,
+      "bytes": 905
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/home-designed-intro-v160.js",
+      "duration": 10.699999999720603,
+      "bytes": 10138
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/home-thought-line-v160.js",
+      "duration": 10.800000000279397,
+      "bytes": 10386
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/scene-loader-v146.js",
+      "duration": 12.800000000279397,
+      "bytes": 3649
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/home-world-v146.js",
+      "duration": 11.600000000093132,
+      "bytes": 132663
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-C6N56PU3.js",
+      "duration": 15.299999999813735,
+      "bytes": 247290
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-DGU5PTFW.js",
+      "duration": 16.200000000186265,
+      "bytes": 49707
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-32475FOM.js",
+      "duration": 15.899999999906868,
+      "bytes": 248898
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-ME7QVHGR.js",
+      "duration": 19,
+      "bytes": 520
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-LZ7QSBR5.js",
+      "duration": 25.799999999813735,
+      "bytes": 702461
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-NK3IH7V4.js",
+      "duration": 25.59999999962747,
+      "bytes": 7352
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-MG6POSIJ.js",
+      "duration": 23.59999999962747,
+      "bytes": 19550
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-PQUBCPGM.js",
+      "duration": 25.300000000279397,
+      "bytes": 35949
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-SXRZKL2H.js",
+      "duration": 31.200000000186265,
+      "bytes": 1504
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-RTTFH4P3.js",
+      "duration": 31.100000000093132,
+      "bytes": 649
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-R5XT465O.js",
+      "duration": 30.100000000093132,
+      "bytes": 223115
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-RGYTE4B5.js",
+      "duration": 30.40000000037253,
+      "bytes": 138683
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-W3TROUU3.js",
+      "duration": 32.60000000009313,
+      "bytes": 22129
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-XL3CMSHR.js",
+      "duration": 32.700000000186265,
+      "bytes": 35007
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-XM4RMFZ3.js",
+      "duration": 33.10000000009313,
+      "bytes": 2465
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-YRQ74F3T.js",
+      "duration": 35,
+      "bytes": 61376
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-000.bin",
+      "duration": 316.89999999990687,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-001.bin",
+      "duration": 289.1999999997206,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/home-live-poster-v32-77.png",
+      "duration": 139.5,
+      "bytes": 2263493
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/wordmark-v142/wordmark.ttf",
+      "duration": 137,
+      "bytes": 6552
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v183/images/d6862ea204186288f90b-1280.webp",
+      "duration": 15.700000000186265,
+      "bytes": 2901520
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/scene-loader-v146.js?v=32.189",
+      "duration": 7.099999999627471,
+      "bytes": 53
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/dock/exhibition-dock-v160.js?v=32.189",
+      "duration": 6.2999999998137355,
+      "bytes": 57
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/dock/home-designed-intro-v160.js?v=32.189",
+      "duration": 5.399999999906868,
+      "bytes": 61
+    },
+    {
+      "name": "http://127.0.0.1:8056/home-creation-launch-v141.js?v=32.189",
+      "duration": 5.600000000093132,
+      "bytes": 3261
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/directory-v144/app.js?v=32.189",
+      "duration": 9.200000000186265,
+      "bytes": 50
+    },
+    {
+      "name": "http://127.0.0.1:8056/site-refinements-v129.js?v=32.189",
+      "duration": 13.5,
+      "bytes": 3679
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/techtext-v153.js?v=32.189",
+      "duration": 9.200000000186265,
+      "bytes": 49
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/home-thought-line-v160.js?v=32.189",
+      "duration": 9,
+      "bytes": 58
+    },
+    {
+      "name": "http://127.0.0.1:8056/refinements-v161.js?v=32.189",
+      "duration": 12.899999999906868,
+      "bytes": 1506
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/hobby-drift-v167.js?v=32.189",
+      "duration": 8.400000000372529,
+      "bytes": 52
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v183/images/45beb4b5eff4666246b3-1280.webp",
+      "duration": 12.199999999720603,
+      "bytes": 946642
+    },
+    {
+      "name": "http://127.0.0.1:8056/heading-interaction-v157.js?v=32.157",
+      "duration": 6.600000000093132,
+      "bytes": 2375
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/exhibition-dock-v160.js",
+      "duration": 6.7000000001862645,
+      "bytes": 34584
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/directory-app.js",
+      "duration": 3,
+      "bytes": 165165
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/techtext-v153.js",
+      "duration": 2.400000000372529,
+      "bytes": 22030
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-002.bin",
+      "duration": 85.5,
+      "bytes": 2655205
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-IPDBCHYA.js",
+      "duration": 2.3999999999068677,
+      "bytes": 21674
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/hobby-drift-v167.js",
+      "duration": 4.300000000279397,
+      "bytes": 13678
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v16/world-track.json",
+      "duration": 79.10000000009313,
+      "bytes": 4001387
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/geometry-delivery/c455d984619ad440b4742a32-000.bin",
+      "duration": 13.700000000186265,
+      "bytes": 1162847
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-01.webp",
+      "duration": 3.5,
+      "bytes": 605542
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-02.webp",
+      "duration": 5.600000000093132,
+      "bytes": 298316
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-03.webp",
+      "duration": 7.100000000093132,
+      "bytes": 380998
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-04.webp",
+      "duration": 6.899999999906868,
+      "bytes": 266104
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-05.webp",
+      "duration": 7.399999999906868,
+      "bytes": 127628
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-06.webp",
+      "duration": 11.5,
+      "bytes": 106468
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-08.webp",
+      "duration": 12,
+      "bytes": 141034
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-09.webp",
+      "duration": 13.600000000093132,
+      "bytes": 238268
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-10.webp",
+      "duration": 15.199999999720603,
+      "bytes": 461886
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/atmosphere-v172/atmosphere-11.webp",
+      "duration": 17.100000000093132,
+      "bytes": 405472
+    },
+    {
+      "name": "http://127.0.0.1:8056/progressive-media-v187.js",
+      "duration": 12.200000000186265,
+      "bytes": 6368
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/native-v164/room.jpg?v=32.164",
+      "duration": 2.8999999999068677,
+      "bytes": 548298
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/directory-hand-2JQHWOL5.woff2",
+      "duration": 21.299999999813735,
+      "bytes": 603820
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/loading-study/opening-poster-v32-84.png",
+      "duration": 4.5,
+      "bytes": 247482
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/03-tile.webp",
+      "duration": 6.2000000001862645,
+      "bytes": 128310
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/21-tile.webp",
+      "duration": 7.300000000279397,
+      "bytes": 97698
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/08-tile.webp",
+      "duration": 7.100000000093132,
+      "bytes": 24298
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/10-tile.webp",
+      "duration": 9.399999999906868,
+      "bytes": 55816
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/12-tile.webp",
+      "duration": 11.600000000093132,
+      "bytes": 91114
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/01-tile.webp",
+      "duration": 13.200000000186265,
+      "bytes": 16646
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/02-tile.webp",
+      "duration": 13,
+      "bytes": 48430
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/06-tile.webp",
+      "duration": 15.600000000093132,
+      "bytes": 95022
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/17-tile.webp",
+      "duration": 19.600000000093132,
+      "bytes": 100818
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/19-tile.webp",
+      "duration": 19.299999999813735,
+      "bytes": 68946
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0000.m4s",
+      "duration": 14.600000000093132,
+      "bytes": 1088868
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0001.m4s",
+      "duration": 11.199999999720603,
+      "bytes": 479008
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0002.m4s",
+      "duration": 12.300000000279397,
+      "bytes": 688822
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0003.m4s",
+      "duration": 10.200000000186265,
+      "bytes": 309264
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0000.m4s",
+      "duration": 9.799999999813735,
+      "bytes": 160762
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0001.m4s",
+      "duration": 10.600000000093132,
+      "bytes": 211524
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0002.m4s",
+      "duration": 14.900000000372529,
+      "bytes": 266231
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0003.m4s",
+      "duration": 14.700000000186265,
+      "bytes": 382705
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0004.m4s",
+      "duration": 4.2999999998137355,
+      "bytes": 411862
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0004.m4s",
+      "duration": 5.800000000279397,
+      "bytes": 1092500
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0005.m4s",
+      "duration": 4.399999999906868,
+      "bytes": 539955
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/05-tile.webp",
+      "duration": 2.5,
+      "bytes": 20352
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/04-tile.webp",
+      "duration": 4.5,
+      "bytes": 36642
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/11-tile.webp",
+      "duration": 5.2999999998137355,
+      "bytes": 90396
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/13-tile.webp",
+      "duration": 5.2999999998137355,
+      "bytes": 110424
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/14-tile.webp",
+      "duration": 5.2000000001862645,
+      "bytes": 45308
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/22-tile.webp",
+      "duration": 6.2999999998137355,
+      "bytes": 17576
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/09-tile.webp",
+      "duration": 6.899999999906868,
+      "bytes": 30834
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/15-tile.webp",
+      "duration": 10.200000000186265,
+      "bytes": 56070
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/16-tile.webp",
+      "duration": 11,
+      "bytes": 50114
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/24-tile.webp",
+      "duration": 10.5,
+      "bytes": 104560
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/23-tile.webp",
+      "duration": 10.799999999813735,
+      "bytes": 28544
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/25-tile.webp",
+      "duration": 11.599999999627471,
+      "bytes": 28068
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/26-tile.webp",
+      "duration": 12.399999999906868,
+      "bytes": 25730
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/18-tile.webp",
+      "duration": 15.399999999906868,
+      "bytes": 25542
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/07-tile.webp",
+      "duration": 15.5,
+      "bytes": 23076
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/20-tile.webp",
+      "duration": 14.800000000279397,
+      "bytes": 52922
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/27-tile.webp",
+      "duration": 15.100000000093132,
+      "bytes": 26824
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/photography-v170/28-tile.webp",
+      "duration": 14.899999999906868,
+      "bytes": 19968
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0005.m4s",
+      "duration": 10.900000000372529,
+      "bytes": 275754
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0006.m4s",
+      "duration": 9.099999999627471,
+      "bytes": 260411
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0007.m4s",
+      "duration": 8.399999999906868,
+      "bytes": 307719
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0008.m4s",
+      "duration": 7.5,
+      "bytes": 47057
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0009.m4s",
+      "duration": 4,
+      "bytes": 658991
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/home-world-v146.js?v=32.184",
+      "duration": 2,
+      "bytes": 132663
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/native-v165/home.jpg?v=32.165",
+      "duration": 3.6000000000931323,
+      "bytes": 705603
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/f1c1ca57d221240f2118144e.avif",
+      "duration": 16.200000000186265,
+      "bytes": 1167046
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/7a917fde7616e6d944ebcdcf.webp",
+      "duration": 9.799999999813735,
+      "bytes": 355936
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/fd2654a75471a5adb54a8966.webp",
+      "duration": 19.59999999962747,
+      "bytes": 1378806
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v23/material-calibration.json",
+      "duration": 5.600000000093132,
+      "bytes": 17240
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v180/clock-engraving-17eda6a1/part-000.bin",
+      "duration": 131.10000000009313,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v180/clock-engraving-17eda6a1/part-001.bin",
+      "duration": 21.899999999906868,
+      "bytes": 1379959
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/Marble012_rough_2k.jpg",
+      "duration": 68.20000000018626,
+      "bytes": 2166701
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/transfer/ef5a077afd8fadc255d0.avif",
+      "duration": 83.20000000018626,
+      "bytes": 3168578
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/transfer/1b55932dd51c21b2337f.avif",
+      "duration": 35.60000000009313,
+      "bytes": 533660
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/sandstone_cracks_rough_2k.jpg",
+      "duration": 47.6999999997206,
+      "bytes": 1569280
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 78.5,
+      "bytes": 2870078
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 120.6999999997206,
+      "bytes": 4545235
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 92,
+      "bytes": 3085891
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 94.79999999981374,
+      "bytes": 609525
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/white_sandstone_blocks_02_rough_2k.jpg",
+      "duration": 124.09999999962747,
+      "bytes": 2545799
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 127.5,
+      "bytes": 2573376
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 101,
+      "bytes": 652441
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/wood_planks/wood_planks_rough_1k.jpg",
+      "duration": 99.40000000037253,
+      "bytes": 299757
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/draco/draco_wasm_wrapper.js",
+      "duration": 30,
+      "bytes": 58456
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/look-calibration.json",
+      "duration": 42.799999999813735,
+      "bytes": 23396
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/bake-audit.json",
+      "duration": 37.5,
+      "bytes": 1888
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/native-v24-prefiltered-v158.json",
+      "duration": 24.700000000186265,
+      "bytes": 262
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/native-v24-prefiltered-v158.bin.gz",
+      "duration": 25.5,
+      "bytes": 201723
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shaders/home-programs.json",
+      "duration": 111.6999999997206,
+      "bytes": 2833586
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/geometry-delivery/df2d97e1e0a32015be34a9b4-000.bin",
+      "duration": 1.900000000372529,
+      "bytes": 30759
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/934eaa61851a3c21fe784e56-000.bin",
+      "duration": 3.8999999999068677,
+      "bytes": 28581
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/geometry-delivery/032cac85f53b6e8651b7c552-000.bin",
+      "duration": 4.7999999998137355,
+      "bytes": 83432
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/display-transform.json",
+      "duration": 4.099999999627471,
+      "bytes": 361
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/display-transform.bin",
+      "duration": 2.2000000001862645,
+      "bytes": 143748
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/draco/draco_decoder.wasm",
+      "duration": 3.2999999998137355,
+      "bytes": 192420
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0010.m4s",
+      "duration": 3.400000000372529,
+      "bytes": 538224
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 35.89999999990687,
+      "bytes": 2573376
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 53.799999999813735,
+      "bytes": 3085891
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/064aadedc37c6b8386f19d95.avif",
+      "duration": 5.899999999906868,
+      "bytes": 1832659
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/architecture-ao-0.png",
+      "duration": 5.7000000001862645,
+      "bytes": 500917
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/architecture-ao-1.png",
+      "duration": 6.600000000093132,
+      "bytes": 349089
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/architecture-ao-2.png",
+      "duration": 6.2000000001862645,
+      "bytes": 201116
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/architecture-indirect-0.bin.z",
+      "duration": 56.60000000009313,
+      "bytes": 2971697
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/architecture-indirect-1.bin.z",
+      "duration": 94.5,
+      "bytes": 2337390
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v24/architecture-indirect-2.bin.z",
+      "duration": 15.899999999906868,
+      "bytes": 1652784
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 125.20000000018626,
+      "bytes": 4545235
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 120.89999999990687,
+      "bytes": 2870078
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/367eecd041a14d01853d0c5b.webp",
+      "duration": 145.70000000018626,
+      "bytes": 2379556
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 1.5,
+      "bytes": 652441
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 1.6000000000931323,
+      "bytes": 609525
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/a734e5926bddab54febbe837.webp",
+      "duration": 5,
+      "bytes": 296148
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/deb7a3dccbcf3c63232a6f39.avif",
+      "duration": 80.1999999997206,
+      "bytes": 4965912
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/ca8ae6850dec30134624b83c.avif",
+      "duration": 56.10000000009313,
+      "bytes": 3095908
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/9242e59be05fa19c99b7f279.avif",
+      "duration": 41.39999999990687,
+      "bytes": 1630451
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/a473259e9d3b583100cb77b7.jpg",
+      "duration": 191.3000000002794,
+      "bytes": 2275944
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/40edce9d6c49355fad3d72ce.jpg",
+      "duration": 160.1999999997206,
+      "bytes": 2006484
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/shared/3d1dd79242c34c98fa7a5666.avif",
+      "duration": 199.20000000018626,
+      "bytes": 1607858
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0011.m4s",
+      "duration": 2450.2999999998137,
+      "bytes": 366184
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0012.m4s",
+      "duration": 2239.2999999998137,
+      "bytes": 418007
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0013.m4s",
+      "duration": 1108.8999999999069,
+      "bytes": 283305
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0014.m4s",
+      "duration": 163.40000000037253,
+      "bytes": 613925
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0015.m4s",
+      "duration": 267,
+      "bytes": 630552
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-BAB33W6C.js",
+      "duration": 84.20000000018626,
+      "bytes": 25788
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0016.m4s",
+      "duration": 59.89999999990687,
+      "bytes": 570716
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0017.m4s",
+      "duration": 49.5,
+      "bytes": 115114
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/browser-v189/shared-RUKHF5KC.js",
+      "duration": 26.200000000186265,
+      "bytes": 48528
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v22/courtyard-cavity-volume.json",
+      "duration": 25,
+      "bytes": 483
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/reference-architecture-v22/courtyard-cavity-volume.bin",
+      "duration": 33.89999999990687,
+      "bytes": 122880
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/ue-v159/clock-mix-ue5-cubeuv.json",
+      "duration": 5.399999999906868,
+      "bytes": 1204
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/ue-v159/clock-mix-ue5-cubeuv.bin.gz",
+      "duration": 6.099999999627471,
+      "bytes": 225523
+    },
+    {
+      "name": "http://127.0.0.1:8056/blender/home-camera-v32-84/camera-v84.json",
+      "duration": 103.6999999997206,
+      "bytes": 1256
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0018.m4s",
+      "duration": 127.29999999981374,
+      "bytes": 447341
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0019.m4s",
+      "duration": 29.299999999813735,
+      "bytes": 318866
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0020.m4s",
+      "duration": 3.900000000372529,
+      "bytes": 72523
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v186/media/1be16e3218752244/part-0021.m4s",
+      "duration": 3.2999999998137355,
+      "bytes": 3806
+    },
+    {
+      "name": "http://127.0.0.1:8056/v31-sand-story.js?v=32.183",
+      "duration": 3.6999999997206032,
+      "bytes": 70512
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/craft-raised.webp",
+      "duration": 3.8999999999068677,
+      "bytes": 53060
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/camera-operator.webp",
+      "duration": 5.7000000001862645,
+      "bytes": 33030
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/craft-strike.webp",
+      "duration": 5.899999999906868,
+      "bytes": 47962
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/applause-airplane.webp",
+      "duration": 5.399999999906868,
+      "bytes": 19216
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/applause-open.webp",
+      "duration": 7.600000000093132,
+      "bytes": 32204
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/boxing-ring.webp",
+      "duration": 12,
+      "bytes": 119672
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/boxing-left-jab.webp",
+      "duration": 13.5,
+      "bytes": 119454
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/boxing-right-jab.webp",
+      "duration": 13.799999999813735,
+      "bytes": 115020
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/european-castle-simple-v2.webp",
+      "duration": 15.299999999813735,
+      "bytes": 94884
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/violin-return.webp",
+      "duration": 9.299999999813735,
+      "bytes": 62940
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/violin-duet.webp",
+      "duration": 9.5,
+      "bytes": 36368
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/envelope-volume-v32-72.png",
+      "duration": 25.299999999813735,
+      "bytes": 1827291
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/craft-motion-atlas.webp",
+      "duration": 20.5,
+      "bytes": 442456
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/applause-motion-atlas.webp",
+      "duration": 21.699999999720603,
+      "bytes": 318152
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/violin-motion-atlas.webp",
+      "duration": 34.299999999813735,
+      "bytes": 702754
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/boxing-motion-atlas.webp",
+      "duration": 38.8000000002794,
+      "bytes": 1703180
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/sand-story/camera-operator.webp",
+      "duration": 1.3999999999068677,
+      "bytes": 33030
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0006.m4s",
+      "duration": 11,
+      "bytes": 677852
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0007.m4s",
+      "duration": 5.7000000001862645,
+      "bytes": 17898
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0008.m4s",
+      "duration": 10.100000000093132,
+      "bytes": 466508
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0009.m4s",
+      "duration": 5.600000000093132,
+      "bytes": 10632
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0010.m4s",
+      "duration": 8.600000000093132,
+      "bytes": 352708
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0011.m4s",
+      "duration": 5.100000000093132,
+      "bytes": 15580
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0012.m4s",
+      "duration": 6.899999999906868,
+      "bytes": 360005
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0013.m4s",
+      "duration": 13,
+      "bytes": 130713
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0014.m4s",
+      "duration": 15.299999999813735,
+      "bytes": 475426
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v185/media/0232ba50007c7e9e/part-0015.m4s",
+      "duration": 5,
+      "bytes": 1162
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/journey/previews/journey-mountain-valley.webp",
+      "duration": 16.5,
+      "bytes": 174082
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/works/rural-return/poster.webp",
+      "duration": 16.100000000093132,
+      "bytes": 17938
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/works/after-journey/cover-v32-92.webp",
+      "duration": 23.700000000186265,
+      "bytes": 1354530
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/journey/previews/mist-palace-dusk.webp",
+      "duration": 12.200000000186265,
+      "bytes": 12286
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/works/mid-autumn/still-live-stage.webp",
+      "duration": 8.100000000093132,
+      "bytes": 226042
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/works/covers-v161/code-films.webp",
+      "duration": 8.199999999720603,
+      "bytes": 274692
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/reading/cinema-aesthetics/page-001.jpg",
+      "duration": 10.799999999813735,
+      "bytes": 474206
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/prompt-lab/prompt-structure.webp",
+      "duration": 9.900000000372529,
+      "bytes": 278786
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v189/room-atlas/layout.json",
+      "duration": 23.700000000186265,
+      "bytes": 43044
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v189/room-atlas/on.webp",
+      "duration": 144.1999999997206,
+      "bytes": 4182742
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v189/room-atlas/off.webp",
+      "duration": 137.70000000018626,
+      "bytes": 3025368
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/room-static.glb",
+      "duration": 157.6999999997206,
+      "bytes": 2205652
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/room-lamp.png",
+      "duration": 236.20000000018626,
+      "bytes": 1094829
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/room-off.png",
+      "duration": 322.8000000002794,
+      "bytes": 3124633
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/room-tv.png",
+      "duration": 243.60000000009313,
+      "bytes": 1582941
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v119/berlin-night.jpg",
+      "duration": 335.89999999990687,
+      "bytes": 2674368
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/room-lighting.json",
+      "duration": 36.89999999990687,
+      "bytes": 21499
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/works/covers-v177/code-films.webp",
+      "duration": 248.5,
+      "bytes": 487956
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v120/plant/potted-plant-02.glb",
+      "duration": 166.40000000037253,
+      "bytes": 3752232
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/room-collision.glb",
+      "duration": 408.1999999997206,
+      "bytes": 4335328
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/room-normal.png",
+      "duration": 253.20000000018626,
+      "bytes": 825693
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v123/remote-detail.glb",
+      "duration": 144.20000000018626,
+      "bytes": 486708
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 254.6999999997206,
+      "bytes": 652441
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 259.40000000037253,
+      "bytes": 609525
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "duration": 264.60000000009313,
+      "bytes": 916843
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/odyssey/rough_linen/rough_linen_rough_1k.jpg",
+      "duration": 270.5,
+      "bytes": 1083725
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v123/plant/potted_plant_02_pot_diff_2k.jpg",
+      "duration": 276.90000000037253,
+      "bytes": 596006
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v123/plant/potted_plant_02_pot_nor_gl_2k.jpg",
+      "duration": 280,
+      "bytes": 494387
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v123/plant/potted_plant_02_pot_rough_2k.jpg",
+      "duration": 282.29999999981374,
+      "bytes": 426559
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/browser-v189/room-atlas/layout-07bb6aef97dbe9116c72.bin.gz",
+      "duration": 40,
+      "bytes": 1925044
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/home-lod-worker.js?v=32.75",
+      "duration": -182.89999999990687,
+      "bytes": 26279
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/chunk-AOQCOLWL.js",
+      "duration": 3.2999999998137355,
+      "bytes": 6225
+    },
+    {
+      "name": "http://127.0.0.1:8056/scene-dist/chunk-CTVPEMRS.js",
+      "duration": 6.7000000001862645,
+      "bytes": 606146
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/brass-normal.png",
+      "duration": 7.100000000093132,
+      "bytes": 277526
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/brass-roughness.png",
+      "duration": 19.100000000093132,
+      "bytes": 176095
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/aluminium-normal.png",
+      "duration": 20.600000000093132,
+      "bytes": 224973
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/aluminium-roughness.png",
+      "duration": 19.5,
+      "bytes": 159641
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/abs-normal.png",
+      "duration": 35.10000000009313,
+      "bytes": 389797
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/abs-roughness.png",
+      "duration": 37.8000000002794,
+      "bytes": 189601
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/paper-normal.png",
+      "duration": 53.89999999990687,
+      "bytes": 418460
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/paper-roughness.png",
+      "duration": 53.299999999813735,
+      "bytes": 177168
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/porcelain-normal.png",
+      "duration": 57.5,
+      "bytes": 282688
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/porcelain-roughness.png",
+      "duration": 61.59999999962747,
+      "bytes": 164899
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/rubber-normal.png",
+      "duration": 65.09999999962747,
+      "bytes": 483924
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/directory-v127/materials/rubber-roughness.png",
+      "duration": 64.60000000009313,
+      "bytes": 194572
+    },
+    {
+      "name": "http://127.0.0.1:8056/assets/works/rural-return/v130/element-01.webp",
+      "duration": 20.899999999906868,
+      "bytes": 243738
+    }
+  ],
+  "pass": true
+}

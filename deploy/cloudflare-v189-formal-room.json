@@ -1,0 +1,890 @@
+{
+  "origin": "https://xy-crg.pages.dev",
+  "errors": [],
+  "http": [],
+  "steps": [
+    {
+      "name": "desk",
+      "ms": 971,
+      "state": {
+        "frames": 116,
+        "view": "desk",
+        "selected": 0,
+        "heldTape": -1,
+        "heldBook": -1,
+        "screen": {
+          "category": 0,
+          "work": 0,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 0.752768,
+          "videoFrames": 457,
+          "videoDroppedFrames": 508,
+          "videoReady": true,
+          "videoFrameIntervalMs": 69.40000000000146,
+          "reader": {
+            "visible": false,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 116,
+          "calls": 203,
+          "triangles": 213780,
+          "cpuMs": 5,
+          "gpuMs": 12.30604,
+          "geometries": 267,
+          "textures": 66,
+          "cpuP95Ms": 11
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "physical-lamp",
+      "ms": 5311,
+      "state": {
+        "frames": 452,
+        "view": "desk",
+        "selected": 0,
+        "heldTape": -1,
+        "heldBook": -1,
+        "screen": {
+          "category": 0,
+          "work": 0,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 6.040624,
+          "videoFrames": 600,
+          "videoDroppedFrames": 528,
+          "videoReady": true,
+          "videoFrameIntervalMs": 27.80000000000291,
+          "reader": {
+            "visible": false,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 452,
+          "calls": 203,
+          "triangles": 213780,
+          "cpuMs": 10.899999999441206,
+          "gpuMs": 10.084531,
+          "geometries": 267,
+          "textures": 66,
+          "cpuP95Ms": 17
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "physical-CD-0",
+      "ms": 3345,
+      "state": {
+        "frames": 650,
+        "view": "desk",
+        "selected": 0,
+        "heldTape": 0,
+        "heldBook": -1,
+        "screen": {
+          "category": 0,
+          "work": 0,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 9.416312,
+          "videoFrames": 692,
+          "videoDroppedFrames": 539,
+          "videoReady": true,
+          "videoFrameIntervalMs": 34.69999999999709,
+          "reader": {
+            "visible": false,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 650,
+          "calls": 192,
+          "triangles": 210578,
+          "cpuMs": 16.90000000037253,
+          "gpuMs": 12.253488,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 30.699999999254942
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "physical-CD-1",
+      "ms": 4007,
+      "state": {
+        "frames": 912,
+        "view": "desk",
+        "selected": 0,
+        "heldTape": 1,
+        "heldBook": -1,
+        "screen": {
+          "category": 0,
+          "work": 1,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 0,
+          "videoFrames": 725,
+          "videoDroppedFrames": 542,
+          "videoReady": false,
+          "videoFrameIntervalMs": 20.80000000000291,
+          "reader": {
+            "visible": false,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 912,
+          "calls": 192,
+          "triangles": 210578,
+          "cpuMs": 16.90000000037253,
+          "gpuMs": 11.815051,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 14.799999999813735
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "physical-CD-2",
+      "ms": 4098,
+      "state": {
+        "frames": 1154,
+        "view": "desk",
+        "selected": 0,
+        "heldTape": 2,
+        "heldBook": -1,
+        "screen": {
+          "category": 0,
+          "work": 2,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.757906,
+          "videoFrames": 776,
+          "videoDroppedFrames": 1,
+          "videoReady": true,
+          "videoFrameIntervalMs": 41.700000000004366,
+          "reader": {
+            "visible": false,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 1154,
+          "calls": 192,
+          "triangles": 210578,
+          "cpuMs": 16.200000000186265,
+          "gpuMs": 10.824635,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 15.900000000372529
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "physical-CD-3",
+      "ms": 3853,
+      "state": {
+        "frames": 1379,
+        "view": "desk",
+        "selected": 0,
+        "heldTape": 3,
+        "heldBook": -1,
+        "screen": {
+          "category": 0,
+          "work": 3,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.535904,
+          "videoFrames": 855,
+          "videoDroppedFrames": 0,
+          "videoReady": true,
+          "videoFrameIntervalMs": 20.80000000000291,
+          "reader": {
+            "visible": false,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 1379,
+          "calls": 192,
+          "triangles": 210578,
+          "cpuMs": 12.400000000372529,
+          "gpuMs": 9.976562,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 16.09999999962747
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "physical-CD-4",
+      "ms": 4279,
+      "state": {
+        "frames": 1659,
+        "view": "desk",
+        "selected": 0,
+        "heldTape": 4,
+        "heldBook": -1,
+        "screen": {
+          "category": 0,
+          "work": 4,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 0,
+          "videoFrames": 890,
+          "videoDroppedFrames": 4,
+          "videoReady": false,
+          "videoFrameIntervalMs": 27.80000000000291,
+          "reader": {
+            "visible": false,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 1659,
+          "calls": 192,
+          "triangles": 210578,
+          "cpuMs": 13.5,
+          "gpuMs": 10.196406,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 16
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "physical-cinema-book",
+      "ms": 4693,
+      "state": {
+        "frames": 1923,
+        "view": "desk",
+        "selected": 1,
+        "heldTape": -1,
+        "heldBook": 0,
+        "screen": {
+          "category": 1,
+          "work": 4,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.869243,
+          "videoFrames": 937,
+          "videoDroppedFrames": 14,
+          "videoReady": false,
+          "videoFrameIntervalMs": 55.5,
+          "reader": {
+            "visible": true,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 1923,
+          "calls": 195,
+          "triangles": 211446,
+          "cpuMs": 18.799999999813735,
+          "gpuMs": 10.926614,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 15.200000000186265
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "window-tl",
+      "ms": 7645,
+      "state": {
+        "frames": 2801,
+        "view": "window",
+        "selected": 1,
+        "heldTape": -1,
+        "heldBook": 0,
+        "screen": {
+          "category": 1,
+          "work": 4,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.869243,
+          "videoFrames": 937,
+          "videoDroppedFrames": 14,
+          "videoReady": false,
+          "videoFrameIntervalMs": 55.5,
+          "reader": {
+            "visible": true,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 2801,
+          "calls": 9,
+          "triangles": 11558,
+          "cpuMs": 3.900000000372529,
+          "gpuMs": 5.991874,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 4.1000000005587935
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "window-tr",
+      "ms": 7533,
+      "state": {
+        "frames": 3691,
+        "view": "window",
+        "selected": 1,
+        "heldTape": -1,
+        "heldBook": 0,
+        "screen": {
+          "category": 1,
+          "work": 4,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.869243,
+          "videoFrames": 937,
+          "videoDroppedFrames": 14,
+          "videoReady": false,
+          "videoFrameIntervalMs": 55.5,
+          "reader": {
+            "visible": true,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 3691,
+          "calls": 9,
+          "triangles": 11558,
+          "cpuMs": 3.900000000372529,
+          "gpuMs": 6.478697,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 3.8999999994412065
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "window-bl",
+      "ms": 6107,
+      "state": {
+        "frames": 4410,
+        "view": "tv",
+        "selected": 1,
+        "heldTape": -1,
+        "heldBook": 0,
+        "screen": {
+          "category": 1,
+          "work": 4,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.869243,
+          "videoFrames": 937,
+          "videoDroppedFrames": 14,
+          "videoReady": false,
+          "videoFrameIntervalMs": 55.5,
+          "reader": {
+            "visible": true,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 4410,
+          "calls": 17,
+          "triangles": 64004,
+          "cpuMs": 5.800000000745058,
+          "gpuMs": 4.634791,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 7.900000000372529
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "window-br",
+      "ms": 8698,
+      "state": {
+        "frames": 5303,
+        "view": "window",
+        "selected": 1,
+        "heldTape": -1,
+        "heldBook": 0,
+        "screen": {
+          "category": 1,
+          "work": 4,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.869243,
+          "videoFrames": 937,
+          "videoDroppedFrames": 14,
+          "videoReady": false,
+          "videoFrameIntervalMs": 55.5,
+          "reader": {
+            "visible": true,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 5303,
+          "calls": 9,
+          "triangles": 38334,
+          "cpuMs": 4.599999999627471,
+          "gpuMs": 7.247291,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 4.2999999998137355
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "left-right-camera",
+      "ms": 9906,
+      "state": {
+        "frames": 6257,
+        "view": "desk",
+        "selected": 1,
+        "heldTape": -1,
+        "heldBook": 0,
+        "screen": {
+          "category": 1,
+          "work": 4,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.869243,
+          "videoFrames": 937,
+          "videoDroppedFrames": 14,
+          "videoReady": false,
+          "videoFrameIntervalMs": 55.5,
+          "reader": {
+            "visible": true,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 6257,
+          "calls": 195,
+          "triangles": 211446,
+          "cpuMs": 13.200000000186265,
+          "gpuMs": 9.38427,
+          "geometries": 268,
+          "textures": 66,
+          "cpuP95Ms": 15.5
+        },
+        "graphicsRecovery": {
+          "losses": 0,
+          "restores": 0,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    },
+    {
+      "name": "lost-context-recovery",
+      "ms": 9345,
+      "state": {
+        "frames": 6784,
+        "view": "desk",
+        "selected": 1,
+        "heldTape": -1,
+        "heldBook": 0,
+        "screen": {
+          "category": 1,
+          "work": 4,
+          "book": 0,
+          "page": 0,
+          "auto": false,
+          "videoTime": 1.869243,
+          "videoFrames": 937,
+          "videoDroppedFrames": 14,
+          "videoReady": false,
+          "videoFrameIntervalMs": 55.5,
+          "reader": {
+            "visible": true,
+            "auto": false,
+            "pageLabel": "封面",
+            "pagesLeft": 0,
+            "pagesRight": 0,
+            "canPrevious": false,
+            "canNext": true
+          }
+        },
+        "calendar": {
+          "date": "2026-11-05",
+          "day": "5",
+          "month": "November",
+          "weekday": "Thursday",
+          "timeZone": "Asia/Shanghai",
+          "live": true
+        },
+        "performance": {
+          "frames": 6784,
+          "calls": 195,
+          "triangles": 211446,
+          "cpuMs": 13.5,
+          "gpuMs": 9.38427,
+          "geometries": 259,
+          "textures": 57,
+          "cpuP95Ms": 15.299999999813735
+        },
+        "graphicsRecovery": {
+          "losses": 1,
+          "restores": 1,
+          "recovering": false,
+          "failures": []
+        },
+        "look": {
+          "yaw": 0,
+          "pitch": 0,
+          "dragOnly": true,
+          "direction": "drag right looks right",
+          "deadZone": 2
+        }
+      }
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,3128 @@
+{
+  "origin": "https://xy-crg.pages.dev",
+  "errors": [],
+  "console": [],
+  "http": [],
+  "steps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 70171,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 0,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films"
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 764387848,
+          "total": 772182716
+        }
+      }
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 22891,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 808579725,
+          "total": 820549213
+        }
+      }
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 4673,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": false
+            }
+          }
+        ],
+        "memory": {
+          "used": 802890270,
+          "total": 816077834
+        }
+      }
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 58332,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 2,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 2,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1065204100,
+          "total": 1143471708
+        }
+      }
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 5028,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1076296678,
+          "total": 1144642834
+        }
+      }
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 14770,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1099327583,
+          "total": 1172862263
+        }
+      }
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 16787,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 5,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1120244246,
+          "total": 1187486314
+        }
+      }
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 16288,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 6,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1098202746,
+          "total": 1107473674
+        }
+      }
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 15430,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 7,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1189560040,
+          "total": 1196298056
+        }
+      }
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 59784,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 8,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1028240475,
+          "total": 1037585871
+        }
+      }
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 26862,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1118520565,
+          "total": 1127239477
+        }
+      }
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 3055,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7418.5
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7427.100000000559
+          },
+          {
+            "name": "native decoded",
+            "at": 40618
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 41460.700000000186
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 55001
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 55442.90000000037
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 55443.10000000056
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 68139.60000000056
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 68140.70000000019
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 68169.20000000019
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 68537.20000000019
+          },
+          {
+            "name": "live frame revealed",
+            "at": 68624.20000000019
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-close",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 9.299999999813735,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 64620.90000000037,
+          "lastMythSceneReadyMs": 57925.39999999944
+        },
+        "frames": [
+          {
+            "src": "https://xy-crg.pages.dev/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+            "href": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://xy-crg.pages.dev/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1122845516,
+          "total": 1131946744
+        }
+      }
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v180/clock-engraving-17eda6a1/part-000.bin",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/22289cb489cd305a/part-0012.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/22289cb489cd305a/part-0063.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/fd6a349ede716b6a/part-0130.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/fd6a349ede716b6a/part-0131.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/fd6a349ede716b6a/part-0129.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/life-purpose/v32-72/life-purpose-with-music.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0006.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0007.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0008.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0009.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0124.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0122.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0125.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/browser-v185/media/da442cdc0d636adb/part-0123.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "native": [],
+  "entry": {
+    "milliseconds": 46566.700000000186,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 480,
+      "droppedVideoFrames": 15
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 0
+    },
+    "homeReady": false,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "liveEntry": {
+    "at": 68650.40000000037,
+    "phases": [
+      {
+        "name": "module start",
+        "at": 7418.5
+      },
+      {
+        "name": "WebGL context ready",
+        "at": 7427.100000000559
+      },
+      {
+        "name": "native decoded",
+        "at": 40618
+      },
+      {
+        "name": "courtyard geometry prepared",
+        "at": 41460.700000000186
+      },
+      {
+        "name": "entry film released shader preparation",
+        "at": 55001
+      },
+      {
+        "name": "surface shaders compiled",
+        "at": 55442.90000000037
+      },
+      {
+        "name": "textures and environment ready",
+        "at": 55443.10000000056
+      },
+      {
+        "name": "entry film released GPU uploads",
+        "at": 55443.10000000056
+      },
+      {
+        "name": "colour buffers uploaded",
+        "at": 68139.60000000056
+      },
+      {
+        "name": "geometry buffers uploaded",
+        "at": 68140.70000000019
+      },
+      {
+        "name": "postprocess shaders compiled",
+        "at": 68169.20000000019
+      },
+      {
+        "name": "complete lighting variants prepared",
+        "at": 68537.20000000019
+      },
+      {
+        "name": "live frame revealed",
+        "at": 68624.20000000019
+      }
+    ],
+    "textures": {
+      "requested": 26,
+      "finished": 26,
+      "failed": [],
+      "mode": "compile unchanged materials while original images download"
+    },
+    "discoveryButtons": 4
+  },
+  "mythDepth": {
+    "verified": [
+      {
+        "id": "coast",
+        "decodedBytes": 8294400,
+        "SHA256": "ffd804f7225ace5af886ca36c87efad4693839f6f9cd3b3a59c561cbc4d68cae",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-left",
+        "decodedBytes": 8294400,
+        "SHA256": "437205ae256340d8e81bedeb52bd5c43cf3a85a87c1d558ace4cce3e3017f285",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-right",
+        "decodedBytes": 8294400,
+        "SHA256": "46f45d5f2782043a5551187f2c6b9e3b2854edf0381386e8ec48b8a5e8ab5ba3",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-near",
+        "decodedBytes": 8294400,
+        "SHA256": "683e81e31559e340aec976f6590830a042ff6b80fc48086f6a80e82b070e6aae",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "coast-far",
+        "decodedBytes": 8294400,
+        "SHA256": "79c9ffa9e22e406d463262c8f66c9ed5fc95540fec6a1e990b7b06c58181ccf3",
+        "originalBytesVerified": true
+      },
+      {
+        "id": "cottage",
+        "decodedBytes": 8294400,
+        "SHA256": "ff1beae60eea199cedebe3751b3a4e1e69a35b4914ac33d5954b72e2106232fd",
+        "originalBytesVerified": true
+      }
+    ]
+  },
+  "desktopFilm": {
+    "time": 1.619475,
+    "frames": 248,
+    "calendar": {
+      "date": "2026-11-05",
+      "day": "5",
+      "month": "November",
+      "weekday": "Thursday",
+      "timeZone": "Asia/Shanghai",
+      "live": true
+    },
+    "native": false
+  },
+  "films0": [
+    {
+      "id": "projectFilm",
+      "time": 1.670433,
+      "ready": 4,
+      "width": 1280,
+      "height": 546,
+      "duration": 139.70158700000002,
+      "midpointTime": 70.135938,
+      "sustained": {
+        "wallSeconds": 6.0602000000001865,
+        "mediaSeconds": 6.060127999999992,
+        "frames": 152,
+        "dropped": 0
+      }
+    }
+  ],
+  "films1": [
+    {
+      "id": "projectFilm",
+      "time": 1.655697,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 83.14782299999999,
+      "midpointTime": 41.858877,
+      "sustained": {
+        "wallSeconds": 6.086799999999814,
+        "mediaSeconds": 6.086585999999997,
+        "frames": 182,
+        "dropped": 0
+      }
+    }
+  ],
+  "films2": [
+    {
+      "id": "projectFilm",
+      "time": 1.688077,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 208.721587,
+      "midpointTime": 104.62743,
+      "sustained": {
+        "wallSeconds": 6.101300000000745,
+        "mediaSeconds": 6.101608999999996,
+        "frames": 184,
+        "dropped": 0
+      }
+    }
+  ],
+  "films3": [
+    {
+      "id": "projectFilm",
+      "time": 1.658765,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 18,
+      "midpointTime": 9.284539,
+      "sustained": {
+        "wallSeconds": 6.030299999999814,
+        "mediaSeconds": 6.0307189999999995,
+        "frames": 181,
+        "dropped": 0
+      }
+    },
+    {
+      "id": "lifePurposeVideo",
+      "time": 1.671532,
+      "ready": 4,
+      "width": 1600,
+      "height": 900,
+      "duration": 50,
+      "midpointTime": 25.241976,
+      "sustained": {
+        "wallSeconds": 6.0665,
+        "mediaSeconds": 6.0667899999999975,
+        "frames": 146,
+        "dropped": 0
+      }
+    }
+  ],
+  "films4": [
+    {
+      "id": "projectFilm",
+      "time": 1.712791,
+      "ready": 4,
+      "width": 3360,
+      "height": 1440,
+      "duration": 191.375873,
+      "midpointTime": 95.980001,
+      "sustained": {
+        "wallSeconds": 6.086700000000186,
+        "mediaSeconds": 6.086224000000001,
+        "frames": 182,
+        "dropped": 0
+      }
+    }
+  ],
+  "homeFinal": {
+    "ready": true,
+    "renderer": "Three.js / original geometry and local PBR",
+    "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "native": false,
+    "interfaceReady": true,
+    "delivery": {
+      "version": 187,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 6,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 24,
+      "progressiveMedia": [
+        {
+          "source": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/manifest.json",
+          "bytes": 7362849,
+          "requests": 23,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 10334.600000000559,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+          "bytes": 6707738,
+          "requests": 17,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 12511.600000000559,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "https://xy-crg.pages.dev/assets/browser-v185/media/fd6a349ede716b6a/manifest.json",
+          "bytes": 9851210,
+          "requests": 16,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 172373.10000000056,
+          "ready": true,
+          "failed": false
+        }
+      ]
+    },
+    "retained": true
+  },
+  "resourceTiming": [
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/home-designed-intro-v160.js",
+      "duration": 925.7000000001863,
+      "bytes": 3748
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/home-thought-line-v160.js",
+      "duration": 1288.699999999255,
+      "bytes": 4270
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/home-world-v146.js",
+      "duration": 1286.9000000003725,
+      "bytes": 48293
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/scene-loader-v146.js",
+      "duration": 1297.800000000745,
+      "bytes": 1631
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-32475FOM.js",
+      "duration": 1529.9000000003725,
+      "bytes": 57853
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-C6N56PU3.js",
+      "duration": 1725.2999999998137,
+      "bytes": 103255
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-DGU5PTFW.js",
+      "duration": 1372.7000000001863,
+      "bytes": 15298
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-LZ7QSBR5.js",
+      "duration": 1806.7000000001863,
+      "bytes": 181712
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-ME7QVHGR.js",
+      "duration": 923.6999999992549,
+      "bytes": 306
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-NK3IH7V4.js",
+      "duration": 1307,
+      "bytes": 2648
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-MG6POSIJ.js",
+      "duration": 1808.7000000001863,
+      "bytes": 8306
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-PQUBCPGM.js",
+      "duration": 1402.6000000005588,
+      "bytes": 10474
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-R5XT465O.js",
+      "duration": 1597.6000000005588,
+      "bytes": 69646
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-RGYTE4B5.js",
+      "duration": 1653.7000000001863,
+      "bytes": 48215
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-RTTFH4P3.js",
+      "duration": 1307.4000000003725,
+      "bytes": 393
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-SXRZKL2H.js",
+      "duration": 1375.1000000005588,
+      "bytes": 723
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-W3TROUU3.js",
+      "duration": 1419.9000000003725,
+      "bytes": 5884
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-XL3CMSHR.js",
+      "duration": 1609,
+      "bytes": 10938
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-XM4RMFZ3.js",
+      "duration": 1372.7999999998137,
+      "bytes": 1169
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-YRQ74F3T.js",
+      "duration": 2162.7999999998137,
+      "bytes": 37740
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-000.bin",
+      "duration": 6026,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-001.bin",
+      "duration": 5521.199999999255,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://xy-crg.pages.dev/audio-focus-v141.js?v=32.189",
+      "duration": 1103.2999999998137,
+      "bytes": 463
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/scene-loader-v146.js?v=32.189",
+      "duration": 3000.2999999998137,
+      "bytes": 55
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/dock/exhibition-dock-v160.js?v=32.189",
+      "duration": 2999.7000000001863,
+      "bytes": 58
+    },
+    {
+      "name": "https://xy-crg.pages.dev/home-creation-launch-v141.js?v=32.189",
+      "duration": 2998.5999999996275,
+      "bytes": 1377
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/dock/home-designed-intro-v160.js?v=32.189",
+      "duration": 2999.7999999998137,
+      "bytes": 61
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/directory-v144/app.js?v=32.189",
+      "duration": 2998.800000000745,
+      "bytes": 53
+    },
+    {
+      "name": "https://xy-crg.pages.dev/site-refinements-v129.js?v=32.189",
+      "duration": 7213.200000000186,
+      "bytes": 1572
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/techtext-v153.js?v=32.189",
+      "duration": 3000.0999999996275,
+      "bytes": 49
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/home-thought-line-v160.js?v=32.189",
+      "duration": 3000.2999999998137,
+      "bytes": 60
+    },
+    {
+      "name": "https://xy-crg.pages.dev/refinements-v161.js?v=32.189",
+      "duration": 2997.600000000559,
+      "bytes": 675
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/hobby-drift-v167.js?v=32.189",
+      "duration": 3000.4000000003725,
+      "bytes": 55
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/home-live-poster-v32-77.png",
+      "duration": 4800.200000000186,
+      "bytes": 2263493
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/wordmark-v142/wordmark.ttf",
+      "duration": 2496.7000000001863,
+      "bytes": 6552
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v183/images/d6862ea204186288f90b-1280.webp",
+      "duration": 6879.5,
+      "bytes": 2901520
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v183/images/45beb4b5eff4666246b3-1280.webp",
+      "duration": 8318.900000000373,
+      "bytes": 946642
+    },
+    {
+      "name": "https://xy-crg.pages.dev/heading-interaction-v157.js?v=32.157",
+      "duration": 6059,
+      "bytes": 1041
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/exhibition-dock-v160.js",
+      "duration": 2459.4000000003725,
+      "bytes": 13621
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/directory-app.js",
+      "duration": 2486.899999999441,
+      "bytes": 61343
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/techtext-v153.js",
+      "duration": 2486,
+      "bytes": 9379
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/hobby-drift-v167.js",
+      "duration": 2489.199999999255,
+      "bytes": 3798
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v16/world-track.json",
+      "duration": 3294.4000000003725,
+      "bytes": 491525
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-002.bin",
+      "duration": 3038.7000000001863,
+      "bytes": 2655205
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/home-world-v146.js?v=32.184",
+      "duration": 2502,
+      "bytes": 48293
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/geometry-delivery/c455d984619ad440b4742a32-000.bin",
+      "duration": 4535.800000000745,
+      "bytes": 1162847
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-01.webp",
+      "duration": 4432.700000000186,
+      "bytes": 605542
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-02.webp",
+      "duration": 3704.4000000003725,
+      "bytes": 298316
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-04.webp",
+      "duration": 4695.399999999441,
+      "bytes": 266104
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-03.webp",
+      "duration": 5117.899999999441,
+      "bytes": 380998
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-05.webp",
+      "duration": 5117.299999999814,
+      "bytes": 127628
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-06.webp",
+      "duration": 5853.399999999441,
+      "bytes": 106468
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-08.webp",
+      "duration": 5905.0999999996275,
+      "bytes": 141034
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-09.webp",
+      "duration": 6348.0999999996275,
+      "bytes": 238268
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-10.webp",
+      "duration": 6675.4000000003725,
+      "bytes": 461886
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/atmosphere-v172/atmosphere-11.webp",
+      "duration": 8122.9000000003725,
+      "bytes": 405472
+    },
+    {
+      "name": "https://xy-crg.pages.dev/progressive-media-v187.js",
+      "duration": 1837.5,
+      "bytes": 2271
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-IPDBCHYA.js",
+      "duration": 1263.2999999998137,
+      "bytes": 8486
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/native-v165/home.jpg?v=32.165",
+      "duration": 2365.2000000001863,
+      "bytes": 705603
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/f1c1ca57d221240f2118144e.avif",
+      "duration": 8110.399999999441,
+      "bytes": 1167046
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/7a917fde7616e6d944ebcdcf.webp",
+      "duration": 8110.700000000186,
+      "bytes": 355936
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/fd2654a75471a5adb54a8966.webp",
+      "duration": 9789.700000000186,
+      "bytes": 1378806
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/transfer/ef5a077afd8fadc255d0.avif",
+      "duration": 11271.099999999627,
+      "bytes": 3168578
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/Marble012_rough_2k.jpg",
+      "duration": 13243.5,
+      "bytes": 2166701
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/transfer/1b55932dd51c21b2337f.avif",
+      "duration": 13431.700000000186,
+      "bytes": 533660
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 14900,
+      "bytes": 2870078
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/sandstone_cracks_rough_2k.jpg",
+      "duration": 15554.200000000186,
+      "bytes": 1569280
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 19232.900000000373,
+      "bytes": 4545235
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 18987.10000000056,
+      "bytes": 3085891
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/white_sandstone_blocks_02_rough_2k.jpg",
+      "duration": 19980.400000000373,
+      "bytes": 2545799
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 20412.700000000186,
+      "bytes": 609525
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 22070.599999999627,
+      "bytes": 2573376
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 22182.700000000186,
+      "bytes": 652441
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_rough_1k.jpg",
+      "duration": 20123,
+      "bytes": 299757
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v23/material-calibration.json",
+      "duration": 19518,
+      "bytes": 2772
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v180/clock-engraving-17eda6a1/part-000.bin",
+      "duration": 20005,
+      "bytes": 0
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/draco/draco_wasm_wrapper.js",
+      "duration": 1607.2999999998137,
+      "bytes": 11700
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/native-v164/room.jpg?v=32.164",
+      "duration": 21287.5,
+      "bytes": 548298
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/directory-hand-2JQHWOL5.woff2",
+      "duration": 1448.7999999998137,
+      "bytes": 603820
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/loading-study/opening-poster-v32-84.png",
+      "duration": 1153.0999999996275,
+      "bytes": 247482
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/03-tile.webp",
+      "duration": 20592.799999999814,
+      "bytes": 128310
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/08-tile.webp",
+      "duration": 20554,
+      "bytes": 24298
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/12-tile.webp",
+      "duration": 20753.700000000186,
+      "bytes": 91114
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/21-tile.webp",
+      "duration": 20784.700000000186,
+      "bytes": 97698
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/10-tile.webp",
+      "duration": 20839.599999999627,
+      "bytes": 55816
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/01-tile.webp",
+      "duration": 20822.60000000056,
+      "bytes": 16646
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/02-tile.webp",
+      "duration": 20822.800000000745,
+      "bytes": 48430
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/06-tile.webp",
+      "duration": 20822.89999999944,
+      "bytes": 95022
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/17-tile.webp",
+      "duration": 20839.599999999627,
+      "bytes": 100818
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/19-tile.webp",
+      "duration": 20850.700000000186,
+      "bytes": 68946
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0000.m4s",
+      "duration": 1097.2000000001863,
+      "bytes": 160762
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0001.m4s",
+      "duration": 1169.199999999255,
+      "bytes": 211524
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0002.m4s",
+      "duration": 852.7000000001863,
+      "bytes": 266231
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0003.m4s",
+      "duration": 1587.7999999998137,
+      "bytes": 382705
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0000.m4s",
+      "duration": 1290.2000000001863,
+      "bytes": 1088868
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0001.m4s",
+      "duration": 984.0999999996275,
+      "bytes": 479008
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0002.m4s",
+      "duration": 1016.5999999996275,
+      "bytes": 688822
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0003.m4s",
+      "duration": 734.3000000007451,
+      "bytes": 309264
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0004.m4s",
+      "duration": 785.5,
+      "bytes": 411862
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0005.m4s",
+      "duration": 651.7999999998137,
+      "bytes": 275754
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0006.m4s",
+      "duration": 547.3999999994412,
+      "bytes": 260411
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0007.m4s",
+      "duration": 572,
+      "bytes": 307719
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0004.m4s",
+      "duration": 1821.2999999998137,
+      "bytes": 1092500
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0005.m4s",
+      "duration": 1997.2999999998137,
+      "bytes": 539955
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0008.m4s",
+      "duration": 1560.5999999996275,
+      "bytes": 47057
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0009.m4s",
+      "duration": 581.7999999998137,
+      "bytes": 658991
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0010.m4s",
+      "duration": 753.2000000001863,
+      "bytes": 538224
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0011.m4s",
+      "duration": 901.4000000003725,
+      "bytes": 366184
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v180/clock-engraving-17eda6a1/part-001.bin",
+      "duration": 16453.400000000373,
+      "bytes": 1379959
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/look-calibration.json",
+      "duration": 16440.599999999627,
+      "bytes": 3534
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0012.m4s",
+      "duration": 554.7999999998137,
+      "bytes": 418007
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0013.m4s",
+      "duration": 2423.399999999441,
+      "bytes": 283305
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0014.m4s",
+      "duration": 2525.0999999996275,
+      "bytes": 613925
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0015.m4s",
+      "duration": 2644.2999999998137,
+      "bytes": 630552
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0016.m4s",
+      "duration": 2312.7000000001863,
+      "bytes": 570716
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/bake-audit.json",
+      "duration": 13499.599999999627,
+      "bytes": 662
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0017.m4s",
+      "duration": 614.2000000001863,
+      "bytes": 115114
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0018.m4s",
+      "duration": 1786.7999999998137,
+      "bytes": 447341
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0019.m4s",
+      "duration": 1673.7000000001863,
+      "bytes": 318866
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/native-v24-prefiltered-v158.json",
+      "duration": 12625.600000000559,
+      "bytes": 205
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0020.m4s",
+      "duration": 1946.2999999998137,
+      "bytes": 72523
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/media/1be16e3218752244/part-0021.m4s",
+      "duration": 4647,
+      "bytes": 3806
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/native-v24-prefiltered-v158.bin.gz",
+      "duration": 4907.299999999814,
+      "bytes": 201723
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shaders/home-programs.json",
+      "duration": 4231.700000000186,
+      "bytes": 101671
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/05-tile.webp",
+      "duration": 2388.0999999996275,
+      "bytes": 20352
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/04-tile.webp",
+      "duration": 2456.5,
+      "bytes": 36642
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/11-tile.webp",
+      "duration": 3550.5999999996275,
+      "bytes": 90396
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/13-tile.webp",
+      "duration": 3236.2000000001863,
+      "bytes": 110424
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/14-tile.webp",
+      "duration": 3556.199999999255,
+      "bytes": 45308
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/22-tile.webp",
+      "duration": 3555,
+      "bytes": 17576
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/09-tile.webp",
+      "duration": 3553.800000000745,
+      "bytes": 30834
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/15-tile.webp",
+      "duration": 3815.100000000559,
+      "bytes": 56070
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/16-tile.webp",
+      "duration": 3845.2000000001863,
+      "bytes": 50114
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/23-tile.webp",
+      "duration": 4159.799999999814,
+      "bytes": 28544
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/24-tile.webp",
+      "duration": 4171,
+      "bytes": 104560
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/25-tile.webp",
+      "duration": 4277.799999999814,
+      "bytes": 28068
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/07-tile.webp",
+      "duration": 4288.299999999814,
+      "bytes": 23076
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/26-tile.webp",
+      "duration": 4294.299999999814,
+      "bytes": 25730
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/18-tile.webp",
+      "duration": 4420.0999999996275,
+      "bytes": 25542
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/27-tile.webp",
+      "duration": 4411.9000000003725,
+      "bytes": 26824
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/20-tile.webp",
+      "duration": 4578.600000000559,
+      "bytes": 52922
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/photography-v170/28-tile.webp",
+      "duration": 4580.5,
+      "bytes": 19968
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0006.m4s",
+      "duration": 2085.9000000003725,
+      "bytes": 677852
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0007.m4s",
+      "duration": 2069,
+      "bytes": 17898
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0008.m4s",
+      "duration": 759.3999999994412,
+      "bytes": 466508
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0009.m4s",
+      "duration": 765.0999999996275,
+      "bytes": 10632
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/geometry-delivery/df2d97e1e0a32015be34a9b4-000.bin",
+      "duration": 3637.7999999998137,
+      "bytes": 30759
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/934eaa61851a3c21fe784e56-000.bin",
+      "duration": 3637.5999999996275,
+      "bytes": 28581
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/geometry-delivery/032cac85f53b6e8651b7c552-000.bin",
+      "duration": 3557.5,
+      "bytes": 83432
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/architecture-ao-0.png",
+      "duration": 4528.9000000003725,
+      "bytes": 500917
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/architecture-ao-1.png",
+      "duration": 4535.199999999255,
+      "bytes": 349089
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/architecture-ao-2.png",
+      "duration": 4577.199999999255,
+      "bytes": 201116
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/display-transform.json",
+      "duration": 4500.699999999255,
+      "bytes": 256
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/display-transform.bin",
+      "duration": 4130.600000000559,
+      "bytes": 143748
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/draco/draco_decoder.wasm",
+      "duration": 716,
+      "bytes": 59577
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0010.m4s",
+      "duration": 790.5999999996275,
+      "bytes": 352708
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0011.m4s",
+      "duration": 614.4000000003725,
+      "bytes": 15580
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0012.m4s",
+      "duration": 578.7000000001863,
+      "bytes": 360005
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v180/clock-engraving-17eda6a1/part-000.bin",
+      "duration": 6168.700000000186,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0013.m4s",
+      "duration": 2263.100000000559,
+      "bytes": 130713
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 4406.200000000186,
+      "bytes": 2573376
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 4284.100000000559,
+      "bytes": 3085891
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/064aadedc37c6b8386f19d95.avif",
+      "duration": 7056.800000000745,
+      "bytes": 1832659
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0014.m4s",
+      "duration": 2037.5,
+      "bytes": 475426
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/architecture-indirect-0.bin.z",
+      "duration": 2758,
+      "bytes": 2971697
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/architecture-indirect-1.bin.z",
+      "duration": 3903.5,
+      "bytes": 2337390
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v24/architecture-indirect-2.bin.z",
+      "duration": 3855.2000000001863,
+      "bytes": 1652784
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v185/media/0232ba50007c7e9e/part-0015.m4s",
+      "duration": 1771.5,
+      "bytes": 1162
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 1256.5,
+      "bytes": 4545235
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 1239,
+      "bytes": 2870078
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-BAB33W6C.js",
+      "duration": 1588.9000000003725,
+      "bytes": 10097
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/367eecd041a14d01853d0c5b.webp",
+      "duration": 3268.2999999998137,
+      "bytes": 2379556
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 1531.5999999996275,
+      "bytes": 652441
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 1807.7000000001863,
+      "bytes": 609525
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/browser-v189/shared-RUKHF5KC.js",
+      "duration": 1756,
+      "bytes": 16424
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/a734e5926bddab54febbe837.webp",
+      "duration": 1873.0999999996275,
+      "bytes": 296148
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/deb7a3dccbcf3c63232a6f39.avif",
+      "duration": 3499.7000000001863,
+      "bytes": 4965912
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/ca8ae6850dec30134624b83c.avif",
+      "duration": 4595.600000000559,
+      "bytes": 3095908
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v22/courtyard-cavity-volume.json",
+      "duration": 222.90000000037253,
+      "bytes": 297
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/reference-architecture-v22/courtyard-cavity-volume.bin",
+      "duration": 1447.1000000005588,
+      "bytes": 122880
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/9242e59be05fa19c99b7f279.avif",
+      "duration": 4335.799999999814,
+      "bytes": 1630451
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/after-journey/cover-v32-92.webp",
+      "duration": 4028.5,
+      "bytes": 1354530
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/journey/previews/journey-mountain-valley.webp",
+      "duration": 3651.7999999998137,
+      "bytes": 174082
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/journey/previews/mist-palace-dusk.webp",
+      "duration": 3654.0999999996275,
+      "bytes": 12286
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/rural-return/poster.webp",
+      "duration": 3920,
+      "bytes": 17938
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/covers-v137/rural.webp",
+      "duration": 4448.600000000559,
+      "bytes": 422394
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/covers-v137/mid-autumn.webp",
+      "duration": 4462,
+      "bytes": 602530
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/covers-v177/code-films.webp",
+      "duration": 4762.100000000559,
+      "bytes": 487956
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/humid-southeast-asia/cover.webp",
+      "duration": 4992.700000000186,
+      "bytes": 401962
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/ue-v159/clock-mix-ue5-cubeuv.json",
+      "duration": 3505.899999999441,
+      "bytes": 640
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/ue-v159/clock-mix-ue5-cubeuv.bin.gz",
+      "duration": 3556.5999999996275,
+      "bytes": 225523
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/a473259e9d3b583100cb77b7.jpg",
+      "duration": 4958.799999999814,
+      "bytes": 2275944
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/40edce9d6c49355fad3d72ce.jpg",
+      "duration": 4648,
+      "bytes": 2006484
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v186/shared/3d1dd79242c34c98fa7a5666.avif",
+      "duration": 4746.399999999441,
+      "bytes": 1607858
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/mid-autumn/still-live-stage.webp",
+      "duration": 4454.700000000186,
+      "bytes": 226042
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/covers-v161/code-films.webp",
+      "duration": 4370.200000000186,
+      "bytes": 274692
+    },
+    {
+      "name": "https://xy-crg.pages.dev/blender/home-camera-v32-84/camera-v84.json",
+      "duration": 3804.199999999255,
+      "bytes": 369
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/reading/cinema-aesthetics/page-001.jpg",
+      "duration": 302.79999999981374,
+      "bytes": 474206
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/prompt-lab/prompt-structure.webp",
+      "duration": 295.29999999981374,
+      "bytes": 278786
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v189/room-atlas/layout.json",
+      "duration": 227.40000000037253,
+      "bytes": 4655
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v189/room-atlas/on.webp",
+      "duration": 7573,
+      "bytes": 4182742
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v189/room-atlas/off.webp",
+      "duration": 8182.0999999996275,
+      "bytes": 3025368
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/room-static.glb",
+      "duration": 1400.699999999255,
+      "bytes": 2205652
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/room-lamp.png",
+      "duration": 8483.599999999627,
+      "bytes": 1094829
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/room-off.png",
+      "duration": 9643.799999999814,
+      "bytes": 3124633
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/room-tv.png",
+      "duration": 10811.5,
+      "bytes": 1582941
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v119/berlin-night.jpg",
+      "duration": 12019.800000000745,
+      "bytes": 2674368
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/room-lighting.json",
+      "duration": 416.59999999962747,
+      "bytes": 4883
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/covers-v177/code-films.webp",
+      "duration": 9723.599999999627,
+      "bytes": 487956
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v120/plant/potted-plant-02.glb",
+      "duration": 2920.4000000003725,
+      "bytes": 3752232
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/room-collision.glb",
+      "duration": 5365.5,
+      "bytes": 4335328
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/room-normal.png",
+      "duration": 12419.599999999627,
+      "bytes": 825693
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v123/remote-detail.glb",
+      "duration": 2552.9000000003725,
+      "bytes": 486708
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 12424.800000000745,
+      "bytes": 652441
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 12437.200000000186,
+      "bytes": 609525
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "duration": 12655.5,
+      "bytes": 916843
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/odyssey/rough_linen/rough_linen_rough_1k.jpg",
+      "duration": 12831.900000000373,
+      "bytes": 1083725
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v123/plant/potted_plant_02_pot_diff_2k.jpg",
+      "duration": 13011.200000000186,
+      "bytes": 596006
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v123/plant/potted_plant_02_pot_nor_gl_2k.jpg",
+      "duration": 13436.299999999814,
+      "bytes": 494387
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v123/plant/potted_plant_02_pot_rough_2k.jpg",
+      "duration": 13540.200000000186,
+      "bytes": 426559
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/browser-v189/room-atlas/layout-07bb6aef97dbe9116c72.bin.gz",
+      "duration": 6000.200000000186,
+      "bytes": 1925044
+    },
+    {
+      "name": "https://xy-crg.pages.dev/v31-sand-story.js?v=32.183",
+      "duration": 13250.900000000373,
+      "bytes": 18576
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/works/physical-universe-v103/film.mp4",
+      "duration": 14616.299999999814,
+      "bytes": 4509246
+    },
+    {
+      "name": "https://xy-crg.pages.dev/reading.html?v=32.170&portal=1",
+      "duration": 8601.299999999814,
+      "bytes": 42569
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/home-lod-worker.js?v=32.75",
+      "duration": 571.1999999992549,
+      "bytes": 10028
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/chunk-AOQCOLWL.js",
+      "duration": 3391.899999999441,
+      "bytes": 2067
+    },
+    {
+      "name": "https://xy-crg.pages.dev/scene-dist/chunk-CTVPEMRS.js",
+      "duration": 3717.300000000745,
+      "bytes": 156092
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/brass-normal.png",
+      "duration": 2371.5,
+      "bytes": 277526
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/brass-roughness.png",
+      "duration": 2462.5999999996275,
+      "bytes": 176095
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/aluminium-normal.png",
+      "duration": 2579,
+      "bytes": 224973
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/aluminium-roughness.png",
+      "duration": 2758.7999999998137,
+      "bytes": 159641
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/abs-normal.png",
+      "duration": 2960.5,
+      "bytes": 389797
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/abs-roughness.png",
+      "duration": 2678.2000000001863,
+      "bytes": 189601
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/paper-normal.png",
+      "duration": 3255.0999999996275,
+      "bytes": 418460
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/paper-roughness.png",
+      "duration": 3330,
+      "bytes": 177168
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/porcelain-normal.png",
+      "duration": 3425.4000000003725,
+      "bytes": 282688
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/porcelain-roughness.png",
+      "duration": 3469.5999999996275,
+      "bytes": 164899
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/rubber-normal.png",
+      "duration": 3579.9000000003725,
+      "bytes": 483924
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/directory-v127/materials/rubber-roughness.png",
+      "duration": 3624.5,
+      "bytes": 194572
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/craft-raised.webp",
+      "duration": 3542.5999999996275,
+      "bytes": 53060
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/craft-strike.webp",
+      "duration": 3584.9000000003725,
+      "bytes": 47962
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/camera-operator.webp",
+      "duration": 5195.5,
+      "bytes": 33030
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/applause-airplane.webp",
+      "duration": 5210.399999999441,
+      "bytes": 19216
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/applause-open.webp",
+      "duration": 5228.399999999441,
+      "bytes": 32204
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/violin-duet.webp",
+      "duration": 5254.600000000559,
+      "bytes": 36368
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/violin-return.webp",
+      "duration": 5298,
+      "bytes": 62940
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/boxing-ring.webp",
+      "duration": 5378.399999999441,
+      "bytes": 119672
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/boxing-left-jab.webp",
+      "duration": 5458.5999999996275,
+      "bytes": 119454
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/boxing-right-jab.webp",
+      "duration": 7458.4000000003725,
+      "bytes": 115020
+    },
+    {
+      "name": "https://xy-crg.pages.dev/assets/sand-story/european-castle-simple-v2.webp",
+      "duration": 7572.800000000745,
+      "bytes": 94884
+    }
+  ],
+  "pass": true
+}
