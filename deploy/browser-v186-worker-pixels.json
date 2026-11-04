@@ -1,0 +1,33 @@
+{
+  "errors": [],
+  "images": [
+    {
+      "source": "/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "width": 2048,
+      "height": 2048,
+      "bytes": 16777216,
+      "maximumChannelDifference": 0,
+      "differingChannels": 0,
+      "workerMilliseconds": 97
+    },
+    {
+      "source": "/assets/home/Marble012_diff_2k.jpg",
+      "width": 2048,
+      "height": 2048,
+      "bytes": 16777216,
+      "maximumChannelDifference": 0,
+      "differingChannels": 0,
+      "workerMilliseconds": 111.79999995231628
+    },
+    {
+      "source": "/assets/browser-v186/shared/5d8d876b666354a866f35312.avif",
+      "width": 2048,
+      "height": 2048,
+      "bytes": 16777216,
+      "maximumChannelDifference": 0,
+      "differingChannels": 0,
+      "workerMilliseconds": 145.70000004768372
+    }
+  ],
+  "pass": true
+}

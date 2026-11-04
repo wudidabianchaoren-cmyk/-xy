@@ -1,0 +1,22 @@
+{
+  "version": 186,
+  "productionURL": "https://zaojing-wxy.netlify.app",
+  "candidateDeploy": "6aeb132267752522e800789e",
+  "published": false,
+  "productionRuntimeSmokePass": false,
+  "allRequirementsComplete": false,
+  "qualityApproved": false,
+  "findSkillsInstalledAndUsed": true,
+  "annualBudgetCNY": 20,
+  "purchases": 0,
+  "originalInputsPreserved": true,
+  "publicDraftFunctionalFlowPass": true,
+  "publicDraftHomeSeconds": 55.9814,
+  "publicDraftFilmsSeconds": 61.6897,
+  "knownLimits": [
+    "cold mythology still84.84s in final draft",
+    "integrated GPU myth around14FPS",
+    "off-axis field/room seam limitations remain",
+    "public first entry still longer than authored36second films"
+  ]
+}

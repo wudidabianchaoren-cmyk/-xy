@@ -1,10 +1,11 @@
 import * as THREE from 'three';
+import {retainedCourtyardModel186} from './home-model-preload-v186';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import type {createCyclops} from './odyssey-cyclops';
 import {batchNativeDetail} from './home-native-batch';
 const directory='./blender/reference-architecture-v18/';
 export async function nativeCourtyard(scene:THREE.Scene){
- const root=(await new GLTFLoader().loadAsync(directory+'courtyard-additions.glb')).scene;
+ const root=(await retainedCourtyardModel186(directory+'courtyard-additions.glb')).scene;
  root.updateMatrixWorld(true);const unsupported:THREE.Object3D[]=[];root.traverse(o=>{if(o instanceof THREE.Mesh){const center=new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3());if(Math.abs(center.x)>10.3&&center.z>-4.5)unsupported.push(o);}});unsupported.forEach(o=>o.removeFromParent());
  batchNativeDetail(root);root.name='Blender V18 / architectural stone benches, cloister lanterns and carved window surrounds';
  let meshes=0;root.traverse(o=>{if(o instanceof THREE.Mesh){meshes++;o.castShadow=o.receiveShadow=true;for(const m of Array.isArray(o.material)?o.material:[o.material])if(m instanceof THREE.MeshStandardMaterial){m.envMapIntensity=.24;if(m.normalMap)m.normalScale.set(.65,.65);if(m.map)m.map.anisotropy=8;}}});scene.add(root);

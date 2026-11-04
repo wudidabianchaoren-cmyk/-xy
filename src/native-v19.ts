@@ -1,11 +1,12 @@
 import * as THREE from 'three';
+import {retainedCourtyardModel186} from './home-model-preload-v186';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {nativeCourtyard as retainedCourtyard} from './native-v18';
 import type {createCyclops} from './odyssey-cyclops';
 import {batchNativeDetail} from './home-native-batch';
 const directory='./blender/reference-architecture-v19/';
 export async function nativeCourtyard(scene:THREE.Scene){
- const retained=await retainedCourtyard(scene),root=(await new GLTFLoader().loadAsync(directory+'architectural-profiles.glb')).scene;
+ const [retained,loaded]=await Promise.all([retainedCourtyard(scene),retainedCourtyardModel186(directory+'architectural-profiles.glb')]),root=loaded.scene;
  batchNativeDetail(root);
  root.traverse(o=>{if(o instanceof THREE.Mesh){o.castShadow=o.receiveShadow=true;for(const m of Array.isArray(o.material)?o.material:[o.material])if(m instanceof THREE.MeshStandardMaterial){m.envMapIntensity=.38;if(m.map)m.map.anisotropy=8;}}});scene.add(root);
  return {...retained,labels:[...retained.labels,'native bevelled stone drip profiles and recessed bronze trim'],root};

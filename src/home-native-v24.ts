@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 import {courtyardSoftShadows} from './home-soft-shadows';
 type NativeMaterial={name:string;base:number[];roughness:number;metalness:number;normalStrength:number|null};
 type NativeLight={name:string;energy:number;color:number[];position:number[];direction:number[];width:number;height:number};
@@ -10,7 +11,7 @@ const meshKey=(name:string)=>name.replace(/geometry/g,'batch').replace(/[^a-zA-Z
 const nativeLookReady=Promise.all([
  fetch(directory+'look-calibration.json').then(r=>r.json() as Promise<Look>),
  fetch(directory+'bake-audit.json').then(r=>r.json() as Promise<{layers:{name:string;ao:string;indirect:string;size:number;uvChannel:number}[];seconds:number}>),
- new GLTFLoader().loadAsync(directory+'baked-architecture.glb'),
+ new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(directory+'baked-architecture.glb'),
  Promise.all([
   fetch('./assets/home/native-v24-prefiltered-v158.json').then(r=>{if(!r.ok)throw Error('Courtyard reflection metadata missing');return r.json() as Promise<{width:number;height:number}>;}),
   fetch('./assets/home/native-v24-prefiltered-v158.bin.gz').then(r=>{if(!r.ok)throw Error('Courtyard reflection data missing');return new Response(r.body!.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();})

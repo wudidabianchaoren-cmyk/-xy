@@ -1,0 +1,15 @@
+{
+  "version": 186,
+  "codecCopyOnly": true,
+  "records": [
+    {
+      "source": "/assets/loading-study/loading-study-v32-84.mp4",
+      "manifest": "/assets/browser-v186/media/1be16e3218752244/manifest.json",
+      "packetHashVerified": true,
+      "segments": 22,
+      "largestSegmentBytes": 658991,
+      "initialSegmentBytes": 160762,
+      "duration": 20.066665999999998
+    }
+  ]
+}

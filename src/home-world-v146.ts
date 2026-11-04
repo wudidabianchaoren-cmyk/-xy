@@ -1,3 +1,7 @@
+import {homeImagesReadyV186} from './home-texture-preparation-v186';
+import {compactHomeLightLoops186} from './home-light-loops-v186';
+import {prewarmCourtyardPrograms186} from './home-shader-prefetch-v186';
+import {preloadCourtyardDetails186} from './home-model-preload-v186';
 import {graphicsRecovery} from './graphics-recovery-v185';
 import {finishCourtyardV165} from './home-finish-v165';
 import{connectNativeHome}from'./native-home-v162';
@@ -58,6 +62,8 @@ if(surface){
   surface.style.backgroundImage='url("./assets/native-v165/home.jpg?v=32.165")';surface.style.backgroundSize='cover';surface.style.backgroundPosition='center';
   const canvas=document.createElement('canvas');canvas.className='home-live-world';canvas.style.opacity='0';canvas.setAttribute('aria-hidden','true');surface.append(canvas);
   const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:false,powerPreference:'high-performance'});
+  const earlyShaders=prewarmCourtyardPrograms186(renderer);
+  if(webHome)preloadCourtyardDetails186();
   mark('WebGL context ready');const startupGPUInfo=renderer.getContext().getExtension('WEBGL_debug_renderer_info');const gpuName=startupGPUInfo?renderer.getContext().getParameter(startupGPUInfo.UNMASKED_RENDERER_WEBGL):'';const integrated=/Intel|Iris|UHD|SwiftShader/i.test(gpuName);
   renderer.setPixelRatio(Math.min(devicePixelRatio,1));renderer.toneMapping=THREE.AgXToneMapping;renderer.toneMappingExposure=Math.pow(2,-.30);
   const lookControls={secondaryFillScale:1.3,keyScale:.0069,areaIntensity:18.8,reflectionGain:.72,ambient:.10,keyWidth:5.0,keyHeight:5.6,forestScale:2.2};
@@ -117,6 +123,7 @@ if(surface){
     poses:()=>[...objects].filter(([name])=>/automaton|shutter|travelling archivist|temple hanging bell/.test(name)).map(([name,o])=>({name,p:o.position.toArray(),q:o.quaternion.toArray()})),
     project:(kind:string)=>{const p=kind==='upper'?new THREE.Vector3(-.15,5.45,-.1):kind==='lower'?new THREE.Vector3(-.15,1.77,-.1):kind==='knights'||kind==='knight-0'?new THREE.Vector3(-.84,7.52,-.2):kind==='knight-1'?new THREE.Vector3(.54,7.52,-.2):kind==='bell'?new THREE.Vector3(-4.75,4.38,-2.8):courtyardPoint(new THREE.Vector3(-8.1,2.97,-2.1));p.project(camera);const b=canvas.getBoundingClientRect();return [b.left+(p.x+1)*b.width/2,b.top+(1-p.y)*b.height/2];}};
   (window as unknown as Record<string,unknown>).homeClockState=state;
+  Object.assign(state,{earlyShaderPreparation:earlyShaders.audit});
   Object.assign(state,{enableNativeExport:()=>nativeHomeExport(scene,camera,[...objects].filter(([name])=>/upper automaton [01]$|hinged blue apostle shutter|LIVE.*rotor|temple hanging bell|travelling archivist/.test(name)),state)});
   Object.defineProperty(window,'homeArchitectureState',{configurable:true,get:()=>({started,formed:true,paused,time:elapsed,duration:16,loopMode:'intro-once-then-live-wide',nativeLoop:false,cameraLocked:intro>=16})});
   const loader=new THREE.TextureLoader(),textureReady:Promise<unknown>[]=[];
@@ -225,7 +232,7 @@ if(surface){
     const back=lights.get('V13 / west actual silhouette backlight');
     if(back){back.castShadow=true;back.shadow.mapSize.set(512,512);back.shadow.bias=-.001;back.shadow.normalBias=.008;back.distance=3;}
     draco.dispose();const wide=track.camera.frames[0];camera.position.fromArray(wide.position);camera.lookAt(new THREE.Vector3().fromArray(wide.target));
-    await Promise.all([...textureReady,displayReady]);mark('textures and environment ready');
+    if(!webHome){await Promise.all([...textureReady,displayReady,homeImagesReadyV186()]);mark('textures and environment ready');}
     scene.environment=nativeLook.probe;scene.environmentIntensity=lookControls.ambient;
     if(!webHome){
       architecturalCamera(camera,16,track.camera.frames[0]);state.nativeWarmup=true;
@@ -246,6 +253,8 @@ if(surface){
     animatedMechanisms=[...objects].filter(([name])=>/upper automaton [01]$|hinged blue apostle shutter/.test(name));
     let stagedAutomata=0;for(const [name,actor]of animatedMechanisms){if(!/upper automaton [01]$/.test(name))continue;actor.traverse(child=>{if(child instanceof THREE.Mesh){const ms=Array.isArray(child.material)?child.material:[child.material];child.material=ms.map(m=>{if(!(m instanceof THREE.MeshStandardMaterial)||m.userData.automatonReadable)return m;const copy=m.clone();copy.onBeforeCompile=m.onBeforeCompile;copy.customProgramCacheKey=m.customProgramCacheKey;copy.emissive.set(0xb68a4d);copy.emissiveIntensity=.09;copy.userData.automatonReadable=true;stagedAutomata++;return copy;});if(!Array.isArray(ms)||ms.length===1)child.material=child.material[0];}});}Object.assign(state,{stagedAutomataBeforeShaders:stagedAutomata});
     const shaderUniformTextures=new Set<THREE.Texture>();const preparedMaterials=new Set<THREE.Material>();scene.traverse(o=>{if(o instanceof THREE.Mesh)for(const m of Array.isArray(o.material)?o.material:[o.material]){if(preparedMaterials.has(m))continue;preparedMaterials.add(m);const cacheKey=m.customProgramCacheKey();m.customProgramCacheKey=()=>cacheKey;const previous=m.onBeforeCompile;m.onBeforeCompile=(shader,renderer)=>{previous.call(m,shader,renderer);for(const uniform of Object.values(shader.uniforms)){const v=uniform.value;if(v instanceof THREE.Texture&&!(v as any).isRenderTargetTexture)shaderUniformTextures.add(v);}};}});
+    (state as any).lightLoopPreparation=compactHomeLightLoops186(preparedMaterials);
+    await Promise.race([earlyShaders.ready,new Promise(resolve=>setTimeout(resolve,10000))]);
     const compileBegan=performance.now(),compiledPrograms=new Set<string>(),compileJobs:Promise<unknown>[]=[];
     const shaderAudit={mode:'cooperative representative program submissions / parallel completion',milliseconds:0,layouts:0,materials:preparedMaterials.size,programs:0,largestSubmissionMs:0,parallelCompile:renderer.extensions.has('KHR_parallel_shader_compile')};Object.assign(state,{shaderPreparation:shaderAudit});
     const vertexKeys=['normal','tangent','uv','uv1','uv2','color','skinIndex','skinWeight'];
@@ -258,14 +267,17 @@ if(surface){
       const submitAt=performance.now();compileJobs.push(renderer.compileAsync(mesh,camera,scene));shaderAudit.largestSubmissionMs=Math.max(shaderAudit.largestSubmissionMs,performance.now()-submitAt);shaderAudit.layouts=compiledPrograms.size;shaderAudit.programs=renderer.info.programs?.length||0;await yieldFrame();
     }
     gpu.flush();await Promise.all(compileJobs);
+    earlyShaders.release();
+    if(new URLSearchParams(location.search).has('captureShaderSources186'))(state as any).preparedProgramSources=(renderer.info.programs||[]).map((p:any)=>({vertex:gpu.getShaderSource(p.vertexShader),fragment:gpu.getShaderSource(p.fragmentShader)}));
     shaderAudit.milliseconds=performance.now()-compileBegan;
     mark('surface shaders compiled');
+    await Promise.all([...textureReady,displayReady,homeImagesReadyV186()]);mark('textures and environment ready');
     // Driver texture uploads are synchronous even with compileAsync. Keep them out of the entry film.
     // GPU preparation belongs to the opening gate, before the homepage is revealed.
     mark('entry film released GPU uploads');
     const textureUploads=new Set<THREE.Texture>(Object.values(closeAshlar));
     scene.traverse(o=>{if(o instanceof THREE.Mesh)for(const material of Array.isArray(o.material)?o.material:[o.material])for(const value of Object.values(material))if(value instanceof THREE.Texture)textureUploads.add(value);});
-    for(const map of shaderUniformTextures)textureUploads.add(map);Object.assign(state,{preuploadedShaderUniformTextures:shaderUniformTextures.size});let uploadIndex=0;for(const map of textureUploads){await uploadTextureCooperatively(renderer,map);if(++uploadIndex%4===0)await settleUpload();}await settleUpload();
+    for(const map of shaderUniformTextures)textureUploads.add(map);Object.assign(state,{preuploadedShaderUniformTextures:shaderUniformTextures.size});let uploadIndex=0;for(const map of textureUploads){await uploadTextureCooperatively(renderer,map,true);if(++uploadIndex%4===0)await settleUpload();}await settleUpload();Object.assign(state,{textureUploadAudit:[...textureUploads].map(t=>({name:t.name,...t.userData.cooperativeUpload}))});
     const meshes:THREE.Mesh[]=[];scene.traverse(o=>{if(o instanceof THREE.Mesh&&o.visible)meshes.push(o);});
     const depth=new THREE.MeshDepthMaterial({depthPacking:THREE.RGBADepthPacking,side:THREE.BackSide}),distance=new THREE.MeshDistanceMaterial({side:THREE.BackSide});
     for(const material of [depth,distance]){const proxy=new THREE.Mesh(meshes[0].geometry,material);await renderer.compileAsync(proxy,camera,scene);await yieldFrame();}

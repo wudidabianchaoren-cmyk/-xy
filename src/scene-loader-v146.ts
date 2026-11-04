@@ -30,7 +30,7 @@ const homeWhenVisible=()=>{
 // Use the entry's 20 seconds for geometry, texture uploads and shader preparation too.
 // The home clock stays at zero until the opening completes.
 const firstBrowserEntry=(window as any).PORTFOLIO_BROWSER_ONLY&&!!document.getElementById('countdownPrelude')&&!new URLSearchParams(location.search).has('return')&&document.body.dataset.openingComplete!=='true';
-if(firstBrowserEntry){if(document.body.dataset.openingStarted==='true'){prefetchHome();loadHome();}else window.addEventListener('v31:opening-started',()=>{prefetchHome();loadHome();},{once:true});}
+if(firstBrowserEntry){prefetchHome();loadHome();}
 else{prefetchHome();loadHome();}
 // Child returns skip playback and only emit opening-complete. Cover that deferred boot too.
 window.addEventListener('v31:opening-complete',()=>{prefetchHome();loadHome();},{once:true});

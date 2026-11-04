@@ -1,0 +1,46 @@
+{
+  "version": 186,
+  "width": 2048,
+  "height": 487,
+  "cards": 996000,
+  "groups": [
+    {
+      "cards": 12000,
+      "instances": 34,
+      "offset": 0,
+      "positionSHA256": "fc9b5bc7115ff0fee3b40052ce00e707203ba47a5a375655afdf638ce2294426",
+      "indexSHA256": "a9def13564328a436bff3dd37b8e85dd1502a73dc72e195e4dca06e0eee9f750",
+      "matrixSHA256": "8c69463e222facf17c041afc1ae3f63475ceeb7854425e6fe5bb08e557d3d83f"
+    },
+    {
+      "cards": 6000,
+      "instances": 98,
+      "offset": 408000,
+      "positionSHA256": "fc9b5bc7115ff0fee3b40052ce00e707203ba47a5a375655afdf638ce2294426",
+      "indexSHA256": "f399c86f32a81153c3a1685069c9630f0a4da626a1ced579c2c8c57af1d9fc5f",
+      "matrixSHA256": "6f30026424faf0a850e8f4d24cc8ad89805a3471d2f13e858d1397a06778b941"
+    }
+  ],
+  "geometryChanged": false,
+  "source": "retained native lighting and original PBR at existing leaf-card centres",
+  "modelsChanged": false,
+  "mode": "candidate / visual acceptance required",
+  "day": {
+    "file": "day-5e8edd542d7f7c9dccf9.bin.gz",
+    "bytes": 3989504,
+    "gzipBytes": 2809495,
+    "SHA256": "5e8edd542d7f7c9dccf9ffa9a29171d18010aed5a0dcc28e2ca1df26d4cc9ee6",
+    "nonzero": 995987,
+    "fullNativeCoverage": 90265,
+    "meanRGB": 81.52002945113789
+  },
+  "night": {
+    "file": "night-d9413a4b5cc01680a658.bin.gz",
+    "bytes": 3989504,
+    "gzipBytes": 1979096,
+    "SHA256": "d9413a4b5cc01680a6580cb271ac3b6e1392fe36de85cbba5e1b98a62f96024e",
+    "nonzero": 923829,
+    "fullNativeCoverage": 96171,
+    "meanRGB": 22.303170348058902
+  }
+}

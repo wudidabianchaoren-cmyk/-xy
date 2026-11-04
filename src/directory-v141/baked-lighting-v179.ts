@@ -2,6 +2,15 @@ import * as T from 'three';
 
 type Pose={id:string;on:string;off:string;depth:string;depthWidth:number;depthHeight:number;near:number;far:number;position:number[];direction:number[];viewProjection:number[];sourceScene:string};
 type Loaded={pose:Pose;colour:T.Texture;depth:T.DataTexture;position:T.Vector3;direction:T.Vector3;matrix:T.Matrix4};
+const fieldDownloads=new Map<string,Promise<any>>();
+/** Download preserved lighting alongside geometry; no GPU upload or scene
+ * mutation occurs until the original attach operation consumes these files. */
+export function preloadNativeLighting186(manifestPath:string){
+ const key=new URL(manifestPath,location.href).href;if(fieldDownloads.has(key))return fieldDownloads.get(key)!;
+ const task=(async()=>{const response=await fetch(key);if(!response.ok)throw Error('Native lighting manifest unavailable');const manifest=await response.json(),url=new URL(response.url),loader=new T.TextureLoader(),parts=new Map();
+  for(const pose of manifest.poses){const job=Promise.all([loader.loadAsync(new URL(pose.on,url).href),loader.loadAsync(new URL(pose.off,url).href),fetch(new URL(pose.depth,url))]);job.catch(()=>{});parts.set(pose.id,job);}
+  return{manifest,url,parts};})();task.catch(()=>fieldDownloads.delete(key));fieldDownloads.set(key,task);return task;
+}
 const projectionGLSL=`
 varying vec3 vNativeLightingWorld;
 uniform sampler2D nativeColour0,nativeDepth0,nativeColour1,nativeDepth1;
@@ -35,8 +44,10 @@ if(nativeCoverage>.0001){vec3 nativeColour=(nativeA.rgb+nativeB.rgb)/nativeCover
  * This is an authoring candidate and must pass off-axis quality checks.
  */
 export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,state:any,renderer?:T.WebGLRenderer){
- const response=await fetch(manifestPath);if(!response.ok)throw Error('Native lighting manifest unavailable');
- const manifest=await response.json(),url=new URL(response.url),loader=new T.TextureLoader();
+ const downloadKey=new URL(manifestPath,location.href).href,preloaded=await(fieldDownloads.get(downloadKey)||Promise.resolve(null));
+ const response=preloaded?null:await fetch(manifestPath);if(response&&!response.ok)throw Error('Native lighting manifest unavailable');
+ const manifest=preloaded?.manifest||await response!.json(),url=preloaded?.url||new URL(response!.url),loader=new T.TextureLoader();
+ const compactSamples=manifest.scene==='myth'&&!new URLSearchParams(location.search).has('referenceNativeSampling186');
  if(!manifest.poses?.length)throw Error('Native lighting poses missing');
  const loaded:Loaded[]=[],materials:T.Material[]=[],textures:T.Texture[]=[];
  const empty=new T.Texture(),identity=new T.Matrix4();
@@ -44,7 +55,7 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
  let alive=true;
  async function load(pose:Pose){
   if(pose.sourceScene!==manifest.scene)throw Error('Wrong source scene in native lighting field');
-  const [on,off,res]=await Promise.all([loader.loadAsync(new URL(pose.on,url).href),loader.loadAsync(new URL(pose.off,url).href),fetch(new URL(pose.depth,url))]);
+  const [on,off,res]=await(preloaded?.parts.get(pose.id)||Promise.all([loader.loadAsync(new URL(pose.on,url).href),loader.loadAsync(new URL(pose.off,url).href),fetch(new URL(pose.depth,url))]));
   if(!res.ok)throw Error('Native lighting visibility data unavailable');
   const bytes=await new Response(res.body!.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
   if(bytes.byteLength!==pose.depthWidth*pose.depthHeight*4)throw Error('Incomplete native lighting visibility data');
@@ -75,6 +86,10 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
     vNativeLightingWorld=(modelMatrix*nativePosition).xyz;`);
    else shader.vertexShader=shader.vertexShader.replace(/void main\(\)\s*\{/,'void main(){vNativeLightingWorld=(modelMatrix*vec4(position,1.)).xyz;');
    let visibilityCode=water?projectionGLSL.replace('.018+p.w*.002','.35+p.w*.02'):stableLeaves?projectionGLSL.replace('.018+p.w*.002','.12+p.w*.003'):projectionGLSL;
+   if(compactSamples)visibilityCode=visibilityCode.replace('vec3 colour=mix(texture2D(colourImage,vec2(uv.x,uv.y*.5)).rgb,texture2D(colourImage,vec2(uv.x,uv.y*.5+.5)).rgb,nativeLampLevel);',`vec3 colour;
+    if(nativeLampLevel>=1.)colour=texture2D(colourImage,vec2(uv.x,uv.y*.5+.5)).rgb;
+    else if(nativeLampLevel<=0.)colour=texture2D(colourImage,vec2(uv.x,uv.y*.5)).rgb;
+    else colour=mix(texture2D(colourImage,vec2(uv.x,uv.y*.5)).rgb,texture2D(colourImage,vec2(uv.x,uv.y*.5+.5)).rgb,nativeLampLevel);`);
    if(manifest.scene==='room')visibilityCode=visibilityCode.replace('vec3 colour=mix(',`// Reject source colour that straddles a foreground/background depth edge.
     // Linear colour filtering must not smear a TV or window frame onto the city.
     vec2 texel=1./vec2(textureSize(depthImage,0));
@@ -87,11 +102,14 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
     vec3 colour=mix(`);
    if((old as T.MeshStandardMaterial).alphaMap&&!stableLeaves)visibilityCode=visibilityCode.replace('return vec4(colour*visible*weight,visible*weight);','visible*=1.-smoothstep(.28,.45,dot(colour,vec3(.2126,.7152,.0722)));return vec4(colour*visible*weight,visible*weight);');
    shader.fragmentShader=visibilityCode+shader.fragmentShader;
-   if(!water&&old instanceof T.MeshStandardMaterial&&!(old as T.MeshPhysicalMaterial).transmission){
+   const fastNative=!water&&old instanceof T.MeshStandardMaterial&&!(old as T.MeshPhysicalMaterial).transmission;
+   if(fastNative){
     // The final preserved-lighting mix already replaces these pixels completely.
     // Skip lights/IBL/scattering only in that exact case; keep the full PBR path
     // for disocclusions and incomplete coverage. Source pixels stay identical.
-    shader.fragmentShader=shader.fragmentShader.replace('#include <alphahash_fragment>',`#include <alphahash_fragment>
+    const earlyOpaque=compactSamples&&!old.alphaTest&&!old.alphaHash&&!old.alphaToCoverage&&!(old as T.MeshStandardMaterial).alphaMap;
+    const marker=earlyOpaque?'#include <logdepthbuf_fragment>':'#include <alphahash_fragment>';
+    shader.fragmentShader=shader.fragmentShader.replace(marker,`${marker}
      vec4 nativeFastA=readNativeLighting(nativeColour0,nativeDepth0,nativeVP0,nativeNF0,nativeWeight0);
      vec4 nativeFastB=readNativeLighting(nativeColour1,nativeDepth1,nativeVP1,nativeNF1,nativeWeight1);
      float nativeFastCoverage=nativeFastA.a+nativeFastB.a;
@@ -105,13 +123,14 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
      }
     `);
    }
-   const output=water?applyGLSL.replace('clamp(nativeCoverage*2.,0.,1.)','clamp(nativeCoverage*2.,0.,mix(.86,1.,smoothstep(80.,250.,length(vNativeLightingWorld-cameraPosition))))'):applyGLSL;
+   let output=water?applyGLSL.replace('clamp(nativeCoverage*2.,0.,1.)','clamp(nativeCoverage*2.,0.,mix(.86,1.,smoothstep(80.,250.,length(vNativeLightingWorld-cameraPosition))))'):applyGLSL;
+   if(compactSamples&&fastNative)output=output.replace('vec4 nativeA=readNativeLighting(nativeColour0,nativeDepth0,nativeVP0,nativeNF0,nativeWeight0);','vec4 nativeA=nativeFastA;').replace('vec4 nativeB=readNativeLighting(nativeColour1,nativeDepth1,nativeVP1,nativeNF1,nativeWeight1);','vec4 nativeB=nativeFastB;');
    if(water){const end=shader.fragmentShader.lastIndexOf('}');shader.fragmentShader=shader.fragmentShader.slice(0,end)+output+'\n'+shader.fragmentShader.slice(end);}
    else if(shader.fragmentShader.includes('#include <dithering_fragment>')){const marker='#include <dithering_fragment>',at=shader.fragmentShader.lastIndexOf(marker);shader.fragmentShader=shader.fragmentShader.slice(0,at)+output+'\n'+shader.fragmentShader.slice(at);}
    else if(shader.fragmentShader.includes('#include <colorspace_fragment>'))shader.fragmentShader=shader.fragmentShader.replace('#include <colorspace_fragment>','#include <colorspace_fragment>\n'+output);
    else throw Error('Unrecognized native lighting material output');
   };
-  material.customProgramCacheKey=()=>key+'/native-lighting-v179-depth-checked';material.needsUpdate=true;materials.push(material);return material;
+  material.customProgramCacheKey=()=>key+'/native-lighting-v179-depth-checked'+(compactSamples?'/sample-once186':'');material.needsUpdate=true;materials.push(material);return material;
  }
  scene.traverse(object=>{
   if(!(object instanceof T.Mesh)||/calendar|date|book|tape|cassette|phone|notepad|journal|fortune|live screen/i.test(object.name))return;
@@ -135,5 +154,6 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
  // a texture upload or a first-use shader compilation in the middle of a drag.
  const remaining:Pose[]=manifest.poses.slice(1);await Promise.all([0,1].map(async()=>{while(remaining.length){const pose=remaining.shift();if(pose)await load(pose);}}));
  state.bakedLighting.loadedPoses=loaded.length;
+ fieldDownloads.delete(downloadKey);
  return{update,visibilityFields:()=>loaded.map(item=>({pose:item.pose,data:item.depth.image.data as Uint8Array})),dispose(){alive=false;materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());empty.dispose();}};
 }

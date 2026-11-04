@@ -1,0 +1,2822 @@
+{
+  "origin": "http://127.0.0.1:8053",
+  "mode": "final-geometry-local",
+  "errors": [],
+  "console": [],
+  "badHTTP": [],
+  "steps": [
+    {
+      "name": "document",
+      "milliseconds": 780,
+      "state": {
+        "at": 872,
+        "entry": {
+          "version": 184,
+          "startedAt": 759.7999999523163,
+          "mediaRetries": 0,
+          "phase": "loading-film",
+          "failure": null
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [],
+          "settled": false,
+          "removed": false,
+          "english": true
+        },
+        "home": {
+          "uploadSummary": null
+        },
+        "intro": {
+          "finished": false
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 186,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 1,
+          "errors": [],
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "imagesPrepared": 2,
+          "progressiveMedia": [
+            {
+              "source": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+              "bytes": 0,
+              "requests": 0,
+              "retries": 0,
+              "seeks": 0,
+              "firstAppendAt": 0,
+              "ready": false,
+              "failed": false
+            },
+            {
+              "source": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/manifest.json",
+              "bytes": 0,
+              "requests": 0,
+              "retries": 0,
+              "seeks": 0,
+              "firstAppendAt": 0,
+              "ready": false,
+              "failed": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "authored-films-complete",
+      "milliseconds": 36829,
+      "state": {
+        "at": 37727.799999952316,
+        "entry": {
+          "version": 184,
+          "startedAt": 759.7999999523163,
+          "mediaRetries": 0,
+          "phase": "playing-film",
+          "failure": null,
+          "mediaTime": 20.066666
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [
+            {
+              "at": 953.6999999284744,
+              "steps": [
+                "Reading the clock-tower geometry"
+              ],
+              "home": "pending"
+            },
+            {
+              "at": 6458.199999928474,
+              "steps": [
+                "Reading the clock-tower geometry",
+                "Assembling the clock mechanisms"
+              ],
+              "home": "pending"
+            }
+          ],
+          "settled": true,
+          "removed": true,
+          "english": true,
+          "clock": "actual elapsed preparation time, including network wait",
+          "elapsed": 20.568400000095366,
+          "settledAt": 21522,
+          "displayedSeconds": 20.6
+        },
+        "home": {
+          "ready": true,
+          "phases": [
+            {
+              "name": "module start",
+              "at": 1298.3999999761581
+            },
+            {
+              "name": "WebGL context ready",
+              "at": 1397.0999999046326
+            },
+            {
+              "name": "native decoded",
+              "at": 3039.399999976158
+            },
+            {
+              "name": "courtyard geometry prepared",
+              "at": 9036.899999976158
+            },
+            {
+              "name": "entry film released shader preparation",
+              "at": 11121.099999904633
+            },
+            {
+              "name": "surface shaders compiled",
+              "at": 21874.699999928474
+            },
+            {
+              "name": "textures and environment ready",
+              "at": 21875.099999904633
+            },
+            {
+              "name": "entry film released GPU uploads",
+              "at": 21875.099999904633
+            },
+            {
+              "name": "colour buffers uploaded",
+              "at": 30231.899999976158
+            },
+            {
+              "name": "geometry buffers uploaded",
+              "at": 30233.199999928474
+            },
+            {
+              "name": "postprocess shaders compiled",
+              "at": 30267.899999976158
+            },
+            {
+              "name": "complete lighting variants prepared",
+              "at": 30731.699999928474
+            },
+            {
+              "name": "live frame revealed",
+              "at": 30786.799999952316
+            }
+          ],
+          "shader": {
+            "mode": "cooperative representative program submissions / parallel completion",
+            "milliseconds": 8960.699999928474,
+            "layouts": 29,
+            "materials": 88,
+            "programs": 29,
+            "largestSubmissionMs": 18.800000071525574,
+            "parallelCompile": true
+          },
+          "earlyShaders": {
+            "startedAt": 1394,
+            "phase": "ready",
+            "programs": 29,
+            "distinctShaderStages": 58,
+            "readyAt": 12914,
+            "error": null
+          },
+          "uploadSummary": {
+            "count": 53,
+            "reused": 11,
+            "worker": 33,
+            "maxSlice": 128,
+            "sumUploadMilliseconds": 2971.4000002145767
+          }
+        },
+        "intro": {
+          "finished": true,
+          "reason": "ended",
+          "quality": {
+            "totalVideoFrames": 480,
+            "droppedVideoFrames": 27
+          }
+        },
+        "opening": {
+          "total": 600,
+          "dropped": 25
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "ready",
+              "at": 30787.099999904633
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 186,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 6,
+          "errors": [],
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "imagesPrepared": 13,
+          "progressiveMedia": [
+            {
+              "source": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+              "bytes": 6707738,
+              "requests": 17,
+              "retries": 0,
+              "seeks": 0,
+              "firstAppendAt": 1013.0999999046326,
+              "ready": true,
+              "failed": false
+            },
+            {
+              "source": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/manifest.json",
+              "bytes": 7362849,
+              "requests": 23,
+              "retries": 0,
+              "seeks": 0,
+              "firstAppendAt": 1012.1999999284744,
+              "ready": true,
+              "failed": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "live-home-ready",
+      "milliseconds": 8,
+      "state": {
+        "at": 37756.09999990463,
+        "entry": {
+          "version": 184,
+          "startedAt": 759.7999999523163,
+          "mediaRetries": 0,
+          "phase": "playing-film",
+          "failure": null,
+          "mediaTime": 20.066666
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [
+            {
+              "at": 953.6999999284744,
+              "steps": [
+                "Reading the clock-tower geometry"
+              ],
+              "home": "pending"
+            },
+            {
+              "at": 6458.199999928474,
+              "steps": [
+                "Reading the clock-tower geometry",
+                "Assembling the clock mechanisms"
+              ],
+              "home": "pending"
+            }
+          ],
+          "settled": true,
+          "removed": true,
+          "english": true,
+          "clock": "actual elapsed preparation time, including network wait",
+          "elapsed": 20.568400000095366,
+          "settledAt": 21522,
+          "displayedSeconds": 20.6
+        },
+        "home": {
+          "ready": true,
+          "phases": [
+            {
+              "name": "module start",
+              "at": 1298.3999999761581
+            },
+            {
+              "name": "WebGL context ready",
+              "at": 1397.0999999046326
+            },
+            {
+              "name": "native decoded",
+              "at": 3039.399999976158
+            },
+            {
+              "name": "courtyard geometry prepared",
+              "at": 9036.899999976158
+            },
+            {
+              "name": "entry film released shader preparation",
+              "at": 11121.099999904633
+            },
+            {
+              "name": "surface shaders compiled",
+              "at": 21874.699999928474
+            },
+            {
+              "name": "textures and environment ready",
+              "at": 21875.099999904633
+            },
+            {
+              "name": "entry film released GPU uploads",
+              "at": 21875.099999904633
+            },
+            {
+              "name": "colour buffers uploaded",
+              "at": 30231.899999976158
+            },
+            {
+              "name": "geometry buffers uploaded",
+              "at": 30233.199999928474
+            },
+            {
+              "name": "postprocess shaders compiled",
+              "at": 30267.899999976158
+            },
+            {
+              "name": "complete lighting variants prepared",
+              "at": 30731.699999928474
+            },
+            {
+              "name": "live frame revealed",
+              "at": 30786.799999952316
+            }
+          ],
+          "shader": {
+            "mode": "cooperative representative program submissions / parallel completion",
+            "milliseconds": 8960.699999928474,
+            "layouts": 29,
+            "materials": 88,
+            "programs": 29,
+            "largestSubmissionMs": 18.800000071525574,
+            "parallelCompile": true
+          },
+          "earlyShaders": {
+            "startedAt": 1394,
+            "phase": "ready",
+            "programs": 29,
+            "distinctShaderStages": 58,
+            "readyAt": 12914,
+            "error": null
+          },
+          "uploadSummary": {
+            "count": 53,
+            "reused": 11,
+            "worker": 33,
+            "maxSlice": 128,
+            "sumUploadMilliseconds": 2971.4000002145767
+          }
+        },
+        "intro": {
+          "finished": true,
+          "reason": "ended",
+          "quality": {
+            "totalVideoFrames": 480,
+            "droppedVideoFrames": 27
+          }
+        },
+        "opening": {
+          "total": 600,
+          "dropped": 25
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "ready",
+              "at": 30787.099999904633
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 186,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 6,
+          "errors": [],
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "imagesPrepared": 13,
+          "progressiveMedia": [
+            {
+              "source": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+              "bytes": 6707738,
+              "requests": 17,
+              "retries": 0,
+              "seeks": 0,
+              "firstAppendAt": 1013.0999999046326,
+              "ready": true,
+              "failed": false
+            },
+            {
+              "source": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/manifest.json",
+              "bytes": 7362849,
+              "requests": 23,
+              "retries": 0,
+              "seeks": 0,
+              "firstAppendAt": 1012.1999999284744,
+              "ready": true,
+              "failed": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "pass": true,
+  "final": {
+    "at": 38913.199999928474,
+    "entry": {
+      "version": 184,
+      "startedAt": 759.7999999523163,
+      "mediaRetries": 0,
+      "phase": "playing-film",
+      "failure": null,
+      "mediaTime": 20.066666
+    },
+    "thought": {
+      "version": 161,
+      "source": "user supplied complete ThoughtLine / real film and preparation clock",
+      "updates": [
+        {
+          "at": 953.6999999284744,
+          "steps": [
+            "Reading the clock-tower geometry"
+          ],
+          "home": "pending"
+        },
+        {
+          "at": 6458.199999928474,
+          "steps": [
+            "Reading the clock-tower geometry",
+            "Assembling the clock mechanisms"
+          ],
+          "home": "pending"
+        }
+      ],
+      "settled": true,
+      "removed": true,
+      "english": true,
+      "clock": "actual elapsed preparation time, including network wait",
+      "elapsed": 20.568400000095366,
+      "settledAt": 21522,
+      "displayedSeconds": 20.6
+    },
+    "home": {
+      "ready": true,
+      "phases": [
+        {
+          "name": "module start",
+          "at": 1298.3999999761581
+        },
+        {
+          "name": "WebGL context ready",
+          "at": 1397.0999999046326
+        },
+        {
+          "name": "native decoded",
+          "at": 3039.399999976158
+        },
+        {
+          "name": "courtyard geometry prepared",
+          "at": 9036.899999976158
+        },
+        {
+          "name": "entry film released shader preparation",
+          "at": 11121.099999904633
+        },
+        {
+          "name": "surface shaders compiled",
+          "at": 21874.699999928474
+        },
+        {
+          "name": "textures and environment ready",
+          "at": 21875.099999904633
+        },
+        {
+          "name": "entry film released GPU uploads",
+          "at": 21875.099999904633
+        },
+        {
+          "name": "colour buffers uploaded",
+          "at": 30231.899999976158
+        },
+        {
+          "name": "geometry buffers uploaded",
+          "at": 30233.199999928474
+        },
+        {
+          "name": "postprocess shaders compiled",
+          "at": 30267.899999976158
+        },
+        {
+          "name": "complete lighting variants prepared",
+          "at": 30731.699999928474
+        },
+        {
+          "name": "live frame revealed",
+          "at": 30786.799999952316
+        }
+      ],
+      "shader": {
+        "mode": "cooperative representative program submissions / parallel completion",
+        "milliseconds": 8960.699999928474,
+        "layouts": 29,
+        "materials": 88,
+        "programs": 29,
+        "largestSubmissionMs": 18.800000071525574,
+        "parallelCompile": true
+      },
+      "earlyShaders": {
+        "startedAt": 1394,
+        "phase": "ready",
+        "programs": 29,
+        "distinctShaderStages": 58,
+        "readyAt": 12914,
+        "error": null
+      },
+      "uploadSummary": {
+        "count": 53,
+        "reused": 11,
+        "worker": 33,
+        "maxSlice": 128,
+        "sumUploadMilliseconds": 2971.4000002145767
+      }
+    },
+    "intro": {
+      "finished": true,
+      "reason": "ended",
+      "quality": {
+        "totalVideoFrames": 480,
+        "droppedVideoFrames": 27
+      }
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 25
+    },
+    "boot": [
+      [
+        "home",
+        {
+          "state": "ready",
+          "at": 30787.099999904633
+        }
+      ],
+      [
+        "directory",
+        {
+          "state": "pending",
+          "error": ""
+        }
+      ],
+      [
+        "mythology",
+        {
+          "state": "pending",
+          "error": ""
+        }
+      ]
+    ],
+    "delivery": {
+      "version": 186,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 6,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 13,
+      "progressiveMedia": [
+        {
+          "source": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+          "bytes": 6707738,
+          "requests": 17,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 1013.0999999046326,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/manifest.json",
+          "bytes": 7362849,
+          "requests": 23,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 1012.1999999284744,
+          "ready": true,
+          "failed": false
+        }
+      ]
+    }
+  },
+  "resources": [
+    {
+      "name": "http://127.0.0.1:8053/audio-focus-v141.js?v=32.186",
+      "start": 108.19999992847443,
+      "ttfb": 48.299999952316284,
+      "duration": 51.200000047683716,
+      "bytes": 905,
+      "transferBytes": 1205,
+      "decodedBytes": 905,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/home-designed-intro-v160.js",
+      "start": 108.5,
+      "ttfb": 54.200000047683716,
+      "duration": 66,
+      "bytes": 9962,
+      "transferBytes": 10262,
+      "decodedBytes": 9962,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/home-thought-line-v160.js",
+      "start": 108.59999990463257,
+      "ttfb": 62.39999997615814,
+      "duration": 74.40000009536743,
+      "bytes": 10386,
+      "transferBytes": 10686,
+      "decodedBytes": 10386,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/home-world-v146.js",
+      "start": 108.69999992847443,
+      "ttfb": 62.799999952316284,
+      "duration": 75.60000002384186,
+      "bytes": 132663,
+      "transferBytes": 132963,
+      "decodedBytes": 132663,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/scene-loader-v146.js",
+      "start": 108.69999992847443,
+      "ttfb": 66.10000002384186,
+      "duration": 79.89999997615814,
+      "bytes": 3649,
+      "transferBytes": 3949,
+      "decodedBytes": 3649,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-32475FOM.js",
+      "start": 108.79999995231628,
+      "ttfb": 62.200000047683716,
+      "duration": 82.79999995231628,
+      "bytes": 248898,
+      "transferBytes": 249198,
+      "decodedBytes": 248898,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-C6N56PU3.js",
+      "start": 108.79999995231628,
+      "ttfb": 29.799999952316284,
+      "duration": 85,
+      "bytes": 247290,
+      "transferBytes": 247590,
+      "decodedBytes": 247290,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-DGU5PTFW.js",
+      "start": 108.79999995231628,
+      "ttfb": 16.800000071525574,
+      "duration": 85.89999997615814,
+      "bytes": 49707,
+      "transferBytes": 50007,
+      "decodedBytes": 49707,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-ME7QVHGR.js",
+      "start": 108.89999997615814,
+      "ttfb": 11.299999952316284,
+      "duration": 89.39999997615814,
+      "bytes": 520,
+      "transferBytes": 820,
+      "decodedBytes": 520,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-MG6POSIJ.js",
+      "start": 108.89999997615814,
+      "ttfb": 8,
+      "duration": 91,
+      "bytes": 19550,
+      "transferBytes": 19850,
+      "decodedBytes": 19550,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-LZ7QSBR5.js",
+      "start": 108.89999997615814,
+      "ttfb": 7.800000071525574,
+      "duration": 96.29999995231628,
+      "bytes": 702461,
+      "transferBytes": 702761,
+      "decodedBytes": 702461,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-NK3IH7V4.js",
+      "start": 109,
+      "ttfb": 4.5,
+      "duration": 93.89999997615814,
+      "bytes": 7352,
+      "transferBytes": 7652,
+      "decodedBytes": 7352,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-RTTFH4P3.js",
+      "start": 109.09999990463257,
+      "ttfb": 5.399999976158142,
+      "duration": 99.20000004768372,
+      "bytes": 649,
+      "transferBytes": 949,
+      "decodedBytes": 649,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-R5XT465O.js",
+      "start": 109.09999990463257,
+      "ttfb": 5.199999928474426,
+      "duration": 99.90000009536743,
+      "bytes": 223115,
+      "transferBytes": 223415,
+      "decodedBytes": 223115,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-RGYTE4B5.js",
+      "start": 109.09999990463257,
+      "ttfb": 8.5,
+      "duration": 102,
+      "bytes": 138683,
+      "transferBytes": 138983,
+      "decodedBytes": 138683,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-SXRZKL2H.js",
+      "start": 109.19999992847443,
+      "ttfb": 6,
+      "duration": 116.10000002384186,
+      "bytes": 1504,
+      "transferBytes": 1804,
+      "decodedBytes": 1504,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-W3TROUU3.js",
+      "start": 109.19999992847443,
+      "ttfb": 26.600000023841858,
+      "duration": 129,
+      "bytes": 22129,
+      "transferBytes": 22429,
+      "decodedBytes": 22129,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-XM4RMFZ3.js",
+      "start": 109.19999992847443,
+      "ttfb": 29.699999928474426,
+      "duration": 133.60000002384186,
+      "bytes": 2465,
+      "transferBytes": 2765,
+      "decodedBytes": 2465,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-XL3CMSHR.js",
+      "start": 109.19999992847443,
+      "ttfb": 28.299999952316284,
+      "duration": 130.80000007152557,
+      "bytes": 35007,
+      "transferBytes": 35307,
+      "decodedBytes": 35007,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-YRQ74F3T.js",
+      "start": 109.29999995231628,
+      "ttfb": 34,
+      "duration": 138.89999997615814,
+      "bytes": 61376,
+      "transferBytes": 61676,
+      "decodedBytes": 61376,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-XM6DH2YI.js",
+      "start": 109.29999995231628,
+      "ttfb": 32.800000071525574,
+      "duration": 137.79999995231628,
+      "bytes": 35854,
+      "transferBytes": 36154,
+      "decodedBytes": 35854,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-000.bin",
+      "start": 126.59999990463257,
+      "ttfb": 9.600000023841858,
+      "duration": 498.60000002384186,
+      "bytes": 4194304,
+      "transferBytes": 4194604,
+      "decodedBytes": 4194304,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-001.bin",
+      "start": 126.89999997615814,
+      "ttfb": 3.4000000953674316,
+      "duration": 466.60000002384186,
+      "bytes": 4194304,
+      "transferBytes": 4194604,
+      "decodedBytes": 4194304,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/scene-loader-v146.js?v=32.186",
+      "start": 134.29999995231628,
+      "ttfb": 24.700000047683716,
+      "duration": 117.79999995231628,
+      "bytes": 53,
+      "transferBytes": 353,
+      "decodedBytes": 53,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/dock/exhibition-dock-v160.js?v=32.186",
+      "start": 134.39999997615814,
+      "ttfb": 14.200000047683716,
+      "duration": 121.60000002384186,
+      "bytes": 57,
+      "transferBytes": 357,
+      "decodedBytes": 57,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/dock/home-designed-intro-v160.js?v=32.186",
+      "start": 134.5,
+      "ttfb": 18.90000009536743,
+      "duration": 126.39999997615814,
+      "bytes": 61,
+      "transferBytes": 361,
+      "decodedBytes": 61,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/home-creation-launch-v141.js?v=32.186",
+      "start": 134.5,
+      "ttfb": 16.90000009536743,
+      "duration": 126.69999992847443,
+      "bytes": 3261,
+      "transferBytes": 3561,
+      "decodedBytes": 3261,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/directory-v144/app.js?v=32.186",
+      "start": 134.59999990463257,
+      "ttfb": 14.399999976158142,
+      "duration": 128.60000002384186,
+      "bytes": 50,
+      "transferBytes": 350,
+      "decodedBytes": 50,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/techtext-v153.js?v=32.186",
+      "start": 134.59999990463257,
+      "ttfb": 14.099999904632568,
+      "duration": 129.40000009536743,
+      "bytes": 49,
+      "transferBytes": 349,
+      "decodedBytes": 49,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/site-refinements-v129.js?v=32.186",
+      "start": 134.59999990463257,
+      "ttfb": 5.399999976158142,
+      "duration": 141.30000007152557,
+      "bytes": 3679,
+      "transferBytes": 3979,
+      "decodedBytes": 3679,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/home-thought-line-v160.js?v=32.186",
+      "start": 134.69999992847443,
+      "ttfb": 11.799999952316284,
+      "duration": 131.20000004768372,
+      "bytes": 58,
+      "transferBytes": 358,
+      "decodedBytes": 58,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/refinements-v161.js?v=32.186",
+      "start": 134.79999995231628,
+      "ttfb": 8.800000071525574,
+      "duration": 132,
+      "bytes": 1506,
+      "transferBytes": 1806,
+      "decodedBytes": 1506,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/hobby-drift-v167.js?v=32.186",
+      "start": 134.79999995231628,
+      "ttfb": 6.600000023841858,
+      "duration": 136.20000004768372,
+      "bytes": 52,
+      "transferBytes": 352,
+      "decodedBytes": 52,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/home-live-poster-v32-77.png",
+      "start": 228.79999995231628,
+      "ttfb": 9.200000047683716,
+      "duration": 200.79999995231628,
+      "bytes": 2263493,
+      "transferBytes": 2263793,
+      "decodedBytes": 2263493,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/wordmark-v142/wordmark.ttf",
+      "start": 236.69999992847443,
+      "ttfb": 3,
+      "duration": 191,
+      "bytes": 6552,
+      "transferBytes": 6852,
+      "decodedBytes": 6552,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v183/images/d6862ea204186288f90b-1280.webp",
+      "start": 422,
+      "ttfb": 3.399999976158142,
+      "duration": 100.09999990463257,
+      "bytes": 2901520,
+      "transferBytes": 2901820,
+      "decodedBytes": 2901520,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v183/images/45beb4b5eff4666246b3-1280.webp",
+      "start": 554.3999999761581,
+      "ttfb": 1.899999976158142,
+      "duration": 13.399999976158142,
+      "bytes": 946642,
+      "transferBytes": 946942,
+      "decodedBytes": 946642,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/heading-interaction-v157.js?v=32.157",
+      "start": 565.5,
+      "ttfb": 1.2000000476837158,
+      "duration": 7.099999904632568,
+      "bytes": 2375,
+      "transferBytes": 2675,
+      "decodedBytes": 2375,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/exhibition-dock-v160.js",
+      "start": 582.7999999523163,
+      "ttfb": 6.299999952316284,
+      "duration": 19,
+      "bytes": 34552,
+      "transferBytes": 34852,
+      "decodedBytes": 34552,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/directory-app.js",
+      "start": 583.0999999046326,
+      "ttfb": 4.599999904632568,
+      "duration": 22.100000023841858,
+      "bytes": 164659,
+      "transferBytes": 164959,
+      "decodedBytes": 164659,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/techtext-v153.js",
+      "start": 583.5999999046326,
+      "ttfb": 3.4000000953674316,
+      "duration": 16.40000009536743,
+      "bytes": 22030,
+      "transferBytes": 22330,
+      "decodedBytes": 22030,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/hobby-drift-v167.js",
+      "start": 583.7999999523163,
+      "ttfb": 2.799999952316284,
+      "duration": 15.100000023841858,
+      "bytes": 13678,
+      "transferBytes": 13978,
+      "decodedBytes": 13678,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v16/world-track.json",
+      "start": 591.5999999046326,
+      "ttfb": 5.699999928474426,
+      "duration": 93,
+      "bytes": 4001387,
+      "transferBytes": 4001687,
+      "decodedBytes": 4001387,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-002.bin",
+      "start": 592.5999999046326,
+      "ttfb": 3.100000023841858,
+      "duration": 99.40000009536743,
+      "bytes": 2655205,
+      "transferBytes": 2655505,
+      "decodedBytes": 2655205,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/geometry-delivery/c455d984619ad440b4742a32-000.bin",
+      "start": 643,
+      "ttfb": 2.399999976158142,
+      "duration": 14.299999952316284,
+      "bytes": 1162847,
+      "transferBytes": 1163147,
+      "decodedBytes": 1162847,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-TMPYV7DU.js",
+      "start": 686.6999999284744,
+      "ttfb": 5.700000047683716,
+      "duration": 18.600000023841858,
+      "bytes": 19704,
+      "transferBytes": 20004,
+      "decodedBytes": 19704,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-01.webp",
+      "start": 723.7999999523163,
+      "ttfb": 1.7000000476837158,
+      "duration": 15.600000023841858,
+      "bytes": 605542,
+      "transferBytes": 605842,
+      "decodedBytes": 605542,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-02.webp",
+      "start": 724,
+      "ttfb": 2.899999976158142,
+      "duration": 11.799999952316284,
+      "bytes": 298316,
+      "transferBytes": 298616,
+      "decodedBytes": 298316,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-03.webp",
+      "start": 724.0999999046326,
+      "ttfb": 3.299999952316284,
+      "duration": 12.700000047683716,
+      "bytes": 380998,
+      "transferBytes": 381298,
+      "decodedBytes": 380998,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-04.webp",
+      "start": 724.1999999284744,
+      "ttfb": 3.399999976158142,
+      "duration": 12,
+      "bytes": 266104,
+      "transferBytes": 266404,
+      "decodedBytes": 266104,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-05.webp",
+      "start": 724.2999999523163,
+      "ttfb": 4.699999928474426,
+      "duration": 12.299999952316284,
+      "bytes": 127628,
+      "transferBytes": 127928,
+      "decodedBytes": 127628,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-06.webp",
+      "start": 724.2999999523163,
+      "ttfb": 1.3000000715255737,
+      "duration": 14.100000023841858,
+      "bytes": 106468,
+      "transferBytes": 106768,
+      "decodedBytes": 106468,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-08.webp",
+      "start": 724.5,
+      "ttfb": 1.600000023841858,
+      "duration": 28.59999990463257,
+      "bytes": 141034,
+      "transferBytes": 141334,
+      "decodedBytes": 141034,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-09.webp",
+      "start": 724.5999999046326,
+      "ttfb": 2.200000047683716,
+      "duration": 29.200000047683716,
+      "bytes": 238268,
+      "transferBytes": 238568,
+      "decodedBytes": 238268,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-10.webp",
+      "start": 724.5999999046326,
+      "ttfb": 3.600000023841858,
+      "duration": 44.40000009536743,
+      "bytes": 461886,
+      "transferBytes": 462186,
+      "decodedBytes": 461886,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/atmosphere-v172/atmosphere-11.webp",
+      "start": 724.6999999284744,
+      "ttfb": 4.100000023841858,
+      "duration": 44,
+      "bytes": 405472,
+      "transferBytes": 405772,
+      "decodedBytes": 405472,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/progressive-media-v186.js",
+      "start": 730.6999999284744,
+      "ttfb": 4.100000023841858,
+      "duration": 37.39999997615814,
+      "bytes": 6301,
+      "transferBytes": 6601,
+      "decodedBytes": 6301,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/loading-study/opening-poster-v32-84.png",
+      "start": 761.8999999761581,
+      "ttfb": 2.399999976158142,
+      "duration": 15.600000023841858,
+      "bytes": 247482,
+      "transferBytes": 247782,
+      "decodedBytes": 247482,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/native-v164/room.jpg?v=32.164",
+      "start": 898.5,
+      "ttfb": 0.7000000476837158,
+      "duration": 3.6999999284744263,
+      "bytes": 548298,
+      "transferBytes": 548598,
+      "decodedBytes": 548298,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/directory-hand-2JQHWOL5.woff2",
+      "start": 899.7999999523163,
+      "ttfb": 2.6999999284744263,
+      "duration": 39.299999952316284,
+      "bytes": 603820,
+      "transferBytes": 604120,
+      "decodedBytes": 603820,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/03-tile.webp",
+      "start": 917.6999999284744,
+      "ttfb": 3.3000000715255737,
+      "duration": 6.300000071525574,
+      "bytes": 128310,
+      "transferBytes": 128610,
+      "decodedBytes": 128310,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/21-tile.webp",
+      "start": 917.7999999523163,
+      "ttfb": 2.1999999284744263,
+      "duration": 8.399999976158142,
+      "bytes": 97698,
+      "transferBytes": 97998,
+      "decodedBytes": 97698,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/08-tile.webp",
+      "start": 917.7999999523163,
+      "ttfb": 2.299999952316284,
+      "duration": 8.100000023841858,
+      "bytes": 24298,
+      "transferBytes": 24598,
+      "decodedBytes": 24298,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/10-tile.webp",
+      "start": 917.8999999761581,
+      "ttfb": 1.2000000476837158,
+      "duration": 7.600000023841858,
+      "bytes": 55816,
+      "transferBytes": 56116,
+      "decodedBytes": 55816,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/12-tile.webp",
+      "start": 917.8999999761581,
+      "ttfb": 2.3000000715255737,
+      "duration": 11,
+      "bytes": 91114,
+      "transferBytes": 91414,
+      "decodedBytes": 91114,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/01-tile.webp",
+      "start": 917.8999999761581,
+      "ttfb": 2.6999999284744263,
+      "duration": 14,
+      "bytes": 16646,
+      "transferBytes": 16946,
+      "decodedBytes": 16646,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/02-tile.webp",
+      "start": 917.8999999761581,
+      "ttfb": 3,
+      "duration": 13.600000023841858,
+      "bytes": 48430,
+      "transferBytes": 48730,
+      "decodedBytes": 48430,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/06-tile.webp",
+      "start": 918,
+      "ttfb": 3,
+      "duration": 14.5,
+      "bytes": 95022,
+      "transferBytes": 95322,
+      "decodedBytes": 95022,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/17-tile.webp",
+      "start": 918,
+      "ttfb": 2.899999976158142,
+      "duration": 16.299999952316284,
+      "bytes": 100818,
+      "transferBytes": 101118,
+      "decodedBytes": 100818,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/19-tile.webp",
+      "start": 918,
+      "ttfb": 4.699999928474426,
+      "duration": 18.799999952316284,
+      "bytes": 68946,
+      "transferBytes": 69246,
+      "decodedBytes": 68946,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0000.m4s",
+      "start": 973.5999999046326,
+      "ttfb": 2.299999952316284,
+      "duration": 21.90000009536743,
+      "bytes": 1088868,
+      "transferBytes": 1089168,
+      "decodedBytes": 1088868,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0001.m4s",
+      "start": 973.6999999284744,
+      "ttfb": 1.5,
+      "duration": 15.5,
+      "bytes": 479008,
+      "transferBytes": 479308,
+      "decodedBytes": 479008,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0002.m4s",
+      "start": 973.7999999523163,
+      "ttfb": 4.5,
+      "duration": 19.5,
+      "bytes": 688822,
+      "transferBytes": 689122,
+      "decodedBytes": 688822,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0003.m4s",
+      "start": 973.8999999761581,
+      "ttfb": 7.300000071525574,
+      "duration": 16.699999928474426,
+      "bytes": 309264,
+      "transferBytes": 309564,
+      "decodedBytes": 309264,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0000.m4s",
+      "start": 974.1999999284744,
+      "ttfb": 8.100000023841858,
+      "duration": 17.899999976158142,
+      "bytes": 160762,
+      "transferBytes": 161062,
+      "decodedBytes": 160762,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0001.m4s",
+      "start": 974.2999999523163,
+      "ttfb": 4.099999904632568,
+      "duration": 18.700000047683716,
+      "bytes": 211524,
+      "transferBytes": 211824,
+      "decodedBytes": 211524,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0002.m4s",
+      "start": 974.3999999761581,
+      "ttfb": 1.2999999523162842,
+      "duration": 22.100000023841858,
+      "bytes": 266231,
+      "transferBytes": 266531,
+      "decodedBytes": 266231,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0003.m4s",
+      "start": 974.5,
+      "ttfb": 1.100000023841858,
+      "duration": 26.299999952316284,
+      "bytes": 382705,
+      "transferBytes": 383005,
+      "decodedBytes": 382705,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0004.m4s",
+      "start": 1012.3999999761581,
+      "ttfb": 2.299999952316284,
+      "duration": 7.199999928474426,
+      "bytes": 411862,
+      "transferBytes": 412162,
+      "decodedBytes": 411862,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0004.m4s",
+      "start": 1013.1999999284744,
+      "ttfb": 1.5,
+      "duration": 8.899999976158142,
+      "bytes": 1092500,
+      "transferBytes": 1092800,
+      "decodedBytes": 1092500,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0005.m4s",
+      "start": 1013.7999999523163,
+      "ttfb": 1.600000023841858,
+      "duration": 6.899999976158142,
+      "bytes": 539955,
+      "transferBytes": 540255,
+      "decodedBytes": 539955,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/05-tile.webp",
+      "start": 1106.5999999046326,
+      "ttfb": 2.4000000953674316,
+      "duration": 4.400000095367432,
+      "bytes": 20352,
+      "transferBytes": 20652,
+      "decodedBytes": 20352,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/04-tile.webp",
+      "start": 1106.6999999284744,
+      "ttfb": 3.899999976158142,
+      "duration": 10.300000071525574,
+      "bytes": 36642,
+      "transferBytes": 36942,
+      "decodedBytes": 36642,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/13-tile.webp",
+      "start": 1106.7999999523163,
+      "ttfb": 3,
+      "duration": 9.700000047683716,
+      "bytes": 110424,
+      "transferBytes": 110724,
+      "decodedBytes": 110424,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/11-tile.webp",
+      "start": 1106.7999999523163,
+      "ttfb": 4.100000023841858,
+      "duration": 12,
+      "bytes": 90396,
+      "transferBytes": 90696,
+      "decodedBytes": 90396,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/14-tile.webp",
+      "start": 1106.7999999523163,
+      "ttfb": 3.6999999284744263,
+      "duration": 12.5,
+      "bytes": 45308,
+      "transferBytes": 45608,
+      "decodedBytes": 45308,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/22-tile.webp",
+      "start": 1106.8999999761581,
+      "ttfb": 5.300000071525574,
+      "duration": 14.5,
+      "bytes": 17576,
+      "transferBytes": 17876,
+      "decodedBytes": 17576,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/09-tile.webp",
+      "start": 1106.8999999761581,
+      "ttfb": 6.5,
+      "duration": 15.199999928474426,
+      "bytes": 30834,
+      "transferBytes": 31134,
+      "decodedBytes": 30834,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/16-tile.webp",
+      "start": 1107,
+      "ttfb": 2.600000023841858,
+      "duration": 20.199999928474426,
+      "bytes": 50114,
+      "transferBytes": 50414,
+      "decodedBytes": 50114,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/15-tile.webp",
+      "start": 1107,
+      "ttfb": 3.700000047683716,
+      "duration": 20.899999976158142,
+      "bytes": 56070,
+      "transferBytes": 56370,
+      "decodedBytes": 56070,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/23-tile.webp",
+      "start": 1107,
+      "ttfb": 3.5,
+      "duration": 22.299999952316284,
+      "bytes": 28544,
+      "transferBytes": 28844,
+      "decodedBytes": 28544,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/24-tile.webp",
+      "start": 1107,
+      "ttfb": 5.100000023841858,
+      "duration": 25.399999976158142,
+      "bytes": 104560,
+      "transferBytes": 104860,
+      "decodedBytes": 104560,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/25-tile.webp",
+      "start": 1107,
+      "ttfb": 5.300000071525574,
+      "duration": 25.199999928474426,
+      "bytes": 28068,
+      "transferBytes": 28368,
+      "decodedBytes": 28068,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/26-tile.webp",
+      "start": 1107.0999999046326,
+      "ttfb": 6.299999952316284,
+      "duration": 24.800000071525574,
+      "bytes": 25730,
+      "transferBytes": 26030,
+      "decodedBytes": 25730,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/07-tile.webp",
+      "start": 1107.0999999046326,
+      "ttfb": 2.5999999046325684,
+      "duration": 29.90000009536743,
+      "bytes": 23076,
+      "transferBytes": 23376,
+      "decodedBytes": 23076,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/18-tile.webp",
+      "start": 1107.1999999284744,
+      "ttfb": 2.399999976158142,
+      "duration": 30.200000047683716,
+      "bytes": 25542,
+      "transferBytes": 25842,
+      "decodedBytes": 25542,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/27-tile.webp",
+      "start": 1107.2999999523163,
+      "ttfb": 2.3000000715255737,
+      "duration": 31.100000023841858,
+      "bytes": 26824,
+      "transferBytes": 27124,
+      "decodedBytes": 26824,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/20-tile.webp",
+      "start": 1107.2999999523163,
+      "ttfb": 2.5999999046325684,
+      "duration": 30.600000023841858,
+      "bytes": 52922,
+      "transferBytes": 53222,
+      "decodedBytes": 52922,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/photography-v170/28-tile.webp",
+      "start": 1107.2999999523163,
+      "ttfb": 2.700000047683716,
+      "duration": 31.399999976158142,
+      "bytes": 19968,
+      "transferBytes": 20268,
+      "decodedBytes": 19968,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/home-world-v146.js?v=32.184",
+      "start": 1264.8999999761581,
+      "ttfb": 0.7999999523162842,
+      "duration": 4.399999976158142,
+      "bytes": 132663,
+      "transferBytes": 132963,
+      "decodedBytes": 132663,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0005.m4s",
+      "start": 1281,
+      "ttfb": 1.100000023841858,
+      "duration": 4.699999928474426,
+      "bytes": 275754,
+      "transferBytes": 276054,
+      "decodedBytes": 275754,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/f1c1ca57d221240f2118144e.avif",
+      "start": 1288.1999999284744,
+      "ttfb": 1.899999976158142,
+      "duration": 30.300000071525574,
+      "bytes": 1167046,
+      "transferBytes": 1167346,
+      "decodedBytes": 1167046,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/7a917fde7616e6d944ebcdcf.webp",
+      "start": 1288.5,
+      "ttfb": 2.700000047683716,
+      "duration": 16.199999928474426,
+      "bytes": 355936,
+      "transferBytes": 356236,
+      "decodedBytes": 355936,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/fd2654a75471a5adb54a8966.webp",
+      "start": 1288.5999999046326,
+      "ttfb": 2,
+      "duration": 35.800000071525574,
+      "bytes": 1378806,
+      "transferBytes": 1379106,
+      "decodedBytes": 1378806,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "start": 1288.7999999523163,
+      "ttfb": 3.399999976158142,
+      "duration": 217.29999995231628,
+      "bytes": 2573376,
+      "transferBytes": 2573676,
+      "decodedBytes": 2573376,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "start": 1288.8999999761581,
+      "ttfb": 3.5,
+      "duration": 228.89999997615814,
+      "bytes": 3085891,
+      "transferBytes": 3086191,
+      "decodedBytes": 3085891,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/064aadedc37c6b8386f19d95.avif",
+      "start": 1289,
+      "ttfb": 5.899999976158142,
+      "duration": 43.89999997615814,
+      "bytes": 1832659,
+      "transferBytes": 1832959,
+      "decodedBytes": 1832659,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "start": 1289.2999999523163,
+      "ttfb": 1.899999976158142,
+      "duration": 404.7999999523163,
+      "bytes": 4545235,
+      "transferBytes": 4545535,
+      "decodedBytes": 4545235,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/sandstone_cracks_diff_2k.jpg",
+      "start": 1289.3999999761581,
+      "ttfb": 2.6999999284744263,
+      "duration": 266.5,
+      "bytes": 2870078,
+      "transferBytes": 2870378,
+      "decodedBytes": 2870078,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/367eecd041a14d01853d0c5b.webp",
+      "start": 1289.5,
+      "ttfb": 2.799999952316284,
+      "duration": 294,
+      "bytes": 2379556,
+      "transferBytes": 2379856,
+      "decodedBytes": 2379556,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "start": 1289.6999999284744,
+      "ttfb": 1.399999976158142,
+      "duration": 63.700000047683716,
+      "bytes": 652441,
+      "transferBytes": 652741,
+      "decodedBytes": 652441,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "start": 1289.8999999761581,
+      "ttfb": 1.3000000715255737,
+      "duration": 71.60000002384186,
+      "bytes": 609525,
+      "transferBytes": 609825,
+      "decodedBytes": 609525,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/a734e5926bddab54febbe837.webp",
+      "start": 1289.8999999761581,
+      "ttfb": 1.7000000476837158,
+      "duration": 76.89999997615814,
+      "bytes": 296148,
+      "transferBytes": 296448,
+      "decodedBytes": 296148,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/deb7a3dccbcf3c63232a6f39.avif",
+      "start": 1290,
+      "ttfb": 0.8000000715255737,
+      "duration": 422.7999999523163,
+      "bytes": 4965912,
+      "transferBytes": 4966212,
+      "decodedBytes": 4965912,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/ca8ae6850dec30134624b83c.avif",
+      "start": 1290.0999999046326,
+      "ttfb": 1.7999999523162842,
+      "duration": 483.8000000715256,
+      "bytes": 3095908,
+      "transferBytes": 3096208,
+      "decodedBytes": 3095908,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/9242e59be05fa19c99b7f279.avif",
+      "start": 1290.1999999284744,
+      "ttfb": 2.3000000715255737,
+      "duration": 257,
+      "bytes": 1630451,
+      "transferBytes": 1630751,
+      "decodedBytes": 1630451,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/a473259e9d3b583100cb77b7.jpg",
+      "start": 1290.2999999523163,
+      "ttfb": 2,
+      "duration": 503.7999999523163,
+      "bytes": 2275944,
+      "transferBytes": 2276244,
+      "decodedBytes": 2275944,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/40edce9d6c49355fad3d72ce.jpg",
+      "start": 1290.3999999761581,
+      "ttfb": 1.2000000476837158,
+      "duration": 302.2999999523163,
+      "bytes": 2006484,
+      "transferBytes": 2006784,
+      "decodedBytes": 2006484,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/3d1dd79242c34c98fa7a5666.avif",
+      "start": 1290.5,
+      "ttfb": 2,
+      "duration": 329,
+      "bytes": 1607858,
+      "transferBytes": 1608158,
+      "decodedBytes": 1607858,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v23/material-calibration.json",
+      "start": 1290.6999999284744,
+      "ttfb": 2.3000000715255737,
+      "duration": 309.89999997615814,
+      "bytes": 17240,
+      "transferBytes": 17540,
+      "decodedBytes": 17240,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v180/clock-engraving-17eda6a1/part-000.bin",
+      "start": 1291.5,
+      "ttfb": 3.100000023841858,
+      "duration": 630,
+      "bytes": 4194304,
+      "transferBytes": 4194604,
+      "decodedBytes": 4194304,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v180/clock-engraving-17eda6a1/part-001.bin",
+      "start": 1291.5999999046326,
+      "ttfb": 1.1999999284744263,
+      "duration": 386.7000000476837,
+      "bytes": 1379959,
+      "transferBytes": 1380259,
+      "decodedBytes": 1379959,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/look-calibration.json",
+      "start": 1291.8999999761581,
+      "ttfb": 28,
+      "duration": 431.60000002384186,
+      "bytes": 23396,
+      "transferBytes": 23696,
+      "decodedBytes": 23396,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/bake-audit.json",
+      "start": 1292,
+      "ttfb": 15.700000047683716,
+      "duration": 431.89999997615814,
+      "bytes": 1888,
+      "transferBytes": 2188,
+      "decodedBytes": 1888,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/native-v24-prefiltered-v158.json",
+      "start": 1292.3999999761581,
+      "ttfb": 6.899999976158142,
+      "duration": 435,
+      "bytes": 262,
+      "transferBytes": 562,
+      "decodedBytes": 262,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/native-v24-prefiltered-v158.bin.gz",
+      "start": 1292.5999999046326,
+      "ttfb": 3.3000000715255737,
+      "duration": 439.90000009536743,
+      "bytes": 201723,
+      "transferBytes": 202023,
+      "decodedBytes": 201723,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shaders/home-programs.json",
+      "start": 1395.1999999284744,
+      "ttfb": 3.6999999284744263,
+      "duration": 559.5,
+      "bytes": 2833586,
+      "transferBytes": 2833886,
+      "decodedBytes": 2833586,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/geometry-delivery/df2d97e1e0a32015be34a9b4-000.bin",
+      "start": 1396,
+      "ttfb": 1.2000000476837158,
+      "duration": 336.89999997615814,
+      "bytes": 30759,
+      "transferBytes": 31059,
+      "decodedBytes": 30759,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/shared/934eaa61851a3c21fe784e56-000.bin",
+      "start": 1396.5999999046326,
+      "ttfb": 3.899999976158142,
+      "duration": 348.90000009536743,
+      "bytes": 28581,
+      "transferBytes": 28881,
+      "decodedBytes": 28581,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/geometry-delivery/032cac85f53b6e8651b7c552-000.bin",
+      "start": 1397,
+      "ttfb": 4.600000023841858,
+      "duration": 356.59999990463257,
+      "bytes": 83432,
+      "transferBytes": 83732,
+      "decodedBytes": 83432,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/display-transform.json",
+      "start": 1412.2999999523163,
+      "ttfb": 3.3000000715255737,
+      "duration": 352.89999997615814,
+      "bytes": 361,
+      "transferBytes": 661,
+      "decodedBytes": 361,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/display-transform.bin",
+      "start": 1412.5999999046326,
+      "ttfb": 3.200000047683716,
+      "duration": 354.3000000715256,
+      "bytes": 143748,
+      "transferBytes": 144048,
+      "decodedBytes": 143748,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/native-v165/home.jpg?v=32.165",
+      "start": 1417.1999999284744,
+      "ttfb": 2.100000023841858,
+      "duration": 99.30000007152557,
+      "bytes": 705603,
+      "transferBytes": 705903,
+      "decodedBytes": 705603,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/transfer/ef5a077afd8fadc255d0.avif",
+      "start": 1424,
+      "ttfb": 1.899999976158142,
+      "duration": 396.2999999523163,
+      "bytes": 3168578,
+      "transferBytes": 3168878,
+      "decodedBytes": 3168578,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/Marble012_rough_2k.jpg",
+      "start": 1424.0999999046326,
+      "ttfb": 0.8000000715255737,
+      "duration": 391.5,
+      "bytes": 2166701,
+      "transferBytes": 2167001,
+      "decodedBytes": 2166701,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/transfer/1b55932dd51c21b2337f.avif",
+      "start": 1424.1999999284744,
+      "ttfb": 1.0999999046325684,
+      "duration": 363.60000002384186,
+      "bytes": 533660,
+      "transferBytes": 533960,
+      "decodedBytes": 533660,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/sandstone_cracks_diff_2k.jpg",
+      "start": 1424.1999999284744,
+      "ttfb": 0.19999992847442627,
+      "duration": 395,
+      "bytes": 2870078,
+      "transferBytes": 0,
+      "decodedBytes": 2870078,
+      "protocol": ""
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/sandstone_cracks_rough_2k.jpg",
+      "start": 1424.2999999523163,
+      "ttfb": 2.600000023841858,
+      "duration": 381.2000000476837,
+      "bytes": 1569280,
+      "transferBytes": 1569580,
+      "decodedBytes": 1569280,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "start": 1424.2999999523163,
+      "ttfb": 0.10000002384185791,
+      "duration": 415.39999997615814,
+      "bytes": 4545235,
+      "transferBytes": 0,
+      "decodedBytes": 4545235,
+      "protocol": ""
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "start": 1424.2999999523163,
+      "ttfb": 0,
+      "duration": 416.89999997615814,
+      "bytes": 3085891,
+      "transferBytes": 0,
+      "decodedBytes": 3085891,
+      "protocol": ""
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/white_sandstone_blocks_02_rough_2k.jpg",
+      "start": 1424.2999999523163,
+      "ttfb": 2.0999999046325684,
+      "duration": 430.60000002384186,
+      "bytes": 2545799,
+      "transferBytes": 2546099,
+      "decodedBytes": 2545799,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "start": 1424.3999999761581,
+      "ttfb": 1.5,
+      "duration": 423.5,
+      "bytes": 609525,
+      "transferBytes": 609825,
+      "decodedBytes": 609525,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "start": 1424.3999999761581,
+      "ttfb": 1.100000023841858,
+      "duration": 425.39999997615814,
+      "bytes": 652441,
+      "transferBytes": 652741,
+      "decodedBytes": 652441,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "start": 1424.3999999761581,
+      "ttfb": 0.2999999523162842,
+      "duration": 433.1999999284744,
+      "bytes": 2573376,
+      "transferBytes": 0,
+      "decodedBytes": 2573376,
+      "protocol": ""
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/odyssey/wood_planks/wood_planks_rough_1k.jpg",
+      "start": 1424.5,
+      "ttfb": 3,
+      "duration": 432.7999999523163,
+      "bytes": 299757,
+      "transferBytes": 300057,
+      "decodedBytes": 299757,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/draco/draco_wasm_wrapper.js",
+      "start": 1434,
+      "ttfb": 3.200000047683716,
+      "duration": 88.09999990463257,
+      "bytes": 58456,
+      "transferBytes": 58756,
+      "decodedBytes": 58456,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/home/draco/draco_decoder.wasm",
+      "start": 1434.3999999761581,
+      "ttfb": 1.3000000715255737,
+      "duration": 91.5,
+      "bytes": 192420,
+      "transferBytes": 192720,
+      "decodedBytes": 192420,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0006.m4s",
+      "start": 1557.8999999761581,
+      "ttfb": 3.700000047683716,
+      "duration": 74.79999995231628,
+      "bytes": 260411,
+      "transferBytes": 260711,
+      "decodedBytes": 260411,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0007.m4s",
+      "start": 1595.8999999761581,
+      "ttfb": 5.5,
+      "duration": 48.89999997615814,
+      "bytes": 307719,
+      "transferBytes": 308019,
+      "decodedBytes": 307719,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0008.m4s",
+      "start": 1613.1999999284744,
+      "ttfb": 10.899999976158142,
+      "duration": 46,
+      "bytes": 47057,
+      "transferBytes": 47357,
+      "decodedBytes": 47057,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0009.m4s",
+      "start": 1614.5,
+      "ttfb": 1.4000000953674316,
+      "duration": 51.299999952316284,
+      "bytes": 658991,
+      "transferBytes": 659291,
+      "decodedBytes": 658991,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/architecture-ao-0.png",
+      "start": 2069.399999976158,
+      "ttfb": 1.2000000476837158,
+      "duration": 12.100000023841858,
+      "bytes": 500917,
+      "transferBytes": 501217,
+      "decodedBytes": 500917,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/architecture-ao-1.png",
+      "start": 2069.5,
+      "ttfb": 1.899999976158142,
+      "duration": 11.299999952316284,
+      "bytes": 349089,
+      "transferBytes": 349389,
+      "decodedBytes": 349089,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/architecture-ao-2.png",
+      "start": 2069.5999999046326,
+      "ttfb": 6.300000071525574,
+      "duration": 13.100000023841858,
+      "bytes": 201116,
+      "transferBytes": 201416,
+      "decodedBytes": 201116,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0010.m4s",
+      "start": 2114.6999999284744,
+      "ttfb": 4.600000023841858,
+      "duration": 10.5,
+      "bytes": 538224,
+      "transferBytes": 538524,
+      "decodedBytes": 538224,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/architecture-indirect-0.bin.z",
+      "start": 2130.5,
+      "ttfb": 2.5,
+      "duration": 44.5,
+      "bytes": 2971697,
+      "transferBytes": 2971997,
+      "decodedBytes": 2971697,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/architecture-indirect-1.bin.z",
+      "start": 2130.7999999523163,
+      "ttfb": 10.5,
+      "duration": 115.70000004768372,
+      "bytes": 2337390,
+      "transferBytes": 2337690,
+      "decodedBytes": 2337390,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v24/architecture-indirect-2.bin.z",
+      "start": 2130.899999976158,
+      "ttfb": 81.30000007152557,
+      "duration": 91.39999997615814,
+      "bytes": 1652784,
+      "transferBytes": 1653084,
+      "decodedBytes": 1652784,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0011.m4s",
+      "start": 2521.399999976158,
+      "ttfb": 1.2000000476837158,
+      "duration": 5.600000023841858,
+      "bytes": 366184,
+      "transferBytes": 366484,
+      "decodedBytes": 366184,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0012.m4s",
+      "start": 6521.799999952316,
+      "ttfb": 2865.2000000476837,
+      "duration": 3370.600000023842,
+      "bytes": 418007,
+      "transferBytes": 418307,
+      "decodedBytes": 418007,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0013.m4s",
+      "start": 6533.5,
+      "ttfb": 2863.5999999046326,
+      "duration": 3100.7999999523163,
+      "bytes": 283305,
+      "transferBytes": 283605,
+      "decodedBytes": 283305,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0014.m4s",
+      "start": 6536.699999928474,
+      "ttfb": 2370.5,
+      "duration": 2768.899999976158,
+      "bytes": 613925,
+      "transferBytes": 614225,
+      "decodedBytes": 613925,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0015.m4s",
+      "start": 6538.199999928474,
+      "ttfb": 1792.6000000238419,
+      "duration": 2027.7000000476837,
+      "bytes": 630552,
+      "transferBytes": 630852,
+      "decodedBytes": 630552,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-BAB33W6C.js",
+      "start": 10230.699999928474,
+      "ttfb": 186.30000007152557,
+      "duration": 199.39999997615814,
+      "bytes": 25788,
+      "transferBytes": 26088,
+      "decodedBytes": 25788,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0016.m4s",
+      "start": 10268.699999928474,
+      "ttfb": 102.09999990463257,
+      "duration": 247.39999997615814,
+      "bytes": 570716,
+      "transferBytes": 571016,
+      "decodedBytes": 570716,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0017.m4s",
+      "start": 10274.699999928474,
+      "ttfb": 93.20000004768372,
+      "duration": 221.70000004768372,
+      "bytes": 115114,
+      "transferBytes": 115414,
+      "decodedBytes": 115114,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0018.m4s",
+      "start": 10341.599999904633,
+      "ttfb": 83.29999995231628,
+      "duration": 147.30000007152557,
+      "bytes": 447341,
+      "transferBytes": 447641,
+      "decodedBytes": 447341,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0019.m4s",
+      "start": 10386.599999904633,
+      "ttfb": 70.19999992847443,
+      "duration": 89,
+      "bytes": 318866,
+      "transferBytes": 319166,
+      "decodedBytes": 318866,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/scene-dist/browser-v186/shared-RUKHF5KC.js",
+      "start": 10437.699999928474,
+      "ttfb": 63.300000071525574,
+      "duration": 70,
+      "bytes": 48528,
+      "transferBytes": 48828,
+      "decodedBytes": 48528,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v22/courtyard-cavity-volume.json",
+      "start": 10532.099999904633,
+      "ttfb": 1.5,
+      "duration": 59.200000047683716,
+      "bytes": 483,
+      "transferBytes": 783,
+      "decodedBytes": 483,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/reference-architecture-v22/courtyard-cavity-volume.bin",
+      "start": 10533.599999904633,
+      "ttfb": 58,
+      "duration": 65.10000002384186,
+      "bytes": 122880,
+      "transferBytes": 123180,
+      "decodedBytes": 122880,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/ue-v159/clock-mix-ue5-cubeuv.json",
+      "start": 10687.299999952316,
+      "ttfb": 1.2000000476837158,
+      "duration": 4.100000023841858,
+      "bytes": 1204,
+      "transferBytes": 1504,
+      "decodedBytes": 1204,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/ue-v159/clock-mix-ue5-cubeuv.bin.gz",
+      "start": 10687.599999904633,
+      "ttfb": 1.3000000715255737,
+      "duration": 8.700000047683716,
+      "bytes": 225523,
+      "transferBytes": 225823,
+      "decodedBytes": 225523,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/blender/home-camera-v32-84/camera-v84.json",
+      "start": 11093.399999976158,
+      "ttfb": 2,
+      "duration": 5.199999928474426,
+      "bytes": 1256,
+      "transferBytes": 1556,
+      "decodedBytes": 1256,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0020.m4s",
+      "start": 11108.399999976158,
+      "ttfb": 17.299999952316284,
+      "duration": 26.899999976158142,
+      "bytes": 72523,
+      "transferBytes": 72823,
+      "decodedBytes": 72523,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/part-0021.m4s",
+      "start": 11111.599999904633,
+      "ttfb": 17.899999976158142,
+      "duration": 21.600000023841858,
+      "bytes": 3806,
+      "transferBytes": 4106,
+      "decodedBytes": 3806,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0006.m4s",
+      "start": 21736,
+      "ttfb": 1.7999999523162842,
+      "duration": 14.799999952316284,
+      "bytes": 677852,
+      "transferBytes": 678152,
+      "decodedBytes": 677852,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0007.m4s",
+      "start": 21779.599999904633,
+      "ttfb": 1.2000000476837158,
+      "duration": 4.100000023841858,
+      "bytes": 17898,
+      "transferBytes": 18198,
+      "decodedBytes": 17898,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0008.m4s",
+      "start": 21790.199999928474,
+      "ttfb": 1.399999976158142,
+      "duration": 8.100000023841858,
+      "bytes": 466508,
+      "transferBytes": 466808,
+      "decodedBytes": 466508,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0009.m4s",
+      "start": 21792.299999952316,
+      "ttfb": 1.1999999284744263,
+      "duration": 4.5,
+      "bytes": 10632,
+      "transferBytes": 10932,
+      "decodedBytes": 10632,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0010.m4s",
+      "start": 21794.299999952316,
+      "ttfb": 2.100000023841858,
+      "duration": 6.299999952316284,
+      "bytes": 352708,
+      "transferBytes": 353008,
+      "decodedBytes": 352708,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0011.m4s",
+      "start": 22637.399999976158,
+      "ttfb": 1,
+      "duration": 4,
+      "bytes": 15580,
+      "transferBytes": 15880,
+      "decodedBytes": 15580,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0012.m4s",
+      "start": 23895.799999952316,
+      "ttfb": 1,
+      "duration": 9.299999952316284,
+      "bytes": 360005,
+      "transferBytes": 360305,
+      "decodedBytes": 360005,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0013.m4s",
+      "start": 24533.399999976158,
+      "ttfb": 0.7999999523162842,
+      "duration": 3.5,
+      "bytes": 130713,
+      "transferBytes": 131013,
+      "decodedBytes": 130713,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0014.m4s",
+      "start": 25628.699999928474,
+      "ttfb": 2.1999999284744263,
+      "duration": 14.300000071525574,
+      "bytes": 475426,
+      "transferBytes": 475726,
+      "decodedBytes": 475426,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/media/0232ba50007c7e9e/part-0015.m4s",
+      "start": 26727.799999952316,
+      "ttfb": 1.2000000476837158,
+      "duration": 4,
+      "bytes": 1162,
+      "transferBytes": 1462,
+      "decodedBytes": 1162,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/v31-sand-story.js?v=32.183",
+      "start": 30852.599999904633,
+      "ttfb": 1.6999999284744263,
+      "duration": 5.900000095367432,
+      "bytes": 70512,
+      "transferBytes": 70812,
+      "decodedBytes": 70512,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/craft-raised.webp",
+      "start": 30922.199999928474,
+      "ttfb": 3.200000047683716,
+      "duration": 7.600000023841858,
+      "bytes": 53060,
+      "transferBytes": 53360,
+      "decodedBytes": 53060,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/craft-strike.webp",
+      "start": 30922.699999928474,
+      "ttfb": 2.600000023841858,
+      "duration": 6.5,
+      "bytes": 47962,
+      "transferBytes": 48262,
+      "decodedBytes": 47962,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/applause-airplane.webp",
+      "start": 30922.799999952316,
+      "ttfb": 1.2000000476837158,
+      "duration": 7.299999952316284,
+      "bytes": 19216,
+      "transferBytes": 19516,
+      "decodedBytes": 19216,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/applause-open.webp",
+      "start": 30922.799999952316,
+      "ttfb": 1.600000023841858,
+      "duration": 7.600000023841858,
+      "bytes": 32204,
+      "transferBytes": 32504,
+      "decodedBytes": 32204,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/camera-operator.webp",
+      "start": 30922.799999952316,
+      "ttfb": 2.299999952316284,
+      "duration": 8.899999976158142,
+      "bytes": 33030,
+      "transferBytes": 33330,
+      "decodedBytes": 33030,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/violin-duet.webp",
+      "start": 30922.799999952316,
+      "ttfb": 1.100000023841858,
+      "duration": 12.899999976158142,
+      "bytes": 36368,
+      "transferBytes": 36668,
+      "decodedBytes": 36368,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/boxing-left-jab.webp",
+      "start": 30922.899999976158,
+      "ttfb": 1.2000000476837158,
+      "duration": 15.299999952316284,
+      "bytes": 119454,
+      "transferBytes": 119754,
+      "decodedBytes": 119454,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/boxing-ring.webp",
+      "start": 30922.899999976158,
+      "ttfb": 1.600000023841858,
+      "duration": 15.5,
+      "bytes": 119672,
+      "transferBytes": 119972,
+      "decodedBytes": 119672,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/violin-return.webp",
+      "start": 30922.899999976158,
+      "ttfb": 2,
+      "duration": 14,
+      "bytes": 62940,
+      "transferBytes": 63240,
+      "decodedBytes": 62940,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/boxing-right-jab.webp",
+      "start": 30922.899999976158,
+      "ttfb": 4,
+      "duration": 16.5,
+      "bytes": 115020,
+      "transferBytes": 115320,
+      "decodedBytes": 115020,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/european-castle-simple-v2.webp",
+      "start": 30923.299999952316,
+      "ttfb": 1.5,
+      "duration": 18.100000023841858,
+      "bytes": 94884,
+      "transferBytes": 95184,
+      "decodedBytes": 94884,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/craft-motion-atlas.webp",
+      "start": 30923.399999976158,
+      "ttfb": 2.299999952316284,
+      "duration": 24.5,
+      "bytes": 442456,
+      "transferBytes": 442756,
+      "decodedBytes": 442456,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/envelope-volume-v32-72.png",
+      "start": 30923.399999976158,
+      "ttfb": 1.2999999523162842,
+      "duration": 48.299999952316284,
+      "bytes": 1827291,
+      "transferBytes": 1827591,
+      "decodedBytes": 1827291,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/applause-motion-atlas.webp",
+      "start": 30923.799999952316,
+      "ttfb": 0.8999999761581421,
+      "duration": 32.799999952316284,
+      "bytes": 318152,
+      "transferBytes": 318452,
+      "decodedBytes": 318152,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/violin-motion-atlas.webp",
+      "start": 30924.099999904633,
+      "ttfb": 1.3000000715255737,
+      "duration": 36.700000047683716,
+      "bytes": 702754,
+      "transferBytes": 703054,
+      "decodedBytes": 702754,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/sand-story/boxing-motion-atlas.webp",
+      "start": 30924.099999904633,
+      "ttfb": 1.3000000715255737,
+      "duration": 47,
+      "bytes": 1703180,
+      "transferBytes": 1703480,
+      "decodedBytes": 1703180,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/works/after-journey/cover-v32-92.webp",
+      "start": 37613.09999990463,
+      "ttfb": 6.600000023841858,
+      "duration": 22.700000047683716,
+      "bytes": 1354530,
+      "transferBytes": 1354830,
+      "decodedBytes": 1354530,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/works/rural-return/poster.webp",
+      "start": 37613.299999952316,
+      "ttfb": 2.9000000953674316,
+      "duration": 16.200000047683716,
+      "bytes": 17938,
+      "transferBytes": 18238,
+      "decodedBytes": 17938,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/journey/previews/journey-mountain-valley.webp",
+      "start": 37613.59999990463,
+      "ttfb": 6.299999952316284,
+      "duration": 18.5,
+      "bytes": 174082,
+      "transferBytes": 174382,
+      "decodedBytes": 174082,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/journey/previews/mist-palace-dusk.webp",
+      "start": 37613.799999952316,
+      "ttfb": 6.800000071525574,
+      "duration": 17.5,
+      "bytes": 12286,
+      "transferBytes": 12586,
+      "decodedBytes": 12286,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/works/mid-autumn/still-live-stage.webp",
+      "start": 37724.799999952316,
+      "ttfb": 1.7999999523162842,
+      "duration": 8.100000023841858,
+      "bytes": 226042,
+      "transferBytes": 226342,
+      "decodedBytes": 226042,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/works/covers-v161/code-films.webp",
+      "start": 37727.199999928474,
+      "ttfb": 2.1999999284744263,
+      "duration": 7,
+      "bytes": 274692,
+      "transferBytes": 274992,
+      "decodedBytes": 274692,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/reading/cinema-aesthetics/page-001.jpg",
+      "start": 37739.89999997616,
+      "ttfb": 1.0999999046325684,
+      "duration": 7.899999976158142,
+      "bytes": 474206,
+      "transferBytes": 474506,
+      "decodedBytes": 474206,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/prompt-lab/prompt-structure.webp",
+      "start": 37740.199999928474,
+      "ttfb": 1.1999999284744263,
+      "duration": 7.100000023841858,
+      "bytes": 278786,
+      "transferBytes": 279086,
+      "decodedBytes": 278786,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/browser-v185/room-atlas/layout.json",
+      "start": 37951.799999952316,
+      "ttfb": 0.8000000715255737,
+      "duration": 3.299999952316284,
+      "bytes": 43044,
+      "transferBytes": 43344,
+      "decodedBytes": 43044,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/directory-v127/room-static.glb",
+      "start": 38173.199999928474,
+      "ttfb": 11.199999928474426,
+      "duration": 718.1000000238419,
+      "bytes": 2205652,
+      "transferBytes": 2205952,
+      "decodedBytes": 2205652,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/directory-v127/room-lighting.json",
+      "start": 38173.799999952316,
+      "ttfb": 17.100000023841858,
+      "duration": 26,
+      "bytes": 21499,
+      "transferBytes": 21799,
+      "decodedBytes": 21499,
+      "protocol": "http/1.0"
+    },
+    {
+      "name": "http://127.0.0.1:8053/assets/directory-v123/remote-detail.glb",
+      "start": 38183.299999952316,
+      "ttfb": 43.89999997615814,
+      "duration": 56.60000002384186,
+      "bytes": 486708,
+      "transferBytes": 487008,
+      "decodedBytes": 486708,
+      "protocol": "http/1.0"
+    }
+  ]
+}

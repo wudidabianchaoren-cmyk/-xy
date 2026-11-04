@@ -66,3 +66,9 @@
 !/DEPLOY-NETLIFY-BROWSER-V184.md
 !/CURRENT-V32-185-RESUME.md
 !/DEPLOY-NETLIFY-BROWSER-V185.md
+!/CURRENT-V32-186-RESUME.md
+!/DEPLOY-NETLIFY-BROWSER-V186.md
+!/assets/browser-v186/
+/assets/browser-v186/*
+!/assets/browser-v186/shaders/
+!/assets/browser-v186/shaders/**

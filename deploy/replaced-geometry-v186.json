@@ -1,0 +1,16 @@
+{
+  "version": 186,
+  "source": "/blender/reference-architecture-v16/architecture-world.glb",
+  "omitted": [
+    "V13 / chased pale gold bronze batch",
+    "V13 / chased pale gold bronze batch.001"
+  ],
+  "replacement": "/blender/reference-architecture-v25/clock-engraving.glb",
+  "sourceRawBytes": 17836396,
+  "deliveredRawBytes": 12403728,
+  "sourceTransferBytes": 16068678,
+  "deliveredTransferBytes": 11043813,
+  "retainedBufferViewsByteIdentical": true,
+  "nodesMaterialsAnimationsPreserved": true,
+  "originalFilesChanged": false
+}

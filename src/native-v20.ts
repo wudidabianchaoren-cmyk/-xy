@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {retainedCourtyardModel186} from './home-model-preload-v186';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {nativeCourtyard as retainedCourtyard} from './native-v19';
 import type {createCyclops} from './odyssey-cyclops';
@@ -9,7 +10,7 @@ import {refineCyclops} from './cyclops-surface';
 import {accelerateIslandPlacement} from './odyssey-bvh';
 const directory='./blender/reference-architecture-v20/';
 export async function nativeCourtyard(scene:THREE.Scene){
- const retained=await retainedCourtyard(scene),root=(await new GLTFLoader().loadAsync(directory+'courtyard-depth.glb')).scene;
+ const [retained,loaded]=await Promise.all([retainedCourtyard(scene),retainedCourtyardModel186(directory+'courtyard-depth.glb')]),root=loaded.scene;
  root.traverse(o=>{if(o instanceof THREE.Mesh){o.castShadow=o.receiveShadow=true;for(const m of Array.isArray(o.material)?o.material:[o.material])if(m instanceof THREE.MeshStandardMaterial){m.envMapIntensity=.25;if(m.map)m.map.anisotropy=8;if(m.normalMap)m.normalScale.set(.38,.38);}}});scene.add(root);
  const lantern=new THREE.SpotLight(0xffb86d,70,6,.72,.75,2);lantern.position.set(7.16,1.9,-.65);lantern.target.position.set(7.16,.1,-1.45);lantern.castShadow=true;lantern.shadow.mapSize.set(1024,1024);lantern.shadow.camera.near=.1;lantern.shadow.camera.far=6;lantern.shadow.bias=-.0002;lantern.shadow.normalBias=.012;scene.add(lantern,lantern.target);
  lantern.shadow.autoUpdate=false;let shadowTime=-Infinity;

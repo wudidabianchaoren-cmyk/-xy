@@ -1,0 +1,27 @@
+{
+  "errors": [],
+  "latencyMs": 1500,
+  "firstPlayingAt": 1624.7999999523163,
+  "at": 15660,
+  "time": 14.0359,
+  "waits": [],
+  "audit": {
+    "progressiveMedia": [
+      {
+        "source": "http://127.0.0.1:8053/assets/browser-v186/media/1be16e3218752244/manifest.json",
+        "bytes": 7362849,
+        "requests": 23,
+        "retries": 0,
+        "seeks": 0,
+        "firstAppendAt": 1599.5,
+        "ready": true,
+        "failed": false
+      }
+    ]
+  },
+  "quality": {
+    "total": 423,
+    "dropped": 0
+  },
+  "pass": true
+}

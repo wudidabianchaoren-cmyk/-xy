@@ -1,10 +1,12 @@
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 type Calibration={materials:{name:string;roughness:number;metalness:number;base:number[]}[]};
+const retainedDetailReady=Promise.all([fetch('./blender/reference-architecture-v23/material-calibration.json').then(r=>r.json() as Promise<Calibration>),new GLTFLoader().loadAsync('./blender/reference-architecture-v25/clock-engraving.glb')]);
+retainedDetailReady.catch(()=>{});
 /** Geometry and material factors produced in the saved complete Blender V23 scene. */
 export async function applyNativeV23(scene:THREE.Scene,world:THREE.Group,stonePatch=true){
  const dir='./blender/reference-architecture-v23/';
- const [patch,calibration,engraving]=await Promise.all([stonePatch?new GLTFLoader().loadAsync(dir+'dressed-stone.glb'):Promise.resolve({scene:new THREE.Group()}),fetch(dir+'material-calibration.json').then(r=>r.json() as Promise<Calibration>),new GLTFLoader().loadAsync('./blender/reference-architecture-v25/clock-engraving.glb')]);
+ const [patch,[calibration,engraving]]=await Promise.all([stonePatch?new GLTFLoader().loadAsync(dir+'dressed-stone.glb'):Promise.resolve({scene:new THREE.Group()}),retainedDetailReady]);
  const replacement=/^V16__quarried_warm_limestone_batch$|^V16__cut_pale_travertine_arris_batch$/;
  const sourceMaterials=new Map<string,THREE.Material>();let replaced=0,calibrated=0;
  world.traverse(o=>{if(o instanceof THREE.Mesh){for(const m of Array.isArray(o.material)?o.material:[o.material])sourceMaterials.set(m.name,m);if(stonePatch&&replacement.test(o.name)){o.visible=false;replaced++;}}});
