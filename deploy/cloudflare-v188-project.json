@@ -1,0 +1,31 @@
+{
+  "name": "xy",
+  "accountId": "0424e885f532f4b1ade3fe9216ddc64c",
+  "subdomain": "xy-crg.pages.dev",
+  "productionBranch": "main",
+  "source": {
+    "type": "github",
+    "repository": "-xy",
+    "productionDeploymentsEnabled": false,
+    "previewDeploymentSetting": "none"
+  },
+  "latestDeployment": {
+    "id": "7bbb14d0-8638-4479-814a-94dfd836c270",
+    "url": "https://7bbb14d0.xy-crg.pages.dev",
+    "environment": "production",
+    "latest_stage": {
+      "name": "build",
+      "started_on": "2026-11-04T15:51:35.078067Z",
+      "ended_on": "2026-11-04T15:51:40.935151Z",
+      "status": "failure"
+    },
+    "uses_functions": null
+  },
+  "canonicalDeployment": {
+    "id": null,
+    "url": null,
+    "environment": null,
+    "latest_stage": null,
+    "uses_functions": null
+  }
+}
