@@ -1,7 +1,11 @@
 import * as THREE from 'three';
+import {uploadTextureCooperatively} from '../texture-upload-v185';
 
 /** Upload unchanged source pixels a few rows per frame, so a 4K photo cannot monopolize the GPU. */
 export async function streamTextureV165(renderer:THREE.WebGLRenderer,texture:THREE.Texture){
+ await uploadTextureCooperatively(renderer,texture);return texture.userData.cooperativeUpload;
+ /* Historical upload retained below for source provenance; the new uploader
+    preserves mipmaps and real pixels after WebGL context restoration.
  const image=texture.image as HTMLImageElement,width=image.naturalWidth||image.width,height=image.naturalHeight||image.height,flip=texture.flipY;
  const canvas=new OffscreenCanvas(width,128),ctx=canvas.getContext('2d',{willReadFrequently:true})!;
  const source=image.currentSrc||image.src;texture.userData.originalImage=image;texture.userData.originalSource=source;
@@ -15,5 +19,5 @@ export async function streamTextureV165(renderer:THREE.WebGLRenderer,texture:THR
   // made unchanged textures take seconds even when each upload took <0.1 ms.
   if(performance.now()-budgetStarted>=2){yields++;await new Promise(requestAnimationFrame);budgetStarted=performance.now();}
  }
- return{mode:'unchanged pixels / 128-row tiles / 2ms cooperative budget',source:source.split('/').at(-1),width,height,maxSlice,yields,elapsed:performance.now()-started};
+ return{mode:'unchanged pixels / 128-row tiles / 2ms cooperative budget',source:source.split('/').at(-1),width,height,maxSlice,yields,elapsed:performance.now()-started}; */
 }

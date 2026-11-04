@@ -10,14 +10,17 @@
   const query=new URLSearchParams(location.search);
   if(query.has('bakeCapture'))return;
   window.PORTFOLIO_BROWSER_ONLY=true;
-  for(const [key,value] of [['renderer','web'],['nativeLightfield','1'],['homeRenderer','web']])query.set(key,value);
+  for(const [key,value] of [['renderer','web'],['nativeLightfield','1'],['homeRenderer','web'],['roomAtlas185','1'],['roomAO','0']])query.set(key,value);
   history.replaceState(history.state,'',location.pathname+'?'+query+location.hash);
   for(const method of ['pushState','replaceState']){const original=history[method].bind(history);history[method]=function(state,title,address){if(address!=null){const url=new URL(String(address),location.href);if(url.origin===location.origin){for(const[key,value]of[['renderer','web'],['nativeLightfield','1'],['homeRenderer','web']])url.searchParams.set(key,value);address=url.href;}}return original(state,title,address);};}
   const resources=window.PORTFOLIO_RESOURCES_V180||{media:{},binary:{}};
   const originalFetch=window.fetch.bind(window);
-  const diagnostics=window.portfolioDeliveryState={version:184,browserOnly:true,segmentedVideos:0,assembledResources:0,errors:[]};
+  const segmentCache=new Map();
+  function cachedSegment(address,options={}){const key=new URL(address,location.href).href;if(segmentCache.has(key))return segmentCache.get(key);const task=(async()=>{for(let attempt=0;attempt<3;attempt++){const controller=new AbortController(),abort=()=>controller.abort();options.signal?.addEventListener('abort',abort,{once:true});const timer=setTimeout(abort,30000);try{const response=await originalFetch(address,{...options,signal:controller.signal,...(attempt?{cache:'reload'}:{})});if(!response.ok)throw Error('Resource segment unavailable: '+response.status);return new Uint8Array(await response.arrayBuffer());}catch(error){if(options.signal?.aborted||attempt===2)throw error;await new Promise(r=>setTimeout(r,300*(attempt+1)));}finally{clearTimeout(timer);options.signal?.removeEventListener('abort',abort);}}})();task.catch(()=>segmentCache.delete(key));segmentCache.set(key,task);return task;}
+  if(/^\/(?:index\.html|v31\.html)?$/.test(location.pathname)){const queue=['/blender/reference-architecture-v16/architecture-world.glb','/blender/reference-architecture-v24/baked-architecture.glb'].flatMap(path=>resources.binary[path]?.parts||[]);for(let worker=0;worker<2;worker++)void(async()=>{while(queue.length){const path=queue.shift();try{await cachedSegment(path,{priority:'low'});}catch{}}})();addEventListener('v85:home-intro-finished',()=>setTimeout(()=>segmentCache.clear(),30000),{once:true});}
+  const diagnostics=window.portfolioDeliveryState={version:185,browserOnly:true,segmentedVideos:0,assembledResources:0,errors:[]};
   const backgroundRoot=()=>!!document.getElementById('voyage')&&((window.homeDesignedIntroState&&!window.homeDesignedIntroState.finished)||document.body?.matches('.portfolio-portal-open,.works-orbit-open'));
-  document.addEventListener('error',event=>{const script=event.target;if(!(script instanceof HTMLScriptElement)||!script.src||script.dataset.deliveryPlayer)return;const source=new URL(script.src,location.href),attempt=Number(script.dataset.moduleRecovery||0);if(source.origin!==location.origin||attempt>=2)return;const retry=document.createElement('script');for(const attribute of script.attributes)if(attribute.name!=='src')retry.setAttribute(attribute.name,attribute.value);if(script.nonce)retry.nonce=script.nonce;source.searchParams.set('moduleRecovery',String(attempt+1));retry.src=source.href;retry.dataset.moduleRecovery=String(attempt+1);retry.onload=()=>dispatchEvent(new Event('portfolio:script-recovered'));(diagnostics.recoveredScriptAttempts??=[]).push({url:source.pathname,attempt:attempt+1});setTimeout(()=>script.replaceWith(retry),400*(attempt+1));},true);
+  document.addEventListener('error',event=>{const script=event.target;if(!(script instanceof HTMLScriptElement)||!script.src||script.dataset.deliveryPlayer)return;const source=new URL(script.src,location.href),attempt=Number(script.dataset.moduleRecovery||0);if(source.origin!==location.origin||attempt>=2)return;const retry=document.createElement('script');for(const attribute of script.attributes)if(attribute.name!=='src')retry.setAttribute(attribute.name,attribute.value);if(script.nonce)retry.nonce=script.nonce;source.searchParams.set('moduleRecovery',String(attempt+1));retry.src=resources.moduleFallbacks?.[source.pathname]||source.href;retry.dataset.moduleRecovery=String(attempt+1);retry.onload=()=>dispatchEvent(new Event('portfolio:script-recovered'));(diagnostics.recoveredScriptAttempts??=[]).push({url:source.pathname,attempt:attempt+1});setTimeout(()=>script.replaceWith(retry),400*(attempt+1));},true);
   if('serviceWorker'in navigator)void(async()=>{try{const registrations=await navigator.serviceWorker.getRegistrations();let removed=0;for(const registration of registrations){const script=registration.active?.scriptURL||registration.waiting?.scriptURL||registration.installing?.scriptURL;if(script&&/\/mythology-sw-v\d+\.js$/.test(new URL(script).pathname)){await registration.unregister();removed++;}}if('caches'in window)for(const key of await caches.keys())if(/^zaojing-(?:native|mythology)-v\d+$/.test(key))await caches.delete(key);diagnostics.legacyWorkerCleanup={removed,complete:true};}catch(error){diagnostics.legacyWorkerCleanup={complete:false,error:String(error)};}})();
   window.fetch=async function(input,options){
     const request=input instanceof Request?input:null;
@@ -33,7 +36,7 @@
     let index=0;const pending=new Map();
     const segment=async position=>{
       for(let attempt=0;attempt<3;attempt++){
-        try{const response=await originalFetch(record.parts[position],{signal,priority:record.media?'high':backgroundRoot()?'low':'auto',...(attempt||query.has('entryRetry')?{cache:'reload'}:{})});if(!response.ok)throw Error('Resource segment unavailable: '+response.status);return new Uint8Array(await response.arrayBuffer());}
+        try{return await cachedSegment(record.parts[position],{signal,priority:record.media?'high':backgroundRoot()?'low':'auto',...(attempt||query.has('entryRetry')?{cache:'reload'}:{})});}
         catch(error){if(signal?.aborted||attempt===2)throw error;await new Promise(resolve=>setTimeout(resolve,250*(attempt+1)));}
       }
     };
@@ -54,7 +57,11 @@
   let playerLibrary;
   function loadPlayer(){if(window.Hls)return Promise.resolve();return playerLibrary??=(async()=>{for(let attempt=0;attempt<3;attempt++)try{await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/vendor/hls-1.7.4.min.js'+(attempt?'?playerRetry='+attempt:'');script.dataset.deliveryPlayer='true';script.async=true;script.onload=resolve;script.onerror=()=>{script.remove();reject(Error('Video player could not load'));};document.head.append(script);});return;}catch(error){if(attempt===2){playerLibrary=null;throw error;}await new Promise(resolve=>setTimeout(resolve,400*(attempt+1)));}})();}
   const media=HTMLMediaElement.prototype,descriptor=Object.getOwnPropertyDescriptor(media,'src'),players=new WeakMap();
-  function clear(video){const previous=players.get(video);if(previous){players.delete(video);previous.disposed=true;previous.hls?.destroy();previous.abort?.abort();if(previous.objectURL)URL.revokeObjectURL(previous.objectURL);}}
+  function clear(video){const previous=players.get(video);if(previous){players.delete(video);previous.disposed=true;previous.hls?.destroy();previous.progressive?.dispose();previous.abort?.abort();if(previous.objectURL)URL.revokeObjectURL(previous.objectURL);}}
+  function attachProgressive(video,source,path){
+    clear(video);const record={disposed:false,progressive:null};players.set(video,record);video.removeAttribute('src');
+    void import('/progressive-media-v185.js').then(({progressiveMedia})=>{if(record.disposed)return;record.progressive=progressiveMedia(video,new URL(path,location.href).href,address=>descriptor.set.call(video,address),diagnostics,error=>{if(record.disposed)return;(diagnostics.mediaFallbacks??=[]).push({source,error:String(error)});const url=new URL(source,location.href);if(resources.originalMedia?.[url.pathname])attachOriginal(video,url.href);else if(resources.media[url.pathname])attach(video,resources.media[url.pathname]);else{clear(video);descriptor.set.call(video,source);video.load();}});}).catch(error=>{if(record.disposed)return;diagnostics.errors.push(String(error));video.dispatchEvent(new Event('error'));});
+  }
   function attachOriginal(video,source){
     clear(video);const record={disposed:false,abort:new AbortController(),objectURL:null};players.set(video,record);video.removeAttribute('src');
     void(async()=>{try{const response=await window.fetch(source,{signal:record.abort.signal});if(!response.ok)throw Error('Original opening unavailable');const buffer=await response.arrayBuffer();if(record.disposed)return;record.objectURL=URL.createObjectURL(new Blob([buffer],{type:'video/mp4'}));diagnostics.originalVideos=(diagnostics.originalVideos||0)+1;diagnostics.playerEngine='Original MP4 / byte-identical reconstruction';descriptor.set.call(video,record.objectURL);video.load();}catch(error){if(record.disposed)return;diagnostics.errors.push(String(error));video.dispatchEvent(new Event('error'));}})();
@@ -74,6 +81,7 @@
     });
   }
   Object.defineProperty(media,'src',{...descriptor,set(value){
+    try{const url=new URL(String(value),location.href),path=url.origin===location.origin?resources.mseMedia?.[url.pathname]:null;if(path){attachProgressive(this,url.href,path);return;}}catch{}
     try{const url=new URL(String(value),location.href);if(url.origin===location.origin&&resources.originalMedia?.[url.pathname]){attachOriginal(this,url.href);return;}}catch{}
     let path;try{const url=new URL(String(value),location.href);if(url.origin===location.origin)path=resources.media[url.pathname];}catch{}
     if(path){attach(this,path);return;}
@@ -88,7 +96,7 @@
       const source=video.getAttribute('data-portfolio-media-src')||video.getAttribute('src')||video.querySelector('source')?.getAttribute('src');
       if(!source)continue;
       const url=new URL(source,location.href),path=url.origin===location.origin?resources.media[url.pathname]:null;
-      if(resources.originalMedia?.[url.pathname])attachOriginal(video,url.href);else if(path)attach(video,path);
+      if(resources.mseMedia?.[url.pathname])attachProgressive(video,url.href,resources.mseMedia[url.pathname]);else if(resources.originalMedia?.[url.pathname])attachOriginal(video,url.href);else if(path)attach(video,path);
     }
   }
   new MutationObserver(records=>{for(const record of records){if(record.type==='attributes')inspect(record.target);else for(const node of record.addedNodes)inspect(node);}}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','data-portfolio-media-src']});
@@ -117,11 +125,11 @@
   document.addEventListener('error',event=>{const image=event.target;if(!(image instanceof HTMLImageElement)||!image.isConnected)return;const attempt=imageRetries.get(image)||0,u=new URL(image.currentSrc||image.src,location.href);if(attempt>=2||u.origin!==location.origin||!/^https?:$/.test(u.protocol))return;imageRetries.set(image,attempt+1);u.searchParams.set('imageRetry',String(attempt+1));setTimeout(()=>{image.removeAttribute('srcset');image.removeAttribute('sizes');managedImages.delete(image);image.src=u.href;},400*(attempt+1));},true);
   const warmed=new Map(),warmQueue=[];let warming=0;
   function warmImage(source){const address=imageAddress(source);if(warmed.has(address))return;warmed.set(address,null);warmQueue.push(address);pumpImages();}
-  function pumpImages(){while(warming<2&&warmQueue.length){const address=warmQueue.shift(),image=new Image();warming++;image.decoding='async';image.fetchPriority='low';image.loading='eager';warmed.set(address,image);const done=()=>{warming--;pumpImages();};image.onload=done;image.onerror=done;image.src=address;}}
-  function warmPage(href){try{const page=new URL(href,location.href);if(page.origin!==location.origin)return;const path=authoredPath(page.pathname);for(const image of resources.pageImages?.[path]||[])warmImage(image);}catch{}}
+  function pumpImages(){while(warming<2&&warmQueue.length){const address=warmQueue.shift(),image=new Image();warming++;image.decoding='async';image.fetchPriority='low';image.loading='eager';warmed.set(address,image);const done=()=>{warmed.set(address,true);warming--;pumpImages();};image.onload=done;image.onerror=done;image.src=address;}}
+  function warmPage(href){try{const page=new URL(href,location.href);if(page.origin!==location.origin)return;const path=authoredPath(page.pathname);for(const image of (resources.pageImages?.[path]||[]).slice(0,3))warmImage(image);}catch{}}
   document.addEventListener('pointerover',event=>{const link=event.target.closest?.('a[href]');if(link)warmPage(link.href);},{passive:true});
   document.addEventListener('focusin',event=>{const link=event.target.closest?.('a[href]');if(link)warmPage(link.href);});
-  const warmAfterOpening=()=>{if(!document.getElementById('voyage'))return;for(const images of Object.values(resources.pageImages||{}))for(const image of images)warmImage(image);};
+  const warmAfterOpening=()=>{if(!document.getElementById('voyage'))return;for(const images of Object.values(resources.pageImages||{}))if(images[0])warmImage(images[0]);};
   addEventListener('v85:home-intro-finished',warmAfterOpening,{once:true});
-  document.addEventListener('DOMContentLoaded',()=>{inspect(document.documentElement);prepareImages(document);if(window.homeDesignedIntroState?.finished)warmAfterOpening();if(parent!==window)parent.postMessage({type:'brain-universe:project-ready'},location.origin);},{once:true});
+  document.addEventListener('DOMContentLoaded',()=>{inspect(document.documentElement);prepareImages(document);if(window.homeDesignedIntroState?.finished)warmAfterOpening();if(parent!==window)void(async()=>{const poster=document.querySelector('.film-poster');if(poster){poster.loading='eager';poster.fetchPriority='high';await Promise.race([poster.decode().catch(()=>{}),new Promise(r=>setTimeout(r,6000))]);}await new Promise(requestAnimationFrame);parent.postMessage({type:'brain-universe:project-ready'},location.origin);})();},{once:true});
 })();

@@ -1,0 +1,148 @@
+{
+  "rejected": true,
+  "enabled": false,
+  "uploaded": false,
+  "reason": "No worthwhile aggregate benefit; original geometry delivery mapping restored before final packaging",
+  "measurements": [
+    {
+      "source": "/assets/odyssey/refit-v161/island-craft.glb",
+      "beforeTransfer": 71426813,
+      "afterTransfer": 68932538,
+      "bytesIdentical": true,
+      "sections": 62
+    },
+    {
+      "source": "/assets/odyssey/crew-v162/medieval-rowers.glb",
+      "beforeTransfer": 6087067,
+      "afterTransfer": 5021667,
+      "bytesIdentical": true,
+      "sections": 2054
+    },
+    {
+      "source": "/assets/odyssey/crew-v163/vessel-coherent.glb",
+      "beforeTransfer": 15806877,
+      "afterTransfer": 15560568,
+      "bytesIdentical": true,
+      "sections": 1269
+    },
+    {
+      "source": "/assets/odyssey/ulysses-rigged.glb",
+      "beforeTransfer": 10816599,
+      "afterTransfer": 10644247,
+      "bytesIdentical": true,
+      "sections": 444
+    },
+    {
+      "source": "/blender/reference-architecture-v18/courtyard-additions.glb",
+      "beforeTransfer": 7548279,
+      "afterTransfer": 7542071,
+      "bytesIdentical": true,
+      "sections": 23
+    },
+    {
+      "source": "/blender/reference-architecture-v18/cyclops-input.glb",
+      "beforeTransfer": 9931680,
+      "afterTransfer": 9655701,
+      "bytesIdentical": true,
+      "sections": 84
+    },
+    {
+      "source": "/blender/reference-architecture-v18/natural-cliff.glb",
+      "beforeTransfer": 11806135,
+      "afterTransfer": 11752927,
+      "bytesIdentical": true,
+      "sections": 11
+    },
+    {
+      "source": "/blender/reference-architecture-v18/polyphemus-reclining.glb",
+      "beforeTransfer": 10099169,
+      "afterTransfer": 9886221,
+      "bytesIdentical": true,
+      "sections": 62
+    },
+    {
+      "source": "/blender/reference-architecture-v19/cyclops-input.glb",
+      "beforeTransfer": 9930849,
+      "afterTransfer": 9658232,
+      "bytesIdentical": true,
+      "sections": 84
+    },
+    {
+      "source": "/blender/reference-architecture-v19/polyphemus-grounded.glb",
+      "beforeTransfer": 10088849,
+      "afterTransfer": 9873374,
+      "bytesIdentical": true,
+      "sections": 58
+    },
+    {
+      "source": "/blender/reference-architecture-v19/polyphemus-upright.glb",
+      "beforeTransfer": 10088849,
+      "afterTransfer": 9873374,
+      "bytesIdentical": true,
+      "sections": 58
+    },
+    {
+      "source": "/blender/reference-architecture-v20/courtyard-depth.glb",
+      "beforeTransfer": 13636589,
+      "afterTransfer": 13595733,
+      "bytesIdentical": true,
+      "sections": 28
+    },
+    {
+      "source": "/blender/reference-architecture-v20/cyclops-input.glb",
+      "beforeTransfer": 9930682,
+      "afterTransfer": 9658378,
+      "bytesIdentical": true,
+      "sections": 84
+    },
+    {
+      "source": "/blender/reference-architecture-v20/inhabited-island.glb",
+      "beforeTransfer": 16217924,
+      "afterTransfer": 15409302,
+      "bytesIdentical": true,
+      "sections": 22
+    },
+    {
+      "source": "/blender/reference-architecture-v20/polyphemus-v20.glb",
+      "beforeTransfer": 13660899,
+      "afterTransfer": 13081533,
+      "bytesIdentical": true,
+      "sections": 83
+    },
+    {
+      "source": "/blender/reference-architecture-v21/inhabited-island.glb",
+      "beforeTransfer": 16307714,
+      "afterTransfer": 15527650,
+      "bytesIdentical": true,
+      "sections": 37
+    },
+    {
+      "source": "/blender/reference-architecture-v23/clock-engraving.glb",
+      "beforeTransfer": 5667168,
+      "afterTransfer": 4788889,
+      "bytesIdentical": true,
+      "sections": 9
+    },
+    {
+      "source": "/blender/reference-architecture-v23/dressed-stone.glb",
+      "beforeTransfer": 33041536,
+      "afterTransfer": 32868393,
+      "bytesIdentical": true,
+      "sections": 14
+    },
+    {
+      "source": "/blender/reference-architecture-v24/baked-architecture.glb",
+      "beforeTransfer": 16957301,
+      "afterTransfer": 17051489,
+      "bytesIdentical": true,
+      "sections": 25
+    },
+    {
+      "source": "/blender/reference-architecture-v25/clock-engraving.glb",
+      "beforeTransfer": 5574263,
+      "afterTransfer": 4737649,
+      "bytesIdentical": true,
+      "sections": 10
+    }
+  ]
+}

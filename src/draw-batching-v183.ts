@@ -36,7 +36,7 @@ export function batchRigidParts(root:T.Object3D,parent:T.Object3D,renderer:T.Web
   if(!(object instanceof T.Mesh)||object instanceof T.BatchedMesh||object instanceof T.InstancedMesh)return;
   if(object instanceof T.SkinnedMesh){audit.skinnedPreserved++;return;}
   if(Array.isArray(object.material)||object.morphTargetInfluences||object.customDepthMaterial||object.customDistanceMaterial)return;
-  const m=object.material;if(m.transparent||m.onBeforeCompile!==T.Material.prototype.onBeforeCompile)return;
+  const m=object.material;if(m.transparent||m.onBeforeCompile!==T.Material.prototype.onBeforeCompile&&!m.userData.staticAtlas185)return;
   const g=object.geometry;if(g.groups.length>1)return;
   const attributes=Object.entries(g.attributes).map(([k,a])=>k+':'+a.itemSize+':'+a.normalized+':'+a.array.constructor.name).sort().join('|');
   const key=[m.uuid,attributes,!!g.index,object.castShadow,object.receiveShadow,object.layers.mask,object.renderOrder].join('/');

@@ -1,0 +1,24 @@
+{
+  "version": 185,
+  "codecCopyOnly": false,
+  "originalSourcePreserved": true,
+  "records": [
+    {
+      "source": "/assets/home-intro-v170/courtyard-16s.mp4",
+      "manifest": "/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+      "packetHashVerified": true,
+      "segments": 16,
+      "largestSegmentBytes": 1092500,
+      "initialSegmentBytes": 1088868,
+      "duration": 16.0
+    }
+  ],
+  "sourceFrameCount": 480,
+  "derivativeFrameCount": 480,
+  "width": 1920,
+  "height": 1080,
+  "sourceBytes": 25344593,
+  "derivativeBytes": 6706174,
+  "SSIM": 0.993847,
+  "encoding": "libaom-av1 cpu-used8 crf18 yuv420p g60; original preserved"
+}

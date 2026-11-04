@@ -1,0 +1,2175 @@
+{
+  "origin": "http://127.0.0.1:8052",
+  "errors": [],
+  "console": [],
+  "http": [],
+  "steps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 40400,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 0,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return"
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 485763258,
+          "total": 500122034
+        }
+      }
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 5108,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 498949555,
+          "total": 513324419
+        }
+      }
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 6890,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 516487646,
+          "total": 533594634
+        }
+      }
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 35306,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 2,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 2,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 724728112,
+          "total": 797220952
+        }
+      }
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 4886,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 734448072,
+          "total": 798648444
+        }
+      }
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 14557,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 736832236,
+          "total": 807582908
+        }
+      }
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 9598,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 5,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 754541225,
+          "total": 819515261
+        }
+      }
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 8802,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 6,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 635192181,
+          "total": 650753989
+        }
+      }
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 7721,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 7,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 657950808,
+          "total": 672556484
+        }
+      }
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 45303,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 8,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 657668122,
+          "total": 667719126
+        }
+      }
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 11460,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 648732206,
+          "total": 662480050
+        }
+      }
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 2548,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-close",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 402,
+          "lastMythReused": false,
+          "mythWarmReady": true,
+          "mythWarmMs": 19724.5,
+          "lastMythSceneReadyMs": 34443.799999952316
+        },
+        "frames": [
+          {
+            "src": "http://127.0.0.1:8052/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1",
+            "href": "http://127.0.0.1:8052/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 649130676,
+          "total": 663729480
+        }
+      }
+    }
+  ],
+  "failed": [
+    {
+      "url": "http://127.0.0.1:8052/assets/works/physical-universe-v103/film.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:8052/assets/works/physical-universe-v103/film.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:8052/assets/life-purpose/v32-72/life-purpose-with-music.mp4",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "native": [],
+  "entry": {
+    "milliseconds": 38862.90000009537,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 480,
+      "droppedVideoFrames": 14
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 91
+    },
+    "homeReady": true,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "desktopFilm": {
+    "time": 1.711332,
+    "frames": 69,
+    "calendar": {
+      "date": "2026-11-04",
+      "day": "4",
+      "month": "November",
+      "weekday": "Wednesday",
+      "timeZone": "Asia/Shanghai",
+      "live": true
+    },
+    "native": false
+  },
+  "films0": [
+    {
+      "id": "projectFilm",
+      "time": 1.683982,
+      "ready": 4,
+      "width": 1280,
+      "height": 546,
+      "duration": 139.56,
+      "midpointTime": 70.076971
+    }
+  ],
+  "films1": [
+    {
+      "id": "projectFilm",
+      "time": 2.015751,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 83.14782299999999,
+      "midpointTime": 41.930518
+    }
+  ],
+  "films2": [
+    {
+      "id": "projectFilm",
+      "time": 2.197814,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 208.721587,
+      "midpointTime": 104.661036
+    }
+  ],
+  "films3": [
+    {
+      "id": "projectFilm",
+      "time": 1.686024,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 18,
+      "midpointTime": 9.291137
+    },
+    {
+      "id": "lifePurposeVideo",
+      "time": 1.688769,
+      "ready": 4,
+      "width": 1600,
+      "height": 900,
+      "duration": 50,
+      "midpointTime": 25.271824
+    }
+  ],
+  "films4": [
+    {
+      "id": "projectFilm",
+      "time": 1.717119,
+      "ready": 4,
+      "width": 3360,
+      "height": 1440,
+      "duration": 191.375873,
+      "midpointTime": 95.972398
+    }
+  ],
+  "homeFinal": {
+    "ready": true,
+    "renderer": "Three.js / original geometry and local PBR",
+    "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "native": false,
+    "interfaceReady": true,
+    "delivery": {
+      "version": 185,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 6,
+      "errors": [],
+      "imagesPrepared": 24,
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "progressiveMedia": [
+        {
+          "source": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+          "bytes": 6709483,
+          "requests": 18,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 762.6000000238419,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "http://127.0.0.1:8052/assets/browser-v185/media/fd6a349ede716b6a/manifest.json",
+          "bytes": 7040367,
+          "requests": 14,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 103057.90000009537,
+          "ready": true,
+          "failed": false
+        }
+      ]
+    },
+    "retained": true
+  },
+  "resourceTiming": [
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/packed/f692640768749e8249e4.js",
+      "duration": 20.700000047683716,
+      "bytes": 64234
+    },
+    {
+      "name": "http://127.0.0.1:8052/audio-focus-v141.js?v=32.185",
+      "duration": 25.799999952316284,
+      "bytes": 905
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/packed/d717a297d016d58baf65.css",
+      "duration": 23.299999952316284,
+      "bytes": 481027
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/packed/804acbf1112e139268ee.js",
+      "duration": 26.300000071525574,
+      "bytes": 3220
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/scene-loader-v146.js?v=32.185",
+      "duration": 30.399999976158142,
+      "bytes": 53
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/packed/2ce833e131f49522f1f8.js",
+      "duration": 44,
+      "bytes": 1480240
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/dock/exhibition-dock-v160.js?v=32.185",
+      "duration": 34.299999952316284,
+      "bytes": 57
+    },
+    {
+      "name": "http://127.0.0.1:8052/home-creation-launch-v141.js?v=32.185",
+      "duration": 37.60000002384186,
+      "bytes": 3261
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/dock/home-designed-intro-v160.js?v=32.185",
+      "duration": 36.60000002384186,
+      "bytes": 61
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/directory-v144/app.js?v=32.185",
+      "duration": 39.199999928474426,
+      "bytes": 50
+    },
+    {
+      "name": "http://127.0.0.1:8052/site-refinements-v129.js?v=32.185",
+      "duration": 67.59999990463257,
+      "bytes": 3679
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/techtext-v153.js?v=32.185",
+      "duration": 40.300000071525574,
+      "bytes": 49
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/home-thought-line-v160.js?v=32.185",
+      "duration": 42.5,
+      "bytes": 58
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/packed/4d49b407a6c31daf083e.js",
+      "duration": 39.90000009536743,
+      "bytes": 21374
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/hobby-drift-v167.js?v=32.185",
+      "duration": 42.800000071525574,
+      "bytes": 52
+    },
+    {
+      "name": "http://127.0.0.1:8052/refinements-v161.js?v=32.185",
+      "duration": 42.60000002384186,
+      "bytes": 1506
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-000.bin",
+      "duration": 17.100000023841858,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-001.bin",
+      "duration": 19,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/home-live-poster-v32-77.png",
+      "duration": 53.699999928474426,
+      "bytes": 2263493
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/wordmark-v142/wordmark.ttf",
+      "duration": 48.89999997615814,
+      "bytes": 6552
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v183/images/d6862ea204186288f90b-1280.webp",
+      "duration": 45,
+      "bytes": 2901520
+    },
+    {
+      "name": "http://127.0.0.1:8052/heading-interaction-v157.js?v=32.157",
+      "duration": 18.899999976158142,
+      "bytes": 2375
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-002.bin",
+      "duration": 28.700000047683716,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v183/images/45beb4b5eff4666246b3-1280.webp",
+      "duration": 14,
+      "bytes": 946642
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/scene-loader-v146.js",
+      "duration": 10.399999976158142,
+      "bytes": 3780
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/exhibition-dock-v160.js",
+      "duration": 10,
+      "bytes": 34552
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/home-designed-intro-v160.js",
+      "duration": 9.5,
+      "bytes": 9962
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/directory-app.js",
+      "duration": 12.899999976158142,
+      "bytes": 164261
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/techtext-v153.js",
+      "duration": 14.600000023841858,
+      "bytes": 22030
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/home-thought-line-v160.js",
+      "duration": 15.299999952316284,
+      "bytes": 10386
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/hobby-drift-v167.js",
+      "duration": 16.700000047683716,
+      "bytes": 13678
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-003.bin",
+      "duration": 25,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-004.bin",
+      "duration": 6.699999928474426,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-SXRZKL2H.js",
+      "duration": 5.5,
+      "bytes": 1504
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-RTTFH4P3.js",
+      "duration": 5.100000023841858,
+      "bytes": 649
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-RGYTE4B5.js",
+      "duration": 5.799999952316284,
+      "bytes": 138683
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-R5XT465O.js",
+      "duration": 9.199999928474426,
+      "bytes": 223115
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-G3JJXN7Z.js",
+      "duration": 7.299999952316284,
+      "bytes": 18099
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-NK3IH7V4.js",
+      "duration": 9.700000047683716,
+      "bytes": 7352
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-XRMZOXH2.js",
+      "duration": 9.399999976158142,
+      "bytes": 33651
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-C6N56PU3.js",
+      "duration": 21.899999976158142,
+      "bytes": 247290
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-XM4RMFZ3.js",
+      "duration": 24.199999928474426,
+      "bytes": 2465
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-DGU5PTFW.js",
+      "duration": 24.299999952316284,
+      "bytes": 49707
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-32475FOM.js",
+      "duration": 28.300000071525574,
+      "bytes": 248898
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-LZ7QSBR5.js",
+      "duration": 33,
+      "bytes": 702461
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-005.bin",
+      "duration": 43.09999990463257,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-006.bin",
+      "duration": 34.10000002384186,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-007.bin",
+      "duration": 10.900000095367432,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-008.bin",
+      "duration": 11,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-01.webp",
+      "duration": 8.600000023841858,
+      "bytes": 605542
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-02.webp",
+      "duration": 7.399999976158142,
+      "bytes": 298316
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-03.webp",
+      "duration": 7.899999976158142,
+      "bytes": 380998
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-04.webp",
+      "duration": 8.100000023841858,
+      "bytes": 266104
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-05.webp",
+      "duration": 13,
+      "bytes": 127628
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-06.webp",
+      "duration": 13.100000023841858,
+      "bytes": 106468
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-08.webp",
+      "duration": 14,
+      "bytes": 141034
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-09.webp",
+      "duration": 18,
+      "bytes": 238268
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-10.webp",
+      "duration": 20,
+      "bytes": 461886
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/atmosphere-v172/atmosphere-11.webp",
+      "duration": 19.799999952316284,
+      "bytes": 405472
+    },
+    {
+      "name": "http://127.0.0.1:8052/progressive-media-v185.js",
+      "duration": 16,
+      "bytes": 5767
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/loading-study/opening-poster-v32-84.png",
+      "duration": 8.5,
+      "bytes": 247482
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/loading-study/loading-study-v32-84.mp4?v=32.83",
+      "duration": 338.5,
+      "bytes": 7362857
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+      "duration": 6.700000047683716,
+      "bytes": 1745
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-009.bin",
+      "duration": 10.699999928474426,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-010.bin",
+      "duration": 10.700000047683716,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/native-v164/room.jpg?v=32.164",
+      "duration": 4.200000047683716,
+      "bytes": 548298
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/directory-hand-2JQHWOL5.woff2",
+      "duration": 43.5,
+      "bytes": 603820
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/03-tile.webp",
+      "duration": 6.399999976158142,
+      "bytes": 128310
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/21-tile.webp",
+      "duration": 10.100000023841858,
+      "bytes": 97698
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/10-tile.webp",
+      "duration": 9.799999952316284,
+      "bytes": 55816
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/08-tile.webp",
+      "duration": 10.100000023841858,
+      "bytes": 24298
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/12-tile.webp",
+      "duration": 13.699999928474426,
+      "bytes": 91114
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/01-tile.webp",
+      "duration": 13.5,
+      "bytes": 16646
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/02-tile.webp",
+      "duration": 16.199999928474426,
+      "bytes": 48430
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/06-tile.webp",
+      "duration": 18.5,
+      "bytes": 95022
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/17-tile.webp",
+      "duration": 18.699999928474426,
+      "bytes": 100818
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/19-tile.webp",
+      "duration": 19.09999990463257,
+      "bytes": 68946
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-011.bin",
+      "duration": 9.399999976158142,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-012.bin",
+      "duration": 9.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/init.mp4",
+      "duration": 4.600000023841858,
+      "bytes": 837
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-013.bin",
+      "duration": 14.800000071525574,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-014.bin",
+      "duration": 14.299999952316284,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0000.m4s",
+      "duration": 13.099999904632568,
+      "bytes": 1088868
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-015.bin",
+      "duration": 11.200000047683716,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-016.bin",
+      "duration": 11.199999928474426,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0001.m4s",
+      "duration": 6.399999976158142,
+      "bytes": 479008
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-017.bin",
+      "duration": 10.599999904632568,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2ce5bee68384736c03d7-018.bin",
+      "duration": 6.399999976158142,
+      "bytes": 96424
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0002.m4s",
+      "duration": 7.799999952316284,
+      "bytes": 688822
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-000.bin",
+      "duration": 9.300000071525574,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-001.bin",
+      "duration": 9.099999904632568,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-002.bin",
+      "duration": 9.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-003.bin",
+      "duration": 9.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-004.bin",
+      "duration": 14.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-005.bin",
+      "duration": 15,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/05-tile.webp",
+      "duration": 4.5,
+      "bytes": 20352
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/04-tile.webp",
+      "duration": 6.900000095367432,
+      "bytes": 36642
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/11-tile.webp",
+      "duration": 8.400000095367432,
+      "bytes": 90396
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/13-tile.webp",
+      "duration": 7.700000047683716,
+      "bytes": 110424
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/14-tile.webp",
+      "duration": 10.399999976158142,
+      "bytes": 45308
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/22-tile.webp",
+      "duration": 13.800000071525574,
+      "bytes": 17576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/09-tile.webp",
+      "duration": 14.399999976158142,
+      "bytes": 30834
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/15-tile.webp",
+      "duration": 13.899999976158142,
+      "bytes": 56070
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/16-tile.webp",
+      "duration": 16.299999952316284,
+      "bytes": 50114
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/23-tile.webp",
+      "duration": 17.100000023841858,
+      "bytes": 28544
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/24-tile.webp",
+      "duration": 19.100000023841858,
+      "bytes": 104560
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/25-tile.webp",
+      "duration": 25.799999952316284,
+      "bytes": 28068
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/26-tile.webp",
+      "duration": 25.5,
+      "bytes": 25730
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/07-tile.webp",
+      "duration": 25.600000023841858,
+      "bytes": 23076
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/18-tile.webp",
+      "duration": 29.600000023841858,
+      "bytes": 25542
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/20-tile.webp",
+      "duration": 28.5,
+      "bytes": 52922
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/27-tile.webp",
+      "duration": 29.399999976158142,
+      "bytes": 26824
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/photography-v170/28-tile.webp",
+      "duration": 31.399999976158142,
+      "bytes": 19968
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-006.bin",
+      "duration": 25.899999976158142,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-007.bin",
+      "duration": 26.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v16/world-track.json",
+      "duration": 112.90000009536743,
+      "bytes": 4001387
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-008.bin",
+      "duration": 11.600000023841858,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-009.bin",
+      "duration": 11,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-010.bin",
+      "duration": 16.59999990463257,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-011.bin",
+      "duration": 16.700000047683716,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-012.bin",
+      "duration": 7.900000095367432,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-013.bin",
+      "duration": 7.399999976158142,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/home-world-v146.js?v=32.184",
+      "duration": 8.300000071525574,
+      "bytes": 126507
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-014.bin",
+      "duration": 7,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-015.bin",
+      "duration": 6.899999976158142,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-YRQ74F3T.js",
+      "duration": 11.100000023841858,
+      "bytes": 61376
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-MG6POSIJ.js",
+      "duration": 11.300000071525574,
+      "bytes": 19550
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-XL3CMSHR.js",
+      "duration": 10.900000095367432,
+      "bytes": 35007
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/9c5cee15327efd548a3c-016.bin",
+      "duration": 3.600000023841858,
+      "bytes": 180085
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/look-calibration.json",
+      "duration": 3.299999952316284,
+      "bytes": 23396
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/bake-audit.json",
+      "duration": 3.5,
+      "bytes": 1888
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/native-v24-prefiltered-v158.json",
+      "duration": 3.200000047683716,
+      "bytes": 262
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/native-v24-prefiltered-v158.bin.gz",
+      "duration": 3.8000000715255737,
+      "bytes": 201723
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/display-transform.json",
+      "duration": 3.399999976158142,
+      "bytes": 361
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/display-transform.bin",
+      "duration": 4,
+      "bytes": 143748
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/native-v165/home.jpg?v=32.165",
+      "duration": 4.699999928474426,
+      "bytes": 705603
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/ef5a077afd8fadc255d0.avif",
+      "duration": 144.79999995231628,
+      "bytes": 3168578
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/1b55932dd51c21b2337f.avif",
+      "duration": 42.800000071525574,
+      "bytes": 533660
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/Marble012_rough_2k.jpg",
+      "duration": 102.10000002384186,
+      "bytes": 2166701
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 110.20000004768372,
+      "bytes": 2870078
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/sandstone_cracks_rough_2k.jpg",
+      "duration": 65.70000004768372,
+      "bytes": 1569280
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 165.69999992847443,
+      "bytes": 4545235
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 142.30000007152557,
+      "bytes": 3085891
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/white_sandstone_blocks_02_rough_2k.jpg",
+      "duration": 137.5,
+      "bytes": 2545799
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 161.5,
+      "bytes": 2573376
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 122.39999997615814,
+      "bytes": 609525
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 127.89999997615814,
+      "bytes": 652441
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/odyssey/wood_planks/wood_planks_rough_1k.jpg",
+      "duration": 136.5,
+      "bytes": 299757
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/draco/draco_wasm_wrapper.js",
+      "duration": 82.80000007152557,
+      "bytes": 58456
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/home/draco/draco_decoder.wasm",
+      "duration": 89.09999990463257,
+      "bytes": 192420
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/architecture-ao-0.png",
+      "duration": 7.700000047683716,
+      "bytes": 500917
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/architecture-ao-1.png",
+      "duration": 7.400000095367432,
+      "bytes": 349089
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/architecture-ao-2.png",
+      "duration": 7.300000071525574,
+      "bytes": 201116
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/architecture-indirect-0.bin.z",
+      "duration": 31.299999952316284,
+      "bytes": 2971697
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/architecture-indirect-1.bin.z",
+      "duration": 196.39999997615814,
+      "bytes": 2337390
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v24/architecture-indirect-2.bin.z",
+      "duration": 23.600000023841858,
+      "bytes": 1652784
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-BGB6QDUZ.js",
+      "duration": 3.6999999284744263,
+      "bytes": 25741
+    },
+    {
+      "name": "http://127.0.0.1:8052/scene-dist/browser-v185/shared-RUKHF5KC.js",
+      "duration": 4.600000023841858,
+      "bytes": 48528
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2b59a8c183b60c4d9363-000.bin",
+      "duration": 10.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2b59a8c183b60c4d9363-001.bin",
+      "duration": 11.299999952316284,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2b59a8c183b60c4d9363-002.bin",
+      "duration": 11.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2b59a8c183b60c4d9363-003.bin",
+      "duration": 10,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2b59a8c183b60c4d9363-004.bin",
+      "duration": 9.100000023841858,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2b59a8c183b60c4d9363-005.bin",
+      "duration": 8.099999904632568,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2b59a8c183b60c4d9363-006.bin",
+      "duration": 4.799999952316284,
+      "bytes": 1048576
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/transfer/2b59a8c183b60c4d9363-007.bin",
+      "duration": 2.899999976158142,
+      "bytes": 208247
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/architectural-profiles-ee86103f/part-000.bin",
+      "duration": 31.90000009536743,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/architectural-profiles-ee86103f/part-001.bin",
+      "duration": 34.200000047683716,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/architectural-profiles-ee86103f/part-002.bin",
+      "duration": 30,
+      "bytes": 3194809
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/courtyard-depth-87bf54f0/part-000.bin",
+      "duration": 40.90000009536743,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/courtyard-depth-87bf54f0/part-001.bin",
+      "duration": 23.5,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/courtyard-depth-87bf54f0/part-002.bin",
+      "duration": 50.799999952316284,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/courtyard-depth-87bf54f0/part-003.bin",
+      "duration": 12.100000023841858,
+      "bytes": 1053677
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v22/courtyard-cavity-volume.json",
+      "duration": 3,
+      "bytes": 483
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v22/courtyard-cavity-volume.bin",
+      "duration": 3.200000047683716,
+      "bytes": 122880
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/reference-architecture-v23/material-calibration.json",
+      "duration": 2.700000047683716,
+      "bytes": 17240
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/clock-engraving-17eda6a1/part-001.bin",
+      "duration": 10.799999952316284,
+      "bytes": 1379959
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v180/clock-engraving-17eda6a1/part-000.bin",
+      "duration": 17.399999976158142,
+      "bytes": 4194304
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/ue-v159/clock-mix-ue5-cubeuv.json",
+      "duration": 2.3000000715255737,
+      "bytes": 1204
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/ue-v159/clock-mix-ue5-cubeuv.bin.gz",
+      "duration": 3.399999976158142,
+      "bytes": 225523
+    },
+    {
+      "name": "http://127.0.0.1:8052/blender/home-camera-v32-84/camera-v84.json",
+      "duration": 3.899999976158142,
+      "bytes": 1256
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/room-atlas/layout.json",
+      "duration": 2550,
+      "bytes": 43044
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/room-static.glb",
+      "duration": 4306.300000071526,
+      "bytes": 2205652
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/room-lighting.json",
+      "duration": 2525.3000000715256,
+      "bytes": 21499
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v120/plant/potted-plant-02.glb",
+      "duration": 4600,
+      "bytes": 3752232
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/room-collision.glb",
+      "duration": 4387,
+      "bytes": 4335328
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v123/remote-detail.glb",
+      "duration": 4274.299999952316,
+      "bytes": 486708
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/room-atlas/on.webp",
+      "duration": 5531.099999904633,
+      "bytes": 4305708
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/room-atlas/off.webp",
+      "duration": 5332.100000023842,
+      "bytes": 3342062
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/room-off.png",
+      "duration": 5142.099999904633,
+      "bytes": 3124633
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/room-lamp.png",
+      "duration": 5022.100000023842,
+      "bytes": 1094829
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/room-tv.png",
+      "duration": 5066.300000071526,
+      "bytes": 1582941
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v119/berlin-night.jpg",
+      "duration": 5287.600000023842,
+      "bytes": 2674368
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/covers-v177/code-films.webp",
+      "duration": 5132.299999952316,
+      "bytes": 487956
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/room-normal.png",
+      "duration": 5161.399999976158,
+      "bytes": 825693
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/odyssey/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "duration": 5178.199999928474,
+      "bytes": 916843
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/odyssey/rough_linen/rough_linen_rough_1k.jpg",
+      "duration": 5441.600000023842,
+      "bytes": 1083725
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v123/plant/potted_plant_02_pot_diff_2k.jpg",
+      "duration": 5321,
+      "bytes": 596006
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v123/plant/potted_plant_02_pot_nor_gl_2k.jpg",
+      "duration": 5456,
+      "bytes": 494387
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v123/plant/potted_plant_02_pot_rough_2k.jpg",
+      "duration": 5550.199999928474,
+      "bytes": 426559
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/brass-normal.png",
+      "duration": 204.40000009536743,
+      "bytes": 277526
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/brass-roughness.png",
+      "duration": 235.5,
+      "bytes": 176095
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/aluminium-normal.png",
+      "duration": 474.60000002384186,
+      "bytes": 224973
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/aluminium-roughness.png",
+      "duration": 473.2999999523163,
+      "bytes": 159641
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/abs-normal.png",
+      "duration": 480.2999999523163,
+      "bytes": 389797
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/abs-roughness.png",
+      "duration": 746,
+      "bytes": 189601
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/paper-normal.png",
+      "duration": 869.8000000715256,
+      "bytes": 418460
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/paper-roughness.png",
+      "duration": 919,
+      "bytes": 177168
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/porcelain-normal.png",
+      "duration": 940.3999999761581,
+      "bytes": 282688
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/porcelain-roughness.png",
+      "duration": 959,
+      "bytes": 164899
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/rubber-normal.png",
+      "duration": 971.1000000238419,
+      "bytes": 483924
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/materials/rubber-roughness.png",
+      "duration": 987,
+      "bytes": 194572
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/xianxia-cliff.png",
+      "duration": 193.5,
+      "bytes": 1556798
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/rural-return/v130/element-01.webp",
+      "duration": 546,
+      "bytes": 243738
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/humid-southeast-asia/frame-04.webp",
+      "duration": 19,
+      "bytes": 1749316
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/reading/cinema-aesthetics/cover-v32-79.png",
+      "duration": 279.1999999284744,
+      "bytes": 3199980
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/yangjian-v116/video/opening-poster.png",
+      "duration": 273.5,
+      "bytes": 1000512
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/odyssey/turner-ulysses-1829.jpg",
+      "duration": 259.1999999284744,
+      "bytes": 507586
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/covers-v177/code-films.webp",
+      "duration": 2.399999976158142,
+      "bytes": 487956
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/after-journey/cover-v32-92.webp",
+      "duration": 97.30000007152557,
+      "bytes": 1354530
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/covers-v137/mid-autumn.webp",
+      "duration": 97.69999992847443,
+      "bytes": 602530
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/covers-v137/rural.webp",
+      "duration": 99.5,
+      "bytes": 422394
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/works/humid-southeast-asia/cover.webp",
+      "duration": 265.5,
+      "bytes": 401962
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/web-environment.json",
+      "duration": 68.10000002384186,
+      "bytes": 2444
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/web-env-on.rgba16f",
+      "duration": 84.40000009536743,
+      "bytes": 688128
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/directory-v127/web-env-off.rgba16f",
+      "duration": 241.79999995231628,
+      "bytes": 688128
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/ue-v160/room-mix-ue5-cubeuv.json",
+      "duration": 158.60000002384186,
+      "bytes": 3563
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/ue-v160/room-mix-ue5-cubeuv.bin.gz",
+      "duration": 180.20000004768372,
+      "bytes": 244446
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0003.m4s",
+      "duration": 10.5,
+      "bytes": 309264
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0004.m4s",
+      "duration": 12.800000071525574,
+      "bytes": 1092500
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0005.m4s",
+      "duration": 5.699999928474426,
+      "bytes": 539955
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0006.m4s",
+      "duration": 13.799999952316284,
+      "bytes": 677852
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0007.m4s",
+      "duration": 4.200000047683716,
+      "bytes": 17898
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0008.m4s",
+      "duration": 6,
+      "bytes": 466508
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0009.m4s",
+      "duration": 4.200000047683716,
+      "bytes": 10632
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0010.m4s",
+      "duration": 9.399999976158142,
+      "bytes": 352708
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0011.m4s",
+      "duration": 5.399999976158142,
+      "bytes": 15580
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0012.m4s",
+      "duration": 3.799999952316284,
+      "bytes": 360005
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0013.m4s",
+      "duration": 3.200000047683716,
+      "bytes": 130713
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0014.m4s",
+      "duration": 17.09999990463257,
+      "bytes": 475426
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/browser-v185/media/0232ba50007c7e9e/part-0015.m4s",
+      "duration": 4.5,
+      "bytes": 1162
+    },
+    {
+      "name": "http://127.0.0.1:8052/v31-sand-story.js?v=32.183",
+      "duration": 5.800000071525574,
+      "bytes": 70512
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/sand-story/craft-raised.webp",
+      "duration": 12.5,
+      "bytes": 53060
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/sand-story/violin-duet.webp",
+      "duration": 30.899999976158142,
+      "bytes": 36368
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/sand-story/violin-return.webp",
+      "duration": 30.699999928474426,
+      "bytes": 62940
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/sand-story/boxing-ring.webp",
+      "duration": 35.299999952316284,
+      "bytes": 119672
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/sand-story/boxing-left-jab.webp",
+      "duration": 35,
+      "bytes": 119454
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/sand-story/boxing-right-jab.webp",
+      "duration": 36.90000009536743,
+      "bytes": 115020
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/sand-story/european-castle-simple-v2.webp",
+      "duration": 39.60000002384186,
+      "bytes": 94884
+    },
+    {
+      "name": "http://127.0.0.1:8052/assets/sand-story/applause-motion-atlas.webp",
+      "duration": 48.200000047683716,
+      "bytes": 318152
+    }
+  ],
+  "pass": true
+}

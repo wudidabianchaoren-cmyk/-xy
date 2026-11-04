@@ -1,0 +1,27 @@
+import {chromium} from '../../node_modules/playwright/index.mjs';
+import fs from 'node:fs/promises';
+const origin=process.env.ENTRY_ORIGIN||'http://127.0.0.1:8052',mode=process.env.ENTRY_CASE||'recover',out='.verify/v32-185/'+mode;await fs.mkdir(out,{recursive:true});
+const browser=await chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage({viewport:{width:1920,height:1080}});
+const report={origin,mode,errors:[],console:[],badHTTP:[],steps:[]};page.on('pageerror',e=>report.errors.push(e.stack));page.on('console',e=>{if(e.type()==='error')report.console.push(e.text());});page.on('response',r=>{if(r.status()>=400)report.badHTTP.push({url:r.url(),status:r.status()});});
+const snapshot=()=>page.evaluate(()=>({at:performance.now(),entry:window.portfolioEntryState,thought:window.thoughtLineState,home:{ready:window.homeClockState?.ready,error:window.homeClockState?.error,phases:window.homeClockState?.preparePhases,shader:window.homeClockState?.shaderPreparation},intro:window.homeDesignedIntroState?{finished:window.homeDesignedIntroState.finished,reason:window.homeDesignedIntroState.endReason,quality:window.homeDesignedIntroState.playbackQuality}:null,opening:window.openingFilmQuality,boot:[...window.portfolioBoot?.entries||[]],recovery:document.querySelector('[data-entry-recovery]')?.textContent,delivery:window.portfolioDeliveryState}));
+const progress=setInterval(async()=>console.log(JSON.stringify(await snapshot().catch(()=>null))),20000);
+async function step(name,fn){const at=Date.now();await fn();report.steps.push({name,milliseconds:Date.now()-at,state:await snapshot()});await fs.writeFile(out+'/result.json',JSON.stringify(report,null,2));}
+try{
+ if(mode==='recover'){
+  let failed=false;await page.route('**/assets/loading-study/loading-study-v32-84.mp4*',route=>{if(!failed){failed=true;return route.abort('connectionreset');}return route.continue();});
+  await page.addInitScript(()=>{const original=HTMLMediaElement.prototype.play;let once=false,introOnce=false;HTMLMediaElement.prototype.play=function(){if(!once&&this.classList.contains('prelude-opening-video')){once=true;return Promise.reject(new DOMException('Injected autoplay restriction','NotAllowedError'));}if(!introOnce&&this.closest('.home-designed-intro')){introOnce=true;return Promise.reject(new DOMException('Injected intro autoplay restriction','NotAllowedError'));}return original.call(this);};});
+ }else if(mode==='home-failure')await page.route('**/Marble012_diff_2k.jpg*',route=>route.abort('connectionreset'));
+ else if(mode==='stall'){let blocked=false;await page.route('**/assets/loading-study/loading-study-v32-84.mp4*',async route=>{if(!blocked){blocked=true;await new Promise(r=>setTimeout(r,33000));return route.abort('timedout').catch(()=>{});}return route.continue();});}
+ await step('document',()=>page.goto(origin+'/',{waitUntil:'domcontentloaded',timeout:60000}));
+ if(mode==='recover'){
+  await step('visible-click-to-enter',async()=>{await page.getByRole('button',{name:'Click to enter',exact:true}).waitFor({timeout:30000});const s=await snapshot();if(s.entry.mediaRetries!==1)throw Error('Network failure was not retried');await page.getByRole('button',{name:'Click to enter',exact:true}).click();});
+ }else if(mode==='home-failure'){
+  await step('visible-home-failure',async()=>{await page.getByRole('button',{name:'Courtyard preparation failed · Retry loading',exact:true}).waitFor({timeout:120000});const s=await snapshot();if(!s.entry.homeError?.includes('Marble012_diff_2k.jpg'))throw Error('Failure did not identify the actual resource');if(s.thought.clock!=='actual elapsed preparation time, including network wait')throw Error('Preparation clock still uses frozen film time');});
+  report.expectedResourceFailure=true;await page.screenshot({path:out+'/resource-failure.png'});await page.unroute('**/Marble012_diff_2k.jpg*');await page.getByRole('button',{name:'Courtyard preparation failed · Retry loading',exact:true}).click();await page.waitForURL(url=>url.searchParams.has('entryRetry'),{timeout:15000});
+ }else if(mode==='stall')await step('stalled-film-retried',()=>page.waitForFunction(()=>window.portfolioEntryState?.mediaRetries===1&&window.portfolioEntryState?.phase==='playing-film',{},{timeout:55000}));
+ if(mode!=='stall'){
+  await step('authored-films-complete',async()=>{if(mode==='recover')await page.getByRole('button',{name:'Click to continue',exact:true}).click({timeout:60000});await page.waitForFunction(()=>window.homeDesignedIntroState?.finished,{},{timeout:150000});const s=await snapshot();if(s.intro.reason!=='ended'||s.intro.quality.totalVideoFrames<470||s.opening.total<590)throw Error('Original film content did not complete');});
+  await step('live-home-ready',()=>page.waitForFunction(()=>window.homeClockState?.ready&&window.__v31InterfaceReady,{},{timeout:180000}));
+ }
+ await page.screenshot({path:out+'/screen.png'});report.pass=report.errors.length===0&&report.badHTTP.length===0;
+}catch(e){report.failure=e.stack;await page.screenshot({path:out+'/failure.png'}).catch(()=>{});}finally{clearInterval(progress);report.final=await snapshot().catch(()=>null);await fs.writeFile(out+'/result.json',JSON.stringify(report,null,2));console.log(JSON.stringify({mode,pass:report.pass,failure:report.failure,steps:report.steps.map(s=>({name:s.name,milliseconds:s.milliseconds})),final:report.final,errors:report.errors,badHTTP:report.badHTTP}));await browser.close();}

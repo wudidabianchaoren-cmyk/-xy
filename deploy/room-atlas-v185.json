@@ -1,0 +1,18 @@
+{
+  "on": {
+    "bytes": 4305708,
+    "width": 4096,
+    "height": 4096,
+    "encoding": "lossless WebP",
+    "nativeSources": 9,
+    "fallback": "original room PBR, baked on identical geometry"
+  },
+  "off": {
+    "bytes": 3342062,
+    "width": 4096,
+    "height": 4096,
+    "encoding": "lossless WebP",
+    "nativeSources": 9,
+    "fallback": "original room PBR, baked on identical geometry"
+  }
+}

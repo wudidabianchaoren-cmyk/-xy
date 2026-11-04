@@ -21,11 +21,13 @@ export function sortedFoliage(sources:T.InstancedMesh[],camera:T.Camera,state:an
   source.visible=false;sets.push({source,matrices,colors,bins,center:source.geometry.boundingSphere!.center.clone()});total.sourceTriangles+=index.count/3*source.count;total.retainedTriangles+=index.count/3*source.count;total.bins+=bins.length;
  }
  state.foliageOrdering=total;
+ let priorVisibility=-1,priorDirection='';
  function update(force=false){
-  camera.updateWorldMatrix(true,false);const eye=new T.Vector3().setFromMatrixPosition(camera.matrixWorld);if(!force&&eye.distanceToSquared(lastCamera)<.25)return;lastCamera.copy(eye);total.updates++;
+  camera.updateWorldMatrix(true,false);const eye=new T.Vector3().setFromMatrixPosition(camera.matrixWorld),visibility=sources.reduce((n,s)=>n+(s.userData.foliageRevision||0),0),direction=camera.matrixWorld.elements.slice(8,11).map(v=>Math.round(v*1000)).join('/');if(!force&&eye.distanceToSquared(lastCamera)<.25&&visibility===priorVisibility&&direction===priorDirection)return;lastCamera.copy(eye);priorVisibility=visibility;priorDirection=direction;total.updates++;
   for(const set of sets){
    const members:number[][]=Array.from({length:48},()=>[]);set.source.updateWorldMatrix(true,false);
    for(let i=0;i<set.matrices.length;i++){
+    if(set.source.userData.foliageVisible?.[i]===false)continue;
     world.multiplyMatrices(set.source.matrixWorld,set.matrices[i]);inverse.copy(world).invert();local.copy(eye).applyMatrix4(inverse).sub(set.center).normalize();
     const azimuth=(Math.round(Math.atan2(local.z,local.x)*8/Math.PI)+16)%16,elevation=T.MathUtils.clamp(Math.round(local.y/.55)+1,0,2);members[elevation*16+azimuth].push(i);
    }

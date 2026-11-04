@@ -1,0 +1,306 @@
+{
+  "origin": "https://zaojing-wxy.netlify.app",
+  "mode": "production",
+  "errors": [],
+  "console": [],
+  "badHTTP": [],
+  "steps": [
+    {
+      "name": "document",
+      "milliseconds": 9827,
+      "state": {
+        "at": 9842.600000023842,
+        "entry": {
+          "version": 184,
+          "startedAt": 9817.300000071526,
+          "mediaRetries": 0,
+          "phase": "loading-film",
+          "failure": null
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [],
+          "settled": false,
+          "removed": false,
+          "english": true
+        },
+        "home": {},
+        "intro": {
+          "finished": false
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 185,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 0,
+          "errors": [],
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "imagesPrepared": 2
+        }
+      }
+    },
+    {
+      "name": "authored-films-complete",
+      "milliseconds": 72212,
+      "state": {
+        "at": 82063.10000002384,
+        "entry": {
+          "version": 184,
+          "startedAt": 9817.300000071526,
+          "mediaRetries": 0,
+          "phase": "playing-film",
+          "failure": null,
+          "mediaTime": 20
+        },
+        "thought": {
+          "version": 161,
+          "source": "user supplied complete ThoughtLine / real film and preparation clock",
+          "updates": [
+            {
+              "at": 9890.300000071526,
+              "steps": [
+                "Reading the clock-tower geometry"
+              ],
+              "home": "pending"
+            }
+          ],
+          "settled": true,
+          "removed": true,
+          "english": true,
+          "clock": "actual elapsed preparation time, including network wait",
+          "elapsed": 44.127,
+          "settledAt": 54017.200000047684,
+          "displayedSeconds": 44.1
+        },
+        "home": {
+          "ready": false,
+          "phases": [
+            {
+              "name": "module start",
+              "at": 21182
+            },
+            {
+              "name": "WebGL context ready",
+              "at": 21205
+            }
+          ]
+        },
+        "intro": {
+          "finished": true,
+          "reason": "ended",
+          "quality": {
+            "totalVideoFrames": 480,
+            "droppedVideoFrames": 15
+          }
+        },
+        "opening": {
+          "total": 600,
+          "dropped": 16
+        },
+        "boot": [
+          [
+            "home",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "directory",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ],
+          [
+            "mythology",
+            {
+              "state": "pending",
+              "error": ""
+            }
+          ]
+        ],
+        "delivery": {
+          "version": 185,
+          "browserOnly": true,
+          "segmentedVideos": 0,
+          "assembledResources": 2,
+          "errors": [],
+          "legacyWorkerCleanup": {
+            "removed": 0,
+            "complete": true
+          },
+          "imagesPrepared": 13,
+          "progressiveMedia": [
+            {
+              "source": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+              "bytes": 6709483,
+              "requests": 18,
+              "retries": 0,
+              "seeks": 0,
+              "firstAppendAt": 26126.700000047684,
+              "ready": true,
+              "failed": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "failure": "page.waitForFunction: Timeout 180000ms exceeded.\n    at C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-browser\\scripts\\browser-v179\\verify-entry-v185.mjs:24:41\n    at step (C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-browser\\scripts\\browser-v179\\verify-entry-v185.mjs:8:56)\n    at C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-browser\\scripts\\browser-v179\\verify-entry-v185.mjs:24:9",
+  "final": {
+    "at": 263538.10000002384,
+    "entry": {
+      "version": 184,
+      "startedAt": 9817.300000071526,
+      "mediaRetries": 0,
+      "phase": "playing-film",
+      "failure": null,
+      "mediaTime": 20
+    },
+    "thought": {
+      "version": 161,
+      "source": "user supplied complete ThoughtLine / real film and preparation clock",
+      "updates": [
+        {
+          "at": 9890.300000071526,
+          "steps": [
+            "Reading the clock-tower geometry"
+          ],
+          "home": "pending"
+        }
+      ],
+      "settled": true,
+      "removed": true,
+      "english": true,
+      "clock": "actual elapsed preparation time, including network wait",
+      "elapsed": 44.127,
+      "settledAt": 54017.200000047684,
+      "displayedSeconds": 44.1
+    },
+    "home": {
+      "ready": false,
+      "phases": [
+        {
+          "name": "module start",
+          "at": 21182
+        },
+        {
+          "name": "WebGL context ready",
+          "at": 21205
+        },
+        {
+          "name": "native decoded",
+          "at": 105147.80000007153
+        },
+        {
+          "name": "courtyard geometry prepared",
+          "at": 106189.60000002384
+        },
+        {
+          "name": "textures and environment ready",
+          "at": 223878.70000004768
+        },
+        {
+          "name": "entry film released shader preparation",
+          "at": 223879.90000009537
+        }
+      ],
+      "shader": {
+        "mode": "cooperative representative program submissions / parallel completion",
+        "milliseconds": 0,
+        "layouts": 29,
+        "materials": 88,
+        "programs": 29,
+        "largestSubmissionMs": 23.300000071525574,
+        "parallelCompile": true
+      }
+    },
+    "intro": {
+      "finished": true,
+      "reason": "ended",
+      "quality": {
+        "totalVideoFrames": 480,
+        "droppedVideoFrames": 15
+      }
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 16
+    },
+    "boot": [
+      [
+        "home",
+        {
+          "state": "pending",
+          "error": ""
+        }
+      ],
+      [
+        "directory",
+        {
+          "state": "ready",
+          "at": 131029.60000002384
+        }
+      ],
+      [
+        "mythology",
+        {
+          "state": "error",
+          "error": "Error: 海湾场景预热超时"
+        }
+      ]
+    ],
+    "delivery": {
+      "version": 185,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 6,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 13,
+      "progressiveMedia": [
+        {
+          "source": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+          "bytes": 6709483,
+          "requests": 18,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 26126.700000047684,
+          "ready": true,
+          "failed": false
+        }
+      ]
+    }
+  }
+}

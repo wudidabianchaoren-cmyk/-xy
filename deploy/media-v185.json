@@ -1,0 +1,60 @@
+{
+  "version": 185,
+  "codecCopyOnly": true,
+  "records": [
+    {
+      "source": "/assets/home-intro-v170/courtyard-16s.mp4",
+      "manifest": "/assets/browser-v185/media/0952b05bcb424c07/manifest.json",
+      "packetHashVerified": true,
+      "segments": 17,
+      "largestSegmentBytes": 4306063,
+      "initialSegmentBytes": 3553511,
+      "duration": 16.066665999999998
+    },
+    {
+      "source": "/assets/works/mid-autumn/mid-autumn-web.mp4",
+      "manifest": "/assets/browser-v185/media/fd6a349ede716b6a/manifest.json",
+      "packetHashVerified": true,
+      "segments": 226,
+      "largestSegmentBytes": 1852704,
+      "initialSegmentBytes": 828026,
+      "duration": 208.721587
+    },
+    {
+      "source": "/assets/works/humid-southeast-asia/film-final-v149.mp4",
+      "manifest": "/assets/browser-v185/media/da442cdc0d636adb/manifest.json",
+      "packetHashVerified": true,
+      "segments": 209,
+      "largestSegmentBytes": 1940643,
+      "initialSegmentBytes": 998946,
+      "duration": 191.375873
+    },
+    {
+      "source": "/assets/works/after-journey/trailer-v32-92.mp4",
+      "manifest": "/assets/browser-v185/media/2ccdd6e0115f2b1f/manifest.json",
+      "packetHashVerified": true,
+      "segments": 140,
+      "largestSegmentBytes": 337446,
+      "initialSegmentBytes": 70149,
+      "duration": 139.70158700000002
+    },
+    {
+      "source": "/assets/works/rural-return/film-sr-v32-92.mp4",
+      "manifest": "/assets/browser-v185/media/22289cb489cd305a/manifest.json",
+      "packetHashVerified": true,
+      "segments": 92,
+      "largestSegmentBytes": 1685930,
+      "initialSegmentBytes": 711447,
+      "duration": 83.14782299999999
+    },
+    {
+      "source": "/assets/yangjian-v116/video/opening.mp4",
+      "manifest": "/assets/browser-v185/media/589f0b9d6be5c84b/manifest.json",
+      "packetHashVerified": true,
+      "segments": 22,
+      "largestSegmentBytes": 1968795,
+      "initialSegmentBytes": 1814492,
+      "duration": 20.0
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {graphicsRecovery} from './graphics-recovery-v185';
 import {finishCourtyardV165} from './home-finish-v165';
 import{connectNativeHome}from'./native-home-v162';
 import {nativeHomeExport} from './home-ue-export-v162';
@@ -14,6 +15,7 @@ import {nativeDisplayPass} from './home-native-display';
 import {architecturalCamera,loadArchitecturalCamera} from './home-camera-v23';
 import {replaceCourtyardInscription} from './home-inscription';
 import * as THREE from 'three';
+import {uploadTextureCooperatively} from './texture-upload-v185';
 import {installTextureNetworkRetry} from './texture-network-retry-v182';
 installTextureNetworkRetry(THREE);
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -230,13 +232,8 @@ if(surface){
       try{await connectNativeHome(surface!,canvas,camera,objects,state);const until=performance.now()+5000;while(!state.nativeUE?.ready&&performance.now()<until)await new Promise(r=>setTimeout(r,40));}catch(e){state.nativeFallback=String(e)}
     }
     if(webHome){
-    // Preserve the original cinematic playback before submitting expensive
-    // compilation/uploads. Its final frame remains until this world is ready;
-    // the navigation and other portfolio content are already usable then.
-    const introWindow=window as any;
-    if(introWindow.PORTFOLIO_BROWSER_ONLY&&document.body.dataset.returnedFromChild!=='true'&&!new URLSearchParams(location.search).has('return')&&introWindow.homeDesignedIntroState&&!introWindow.homeDesignedIntroState.finished){
-      await new Promise<void>(resolve=>window.addEventListener('v85:home-intro-finished',()=>resolve(),{once:true}));
-    }
+    // Prepare the live scene during the authored opening instead of starting
+    // its shader work only after both films have finished.
     const warmTarget=new THREE.WebGLRenderTarget(16,16);renderer.setRenderTarget(warmTarget);
     // Compile for the scene-linear targets actually used by the composer and mirror.
     // Spread first uploads and auxiliary passes across frames while the native poster stays visible.
@@ -249,23 +246,26 @@ if(surface){
     animatedMechanisms=[...objects].filter(([name])=>/upper automaton [01]$|hinged blue apostle shutter/.test(name));
     let stagedAutomata=0;for(const [name,actor]of animatedMechanisms){if(!/upper automaton [01]$/.test(name))continue;actor.traverse(child=>{if(child instanceof THREE.Mesh){const ms=Array.isArray(child.material)?child.material:[child.material];child.material=ms.map(m=>{if(!(m instanceof THREE.MeshStandardMaterial)||m.userData.automatonReadable)return m;const copy=m.clone();copy.onBeforeCompile=m.onBeforeCompile;copy.customProgramCacheKey=m.customProgramCacheKey;copy.emissive.set(0xb68a4d);copy.emissiveIntensity=.09;copy.userData.automatonReadable=true;stagedAutomata++;return copy;});if(!Array.isArray(ms)||ms.length===1)child.material=child.material[0];}});}Object.assign(state,{stagedAutomataBeforeShaders:stagedAutomata});
     const shaderUniformTextures=new Set<THREE.Texture>();const preparedMaterials=new Set<THREE.Material>();scene.traverse(o=>{if(o instanceof THREE.Mesh)for(const m of Array.isArray(o.material)?o.material:[o.material]){if(preparedMaterials.has(m))continue;preparedMaterials.add(m);const cacheKey=m.customProgramCacheKey();m.customProgramCacheKey=()=>cacheKey;const previous=m.onBeforeCompile;m.onBeforeCompile=(shader,renderer)=>{previous.call(m,shader,renderer);for(const uniform of Object.values(shader.uniforms)){const v=uniform.value;if(v instanceof THREE.Texture&&!(v as any).isRenderTargetTexture)shaderUniformTextures.add(v);}};}});
-    const compiledLayouts=new Set<string>();
-    const shaderCompilation:Promise<unknown>[]=[];
-    const shaderMeshes:THREE.Mesh[]=[];scene.traverse(o=>{if(o instanceof THREE.Mesh&&o.visible)shaderMeshes.push(o);});
-    for(const mesh of shaderMeshes){
-      const materials=Array.isArray(mesh.material)?mesh.material:[mesh.material];
-      const layout=materials.map(m=>m.uuid).join('/')+':'+Number(mesh instanceof THREE.InstancedMesh)+':'+Number(mesh instanceof THREE.SkinnedMesh);
-      if(compiledLayouts.has(layout))continue;
-      compiledLayouts.add(layout);shaderCompilation.push(renderer.compileAsync(mesh,camera,scene));if(shaderCompilation.length%6===0)await yieldFrame();
+    const compileBegan=performance.now(),compiledPrograms=new Set<string>(),compileJobs:Promise<unknown>[]=[];
+    const shaderAudit={mode:'cooperative representative program submissions / parallel completion',milliseconds:0,layouts:0,materials:preparedMaterials.size,programs:0,largestSubmissionMs:0,parallelCompile:renderer.extensions.has('KHR_parallel_shader_compile')};Object.assign(state,{shaderPreparation:shaderAudit});
+    const vertexKeys=['normal','tangent','uv','uv1','uv2','color','skinIndex','skinWeight'];
+    const physicalKeys=['clearcoat','transmission','anisotropy','sheen','iridescence','dispersion','alphaHash'];
+    const programMeshes:THREE.Mesh[]=[];scene.traverse(o=>{if(o instanceof THREE.Mesh&&o.visible)programMeshes.push(o);});
+    for(const mesh of programMeshes){
+      const materialKeys=(Array.isArray(mesh.material)?mesh.material:[mesh.material]).map(m=>[m.type,m.customProgramCacheKey(),m.side,m.transparent,m.vertexColors,m.alphaTest>0,(m as any).flatShading,(m as any).normalMapType,physicalKeys.map(k=>Number(!!(m as any)[k])).join(''),JSON.stringify(m.defines||{}),Object.entries(m).filter(([,v])=>v instanceof THREE.Texture).map(([k,v])=>k+':'+(v as THREE.Texture).channel+':'+(v as THREE.Texture).mapping+':'+(v as THREE.Texture).colorSpace).sort().join('/')].join('|'));
+      const key=[...materialKeys,Number(mesh instanceof THREE.InstancedMesh),Number(mesh instanceof THREE.SkinnedMesh),Number(!!(mesh as any).instanceColor),vertexKeys.map(k=>Number(!!mesh.geometry.getAttribute(k))).join(''),Object.entries(mesh.geometry.morphAttributes).map(([k,a])=>k+':'+a.length).join('/')].join(';');
+      if(compiledPrograms.has(key))continue;compiledPrograms.add(key);
+      const submitAt=performance.now();compileJobs.push(renderer.compileAsync(mesh,camera,scene));shaderAudit.largestSubmissionMs=Math.max(shaderAudit.largestSubmissionMs,performance.now()-submitAt);shaderAudit.layouts=compiledPrograms.size;shaderAudit.programs=renderer.info.programs?.length||0;await yieldFrame();
     }
-    await Promise.all(shaderCompilation);
+    gpu.flush();await Promise.all(compileJobs);
+    shaderAudit.milliseconds=performance.now()-compileBegan;
     mark('surface shaders compiled');
     // Driver texture uploads are synchronous even with compileAsync. Keep them out of the entry film.
     // GPU preparation belongs to the opening gate, before the homepage is revealed.
     mark('entry film released GPU uploads');
     const textureUploads=new Set<THREE.Texture>(Object.values(closeAshlar));
     scene.traverse(o=>{if(o instanceof THREE.Mesh)for(const material of Array.isArray(o.material)?o.material:[o.material])for(const value of Object.values(material))if(value instanceof THREE.Texture)textureUploads.add(value);});
-    for(const map of shaderUniformTextures)textureUploads.add(map);Object.assign(state,{preuploadedShaderUniformTextures:shaderUniformTextures.size});let uploadIndex=0;for(const map of textureUploads){renderer.initTexture(map);if(++uploadIndex%4===0)await settleUpload();}await settleUpload();
+    for(const map of shaderUniformTextures)textureUploads.add(map);Object.assign(state,{preuploadedShaderUniformTextures:shaderUniformTextures.size});let uploadIndex=0;for(const map of textureUploads){await uploadTextureCooperatively(renderer,map);if(++uploadIndex%4===0)await settleUpload();}await settleUpload();
     const meshes:THREE.Mesh[]=[];scene.traverse(o=>{if(o instanceof THREE.Mesh&&o.visible)meshes.push(o);});
     const depth=new THREE.MeshDepthMaterial({depthPacking:THREE.RGBADepthPacking,side:THREE.BackSide}),distance=new THREE.MeshDistanceMaterial({side:THREE.BackSide});
     for(const material of [depth,distance]){const proxy=new THREE.Mesh(meshes[0].geometry,material);await renderer.compileAsync(proxy,camera,scene);await yieldFrame();}
@@ -452,6 +452,7 @@ if(surface){
   window.addEventListener('v85:home-intro-finished',()=>{intro=16;started=true;paused=false;last=performance.now();if(ready){navigation.update(true);discoveries.update(true);render(0);}});
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();Object.assign(state,{contextLost:true});for(const fence of frameFences)gpu.deleteSync(fence);frameFences.length=0;});
   canvas.addEventListener('webglcontextrestored',()=>{Object.assign(state,{contextLost:false});last=performance.now();if(ready){resize();render(0);navigation.update(true);discoveries.update(true);}});
+  graphicsRecovery(renderer,surface,state,async()=>{await renderer.compileAsync(scene,camera);renderer.shadowMap.needsUpdate=true;resize();render(0);},'./assets/native-v165/home.jpg','Preparing the courtyard…');
   requestAnimationFrame(animate);document.addEventListener('visibilitychange',()=>{last=performance.now();});
 }
 

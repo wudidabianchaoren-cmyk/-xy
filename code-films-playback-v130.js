@@ -2,14 +2,14 @@
  'use strict';
  const state=window.codeFilmsState={version:'32.114',galleries:{},films:[],returned:false};
  const videos=[...document.querySelectorAll('.project-film-video')];
- let disposed=false;
+ let disposed=false,parentVisible=window.parent===window;
  const records=videos.map(video=>{
   const item={id:video.id,visible:false,playing:false,mutedFallback:false,loaded:false,userPaused:false};state.films.push(item);
   video.controls=false;video.playsInline=true;video.volume=.9;
   let pending=false;
   const load=()=>{if(item.loaded)return;video.src=video.dataset.src;item.loaded=true;video.load();};
   const play=async()=>{
-   if(pending||disposed||document.hidden||!item.visible||item.userPaused||video.ended)return;
+   if(pending||disposed||!parentVisible||document.hidden||!item.visible||item.userPaused||video.ended)return;
    load();pending=true;
    for(const other of videos)if(other!==video)other.pause();
    try{await video.play();}catch{
@@ -32,6 +32,7 @@
  document.addEventListener('visibilitychange',()=>{records.forEach(r=>{if(document.hidden)r.video.pause();else void r.play();});});
  window.addEventListener('message',event=>{
   if(event.origin!==location.origin||event.source!==window.parent||event.data?.type!=='brain-universe:project-visible')return;
+  parentVisible=true;
   records.forEach(r=>void r.play());
  });
  document.querySelectorAll('[data-project-return]').forEach(link=>link.addEventListener('click',event=>{

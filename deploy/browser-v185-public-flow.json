@@ -1,0 +1,2270 @@
+{
+  "origin": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app",
+  "errors": [],
+  "console": [],
+  "http": [],
+  "steps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 94981,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": false,
+        "navigation": {
+          "version": 152,
+          "transitions": 0,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return"
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 331224281,
+          "total": 358460781
+        }
+      }
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 23056,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": false,
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": true,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 489714463,
+          "total": 498660351
+        }
+      }
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 10043,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": false,
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": true,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 421756252,
+          "total": 435391688
+        }
+      }
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 146000,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 2,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": true,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 2,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 779006191,
+          "total": 850135875
+        }
+      }
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 5414,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": true,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 758317708,
+          "total": 831491416
+        }
+      }
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 18767,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 647134222,
+          "total": 701744570
+        }
+      }
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 17908,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 5,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 653962576,
+          "total": 703390720
+        }
+      }
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 22195,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 6,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 637863770,
+          "total": 707096018
+        }
+      }
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 24237,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 7,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 629549248,
+          "total": 636230296
+        }
+      }
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 35827,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 8,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 631213480,
+          "total": 636374656
+        }
+      }
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 23279,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 640666372,
+          "total": 646827992
+        }
+      }
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 2917,
+      "state": {
+        "title": "造境手记 · 吴翔宇作品集",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare after the authored films and desktop, then preserve the complete bay for entry and return",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-close",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live directory-section-active"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 1559.6999999284744,
+          "lastMythReused": false,
+          "mythWarmError": "Error: 海湾场景预热超时",
+          "lastMythSceneReadyMs": 144835.29999995232
+        },
+        "frames": [
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1",
+            "href": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 641928630,
+          "total": 649337178
+        }
+      }
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-009.bin",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-010.bin",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-011.bin",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-003.bin",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-004.bin",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-005.bin",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/audio/wildflowers.mp3",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/audio/wildflowers.mp3",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/physical-universe-v103/film.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/audio/wildflowers.mp3",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/2ccdd6e0115f2b1f/part-0004.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/2ccdd6e0115f2b1f/part-0072.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-03.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/22289cb489cd305a/part-0002.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/22289cb489cd305a/part-0046.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/part-0001.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/part-0115.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/life-purpose/v32-72/life-purpose-with-music.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/physical-universe-v103/film.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/life-purpose/v32-72/life-purpose-with-music.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0003.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0109.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-03.webp",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "native": [],
+  "entry": {
+    "milliseconds": 93465.20000004768,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 480,
+      "droppedVideoFrames": 24
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 0
+    },
+    "homeReady": false,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "desktopFilm": {
+    "time": 1.652923,
+    "frames": 1190,
+    "calendar": {
+      "date": "2026-11-04",
+      "day": "4",
+      "month": "November",
+      "weekday": "Wednesday",
+      "timeZone": "Asia/Shanghai",
+      "live": true
+    },
+    "native": false
+  },
+  "films0": [
+    {
+      "id": "projectFilm",
+      "time": 1.691333,
+      "ready": 4,
+      "width": 1280,
+      "height": 546,
+      "duration": 139.70158700000002,
+      "midpointTime": 70.149244
+    }
+  ],
+  "films1": [
+    {
+      "id": "projectFilm",
+      "time": 0.886281,
+      "ready": 2,
+      "width": 1920,
+      "height": 1080,
+      "duration": 83.14782299999999,
+      "midpointTime": 41.874454
+    }
+  ],
+  "films2": [
+    {
+      "id": "projectFilm",
+      "time": 0.883773,
+      "ready": 2,
+      "width": 1920,
+      "height": 1080,
+      "duration": 208.721587,
+      "midpointTime": 104.621376
+    }
+  ],
+  "films3": [
+    {
+      "id": "projectFilm",
+      "time": 1.690327,
+      "ready": 3,
+      "width": 1920,
+      "height": 1080,
+      "duration": 18,
+      "midpointTime": 9.277725
+    },
+    {
+      "id": "lifePurposeVideo",
+      "time": 1.730423,
+      "ready": 4,
+      "width": 1600,
+      "height": 900,
+      "duration": 50,
+      "midpointTime": 25.286706
+    }
+  ],
+  "films4": [
+    {
+      "id": "projectFilm",
+      "time": 1.683981,
+      "ready": 4,
+      "width": 3360,
+      "height": 1440,
+      "duration": 191.375873,
+      "midpointTime": 96.030155
+    }
+  ],
+  "homeFinal": {
+    "ready": true,
+    "renderer": "Three.js / original geometry and local PBR",
+    "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "native": false,
+    "interfaceReady": true,
+    "delivery": {
+      "version": 185,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 6,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 24,
+      "progressiveMedia": [
+        {
+          "source": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+          "bytes": 6709483,
+          "requests": 18,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 14398,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/manifest.json",
+          "bytes": 4987814,
+          "requests": 10,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 293373.39999997616,
+          "ready": true,
+          "failed": false
+        }
+      ]
+    },
+    "retained": true
+  },
+  "resourceTiming": [
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/packed/f692640768749e8249e4.js",
+      "duration": 476.39999997615814,
+      "bytes": 11470
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/audio-focus-v141.js?v=32.185",
+      "duration": 322.10000002384186,
+      "bytes": 905
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/packed/d717a297d016d58baf65.css",
+      "duration": 783.8999999761581,
+      "bytes": 87663
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/packed/804acbf1112e139268ee.js",
+      "duration": 319.60000002384186,
+      "bytes": 1285
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/packed/2ce833e131f49522f1f8.js",
+      "duration": 1117.2999999523163,
+      "bytes": 364314
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/scene-loader-v146.js?v=32.185",
+      "duration": 731.8999999761581,
+      "bytes": 53
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/dock/exhibition-dock-v160.js?v=32.185",
+      "duration": 757.5,
+      "bytes": 57
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/dock/home-designed-intro-v160.js?v=32.185",
+      "duration": 757.7999999523163,
+      "bytes": 61
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/directory-v144/app.js?v=32.185",
+      "duration": 758,
+      "bytes": 50
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/home-creation-launch-v141.js?v=32.185",
+      "duration": 758.7000000476837,
+      "bytes": 1289
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/site-refinements-v129.js?v=32.185",
+      "duration": 1112.5,
+      "bytes": 1489
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/packed/4d49b407a6c31daf083e.js",
+      "duration": 796.5,
+      "bytes": 6308
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/techtext-v153.js?v=32.185",
+      "duration": 758.7000000476837,
+      "bytes": 49
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/home-thought-line-v160.js?v=32.185",
+      "duration": 758.3999999761581,
+      "bytes": 58
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/refinements-v161.js?v=32.185",
+      "duration": 757.7999999523163,
+      "bytes": 608
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/hobby-drift-v167.js?v=32.185",
+      "duration": 758.1000000238419,
+      "bytes": 52
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-000.bin",
+      "duration": 1136.1999999284744,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-001.bin",
+      "duration": 1393.7000000476837,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/home-live-poster-v32-77.png",
+      "duration": 1196.5,
+      "bytes": 2263493
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/wordmark-v142/wordmark.ttf",
+      "duration": 1044.8000000715256,
+      "bytes": 4656
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v183/images/d6862ea204186288f90b-1280.webp",
+      "duration": 4836.899999976158,
+      "bytes": 2901520
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v183/images/45beb4b5eff4666246b3-1280.webp",
+      "duration": 1946.6000000238419,
+      "bytes": 946642
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/heading-interaction-v157.js?v=32.157",
+      "duration": 1546.4000000953674,
+      "bytes": 968
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/scene-loader-v146.js",
+      "duration": 811.5999999046326,
+      "bytes": 1590
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/home-designed-intro-v160.js",
+      "duration": 809,
+      "bytes": 3447
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/exhibition-dock-v160.js",
+      "duration": 814.7000000476837,
+      "bytes": 12865
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/techtext-v153.js",
+      "duration": 818.4000000953674,
+      "bytes": 8788
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/directory-app.js",
+      "duration": 817.3000000715256,
+      "bytes": 58486
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/home-thought-line-v160.js",
+      "duration": 818,
+      "bytes": 3998
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/hobby-drift-v167.js",
+      "duration": 818.1000000238419,
+      "bytes": 3640
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-002.bin",
+      "duration": 2849.8000000715256,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-003.bin",
+      "duration": 2126,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-RTTFH4P3.js",
+      "duration": 315.89999997615814,
+      "bytes": 649
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-SXRZKL2H.js",
+      "duration": 315.8000000715256,
+      "bytes": 688
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-RGYTE4B5.js",
+      "duration": 326.5,
+      "bytes": 45483
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-R5XT465O.js",
+      "duration": 352.2999999523163,
+      "bytes": 66502
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-G3JJXN7Z.js",
+      "duration": 340.60000002384186,
+      "bytes": 6860
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-XRMZOXH2.js",
+      "duration": 326.2000000476837,
+      "bytes": 8668
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-NK3IH7V4.js",
+      "duration": 355,
+      "bytes": 2495
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-C6N56PU3.js",
+      "duration": 375.2999999523163,
+      "bytes": 100759
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-XM4RMFZ3.js",
+      "duration": 343.1999999284744,
+      "bytes": 1104
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-DGU5PTFW.js",
+      "duration": 354.2999999523163,
+      "bytes": 14418
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-32475FOM.js",
+      "duration": 361.39999997615814,
+      "bytes": 54990
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-LZ7QSBR5.js",
+      "duration": 382.09999990463257,
+      "bytes": 171793
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "duration": 563.3999999761581,
+      "bytes": 605542
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "duration": 669.8999999761581,
+      "bytes": 298316
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-03.webp",
+      "duration": 839.2000000476837,
+      "bytes": 380998
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-04.webp",
+      "duration": 4034.2000000476837,
+      "bytes": 266104
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-05.webp",
+      "duration": 3934.2999999523163,
+      "bytes": 127628
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-09.webp",
+      "duration": 4146.099999904633,
+      "bytes": 238268
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-08.webp",
+      "duration": 4200.299999952316,
+      "bytes": 141034
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-06.webp",
+      "duration": 4213,
+      "bytes": 106468
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-10.webp",
+      "duration": 4527.5,
+      "bytes": 461886
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-11.webp",
+      "duration": 4355.200000047684,
+      "bytes": 405472
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/progressive-media-v185.js",
+      "duration": 554.3000000715256,
+      "bytes": 1942
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/loading-study/opening-poster-v32-84.png",
+      "duration": 1138.6000000238419,
+      "bytes": 247482
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/loading-study/loading-study-v32-84.mp4?v=32.83",
+      "duration": 9460.600000023842,
+      "bytes": 7362857
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/native-v164/room.jpg?v=32.164",
+      "duration": 7528.300000071526,
+      "bytes": 548298
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/directory-hand-2JQHWOL5.woff2",
+      "duration": 1903.2000000476837,
+      "bytes": 603820
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/21-tile.webp",
+      "duration": 1980.5,
+      "bytes": 97698
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/12-tile.webp",
+      "duration": 2024.9000000953674,
+      "bytes": 91114
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/10-tile.webp",
+      "duration": 3331.600000023842,
+      "bytes": 55816
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/03-tile.webp",
+      "duration": 3362.3000000715256,
+      "bytes": 128310
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/08-tile.webp",
+      "duration": 3370.7000000476837,
+      "bytes": 24298
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/06-tile.webp",
+      "duration": 3414.100000023842,
+      "bytes": 95022
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/01-tile.webp",
+      "duration": 3420.600000023842,
+      "bytes": 16646
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/02-tile.webp",
+      "duration": 3439.2000000476837,
+      "bytes": 48430
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/17-tile.webp",
+      "duration": 7554.100000023842,
+      "bytes": 100818
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/19-tile.webp",
+      "duration": 7591.5,
+      "bytes": 68946
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+      "duration": 7024.900000095367,
+      "bytes": 569
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-004.bin",
+      "duration": 6580.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-005.bin",
+      "duration": 6769.199999928474,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v16/world-track.json",
+      "duration": 4431,
+      "bytes": 393641
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-006.bin",
+      "duration": 5309.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/home-world-v146.js?v=32.184",
+      "duration": 4242.5,
+      "bytes": 43956
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/05-tile.webp",
+      "duration": 2315.5,
+      "bytes": 20352
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/04-tile.webp",
+      "duration": 2311.7999999523163,
+      "bytes": 36642
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/11-tile.webp",
+      "duration": 2689.2000000476837,
+      "bytes": 90396
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/13-tile.webp",
+      "duration": 2708.4000000953674,
+      "bytes": 110424
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/22-tile.webp",
+      "duration": 3053.600000023842,
+      "bytes": 17576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/14-tile.webp",
+      "duration": 3106.2999999523163,
+      "bytes": 45308
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/09-tile.webp",
+      "duration": 3056.399999976158,
+      "bytes": 30834
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/15-tile.webp",
+      "duration": 3275.100000023842,
+      "bytes": 56070
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/16-tile.webp",
+      "duration": 3280.5999999046326,
+      "bytes": 50114
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/23-tile.webp",
+      "duration": 3265.3000000715256,
+      "bytes": 28544
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/24-tile.webp",
+      "duration": 3294.2999999523163,
+      "bytes": 104560
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/25-tile.webp",
+      "duration": 3688.7000000476837,
+      "bytes": 28068
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/26-tile.webp",
+      "duration": 3697.6999999284744,
+      "bytes": 25730
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/07-tile.webp",
+      "duration": 3690.399999976158,
+      "bytes": 23076
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/18-tile.webp",
+      "duration": 3696.5999999046326,
+      "bytes": 25542
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/20-tile.webp",
+      "duration": 3828,
+      "bytes": 52922
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/27-tile.webp",
+      "duration": 4250.100000023842,
+      "bytes": 26824
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/photography-v170/28-tile.webp",
+      "duration": 4086.7999999523163,
+      "bytes": 19968
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/init.mp4",
+      "duration": 1849.2000000476837,
+      "bytes": 837
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-007.bin",
+      "duration": 3762.3000000715256,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-008.bin",
+      "duration": 3409.5999999046326,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-YRQ74F3T.js",
+      "duration": 630.9000000953674,
+      "bytes": 37448
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-XL3CMSHR.js",
+      "duration": 633.6000000238419,
+      "bytes": 10174
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-MG6POSIJ.js",
+      "duration": 617.1000000238419,
+      "bytes": 7816
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0000.m4s",
+      "duration": 795.1999999284744,
+      "bytes": 1088868
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/look-calibration.json",
+      "duration": 2432.600000023842,
+      "bytes": 3276
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/bake-audit.json",
+      "duration": 2126.7999999523163,
+      "bytes": 632
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-000.bin",
+      "duration": 3260.899999976158,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-001.bin",
+      "duration": 4013.3000000715256,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-002.bin",
+      "duration": 4800.899999976158,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/native-v24-prefiltered-v158.json",
+      "duration": 4014.6999999284744,
+      "bytes": 262
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/native-v24-prefiltered-v158.bin.gz",
+      "duration": 4915,
+      "bytes": 201723
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/display-transform.json",
+      "duration": 4864.399999976158,
+      "bytes": 361
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/display-transform.bin",
+      "duration": 5012.100000023842,
+      "bytes": 143748
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/native-v165/home.jpg?v=32.165",
+      "duration": 524.6000000238419,
+      "bytes": 705603
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/ef5a077afd8fadc255d0.avif",
+      "duration": 6802.200000047684,
+      "bytes": 3168578
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/Marble012_rough_2k.jpg",
+      "duration": 8202.600000023842,
+      "bytes": 2166701
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/1b55932dd51c21b2337f.avif",
+      "duration": 14767.299999952316,
+      "bytes": 533660
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 11681.099999904633,
+      "bytes": 2870078
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/sandstone_cracks_rough_2k.jpg",
+      "duration": 18551.100000023842,
+      "bytes": 1569280
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 39169.39999997616,
+      "bytes": 4545235
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 25415,
+      "bytes": 3085891
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/white_sandstone_blocks_02_rough_2k.jpg",
+      "duration": 23611.299999952316,
+      "bytes": 2545799
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 25812.600000023842,
+      "bytes": 2573376
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 17923,
+      "bytes": 609525
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 24353.799999952316,
+      "bytes": 652441
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/odyssey/wood_planks/wood_planks_rough_1k.jpg",
+      "duration": 22712.299999952316,
+      "bytes": 299757
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-009.bin",
+      "duration": 30003.100000023842,
+      "bytes": 0
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0001.m4s",
+      "duration": 485.39999997615814,
+      "bytes": 479008
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/room-atlas/layout.json",
+      "duration": 25213.299999952316,
+      "bytes": 4386
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/room-static.glb",
+      "duration": 43843.60000002384,
+      "bytes": 2205652
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/room-lighting.json",
+      "duration": 25190.700000047684,
+      "bytes": 4591
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v120/plant/potted-plant-02.glb",
+      "duration": 52742.799999952316,
+      "bytes": 3752232
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/room-collision.glb",
+      "duration": 53719.5,
+      "bytes": 4335328
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v123/remote-detail.glb",
+      "duration": 31989,
+      "bytes": 486708
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/room-atlas/on.webp",
+      "duration": 53745.5,
+      "bytes": 4305708
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/room-atlas/off.webp",
+      "duration": 50275.5,
+      "bytes": 3342062
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/room-off.png",
+      "duration": 48842.60000002384,
+      "bytes": 3124633
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/room-lamp.png",
+      "duration": 39573.89999997616,
+      "bytes": 1094829
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/room-tv.png",
+      "duration": 41309.59999990463,
+      "bytes": 1582941
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v119/berlin-night.jpg",
+      "duration": 45965.200000047684,
+      "bytes": 2674368
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/covers-v177/code-films.webp",
+      "duration": 32376.600000023842,
+      "bytes": 487956
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/room-normal.png",
+      "duration": 37698.10000002384,
+      "bytes": 825693
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/odyssey/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "duration": 38310.699999928474,
+      "bytes": 916843
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v123/plant/potted_plant_02_pot_diff_2k.jpg",
+      "duration": 34588,
+      "bytes": 596006
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/odyssey/rough_linen/rough_linen_rough_1k.jpg",
+      "duration": 39509.10000002384,
+      "bytes": 1083725
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v123/plant/potted_plant_02_pot_nor_gl_2k.jpg",
+      "duration": 32377.899999976158,
+      "bytes": 494387
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v123/plant/potted_plant_02_pot_rough_2k.jpg",
+      "duration": 30903.400000095367,
+      "bytes": 426559
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0002.m4s",
+      "duration": 489.7999999523163,
+      "bytes": 688822
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/physical-universe-v103/film.mp4",
+      "duration": 52546.60000002384,
+      "bytes": 4509246
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-010.bin",
+      "duration": 30002.5,
+      "bytes": 0
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-011.bin",
+      "duration": 30000.799999952316,
+      "bytes": 0
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-003.bin",
+      "duration": 30001,
+      "bytes": 0
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-004.bin",
+      "duration": 30000.100000023842,
+      "bytes": 0
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-005.bin",
+      "duration": 30000.100000023842,
+      "bytes": 0
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/audio/wildflowers.mp3",
+      "duration": 87489.39999997616,
+      "bytes": 0
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0003.m4s",
+      "duration": 9739.5,
+      "bytes": 309264
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0004.m4s",
+      "duration": 17033.300000071526,
+      "bytes": 1092500
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-009.bin",
+      "duration": 20670.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-010.bin",
+      "duration": 22381.100000023842,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-011.bin",
+      "duration": 25620.199999928474,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-003.bin",
+      "duration": 24847.899999976158,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-004.bin",
+      "duration": 25481.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-005.bin",
+      "duration": 25567.199999928474,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0005.m4s",
+      "duration": 1295,
+      "bytes": 539955
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0006.m4s",
+      "duration": 2202.7999999523163,
+      "bytes": 677852
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0007.m4s",
+      "duration": 527.3000000715256,
+      "bytes": 17898
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0008.m4s",
+      "duration": 3361.1999999284744,
+      "bytes": 466508
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0009.m4s",
+      "duration": 10209.5,
+      "bytes": 10632
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-012.bin",
+      "duration": 10183.700000047684,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/brass-normal.png",
+      "duration": 7052.100000023842,
+      "bytes": 277526
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/brass-roughness.png",
+      "duration": 7785.100000023842,
+      "bytes": 176095
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/aluminium-normal.png",
+      "duration": 7945.5,
+      "bytes": 224973
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/abs-normal.png",
+      "duration": 7277.699999928474,
+      "bytes": 389797
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/aluminium-roughness.png",
+      "duration": 7758.099999904633,
+      "bytes": 159641
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/abs-roughness.png",
+      "duration": 9410.899999976158,
+      "bytes": 189601
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/paper-normal.png",
+      "duration": 9635.700000047684,
+      "bytes": 418460
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/paper-roughness.png",
+      "duration": 9444.200000047684,
+      "bytes": 177168
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/porcelain-normal.png",
+      "duration": 9817.600000023842,
+      "bytes": 282688
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/porcelain-roughness.png",
+      "duration": 11603.299999952316,
+      "bytes": 164899
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/rubber-normal.png",
+      "duration": 11475,
+      "bytes": 483924
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/materials/rubber-roughness.png",
+      "duration": 11495.5,
+      "bytes": 194572
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-013.bin",
+      "duration": 10919.199999928474,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-006.bin",
+      "duration": 9183.199999928474,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-014.bin",
+      "duration": 9467.299999952316,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-007.bin",
+      "duration": 8983.399999976158,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0010.m4s",
+      "duration": 2743.2999999523163,
+      "bytes": 352708
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-008.bin",
+      "duration": 8605.100000023842,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-015.bin",
+      "duration": 9007.100000023842,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0011.m4s",
+      "duration": 1848.1000000238419,
+      "bytes": 15580
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0012.m4s",
+      "duration": 2494.899999976158,
+      "bytes": 360005
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-016.bin",
+      "duration": 3774.7000000476837,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/xianxia-cliff.png",
+      "duration": 4337.800000071526,
+      "bytes": 1556798
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/rural-return/v130/element-01.webp",
+      "duration": 4396.300000071526,
+      "bytes": 243738
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0013.m4s",
+      "duration": 3447.100000023842,
+      "bytes": 130713
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-009.bin",
+      "duration": 4871.299999952316,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-017.bin",
+      "duration": 6353.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-010.bin",
+      "duration": 4732,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-011.bin",
+      "duration": 5182,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2ce5bee68384736c03d7-018.bin",
+      "duration": 3954.2000000476837,
+      "bytes": 96424
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0014.m4s",
+      "duration": 4267.200000047684,
+      "bytes": 475426
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/humid-southeast-asia/frame-04.webp",
+      "duration": 4799.699999928474,
+      "bytes": 1749316
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-012.bin",
+      "duration": 5592.899999976158,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-013.bin",
+      "duration": 3430,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-014.bin",
+      "duration": 3221.899999976158,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/draco/draco_wasm_wrapper.js",
+      "duration": 1723.8000000715256,
+      "bytes": 10972
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/home/draco/draco_decoder.wasm",
+      "duration": 1750.7000000476837,
+      "bytes": 56798
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0015.m4s",
+      "duration": 3202.3000000715256,
+      "bytes": 1162
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/reading/cinema-aesthetics/cover-v32-79.png",
+      "duration": 3797.600000023842,
+      "bytes": 3199980
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/yangjian-v116/video/opening-poster.png",
+      "duration": 4056.2999999523163,
+      "bytes": 1000512
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/odyssey/turner-ulysses-1829.jpg",
+      "duration": 4331.699999928474,
+      "bytes": 507586
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-015.bin",
+      "duration": 3489.5,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-BGB6QDUZ.js",
+      "duration": 2297.899999976158,
+      "bytes": 9493
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/9c5cee15327efd548a3c-016.bin",
+      "duration": 4217.100000023842,
+      "bytes": 180085
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/after-journey/cover-v32-92.webp",
+      "duration": 2773.3000000715256,
+      "bytes": 1354530
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/rural-return/poster.webp",
+      "duration": 2776.899999976158,
+      "bytes": 17938
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/journey/previews/journey-mountain-valley.webp",
+      "duration": 1488.6999999284744,
+      "bytes": 174082
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/journey/previews/mist-palace-dusk.webp",
+      "duration": 1405.4000000953674,
+      "bytes": 12286
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/covers-v137/rural.webp",
+      "duration": 2891.100000023842,
+      "bytes": 422394
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/covers-v137/mid-autumn.webp",
+      "duration": 3364.1999999284744,
+      "bytes": 602530
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/humid-southeast-asia/cover.webp",
+      "duration": 3014.2999999523163,
+      "bytes": 401962
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/covers-v177/code-films.webp",
+      "duration": 655.8999999761581,
+      "bytes": 487956
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/after-journey/cover-v32-92.webp",
+      "duration": 2052,
+      "bytes": 1354530
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/covers-v137/mid-autumn.webp",
+      "duration": 2049.5,
+      "bytes": 602530
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/covers-v137/rural.webp",
+      "duration": 2048.6999999284744,
+      "bytes": 422394
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/humid-southeast-asia/cover.webp",
+      "duration": 2047.8999999761581,
+      "bytes": 401962
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/scene-dist/browser-v185/shared-RUKHF5KC.js",
+      "duration": 1591.7000000476837,
+      "bytes": 15389
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/mid-autumn/still-live-stage.webp",
+      "duration": 2096.5,
+      "bytes": 226042
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/works/covers-v161/code-films.webp",
+      "duration": 2551.1999999284744,
+      "bytes": 274692
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2b59a8c183b60c4d9363-000.bin",
+      "duration": 2069.899999976158,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2b59a8c183b60c4d9363-001.bin",
+      "duration": 1580.4000000953674,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2b59a8c183b60c4d9363-002.bin",
+      "duration": 963.2999999523163,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/reading/cinema-aesthetics/page-001.jpg",
+      "duration": 1061.0999999046326,
+      "bytes": 474206
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/web-environment.json",
+      "duration": 1127.1999999284744,
+      "bytes": 1041
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/prompt-lab/prompt-structure.webp",
+      "duration": 2113.600000023842,
+      "bytes": 278786
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2b59a8c183b60c4d9363-003.bin",
+      "duration": 2877.2999999523163,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2b59a8c183b60c4d9363-004.bin",
+      "duration": 1662.3999999761581,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2b59a8c183b60c4d9363-005.bin",
+      "duration": 2470.899999976158,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-ao-0.png",
+      "duration": 3248.899999976158,
+      "bytes": 500917
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-ao-1.png",
+      "duration": 3940.1999999284744,
+      "bytes": 349089
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-ao-2.png",
+      "duration": 4417.299999952316,
+      "bytes": 201116
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/web-env-on.rgba16f",
+      "duration": 2463.6999999284744,
+      "bytes": 688128
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/directory-v127/web-env-off.rgba16f",
+      "duration": 2401,
+      "bytes": 688128
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+      "duration": 2215.7999999523163,
+      "bytes": 1559
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2b59a8c183b60c4d9363-006.bin",
+      "duration": 1475.8999999761581,
+      "bytes": 1048576
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/transfer/2b59a8c183b60c4d9363-007.bin",
+      "duration": 1909.6999999284744,
+      "bytes": 208247
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/ue-v160/room-mix-ue5-cubeuv.json",
+      "duration": 857.6000000238419,
+      "bytes": 1197
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/ue-v160/room-mix-ue5-cubeuv.bin.gz",
+      "duration": 1064,
+      "bytes": 244446
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-indirect-0.bin.z",
+      "duration": 2511.7000000476837,
+      "bytes": 2948733
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-indirect-1.bin.z",
+      "duration": 3075.5,
+      "bytes": 2334981
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v185/room-atlas/layout-07bb6aef97dbe9116c72.bin.gz",
+      "duration": 4563.899999976158,
+      "bytes": 1925044
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-indirect-2.bin.z",
+      "duration": 3852.5,
+      "bytes": 1646355
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v180/architectural-profiles-ee86103f/part-000.bin",
+      "duration": 14214.5,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v180/architectural-profiles-ee86103f/part-001.bin",
+      "duration": 7744.299999952316,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://6aea93d2d423076a58d663df--zaojing-wxy.netlify.app/assets/browser-v180/architectural-profiles-ee86103f/part-002.bin",
+      "duration": 14212.800000071526,
+      "bytes": 3194809
+    }
+  ],
+  "pass": true
+}

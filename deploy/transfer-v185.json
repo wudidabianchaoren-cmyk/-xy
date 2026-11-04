@@ -1,0 +1,212 @@
+[
+  {
+    "source": "/blender/reference-architecture-v24/baked-architecture.glb",
+    "beforeBytes": 27770476,
+    "afterBytes": 19337428,
+    "transferBytes": 16957301,
+    "geometryBytesIdentical": true,
+    "sceneTablesIdentical": true,
+    "textures": [
+      {
+        "image": 0,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 8662590,
+        "bytes": 4965912,
+        "maximumChannelError": 9,
+        "maximumChannelRMS": 1.9086335086311819,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      },
+      {
+        "image": 1,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 6262894,
+        "bytes": 3095908,
+        "maximumChannelError": 6,
+        "maximumChannelRMS": 1.2214463557714952,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      },
+      {
+        "image": 2,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 2427506,
+        "bytes": 1630451,
+        "maximumChannelError": 6,
+        "maximumChannelRMS": 1.9282604299802546,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      },
+      {
+        "image": 3,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 2427506,
+        "bytes": 1630451,
+        "maximumChannelError": 6,
+        "maximumChannelRMS": 1.9282604299802546,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      },
+      {
+        "image": 6,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 2380218,
+        "bytes": 1607858,
+        "maximumChannelError": 6,
+        "maximumChannelRMS": 1.2872261607973705,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      }
+    ]
+  },
+  {
+    "source": "/blender/reference-architecture-v16/architecture-world.glb",
+    "beforeBytes": 22428184,
+    "afterBytes": 20738196,
+    "transferBytes": 18970792,
+    "geometryBytesIdentical": true,
+    "sceneTablesIdentical": true,
+    "textures": [
+      {
+        "image": 0,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 2857050,
+        "bytes": 1167046,
+        "maximumChannelError": 14,
+        "maximumChannelRMS": 1.122434233372205,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      }
+    ]
+  },
+  {
+    "source": "/blender/reference-architecture-v18/courtyard-additions.glb",
+    "beforeBytes": 11443352,
+    "afterBytes": 7841752,
+    "transferBytes": 7548279,
+    "geometryBytesIdentical": true,
+    "sceneTablesIdentical": true,
+    "textures": [
+      {
+        "image": 0,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 3117994,
+        "bytes": 2573376,
+        "maximumChannelError": 8,
+        "maximumChannelRMS": 1.749650102785621,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      },
+      {
+        "image": 1,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 3780151,
+        "bytes": 3085891,
+        "maximumChannelError": 7,
+        "maximumChannelRMS": 1.372849777205323,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      },
+      {
+        "image": 2,
+        "width": 2048,
+        "height": 2048,
+        "originalBytes": 4195500,
+        "bytes": 1832659,
+        "maximumChannelError": 6,
+        "maximumChannelRMS": 1.2522947229223167,
+        "resolutionPreserved": true,
+        "quality": 98,
+        "subsampling": "4:4:4"
+      }
+    ]
+  },
+  {
+    "source": "assets/home/Marble012_diff_2k.jpg",
+    "width": 2048,
+    "height": 2048,
+    "originalBytes": 5139092,
+    "bytes": 3168578,
+    "maximumChannelError": 9,
+    "maximumChannelRMS": 1.5614819070853128,
+    "resolutionPreserved": true,
+    "quality": 98,
+    "subsampling": "4:4:4"
+  },
+  {
+    "source": "assets/home/Marble012_nor_gl_2k.jpg",
+    "width": 2048,
+    "height": 2048,
+    "originalBytes": 1418258,
+    "bytes": 533660,
+    "maximumChannelError": 7,
+    "maximumChannelRMS": 1.7883829883651126,
+    "resolutionPreserved": true,
+    "quality": 98,
+    "subsampling": "4:4:4"
+  },
+  {
+    "source": "assets/home/white_sandstone_blocks_02_diff_2k.jpg",
+    "width": 2048,
+    "height": 2048,
+    "originalBytes": 3780151,
+    "bytes": 3085891,
+    "maximumChannelError": 7,
+    "maximumChannelRMS": 1.372849777205323,
+    "resolutionPreserved": true,
+    "quality": 98,
+    "subsampling": "4:4:4"
+  },
+  {
+    "source": "assets/home/white_sandstone_blocks_02_diff_4k.jpg",
+    "width": 4096,
+    "height": 4096,
+    "originalBytes": 15017717,
+    "bytes": 12205343,
+    "maximumChannelError": 7,
+    "maximumChannelRMS": 1.358506988861224,
+    "resolutionPreserved": true,
+    "quality": 98,
+    "subsampling": "4:4:4"
+  },
+  {
+    "source": "assets/home/white_sandstone_blocks_02_nor_gl_2k.jpg",
+    "width": 2048,
+    "height": 2048,
+    "originalBytes": 3117994,
+    "bytes": 2573376,
+    "maximumChannelError": 8,
+    "maximumChannelRMS": 1.749650102785621,
+    "resolutionPreserved": true,
+    "quality": 98,
+    "subsampling": "4:4:4"
+  },
+  {
+    "source": "assets/home/white_sandstone_blocks_02_nor_gl_4k.jpg",
+    "width": 4096,
+    "height": 4096,
+    "originalBytes": 10973933,
+    "bytes": 8792362,
+    "maximumChannelError": 9,
+    "maximumChannelRMS": 1.6912639284934838,
+    "resolutionPreserved": true,
+    "quality": 98,
+    "subsampling": "4:4:4"
+  }
+]

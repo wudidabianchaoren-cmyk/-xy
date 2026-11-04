@@ -11,6 +11,9 @@ export function coastalAirV161(scene:T.Scene,sun:T.DirectionalLight,clock:{value
  `;
  const materials=new Set<T.Material>();scene.traverse(o=>{if(!(o instanceof T.Mesh))return;for(const m of Array.isArray(o.material)?o.material:[o.material]){
   if(materials.has(m)||(!(m instanceof T.MeshStandardMaterial)&&!(m instanceof T.ShaderMaterial&&o.userData.coastalWater)))continue;
+  // Instanced leaves were sampling fog at the untransformed source origin.
+  // Their native light field and the scene's distance fog already include air.
+  if(new URLSearchParams(location.search).get('nativeLightfield')==='1'&&(o instanceof T.InstancedMesh||(m as T.MeshStandardMaterial).alphaMap))continue;
   materials.add(m);const previous=m.onBeforeCompile,key=m.customProgramCacheKey();
   m.onBeforeCompile=(s,r)=>{previous.call(m,s,r);Object.assign(s.uniforms,uniforms);s.vertexShader=s.vertexShader.replace('void main()', 'varying vec3 v161AirWorld;\nvoid main()');
    if(s.vertexShader.includes('#include <worldpos_vertex>'))s.vertexShader=s.vertexShader.replace('#include <worldpos_vertex>','#include <worldpos_vertex>\nv161AirWorld=(modelMatrix*vec4(transformed,1.)).xyz;');

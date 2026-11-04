@@ -1,2 +1,1 @@
-var e=new URLSearchParams(location.search).get("renderer")==="web",o=e?"./mythology-web-v165.js?v=32.183":"./mythology-native-v165.js?v=32.183";await import(o);if(e&&new URLSearchParams(location.search).get("nativeLightfield")!=="1"){let t=document.createElement("script");t.src="./mythology-offline-v162.js?v=32.183",document.body.append(t)}else!e&&"serviceWorker"in navigator&&navigator.serviceWorker.register("./mythology-sw-v167.js?v=32.183",{scope:"./",updateViaCache:"none"}).catch(()=>{});
-//# sourceMappingURL=mythology-local-v162.js.map
+export * from "./browser-v185/mythology-local-v162.js";

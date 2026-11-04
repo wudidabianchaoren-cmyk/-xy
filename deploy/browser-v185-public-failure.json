@@ -1,0 +1,51 @@
+{
+  "origin": "https://6aea80bff96ba53786ba6ef7--zaojing-wxy.netlify.app",
+  "mode": "public-repeat",
+  "errors": [],
+  "console": [],
+  "badHTTP": [],
+  "steps": [],
+  "failure": "page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://6aea80bff96ba53786ba6ef7--zaojing-wxy.netlify.app/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-browser\\.verify\\v32-185\\verify-entry.mjs:15:33\n    at step (C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-browser\\.verify\\v32-185\\verify-entry.mjs:8:56)\n    at C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-browser\\.verify\\v32-185\\verify-entry.mjs:15:8",
+  "final": {
+    "at": 60169.59999990463,
+    "home": {},
+    "intro": {
+      "finished": false
+    },
+    "boot": [
+      [
+        "home",
+        {
+          "state": "pending",
+          "error": ""
+        }
+      ],
+      [
+        "directory",
+        {
+          "state": "pending",
+          "error": ""
+        }
+      ],
+      [
+        "mythology",
+        {
+          "state": "pending",
+          "error": ""
+        }
+      ]
+    ],
+    "delivery": {
+      "version": 185,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 0,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 2
+    }
+  }
+}

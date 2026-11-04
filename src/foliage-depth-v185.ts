@@ -1,0 +1,12 @@
+import * as T from 'three';
+/** Fill cutout depth with the same wind/coverage before expensive native/PBR
+ * colour shading. Fully hidden leaves then fail depth before running lighting. */
+export function foliageDepthPrepass(renderer:T.WebGLRenderer,scene:T.Scene,camera:T.Camera,state:any){
+ const originals=new Map<T.Mesh,T.Material|T.Material[]>(),depths=new Map<T.Material,T.MeshDepthMaterial>(),hidden:T.Object3D[]=[];
+ const depth=(old:T.Material)=>{if(depths.has(old))return depths.get(old)!;const m=old as T.MeshStandardMaterial,d=new T.MeshDepthMaterial({depthPacking:T.RGBADepthPacking,map:old.alphaTest>0?m.map:null,alphaMap:m.alphaMap||null,alphaTest:old.alphaTest,side:old.side});d.colorWrite=false;d.depthWrite=true;d.alphaToCoverage=old.alphaToCoverage;d.onBeforeCompile=(shader,r)=>{const fragment=shader.fragmentShader;const hook=old.userData.nativeSourceVertexHook||old.onBeforeCompile;hook.call(d,shader,r);shader.fragmentShader=fragment;const end=shader.fragmentShader.lastIndexOf('}');shader.fragmentShader=shader.fragmentShader.slice(0,end)+'gl_FragColor.a=diffuseColor.a;\n'+shader.fragmentShader.slice(end);};d.customProgramCacheKey=()=>old.customProgramCacheKey()+'/same-cutout-depth185';depths.set(old,d);return d;};
+ scene.traverse(o=>{if(o instanceof T.InstancedMesh)originals.set(o,o.material);});
+ function swap(){scene.traverse(o=>{if((o instanceof T.Mesh||o instanceof T.Points||o instanceof T.Line||o instanceof T.Sprite)&&!originals.has(o as T.Mesh)&&o.visible){hidden.push(o);o.visible=false;}});for(const[o,mat]of originals)o.material=Array.isArray(mat)?mat.map(depth):depth(mat);}
+ function restore(){for(const[o,mat]of originals)o.material=mat;hidden.forEach(o=>o.visible=true);hidden.length=0;}
+ const audit=state.foliageDepth={materials:0,frames:0,sourceGeometryPreserved:true,matchingWindAndAlphaCoverage:true};
+ return{async prepare(){const background=scene.background;scene.background=null;swap();try{await renderer.compileAsync(scene,camera);audit.materials=depths.size;}finally{restore();scene.background=background;}},render(draw:()=>void){const auto=renderer.autoClear,shadow=renderer.shadowMap.enabled,background=scene.background;renderer.setRenderTarget(null);renderer.clear();renderer.autoClear=false;renderer.shadowMap.enabled=false;scene.background=null;swap();try{renderer.render(scene,camera);}finally{restore();scene.background=background;renderer.shadowMap.enabled=shadow;}try{draw();audit.frames++;}finally{renderer.autoClear=auto;}},dispose(){depths.forEach(d=>d.dispose());}};
+}

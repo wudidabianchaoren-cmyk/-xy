@@ -56,7 +56,8 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
  }
  await load(manifest.poses[0]);
  function patch(old:T.Material,water=false){
-  const material=old.clone(),previous=old.onBeforeCompile,key=old.customProgramCacheKey();
+  const material=old.clone(),previous=old.onBeforeCompile,key=old.customProgramCacheKey();material.userData.nativeSourceVertexHook=previous;
+  const stableLeaves=manifest.scene==='myth'&&!!(old as T.MeshStandardMaterial).alphaMap&&new URLSearchParams(location.search).has('nativeFoliage185');
   // Preserve existing streamed texture objects. ShaderMaterial.clone otherwise
   // clones their uniforms and loses the original Texture's streamed data flag.
   if(material instanceof T.ShaderMaterial&&old instanceof T.ShaderMaterial)material.uniforms={...old.uniforms};
@@ -64,7 +65,7 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
    previous.call(material,shader,renderer);Object.assign(shader.uniforms,uniforms);
    shader.vertexShader='varying vec3 vNativeLightingWorld;\n'+shader.vertexShader;
    if(shader.vertexShader.includes('#include <worldpos_vertex>'))shader.vertexShader=shader.vertexShader.replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
-    vec4 nativePosition=vec4(transformed,1.);
+    vec4 nativePosition=vec4(${stableLeaves?'position':'transformed'},1.);
     #ifdef USE_BATCHING
      nativePosition=batchingMatrix*nativePosition;
     #endif
@@ -73,7 +74,7 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
     #endif
     vNativeLightingWorld=(modelMatrix*nativePosition).xyz;`);
    else shader.vertexShader=shader.vertexShader.replace(/void main\(\)\s*\{/,'void main(){vNativeLightingWorld=(modelMatrix*vec4(position,1.)).xyz;');
-   let visibilityCode=water?projectionGLSL.replace('.018+p.w*.002','.35+p.w*.02'):projectionGLSL;
+   let visibilityCode=water?projectionGLSL.replace('.018+p.w*.002','.35+p.w*.02'):stableLeaves?projectionGLSL.replace('.018+p.w*.002','.12+p.w*.003'):projectionGLSL;
    if(manifest.scene==='room')visibilityCode=visibilityCode.replace('vec3 colour=mix(',`// Reject source colour that straddles a foreground/background depth edge.
     // Linear colour filtering must not smear a TV or window frame onto the city.
     vec2 texel=1./vec2(textureSize(depthImage,0));
@@ -84,13 +85,13 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
      visible*=1.-smoothstep(tolerance*2.,tolerance*6.,abs(neighbourDistance-sourceDistance));
     }
     vec3 colour=mix(`);
-   if((old as T.MeshStandardMaterial).alphaMap)visibilityCode=visibilityCode.replace('return vec4(colour*visible*weight,visible*weight);','visible*=1.-smoothstep(.28,.45,dot(colour,vec3(.2126,.7152,.0722)));return vec4(colour*visible*weight,visible*weight);');
+   if((old as T.MeshStandardMaterial).alphaMap&&!stableLeaves)visibilityCode=visibilityCode.replace('return vec4(colour*visible*weight,visible*weight);','visible*=1.-smoothstep(.28,.45,dot(colour,vec3(.2126,.7152,.0722)));return vec4(colour*visible*weight,visible*weight);');
    shader.fragmentShader=visibilityCode+shader.fragmentShader;
    if(!water&&old instanceof T.MeshStandardMaterial&&!(old as T.MeshPhysicalMaterial).transmission){
     // The final preserved-lighting mix already replaces these pixels completely.
     // Skip lights/IBL/scattering only in that exact case; keep the full PBR path
     // for disocclusions and incomplete coverage. Source pixels stay identical.
-    shader.fragmentShader=shader.fragmentShader.replace('#include <lights_physical_fragment>',`
+    shader.fragmentShader=shader.fragmentShader.replace('#include <alphahash_fragment>',`#include <alphahash_fragment>
      vec4 nativeFastA=readNativeLighting(nativeColour0,nativeDepth0,nativeVP0,nativeNF0,nativeWeight0);
      vec4 nativeFastB=readNativeLighting(nativeColour1,nativeDepth1,nativeVP1,nativeNF1,nativeWeight1);
      float nativeFastCoverage=nativeFastA.a+nativeFastB.a;
@@ -102,12 +103,11 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
       #include <dithering_fragment>
       return;
      }
-     #include <lights_physical_fragment>
     `);
    }
    const output=water?applyGLSL.replace('clamp(nativeCoverage*2.,0.,1.)','clamp(nativeCoverage*2.,0.,mix(.86,1.,smoothstep(80.,250.,length(vNativeLightingWorld-cameraPosition))))'):applyGLSL;
    if(water){const end=shader.fragmentShader.lastIndexOf('}');shader.fragmentShader=shader.fragmentShader.slice(0,end)+output+'\n'+shader.fragmentShader.slice(end);}
-   else if(shader.fragmentShader.includes('#include <dithering_fragment>'))shader.fragmentShader=shader.fragmentShader.replace('#include <dithering_fragment>',output+'\n#include <dithering_fragment>');
+   else if(shader.fragmentShader.includes('#include <dithering_fragment>')){const marker='#include <dithering_fragment>',at=shader.fragmentShader.lastIndexOf(marker);shader.fragmentShader=shader.fragmentShader.slice(0,at)+output+'\n'+shader.fragmentShader.slice(at);}
    else if(shader.fragmentShader.includes('#include <colorspace_fragment>'))shader.fragmentShader=shader.fragmentShader.replace('#include <colorspace_fragment>','#include <colorspace_fragment>\n'+output);
    else throw Error('Unrecognized native lighting material output');
   };
@@ -119,7 +119,7 @@ export async function attachBakedLightingV179(scene:T.Scene,manifestPath:string,
   const original=Array.isArray(object.material)?object.material:[object.material];
   const mapped=original.map(m=>{
    if(m.transparent||!m.depthWrite&&!object.userData.nativeLightingSurface||(m as any).userData?.materialFamily==='paper')return m;
-   if(m instanceof T.MeshStandardMaterial||m instanceof T.ShaderMaterial&&('photo'in m.uniforms||object.userData.nativeLightingSurface||object.userData.coastalWater))return patch(m,!!object.userData.coastalWater);
+   if(m instanceof T.MeshStandardMaterial||m instanceof T.MeshLambertMaterial||m instanceof T.ShaderMaterial&&('photo'in m.uniforms||object.userData.nativeLightingSurface||object.userData.coastalWater))return patch(m,!!object.userData.coastalWater);
    return m;
   });object.material=Array.isArray(object.material)?mapped:mapped[0];
  });

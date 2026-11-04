@@ -1,0 +1,10 @@
+{
+  "source": "assets/directory-v119/handwriting.ttf",
+  "target": "assets/browser-v185/fonts/directory-hand.woff2",
+  "sourceBytes": 5857936,
+  "bytes": 603820,
+  "sourceGlyphs": 7015,
+  "retainedGlyphs": 1492,
+  "requiredSourceCharactersPreserved": true,
+  "sourceUnmodifiedSHA256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb"
+}

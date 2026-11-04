@@ -39,7 +39,7 @@ export function createGullsV158(scene:T.Scene,clock:{value:number},state:any,cam
  const hash=(n:number)=>{const q=Math.sin(n*127.1+31.7)*43758.5453;return q-Math.floor(q);};
  // Different closed, centripetal splines have precomputed arc-length tables. Flight speed no longer
  // depends on the random distance between two anchors, and no bird is attached to the camera.
- const tracks=birds.map((_bird,i)=>{const points:T.Vector3[]=[];const cx=-4+hash(i*7+2)*17,cz=49+hash(i*7+3)*4,rx=31+hash(i+23)*12,rz=18+hash(i+37)*3;
+ const tracks=birds.map((_bird,i)=>{const points:T.Vector3[]=[];const cx=-4+hash(i*7+2)*17,cz=27+hash(i*7+3)*3,rx=25+hash(i+23)*7,rz=13+hash(i+37)*2;
   for(let k=0;k<11;k++){const a=k/11*Math.PI*2+hash(i+10)*6.28,r=Math.sin(a*2+i*1.3)*3;points.push(new T.Vector3(cx+Math.cos(a)*(rx+r),8.4+Math.sin(a*2+i)*2.4+Math.sin(a*3+i*1.7)*.7,cz+Math.sin(a)*(rz+Math.sin(a*3+i)*.8)));}
   const curve=new T.CatmullRomCurve3(points,true,'centripetal');curve.arcLengthDivisions=768;curve.updateArcLengths();return{curve,length:curve.getLength(),speed:8.5+(i%4)*1.15,offset:i*.139+hash(i+3)*.04,sign:i%2?-1:1};});
  const pos=new T.Vector3(),next=new T.Vector3(),later=new T.Vector3(),velocity=new T.Vector3(),after=new T.Vector3(),right=new T.Vector3(),up=new T.Vector3(),worldUp=new T.Vector3(0,1,0),basis=new T.Matrix4(),desired=new T.Quaternion(),roll=new T.Quaternion(),zAxis=new T.Vector3(0,0,1);

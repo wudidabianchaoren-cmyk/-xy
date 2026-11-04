@@ -1,0 +1,177 @@
+{
+  "version": 185,
+  "url": "https://zaojing-wxy.netlify.app",
+  "deployId": "6aea93d2d423076a58d663df",
+  "published_at": "2026-11-04T02:22:45.589Z",
+  "productionVerified": false,
+  "artifactHashes": [
+    {
+      "path": "index.html",
+      "bytes": 34259,
+      "expected": "85eae44e3d1533312d247132c62b2ebb4637f7f8",
+      "actual": "85eae44e3d1533312d247132c62b2ebb4637f7f8",
+      "match": true
+    },
+    {
+      "path": "v31.html",
+      "bytes": 34259,
+      "expected": "85eae44e3d1533312d247132c62b2ebb4637f7f8",
+      "actual": "85eae44e3d1533312d247132c62b2ebb4637f7f8",
+      "match": true
+    },
+    {
+      "path": "browser-runtime-v180.js",
+      "bytes": 20140,
+      "expected": "fda872399eaf51fa78623dc2b1ef7ee02e65f647",
+      "actual": "fda872399eaf51fa78623dc2b1ef7ee02e65f647",
+      "match": true
+    },
+    {
+      "path": "browser-resources-v180.js",
+      "bytes": 44087,
+      "expected": "7282e091f897b7c9c00c40a7ba014e609478a951",
+      "actual": "7282e091f897b7c9c00c40a7ba014e609478a951",
+      "match": true
+    },
+    {
+      "path": "navigation-v152.js",
+      "bytes": 20022,
+      "expected": "e8d7df6c4f83d115c68933733948d7180a3a9cc8",
+      "actual": "e8d7df6c4f83d115c68933733948d7180a3a9cc8",
+      "match": true
+    },
+    {
+      "path": "scene-dist/directory-v144/app.js",
+      "bytes": 50,
+      "expected": "f4b392bb1adead26eeceb7aae880fc0a0429e4fb",
+      "actual": "f4b392bb1adead26eeceb7aae880fc0a0429e4fb",
+      "match": true
+    },
+    {
+      "path": "scene-dist/browser-v185/directory-app.js",
+      "bytes": 164261,
+      "expected": "ffabcaf5b9f23c05871884534e296f0360a999b6",
+      "actual": "ffabcaf5b9f23c05871884534e296f0360a999b6",
+      "match": true
+    },
+    {
+      "path": "scene-dist/mythology-web-v165.js",
+      "bytes": 54,
+      "expected": "6d33e5e32ae71af70e3c8301f2f6914d8027da8d",
+      "actual": "6d33e5e32ae71af70e3c8301f2f6914d8027da8d",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/room-atlas/layout.json",
+      "bytes": 43044,
+      "expected": "2dded3308847d8600e789e0bd466280ef2eedc58",
+      "actual": "2dded3308847d8600e789e0bd466280ef2eedc58",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/room-atlas/on.webp",
+      "bytes": 4305708,
+      "expected": "ccf54d564c1f337cd0767ca67d577e2614f539c9",
+      "actual": "ccf54d564c1f337cd0767ca67d577e2614f539c9",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/room-atlas/off.webp",
+      "bytes": 3342062,
+      "expected": "b9fbb320ca0e8d52e517102a7ebaf065778f00e4",
+      "actual": "b9fbb320ca0e8d52e517102a7ebaf065778f00e4",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/22aac18f1d27b9d20025.js",
+      "bytes": 31810,
+      "expected": "803517af88b3ff67def3cdf756bcb96ee07d5005",
+      "actual": "803517af88b3ff67def3cdf756bcb96ee07d5005",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/2ce833e131f49522f1f8.js",
+      "bytes": 1480240,
+      "expected": "f3a5a768b968b25d9eb591b2a22e93712201aad2",
+      "actual": "f3a5a768b968b25d9eb591b2a22e93712201aad2",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/44d2fc8acb8d85821d6b.js",
+      "bytes": 21848,
+      "expected": "df81a2111d25839a9ebfbf9a10fb32aaba573ba2",
+      "actual": "df81a2111d25839a9ebfbf9a10fb32aaba573ba2",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/47ece8891985f106a376.js",
+      "bytes": 20523,
+      "expected": "4b3cfb97d81cf35dbe753daa31c9352ca03d2834",
+      "actual": "4b3cfb97d81cf35dbe753daa31c9352ca03d2834",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/4d49b407a6c31daf083e.js",
+      "bytes": 21374,
+      "expected": "8f70c6d23c5c255ca59e18b7330ff7c0eab6144b",
+      "actual": "8f70c6d23c5c255ca59e18b7330ff7c0eab6144b",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/5b06fb0a07d29ba900be.js",
+      "bytes": 37376,
+      "expected": "c11f7000c0d3a9383fe4d4c74d479c6e0ea7b1c9",
+      "actual": "c11f7000c0d3a9383fe4d4c74d479c6e0ea7b1c9",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/804acbf1112e139268ee.js",
+      "bytes": 3220,
+      "expected": "995eb186ed766c2498db90f57c3bf252f5c5c5f6",
+      "actual": "995eb186ed766c2498db90f57c3bf252f5c5c5f6",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/9b9dd171a1101af70c6b.js",
+      "bytes": 20836,
+      "expected": "a5ae7672bf2c48b6082ea9d4d4f75b36144427fd",
+      "actual": "a5ae7672bf2c48b6082ea9d4d4f75b36144427fd",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/e7bb6fd7c399dd7130ee.js",
+      "bytes": 4821,
+      "expected": "2a1146951fc3a1381bebf3795e2a32c4ea7a776c",
+      "actual": "2a1146951fc3a1381bebf3795e2a32c4ea7a776c",
+      "match": true
+    },
+    {
+      "path": "assets/browser-v185/packed/f692640768749e8249e4.js",
+      "bytes": 64234,
+      "expected": "4166b509af43e147ebfcd4977403699ebe9b055a",
+      "actual": "4166b509af43e147ebfcd4977403699ebe9b055a",
+      "match": true
+    }
+  ],
+  "publicFlowPass": true,
+  "publicSteps": 12,
+  "publicErrors": [],
+  "publicConsole": [],
+  "publicHTTP": [],
+  "stop_builds": true,
+  "paidResources": false,
+  "annualBudgetCNY": 20,
+  "qualityApproved": false,
+  "allRequirementsComplete": false,
+  "unresolved": [
+    "Fresh formal-origin entry: authored films completed around82s, live-home wait then timed out at263.5s; home remained preparing representative GPU programs. No sampled JS/HTTP error. This does not meet loading/stability target.",
+    "Public cold entry still exceeds authored36second films",
+    "Myth cold preparation still too slow",
+    "Integrated GPU mythology frame rate below mature fluidity",
+    "Native-field seams and browser/native visual differences remain",
+    "Universal stability and geographic access not established"
+  ],
+  "productionArtifactHashesVerified": true,
+  "productionRuntimeSmokePass": false,
+  "productionRuntimeSmokeFailure": "Fresh formal-origin entry: authored films completed around82s, live-home wait then timed out at263.5s; home remained preparing representative GPU programs. No sampled JS/HTTP error. This does not meet loading/stability target."
+}
