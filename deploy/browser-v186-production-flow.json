@@ -1,0 +1,3240 @@
+{
+  "origin": "https://zaojing-wxy.netlify.app",
+  "errors": [],
+  "console": [],
+  "http": [],
+  "steps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 63832,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 0,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films"
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 768764040,
+          "total": 791933368
+        }
+      }
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 19788,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          }
+        ],
+        "memory": {
+          "used": 820883743,
+          "total": 888379227
+        }
+      }
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 4910,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "navigation": {
+          "version": 152,
+          "transitions": 1,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live"
+          },
+          "portalDepth": 1
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": false
+            }
+          }
+        ],
+        "memory": {
+          "used": 836792371,
+          "total": 888359063
+        }
+      }
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 78863,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 2,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 2,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": false,
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1132697061,
+          "total": 1199549333
+        }
+      }
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 5812,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "portal-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live portfolio-portal-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1137053863,
+          "total": 1200715683
+        }
+      }
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 30105,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 4,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1043508164,
+          "total": 1115517716
+        }
+      }
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 28829,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 5,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1055028477,
+          "total": 1120292501
+        }
+      }
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 19318,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 6,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1048605236,
+          "total": 1069388084
+        }
+      }
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 16991,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 7,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1079877741,
+          "total": 1097679721
+        }
+      }
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 26716,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 8,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1082484150,
+          "total": 1098267190
+        }
+      }
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 28519,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-open",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active works-orbit-open"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1056562622,
+          "total": 1069812078
+        }
+      }
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 3583,
+      "state": {
+        "title": "\u9020\u5883\u624b\u8bb0 \u00b7 \u5434\u7fd4\u5b87\u4f5c\u54c1\u96c6",
+        "body": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active",
+        "home": true,
+        "homePhases": [
+          {
+            "name": "module start",
+            "at": 7718.700000047684
+          },
+          {
+            "name": "WebGL context ready",
+            "at": 7734.800000071526
+          },
+          {
+            "name": "native decoded",
+            "at": 17171.700000047684
+          },
+          {
+            "name": "courtyard geometry prepared",
+            "at": 17752.5
+          },
+          {
+            "name": "entry film released shader preparation",
+            "at": 53312.5
+          },
+          {
+            "name": "surface shaders compiled",
+            "at": 53685.700000047684
+          },
+          {
+            "name": "textures and environment ready",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "entry film released GPU uploads",
+            "at": 53685.800000071526
+          },
+          {
+            "name": "colour buffers uploaded",
+            "at": 59595.200000047684
+          },
+          {
+            "name": "geometry buffers uploaded",
+            "at": 59595.60000002384
+          },
+          {
+            "name": "postprocess shaders compiled",
+            "at": 59617.200000047684
+          },
+          {
+            "name": "complete lighting variants prepared",
+            "at": 59845
+          },
+          {
+            "name": "live frame revealed",
+            "at": 59896.60000002384
+          }
+        ],
+        "homeTextures": {
+          "requested": 26,
+          "finished": 26,
+          "failed": [],
+          "mode": "compile unchanged materials while original images download"
+        },
+        "room": true,
+        "navigation": {
+          "version": 152,
+          "transitions": 9,
+          "returns": 0,
+          "bottomReady": false,
+          "returning": false,
+          "mythWarmPolicy": "prepare on reading-shelf intent, without competing with work films",
+          "surfaceRecovery": {
+            "reason": "v31:works-orbit-close",
+            "introActive": false,
+            "introPreparing": false,
+            "introFinished": true,
+            "rootHidden": false,
+            "classes": "home-architecture-only is-home-architecture-live experience-entered v29-live is-paper-reading directory-section-active"
+          },
+          "portalDepth": 0,
+          "lastMythEntryMs": 11.200000047683716,
+          "lastMythReused": true,
+          "mythWarmReady": true,
+          "mythWarmMs": 86950.80000007153,
+          "lastMythSceneReadyMs": 79182.30000007153
+        },
+        "frames": [
+          {
+            "src": "https://zaojing-wxy.netlify.app/directory-credits.html?v=32.170&embedded=1",
+            "href": "about:blank",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "",
+            "href": "about:srcdoc",
+            "navigationReady": false,
+            "hidden": false,
+            "reading": null,
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+            "href": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": {
+              "loading": false,
+              "opened": false
+            },
+            "myth": null
+          },
+          {
+            "src": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1",
+            "href": "https://zaojing-wxy.netlify.app/mythology.html?v=32.170&portal=1&prewarm=1&renderer=web&nativeLightfield=1&homeRenderer=web&roomAtlas185=1&roomAO=0",
+            "navigationReady": true,
+            "hidden": true,
+            "cached": "true",
+            "reading": null,
+            "myth": {
+              "ready": true
+            }
+          }
+        ],
+        "memory": {
+          "used": 1058964140,
+          "total": 1072902432
+        }
+      }
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/audio/wildflowers.mp3",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/audio/wildflowers.mp3",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/works/physical-universe-v103/film.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/2ccdd6e0115f2b1f/part-0086.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/2ccdd6e0115f2b1f/part-0087.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/2ccdd6e0115f2b1f/part-0085.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/22289cb489cd305a/part-0010.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/22289cb489cd305a/part-0011.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/22289cb489cd305a/part-0012.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/22289cb489cd305a/part-0064.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/22289cb489cd305a/part-0063.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/part-0013.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/part-0129.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/part-0131.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/part-0130.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/part-0128.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/life-purpose/v32-72/life-purpose-with-music.mp4",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0008.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0009.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0010.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0011.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/.netlify/scripts/hud?variant=public",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0124.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0125.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/da442cdc0d636adb/part-0123.m4s",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "native": [],
+  "entry": {
+    "milliseconds": 62274.700000047684,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 484,
+      "droppedVideoFrames": 6
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 11
+    },
+    "homeReady": true,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "liveEntry": {
+    "at": 62312.89999997616,
+    "phases": [
+      {
+        "name": "module start",
+        "at": 7718.700000047684
+      },
+      {
+        "name": "WebGL context ready",
+        "at": 7734.800000071526
+      },
+      {
+        "name": "native decoded",
+        "at": 17171.700000047684
+      },
+      {
+        "name": "courtyard geometry prepared",
+        "at": 17752.5
+      },
+      {
+        "name": "entry film released shader preparation",
+        "at": 53312.5
+      },
+      {
+        "name": "surface shaders compiled",
+        "at": 53685.700000047684
+      },
+      {
+        "name": "textures and environment ready",
+        "at": 53685.800000071526
+      },
+      {
+        "name": "entry film released GPU uploads",
+        "at": 53685.800000071526
+      },
+      {
+        "name": "colour buffers uploaded",
+        "at": 59595.200000047684
+      },
+      {
+        "name": "geometry buffers uploaded",
+        "at": 59595.60000002384
+      },
+      {
+        "name": "postprocess shaders compiled",
+        "at": 59617.200000047684
+      },
+      {
+        "name": "complete lighting variants prepared",
+        "at": 59845
+      },
+      {
+        "name": "live frame revealed",
+        "at": 59896.60000002384
+      }
+    ],
+    "textures": {
+      "requested": 26,
+      "finished": 26,
+      "failed": [],
+      "mode": "compile unchanged materials while original images download"
+    },
+    "discoveryButtons": 4
+  },
+  "desktopFilm": {
+    "time": 1.575241,
+    "frames": 371,
+    "calendar": {
+      "date": "2026-11-04",
+      "day": "4",
+      "month": "November",
+      "weekday": "Wednesday",
+      "timeZone": "Asia/Shanghai",
+      "live": true
+    },
+    "native": false
+  },
+  "films0": [
+    {
+      "id": "projectFilm",
+      "time": 3.663235,
+      "ready": 4,
+      "width": 1280,
+      "height": 546,
+      "duration": 139.70158700000002,
+      "midpointTime": 70.143416,
+      "sustained": {
+        "wallSeconds": 6.089299999952316,
+        "mediaSeconds": 6.089629000000002,
+        "frames": null,
+        "dropped": null
+      }
+    }
+  ],
+  "films1": [
+    {
+      "id": "projectFilm",
+      "time": 1.748233,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 83.14782299999999,
+      "midpointTime": 41.89104,
+      "sustained": {
+        "wallSeconds": 6.117200000047684,
+        "mediaSeconds": 6.117649,
+        "frames": null,
+        "dropped": null
+      }
+    }
+  ],
+  "films2": [
+    {
+      "id": "projectFilm",
+      "time": 2.365532,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 208.721587,
+      "midpointTime": 104.67887,
+      "sustained": {
+        "wallSeconds": 6.066399999976158,
+        "mediaSeconds": 6.066406999999998,
+        "frames": null,
+        "dropped": null
+      }
+    }
+  ],
+  "films3": [
+    {
+      "id": "projectFilm",
+      "time": 1.700602,
+      "ready": 4,
+      "width": 1920,
+      "height": 1080,
+      "duration": 18,
+      "midpointTime": 9.304477,
+      "sustained": {
+        "wallSeconds": 6.100700000047683,
+        "mediaSeconds": 6.100552,
+        "frames": null,
+        "dropped": null
+      }
+    },
+    {
+      "id": "lifePurposeVideo",
+      "time": 1.745834,
+      "ready": 4,
+      "width": 1600,
+      "height": 900,
+      "duration": 50,
+      "midpointTime": 25.294111,
+      "sustained": {
+        "wallSeconds": 6.121,
+        "mediaSeconds": 6.123800999999997,
+        "frames": null,
+        "dropped": null
+      }
+    }
+  ],
+  "films4": [
+    {
+      "id": "projectFilm",
+      "time": 1.765599,
+      "ready": 4,
+      "width": 3360,
+      "height": 1440,
+      "duration": 191.375873,
+      "midpointTime": 96.024872,
+      "sustained": {
+        "wallSeconds": 6.116600000023842,
+        "mediaSeconds": 6.116084999999998,
+        "frames": null,
+        "dropped": null
+      }
+    }
+  ],
+  "homeFinal": {
+    "ready": true,
+    "renderer": "Three.js / original geometry and local PBR",
+    "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "native": false,
+    "interfaceReady": true,
+    "delivery": {
+      "version": 186,
+      "browserOnly": true,
+      "segmentedVideos": 0,
+      "assembledResources": 6,
+      "errors": [],
+      "legacyWorkerCleanup": {
+        "removed": 0,
+        "complete": true
+      },
+      "imagesPrepared": 24,
+      "progressiveMedia": [
+        {
+          "source": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/manifest.json",
+          "bytes": 6707738,
+          "requests": 17,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 27460.399999976158,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/manifest.json",
+          "bytes": 7362849,
+          "requests": 23,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 21813.700000047684,
+          "ready": true,
+          "failed": false
+        },
+        {
+          "source": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/fd6a349ede716b6a/manifest.json",
+          "bytes": 8722085,
+          "requests": 17,
+          "retries": 0,
+          "seeks": 0,
+          "firstAppendAt": 200984.5,
+          "ready": true,
+          "failed": false
+        }
+      ]
+    },
+    "retained": true
+  },
+  "resourceTiming": [
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-000.bin",
+      "duration": 1853.5,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-001.bin",
+      "duration": 3785.100000023842,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/audio-focus-v141.js?v=32.186",
+      "duration": 1032.8999999761581,
+      "bytes": 905
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/home-designed-intro-v160.js",
+      "duration": 3437.5,
+      "bytes": 3446
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/home-thought-line-v160.js",
+      "duration": 3569.7999999523163,
+      "bytes": 4011
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/home-world-v146.js",
+      "duration": 3552.3000000715256,
+      "bytes": 46521
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/scene-loader-v146.js",
+      "duration": 3440.7000000476837,
+      "bytes": 1555
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-32475FOM.js",
+      "duration": 3541.399999976158,
+      "bytes": 54939
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-C6N56PU3.js",
+      "duration": 3671.5,
+      "bytes": 100751
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-DGU5PTFW.js",
+      "duration": 3464.5,
+      "bytes": 14409
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-LZ7QSBR5.js",
+      "duration": 3704.399999976158,
+      "bytes": 171716
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-ME7QVHGR.js",
+      "duration": 3705,
+      "bytes": 520
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-MG6POSIJ.js",
+      "duration": 3461.5,
+      "bytes": 7827
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-NK3IH7V4.js",
+      "duration": 3440.4000000953674,
+      "bytes": 2494
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-RGYTE4B5.js",
+      "duration": 3594.5,
+      "bytes": 45539
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-R5XT465O.js",
+      "duration": 3666.3000000715256,
+      "bytes": 66497
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-RTTFH4P3.js",
+      "duration": 3555.5,
+      "bytes": 649
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-SXRZKL2H.js",
+      "duration": 3456.7999999523163,
+      "bytes": 688
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-W3TROUU3.js",
+      "duration": 3707.7999999523163,
+      "bytes": 5685
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-XL3CMSHR.js",
+      "duration": 3736.4000000953674,
+      "bytes": 10201
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-XM6DH2YI.js",
+      "duration": 3723.5,
+      "bytes": 9591
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-XM4RMFZ3.js",
+      "duration": 3724.2000000476837,
+      "bytes": 1104
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-YRQ74F3T.js",
+      "duration": 3731.6999999284744,
+      "bytes": 37476
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/scene-loader-v146.js?v=32.186",
+      "duration": 3374.0999999046326,
+      "bytes": 53
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/dock/home-designed-intro-v160.js?v=32.186",
+      "duration": 3402.6999999284744,
+      "bytes": 61
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/dock/exhibition-dock-v160.js?v=32.186",
+      "duration": 3403.399999976158,
+      "bytes": 57
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/directory-v144/app.js?v=32.186",
+      "duration": 3373.8000000715256,
+      "bytes": 50
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/home-creation-launch-v141.js?v=32.186",
+      "duration": 3404.2000000476837,
+      "bytes": 1258
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/site-refinements-v129.js?v=32.186",
+      "duration": 4620.300000071526,
+      "bytes": 1489
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/techtext-v153.js?v=32.186",
+      "duration": 3373.100000023842,
+      "bytes": 49
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/hobby-drift-v167.js?v=32.186",
+      "duration": 3373.399999976158,
+      "bytes": 52
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/home-thought-line-v160.js?v=32.186",
+      "duration": 3403.7000000476837,
+      "bytes": 58
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/refinements-v161.js?v=32.186",
+      "duration": 3403.899999976158,
+      "bytes": 608
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/.netlify/scripts/hud?variant=public",
+      "duration": 4557.300000071526,
+      "bytes": 10673
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/home-live-poster-v32-77.png",
+      "duration": 4124,
+      "bytes": 2263493
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/wordmark-v142/wordmark.ttf",
+      "duration": 3341.6999999284744,
+      "bytes": 4695
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v183/images/d6862ea204186288f90b-1280.webp",
+      "duration": 7957.899999976158,
+      "bytes": 2901520
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v183/images/45beb4b5eff4666246b3-1280.webp",
+      "duration": 18231.199999928474,
+      "bytes": 946642
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/geometry-delivery/7e16975108db213c0ef9ecc2-002.bin",
+      "duration": 5036.5,
+      "bytes": 2655205
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/geometry-delivery/c455d984619ad440b4742a32-000.bin",
+      "duration": 2262.600000023842,
+      "bytes": 1162847
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/exhibition-dock-v160.js",
+      "duration": 1210.5,
+      "bytes": 12855
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/heading-interaction-v157.js?v=32.157",
+      "duration": 2806.399999976158,
+      "bytes": 1000
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/directory-app.js",
+      "duration": 1195.7000000476837,
+      "bytes": 58567
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/techtext-v153.js",
+      "duration": 1195.2999999523163,
+      "bytes": 8809
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/hobby-drift-v167.js",
+      "duration": 1178.3000000715256,
+      "bytes": 3644
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v16/world-track.json",
+      "duration": 1372.3999999761581,
+      "bytes": 393644
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/home-world-v146.js?v=32.184",
+      "duration": 1139.3000000715256,
+      "bytes": 46521
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/f1c1ca57d221240f2118144e.avif",
+      "duration": 15666.899999976158,
+      "bytes": 1167046
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/7a917fde7616e6d944ebcdcf.webp",
+      "duration": 8728,
+      "bytes": 355936
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/fd2654a75471a5adb54a8966.webp",
+      "duration": 17686.5,
+      "bytes": 1378806
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 21907.600000023842,
+      "bytes": 2573376
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 22895.200000047684,
+      "bytes": 3085891
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/064aadedc37c6b8386f19d95.avif",
+      "duration": 10403.600000023842,
+      "bytes": 1832659
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 24791.800000071526,
+      "bytes": 4545235
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 13583.100000023842,
+      "bytes": 2870078
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/367eecd041a14d01853d0c5b.webp",
+      "duration": 21611.5,
+      "bytes": 2379556
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 11341.799999952316,
+      "bytes": 652441
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/a734e5926bddab54febbe837.webp",
+      "duration": 7658.299999952316,
+      "bytes": 296148
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 10575,
+      "bytes": 609525
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/deb7a3dccbcf3c63232a6f39.avif",
+      "duration": 24956.900000095367,
+      "bytes": 4965912
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/9242e59be05fa19c99b7f279.avif",
+      "duration": 18838.899999976158,
+      "bytes": 1630451
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/ca8ae6850dec30134624b83c.avif",
+      "duration": 23043.299999952316,
+      "bytes": 3095908
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/a473259e9d3b583100cb77b7.jpg",
+      "duration": 21301.100000023842,
+      "bytes": 2275944
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/3d1dd79242c34c98fa7a5666.avif",
+      "duration": 18772.200000047684,
+      "bytes": 1607858
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/40edce9d6c49355fad3d72ce.jpg",
+      "duration": 20376.200000047684,
+      "bytes": 2006484
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v23/material-calibration.json",
+      "duration": 3675.100000023842,
+      "bytes": 2579
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v180/clock-engraving-17eda6a1/part-000.bin",
+      "duration": 24686.399999976158,
+      "bytes": 4194304
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v180/clock-engraving-17eda6a1/part-001.bin",
+      "duration": 18169.5,
+      "bytes": 1379959
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/look-calibration.json",
+      "duration": 3677.0999999046326,
+      "bytes": 3272
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/bake-audit.json",
+      "duration": 4894.600000023842,
+      "bytes": 632
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/native-v24-prefiltered-v158.json",
+      "duration": 3805.5,
+      "bytes": 262
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/native-v24-prefiltered-v158.bin.gz",
+      "duration": 7191.600000023842,
+      "bytes": 201723
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shaders/home-programs.json",
+      "duration": 9875.600000023842,
+      "bytes": 486473
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/geometry-delivery/df2d97e1e0a32015be34a9b4-000.bin",
+      "duration": 3771,
+      "bytes": 30759
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/shared/934eaa61851a3c21fe784e56-000.bin",
+      "duration": 3647.899999976158,
+      "bytes": 28581
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/geometry-delivery/032cac85f53b6e8651b7c552-000.bin",
+      "duration": 5947.5,
+      "bytes": 83432
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/display-transform.json",
+      "duration": 4803.699999928474,
+      "bytes": 361
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/display-transform.bin",
+      "duration": 6253.099999904633,
+      "bytes": 143748
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/native-v165/home.jpg?v=32.165",
+      "duration": 13352.100000023842,
+      "bytes": 705603
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/transfer/ef5a077afd8fadc255d0.avif",
+      "duration": 28143.299999952316,
+      "bytes": 3168578
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/Marble012_rough_2k.jpg",
+      "duration": 28670.100000023842,
+      "bytes": 2166701
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/sandstone_cracks_diff_2k.jpg",
+      "duration": 30896.800000071526,
+      "bytes": 2870078
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/transfer/1b55932dd51c21b2337f.avif",
+      "duration": 31189.900000095367,
+      "bytes": 533660
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/sandstone_cracks_rough_2k.jpg",
+      "duration": 33516.10000002384,
+      "bytes": 1569280
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/sandstone_cracks_nor_gl_2k.jpg",
+      "duration": 32014.799999952316,
+      "bytes": 4545235
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/transfer/85ab21c309bd8f099915.avif",
+      "duration": 31742.699999928474,
+      "bytes": 3085891
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/transfer/5d8d876b666354a866f3.avif",
+      "duration": 31745.199999928474,
+      "bytes": 2573376
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/odyssey/wood_planks/wood_planks_diff_1k.jpg",
+      "duration": 33246.89999997616,
+      "bytes": 609525
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/odyssey/wood_planks/wood_planks_nor_gl_1k.jpg",
+      "duration": 33251.89999997616,
+      "bytes": 652441
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/white_sandstone_blocks_02_rough_2k.jpg",
+      "duration": 34220.199999928474,
+      "bytes": 2545799
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/odyssey/wood_planks/wood_planks_rough_1k.jpg",
+      "duration": 33359.800000071526,
+      "bytes": 299757
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-TMPYV7DU.js",
+      "duration": 322.3000000715256,
+      "bytes": 7298
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-01.webp",
+      "duration": 33940.5,
+      "bytes": 605542
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-02.webp",
+      "duration": 34255.90000009537,
+      "bytes": 298316
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-03.webp",
+      "duration": 34336.39999997616,
+      "bytes": 380998
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-04.webp",
+      "duration": 34457.300000071526,
+      "bytes": 266104
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-05.webp",
+      "duration": 34478.89999997616,
+      "bytes": 127628
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-06.webp",
+      "duration": 34507,
+      "bytes": 106468
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-08.webp",
+      "duration": 34568.199999928474,
+      "bytes": 141034
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-09.webp",
+      "duration": 34670.299999952316,
+      "bytes": 238268
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-10.webp",
+      "duration": 34900.89999997616,
+      "bytes": 461886
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/atmosphere-v172/atmosphere-11.webp",
+      "duration": 35076.5,
+      "bytes": 405472
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/progressive-media-v186.js",
+      "duration": 4980.299999952316,
+      "bytes": 2140
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/loading-study/opening-poster-v32-84.png",
+      "duration": 7482.100000023842,
+      "bytes": 247482
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/03-tile.webp",
+      "duration": 35020.60000002384,
+      "bytes": 128310
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/21-tile.webp",
+      "duration": 35061,
+      "bytes": 97698
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/08-tile.webp",
+      "duration": 35071.700000047684,
+      "bytes": 24298
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/10-tile.webp",
+      "duration": 35095.60000002384,
+      "bytes": 55816
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/12-tile.webp",
+      "duration": 35135.10000002384,
+      "bytes": 91114
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/01-tile.webp",
+      "duration": 35142.5,
+      "bytes": 16646
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/02-tile.webp",
+      "duration": 35283.799999952316,
+      "bytes": 48430
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/06-tile.webp",
+      "duration": 35510.89999997616,
+      "bytes": 95022
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/19-tile.webp",
+      "duration": 35584.699999928474,
+      "bytes": 68946
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/17-tile.webp",
+      "duration": 35633.799999952316,
+      "bytes": 100818
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/native-v164/room.jpg?v=32.164",
+      "duration": 36042.60000002384,
+      "bytes": 548298
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/directory-hand-2JQHWOL5.woff2",
+      "duration": 10515.899999976158,
+      "bytes": 603820
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/draco/draco_wasm_wrapper.js",
+      "duration": 6822.899999976158,
+      "bytes": 10969
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/home/draco/draco_decoder.wasm",
+      "duration": 7125.100000023842,
+      "bytes": 56886
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0000.m4s",
+      "duration": 14556.100000023842,
+      "bytes": 1088868
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0001.m4s",
+      "duration": 12488.899999976158,
+      "bytes": 479008
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0002.m4s",
+      "duration": 13109.199999928474,
+      "bytes": 688822
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0003.m4s",
+      "duration": 9713.100000023842,
+      "bytes": 309264
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0000.m4s",
+      "duration": 8887.600000023842,
+      "bytes": 160762
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0001.m4s",
+      "duration": 9086.200000047684,
+      "bytes": 211524
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0002.m4s",
+      "duration": 9353.899999976158,
+      "bytes": 266231
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0003.m4s",
+      "duration": 10125.600000023842,
+      "bytes": 382705
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-ao-0.png",
+      "duration": 28834.600000023842,
+      "bytes": 500917
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-ao-1.png",
+      "duration": 29055.299999952316,
+      "bytes": 349089
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-ao-2.png",
+      "duration": 29362.299999952316,
+      "bytes": 201116
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-BAB33W6C.js",
+      "duration": 8223.600000023842,
+      "bytes": 9585
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0004.m4s",
+      "duration": 6722.599999904633,
+      "bytes": 411862
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0005.m4s",
+      "duration": 5922.099999904633,
+      "bytes": 275754
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0006.m4s",
+      "duration": 5647.600000023842,
+      "bytes": 260411
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0007.m4s",
+      "duration": 7467.799999952316,
+      "bytes": 307719
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/browser-v186/shared-RUKHF5KC.js",
+      "duration": 5830.299999952316,
+      "bytes": 15314
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0004.m4s",
+      "duration": 6443,
+      "bytes": 1092500
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0005.m4s",
+      "duration": 6431.600000023842,
+      "bytes": 539955
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0008.m4s",
+      "duration": 4581.100000023842,
+      "bytes": 47057
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0009.m4s",
+      "duration": 5354.899999976158,
+      "bytes": 658991
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0010.m4s",
+      "duration": 5253.300000071526,
+      "bytes": 538224
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0011.m4s",
+      "duration": 3593.2000000476837,
+      "bytes": 366184
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v22/courtyard-cavity-volume.json",
+      "duration": 11401.5,
+      "bytes": 483
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v22/courtyard-cavity-volume.bin",
+      "duration": 11500.300000071526,
+      "bytes": 122880
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0012.m4s",
+      "duration": 1067.3000000715256,
+      "bytes": 418007
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0013.m4s",
+      "duration": 2995.5,
+      "bytes": 283305
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0014.m4s",
+      "duration": 3149.600000023842,
+      "bytes": 613925
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0015.m4s",
+      "duration": 2879.399999976158,
+      "bytes": 630552
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0016.m4s",
+      "duration": 3159.2000000476837,
+      "bytes": 570716
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0017.m4s",
+      "duration": 1761.7999999523163,
+      "bytes": 115114
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0018.m4s",
+      "duration": 2042.2000000476837,
+      "bytes": 447341
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0019.m4s",
+      "duration": 2181.399999976158,
+      "bytes": 318866
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0020.m4s",
+      "duration": 2123.2000000476837,
+      "bytes": 72523
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v186/media/1be16e3218752244/part-0021.m4s",
+      "duration": 801.8000000715256,
+      "bytes": 3806
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-indirect-0.bin.z",
+      "duration": 1632.8999999761581,
+      "bytes": 2948796
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-indirect-1.bin.z",
+      "duration": 2157.2000000476837,
+      "bytes": 2335070
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/reference-architecture-v24/architecture-indirect-2.bin.z",
+      "duration": 2548.100000023842,
+      "bytes": 1646302
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/05-tile.webp",
+      "duration": 2520.2999999523163,
+      "bytes": 20352
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/04-tile.webp",
+      "duration": 2537.5,
+      "bytes": 36642
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/11-tile.webp",
+      "duration": 3685.8000000715256,
+      "bytes": 90396
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/13-tile.webp",
+      "duration": 3958.399999976158,
+      "bytes": 110424
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/14-tile.webp",
+      "duration": 4210.900000095367,
+      "bytes": 45308
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/22-tile.webp",
+      "duration": 4217.399999976158,
+      "bytes": 17576
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/09-tile.webp",
+      "duration": 4162.100000023842,
+      "bytes": 30834
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/15-tile.webp",
+      "duration": 4320.600000023842,
+      "bytes": 56070
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/16-tile.webp",
+      "duration": 4346.799999952316,
+      "bytes": 50114
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/23-tile.webp",
+      "duration": 4359.099999904633,
+      "bytes": 28544
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/24-tile.webp",
+      "duration": 4624.599999904633,
+      "bytes": 104560
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/25-tile.webp",
+      "duration": 4694.200000047684,
+      "bytes": 28068
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/26-tile.webp",
+      "duration": 4835.100000023842,
+      "bytes": 25730
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/07-tile.webp",
+      "duration": 4856.5,
+      "bytes": 23076
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/18-tile.webp",
+      "duration": 4882.399999976158,
+      "bytes": 25542
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/20-tile.webp",
+      "duration": 5129.200000047684,
+      "bytes": 52922
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/27-tile.webp",
+      "duration": 7387.700000047684,
+      "bytes": 26824
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/photography-v170/28-tile.webp",
+      "duration": 5070.400000095367,
+      "bytes": 19968
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0006.m4s",
+      "duration": 1174.1000000238419,
+      "bytes": 677852
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0007.m4s",
+      "duration": 840.5,
+      "bytes": 17898
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0008.m4s",
+      "duration": 1488.7999999523163,
+      "bytes": 466508
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0009.m4s",
+      "duration": 1488.5,
+      "bytes": 10632
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/ue-v159/clock-mix-ue5-cubeuv.json",
+      "duration": 2607.7000000476837,
+      "bytes": 600
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/ue-v159/clock-mix-ue5-cubeuv.bin.gz",
+      "duration": 4813.200000047684,
+      "bytes": 225523
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0010.m4s",
+      "duration": 1002.9000000953674,
+      "bytes": 352708
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0011.m4s",
+      "duration": 833,
+      "bytes": 15580
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0012.m4s",
+      "duration": 668,
+      "bytes": 360005
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0013.m4s",
+      "duration": 2407.1999999284744,
+      "bytes": 130713
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0014.m4s",
+      "duration": 1562,
+      "bytes": 475426
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/media/0232ba50007c7e9e/part-0015.m4s",
+      "duration": 2134.2999999523163,
+      "bytes": 1162
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/blender/home-camera-v32-84/camera-v84.json",
+      "duration": 1124.2000000476837,
+      "bytes": 328
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/v31-sand-story.js?v=32.183",
+      "duration": 602.7000000476837,
+      "bytes": 17102
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/craft-raised.webp",
+      "duration": 512.6000000238419,
+      "bytes": 53060
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/camera-operator.webp",
+      "duration": 430.60000002384186,
+      "bytes": 33030
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/applause-airplane.webp",
+      "duration": 498.8000000715256,
+      "bytes": 19216
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/craft-strike.webp",
+      "duration": 520.4000000953674,
+      "bytes": 47962
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/applause-open.webp",
+      "duration": 475,
+      "bytes": 32204
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/violin-duet.webp",
+      "duration": 468.5,
+      "bytes": 36368
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/violin-return.webp",
+      "duration": 540.1000000238419,
+      "bytes": 62940
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/european-castle-simple-v2.webp",
+      "duration": 1211.8999999761581,
+      "bytes": 94884
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/boxing-right-jab.webp",
+      "duration": 1236.3999999761581,
+      "bytes": 115020
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/boxing-left-jab.webp",
+      "duration": 1378.1999999284744,
+      "bytes": 119454
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/boxing-ring.webp",
+      "duration": 1409.7999999523163,
+      "bytes": 119672
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/envelope-volume-v32-72.png",
+      "duration": 2503.2000000476837,
+      "bytes": 1827291
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/craft-motion-atlas.webp",
+      "duration": 2585.8000000715256,
+      "bytes": 442456
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/applause-motion-atlas.webp",
+      "duration": 2638.600000023842,
+      "bytes": 318152
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/boxing-motion-atlas.webp",
+      "duration": 2154.399999976158,
+      "bytes": 1703180
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/violin-motion-atlas.webp",
+      "duration": 2758.899999976158,
+      "bytes": 702754
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/works/after-journey/cover-v32-92.webp",
+      "duration": 1760.1000000238419,
+      "bytes": 1354530
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/works/rural-return/poster.webp",
+      "duration": 1759.1000000238419,
+      "bytes": 17938
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/journey/previews/journey-mountain-valley.webp",
+      "duration": 1763.3999999761581,
+      "bytes": 174082
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/journey/previews/mist-palace-dusk.webp",
+      "duration": 1759.3999999761581,
+      "bytes": 12286
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/room-atlas/layout.json",
+      "duration": 1394.8999999761581,
+      "bytes": 4389
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/room-static.glb",
+      "duration": 4254.299999952316,
+      "bytes": 2205652
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/room-lighting.json",
+      "duration": 1303.3999999761581,
+      "bytes": 4572
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v120/plant/potted-plant-02.glb",
+      "duration": 4055.899999976158,
+      "bytes": 3752232
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/room-collision.glb",
+      "duration": 5632,
+      "bytes": 4335328
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v123/remote-detail.glb",
+      "duration": 3897.3000000715256,
+      "bytes": 486708
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/room-atlas/on.webp",
+      "duration": 7580.200000047684,
+      "bytes": 4305708
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/browser-v185/room-atlas/off.webp",
+      "duration": 9012.300000071526,
+      "bytes": 3342062
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/room-off.png",
+      "duration": 12689,
+      "bytes": 3124633
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/room-lamp.png",
+      "duration": 12080.5,
+      "bytes": 1094829
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/room-tv.png",
+      "duration": 12699.399999976158,
+      "bytes": 1582941
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v119/berlin-night.jpg",
+      "duration": 13748.199999928474,
+      "bytes": 2674368
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/works/covers-v177/code-films.webp",
+      "duration": 11325,
+      "bytes": 487956
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/room-normal.png",
+      "duration": 11911.700000047684,
+      "bytes": 825693
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/odyssey/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "duration": 14727,
+      "bytes": 916843
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/odyssey/rough_linen/rough_linen_rough_1k.jpg",
+      "duration": 14729.399999976158,
+      "bytes": 1083725
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v123/plant/potted_plant_02_pot_diff_2k.jpg",
+      "duration": 15674.200000047684,
+      "bytes": 596006
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v123/plant/potted_plant_02_pot_nor_gl_2k.jpg",
+      "duration": 15783,
+      "bytes": 494387
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v123/plant/potted_plant_02_pot_rough_2k.jpg",
+      "duration": 17207.100000023842,
+      "bytes": 426559
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/works/covers-v137/rural.webp",
+      "duration": 15989.299999952316,
+      "bytes": 422394
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/works/covers-v137/mid-autumn.webp",
+      "duration": 17927.800000071526,
+      "bytes": 602530
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/works/humid-southeast-asia/cover.webp",
+      "duration": 17640.100000023842,
+      "bytes": 401962
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/works/mid-autumn/still-live-stage.webp",
+      "duration": 17991.899999976158,
+      "bytes": 226042
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/works/covers-v161/code-films.webp",
+      "duration": 18126.800000071526,
+      "bytes": 274692
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/sand-story/camera-operator.webp",
+      "duration": 17837,
+      "bytes": 33030
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/home-lod-worker.js?v=32.75",
+      "duration": 60.799999952316284,
+      "bytes": 9417
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/chunk-AOQCOLWL.js",
+      "duration": 2492.7999999523163,
+      "bytes": 2012
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/scene-dist/chunk-CTVPEMRS.js",
+      "duration": 2555.3000000715256,
+      "bytes": 147900
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/reading.html?v=32.170&portal=1",
+      "duration": 1747.6999999284744,
+      "bytes": 39489
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/brass-normal.png",
+      "duration": 2681.899999976158,
+      "bytes": 277526
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/brass-roughness.png",
+      "duration": 3496.100000023842,
+      "bytes": 176095
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/aluminium-normal.png",
+      "duration": 3589.2999999523163,
+      "bytes": 224973
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/aluminium-roughness.png",
+      "duration": 3656.0999999046326,
+      "bytes": 159641
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/abs-normal.png",
+      "duration": 3824.3000000715256,
+      "bytes": 389797
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/abs-roughness.png",
+      "duration": 3905.2000000476837,
+      "bytes": 189601
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/paper-normal.png",
+      "duration": 4084,
+      "bytes": 418460
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/paper-roughness.png",
+      "duration": 4157.600000023842,
+      "bytes": 177168
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/porcelain-normal.png",
+      "duration": 4511.799999952316,
+      "bytes": 282688
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/porcelain-roughness.png",
+      "duration": 4578.799999952316,
+      "bytes": 164899
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/rubber-normal.png",
+      "duration": 4784.5,
+      "bytes": 483924
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/directory-v127/materials/rubber-roughness.png",
+      "duration": 4867.299999952316,
+      "bytes": 194572
+    },
+    {
+      "name": "https://zaojing-wxy.netlify.app/assets/reading/cinema-aesthetics/page-001.jpg",
+      "duration": 2714.7000000476837,
+      "bytes": 474206
+    }
+  ],
+  "pass": true
+}

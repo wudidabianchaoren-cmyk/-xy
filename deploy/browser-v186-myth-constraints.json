@@ -1,0 +1,913 @@
+{
+  "diagnosticOnly": true,
+  "publishedChanges": false,
+  "samples": [
+    {
+      "name": "unchanged-default",
+      "fps": 15.33895345923366,
+      "start": {
+        "at": 13438.100000023842,
+        "frames": 31,
+        "water": 2.345,
+        "birds": {
+          "count": 7,
+          "source": "V158 original solid procedural geometry",
+          "body3D": true,
+          "featherThickness": 0.02,
+          "wingJoints": 4,
+          "trianglesPerBird": 7616,
+          "totalTriangles": 53312,
+          "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+          "scale": [
+            0.36,
+            0.41
+          ],
+          "speeds": [
+            8.5,
+            9.65,
+            10.8,
+            11.95,
+            8.5,
+            9.65,
+            10.8
+          ],
+          "minimumSeaHeight": 5,
+          "maximumHeight": 11.7,
+          "time": 2.345,
+          "positions": [
+            [
+              -21.51477771126162,
+              8.63234561535864,
+              26.360725331573704
+            ],
+            [
+              -19.553928871508454,
+              9.27205073143328,
+              30.464201262393747
+            ],
+            [
+              27.84116075417344,
+              10.383725453269202,
+              20.75513906653707
+            ],
+            [
+              -6.73597087773501,
+              6.0576761081285975,
+              14.313086172908452
+            ],
+            [
+              20.703848883043804,
+              9.183556715561439,
+              19.672945103698005
+            ],
+            [
+              2.37448967311239,
+              11.08720881017081,
+              42.597589625896035
+            ],
+            [
+              -29.182680700281374,
+              7.0136735884985875,
+              30.87785696049508
+            ]
+          ],
+          "wingAngles": [
+            0.07464475536860116,
+            -0.011867689383840915,
+            -0.12556981906680814,
+            -0.05426685629904723,
+            -0.016353059992310296,
+            0.2190492950919615,
+            -0.45824147289579953
+          ]
+        }
+      },
+      "end": {
+        "at": 21456.900000095367,
+        "frames": 154,
+        "water": 10.378399999999994,
+        "birds": {
+          "count": 7,
+          "source": "V158 original solid procedural geometry",
+          "body3D": true,
+          "featherThickness": 0.02,
+          "wingJoints": 4,
+          "trianglesPerBird": 7616,
+          "totalTriangles": 53312,
+          "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+          "scale": [
+            0.36,
+            0.41
+          ],
+          "speeds": [
+            8.5,
+            9.65,
+            10.8,
+            11.95,
+            8.5,
+            9.65,
+            10.8
+          ],
+          "minimumSeaHeight": 5,
+          "maximumHeight": 11.7,
+          "time": 10.378399999999994,
+          "positions": [
+            [
+              34.858210635086536,
+              8.41901383890486,
+              27.893069758676248
+            ],
+            [
+              31.293987523338025,
+              8.073526500831287,
+              20.449921296544865
+            ],
+            [
+              -26.085501575269085,
+              10.622404142272734,
+              27.367769197244154
+            ],
+            [
+              27.928962011258275,
+              10.147948044755339,
+              20.48313218319241
+            ],
+            [
+              -19.377653207378923,
+              8.477856682427491,
+              33.877402956689
+            ],
+            [
+              1.8041174997131209,
+              10.57905570329991,
+              14.847828223739342
+            ],
+            [
+              35.94192799958681,
+              8.57649201165223,
+              32.176139800081586
+            ]
+          ],
+          "wingAngles": [
+            -0.49704930529776215,
+            -0.011329143539996714,
+            -0.43326441038246355,
+            0.21126873193260248,
+            -0.04909027986411269,
+            -0.0208172904840817,
+            -0.1132507383861613
+          ]
+        },
+        "performance": {
+          "frames": 154,
+          "calls": 207,
+          "triangles": 5467694,
+          "cpuMs": 12.799999952316284,
+          "gpuMs": 57.249635,
+          "geometries": 124,
+          "textures": 83,
+          "cpuP95Ms": 26.399999976158142
+        },
+        "shadow": {
+          "resolution": [
+            4096,
+            4096
+          ],
+          "staticCasters": 120,
+          "dynamicCasters": 462,
+          "prepared": 2,
+          "restores": 154,
+          "originalGeometry": true,
+          "active": true,
+          "restoredPixels": 1103930,
+          "fullPixels": 16777216
+        },
+        "reflection": {
+          "staticCaptures": 1,
+          "dynamicFrames": 69,
+          "originalGeometry": true,
+          "depthOcclusion": true
+        },
+        "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      }
+    },
+    {
+      "name": "diagnostic-frozen-shadow-map",
+      "fps": 15.832252917311992,
+      "start": {
+        "at": 21468.900000095367,
+        "frames": 154,
+        "water": 10.378399999999994,
+        "birds": {
+          "count": 7,
+          "source": "V158 original solid procedural geometry",
+          "body3D": true,
+          "featherThickness": 0.02,
+          "wingJoints": 4,
+          "trianglesPerBird": 7616,
+          "totalTriangles": 53312,
+          "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+          "scale": [
+            0.36,
+            0.41
+          ],
+          "speeds": [
+            8.5,
+            9.65,
+            10.8,
+            11.95,
+            8.5,
+            9.65,
+            10.8
+          ],
+          "minimumSeaHeight": 5,
+          "maximumHeight": 11.7,
+          "time": 10.378399999999994,
+          "positions": [
+            [
+              34.858210635086536,
+              8.41901383890486,
+              27.893069758676248
+            ],
+            [
+              31.293987523338025,
+              8.073526500831287,
+              20.449921296544865
+            ],
+            [
+              -26.085501575269085,
+              10.622404142272734,
+              27.367769197244154
+            ],
+            [
+              27.928962011258275,
+              10.147948044755339,
+              20.48313218319241
+            ],
+            [
+              -19.377653207378923,
+              8.477856682427491,
+              33.877402956689
+            ],
+            [
+              1.8041174997131209,
+              10.57905570329991,
+              14.847828223739342
+            ],
+            [
+              35.94192799958681,
+              8.57649201165223,
+              32.176139800081586
+            ]
+          ],
+          "wingAngles": [
+            -0.49704930529776215,
+            -0.011329143539996714,
+            -0.43326441038246355,
+            0.21126873193260248,
+            -0.04909027986411269,
+            -0.0208172904840817,
+            -0.1132507383861613
+          ]
+        }
+      },
+      "end": {
+        "at": 29490.5,
+        "frames": 281,
+        "water": 18.39799999999999,
+        "birds": {
+          "count": 7,
+          "source": "V158 original solid procedural geometry",
+          "body3D": true,
+          "featherThickness": 0.02,
+          "wingJoints": 4,
+          "trianglesPerBird": 7616,
+          "totalTriangles": 53312,
+          "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+          "scale": [
+            0.36,
+            0.41
+          ],
+          "speeds": [
+            8.5,
+            9.65,
+            10.8,
+            11.95,
+            8.5,
+            9.65,
+            10.8
+          ],
+          "minimumSeaHeight": 5,
+          "maximumHeight": 11.7,
+          "time": 18.39799999999999,
+          "positions": [
+            [
+              -20.658512200335416,
+              8.192811440101137,
+              28.641114508303126
+            ],
+            [
+              -7.466174085702765,
+              7.281659938610866,
+              39.487028376943215
+            ],
+            [
+              22.382442557067765,
+              7.144363112779679,
+              39.031897807745985
+            ],
+            [
+              5.621476639809476,
+              7.596914253067388,
+              42.684778101117594
+            ],
+            [
+              26.762908195567757,
+              6.948211483033481,
+              28.922436533350037
+            ],
+            [
+              13.923809494739434,
+              10.440665758516467,
+              42.952229117869365
+            ],
+            [
+              -21.84909177230081,
+              10.672410892158886,
+              20.479922061684352
+            ]
+          ],
+          "wingAngles": [
+            0.07546985080546038,
+            -0.02456002663820777,
+            -0.05971218025765747,
+            0.2766770015517883,
+            -0.028729418969714444,
+            -0.05865786814206356,
+            -0.0074530279432815545
+          ]
+        },
+        "performance": {
+          "frames": 281,
+          "calls": 161,
+          "triangles": 4976432,
+          "cpuMs": 19.899999976158142,
+          "gpuMs": 55.802656,
+          "geometries": 124,
+          "textures": 83,
+          "cpuP95Ms": 24.40000009536743
+        },
+        "shadow": {
+          "resolution": [
+            4096,
+            4096
+          ],
+          "staticCasters": 120,
+          "dynamicCasters": 462,
+          "prepared": 2,
+          "restores": 154,
+          "originalGeometry": true,
+          "active": true,
+          "restoredPixels": 1103930,
+          "fullPixels": 16777216
+        },
+        "reflection": {
+          "staticCaptures": 1,
+          "dynamicFrames": 124,
+          "originalGeometry": true,
+          "depthOcclusion": true
+        },
+        "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      }
+    },
+    {
+      "name": "diagnostic-frozen-reflection",
+      "fps": 16.110701752146955,
+      "start": {
+        "at": 29508.700000047684,
+        "frames": 281,
+        "water": 18.39799999999999,
+        "birds": {
+          "count": 7,
+          "source": "V158 original solid procedural geometry",
+          "body3D": true,
+          "featherThickness": 0.02,
+          "wingJoints": 4,
+          "trianglesPerBird": 7616,
+          "totalTriangles": 53312,
+          "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+          "scale": [
+            0.36,
+            0.41
+          ],
+          "speeds": [
+            8.5,
+            9.65,
+            10.8,
+            11.95,
+            8.5,
+            9.65,
+            10.8
+          ],
+          "minimumSeaHeight": 5,
+          "maximumHeight": 11.7,
+          "time": 18.39799999999999,
+          "positions": [
+            [
+              -20.658512200335416,
+              8.192811440101137,
+              28.641114508303126
+            ],
+            [
+              -7.466174085702765,
+              7.281659938610866,
+              39.487028376943215
+            ],
+            [
+              22.382442557067765,
+              7.144363112779679,
+              39.031897807745985
+            ],
+            [
+              5.621476639809476,
+              7.596914253067388,
+              42.684778101117594
+            ],
+            [
+              26.762908195567757,
+              6.948211483033481,
+              28.922436533350037
+            ],
+            [
+              13.923809494739434,
+              10.440665758516467,
+              42.952229117869365
+            ],
+            [
+              -21.84909177230081,
+              10.672410892158886,
+              20.479922061684352
+            ]
+          ],
+          "wingAngles": [
+            0.07546985080546038,
+            -0.02456002663820777,
+            -0.05971218025765747,
+            0.2766770015517883,
+            -0.028729418969714444,
+            -0.05865786814206356,
+            -0.0074530279432815545
+          ]
+        }
+      },
+      "end": {
+        "at": 37515.800000071526,
+        "frames": 410,
+        "water": 26.44549999999999,
+        "birds": {
+          "count": 7,
+          "source": "V158 original solid procedural geometry",
+          "body3D": true,
+          "featherThickness": 0.02,
+          "wingJoints": 4,
+          "trianglesPerBird": 7616,
+          "totalTriangles": 53312,
+          "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+          "scale": [
+            0.36,
+            0.41
+          ],
+          "speeds": [
+            8.5,
+            9.65,
+            10.8,
+            11.95,
+            8.5,
+            9.65,
+            10.8
+          ],
+          "minimumSeaHeight": 5,
+          "maximumHeight": 11.7,
+          "time": 26.44549999999999,
+          "positions": [
+            [
+              34.05209657685486,
+              7.518965496925552,
+              25.858963472646625
+            ],
+            [
+              17.109546617466364,
+              5.551546812399696,
+              14.867030215986793
+            ],
+            [
+              -2.775829063122092,
+              5.49568399200995,
+              15.345599949257874
+            ],
+            [
+              -21.962575970383895,
+              9.150483624448107,
+              26.976539003215642
+            ],
+            [
+              -20.87962138112574,
+              5.374941883299847,
+              23.39346844356993
+            ],
+            [
+              -9.737260851853906,
+              10.726062962823006,
+              16.862906623954682
+            ],
+            [
+              21.795803760512626,
+              11.13250161299887,
+              39.004956867724125
+            ]
+          ],
+          "wingAngles": [
+            0.28488261639816104,
+            -0.03966601548353282,
+            -0.05765386696488843,
+            -0.40651065590666735,
+            -0.05926857820730641,
+            0.3086366659006089,
+            -0.003121354120043926
+          ]
+        },
+        "performance": {
+          "frames": 410,
+          "calls": 167,
+          "triangles": 5006176,
+          "cpuMs": 3.799999952316284,
+          "gpuMs": 56.516041,
+          "geometries": 124,
+          "textures": 83,
+          "cpuP95Ms": 18.299999952316284
+        },
+        "shadow": {
+          "resolution": [
+            4096,
+            4096
+          ],
+          "staticCasters": 120,
+          "dynamicCasters": 462,
+          "prepared": 2,
+          "restores": 283,
+          "originalGeometry": true,
+          "active": true,
+          "restoredPixels": 1106960,
+          "fullPixels": 16777216
+        },
+        "reflection": {
+          "staticCaptures": 1,
+          "dynamicFrames": 124,
+          "originalGeometry": true,
+          "depthOcclusion": true
+        },
+        "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      }
+    },
+    {
+      "name": "diagnostic-no-leaves-or-meadow",
+      "fps": 23.549347720308145,
+      "start": {
+        "at": 37526.700000047684,
+        "frames": 410,
+        "water": 26.44549999999999,
+        "birds": {
+          "count": 7,
+          "source": "V158 original solid procedural geometry",
+          "body3D": true,
+          "featherThickness": 0.02,
+          "wingJoints": 4,
+          "trianglesPerBird": 7616,
+          "totalTriangles": 53312,
+          "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+          "scale": [
+            0.36,
+            0.41
+          ],
+          "speeds": [
+            8.5,
+            9.65,
+            10.8,
+            11.95,
+            8.5,
+            9.65,
+            10.8
+          ],
+          "minimumSeaHeight": 5,
+          "maximumHeight": 11.7,
+          "time": 26.44549999999999,
+          "positions": [
+            [
+              34.05209657685486,
+              7.518965496925552,
+              25.858963472646625
+            ],
+            [
+              17.109546617466364,
+              5.551546812399696,
+              14.867030215986793
+            ],
+            [
+              -2.775829063122092,
+              5.49568399200995,
+              15.345599949257874
+            ],
+            [
+              -21.962575970383895,
+              9.150483624448107,
+              26.976539003215642
+            ],
+            [
+              -20.87962138112574,
+              5.374941883299847,
+              23.39346844356993
+            ],
+            [
+              -9.737260851853906,
+              10.726062962823006,
+              16.862906623954682
+            ],
+            [
+              21.795803760512626,
+              11.13250161299887,
+              39.004956867724125
+            ]
+          ],
+          "wingAngles": [
+            0.28488261639816104,
+            -0.03966601548353282,
+            -0.05765386696488843,
+            -0.40651065590666735,
+            -0.05926857820730641,
+            0.3086366659006089,
+            -0.003121354120043926
+          ]
+        }
+      },
+      "end": {
+        "at": 45552.40000009537,
+        "frames": 599,
+        "water": 34.47869999999995,
+        "birds": {
+          "count": 7,
+          "source": "V158 original solid procedural geometry",
+          "body3D": true,
+          "featherThickness": 0.02,
+          "wingJoints": 4,
+          "trianglesPerBird": 7616,
+          "totalTriangles": 53312,
+          "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+          "scale": [
+            0.36,
+            0.41
+          ],
+          "speeds": [
+            8.5,
+            9.65,
+            10.8,
+            11.95,
+            8.5,
+            9.65,
+            10.8
+          ],
+          "minimumSeaHeight": 5,
+          "maximumHeight": 11.7,
+          "time": 34.47869999999995,
+          "positions": [
+            [
+              -19.40768899854403,
+              7.845869363732679,
+              30.48055317357523
+            ],
+            [
+              7.820191123320377,
+              6.484978920289784,
+              41.88690129544865
+            ],
+            [
+              -4.381344640543381,
+              7.3464416477126635,
+              44.033508971786254
+            ],
+            [
+              8.397296082450573,
+              9.415429982258782,
+              13.9981166198046
+            ],
+            [
+              21.810616896132522,
+              7.0991860664929805,
+              38.79211619713907
+            ],
+            [
+              25.36300808946212,
+              8.81207842649521,
+              40.397184499746054
+            ],
+            [
+              -6.3587162470303324,
+              9.701009335437849,
+              15.414990916167616
+            ]
+          ],
+          "wingAngles": [
+            -0.1930358060342487,
+            -0.23343790975943138,
+            -0.307439922034928,
+            -0.04446839462795843,
+            -0.045660673008683886,
+            -0.031788661451914224,
+            0.14068134658880901
+          ]
+        },
+        "performance": {
+          "frames": 599,
+          "calls": 171,
+          "triangles": 3382226,
+          "cpuMs": 16.200000047683716,
+          "gpuMs": 37.048801,
+          "geometries": 124,
+          "textures": 83,
+          "cpuP95Ms": 24.100000023841858
+        },
+        "shadow": {
+          "resolution": [
+            4096,
+            4096
+          ],
+          "staticCasters": 120,
+          "dynamicCasters": 462,
+          "prepared": 2,
+          "restores": 472,
+          "originalGeometry": true,
+          "active": true,
+          "restoredPixels": 1097008,
+          "fullPixels": 16777216
+        },
+        "reflection": {
+          "staticCaptures": 1,
+          "dynamicFrames": 180,
+          "originalGeometry": true,
+          "depthOcclusion": true
+        },
+        "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      }
+    }
+  ],
+  "errors": [],
+  "inventory": {
+    "meshes": 120,
+    "triangles": 5533564,
+    "largest": [
+      {
+        "name": "Mesh",
+        "triangles": 1176000,
+        "instances": 98,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "Mesh",
+        "triangles": 816000,
+        "instances": 34,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "Mesh",
+        "triangles": 725868,
+        "instances": 132,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "Mesh",
+        "triangles": 702900,
+        "instances": 132,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "V161 grounded fine coastal meadow",
+        "triangles": 647500,
+        "instances": 18500,
+        "skinned": false,
+        "shadow": false,
+        "materials": 1
+      },
+      {
+        "name": "Original animated crew / combined material V162 warm natural anatomical skin",
+        "triangles": 211848,
+        "instances": 1,
+        "skinned": true,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "Embedded_coastal_cliff_04",
+        "triangles": 180000,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "V145_coast_rocks_02",
+        "triangles": 180000,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "Embedded_coastal_cliff_02",
+        "triangles": 179999,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "V148_scan-envelope_bedrock_with_continuous_back_slope",
+        "triangles": 170072,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "Mesh",
+        "triangles": 100352,
+        "instances": 1,
+        "skinned": false,
+        "shadow": false,
+        "materials": 1
+      },
+      {
+        "name": "Original animated crew / combined material V162 interlocked iron mail",
+        "triangles": 59752,
+        "instances": 1,
+        "skinned": true,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "Mesh",
+        "triangles": 43588,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "Original animated crew / combined material V162 worn brown oxhide",
+        "triangles": 32144,
+        "instances": 1,
+        "skinned": true,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "V161 weathered limestone 3",
+        "triangles": 17400,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "V161 weathered limestone 0",
+        "triangles": 16500,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "V161 weathered limestone 5",
+        "triangles": 16200,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      },
+      {
+        "name": "V161 weathered limestone 2",
+        "triangles": 15600,
+        "instances": 1,
+        "skinned": false,
+        "shadow": true,
+        "materials": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "version": 186,
+  "codec": "byte-plane horizontal modulo256 prediction / gzip",
+  "originalInputsChanged": false,
+  "runtimeSHA256Required": true,
+  "records": [
+    {
+      "id": "coast",
+      "beforeBytes": 1687825,
+      "afterBytes": 843700,
+      "decodedBytes": 8294400,
+      "decodedSHA256": "ffd804f7225ace5af886ca36c87efad4693839f6f9cd3b3a59c561cbc4d68cae"
+    },
+    {
+      "id": "coast-left",
+      "beforeBytes": 1705099,
+      "afterBytes": 842043,
+      "decodedBytes": 8294400,
+      "decodedSHA256": "437205ae256340d8e81bedeb52bd5c43cf3a85a87c1d558ace4cce3e3017f285"
+    },
+    {
+      "id": "coast-right",
+      "beforeBytes": 1497759,
+      "afterBytes": 714214,
+      "decodedBytes": 8294400,
+      "decodedSHA256": "46f45d5f2782043a5551187f2c6b9e3b2854edf0381386e8ec48b8a5e8ab5ba3"
+    },
+    {
+      "id": "coast-near",
+      "beforeBytes": 2818539,
+      "afterBytes": 1260098,
+      "decodedBytes": 8294400,
+      "decodedSHA256": "683e81e31559e340aec976f6590830a042ff6b80fc48086f6a80e82b070e6aae"
+    },
+    {
+      "id": "coast-far",
+      "beforeBytes": 1404799,
+      "afterBytes": 728753,
+      "decodedBytes": 8294400,
+      "decodedSHA256": "79c9ffa9e22e406d463262c8f66c9ed5fc95540fec6a1e990b7b06c58181ccf3"
+    },
+    {
+      "id": "cottage",
+      "beforeBytes": 5832489,
+      "afterBytes": 1476614,
+      "decodedBytes": 8294400,
+      "decodedSHA256": "ff1beae60eea199cedebe3751b3a4e1e69a35b4914ac33d5954b72e2106232fd"
+    }
+  ]
+}

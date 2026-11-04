@@ -3426,7 +3426,15 @@
       "afterBytes": 965277
     }
   ],
-  "coalesced": [],
+  "coalesced": [
+    {
+      "source": "/blender/reference-architecture-v16/architecture-world.glb",
+      "beforeParts": 22,
+      "afterParts": 3,
+      "compressedBytesUnchanged": true,
+      "SHA256": "7e16975108db213c0ef9ecc242140b53efcb723383ee3d9770ba48a3c3820851"
+    }
+  ],
   "originalInputsUnchanged": true,
   "codec": "meshoptimizer 0.22 / NONE filter / exact byte comparisons"
 }

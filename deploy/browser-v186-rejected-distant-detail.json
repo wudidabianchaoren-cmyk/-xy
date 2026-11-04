@@ -1,0 +1,105 @@
+{
+  "candidateOnly": true,
+  "published": false,
+  "errors": [],
+  "baseline": {
+    "fps": 14.98146044274675,
+    "end": {
+      "at": 21568.899999976158,
+      "frames": 149,
+      "performance": {
+        "frames": 149,
+        "calls": 207,
+        "triangles": 5467694,
+        "cpuMs": 19.5,
+        "gpuMs": 55.443697,
+        "geometries": 124,
+        "textures": 83,
+        "cpuP95Ms": 29.5
+      }
+    }
+  },
+  "detail": {
+    "records": [
+      {
+        "name": "",
+        "beforeTriangles": 5499,
+        "afterTriangles": 5031,
+        "instances": 92,
+        "nearest": 80.04693313816934,
+        "errorMetres": 0.0019917260235580493,
+        "maxErrorMetres": 0.002,
+        "sourceGeometryPreserved": true
+      },
+      {
+        "name": "",
+        "beforeTriangles": 5325,
+        "afterTriangles": 5325,
+        "instances": 92,
+        "nearest": 80.57371084826424,
+        "errorMetres": 0,
+        "maxErrorMetres": 0.002,
+        "sourceGeometryPreserved": true
+      },
+      {
+        "name": "V148_scan-envelope_bedrock_with_continuous_back_slope",
+        "beforeTriangles": 170072,
+        "afterTriangles": 68000,
+        "instances": 1,
+        "nearest": 45,
+        "errorMetres": 0.001995967506445595,
+        "maxErrorMetres": 0.002,
+        "sourceGeometryPreserved": true
+      },
+      {
+        "name": "Embedded_coastal_cliff_02",
+        "beforeTriangles": 179999,
+        "afterTriangles": 176697,
+        "instances": 1,
+        "nearest": 74.38448380051375,
+        "errorMetres": 0.0019827815224112222,
+        "maxErrorMetres": 0.002,
+        "sourceGeometryPreserved": true
+      },
+      {
+        "name": "Embedded_coastal_cliff_04",
+        "beforeTriangles": 180000,
+        "afterTriangles": 174332,
+        "instances": 1,
+        "nearest": 73.52909743726312,
+        "errorMetres": 0.001986918725955608,
+        "maxErrorMetres": 0.002,
+        "sourceGeometryPreserved": true
+      },
+      {
+        "name": "V145_coast_rocks_02",
+        "beforeTriangles": 180000,
+        "afterTriangles": 176514,
+        "instances": 1,
+        "nearest": 55.699477248876896,
+        "errorMetres": 0.0019880821266366655,
+        "maxErrorMetres": 0.002,
+        "sourceGeometryPreserved": true
+      }
+    ],
+    "beforeTriangles": 1705879,
+    "afterTriangles": 1548295
+  },
+  "candidate": {
+    "fps": 15.470605849025171,
+    "end": {
+      "at": 34442.39999997616,
+      "frames": 312,
+      "performance": {
+        "frames": 312,
+        "calls": 157,
+        "triangles": 4811004,
+        "cpuMs": 3.799999952316284,
+        "gpuMs": 55.304479,
+        "geometries": 130,
+        "textures": 83,
+        "cpuP95Ms": 25.100000023841858
+      }
+    }
+  }
+}
