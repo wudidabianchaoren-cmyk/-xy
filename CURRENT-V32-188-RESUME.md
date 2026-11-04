@@ -1,3 +1,5 @@
+Latest scoped release: read CURRENT-V32-189-RESUME.md first. Same Cloudflare URL; V189 repairs published, local non-VPN route still unresolved.
+
 # CURRENT V32.188 / 2026-11-05 / CLOUDFLARE PUBLISHED — PARTIAL QUALITY
 
 Formal URL https://xy-crg.pages.dev/ . Existing Pages projectxy/account0424e885f532f4b1ade3fe9216ddc64c. Productionff815b36-8aa9-41e9-a345-733898862c9e, published03:26:38ShanghaiNov5. Previewdfeb05c5-3b96-4626-b23c-faa17af22e41. Source applicationa6c87179762e45a32760d7c0ee6cdbccc4da8353, preparation4fa0023, same existing-xy repository/branchdeploy/netlify-browser-v179. Source metadata and tests are later commits. Original main records only. Matching absolute Git safe.directory and cwd every invocation. Single agent, desktop only, annual TOTAL20CNY, no purchases. No engine/driver/art/native capture/mobile/provider reruns.
