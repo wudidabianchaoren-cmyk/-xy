@@ -1,0 +1,373 @@
+{
+  "name": "room-correct-assets",
+  "origin": "http://127.0.0.1:8052",
+  "errors": [],
+  "network": [],
+  "roomPreparationMs": 8280,
+  "desk": {
+    "fps": 53.59457573165599,
+    "callsPerFrame": 196,
+    "camera": [
+      0.02,
+      1.82,
+      3.08
+    ],
+    "look": [
+      -0.05,
+      1.17,
+      -0.14
+    ],
+    "triangles": 62336,
+    "batches": [
+      {
+        "label": "phone",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "pen stand",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "studio furniture",
+        "sourceMeshes": 18,
+        "batchedMeshes": 9,
+        "drawBatches": 1,
+        "skinnedPreserved": 0,
+        "triangles": 18,
+        "multiDraw": true
+      },
+      {
+        "label": "Stable native room",
+        "sourceMeshes": 80,
+        "batchedMeshes": 75,
+        "drawBatches": 6,
+        "skinnedPreserved": 0,
+        "triangles": 60194,
+        "multiDraw": true
+      }
+    ],
+    "bakedLighting": {
+      "version": 185,
+      "source": "preserved native captures baked into object-space UVs",
+      "cameraIndependent": true,
+      "geometryPreserved": true,
+      "meshes": 211,
+      "sourcePoses": 9
+    },
+    "renderInfo": {
+      "frames": 219,
+      "calls": 203,
+      "triangles": 213780,
+      "cpuMs": 9.399999976158142,
+      "gpuMs": 15.478437,
+      "geometries": 267,
+      "textures": 66,
+      "cpuP95Ms": 13.700000047683716
+    },
+    "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+    "load": 8071.200000047684
+  },
+  "window-tr": {
+    "fps": 111.31771414404363,
+    "callsPerFrame": 6,
+    "camera": [
+      0.7699999999999999,
+      2.15,
+      -0.7200000000000001
+    ],
+    "look": [
+      0.77,
+      2.05,
+      -8
+    ],
+    "triangles": 62336,
+    "batches": [
+      {
+        "label": "phone",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "pen stand",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "studio furniture",
+        "sourceMeshes": 18,
+        "batchedMeshes": 9,
+        "drawBatches": 1,
+        "skinnedPreserved": 0,
+        "triangles": 18,
+        "multiDraw": true
+      },
+      {
+        "label": "Stable native room",
+        "sourceMeshes": 80,
+        "batchedMeshes": 75,
+        "drawBatches": 6,
+        "skinnedPreserved": 0,
+        "triangles": 60194,
+        "multiDraw": true
+      }
+    ],
+    "bakedLighting": {
+      "version": 185,
+      "source": "preserved native captures baked into object-space UVs",
+      "cameraIndependent": true,
+      "geometryPreserved": true,
+      "meshes": 211,
+      "sourcePoses": 9
+    },
+    "renderInfo": {
+      "frames": 938,
+      "calls": 9,
+      "triangles": 11558,
+      "cpuMs": 4,
+      "gpuMs": 6.315468,
+      "geometries": 267,
+      "textures": 66,
+      "cpuP95Ms": 6.199999928474426
+    },
+    "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+    "load": 8071.200000047684
+  },
+  "window-bl": {
+    "fps": 93.97278029644512,
+    "callsPerFrame": 6,
+    "camera": [
+      -0.77,
+      1.3500000000000003,
+      -0.7200000000000001
+    ],
+    "look": [
+      -0.77,
+      1.25,
+      -8
+    ],
+    "triangles": 62336,
+    "batches": [
+      {
+        "label": "phone",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "pen stand",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "studio furniture",
+        "sourceMeshes": 18,
+        "batchedMeshes": 9,
+        "drawBatches": 1,
+        "skinnedPreserved": 0,
+        "triangles": 18,
+        "multiDraw": true
+      },
+      {
+        "label": "Stable native room",
+        "sourceMeshes": 80,
+        "batchedMeshes": 75,
+        "drawBatches": 6,
+        "skinnedPreserved": 0,
+        "triangles": 60194,
+        "multiDraw": true
+      }
+    ],
+    "bakedLighting": {
+      "version": 185,
+      "source": "preserved native captures baked into object-space UVs",
+      "cameraIndependent": true,
+      "geometryPreserved": true,
+      "meshes": 211,
+      "sourcePoses": 9
+    },
+    "renderInfo": {
+      "frames": 1736,
+      "calls": 9,
+      "triangles": 33342,
+      "cpuMs": 4.399999976158142,
+      "gpuMs": 7.435208,
+      "geometries": 267,
+      "textures": 66,
+      "cpuP95Ms": 5.600000023841858
+    },
+    "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+    "load": 8071.200000047684
+  },
+  "window-br": {
+    "fps": 96.48621092509855,
+    "callsPerFrame": 6,
+    "camera": [
+      0.77,
+      1.3500000000000003,
+      -0.7200000000000001
+    ],
+    "look": [
+      0.77,
+      1.25,
+      -8
+    ],
+    "triangles": 62336,
+    "batches": [
+      {
+        "label": "phone",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "pen stand",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "studio furniture",
+        "sourceMeshes": 18,
+        "batchedMeshes": 9,
+        "drawBatches": 1,
+        "skinnedPreserved": 0,
+        "triangles": 18,
+        "multiDraw": true
+      },
+      {
+        "label": "Stable native room",
+        "sourceMeshes": 80,
+        "batchedMeshes": 75,
+        "drawBatches": 6,
+        "skinnedPreserved": 0,
+        "triangles": 60194,
+        "multiDraw": true
+      }
+    ],
+    "bakedLighting": {
+      "version": 185,
+      "source": "preserved native captures baked into object-space UVs",
+      "cameraIndependent": true,
+      "geometryPreserved": true,
+      "meshes": 211,
+      "sourcePoses": 9
+    },
+    "renderInfo": {
+      "frames": 2751,
+      "calls": 9,
+      "triangles": 38334,
+      "cpuMs": 4.700000047683716,
+      "gpuMs": 7.551145,
+      "geometries": 267,
+      "textures": 66,
+      "cpuP95Ms": 5.5
+    },
+    "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+    "load": 8071.200000047684
+  },
+  "window-tl": {
+    "fps": 112.880316961279,
+    "callsPerFrame": 6,
+    "camera": [
+      -0.77,
+      2.15,
+      -0.7200000000000001
+    ],
+    "look": [
+      -0.77,
+      2.05,
+      -8
+    ],
+    "triangles": 62336,
+    "batches": [
+      {
+        "label": "phone",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "pen stand",
+        "sourceMeshes": 0,
+        "batchedMeshes": 0,
+        "drawBatches": 0,
+        "skinnedPreserved": 0,
+        "triangles": 0,
+        "multiDraw": true
+      },
+      {
+        "label": "studio furniture",
+        "sourceMeshes": 18,
+        "batchedMeshes": 9,
+        "drawBatches": 1,
+        "skinnedPreserved": 0,
+        "triangles": 18,
+        "multiDraw": true
+      },
+      {
+        "label": "Stable native room",
+        "sourceMeshes": 80,
+        "batchedMeshes": 75,
+        "drawBatches": 6,
+        "skinnedPreserved": 0,
+        "triangles": 60194,
+        "multiDraw": true
+      }
+    ],
+    "bakedLighting": {
+      "version": 185,
+      "source": "preserved native captures baked into object-space UVs",
+      "cameraIndependent": true,
+      "geometryPreserved": true,
+      "meshes": 211,
+      "sourcePoses": 9
+    },
+    "renderInfo": {
+      "frames": 3795,
+      "calls": 9,
+      "triangles": 11558,
+      "cpuMs": 4.399999976158142,
+      "gpuMs": 6.103281,
+      "geometries": 267,
+      "textures": 66,
+      "cpuP95Ms": 5.600000023841858
+    },
+    "shadowPolicy": "unchanged point-light shadow cached until a physical caster moves",
+    "load": 8071.200000047684
+  },
+  "pass": true
+}

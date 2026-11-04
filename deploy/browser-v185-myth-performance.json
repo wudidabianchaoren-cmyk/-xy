@@ -1,0 +1,530 @@
+{
+  "errors": [],
+  "network": [],
+  "loadMs": 10984,
+  "before": {
+    "frames": 1,
+    "waterTime": 0,
+    "birds": {
+      "count": 7,
+      "source": "V158 original solid procedural geometry",
+      "body3D": true,
+      "featherThickness": 0.02,
+      "wingJoints": 4,
+      "trianglesPerBird": 7616,
+      "totalTriangles": 53312,
+      "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+      "scale": [
+        0.36,
+        0.41
+      ],
+      "speeds": [
+        8.5,
+        9.65,
+        10.8,
+        11.95,
+        8.5,
+        9.65,
+        10.8
+      ],
+      "minimumSeaHeight": 5,
+      "maximumHeight": 11.7,
+      "time": 0,
+      "positions": [
+        [
+          -7.335752998637593,
+          6.315751920789272,
+          39.22056439486484
+        ],
+        [
+          -5.902703179120454,
+          9.469102288282983,
+          15.639357783798427
+        ],
+        [
+          3.7054018543736356,
+          5.738928376115421,
+          15.571702904296814
+        ],
+        [
+          20.65938084783031,
+          11.03036498339933,
+          15.42523473097237
+        ],
+        [
+          1.6496325951600512,
+          10.72784913760715,
+          16.570415243925975
+        ],
+        [
+          -18.40201553006433,
+          6.233371927975904,
+          35.89138133469057
+        ],
+        [
+          -6.661979243222393,
+          7.160064365946954,
+          39.89861764990452
+        ]
+      ],
+      "wingAngles": [
+        -0.035,
+        -0.49065724855035564,
+        -0.06242965954452637,
+        -0.014400391469709357,
+        -0.00018432989240767944,
+        -0.24624275345167193,
+        -0.4691982938952076
+      ]
+    },
+    "camera": [
+      37,
+      17,
+      49
+    ],
+    "performance": {
+      "frames": 1,
+      "calls": 213,
+      "triangles": 6448270,
+      "cpuMs": 332.6999999284744,
+      "gpuMs": null,
+      "geometries": 123,
+      "textures": 83
+    },
+    "inventory": {
+      "meshes": 120,
+      "triangles": 5533564,
+      "largest": [
+        {
+          "name": "Mesh",
+          "triangles": 1176000,
+          "instances": 98,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 816000,
+          "instances": 34,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 725868,
+          "instances": 132,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 702900,
+          "instances": 132,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 grounded fine coastal meadow",
+          "triangles": 647500,
+          "instances": 18500,
+          "skinned": false,
+          "shadow": false,
+          "materials": 1
+        },
+        {
+          "name": "Original animated crew / combined material V162 warm natural anatomical skin",
+          "triangles": 211848,
+          "instances": 1,
+          "skinned": true,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Embedded_coastal_cliff_04",
+          "triangles": 180000,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V145_coast_rocks_02",
+          "triangles": 180000,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Embedded_coastal_cliff_02",
+          "triangles": 179999,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V148_scan-envelope_bedrock_with_continuous_back_slope",
+          "triangles": 170072,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 100352,
+          "instances": 1,
+          "skinned": false,
+          "shadow": false,
+          "materials": 1
+        },
+        {
+          "name": "Original animated crew / combined material V162 interlocked iron mail",
+          "triangles": 59752,
+          "instances": 1,
+          "skinned": true,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 43588,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Original animated crew / combined material V162 worn brown oxhide",
+          "triangles": 32144,
+          "instances": 1,
+          "skinned": true,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 weathered limestone 3",
+          "triangles": 17400,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 weathered limestone 0",
+          "triangles": 16500,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 weathered limestone 5",
+          "triangles": 16200,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 weathered limestone 2",
+          "triangles": 15600,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        }
+      ]
+    },
+    "cache": {
+      "resolution": [
+        4096,
+        4096
+      ],
+      "staticCasters": 120,
+      "dynamicCasters": 462,
+      "prepared": 2,
+      "restores": 1,
+      "originalGeometry": true,
+      "active": true,
+      "restoredPixels": 16777216,
+      "fullPixels": 16777216
+    },
+    "foliage": {
+      "sourceTriangles": 1992000,
+      "retainedTriangles": 1992000,
+      "bins": 96,
+      "updates": 2,
+      "geometryReduced": false
+    }
+  },
+  "after": {
+    "frames": 82,
+    "waterTime": 6.077800000000001,
+    "birds": {
+      "count": 7,
+      "source": "V158 original solid procedural geometry",
+      "body3D": true,
+      "featherThickness": 0.02,
+      "wingJoints": 4,
+      "trianglesPerBird": 7616,
+      "totalTriangles": 53312,
+      "flight": "independent constant-speed centripetal tracks / no camera anchors / time-based banking",
+      "scale": [
+        0.36,
+        0.41
+      ],
+      "speeds": [
+        8.5,
+        9.65,
+        10.8,
+        11.95,
+        8.5,
+        9.65,
+        10.8
+      ],
+      "minimumSeaHeight": 5,
+      "maximumHeight": 11.7,
+      "time": 6.077800000000001,
+      "positions": [
+        [
+          4.521931951639476,
+          9.377968379274074,
+          12.9011252017081
+        ],
+        [
+          12.74709736390769,
+          6.667211720508327,
+          41.406269345287896
+        ],
+        [
+          10.141373671339316,
+          6.633661242838538,
+          43.269972843861154
+        ],
+        [
+          -8.20821935811089,
+          9.16323794097168,
+          41.28772921421119
+        ],
+        [
+          14.110968020368723,
+          8.007347197644634,
+          41.780189379541234
+        ],
+        [
+          34.23067594232913,
+          6.91273603109907,
+          32.39484895311626
+        ],
+        [
+          1.3737353295845665,
+          8.903817579769482,
+          14.424253925403846
+        ]
+      ],
+      "wingAngles": [
+        -0.023271085079980616,
+        -0.01026041864429661,
+        -0.059208136107236645,
+        0.36838885939550314,
+        -0.062057791630606804,
+        -0.05051847848634735,
+        -0.010021203222823509
+      ]
+    },
+    "camera": [
+      37,
+      17,
+      49
+    ],
+    "performance": {
+      "frames": 82,
+      "calls": 157,
+      "triangles": 4968120,
+      "cpuMs": 13,
+      "gpuMs": 67.352239,
+      "geometries": 124,
+      "textures": 83,
+      "cpuP95Ms": 19.200000047683716
+    },
+    "inventory": {
+      "meshes": 120,
+      "triangles": 5533564,
+      "largest": [
+        {
+          "name": "Mesh",
+          "triangles": 1176000,
+          "instances": 98,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 816000,
+          "instances": 34,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 725868,
+          "instances": 132,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 702900,
+          "instances": 132,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 grounded fine coastal meadow",
+          "triangles": 647500,
+          "instances": 18500,
+          "skinned": false,
+          "shadow": false,
+          "materials": 1
+        },
+        {
+          "name": "Original animated crew / combined material V162 warm natural anatomical skin",
+          "triangles": 211848,
+          "instances": 1,
+          "skinned": true,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Embedded_coastal_cliff_04",
+          "triangles": 180000,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V145_coast_rocks_02",
+          "triangles": 180000,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Embedded_coastal_cliff_02",
+          "triangles": 179999,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V148_scan-envelope_bedrock_with_continuous_back_slope",
+          "triangles": 170072,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 100352,
+          "instances": 1,
+          "skinned": false,
+          "shadow": false,
+          "materials": 1
+        },
+        {
+          "name": "Original animated crew / combined material V162 interlocked iron mail",
+          "triangles": 59752,
+          "instances": 1,
+          "skinned": true,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Mesh",
+          "triangles": 43588,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "Original animated crew / combined material V162 worn brown oxhide",
+          "triangles": 32144,
+          "instances": 1,
+          "skinned": true,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 weathered limestone 3",
+          "triangles": 17400,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 weathered limestone 0",
+          "triangles": 16500,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 weathered limestone 5",
+          "triangles": 16200,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        },
+        {
+          "name": "V161 weathered limestone 2",
+          "triangles": 15600,
+          "instances": 1,
+          "skinned": false,
+          "shadow": true,
+          "materials": 1
+        }
+      ]
+    },
+    "cache": {
+      "resolution": [
+        4096,
+        4096
+      ],
+      "staticCasters": 120,
+      "dynamicCasters": 462,
+      "prepared": 2,
+      "restores": 82,
+      "originalGeometry": true,
+      "active": true,
+      "restoredPixels": 1101910,
+      "fullPixels": 16777216
+    },
+    "foliage": {
+      "sourceTriangles": 1992000,
+      "retainedTriangles": 1992000,
+      "bins": 96,
+      "updates": 11,
+      "geometryReduced": false
+    }
+  },
+  "fps": 13.5,
+  "pass": true
+}
