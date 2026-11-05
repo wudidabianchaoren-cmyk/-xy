@@ -1,0 +1,281 @@
+{
+  "version": 190,
+  "url": "https://vvainex.click/",
+  "alternateURL": "https://www.vvainex.click/",
+  "legacyURL": "https://xy-crg.pages.dev/",
+  "provider": "Cloudflare Pages",
+  "project": "xy",
+  "applicationSource": "056d465b7a06541e9587aba4e379cd768afaeb0a",
+  "production": {
+    "id": "288ece0f-d0be-4db9-b167-049bff1bd200",
+    "url": "https://288ece0f.xy-crg.pages.dev",
+    "environment": "production",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-11-05T09:27:53.10804Z",
+      "status": "success"
+    }
+  },
+  "domainConnected": true,
+  "zoneStatus": "active",
+  "nameservers": [
+    "armando.ns.cloudflare.com",
+    "fiona.ns.cloudflare.com"
+  ],
+  "pagesDomains": [
+    {
+      "id": "a41c3555-651e-427c-9379-668b97d38910",
+      "domain_id": "a41c3555-651e-427c-9379-668b97d38910",
+      "name": "vvainex.click",
+      "status": "active",
+      "verification_data": {
+        "status": "active"
+      },
+      "validation_data": {
+        "status": "active",
+        "method": "http"
+      },
+      "certificate_authority": "google",
+      "zone_tag": "9a3fbab186c64550553385533e9cd4f7",
+      "created_on": "2026-11-05T06:49:00.752061Z"
+    },
+    {
+      "id": "d3f51dc3-65fc-4c9f-bbcd-8a09cadda5cd",
+      "domain_id": "d3f51dc3-65fc-4c9f-bbcd-8a09cadda5cd",
+      "name": "www.vvainex.click",
+      "status": "active",
+      "verification_data": {
+        "status": "active"
+      },
+      "validation_data": {
+        "status": "active",
+        "method": "http"
+      },
+      "certificate_authority": "google",
+      "zone_tag": "9a3fbab186c64550553385533e9cd4f7",
+      "created_on": "2026-11-05T06:49:02.044339Z"
+    }
+  ],
+  "formalRuntimeSmokePass": true,
+  "productionArtifactHashesVerified": true,
+  "hashesChecked": 54,
+  "range": {
+    "path": "/assets/browser-v187/media/1be16e321875224432c93f78.mp4",
+    "status": 206,
+    "bytes": 512,
+    "contentRange": "bytes 0-511/7362857"
+  },
+  "formalEntry": {
+    "milliseconds": 47616.60000000149,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 480,
+      "droppedVideoFrames": 29
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 2
+    },
+    "homeReady": false,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "formalLiveHomeMilliseconds": 73334,
+  "formalSteps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 74844
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 20507
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 4811
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 67213
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 4978
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 14351
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 15624
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 16691
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 17214
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 25026
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 24500
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 2257
+    }
+  ],
+  "filmSamples": {
+    "films0": [
+      {
+        "id": "projectFilm",
+        "time": 1.671906,
+        "ready": 4,
+        "width": 1280,
+        "height": 546,
+        "duration": 139.70158700000002,
+        "midpointTime": 70.146743,
+        "sustained": {
+          "wallSeconds": 6.0700999999940395,
+          "mediaSeconds": 6.07038,
+          "frames": 152,
+          "dropped": 0
+        }
+      }
+    ],
+    "films1": [
+      {
+        "id": "projectFilm",
+        "time": 1.755825,
+        "ready": 4,
+        "width": 1920,
+        "height": 1080,
+        "duration": 83.14782299999999,
+        "midpointTime": 41.860563,
+        "sustained": {
+          "wallSeconds": 6.06489999999851,
+          "mediaSeconds": 6.065050999999997,
+          "frames": 182,
+          "dropped": 0
+        }
+      }
+    ],
+    "films2": [
+      {
+        "id": "projectFilm",
+        "time": 1.671355,
+        "ready": 4,
+        "width": 1920,
+        "height": 1080,
+        "duration": 208.721587,
+        "midpointTime": 104.655008,
+        "sustained": {
+          "wallSeconds": 6.07629999999702,
+          "mediaSeconds": 5.417855000000003,
+          "frames": 163,
+          "dropped": 0
+        }
+      }
+    ],
+    "films3": [
+      {
+        "id": "projectFilm",
+        "time": 1.69431,
+        "ready": 4,
+        "width": 1920,
+        "height": 1080,
+        "duration": 18,
+        "midpointTime": 9.275828,
+        "sustained": {
+          "wallSeconds": 6.0655,
+          "mediaSeconds": 6.065745,
+          "frames": 182,
+          "dropped": 0
+        }
+      },
+      {
+        "id": "lifePurposeVideo",
+        "time": 1.705004,
+        "ready": 4,
+        "width": 1600,
+        "height": 900,
+        "duration": 50,
+        "midpointTime": 25.278344,
+        "sustained": {
+          "wallSeconds": 6.0947999999970195,
+          "mediaSeconds": 6.094556000000001,
+          "frames": 147,
+          "dropped": 0
+        }
+      }
+    ],
+    "films4": [
+      {
+        "id": "projectFilm",
+        "time": 1.696759,
+        "ready": 4,
+        "width": 3360,
+        "height": 1440,
+        "duration": 191.375873,
+        "midpointTime": 95.967965,
+        "sustained": {
+          "wallSeconds": 6.10339999999851,
+          "mediaSeconds": 6.103680000000011,
+          "frames": 183,
+          "dropped": 0
+        }
+      }
+    ]
+  },
+  "sampledErrors": {
+    "errors": [],
+    "console": [],
+    "http": [],
+    "native": []
+  },
+  "localPhotographyAndJournalPass": true,
+  "hiddenPhotographyRequestsBefore": 28,
+  "hiddenPhotographyRequestsAfter": 0,
+  "artworkAndOriginalUEPreserved": true,
+  "newArtworkProduced": false,
+  "annualBudgetCNY": 20,
+  "paidResourcesPurchased": false,
+  "plan": "Free Website",
+  "automaticGitProductionBuilds": false,
+  "qualityApproved": false,
+  "allRequirementsComplete": false,
+  "limits": [
+    "Cold LIVE home 73.334 seconds including authored 36-second opening; slow first reading/myth entry remains.",
+    "Opening dropped 2/600 frames and intro dropped 29/480 in final normal-profile sample; not zero-stutter.",
+    "Six original-film midpoint/sustained checks completed; mid-autumn advanced 5.418 seconds in a 6.076-second sample, so zero rebuffering is not claimed.",
+    "Physical-interface complete flow did not pass cinema readiness time limit.",
+    "Earlier preview film/network and initial regional DNS/TLS failures are retained; final six regional HTTP checks pass, not a universal guarantee."
+  ],
+  "finalWWWCheck": {
+    "url": "https://www.vvainex.click/learning",
+    "status": 200,
+    "cacheControl": "public, max-age=0, must-revalidate, no-transform",
+    "analyticsInjected": false,
+    "title": "创作研习 · 造境手记"
+  }
+}
