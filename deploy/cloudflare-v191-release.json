@@ -1,0 +1,255 @@
+{
+  "version": 191,
+  "url": "https://vvainex.click/",
+  "alternateURL": "https://www.vvainex.click/",
+  "provider": "Cloudflare Pages",
+  "project": "xy",
+  "applicationSource": "9e584849fa013beb310bfd9631eda3e3d7a76e2c",
+  "previewURL": "https://3b7f64dd.xy-crg.pages.dev",
+  "production": {
+    "id": "af231924-25e0-4ae8-a44a-2ac6bc22d40c",
+    "url": "https://af231924.xy-crg.pages.dev",
+    "environment": "production",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-11-05T14:55:38.224981Z",
+      "status": "success"
+    }
+  },
+  "previewFullFlowPass": true,
+  "formalRuntimeSmokePass": true,
+  "productionArtifactHashesVerified": true,
+  "hashesChecked": 61,
+  "range": {
+    "path": "/assets/browser-v187/media/1be16e321875224432c93f78.mp4",
+    "status": 206,
+    "bytes": 512,
+    "contentRange": "bytes 0-511/7362857"
+  },
+  "formalEntry": {
+    "milliseconds": 54993.19999998808,
+    "introReason": "ended",
+    "introQuality": {
+      "totalVideoFrames": 480,
+      "droppedVideoFrames": 9
+    },
+    "opening": {
+      "total": 600,
+      "dropped": 0
+    },
+    "homeReady": false,
+    "english": true,
+    "translate": false,
+    "hiddenMyth": false
+  },
+  "formalLiveHomeMilliseconds": 64576,
+  "formalSteps": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 66087,
+      "error": null
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 29669,
+      "error": null
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 8470,
+      "error": null
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 60561,
+      "error": null
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 4560,
+      "error": null
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 16858,
+      "error": null
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 15437,
+      "error": null
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 17343,
+      "error": null
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 16662,
+      "error": null
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 25387,
+      "error": null
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 22289,
+      "error": null
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 2412,
+      "error": null
+    }
+  ],
+  "filmSamples": {
+    "films0": [
+      {
+        "id": "projectFilm",
+        "time": 1.705797,
+        "ready": 4,
+        "width": 1280,
+        "height": 546,
+        "duration": 139.70158700000002,
+        "midpointTime": 70.153236,
+        "sustained": {
+          "wallSeconds": 6.05990000000596,
+          "mediaSeconds": 6.059886999999989,
+          "frames": 152,
+          "dropped": 0
+        }
+      }
+    ],
+    "films1": [
+      {
+        "id": "projectFilm",
+        "time": 1.678771,
+        "ready": 4,
+        "width": 1920,
+        "height": 1080,
+        "duration": 83.14782299999999,
+        "midpointTime": 41.857174,
+        "sustained": {
+          "wallSeconds": 6.075300000011921,
+          "mediaSeconds": 6.075027999999996,
+          "frames": 183,
+          "dropped": 0
+        }
+      }
+    ],
+    "films2": [
+      {
+        "id": "projectFilm",
+        "time": 1.665263,
+        "ready": 4,
+        "width": 1920,
+        "height": 1080,
+        "duration": 208.721587,
+        "midpointTime": 104.597828,
+        "sustained": {
+          "wallSeconds": 6.05770000000298,
+          "mediaSeconds": 6.057755999999998,
+          "frames": 182,
+          "dropped": 0
+        }
+      }
+    ],
+    "films3": [
+      {
+        "id": "projectFilm",
+        "time": 1.664231,
+        "ready": 4,
+        "width": 1920,
+        "height": 1080,
+        "duration": 18,
+        "midpointTime": 9.275605,
+        "sustained": {
+          "wallSeconds": 6.05620000000298,
+          "mediaSeconds": 6.0550429999999995,
+          "frames": 182,
+          "dropped": 0
+        }
+      },
+      {
+        "id": "lifePurposeVideo",
+        "time": 1.690622,
+        "ready": 4,
+        "width": 1600,
+        "height": 900,
+        "duration": 50,
+        "midpointTime": 25.278187,
+        "sustained": {
+          "wallSeconds": 6.052899999991059,
+          "mediaSeconds": 6.05134,
+          "frames": 144,
+          "dropped": 0
+        }
+      }
+    ],
+    "films4": [
+      {
+        "id": "projectFilm",
+        "time": 1.719469,
+        "ready": 4,
+        "width": 3360,
+        "height": 1440,
+        "duration": 191.375873,
+        "midpointTime": 95.956,
+        "sustained": {
+          "wallSeconds": 6.076399999991059,
+          "mediaSeconds": 6.07612300000001,
+          "frames": 182,
+          "dropped": 0
+        }
+      }
+    ]
+  },
+  "sampledErrors": {
+    "errors": [],
+    "console": [],
+    "http": [],
+    "native": []
+  },
+  "musicControlsPass": true,
+  "collageAndHeaderPass": true,
+  "galleryDelayedLaterImagesPass": true,
+  "localCompositedHandoff": {
+    "samples": 50,
+    "blackFrames": [],
+    "pass": true
+  },
+  "stagedFiles": 3258,
+  "stagedBytes": 4007049280,
+  "annualTotalBudgetCNY": 20,
+  "purchases": false,
+  "automaticGitProductionBuilds": false,
+  "domainOrDNSChangedThisTurn": false,
+  "originalUEAndRawArtworkPreserved": true,
+  "originalAuthoredMoviesPreserved": true,
+  "qualityApproved": false,
+  "allRequirementsComplete": false,
+  "limits": [
+    "Preview is immediate original-scene imagery during preparation, not an already interactive 3D scene.",
+    "First live scene preparation remains slow and varies with network and GPU; timings are recorded.",
+    "Isolated local Iris Xe myth sample about 14.45 FPS; sustained smoothness requirement is not achieved.",
+    "Fifty sampled local handoff frames contain no black frame; not proof of universal zero flicker.",
+    "Browser renderer remains distinct from original UE; no native pixel identity or user acceptance claim.",
+    "Normal Edge public checks use current workstation networking; not a full physical-interface or worldwide guarantee."
+  ]
+}

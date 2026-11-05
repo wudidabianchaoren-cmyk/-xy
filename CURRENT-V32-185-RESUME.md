@@ -1,3 +1,5 @@
+Latest release: read CURRENT-V32-191-RESUME.md first. Same vvainex.click; scoped repair published, live3D preparation/FPS requirements still incomplete.
+
 Latest domain release: read CURRENT-V32-190-RESUME.md first. https://vvainex.click/ active; full normal-profile flow passes, physical-route full-flow/performance still incomplete.
 
 Latest scoped release: read CURRENT-V32-189-RESUME.md first. Same Cloudflare URL; V189 repairs published, local non-VPN route still unresolved.

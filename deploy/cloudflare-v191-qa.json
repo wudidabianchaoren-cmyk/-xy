@@ -1,0 +1,580 @@
+{
+  "version": 191,
+  "formalFlow": [
+    {
+      "name": "main-ready",
+      "pass": true,
+      "milliseconds": 66087,
+      "error": null
+    },
+    {
+      "name": "reading-entry",
+      "pass": true,
+      "milliseconds": 29669,
+      "error": null
+    },
+    {
+      "name": "cinema-book",
+      "pass": true,
+      "milliseconds": 8470,
+      "error": null
+    },
+    {
+      "name": "myth-entry",
+      "pass": true,
+      "milliseconds": 60561,
+      "error": null
+    },
+    {
+      "name": "myth-night-return",
+      "pass": true,
+      "milliseconds": 4560,
+      "error": null
+    },
+    {
+      "name": "main-desktop",
+      "pass": true,
+      "milliseconds": 16858,
+      "error": null
+    },
+    {
+      "name": "work-0",
+      "pass": true,
+      "milliseconds": 15437,
+      "error": null
+    },
+    {
+      "name": "work-1",
+      "pass": true,
+      "milliseconds": 17343,
+      "error": null
+    },
+    {
+      "name": "work-2",
+      "pass": true,
+      "milliseconds": 16662,
+      "error": null
+    },
+    {
+      "name": "work-3",
+      "pass": true,
+      "milliseconds": 25387,
+      "error": null
+    },
+    {
+      "name": "work-4",
+      "pass": true,
+      "milliseconds": 22289,
+      "error": null
+    },
+    {
+      "name": "return-home-live",
+      "pass": true,
+      "milliseconds": 2412,
+      "error": null
+    }
+  ],
+  "formalPass": true,
+  "previewPass": true,
+  "music": {
+    "errors": [],
+    "origin": "https://vvainex.click",
+    "before": {
+      "volume": 0.5,
+      "aria": null,
+      "duration": null,
+      "time": 0,
+      "hit": "music-native-range"
+    },
+    "drag": {
+      "volume": 0.89,
+      "aria": null,
+      "duration": 325.829932,
+      "time": 0,
+      "hit": "music-copy"
+    },
+    "keyboard": {
+      "volume": 0,
+      "aria": null,
+      "duration": 325.829932,
+      "time": 0,
+      "hit": "music-copy"
+    },
+    "seek": {
+      "volume": 0,
+      "aria": null,
+      "duration": 325.829932,
+      "time": 79.4,
+      "hit": "music-copy"
+    },
+    "closed": true,
+    "pass": true
+  },
+  "collage": {
+    "errors": [],
+    "layouts": [
+      {
+        "progress": 0.12008101851851852,
+        "images": [
+          {
+            "x": -0.058875115712483723,
+            "y": 0.09667900226734302,
+            "w": 0.14699767430623373,
+            "loaded": true,
+            "opacity": 0.444495,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-01.webp"
+          },
+          {
+            "x": 0.08756809234619141,
+            "y": -0.07006960974799262,
+            "w": 0.14750010172526043,
+            "loaded": true,
+            "opacity": 0.404617,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-02.webp"
+          },
+          {
+            "x": 0.28419963518778485,
+            "y": -0.13157985828540944,
+            "w": 0.14799559911092122,
+            "loaded": true,
+            "opacity": 0.365293,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-03.webp"
+          },
+          {
+            "x": 0.938896656036377,
+            "y": -0.1027713351779514,
+            "w": 0.1484811782836914,
+            "loaded": true,
+            "opacity": 0.326756,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-04.webp"
+          },
+          {
+            "x": 1.1116544723510742,
+            "y": 0.03147096987123842,
+            "w": 0.1489538828531901,
+            "loaded": true,
+            "opacity": 0.289237,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-05.webp"
+          },
+          {
+            "x": 1.1239850997924805,
+            "y": 0.9837464509186922,
+            "w": 0.14941088358561197,
+            "loaded": true,
+            "opacity": 0.252971,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-06.webp"
+          },
+          {
+            "x": 0.9758092880249023,
+            "y": 1.1483549329969618,
+            "w": 0.14984906514485677,
+            "loaded": true,
+            "opacity": 0.218189,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-08.webp"
+          },
+          {
+            "x": 0.22294222513834636,
+            "y": 1.207236282913773,
+            "w": 0.15026569366455078,
+            "loaded": true,
+            "opacity": 0.185124,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-09.webp"
+          },
+          {
+            "x": 0.002361591657002767,
+            "y": 1.1753103185583045,
+            "w": 0.15065773328145346,
+            "loaded": true,
+            "opacity": 0.154009,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-10.webp"
+          },
+          {
+            "x": -0.16747700373331706,
+            "y": 1.0374617399992767,
+            "w": 0.15102227528889975,
+            "loaded": true,
+            "opacity": 0.125077,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-11.webp"
+          }
+        ],
+        "headerHidden": true,
+        "controlsHidden": true
+      },
+      {
+        "progress": 0.5,
+        "images": [
+          {
+            "x": 0.12999674479166667,
+            "y": 0.32999131944444443,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-01.webp"
+          },
+          {
+            "x": 0.2899983723958333,
+            "y": 0.17999131944444444,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-02.webp"
+          },
+          {
+            "x": 0.5,
+            "y": 0.13499710648148147,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-03.webp"
+          },
+          {
+            "x": 0.7099934895833333,
+            "y": 0.17999131944444444,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-04.webp"
+          },
+          {
+            "x": 0.8699951171875,
+            "y": 0.32999131944444443,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-05.webp"
+          },
+          {
+            "x": 0.8699951171875,
+            "y": 0.6699942129629629,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-06.webp"
+          },
+          {
+            "x": 0.7099934895833333,
+            "y": 0.8199942129629629,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-08.webp"
+          },
+          {
+            "x": 0.5,
+            "y": 0.864988425925926,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-09.webp"
+          },
+          {
+            "x": 0.2899983723958333,
+            "y": 0.8199942129629629,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-10.webp"
+          },
+          {
+            "x": 0.12999674479166667,
+            "y": 0.6699942129629629,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-11.webp"
+          }
+        ],
+        "centroid": {
+          "x": 0.4999967447916666,
+          "y": 0.4999927662037037
+        },
+        "headerHidden": true,
+        "controlsHidden": true
+      },
+      {
+        "progress": 0.8200231481481481,
+        "images": [
+          {
+            "x": 0.12999674479166667,
+            "y": 0.32999131944444443,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-01.webp"
+          },
+          {
+            "x": 0.2899983723958333,
+            "y": 0.17999131944444444,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-02.webp"
+          },
+          {
+            "x": 0.5,
+            "y": 0.13499710648148147,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-03.webp"
+          },
+          {
+            "x": 0.7099934895833333,
+            "y": 0.17999131944444444,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-04.webp"
+          },
+          {
+            "x": 0.8699951171875,
+            "y": 0.32999131944444443,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-05.webp"
+          },
+          {
+            "x": 0.8699951171875,
+            "y": 0.6699942129629629,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-06.webp"
+          },
+          {
+            "x": 0.7099934895833333,
+            "y": 0.8199942129629629,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-08.webp"
+          },
+          {
+            "x": 0.5,
+            "y": 0.864988425925926,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-09.webp"
+          },
+          {
+            "x": 0.2899983723958333,
+            "y": 0.8199942129629629,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-10.webp"
+          },
+          {
+            "x": 0.12999674479166667,
+            "y": 0.6699942129629629,
+            "w": 0.13999837239583332,
+            "loaded": true,
+            "opacity": 1,
+            "source": "https://vvainex.click/assets/atmosphere-v172/atmosphere-11.webp"
+          }
+        ],
+        "headerHidden": true,
+        "controlsHidden": true
+      }
+    ],
+    "personal": {
+      "removedSections": 0,
+      "contact": "联系 / CONTACT电话：18928492291邮箱：wuxiaoyu7105@163.com微信：vvChi7"
+    },
+    "pass": true
+  },
+  "delayedGallery": {
+    "origin": "http://127.0.0.1:8058",
+    "errors": [],
+    "delayed": [
+      "http://127.0.0.1:8058/assets/works/after-journey/frame-09.webp",
+      "http://127.0.0.1:8058/assets/works/after-journey/frame-01.webp",
+      "http://127.0.0.1:8058/assets/works/after-journey/frame-03.webp",
+      "http://127.0.0.1:8058/assets/works/after-journey/restored-v90/additional-01.webp"
+    ],
+    "firstReadyMs": 358,
+    "initial": {
+      "state": {
+        "version": "32.152",
+        "ready": true,
+        "frames": 12,
+        "views": 12,
+        "index": 0,
+        "row": 0,
+        "position": 0,
+        "target": 0,
+        "maximum": 11,
+        "visible": true,
+        "animating": false,
+        "autoEnabled": false,
+        "renders": 1,
+        "wheelEvents": 0,
+        "manualChanges": 0,
+        "sourceIndices": [
+          4,
+          8,
+          0,
+          2,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "renderer": "CSS complete independent frames; synchronized reflections; bounded manual navigation",
+        "firstImageReadyAt191": 343.6000000014901,
+        "textureCount": 12,
+        "imageWidth": 1228.8,
+        "wallHeight": 527.36,
+        "anchors": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "imageRatio": 2.3300970873786406,
+        "reflectionHeight": null,
+        "visibleFrameIndices": [
+          0
+        ],
+        "progress": 0,
+        "frameIndex": 0
+      },
+      "first": true
+    },
+    "next": {
+      "row": 1,
+      "animating": false
+    },
+    "pass": true
+  },
+  "localHandoff": {
+    "samples": 50,
+    "blackFrames": [],
+    "minimumCentreBrightness": 38.44444444444444,
+    "pass": true,
+    "scope": "Sampled local composited handoff frames, not universal zero flicker/FPS proof"
+  },
+  "localMyth": {
+    "origin": "http://127.0.0.1:8058",
+    "errors": [],
+    "http": [],
+    "initial": {
+      "at": 10838.60000000149,
+      "readyAt": 10784.5,
+      "cache": {
+        "used": true,
+        "SHA256": "2946aae14d9278f86e5b0526bbe62754b25ef4935b197d247463fd4fc19cdd18",
+        "originalRasterPreserved": true,
+        "milliseconds": 0
+      },
+      "depth": 6,
+      "firstPaint": true,
+      "frames": 1
+    },
+    "rasterSHA256": "2946aae14d9278f86e5b0526bbe62754b25ef4935b197d247463fd4fc19cdd18",
+    "performance": {
+      "seconds": 6.02120000000298,
+      "fps": 14.448947053736289,
+      "profile": {
+        "frames": 113,
+        "calls": 207,
+        "triangles": 5467694,
+        "cpuMs": 19.5,
+        "gpuMs": 55.374062,
+        "geometries": 124,
+        "textures": 83,
+        "cpuP95Ms": 27.100000001490116
+      },
+      "graphics": {
+        "losses": 0,
+        "restores": 0,
+        "recovering": false,
+        "failures": []
+      }
+    },
+    "final": {
+      "ready": true,
+      "frames": 215,
+      "graphics": {
+        "losses": 0,
+        "restores": 0,
+        "recovering": false,
+        "failures": []
+      },
+      "water": 16.65960000000001,
+      "reflection": {
+        "staticCaptures": 41,
+        "dynamicFrames": 101,
+        "originalGeometry": true,
+        "depthOcclusion": true
+      }
+    },
+    "pass": true
+  },
+  "earlierFailedGalleryTestPreservedIn": ".verify/v32-191/gallery.log",
+  "firstFormalFocusedChecks": {
+    "music": {
+      "errors": [],
+      "origin": "https://vvainex.click",
+      "before": {
+        "volume": 0.5,
+        "aria": null,
+        "duration": null,
+        "time": 0,
+        "hit": "music-native-range"
+      },
+      "drag": {
+        "volume": 0.89,
+        "aria": null,
+        "duration": null,
+        "time": 0,
+        "hit": "music-native-range"
+      },
+      "keyboard": {
+        "volume": 0,
+        "aria": null,
+        "duration": null,
+        "time": 0,
+        "hit": "music-native-range"
+      },
+      "seek": {
+        "volume": 0,
+        "aria": null,
+        "duration": 325.829932,
+        "time": 0.270371,
+        "hit": "music-copy"
+      },
+      "closed": true,
+      "pass": false
+    },
+    "collage": {
+      "errors": [],
+      "layouts": [],
+      "failure": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://vvainex.click/?return=1\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-browser\\scripts\\browser-v179\\check-edits-v191.mjs:3:13",
+      "pass": false,
+      "state": {
+        "body": "home-architecture-only"
+      }
+    },
+    "notes": "First music sample clicked a disabled seek control before metadata existed; corrected test waits for enabled control. First collage navigation exceeded default30s DCL; retry uses60s. Initial failures retained, not a zero-wait claim."
+  },
+  "failedExperimentsNotPublished": [
+    "iframe opacity zero was reverted after slow assembly",
+    "flat turntable environment replaced with shaped studio reflections"
+  ],
+  "inheritedV190NetworkLimitsPreserved": true
+}
