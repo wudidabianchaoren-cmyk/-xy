@@ -15,6 +15,8 @@ def select_tab(text):
  if not matches:raise RuntimeError('Required Edge tab missing: '+text)
  matches[-1].GetSelectionItemPattern().Select();time.sleep(.25)
 if len(sys.argv)>2 and sys.argv[1]=='tab':select_tab(sys.argv[2]);sys.exit()
+if len(sys.argv)>1 and sys.argv[1]=='navigate':
+ c=next(c for c in nodes()if c.AutomationId=='view_1017');c.SetFocus();c.GetValuePattern().SetValue(sys.argv[2]);u.SendKeys('{Enter}');print('Navigated current task tab');sys.exit()
 if len(sys.argv)>1 and sys.argv[1]=='scroll':
  window.WheelDown(wheelTimes=5);print('Scrolled current Edge page');sys.exit()
 if len(sys.argv)>1 and sys.argv[1]in['click','set','toggle']:
