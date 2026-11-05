@@ -99,7 +99,7 @@ headers=['/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origi
 for prefix in ['assets/browser-v189','scene-dist/browser-v189','scene-dist/fallback-v189','assets/browser-v190','scene-dist/browser-v190','scene-dist/fallback-v190']:headers.append('/'+prefix+'/*\n  Cache-Control: public, max-age=31536000, immutable\n')
 # Keep HTML unchanged at the proxy: no automatically injected third-party
 # deferred scripts that can delay DOMContentLoaded on restricted networks.
-for path in ['/', '/*.html']:headers.append(path+'\n  Cache-Control: public, max-age=0, must-revalidate, no-transform\n')
+for path in ['/', '/*.html']+['/'+page.stem for page in stage.glob('*.html')]:headers.append(path+'\n  Cache-Control: public, max-age=0, must-revalidate, no-transform\n')
 for name in ['mid-autumn','humid-southeast-asia']:headers.append(f'/assets/browser-v180/{name}/index.m3u8\n  Content-Type: application/vnd.apple.mpegurl\n')
 (stage/'_headers').write_text('\n'.join(headers),encoding='utf-8')
 record={'version':190,'artifactType':'browser-release','requiresRuntimeVerification':True,'runtime':'browser / static Netlify; no workstation backend','originalSourcePreserved':True,'mediaEncoding':'existing high-quality media delivery / shared exact image payloads'}

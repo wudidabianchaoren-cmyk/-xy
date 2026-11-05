@@ -6,8 +6,8 @@
   "files": [
     {
       "path": "_headers",
-      "bytes": 1584,
-      "sha1": "883dacf4e16b769c461d7743f0b1af905fed2343"
+      "bytes": 2832,
+      "sha1": "068327178af8123662e202094acd661793414c7b"
     },
     {
       "path": "after-journey.css",
@@ -15965,7 +15965,7 @@
       "sha1": "3e8458ac22b63867343ad3a8b83da297ddb6dff6"
     }
   ],
-  "bytes": 3996322015,
+  "bytes": 3996323263,
   "excludedUnusedSourceCopies": [
     "assets/odyssey/compact-v134/island-radiance.png",
     "assets/works/rural-return/original-film-v32-92.mp4"
