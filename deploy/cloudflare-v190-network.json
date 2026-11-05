@@ -1,0 +1,172 @@
+{
+  "version": 190,
+  "url": "https://vvainex.click/",
+  "systemNetworkingChanged": false,
+  "physicalHEAD": [
+    {
+      "host": "vvainex.click",
+      "ip": "172.67.138.27",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "http",
+      "tcpSeconds": 0.24389159999554977,
+      "local": [
+        "192.168.137.246",
+        52502
+      ],
+      "tlsSeconds": 0.5309927999987849,
+      "response": "HTTP/1.1 200 OK",
+      "seconds": 1.16
+    },
+    {
+      "host": "vvainex.click",
+      "ip": "104.21.81.43",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "http",
+      "tcpSeconds": 0.24324979999801144,
+      "local": [
+        "192.168.137.246",
+        52503
+      ],
+      "tlsSeconds": 0.5026668999998947,
+      "response": "HTTP/1.1 200 OK",
+      "seconds": 1.09
+    },
+    {
+      "host": "www.baidu.com",
+      "ip": "103.235.46.96",
+      "physicalInterface": 17,
+      "networkChange": false,
+      "phase": "http",
+      "tcpSeconds": 0.22223070000472944,
+      "local": [
+        "192.168.137.246",
+        52504
+      ],
+      "tlsSeconds": 0.6973926000064239,
+      "response": "HTTP/1.1 200 OK",
+      "seconds": 0.91
+    }
+  ],
+  "regionalFinal": [
+    {
+      "country": "CN",
+      "city": "Shanghai",
+      "asn": 17621,
+      "status": "finished",
+      "httpStatus": 200,
+      "timings": {
+        "total": 5140,
+        "dns": 406,
+        "tcp": 203,
+        "tls": 1391,
+        "firstByte": 3140,
+        "download": 0
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Wuhan",
+      "asn": 4837,
+      "status": "finished",
+      "httpStatus": 200,
+      "timings": {
+        "total": 3323,
+        "dns": 479,
+        "tcp": 259,
+        "tls": 2233,
+        "firstByte": 352,
+        "download": 0
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Guangzhou",
+      "asn": 4134,
+      "status": "finished",
+      "httpStatus": 200,
+      "timings": {
+        "total": 1023,
+        "dns": 207,
+        "tcp": 223,
+        "tls": 233,
+        "firstByte": 360,
+        "download": 0
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Taishan",
+      "asn": 9808,
+      "status": "finished",
+      "httpStatus": 200,
+      "timings": {
+        "total": 1193,
+        "dns": 268,
+        "tcp": 58,
+        "tls": 79,
+        "firstByte": 788,
+        "download": 0
+      }
+    },
+    {
+      "country": "DE",
+      "city": "Falkenstein",
+      "asn": 24940,
+      "status": "finished",
+      "httpStatus": 200,
+      "timings": {
+        "total": 128,
+        "dns": 25,
+        "tcp": 7,
+        "tls": 18,
+        "firstByte": 78,
+        "download": 0
+      }
+    },
+    {
+      "country": "US",
+      "city": "Buffalo",
+      "asn": 36352,
+      "status": "finished",
+      "httpStatus": 200,
+      "timings": {
+        "total": 175,
+        "dns": 55,
+        "tcp": 13,
+        "tls": 28,
+        "firstByte": 79,
+        "download": 0
+      }
+    }
+  ],
+  "earlierFailuresPreserved": true,
+  "universalAvailabilityProven": false,
+  "physicalFullFlowPass": false,
+  "physicalFullFlowFailure": "Cinema child readiness exceeded 20-second check after successful home and reading entry. Earlier initial run had DCL timeout and diagnostic-only analytics allowlist rejection; final diagnostic allowed analytics. No system route/VPN/DNS changes.",
+  "finalFocusedPhysicalReading": {
+    "errors": [],
+    "steps": [
+      {
+        "step": "shelf",
+        "at": 67436
+      },
+      {
+        "step": "cinema",
+        "at": 68209
+      },
+      {
+        "step": "return-shelf",
+        "at": 85181
+      }
+    ],
+    "physicalInterface": 17,
+    "document": {
+      "status": 200,
+      "cacheControl": "public, max-age=0, must-revalidate, no-transform",
+      "analyticsInjected": false
+    },
+    "pass": true
+  }
+}
