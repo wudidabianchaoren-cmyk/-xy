@@ -1,0 +1,306 @@
+[
+  {
+    "page": "after-journey.html",
+    "url": "/assets/browser-v191/packed/b97354d7a1279d9b9886.js",
+    "sources": [
+      "./audio-focus-v141.js",
+      "./work-project.js",
+      "./glass-gallery-v152.js"
+    ],
+    "bytes": 22051,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "after-journey.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "directory-credits.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "directory.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "home-creation.html",
+    "url": "/assets/browser-v191/packed/22aac18f1d27b9d20025.js",
+    "sources": [
+      "./work-project.js",
+      "./glass-gallery-v131.js",
+      "./navigation-v141.js"
+    ],
+    "bytes": 31393,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "home-creation.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "humid-southeast-asia.html",
+    "url": "/assets/browser-v191/packed/3bfde0529db071a29b24.js",
+    "sources": [
+      "./audio-focus-v141.js",
+      "./humid-southeast-asia-v149.js",
+      "./glass-gallery-v142.js"
+    ],
+    "bytes": 20862,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "humid-southeast-asia.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "index.html",
+    "url": "/assets/browser-v191/packed/1090a89391a81e607ceb.js",
+    "sources": [
+      "./identity-v144.js",
+      "./navigation-v152.js"
+    ],
+    "bytes": 26193,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "index.html",
+    "url": "/assets/browser-v191/packed/7692b3776ffd544393d8.js",
+    "sources": [
+      "./assets/vendor/three-0.160.0.min.js",
+      "./assets/vendor/gsap-3.13.0.min.js",
+      "./assets/vendor/ScrollTrigger-3.13.0.min.js",
+      "./assets/vendor/lenis-1.3.23.min.js",
+      "./assets/vendor/lucide-0.468.0.min.js",
+      "./v23-v144.js",
+      "./v31-motion-v144.js",
+      "./v31-personal.js",
+      "./v31-standalone-v140.js",
+      "./v31-controls-v143.js",
+      "./v31-works-ring-v144.js"
+    ],
+    "bytes": 1473579,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "index.html",
+    "url": "/assets/browser-v191/packed/804acbf1112e139268ee.js",
+    "sources": [
+      "./startup-v144.js",
+      "./home-audio-policy-v143.js"
+    ],
+    "bytes": 3178,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "index.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "learning.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "mid-autumn.html",
+    "url": "/assets/browser-v191/packed/e7bb6fd7c399dd7130ee.js",
+    "sources": [
+      "./audio-focus-v141.js",
+      "./work-project.js"
+    ],
+    "bytes": 4749,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "mid-autumn.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "mythology-process.html",
+    "url": "/assets/browser-v191/packed/3bead2173a3e2beebb7b.js",
+    "sources": [
+      "./audio-focus-v141.js",
+      "./glass-gallery-v142.js",
+      "./navigation-v152.js"
+    ],
+    "bytes": 42612,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "mythology-process.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "mythology.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "physical-universe.html",
+    "url": "/assets/browser-v191/packed/b460e63d2a2f7eef912a.js",
+    "sources": [
+      "./audio-focus-v141.js",
+      "./code-films-playback-v130.js",
+      "./glass-gallery-v152.js"
+    ],
+    "bytes": 21056,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "physical-universe.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "reading.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "rural-return.html",
+    "url": "/assets/browser-v191/packed/b97354d7a1279d9b9886.js",
+    "sources": [
+      "./audio-focus-v141.js",
+      "./work-project.js",
+      "./glass-gallery-v152.js"
+    ],
+    "bytes": 22051,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "rural-return.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "v31.html",
+    "url": "/assets/browser-v191/packed/1090a89391a81e607ceb.js",
+    "sources": [
+      "./identity-v144.js",
+      "./navigation-v152.js"
+    ],
+    "bytes": 26193,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "v31.html",
+    "url": "/assets/browser-v191/packed/7692b3776ffd544393d8.js",
+    "sources": [
+      "./assets/vendor/three-0.160.0.min.js",
+      "./assets/vendor/gsap-3.13.0.min.js",
+      "./assets/vendor/ScrollTrigger-3.13.0.min.js",
+      "./assets/vendor/lenis-1.3.23.min.js",
+      "./assets/vendor/lucide-0.468.0.min.js",
+      "./v23-v144.js",
+      "./v31-motion-v144.js",
+      "./v31-personal.js",
+      "./v31-standalone-v140.js",
+      "./v31-controls-v143.js",
+      "./v31-works-ring-v144.js"
+    ],
+    "bytes": 1473579,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "v31.html",
+    "url": "/assets/browser-v191/packed/804acbf1112e139268ee.js",
+    "sources": [
+      "./startup-v144.js",
+      "./home-audio-policy-v143.js"
+    ],
+    "bytes": 3178,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "v31.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  },
+  {
+    "page": "yangjian.html",
+    "url": "/assets/browser-v191/packed/8907267dd82d1e90ad44.js",
+    "sources": [
+      "/browser-resources-v180.js",
+      "/browser-runtime-v180.js"
+    ],
+    "bytes": 149282,
+    "authoredOrderPreserved": true
+  }
+]

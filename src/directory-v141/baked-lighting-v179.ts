@@ -9,7 +9,10 @@ const fieldDownloads=new Map<string,Promise<any>>();
 export function preloadNativeLighting186(manifestPath:string){
  const key=new URL(manifestPath,location.href).href;if(fieldDownloads.has(key))return fieldDownloads.get(key)!;
  const task=(async()=>{const response=await fetch(key);if(!response.ok)throw Error('Native lighting manifest unavailable');const manifest=await response.json(),url=new URL(response.url),loader=new T.TextureLoader(),parts=new Map();
-  for(const pose of manifest.poses){const job=Promise.all([loader.loadAsync(new URL(pose.on,url).href),loader.loadAsync(new URL(pose.off,url).href),fetch(new URL(pose.depth,url))]);job.catch(()=>{});parts.set(pose.id,job);}
+  // Drain prefetched depth bodies now. Holding unread response streams while
+  // waiting for entry can occupy the connection and stall later page assets.
+  const depthFile=async(address:URL)=>{const response=await fetch(address);if(!response.ok)throw Error('Visibility field unavailable');const copy=new Response(await response.arrayBuffer(),{status:response.status,headers:response.headers});Object.defineProperty(copy,'url',{value:response.url});return copy;};
+  for(const pose of manifest.poses){const job=Promise.all([loader.loadAsync(new URL(pose.on,url).href),loader.loadAsync(new URL(pose.off,url).href),depthFile(new URL(pose.depth,url))]);job.catch(()=>{});parts.set(pose.id,job);}
   return{manifest,url,parts};})();task.catch(()=>fieldDownloads.delete(key));fieldDownloads.set(key,task);return task;
 }
 const projectionGLSL=`

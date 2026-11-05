@@ -163,7 +163,7 @@
       const mobile = innerWidth <= 700, code = gallery.classList.contains('code-gallery');
       const maxWidth = w * (mobile || code && innerWidth <= 850 ? .8 : code ? .84 : .64);
       const maxHeight = h * (mobile ? .6 : code ? .7 : project === 'home-creation' ? .76 : .6);
-      const ratio = image.naturalWidth / image.naturalHeight;
+      const ratio = image.naturalWidth / image.naturalHeight || sequence[0]?.naturalWidth / sequence[0]?.naturalHeight || 16/9;
       const width = Math.min(maxWidth, maxHeight * ratio), height = width / ratio;
       const left = (w - width) / 2, top = (h - height) / 2;
       room.style.setProperty('--glass-left', left + 'px');
@@ -189,6 +189,8 @@
       else { animation = null; raf = 0; state.animating = false; draw(); record.settledAt = now; }
     }
     function move(row) {
+      const nextImage=sequence[clamp(row,0,record.stops.length-1)];
+      if(nextImage&&(!nextImage.complete||!nextImage.naturalWidth)){if(state.waitingImage191)return;state.waitingImage191=true;nextImage.loading='eager';void nextImage.decode().then(()=>{state.waitingImage191=false;move(row);}).catch(()=>{state.waitingImage191=false;});return;}
       const fromIndex = state.row;
       state.row = state.index = clamp(row, 0, record.stops.length - 1);
       state.target = record.stops[state.row]; state.manualChanges++;
@@ -222,14 +224,15 @@
       const indices = data.views?.flat() ?? data.gallerySelection ?? data.frames.map((_, index) => index);
       state.sourceIndices = indices; entries = indices.map(index => data.frames[index]);
       const cache = new Map();
-      sequence = await Promise.all(entries.map(entry => {
+      sequence = entries.map((entry,index) => {
         const src = new URL(entry.image || entry.src, url).href;
         if (!cache.has(src)) {
-          const image = new Image(); image.decoding = 'async'; image.src = src;
-          cache.set(src, image.decode().then(() => image));
+          const image = new Image(); image.decoding = 'async'; image.loading=index<2?'eager':'lazy';image.fetchPriority=index===0?'high':'low';image.src = src;
+          cache.set(src, image);
         }
         return cache.get(src);
-      }));
+      });
+      await sequence[0].decode();state.firstImageReadyAt191=performance.now();
       state.frames = sequence.length; state.textureCount = cache.size;
       tracks.forEach(track => sequence.forEach((image, index) => {
         const copy = image.cloneNode(); copy.alt = entries[index].alt || entries[index].title || entries[index].subject || '';

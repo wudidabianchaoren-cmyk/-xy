@@ -2858,3 +2858,8 @@ body.odyssey-dialog-open { overflow:hidden; }
 /* V174: raising scene brightness preserves black, instead of adding a white veil. */
 body.is-display-raised .home-rendered-architecture,
 body.is-display-raised .directory-room-host { filter: brightness(var(--scene-display-gain,1)); }
+
+/* Keep the image composition free of the global masthead only while this section owns the viewport. */
+body.collage-immersive191:not(.portfolio-portal-open) .topbar,body.collage-immersive191:not(.portfolio-portal-open) #experienceConsole{visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+/* Show the actual work cover after the authored shutter closes, during decoding. */
+.work-route-preview191{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0b1010;opacity:0}.works-project-transition.is-preparing191:has(.work-route-preview191) .work-route-preview191{opacity:1}.works-project-transition.is-preparing191:has(.work-route-preview191) .project-shutter,.works-project-transition.is-preparing191:has(.work-route-preview191) .project-play-cue{opacity:0}

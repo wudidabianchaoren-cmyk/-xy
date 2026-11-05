@@ -7,9 +7,12 @@
  const curtain=document.createElement('div');curtain.className='portfolio-curtain-v138';curtain.setAttribute('aria-hidden','true');document.body.append(curtain);
  let busy=false,hold=0,bottomSince=0,lastSurface=null,bottomReached=false,ignoreWheelUntil=performance.now()+1200;
  const animate=(frames,duration)=>curtain.animate(frames,{duration:reduced?1:duration,easing:'cubic-bezier(.16,1,.3,1)',fill:'forwards'}).finished.catch(()=>{});
- const cover=()=>animate([{opacity:0,clipPath:'inset(49.9% 0 49.9% 0)'},{opacity:1,clipPath:'inset(0 0 0 0)'}],220);
+ // Keep the previous painted surface visible while the next document prepares.
+ // An opaque curtain used to turn every network delay into a black screen.
+ curtain.style.background='transparent';
+ const cover=()=>animate([{opacity:0},{opacity:0}],120);
  const painted=()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
- const reveal=async()=>{await painted();await animate([{opacity:1,clipPath:'inset(0 0 0 0)'},{opacity:0,clipPath:'inset(49.9% 0 49.9% 0)'}],380);};
+ const reveal=async()=>{await painted();await animate([{opacity:0},{opacity:0}],120);};
  function remember(){
   const main=mainDocument;
   const context={href:location.href,scroll:scrollY,main,at:Date.now()};
@@ -25,12 +28,24 @@
  const portalChild=window.parent!==window&&new URLSearchParams(location.search).has('portal');
  let portal=null,portalFrame=null,portalStack=[],portalScroll=0,portalFocus=null;
  const cachedFrames=new Map();let warmPromise=null;
+ const previews191={'/reading.html':'/assets/browser-v191/previews/reading.webp','/mythology.html':'/assets/browser-v191/previews/mythology.webp'};
+ const previewStyle=document.createElement('style');previewStyle.textContent='.portfolio-child-portal{background:transparent}.portal-first-frame191{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .24s}.portal-first-frame191 img{width:100%;height:100%;object-fit:cover}.portal-first-frame191.is-painted{opacity:1}.portal-first-frame191.is-leaving{opacity:0}.portal-prepare-label191{position:absolute;z-index:3;left:50%;bottom:24px;transform:translateX(-50%);padding:10px 16px;color:#eee8db;background:#171c18df;font:13px system-ui;pointer-events:none}.portfolio-child-portal iframe{transition:opacity .22s}';document.head.append(previewStyle);
+ function firstFrame191(entry){
+  // Opacity-zero iframes can have their animation frames throttled. Keep the
+  // live document paintable behind the separate, opaque original preview.
+  const frame=entry.frame,path=new URL(entry.href).pathname,poster=previews191[path];frame.style.opacity='1';frame.style.background='transparent';
+  const layer=document.createElement('div');layer.className='portal-first-frame191';let image;
+  if(poster){image=new Image();image.alt='';image.loading='eager';image.fetchPriority='high';image.src=poster;layer.append(image);image.decode().then(()=>layer.classList.add('is-painted')).catch(()=>{});portal.append(layer);}
+  const label=document.createElement('div');label.className='portal-prepare-label191';label.style.pointerEvents='auto';const message=document.createElement('span');message.textContent='Preparing the scene…';const back=document.createElement('button');back.type='button';back.textContent='Back';back.style.cssText='margin-left:16px;border:0;background:transparent;color:inherit;cursor:pointer';back.onclick=()=>window.portfolioReturn();label.append(message,back);portal.append(label);entry.preview191={layer,label};
+  let began=performance.now(),done=false;const retry=document.createElement('button');retry.type='button';retry.textContent='Try again';retry.hidden=true;retry.style.cssText='margin-left:12px;border:0;background:transparent;color:inherit;cursor:pointer';retry.onclick=()=>{began=performance.now();retry.hidden=true;frame.src='about:blank';requestAnimationFrame(()=>frame.src=entry.href);};label.append(retry);
+  const check=()=>{if(!frame.isConnected||portalFrame!==frame){layer.remove();label.remove();return;}let ready=false,error=false;try{const child=frame.contentWindow;ready=path.endsWith('/mythology.html')?!!child.odysseyState?.ready:path.endsWith('/reading.html')?!!child.readingBookState&&!child.readingBookState.loading:!!child.portfolioSurfacePainted189;error=!!child.odysseyState?.error;}catch{}if(error||performance.now()-began>90000)retry.hidden=false;if(ready&&!done){done=true;entry.ready=true;frame.style.opacity='1';void painted().then(()=>{layer.classList.add('is-leaving');label.remove();setTimeout(()=>layer.remove(),280);});state.lastFirstFrameMs191=performance.now()-began;return;}setTimeout(check,80);};check();
+ }
  const portalURL=href=>{const u=new URL(versioned(href));u.searchParams.set('portal','1');return u.href;};
  const cacheKey=href=>{const name=new URL(href,location.href).pathname;return /\/(mythology|reading)\.html$/.test(name)?name:null;};
  function ensurePortal(){if(portal)return;portal=document.createElement('section');portal.className='portfolio-child-portal';portal.dataset.parked='true';portal.setAttribute('role','dialog');portal.setAttribute('aria-label','作品内容');portal.setAttribute('aria-hidden','true');document.body.append(portal);}
  function park(entry){entry.frame.hidden=true;entry.frame.inert=true;entry.frame.setAttribute('aria-hidden','true');entry.frame.dataset.cached='true';entry.frame.contentWindow?.postMessage({type:'portfolio:surface-suspend'},location.origin);}
  function retire(entry){if(cacheKey(entry.href)){park(entry);return;}entry.frame.src='about:blank';entry.frame.remove();}
- function newFrame(target){ensurePortal();const frame=document.createElement('iframe');frame.title='作品内容';frame.allow='autoplay; fullscreen';portal.append(frame);const entry={href:target,frame,ready:false};const key=cacheKey(target);if(key)cachedFrames.set(key,entry);frame.src=target;return entry;}
+ function newFrame(target){ensurePortal();const frame=document.createElement('iframe');frame.title='作品内容';frame.allow='autoplay; fullscreen';portal.append(frame);const entry={href:target,frame,ready:false};const key=cacheKey(target);if(key)cachedFrames.set(key,entry);frame.addEventListener('load',()=>{if(portalFrame===frame&&!frame.hidden&&!frame.dataset.cached)frame.contentWindow?.postMessage({type:'portfolio:child-return'},location.origin);});frame.src=target;return entry;}
  window.portfolioWarmMythology=()=>{const intro=window.homeDesignedIntroState;if(intro&&!intro.finished&&!intro.backgroundGPUReleased)return new Promise(resolve=>{const done=()=>{removeEventListener('v163:background-gpu-release',done);removeEventListener('v85:home-intro-finished',done);resolve(window.portfolioWarmMythology());};addEventListener('v163:background-gpu-release',done,{once:true});addEventListener('v85:home-intro-finished',done,{once:true});});if(portalChild||(!mainDocument&&!location.pathname.endsWith('/reading.html')))return Promise.resolve();if(warmPromise)return warmPromise;
   const key=new URL('./mythology.html',location.href).pathname;const url=portalURL('./mythology.html?v=32.152');const u=new URL(url);u.searchParams.set('prewarm','1');const entry=cachedFrames.get(key)||newFrame(u.href);if(!portalStack.includes(entry)){entry.frame.dataset.cached='true';entry.frame.inert=true;entry.frame.setAttribute('aria-hidden','true');}
   warmPromise=new Promise((resolve,reject)=>{const began=performance.now();const poll=()=>{try{if(entry.frame.contentWindow?.odysseyState?.assetsPrepared&&!entry.frame.contentWindow.odysseyState.ready){entry.assetsPrepared=true;if(!portalStack.includes(entry))park(entry);state.mythAssetsPrepared=true;resolve(entry);return;}if(entry.frame.contentWindow?.odysseyState?.ready){entry.ready=true;if(!portalStack.includes(entry))park(entry);state.mythWarmReady=true;state.mythWarmMs=performance.now()-began;window.portfolioBoot?.complete('mythology');resolve(entry);return;}if(entry.frame.contentWindow?.odysseyState?.error)throw Error(entry.frame.contentWindow.odysseyState.error);if(performance.now()-began>120000)throw Error('海湾场景预热超时');setTimeout(poll,80);}catch(e){state.mythWarmError=String(e);reject(e);}};poll();});warmPromise.catch(()=>{});return warmPromise;
@@ -42,7 +57,11 @@
   ensurePortal();if(!portalStack.length){remember();portalScroll=scrollY;portalFocus=document.activeElement;portal.dataset.parked='false';portal.removeAttribute('aria-hidden');document.body.classList.add('portfolio-portal-open');window.portfolioAudioFocus?.claim('portal',null);}
   if(portalFrame){portalFrame.hidden=true;portalFrame.inert=true;portalFrame.setAttribute('aria-hidden','true');portalFrame.contentWindow?.postMessage({type:'portfolio:surface-suspend'},location.origin);}
   const key=cacheKey(target),retained=key&&cachedFrames.get(key),entry=retained||newFrame(target),frame=entry.frame;frame.dataset.portalDepth=String(portalStack.length+1);frame.hidden=false;frame.inert=false;frame.removeAttribute('aria-hidden');delete frame.dataset.cached;portalFrame=frame;portalStack.push(entry);state.portalDepth=portalStack.length;
-  frame.focus({preventScroll:true});frame.contentWindow?.postMessage({type:'portfolio:child-return'},location.origin);
+  firstFrame191(entry);frame.focus({preventScroll:true});frame.contentWindow?.postMessage({type:'portfolio:child-return'},location.origin);
+  if(previews191[new URL(target).pathname]){
+   if(new URL(target).pathname.endsWith('/reading.html'))warmBay();
+   state.lastPortalPolicy191='retain painted source, original scene preview, reveal live first frame';return;
+  }
   if(new URL(target).pathname.endsWith('/mythology.html')){
    const waitForWorld=()=>new Promise(resolve=>{const check=()=>{if(frame.contentWindow?.odysseyState?.ready){entry.ready=true;state.lastMythSceneReadyMs=performance.now()-began;resolve();}else if(!frame.isConnected||performance.now()-began>480000)resolve();else setTimeout(check,80);};check();});
    if(!entry.ready){if(window.PORTFOLIO_BROWSER_ONLY){void waitForWorld();if(!retained)await new Promise(resolve=>{const timer=setTimeout(resolve,1500);frame.addEventListener('load',()=>{clearTimeout(timer);resolve();},{once:true});});}else await waitForWorld();}
@@ -52,7 +71,7 @@
   if(window.PORTFOLIO_BROWSER_ONLY&&new URL(target).pathname.endsWith('/reading.html'))setTimeout(function afterShelf(){if(portalFrame!==frame)return;if(!frame.contentWindow?.readingBookState||frame.contentWindow.readingBookState.loading){setTimeout(afterShelf,250);return;}warmBay();},750);
  }
  async function closePortal(){if(!portal)return;for(const entry of portalStack)retire(entry);portal.dataset.parked='true';portal.setAttribute('aria-hidden','true');portalFrame=null;portalStack=[];state.portalDepth=0;document.body.classList.remove('portfolio-portal-open');window.portfolioAudioFocus?.release('portal');scrollTo(0,portalScroll);portalFocus?.focus?.({preventScroll:true});resumeSurface();}
- async function popPortal(){if(portalStack.length<=1)return closePortal();const old=portalStack.pop();retire(old);const prior=portalStack.at(-1);portalFrame=prior.frame;portalFrame.hidden=false;portalFrame.inert=false;portalFrame.removeAttribute('aria-hidden');delete portalFrame.dataset.cached;state.portalDepth=portalStack.length;portalFrame.focus({preventScroll:true});portalFrame.contentWindow?.postMessage({type:'portfolio:child-return'},location.origin);}
+ async function popPortal(){if(portalStack.length<=1)return closePortal();const old=portalStack.pop();retire(old);const prior=portalStack.at(-1);portalFrame=prior.frame;portalFrame.hidden=false;portalFrame.inert=false;portalFrame.removeAttribute('aria-hidden');delete portalFrame.dataset.cached;state.portalDepth=portalStack.length;firstFrame191(prior);portalFrame.focus({preventScroll:true});portalFrame.contentWindow?.postMessage({type:'portfolio:child-return'},location.origin);}
  window.addEventListener('message',event=>{if(event.origin!==location.origin)return;
   if(event.data?.type==='portfolio:surface-suspend'&&event.source===parent){document.body.classList.add('portfolio-surface-suspended');window.dispatchEvent(new Event('portfolio:surface-suspend'));return;}
   if(event.data?.type==='portfolio:child-return'&&event.source===parent){document.body.classList.remove('portfolio-surface-suspended');resumeSurface();return;}
@@ -129,7 +148,7 @@
  // frames still make subsequent entries immediate.
  state.mythWarmPolicy='preload navigation and media after the original opening; share the live decoder on entry';
  const warmBay=()=>{const run=()=>window.portfolioWarmMythology().catch(()=>{});if('requestIdleCallback'in window)requestIdleCallback(run,{timeout:1200});else setTimeout(run,200);};
- if(!window.PORTFOLIO_BROWSER_ONLY){if(mainDocument){addEventListener('v85:home-intro-finished',warmBay,{once:true});if(new URLSearchParams(location.search).has('return'))setTimeout(warmBay,1500);}else if(!portalChild&&location.pathname.endsWith('/reading.html'))setTimeout(warmBay,600);}else if(mainDocument){state.mythWarmPolicy='prepare on reading-shelf intent, without competing with work films';}
+ if(!window.PORTFOLIO_BROWSER_ONLY){if(mainDocument){addEventListener('v85:home-intro-finished',warmBay,{once:true});if(new URLSearchParams(location.search).has('return'))setTimeout(warmBay,1500);}else if(!portalChild&&location.pathname.endsWith('/reading.html'))setTimeout(warmBay,600);}else if(mainDocument){state.mythWarmPolicy='download unchanged bay assets after LIVE home; defer scene assembly until entry';let warmed=false;const warmWhenLive=()=>{if(warmed||!window.homeClockState?.ready||!window.homeDesignedIntroState?.finished)return;warmed=true;setTimeout(warmBay,1200);};addEventListener('v154:home-phase',warmWhenLive);addEventListener('v85:home-intro-finished',warmWhenLive);document.getElementById('indexTrigger')?.addEventListener('pointerenter',()=>{if(window.homeClockState?.ready)warmBay();},{once:true});warmWhenLive();}
 })();
 
 ;(()=>{if(!document.querySelector('script[data-heading-v157]')){const s=document.createElement('script');s.src='./heading-interaction-v157.js?v=32.157';s.dataset.headingV157='true';document.head.append(s);}})();

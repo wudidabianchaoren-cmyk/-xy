@@ -953,6 +953,7 @@
     const url=new URL(location.href);url.searchParams.set('v','32.91');url.searchParams.set('return','1');url.searchParams.set('work',new URL(work.href,location.href).pathname.split('/').pop().replace('.html',''));
     try{sessionStorage.setItem('brain-universe-return-scroll',String(scrollY));sessionStorage.setItem('brain-universe-work-return',JSON.stringify({active:true,index:selectedIndex,scroll:scrollY,href:url.pathname+url.search}));}catch{}
     const veil=document.createElement('div');veil.className='works-project-transition';veil.setAttribute('aria-hidden','true');veil.innerHTML='<i class="project-shutter top"></i><i class="project-shutter bottom"></i><span class="project-play-cue">▷</span>';document.body.appendChild(veil);
+    const coverPath=window.PORTFOLIO_RESOURCES_V180?.pageImages?.[new URL(work.href,location.href).pathname]?.[0];if(coverPath){const image=new Image();image.className='work-route-preview191';image.alt='';image.loading='eager';image.fetchPriority='high';image.src=coverPath;veil.prepend(image);}
     document.body.classList.add('is-project-leaving');
     // Keep the existing world and its GPU resources alive across this child route.
     // The child is a real standalone document; direct links and refresh still work.
@@ -962,7 +963,7 @@
     const documentReady=event=>{if(event.origin===location.origin&&event.source===projectFrame?.contentWindow&&event.data?.type==='brain-universe:project-ready'){projectReadyCleanup();loaded=true;reveal();}};addEventListener('message',documentReady);projectReadyCleanup=()=>removeEventListener('message',documentReady);
     projectFrame.addEventListener('load',()=>{if(projectFrame?.contentWindow?.portfolioSurfacePainted189){projectReadyCleanup();loaded=true;requestAnimationFrame(()=>requestAnimationFrame(reveal));}},{once:true});document.body.appendChild(projectFrame);
     if(pushHistory)history.pushState({brainWork:url.searchParams.get('work')},'',new URL('./v31.html?v=32.152',location.href));
-    setTimeout(()=>{curtainClosed=true;reveal();},reducedMotion?100:820);
+    setTimeout(()=>{curtainClosed=true;veil.classList.add('is-preparing191');reveal();},reducedMotion?100:820);
   }
   window.addEventListener('message',event=>{if(event.origin===location.origin&&event.source===projectFrame?.contentWindow&&event.data?.type==='brain-universe:work-return'){history.replaceState(null,'',new URL('./v31.html?v=32.152',location.href));finishProjectReturn();}});
   window.addEventListener('popstate',event=>{const i=event.state?.brainWork?works.findIndex(w=>w.href&&new URL(w.href,location.href).pathname.endsWith('/'+event.state.brainWork+'.html')):-1;if(i<0){if(projectFrame)finishProjectReturn();}else if(!projectFrame){if(!opened)open(null,{index:i});rotation=-i*(Math.PI*2/COUNT);updateInfo(i,true);openProject(false);}});

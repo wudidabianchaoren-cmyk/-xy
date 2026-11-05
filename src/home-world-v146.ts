@@ -306,7 +306,7 @@ if(surface){
     mark('complete lighting variants prepared');
     }
     animatedMechanisms=[...objects].filter(([name])=>/upper automaton [01]$|hinged blue apostle shutter/.test(name));
-    resize();ready=true;render(0);state.ready=true;state.loadMilliseconds=performance.now()-loadingAt;last=performance.now();canvas.style.opacity=!webHome?'0':'1';mark('live frame revealed');preparing.remove();// Capture the already rendered first frame asynchronously during the loading film.
+    resize();ready=true;render(0);await waitForPaint191(renderer);state.firstFramePainted191=true;state.ready=true;state.loadMilliseconds=performance.now()-loadingAt;last=performance.now();canvas.style.opacity=!webHome?'0':'1';mark('live frame revealed');preparing.remove();// Capture the already rendered first frame asynchronously during the loading film.
     // Reuse it for the unchanged 16-second composition, avoiding a second render/readback at handoff.
     let displayURL='';let introDisplayReady:Promise<string>|null=null;
     const prepareDisplayCapture=()=>introDisplayReady??=(new Promise<string>((resolve,reject)=>{const displayStarted=performance.now();canvas.toBlob(blob=>{if(!blob){reject(Error('First-frame capture unavailable'));return;}displayURL=URL.createObjectURL(blob);Object.assign(state,{introCapture:{async:true,startedAt:displayStarted,readyAt:performance.now(),bytes:blob.size}});resolve(displayURL);},'image/jpeg',.94);}));
@@ -464,7 +464,8 @@ if(surface){
   window.addEventListener('v85:home-intro-finished',()=>{intro=16;started=true;paused=false;last=performance.now();if(ready){navigation.update(true);discoveries.update(true);render(0);}});
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();Object.assign(state,{contextLost:true});for(const fence of frameFences)gpu.deleteSync(fence);frameFences.length=0;});
   canvas.addEventListener('webglcontextrestored',()=>{Object.assign(state,{contextLost:false});last=performance.now();if(ready){resize();render(0);navigation.update(true);discoveries.update(true);}});
-  graphicsRecovery(renderer,surface,state,async()=>{await renderer.compileAsync(scene,camera);renderer.shadowMap.needsUpdate=true;resize();render(0);},'./assets/native-v165/home.jpg','Preparing the courtyard…');
+  graphicsRecovery(renderer,surface,state,async()=>{await renderer.compileAsync(scene,camera);renderer.shadowMap.needsUpdate=true;resize();render(0);await waitForPaint191(renderer);},'./assets/native-v165/home.jpg','Preparing the courtyard…');
   requestAnimationFrame(animate);document.addEventListener('visibilitychange',()=>{last=performance.now();});
 }
 
+import {waitForPaint191} from './paint-fence-v191';
