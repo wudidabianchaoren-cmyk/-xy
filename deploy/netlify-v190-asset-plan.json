@@ -13,8 +13,8 @@
     },
     {
       "path": "after-journey.html",
-      "bytes": 222364,
-      "sha1": "27fdc05c3a44f10d0711998d8eef276162cd8eea"
+      "bytes": 222019,
+      "sha1": "69f676eb13ee0c05edf938c5f7dd674d2e0e44bf"
     },
     {
       "path": "assets/atmosphere-v172/atmosphere-01.webp",
@@ -7452,6 +7452,11 @@
       "sha1": "a921918b4f3a40b77b4e88c6946a415ce2ae6985"
     },
     {
+      "path": "assets/browser-v190/packed/de831dc4ecbd87260085.js",
+      "bytes": 148977,
+      "sha1": "2529b14af930172caa2a5d24d17781acd04f81e1"
+    },
+    {
       "path": "assets/browser-v190/packed/e7bb6fd7c399dd7130ee.js",
       "bytes": 4821,
       "sha1": "2a1146951fc3a1381bebf3795e2a32c4ea7a776c"
@@ -12248,8 +12253,8 @@
     },
     {
       "path": "browser-runtime-v180.js",
-      "bytes": 23961,
-      "sha1": "65236da4d516b3f804e283f441efa69e1e963441"
+      "bytes": 23613,
+      "sha1": "21d61afff89f59922db95a1e6a73a66ea1b8614c"
     },
     {
       "path": "c4d/hybrid-study/architecture-master.png",
@@ -13748,13 +13753,13 @@
     },
     {
       "path": "directory-credits.html",
-      "bytes": 158249,
-      "sha1": "64a78418f8114132e824dfba155d46402cebc475"
+      "bytes": 157904,
+      "sha1": "fdfb379065b6fd9378b447fdfe8d5fae38131c34"
     },
     {
       "path": "directory.html",
-      "bytes": 188873,
-      "sha1": "937710f6d9d25fd8b6a96e2e46e721b62ea3b3e7"
+      "bytes": 188528,
+      "sha1": "a03beedd5cedb11a29d88f9db28072e7212b50e3"
     },
     {
       "path": "finish-v138.css",
@@ -13818,8 +13823,8 @@
     },
     {
       "path": "home-creation.html",
-      "bytes": 223384,
-      "sha1": "da397b619d136a5dda7df33e028245d158103c7f"
+      "bytes": 223039,
+      "sha1": "ceaaa074e9d54dd1fce70805af146c51c3dccba9"
     },
     {
       "path": "home-intro-v153.css",
@@ -13853,8 +13858,8 @@
     },
     {
       "path": "humid-southeast-asia.html",
-      "bytes": 211962,
-      "sha1": "4e8e823dbe5bfa8f84b52ffee016c8933e8bfecc"
+      "bytes": 211617,
+      "sha1": "081a5594582ff2efb0b9d7888aaa45bd48d2d5ab"
     },
     {
       "path": "identity-v144.js",
@@ -13863,8 +13868,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 2175405,
-      "sha1": "25db04f10a59a5f373adfac1e140c857839953a6"
+      "bytes": 2175060,
+      "sha1": "a48c72ce872ff39a9d89360a197eab133f5241d1"
     },
     {
       "path": "learning-fade-v153.js",
@@ -13898,13 +13903,13 @@
     },
     {
       "path": "learning.html",
-      "bytes": 189140,
-      "sha1": "e713ba13a54bb9a40ac05442ede1b5c2e7e8b36d"
+      "bytes": 188795,
+      "sha1": "1009d5064c7a3a03b7a8c9f860f7919978779a5d"
     },
     {
       "path": "mid-autumn.html",
-      "bytes": 197746,
-      "sha1": "94b42638d14d0371d6014745135e4a5cacaf1625"
+      "bytes": 197401,
+      "sha1": "ba50c11de37a8a096ab3377d2710bdbc0579d38c"
     },
     {
       "path": "motion/physical-universe-v103/drawing.js",
@@ -13963,8 +13968,8 @@
     },
     {
       "path": "mythology-process.html",
-      "bytes": 231921,
-      "sha1": "89660442f9f46fbc79f384183c0945b9c028a103"
+      "bytes": 231576,
+      "sha1": "5d5be8fa485b1d33b27fc9056736e1a0a00d1b7f"
     },
     {
       "path": "mythology-v134.css",
@@ -13983,8 +13988,8 @@
     },
     {
       "path": "mythology.html",
-      "bytes": 313331,
-      "sha1": "bbf359ed34ba5ab07c6934e2074d365f361b851c"
+      "bytes": 312986,
+      "sha1": "e792b8fe1f27fc1faec600ef750e44168f7346ec"
     },
     {
       "path": "navigation-v141.js",
@@ -14008,8 +14013,8 @@
     },
     {
       "path": "physical-universe.html",
-      "bytes": 223061,
-      "sha1": "2deeef226ae14d788aee3caddd5a471ae5f0a948"
+      "bytes": 222716,
+      "sha1": "5973714cfcd661412c639de28c6470b7b15b0576"
     },
     {
       "path": "progressive-media-v185.js",
@@ -14058,8 +14063,8 @@
     },
     {
       "path": "reading.html",
-      "bytes": 200795,
-      "sha1": "8b8e5cac1bf40f996beae96f387b9513a1b39b0e"
+      "bytes": 200450,
+      "sha1": "20a67e0c2bfcb4e4b4e01e440d9d753235ede197"
     },
     {
       "path": "refinements-v141.css",
@@ -14113,8 +14118,8 @@
     },
     {
       "path": "rural-return.html",
-      "bytes": 217530,
-      "sha1": "abd335c767e778ba96b9506b9f5b22fbf12d78f1"
+      "bytes": 217185,
+      "sha1": "c489e4d8dea101c2e68fbd26dcdb31946a32d285"
     },
     {
       "path": "scene-dist/browser-v185/cinema-notes-v155.css",
@@ -15813,8 +15818,8 @@
     },
     {
       "path": "v31.html",
-      "bytes": 2175405,
-      "sha1": "25db04f10a59a5f373adfac1e140c857839953a6"
+      "bytes": 2175060,
+      "sha1": "a48c72ce872ff39a9d89360a197eab133f5241d1"
     },
     {
       "path": "v32-121.css",
@@ -15963,9 +15968,9 @@
     },
     {
       "path": "yangjian.html",
-      "bytes": 212687,
-      "sha1": "52dc145703f6d223d2cc7fed43f0d8f43c19e655"
+      "bytes": 212342,
+      "sha1": "3e8458ac22b63867343ad3a8b83da297ddb6dff6"
     }
   ],
-  "bytes": 4059348828
+  "bytes": 4059492282
 }
