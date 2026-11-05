@@ -1,0 +1,550 @@
+{
+  "version": 192,
+  "url": "https://vvainex.click/",
+  "DNS": [
+    {
+      "server": "10.49.64.178",
+      "host": "vvainex.click",
+      "rcode": 0,
+      "answers": [
+        {
+          "ip": "104.21.81.43",
+          "ttl": 1
+        },
+        {
+          "ip": "172.67.138.27",
+          "ttl": 1
+        }
+      ]
+    },
+    {
+      "server": "10.49.64.178",
+      "host": "www.baidu.com",
+      "rcode": 0,
+      "answers": [
+        {
+          "ip": "157.148.69.186",
+          "ttl": 93
+        },
+        {
+          "ip": "157.148.69.151",
+          "ttl": 93
+        }
+      ]
+    },
+    {
+      "server": "223.5.5.5",
+      "host": "vvainex.click",
+      "rcode": 0,
+      "answers": [
+        {
+          "ip": "104.21.81.43",
+          "ttl": 300
+        },
+        {
+          "ip": "172.67.138.27",
+          "ttl": 300
+        }
+      ]
+    },
+    {
+      "server": "223.5.5.5",
+      "host": "www.baidu.com",
+      "rcode": 0,
+      "answers": [
+        {
+          "ip": "157.148.69.151",
+          "ttl": 9
+        },
+        {
+          "ip": "157.148.69.186",
+          "ttl": 9
+        }
+      ]
+    },
+    {
+      "server": "119.29.29.29",
+      "host": "vvainex.click",
+      "rcode": 0,
+      "answers": [
+        {
+          "ip": "104.21.81.43",
+          "ttl": 300
+        },
+        {
+          "ip": "172.67.138.27",
+          "ttl": 300
+        }
+      ]
+    },
+    {
+      "server": "119.29.29.29",
+      "host": "www.baidu.com",
+      "rcode": 0,
+      "answers": [
+        {
+          "ip": "157.148.69.186",
+          "ttl": 21
+        },
+        {
+          "ip": "157.148.69.151",
+          "ttl": 21
+        }
+      ]
+    }
+  ],
+  "HTTP3Before": {
+    "Name": "HTTP/3 (with QUIC)",
+    "Class": "relative inline-flex cursor-pointer items-center border-none p-0 ring focus:outline-none focus-visible:ring-2 focus-visible:ring-kumo-brand transition-colors duration-150 ease-out motion-reduce:transition-none disabled:cursor-not-allowed disabled:opacity-50 h-4.5 w-9 rounded-[5px] supports-[corner-shape:squircle]:rounded-[10px] [corner-shape:squircle] bg-blue-500 dark:bg-blue-600 ring-blue-600 dark:ring-blue-500",
+    "Toggle": "On",
+    "Help": "",
+    "Patterns": [
+      "ValuePatternIdentifiers.Pattern",
+      "TogglePatternIdentifiers.Pattern",
+      "ScrollItemPatternIdentifiers.Pattern"
+    ],
+    "Enabled": true
+  },
+  "HTTP3After": {
+    "Zone": "vvainex.click",
+    "Setting": "HTTP/3 (with QUIC)",
+    "State": "Off",
+    "Plan": "Free",
+    "Method": "Authorized normal Edge dashboard UI; API returned403"
+  },
+  "HTTP2Unchanged": {
+    "Name": "HTTP/2",
+    "Enabled": false,
+    "Toggle": "On"
+  },
+  "physicalRouteProbes": [
+    {
+      "ip": "172.67.138.27",
+      "host": "vvainex.click",
+      "interface": 17,
+      "headers": "HTTP/1.1 200 OK\r\nDate: Thu, 05 Nov 2026 18:27:51 GMT\r\nContent-Type: text/html; charset=utf-8\r\nConnection: close\r\nReport-To: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Hc6gBM0FsxU%2B63nAFL6mUBFbg8An86rvSne77DQhZ6eVJq7xw7Fh%2BVh7VkpshNgM%2BUBeL1kcuSNktsPd69jXLyOYt63RaC6pqDzbd%2BPKhWNHkqn%2BQ%2B30YNrEOHZ0UXmY\"}]}\r\nNel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0, must-revalidate, no-transform\r\nETag: \"0830c5d987a36d64eaea5943f451bd39\"\r\nLink: </scene-dist/browser-v191/home-designed-intro-v160.js>; rel=\"modulepreload\", </scene-dist/browser-v191/home-thought-line-v160.js>; rel=\"modulepreload\", </scene-dist/browser-v191/home-world-v146.js>; rel=\"modulepreload\", </scene-dist/browser-v191/scene-loader-v146.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-32475FOM.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-C6N56PU3.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-DGU5PTFW.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-LZ7QSBR5.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-ME7QVHGR.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-MG6POSIJ.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-NK3IH7V4.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-PQUBCPGM.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-R5XT465O.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-RGYTE4B5.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-RTTFH4P3.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-SXRZKL2H.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-U4YRHSER.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-W3TROUU3.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-XL3CMSHR.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-XM4RMFZ3.js>; rel=\"modulepreload\"\r\nreferrer-policy: strict-origin-when-cross-origin\r\nx-content-type-options: nosniff\r\nServer: cloudflare\r\ncf-cache-status: DYNAMIC\r\nServer-Timing: cfCacheStatus;desc=\"DYNAMIC\"\r\nServer-Timing: cfEdge;dur=38,cfOrigin;dur=115\r\nCF-RAY: a55dea36ee3f4e41-LAX",
+      "seconds": 1.481
+    },
+    {
+      "ip": "104.21.81.43",
+      "host": "vvainex.click",
+      "interface": 17,
+      "error": "The read operation timed out"
+    },
+    {
+      "ip": "172.66.47.145",
+      "host": "vvainex.click",
+      "interface": 17,
+      "headers": "HTTP/1.1 200 OK\r\nDate: Thu, 05 Nov 2026 18:28:03 GMT\r\nContent-Type: text/html; charset=utf-8\r\nConnection: close\r\nReport-To: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=URDQur4f5jwF1j3OjMGa2Np7PxjXWvHsanEluKuCoEcmctsokdW1ym%2FO1xj9XapMj8o%2FHuG6xdFr2N%2B6XyLvmnmahM5OG%2BY70q1oAinH3GdQsaPOvAQ9NyINJIvLGzES\"}]}\r\nNel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0, must-revalidate, no-transform\r\nETag: \"0830c5d987a36d64eaea5943f451bd39\"\r\nLink: </scene-dist/browser-v191/home-designed-intro-v160.js>; rel=\"modulepreload\", </scene-dist/browser-v191/home-thought-line-v160.js>; rel=\"modulepreload\", </scene-dist/browser-v191/home-world-v146.js>; rel=\"modulepreload\", </scene-dist/browser-v191/scene-loader-v146.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-32475FOM.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-C6N56PU3.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-DGU5PTFW.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-LZ7QSBR5.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-ME7QVHGR.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-MG6POSIJ.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-NK3IH7V4.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-PQUBCPGM.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-R5XT465O.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-RGYTE4B5.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-RTTFH4P3.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-SXRZKL2H.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-U4YRHSER.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-W3TROUU3.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-XL3CMSHR.js>; rel=\"modulepreload\", </scene-dist/browser-v191/shared-XM4RMFZ3.js>; rel=\"modulepreload\"\r\nreferrer-policy: strict-origin-when-cross-origin\r\nx-content-type-options: nosniff\r\nServer: cloudflare\r\ncf-cache-status: DYNAMIC\r\nServer-Timing: cfCacheStatus;desc=\"DYNAMIC\"\r\nServer-Timing: cfEdge;dur=46,cfOrigin;dur=83\r\nCF-RAY: a55dea810adf35c8-LAX",
+      "seconds": 0.936
+    },
+    {
+      "ip": "172.66.44.111",
+      "host": "vvainex.click",
+      "interface": 17,
+      "error": "_ssl.c:1015: The handshake operation timed out"
+    }
+  ],
+  "regionalGET": [
+    {
+      "country": "CN",
+      "city": "Meikeng",
+      "asn": 4134,
+      "status": 200,
+      "timings": {
+        "total": 1346,
+        "dns": 271,
+        "tcp": 241,
+        "tls": 359,
+        "firstByte": 472,
+        "download": 3
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Changsha",
+      "asn": 4837,
+      "status": 200,
+      "timings": {
+        "total": 716,
+        "dns": 11,
+        "tcp": 174,
+        "tls": 188,
+        "firstByte": 338,
+        "download": 5
+      }
+    },
+    {
+      "country": "CN",
+      "city": "Wuhan",
+      "asn": 9808,
+      "status": 200,
+      "timings": {
+        "total": 1055,
+        "dns": 302,
+        "tcp": 51,
+        "tls": 185,
+        "firstByte": 515,
+        "download": 2
+      }
+    },
+    {
+      "country": "US",
+      "city": "Buffalo",
+      "asn": 36352,
+      "status": 200,
+      "timings": {
+        "total": 117,
+        "dns": 11,
+        "tcp": 2,
+        "tls": 9,
+        "firstByte": 95,
+        "download": 0
+      }
+    },
+    {
+      "country": "DE",
+      "city": "Falkenstein",
+      "asn": 24940,
+      "status": 200,
+      "timings": {
+        "total": 227,
+        "dns": 28,
+        "tcp": 5,
+        "tls": 23,
+        "firstByte": 171,
+        "download": 0
+      }
+    },
+    {
+      "country": "SG",
+      "city": "Singapore",
+      "asn": 59253,
+      "status": 200,
+      "timings": {
+        "total": 970,
+        "dns": 11,
+        "tcp": 2,
+        "tls": 16,
+        "firstByte": 940,
+        "download": 1
+      }
+    }
+  ],
+  "physicalFullFlow": {
+    "strictPass": false,
+    "contentStepsPass": true,
+    "entryNavigation": {
+      "at": 2996.8999999910593,
+      "bytes": 74810,
+      "decoded": 74810,
+      "domContentLoaded": 2975.8999999910593
+    },
+    "liveHomeSeconds": 45.555,
+    "authoredOpening": {
+      "milliseconds": 45535.19999998808,
+      "introReason": "ended",
+      "introQuality": {
+        "totalVideoFrames": 480,
+        "droppedVideoFrames": 10
+      },
+      "opening": {
+        "total": 600,
+        "dropped": 34
+      },
+      "homeReady": true,
+      "english": true,
+      "translate": false,
+      "hiddenMyth": false
+    },
+    "steps": [
+      {
+        "name": "main-ready",
+        "pass": true,
+        "milliseconds": 47069,
+        "error": null
+      },
+      {
+        "name": "reading-entry",
+        "pass": true,
+        "milliseconds": 68123,
+        "error": null
+      },
+      {
+        "name": "cinema-book",
+        "pass": true,
+        "milliseconds": 7347,
+        "error": null
+      },
+      {
+        "name": "myth-entry",
+        "pass": true,
+        "milliseconds": 69752,
+        "error": null
+      },
+      {
+        "name": "myth-night-return",
+        "pass": true,
+        "milliseconds": 7191,
+        "error": null
+      },
+      {
+        "name": "main-desktop",
+        "pass": true,
+        "milliseconds": 25136,
+        "error": null
+      },
+      {
+        "name": "work-0",
+        "pass": true,
+        "milliseconds": 23157,
+        "error": null
+      },
+      {
+        "name": "work-1",
+        "pass": true,
+        "milliseconds": 16224,
+        "error": null
+      },
+      {
+        "name": "work-2",
+        "pass": true,
+        "milliseconds": 15629,
+        "error": null
+      },
+      {
+        "name": "work-3",
+        "pass": true,
+        "milliseconds": 24698,
+        "error": null
+      },
+      {
+        "name": "work-4",
+        "pass": true,
+        "milliseconds": 20859,
+        "error": null
+      },
+      {
+        "name": "return-home-live",
+        "pass": true,
+        "milliseconds": 3018,
+        "error": null
+      }
+    ],
+    "films": {
+      "films0": [
+        {
+          "id": "projectFilm",
+          "time": 7.082384,
+          "ready": 4,
+          "width": 1280,
+          "height": 546,
+          "duration": 139.70158700000002,
+          "midpointTime": 70.160653,
+          "sustained": {
+            "wallSeconds": 6.0935,
+            "mediaSeconds": 6.093399000000005,
+            "frames": 153,
+            "dropped": 0
+          }
+        }
+      ],
+      "films1": [
+        {
+          "id": "projectFilm",
+          "time": 1.659791,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 83.14782299999999,
+          "midpointTime": 42.023706,
+          "sustained": {
+            "wallSeconds": 6.077299999997019,
+            "mediaSeconds": 6.077177999999996,
+            "frames": 182,
+            "dropped": 0
+          }
+        }
+      ],
+      "films2": [
+        {
+          "id": "projectFilm",
+          "time": 1.676326,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 208.721587,
+          "midpointTime": 104.685016,
+          "sustained": {
+            "wallSeconds": 6.08220000000298,
+            "mediaSeconds": 6.082340000000002,
+            "frames": 183,
+            "dropped": 0
+          }
+        }
+      ],
+      "films3": [
+        {
+          "id": "projectFilm",
+          "time": 1.667409,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 18,
+          "midpointTime": 9.2479,
+          "sustained": {
+            "wallSeconds": 6.067799999997019,
+            "mediaSeconds": 6.068469,
+            "frames": 182,
+            "dropped": 0
+          }
+        },
+        {
+          "id": "lifePurposeVideo",
+          "time": 1.657441,
+          "ready": 4,
+          "width": 1600,
+          "height": 900,
+          "duration": 50,
+          "midpointTime": 25.285756,
+          "sustained": {
+            "wallSeconds": 6.0685,
+            "mediaSeconds": 6.07263,
+            "frames": 145,
+            "dropped": 0
+          }
+        }
+      ],
+      "films4": [
+        {
+          "id": "projectFilm",
+          "time": 2.411528,
+          "ready": 4,
+          "width": 3360,
+          "height": 1440,
+          "duration": 191.375873,
+          "midpointTime": 96.052924,
+          "sustained": {
+            "wallSeconds": 6.067400000005961,
+            "mediaSeconds": 6.067882999999995,
+            "frames": 182,
+            "dropped": 0
+          }
+        }
+      ]
+    },
+    "sampledErrors": {
+      "errors": [],
+      "console": [
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/coast-near-day.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/coast-near-night.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-01.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/coast-far-day.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-02.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-03.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-04.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-05.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-06.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/coast-far-night.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-07.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-08.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/cottage-day.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/cottage-night.webp"
+      ],
+      "http": [],
+      "native": []
+    },
+    "mythPreparation": [
+      {
+        "name": "asset requests started",
+        "at": 23590.60000000894
+      },
+      {
+        "name": "core models decoded",
+        "at": 127715.30000001192
+      },
+      {
+        "name": "coast attached",
+        "at": 128651.30000001192
+      },
+      {
+        "name": "geometry and materials assembled",
+        "at": 133022.5
+      },
+      {
+        "name": "full resolution lighting uploaded",
+        "at": 134579.60000000894
+      },
+      {
+        "name": "live frame painted",
+        "at": 149766.60000000894
+      }
+    ],
+    "workTransitions": [
+      {
+        "state": {
+          "work": "后西游记",
+          "href": "https://vvainex.click/after-journey.html?v=32.139&embedded=1",
+          "poster": "./assets/works/after-journey/cover-v32-92.webp",
+          "paintedAt": 239387.89999999106
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "乡土归途",
+          "href": "https://vvainex.click/rural-return.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v137/rural.webp",
+          "paintedAt": 261233.29999999702
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "湖南卫视中秋之夜",
+          "href": "https://vvainex.click/mid-autumn.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v137/mid-autumn.webp",
+          "paintedAt": 278237.6999999881
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "让画面发生",
+          "href": "https://vvainex.click/physical-universe.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v177/code-films.webp",
+          "paintedAt": 294547.299999997
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "潮湿东南亚",
+          "href": "https://vvainex.click/humid-southeast-asia.html?v=32.139&embedded=1",
+          "poster": "./assets/works/humid-southeast-asia/cover.webp",
+          "paintedAt": 320297.1999999881
+        },
+        "archive": "hidden"
+      }
+    ]
+  },
+  "systemRoutesVPNDNSChanged": false,
+  "physicalInterface": 17,
+  "physicalAddress": "10.49.64.1",
+  "diagnosticTransport": "Loopback CONNECT8060 binds sockets to physical WLAN; TLS is not intercepted. This bypasses workstation Mihomo interface, not proof about all upstream networks.",
+  "earlierBaselineDCLTimeoutSeconds": 60,
+  "first192PhysicalDCLTimeoutSeconds": 60,
+  "bulkPhysicalHashDidNotComplete": {
+    "pass": false,
+    "reason": "Bulk physical-route SHA fetch did not finish; interrupted owned QA browser tree instead of indefinite waiting. No universal connection pass claimed.",
+    "originalLog": "formal-hashes.log"
+  },
+  "PQCClientDiagnosticOnly": true,
+  "ProductionTLSOrPQCSettingsChanged": false,
+  "allDomesticOrInternationalRoutesGuaranteed": false,
+  "references": [
+    "https://developers.cloudflare.com/speed/optimization/content/compression/",
+    "https://developers.cloudflare.com/speed/optimization/protocol/http2/",
+    "https://developers.cloudflare.com/support/troubleshooting/general-troubleshooting/geographic-traffic-routing/"
+  ]
+}

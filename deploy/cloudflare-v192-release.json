@@ -1,0 +1,660 @@
+{
+  "version": 192,
+  "date": "2026-11-06",
+  "url": "https://vvainex.click/",
+  "www": "https://www.vvainex.click/",
+  "provider": "Cloudflare Pages",
+  "project": "xy",
+  "applicationSource": "e22594de8558fdbae771dbd79c27d158eeb670f8",
+  "production": {
+    "id": "1c02a922-4093-4b16-917e-f247911b0d31",
+    "url": "https://1c02a922.xy-crg.pages.dev",
+    "environment": "production",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-11-05T19:08:12.010336Z",
+      "status": "success"
+    }
+  },
+  "formalNormal": {
+    "strictPass": true,
+    "contentStepsPass": true,
+    "entryNavigation": {
+      "at": 2671.2000000029802,
+      "bytes": 74810,
+      "decoded": 74810,
+      "domContentLoaded": 2653.9000000059605
+    },
+    "liveHomeSeconds": 39.917,
+    "authoredOpening": {
+      "milliseconds": 39890.90000000596,
+      "introReason": "ended",
+      "introQuality": {
+        "totalVideoFrames": 480,
+        "droppedVideoFrames": 10
+      },
+      "opening": {
+        "total": 600,
+        "dropped": 20
+      },
+      "homeReady": true,
+      "english": true,
+      "translate": false,
+      "hiddenMyth": false
+    },
+    "steps": [
+      {
+        "name": "main-ready",
+        "pass": true,
+        "milliseconds": 41433,
+        "error": null
+      },
+      {
+        "name": "reading-entry",
+        "pass": true,
+        "milliseconds": 9104,
+        "error": null
+      },
+      {
+        "name": "cinema-book",
+        "pass": true,
+        "milliseconds": 7488,
+        "error": null
+      },
+      {
+        "name": "myth-entry",
+        "pass": true,
+        "milliseconds": 22542,
+        "error": null
+      },
+      {
+        "name": "myth-night-return",
+        "pass": true,
+        "milliseconds": 9207,
+        "error": null
+      },
+      {
+        "name": "main-desktop",
+        "pass": true,
+        "milliseconds": 19334,
+        "error": null
+      },
+      {
+        "name": "work-0",
+        "pass": true,
+        "milliseconds": 15362,
+        "error": null
+      },
+      {
+        "name": "work-1",
+        "pass": true,
+        "milliseconds": 16294,
+        "error": null
+      },
+      {
+        "name": "work-2",
+        "pass": true,
+        "milliseconds": 15487,
+        "error": null
+      },
+      {
+        "name": "work-3",
+        "pass": true,
+        "milliseconds": 40540,
+        "error": null
+      },
+      {
+        "name": "work-4",
+        "pass": true,
+        "milliseconds": 18061,
+        "error": null
+      },
+      {
+        "name": "return-home-live",
+        "pass": true,
+        "milliseconds": 1666,
+        "error": null
+      }
+    ],
+    "films": {
+      "films0": [
+        {
+          "id": "projectFilm",
+          "time": 1.673209,
+          "ready": 4,
+          "width": 1280,
+          "height": 546,
+          "duration": 139.70158700000002,
+          "midpointTime": 70.117359,
+          "sustained": {
+            "wallSeconds": 6.07070000000298,
+            "mediaSeconds": 6.070649000000003,
+            "frames": 152,
+            "dropped": 0
+          }
+        }
+      ],
+      "films1": [
+        {
+          "id": "projectFilm",
+          "time": 1.680769,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 83.14782299999999,
+          "midpointTime": 41.903822,
+          "sustained": {
+            "wallSeconds": 6.057900000005961,
+            "mediaSeconds": 6.057856000000001,
+            "frames": 182,
+            "dropped": 0
+          }
+        }
+      ],
+      "films2": [
+        {
+          "id": "projectFilm",
+          "time": 1.649187,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 208.721587,
+          "midpointTime": 104.645061,
+          "sustained": {
+            "wallSeconds": 6.061099999994039,
+            "mediaSeconds": 6.060634000000007,
+            "frames": 182,
+            "dropped": 0
+          }
+        }
+      ],
+      "films3": [
+        {
+          "id": "projectFilm",
+          "time": 1.699316,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 18,
+          "midpointTime": 9.231661,
+          "sustained": {
+            "wallSeconds": 6.056899999991059,
+            "mediaSeconds": 6.056683,
+            "frames": 182,
+            "dropped": 0
+          }
+        },
+        {
+          "id": "lifePurposeVideo",
+          "time": 1.669403,
+          "ready": 4,
+          "width": 1600,
+          "height": 900,
+          "duration": 50,
+          "midpointTime": 25.267588,
+          "sustained": {
+            "wallSeconds": 6.038800000011921,
+            "mediaSeconds": 6.036338000000001,
+            "frames": 144,
+            "dropped": 0
+          }
+        }
+      ],
+      "films4": [
+        {
+          "id": "projectFilm",
+          "time": 2.101635,
+          "ready": 4,
+          "width": 3360,
+          "height": 1440,
+          "duration": 191.375873,
+          "midpointTime": 96.004816,
+          "sustained": {
+            "wallSeconds": 6.06690000000596,
+            "mediaSeconds": 6.06686400000001,
+            "frames": 182,
+            "dropped": 0
+          }
+        }
+      ]
+    },
+    "sampledErrors": {
+      "errors": [],
+      "console": [],
+      "http": [],
+      "native": []
+    },
+    "mythPreparation": [
+      {
+        "name": "asset requests started",
+        "at": 3057.5
+      },
+      {
+        "name": "core models decoded",
+        "at": 21797.79999999702
+      },
+      {
+        "name": "coast attached",
+        "at": 22181.20000000298
+      },
+      {
+        "name": "geometry and materials assembled",
+        "at": 26708.10000000894
+      },
+      {
+        "name": "full resolution lighting uploaded",
+        "at": 28761.79999999702
+      },
+      {
+        "name": "live frame painted",
+        "at": 43655.5
+      }
+    ],
+    "workTransitions": [
+      {
+        "state": {
+          "work": "后西游记",
+          "href": "https://vvainex.click/after-journey.html?v=32.139&embedded=1",
+          "poster": "./assets/works/after-journey/cover-v32-92.webp",
+          "paintedAt": 123301.40000000596
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "乡土归途",
+          "href": "https://vvainex.click/rural-return.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v137/rural.webp",
+          "paintedAt": 139500.60000000894
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "湖南卫视中秋之夜",
+          "href": "https://vvainex.click/mid-autumn.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v137/mid-autumn.webp",
+          "paintedAt": 156059.29999999702
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "让画面发生",
+          "href": "https://vvainex.click/physical-universe.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v177/code-films.webp",
+          "paintedAt": 172383.90000000596
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "潮湿东南亚",
+          "href": "https://vvainex.click/humid-southeast-asia.html?v=32.139&embedded=1",
+          "poster": "./assets/works/humid-southeast-asia/cover.webp",
+          "paintedAt": 213258.40000000596
+        },
+        "archive": "hidden"
+      }
+    ]
+  },
+  "formalPhysical": {
+    "strictPass": false,
+    "contentStepsPass": true,
+    "entryNavigation": {
+      "at": 2996.8999999910593,
+      "bytes": 74810,
+      "decoded": 74810,
+      "domContentLoaded": 2975.8999999910593
+    },
+    "liveHomeSeconds": 45.555,
+    "authoredOpening": {
+      "milliseconds": 45535.19999998808,
+      "introReason": "ended",
+      "introQuality": {
+        "totalVideoFrames": 480,
+        "droppedVideoFrames": 10
+      },
+      "opening": {
+        "total": 600,
+        "dropped": 34
+      },
+      "homeReady": true,
+      "english": true,
+      "translate": false,
+      "hiddenMyth": false
+    },
+    "steps": [
+      {
+        "name": "main-ready",
+        "pass": true,
+        "milliseconds": 47069,
+        "error": null
+      },
+      {
+        "name": "reading-entry",
+        "pass": true,
+        "milliseconds": 68123,
+        "error": null
+      },
+      {
+        "name": "cinema-book",
+        "pass": true,
+        "milliseconds": 7347,
+        "error": null
+      },
+      {
+        "name": "myth-entry",
+        "pass": true,
+        "milliseconds": 69752,
+        "error": null
+      },
+      {
+        "name": "myth-night-return",
+        "pass": true,
+        "milliseconds": 7191,
+        "error": null
+      },
+      {
+        "name": "main-desktop",
+        "pass": true,
+        "milliseconds": 25136,
+        "error": null
+      },
+      {
+        "name": "work-0",
+        "pass": true,
+        "milliseconds": 23157,
+        "error": null
+      },
+      {
+        "name": "work-1",
+        "pass": true,
+        "milliseconds": 16224,
+        "error": null
+      },
+      {
+        "name": "work-2",
+        "pass": true,
+        "milliseconds": 15629,
+        "error": null
+      },
+      {
+        "name": "work-3",
+        "pass": true,
+        "milliseconds": 24698,
+        "error": null
+      },
+      {
+        "name": "work-4",
+        "pass": true,
+        "milliseconds": 20859,
+        "error": null
+      },
+      {
+        "name": "return-home-live",
+        "pass": true,
+        "milliseconds": 3018,
+        "error": null
+      }
+    ],
+    "films": {
+      "films0": [
+        {
+          "id": "projectFilm",
+          "time": 7.082384,
+          "ready": 4,
+          "width": 1280,
+          "height": 546,
+          "duration": 139.70158700000002,
+          "midpointTime": 70.160653,
+          "sustained": {
+            "wallSeconds": 6.0935,
+            "mediaSeconds": 6.093399000000005,
+            "frames": 153,
+            "dropped": 0
+          }
+        }
+      ],
+      "films1": [
+        {
+          "id": "projectFilm",
+          "time": 1.659791,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 83.14782299999999,
+          "midpointTime": 42.023706,
+          "sustained": {
+            "wallSeconds": 6.077299999997019,
+            "mediaSeconds": 6.077177999999996,
+            "frames": 182,
+            "dropped": 0
+          }
+        }
+      ],
+      "films2": [
+        {
+          "id": "projectFilm",
+          "time": 1.676326,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 208.721587,
+          "midpointTime": 104.685016,
+          "sustained": {
+            "wallSeconds": 6.08220000000298,
+            "mediaSeconds": 6.082340000000002,
+            "frames": 183,
+            "dropped": 0
+          }
+        }
+      ],
+      "films3": [
+        {
+          "id": "projectFilm",
+          "time": 1.667409,
+          "ready": 4,
+          "width": 1920,
+          "height": 1080,
+          "duration": 18,
+          "midpointTime": 9.2479,
+          "sustained": {
+            "wallSeconds": 6.067799999997019,
+            "mediaSeconds": 6.068469,
+            "frames": 182,
+            "dropped": 0
+          }
+        },
+        {
+          "id": "lifePurposeVideo",
+          "time": 1.657441,
+          "ready": 4,
+          "width": 1600,
+          "height": 900,
+          "duration": 50,
+          "midpointTime": 25.285756,
+          "sustained": {
+            "wallSeconds": 6.0685,
+            "mediaSeconds": 6.07263,
+            "frames": 145,
+            "dropped": 0
+          }
+        }
+      ],
+      "films4": [
+        {
+          "id": "projectFilm",
+          "time": 2.411528,
+          "ready": 4,
+          "width": 3360,
+          "height": 1440,
+          "duration": 191.375873,
+          "midpointTime": 96.052924,
+          "sustained": {
+            "wallSeconds": 6.067400000005961,
+            "mediaSeconds": 6.067882999999995,
+            "frames": 182,
+            "dropped": 0
+          }
+        }
+      ]
+    },
+    "sampledErrors": {
+      "errors": [],
+      "console": [
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/coast-near-day.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/coast-near-night.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-01.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/coast-far-day.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-02.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-03.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-04.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-05.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-06.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/coast-far-night.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-07.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/reading/cinema-notes-v154/photo-08.jpg",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/cottage-day.webp",
+        "Failed to load resource: net::ERR_HTTP2_PING_FAILED https://vvainex.click/assets/browser-v179/myth-field/cottage-night.webp"
+      ],
+      "http": [],
+      "native": []
+    },
+    "mythPreparation": [
+      {
+        "name": "asset requests started",
+        "at": 23590.60000000894
+      },
+      {
+        "name": "core models decoded",
+        "at": 127715.30000001192
+      },
+      {
+        "name": "coast attached",
+        "at": 128651.30000001192
+      },
+      {
+        "name": "geometry and materials assembled",
+        "at": 133022.5
+      },
+      {
+        "name": "full resolution lighting uploaded",
+        "at": 134579.60000000894
+      },
+      {
+        "name": "live frame painted",
+        "at": 149766.60000000894
+      }
+    ],
+    "workTransitions": [
+      {
+        "state": {
+          "work": "后西游记",
+          "href": "https://vvainex.click/after-journey.html?v=32.139&embedded=1",
+          "poster": "./assets/works/after-journey/cover-v32-92.webp",
+          "paintedAt": 239387.89999999106
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "乡土归途",
+          "href": "https://vvainex.click/rural-return.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v137/rural.webp",
+          "paintedAt": 261233.29999999702
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "湖南卫视中秋之夜",
+          "href": "https://vvainex.click/mid-autumn.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v137/mid-autumn.webp",
+          "paintedAt": 278237.6999999881
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "让画面发生",
+          "href": "https://vvainex.click/physical-universe.html?v=32.139&embedded=1",
+          "poster": "./assets/works/covers-v177/code-films.webp",
+          "paintedAt": 294547.299999997
+        },
+        "archive": "hidden"
+      },
+      {
+        "state": {
+          "work": "潮湿东南亚",
+          "href": "https://vvainex.click/humid-southeast-asia.html?v=32.139&embedded=1",
+          "poster": "./assets/works/humid-southeast-asia/cover.webp",
+          "paintedAt": 320297.1999999881
+        },
+        "archive": "hidden"
+      }
+    ]
+  },
+  "artifactHashesMatch": true,
+  "artifactHashesChecked": 66,
+  "originalMP4Range": {
+    "path": "/assets/browser-v187/media/1be16e321875224432c93f78.mp4",
+    "status": 206,
+    "bytes": 512,
+    "contentRange": "bytes 0-511/7362857"
+  },
+  "HTMLBytesBefore": 2178056,
+  "HTMLBytesAfter": 74810,
+  "HTMLReductionPercent": 96.57,
+  "personalPass": true,
+  "desktopViewports": [
+    {
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "portrait": {
+    "original": {
+      "width": 1080,
+      "height": 1956,
+      "preserved": true
+    },
+    "delivered": {
+      "width": 750,
+      "height": 1358,
+      "bytes": 145750,
+      "file": "assets/browser-v192/portrait.webp"
+    },
+    "framing": "Complete image; CSS contain, no haircut crop"
+  },
+  "workHandoff": {
+    "pass": true,
+    "samples": 5,
+    "crossImageDissolveRemoved": true,
+    "returnPass": true
+  },
+  "stagedFiles": 3307,
+  "stagedBytes": 4013963405,
+  "allOriginalUEArtworkMediaPreserved": true,
+  "singleAgent": true,
+  "desktopOnly": true,
+  "annualTotalBudgetCNY": 20,
+  "paidResourcesPurchased": false,
+  "automaticGitProductionBuilds": false,
+  "DNSOrDomainProviderChanged": false,
+  "HTTP3Disabled": true,
+  "HTTP2StillOnFreePlan": true,
+  "qualityApproved": false,
+  "allRequirementsComplete": false,
+  "limits": [
+    "Physical full content flow completed with fourteen ERR_HTTP2_PING_FAILED console messages and successful retries; strict physical smoke is false.",
+    "Physical first shelf and myth still about68/70seconds. Selected regional GET200 responses are not a worldwide or permanent guarantee.",
+    "Local isolated Iris Xe myth about14.94FPS remains. No 60FPS/zero-stutter/native1:1/user-acceptance claim.",
+    "Opening/intro frame drops are recorded; six sampled work films have normal advancement, not universal zero rebuffering."
+  ]
+}

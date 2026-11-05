@@ -1,0 +1,277 @@
+{
+  "version": 192,
+  "personal": {
+    "origin": "https://vvainex.click",
+    "errors": [],
+    "views": [
+      {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "text": "\n      ×\n      \n        \n        吴翔宇视觉传达设计 · AIGC 影像创作出生于 2005 年 3 月 5 日\n      \n      \n        \n          关于我\n          视觉传达设计专业，本科四年级。希望从事 AIGC 视觉设计与影视制作，关注人物、镜头和场景之间的连续性。\n        \n        \n          实习经历AI 生产实习生 2026.05—2026.09参与《后西游记》等商业影像项目，完成图像与动态镜头生成、人物和场景测试，并根据反馈迭代素材。\n          参与项目2026 湖南卫视芒果 TV 中秋晚会参与前期视觉测试、AI 素材生产及虚实融合片段制作。《后西游记》第一季·花果山篇参与人物、场景与镜头生成，持续调整画面一致性与叙事衔接。\n          创作工具Photoshop · Illustrator · InDesignCinema 4D · BlenderNano Banana · Midjourney · Seedance · MiniMax\n          个人实践使用 Codex 开发这份交互作品集，把影像、三维场景与作品内容组织成可以直接浏览的网页。\n        \n        我的个人爱好造境手记 / 持续生长的个人档案\n      \n      联系我电话18928492291邮箱wuxiaoyu7105@163.com微信vvChi7\n    ",
+        "portrait": {
+          "src": "https://vvainex.click/assets/browser-v192/portrait.webp",
+          "fit": "contain",
+          "natural": [
+            750,
+            1358
+          ],
+          "rect": {
+            "x": 345,
+            "y": 241.484375,
+            "w": 340,
+            "h": 490
+          }
+        },
+        "footer": {
+          "x": 345,
+          "y": 765.484375,
+          "w": 1230,
+          "h": 95.796875
+        },
+        "labels": [
+          {
+            "x": 369,
+            "y": 787.484375,
+            "w": 340,
+            "h": 28.796875
+          },
+          {
+            "x": 733,
+            "y": 787.484375,
+            "w": 223.1875,
+            "h": 51.796875
+          },
+          {
+            "x": 980.1875,
+            "y": 787.484375,
+            "w": 357.09375,
+            "h": 51.796875
+          },
+          {
+            "x": 1361.28125,
+            "y": 787.484375,
+            "w": 189.71875,
+            "h": 51.796875
+          }
+        ],
+        "horizontalOverflow": false
+      },
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "text": "\n      ×\n      \n        \n        吴翔宇视觉传达设计 · AIGC 影像创作出生于 2005 年 3 月 5 日\n      \n      \n        \n          关于我\n          视觉传达设计专业，本科四年级。希望从事 AIGC 视觉设计与影视制作，关注人物、镜头和场景之间的连续性。\n        \n        \n          实习经历AI 生产实习生 2026.05—2026.09参与《后西游记》等商业影像项目，完成图像与动态镜头生成、人物和场景测试，并根据反馈迭代素材。\n          参与项目2026 湖南卫视芒果 TV 中秋晚会参与前期视觉测试、AI 素材生产及虚实融合片段制作。《后西游记》第一季·花果山篇参与人物、场景与镜头生成，持续调整画面一致性与叙事衔接。\n          创作工具Photoshop · Illustrator · InDesignCinema 4D · BlenderNano Banana · Midjourney · Seedance · MiniMax\n          个人实践使用 Codex 开发这份交互作品集，把影像、三维场景与作品内容组织成可以直接浏览的网页。\n        \n        我的个人爱好造境手记 / 持续生长的个人档案\n      \n      联系我电话18928492291邮箱wuxiaoyu7105@163.com微信vvChi7\n    ",
+        "portrait": {
+          "src": "https://vvainex.click/assets/browser-v192/portrait.webp",
+          "fit": "contain",
+          "natural": [
+            750,
+            1358
+          ],
+          "rect": {
+            "x": 119.59375,
+            "y": 232.984375,
+            "w": 340,
+            "h": 459
+          }
+        },
+        "footer": {
+          "x": 119.59375,
+          "y": 725.984375,
+          "w": 1200.796875,
+          "h": 95.796875
+        },
+        "labels": [
+          {
+            "x": 143.59375,
+            "y": 747.984375,
+            "w": 340,
+            "h": 28.796875
+          },
+          {
+            "x": 507.59375,
+            "y": 747.984375,
+            "w": 214.71875,
+            "h": 51.796875
+          },
+          {
+            "x": 746.3125,
+            "y": 747.984375,
+            "w": 343.5625,
+            "h": 51.796875
+          },
+          {
+            "x": 1113.875,
+            "y": 747.984375,
+            "w": 182.515625,
+            "h": 51.796875
+          }
+        ],
+        "horizontalOverflow": false
+      }
+    ],
+    "closed": true,
+    "pass": true
+  },
+  "handoff": {
+    "origin": "http://127.0.0.1:8059",
+    "errors": [],
+    "samples": [
+      {
+        "state": {
+          "work": "后西游记",
+          "href": "http://127.0.0.1:8059/after-journey.html?v=32.139&embedded=1",
+          "poster": "./assets/works/after-journey/cover-v32-92.webp",
+          "paintedAt": 78254.90000000596
+        },
+        "curtainOpacity": null,
+        "archive": "hidden",
+        "filmOpacity": "0"
+      },
+      {
+        "state": {
+          "work": "后西游记",
+          "href": "http://127.0.0.1:8059/after-journey.html?v=32.139&embedded=1",
+          "poster": "./assets/works/after-journey/cover-v32-92.webp",
+          "paintedAt": 78254.90000000596
+        },
+        "curtainOpacity": null,
+        "archive": "hidden",
+        "filmOpacity": "1"
+      },
+      {
+        "state": {
+          "work": "后西游记",
+          "href": "http://127.0.0.1:8059/after-journey.html?v=32.139&embedded=1",
+          "poster": "./assets/works/after-journey/cover-v32-92.webp",
+          "paintedAt": 78254.90000000596
+        },
+        "curtainOpacity": null,
+        "archive": "hidden",
+        "filmOpacity": "1"
+      },
+      {
+        "state": {
+          "work": "后西游记",
+          "href": "http://127.0.0.1:8059/after-journey.html?v=32.139&embedded=1",
+          "poster": "./assets/works/after-journey/cover-v32-92.webp",
+          "paintedAt": 78254.90000000596
+        },
+        "curtainOpacity": null,
+        "archive": "hidden",
+        "filmOpacity": "1"
+      },
+      {
+        "state": {
+          "work": "后西游记",
+          "href": "http://127.0.0.1:8059/after-journey.html?v=32.139&embedded=1",
+          "poster": "./assets/works/after-journey/cover-v32-92.webp",
+          "paintedAt": 78254.90000000596
+        },
+        "curtainOpacity": null,
+        "archive": "hidden",
+        "filmOpacity": "1"
+      }
+    ],
+    "scope": "Archive opened through its existing application API, followed by actual mouse card click, composited handoff samples and actual return click",
+    "returned": true,
+    "pass": true
+  },
+  "localMyth": {
+    "origin": "http://127.0.0.1:8059",
+    "errors": [],
+    "http": [],
+    "initial": {
+      "at": 11007,
+      "readyAt": 10895.699999988079,
+      "phases": [
+        {
+          "name": "asset requests started",
+          "at": 367
+        },
+        {
+          "name": "core models decoded",
+          "at": 1476.8999999910593
+        },
+        {
+          "name": "coast attached",
+          "at": 1652.2999999970198
+        },
+        {
+          "name": "geometry and materials assembled",
+          "at": 2934.5
+        },
+        {
+          "name": "full resolution lighting uploaded",
+          "at": 3492.0999999940395
+        },
+        {
+          "name": "live frame painted",
+          "at": 10893.89999999106
+        }
+      ],
+      "cache": {
+        "used": true,
+        "SHA256": "2946aae14d9278f86e5b0526bbe62754b25ef4935b197d247463fd4fc19cdd18",
+        "originalRasterPreserved": true,
+        "milliseconds": 0
+      },
+      "depth": 6,
+      "firstPaint": true,
+      "frames": 1
+    },
+    "rasterSHA256": "2946aae14d9278f86e5b0526bbe62754b25ef4935b197d247463fd4fc19cdd18",
+    "performance": {
+      "seconds": 6.02609999999404,
+      "fps": 14.9350326081693,
+      "profile": {
+        "frames": 112,
+        "calls": 207,
+        "triangles": 5467694,
+        "cpuMs": 10.799999997019768,
+        "gpuMs": 58.322395,
+        "geometries": 124,
+        "textures": 83,
+        "cpuP95Ms": 23.599999994039536
+      },
+      "graphics": {
+        "losses": 0,
+        "restores": 0,
+        "recovering": false,
+        "failures": []
+      }
+    },
+    "final": {
+      "ready": true,
+      "frames": 208,
+      "graphics": {
+        "losses": 0,
+        "restores": 0,
+        "recovering": false,
+        "failures": []
+      },
+      "water": 16.333900000014914,
+      "reflection": {
+        "staticCaptures": 39,
+        "dynamicFrames": 96,
+        "originalGeometry": true,
+        "depthOcclusion": true
+      }
+    },
+    "pass": true
+  },
+  "earlierLocalHandoffAssertionFailure": "local-delivery-final tested state before two-rAF acknowledgement; corrected wait checks actual current-frame acknowledgement.",
+  "oldCrossImageOverlapVisibleIn": "local-final/work-handoff-0.png",
+  "repairedSamples": "work-handoff-final/0.png through4.png",
+  "previewInitialPass": true,
+  "localFullBeforeFinalAtomicHandoffPass": true,
+  "finalNormalPass": true,
+  "finalPhysicalContentPass": true,
+  "finalPhysicalStrictPass": false,
+  "allFinalHashesMatch": true,
+  "failedPrecompressedHTMLProbeNotReleased": true,
+  "originalInputsUnchanged": true
+}
