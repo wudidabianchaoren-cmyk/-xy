@@ -1,3 +1,5 @@
+Latest release: read CURRENT-V32-192-RESUME.md first. Same vvainex.click; physical12-step content flow passes, HTTP2 network errors and slow3D remain.
+
 Latest release: read CURRENT-V32-191-RESUME.md first. Same vvainex.click; scoped repair published, live3D preparation/FPS requirements still incomplete.
 
 Latest domain release: read CURRENT-V32-190-RESUME.md first. https://vvainex.click/ active; full normal-profile flow passes, physical-route full-flow/performance still incomplete.
