@@ -13,13 +13,13 @@ import {attachBakedLightingV179,preloadNativeLighting186} from './directory-v141
 import {captureLightingV179} from './directory-v141/capture-lighting-v179';
 import{nativeUESurface}from'./ue-native-surface-v162';
 import{coastalAirV161}from'./coastal-air-v161';
-import{attachUEIslandV161}from'./ue-island-v161';
+import{attachUEIslandV161,prepareUEIsland192}from'./ue-island-v161';
 import{cottageProcessEntry}from'./odyssey-process-entry-v144';
 import{sailWind,foliageWind,dayNight}from'./odyssey-weather-v161';
 import {shipWaterExclusion} from './ship-water-exclusion-v143';
 import{coastalMeadowV161}from'./coastal-meadow-v161';
 import{stoneCottageV161}from'./stone-cottage-v161';
-import {coastV161} from './coast-v161';
+import {coastV161,prepareCoast192} from './coast-v161';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 import {MeshBVH,acceleratedRaycast} from 'three-mesh-bvh';
 import * as THREE from 'three';
@@ -32,7 +32,7 @@ import {Water} from 'three/addons/objects/Water.js';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {createDollyV166 as createOdysseyControlsV154} from './odyssey-dolly-v169';
 import {coastalLifeV158,seaGridV155} from './coastal-life-v158';
-import {attachUECoveReflectionV158} from './ue-cove-reflection-v158';
+import {attachUECoveReflectionV158,prepareUECove192} from './ue-cove-reflection-v158';
 
 const host=document.getElementById('odysseyScene')!,canvas=host.querySelector('canvas')!;
 const nativeFieldManifest187=new URLSearchParams(location.search).get('legacyDepth187')==='1'?'./assets/browser-v179/myth-field/manifest.json':'./assets/browser-v186/depth-fields/manifest.json';
@@ -66,11 +66,18 @@ async function boot(){
  const coastalAmbient=new THREE.HemisphereLight(0xe2cbaa,0x5b503d,.08);scene.add(sun,sun.target,coastalAmbient);
  const sunBounce=new THREE.DirectionalLight(0xd4e6ed,.06);sunBounce.name='V158 golden hour sea-bounce';sunBounce.position.set(45,55,75);sunBounce.target.position.set(-6,5,-20);scene.add(sunBounce,sunBounce.target);
  const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder),textures=new THREE.TextureLoader(),folder='./assets/odyssey/compact-v134/';
+ const phases192=state.preparePhases192=[{name:'asset requests started',at:performance.now()}];
+ const coastPrepared192=prepareCoast192(loader),cottagePrepared192=stoneCottageV161(state);
+ const leafPrepared192=Promise.all(['diff','alpha'].map(mode=>textures.loadAsync('./assets/odyssey/vegetation-v104/island_tree_01/textures/island_tree_01_leaves_'+mode+'_1k.png')));
+ const skyPrepared192=!nativeRequired&&new URLSearchParams(location.search).get('nativeLightfield')==='1'?Promise.all(['day','night'].map(mode=>textures.loadAsync('./assets/browser-v179/myth-field/sky-'+mode+'.png'))):null;
+ const reflectionPrepared192=prepareUECove192(),islandPrepared192=prepareUEIsland192();
+ for(const task of[cottagePrepared192,leafPrepared192,skyPrepared192,reflectionPrepared192,islandPrepared192])task?.catch(()=>{});
  const [land,ship,vegetation,placements,hdr,normal,heightData,grass,newCrew,crewProduction]=await Promise.all([
   loader.loadAsync('./assets/odyssey/refit-v148/island-bridged-web-c.glb'),loader.loadAsync('./assets/odyssey/crew-v163/vessel-coherent.glb'),loader.loadAsync(folder+'vegetation.glb'),
   fetch('./assets/odyssey/refit-v148/vegetation-grounded-c.json').then(r=>r.json()),new RGBELoader().loadAsync('./assets/odyssey/venice_sunset_1k.hdr'),textures.loadAsync('./assets/odyssey/waternormals.jpg'),fetch(folder+'height.json').then(r=>r.json()),loader.loadAsync('./assets/odyssey/refit-v148/grass-grounded-c.glb'),loader.loadAsync('./assets/odyssey/crew-v162/medieval-rowers.glb'),fetch('./assets/odyssey/refit-v141/production.json').then(r=>r.json())
  ]);
  if((window as any).PORTFOLIO_PREWARMING186){await fieldNetworkReady;state.assetsPrepared=true;state.assetsPreparedAt=performance.now();if((window as any).PORTFOLIO_PREWARMING186)await new Promise<void>(resolve=>addEventListener('portfolio:prewarm-activated',()=>resolve(),{once:true}));}
+ phases192.push({name:'core models decoded',at:performance.now()});
  const lowerShore=(h:number)=>h-.65*(1-THREE.MathUtils.smoothstep(h,-.3,.75));
  heightData.heights=heightData.heights.map(lowerShore);
  land.scene.updateMatrixWorld(true);land.scene.traverse(o=>{if(!(o instanceof THREE.Mesh))return;const p=o.geometry.getAttribute('position'),q=new THREE.Vector3(),inv=o.matrixWorld.clone().invert();for(let i=0;i<p.count;i++){q.fromBufferAttribute(p,i).applyMatrix4(o.matrixWorld);q.y=lowerShore(q.y);q.applyMatrix4(inv);p.setXYZ(i,q.x,q.y,q.z);}p.needsUpdate=true;o.geometry.computeVertexNormals();});
@@ -105,7 +112,7 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
 
  // Original island silhouette is retained; the new terrain uses actual material albedo.
  scene.add(land.scene);
- await coastV161(scene,land.scene,loader,state);
+ await coastV161(scene,land.scene,loader,state,coastPrepared192);phases192.push({name:'coast attached',at:performance.now()});
  let grassVertices=0;grass.scene.traverse(o=>{if(!(o instanceof THREE.Mesh))return;const g=o.geometry,p=g.getAttribute('position');grassVertices+=p.count;const m=new THREE.MeshStandardMaterial({color:0x83905b,roughness:.96,envMapIntensity:.55,side:THREE.DoubleSide});o.material=m;o.receiveShadow=true;o.castShadow=false;
  const parent=Array.from({length:p.count},(_,i)=>i),find=(n:number):number=>parent[n]===n?n:parent[n]=find(parent[n]);const ids=g.index;
  for(let j=0;j<(ids?.count??p.count);j+=3){const a=ids?ids.getX(j):j;for(let k=1;k<3;k++){const b=ids?ids.getX(j+k):j+k;parent[find(b)]=find(a);}}
@@ -149,7 +156,7 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
  }
  boat.add(newCrew.scene);const crewMixer=new THREE.AnimationMixer(newCrew.scene);for(const clip of newCrew.animations)crewMixer.clipAction(clip).play();newCrew.scene.traverse(o=>{if(o instanceof THREE.Mesh){o.castShadow=o.receiveShadow=true;for(const m of Array.isArray(o.material)?o.material:[o.material]){if(m instanceof THREE.MeshStandardMaterial){m.envMapIntensity=.55;for(const t of[m.map,m.normalMap,m.roughnessMap])if(t)t.anisotropy=8;}}}});state.riggedCrew={actors:14,animations:newCrew.animations.length,source:'V162 medieval mail / CC0 anatomical hands / retained 14 rigs',bytes:15063752};const mergedCrew=mergeSkinnedParts(newCrew.scene);state.crewSkinBatching=mergedCrew.audit;const crewBatches=batchRigidParts(newCrew.scene,boat,renderer,'original crew armour and equipment');state.crewDrawBatching=crewBatches.audit;scene.add(boat);state.boatBatches=groups.size;state.boatTriangles=boatTriangles;
  // V161 physical stone house is shared by web and native UE export.
- const cottageRoot=await stoneCottageV161(state);scene.add(cottageRoot);const cottageMeshes=cottageRoot.children as THREE.Mesh[];
+ const cottageRoot=await cottagePrepared192;scene.add(cottageRoot);const cottageMeshes=cottageRoot.children as THREE.Mesh[];
  // Use the actual rendered island triangles for placement. The old sampled height field
  // is a water-depth proxy and is not precise enough to ground an architectural object.
  land.scene.updateMatrixWorld(true);const groundRay=new THREE.Raycaster(),down=new THREE.Vector3(0,-1,0);
@@ -166,8 +173,7 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
 
 
  // Real leaf geometry, with a second whole-leaf budget for small shrubs.
- const leafColor=await textures.loadAsync('./assets/odyssey/vegetation-v104/island_tree_01/textures/island_tree_01_leaves_diff_1k.png');
- const leafAlpha=await textures.loadAsync('./assets/odyssey/vegetation-v104/island_tree_01/textures/island_tree_01_leaves_alpha_1k.png');
+ const [leafColor,leafAlpha]=await leafPrepared192;
  leafColor.colorSpace=THREE.SRGBColorSpace;leafColor.flipY=leafAlpha.flipY=false;
  vegetation.scene.updateMatrixWorld(true);const foliageMeshes:THREE.InstancedMesh[]=[];
  const leafStats:any[]=[];
@@ -239,8 +245,8 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
  state.worldExplore={doubleClickApproach:true,keyboard:'W A S D / Q E',pan:true};
  const processEntry=cottageProcessEntry(scene,camera,canvas,state.cottage.position,state);
  const beforeLife=new Set(scene.children);const life=await coastalLifeV158(scene,loader,clock,state,camera);for(const object of scene.children)if(!beforeLife.has(object))object.userData.nativeLightingExcluded=true;
- const ueReflection=await attachUECoveReflectionV158(water,boat,state);
- const ueIsland=await attachUEIslandV161([land.scene,cottageRoot,meadow],state);state.updateUEReflection=(night:number)=>{ueReflection.update(night);ueIsland.update(night);};
+ const ueReflection=await attachUECoveReflectionV158(water,boat,state,reflectionPrepared192);
+ const ueIsland=await attachUEIslandV161([land.scene,cottageRoot,meadow],state,islandPrepared192);state.updateUEReflection=(night:number)=>{ueReflection.update(night);ueIsland.update(night);};
  const weather=dayNight(scene,renderer,sun,coastalAmbient,skyMaterial,water,boat,state.cottage.position,state);const air=coastalAirV161(scene,sun,windTime,state);
  let combinedCrew:ReturnType<typeof combineAnimatedSkins>|null=null;if(!nativeRequired&&!new URLSearchParams(location.search).has('skipCrew185')){try{combinedCrew=combineAnimatedSkins(newCrew.scene);state.combinedCrew=combinedCrew.audit;}catch(error){state.combinedCrewFailure=String(error);}}
  const waterReflection191=!nativeRequired&&!new URLSearchParams(location.search).has('skipReflection185')?cacheWaterReflection(renderer,scene,water,[boat,...life.birds],state):null;
@@ -258,7 +264,7 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
  new ResizeObserver(resize).observe(host);resize();
  let nativeLighting:Awaited<ReturnType<typeof attachBakedLightingV179>>|null=null,leafRadiance:Awaited<ReturnType<typeof applyLeafRadiance186>>|null=null;
  if(!nativeRequired&&new URLSearchParams(location.search).get('nativeLightfield')==='1'){
-  const [daySky,nightSky]=await Promise.all(['day','night'].map(mode=>textures.loadAsync('./assets/browser-v179/myth-field/sky-'+mode+'.png')));for(const texture of [daySky,nightSky]){texture.colorSpace=THREE.SRGBColorSpace;texture.generateMipmaps=false;texture.minFilter=texture.magFilter=THREE.LinearFilter;}
+  const [daySky,nightSky]=await skyPrepared192!;for(const texture of [daySky,nightSky]){texture.colorSpace=THREE.SRGBColorSpace;texture.generateMipmaps=false;texture.minFilter=texture.magFilter=THREE.LinearFilter;}
   skyMaterial.uniforms.nativeDaySky={value:daySky};skyMaterial.uniforms.nativeNightSky={value:nightSky};
   // Keep the sea as real moving water with a live planar reflection. A
   // perspective photograph on this plane leaves rectangular projection seams.
@@ -276,12 +282,13 @@ const skyDome=new THREE.Mesh(new THREE.SphereGeometry(2400,48,24),skyMaterial);s
   `+water.material.fragmentShader.slice(waterEnd);water.material.needsUpdate=true;
   skyMaterial.fragmentShader=`uniform sampler2D nativeDaySky,nativeNightSky;uniform float nightFactor;varying vec3 direction;void main(){vec3 d=normalize(direction);vec2 uv=vec2(clamp(d.y/.25,0.,1.),.5);gl_FragColor=vec4(mix(texture2D(nativeDaySky,uv).rgb,texture2D(nativeNightSky,uv).rgb,nightFactor),1.);\n#include <colorspace_fragment>\n}`;skyMaterial.needsUpdate=true;
   if(new URLSearchParams(location.search).has('leafLambert185')){const converted=new Map<THREE.Material,THREE.Material>();for(const o of[...foliageMeshes,meadow]){const old=o.material as THREE.MeshStandardMaterial;let m=converted.get(old);if(!m){m=new THREE.MeshLambertMaterial({color:old.color,emissive:old.emissive,emissiveIntensity:old.emissiveIntensity,vertexColors:old.vertexColors,map:old.map,alphaMap:old.alphaMap,alphaTest:old.alphaTest,side:old.side,transparent:old.transparent,opacity:old.opacity});m.name=old.name;m.alphaToCoverage=old.alphaToCoverage;m.onBeforeCompile=old.onBeforeCompile;m.customProgramCacheKey=old.customProgramCacheKey;converted.set(old,m);}o.material=m;}state.leafDiffuseVertexLighting=true;}
-  nativeLighting=await attachBakedLightingV179(scene,nativeFieldManifest187,state,renderer);nativeLighting.update(camera,1);
+  phases192.push({name:'geometry and materials assembled',at:performance.now()});nativeLighting=await attachBakedLightingV179(scene,nativeFieldManifest187,state,renderer);nativeLighting.update(camera,1);
   if(new URLSearchParams(location.search).has('nativeLeafRadiance186'))try{leafRadiance=await applyLeafRadiance186(foliageMeshes,state);}catch(error){state.leafRadianceError=String(error);}
  }
+ phases192.push({name:'full resolution lighting uploaded',at:performance.now()});
  if(!nativeRequired){await renderer.compileAsync(scene,camera);renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);}
 
- state.renderInventory=sceneRenderInventory(scene);const foliageCull=!nativeRequired&&!new URLSearchParams(location.search).has('skipCulling185')?foliageCulling(foliageMeshes,renderer,camera,state):null;const foliageOrder=!nativeRequired?sortedFoliage(foliageMeshes,camera,state):null;const shadowCache=!nativeRequired&&new URLSearchParams(location.search).get('staticShadows')!=='0'?staticShadowCache(renderer,scene,sun,boat,state):null;shadowCache?.prepare(camera);const foliageDepth=!nativeRequired&&new URLSearchParams(location.search).has('prepass185')?foliageDepthPrepass(renderer,scene,camera,state):null;await foliageDepth?.prepare();if(!nativeRequired){waterReflection191?.invalidate();lastMirror=-Infinity;renderer.setRenderTarget(null);renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);await waitForPaint191(renderer);}state.firstFramePainted191=true;state.ready=true;document.querySelector<HTMLButtonElement>('[data-odyssey-night]')?.removeAttribute('disabled');document.querySelector('.odyssey-preparing')?.remove();canvas.style.opacity=nativeRequired?'0':'1';
+ state.renderInventory=sceneRenderInventory(scene);const foliageCull=!nativeRequired&&!new URLSearchParams(location.search).has('skipCulling185')?foliageCulling(foliageMeshes,renderer,camera,state):null;const foliageOrder=!nativeRequired?sortedFoliage(foliageMeshes,camera,state):null;const shadowCache=!nativeRequired&&new URLSearchParams(location.search).get('staticShadows')!=='0'?staticShadowCache(renderer,scene,sun,boat,state):null;shadowCache?.prepare(camera);const foliageDepth=!nativeRequired&&new URLSearchParams(location.search).has('prepass185')?foliageDepthPrepass(renderer,scene,camera,state):null;await foliageDepth?.prepare();if(!nativeRequired){waterReflection191?.invalidate();lastMirror=-Infinity;renderer.setRenderTarget(null);renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);await waitForPaint191(renderer);}phases192.push({name:'live frame painted',at:performance.now()});state.firstFramePainted191=true;state.ready=true;document.querySelector<HTMLButtonElement>('[data-odyssey-night]')?.removeAttribute('disabled');document.querySelector('.odyssey-preparing')?.remove();canvas.style.opacity=nativeRequired?'0':'1';
  if(new URLSearchParams(location.search).has('performanceAudit'))state.auditObjects={T:THREE,scene,water,boat,renderer,camera,foliageMeshes};
  const profile=frameProfile(renderer,state);let last=performance.now(),lastRender=0,time=0,shadowAt=-Infinity,frameHandle=0;const deltaFrames:number[]=[];
  function wake(){if(!state.ready||frameHandle||document.hidden||document.body.classList.contains('portfolio-surface-suspended'))return;frameHandle=requestAnimationFrame(render);state.scheduled=true;}

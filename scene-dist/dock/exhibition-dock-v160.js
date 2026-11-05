@@ -1,1 +1,1 @@
-export * from "../browser-v191/exhibition-dock-v160.js";
+export * from "../browser-v192/exhibition-dock-v160.js";

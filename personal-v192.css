@@ -1,0 +1,31 @@
+/* Identity and factual practice; existing archive palette and type retained. */
+#personalPage{--bio-ink:#30362f;--bio-secondary:#555c4f;grid-template-columns:minmax(240px,340px) minmax(0,760px);column-gap:clamp(55px,7vw,130px);row-gap:34px;justify-content:center;align-content:start;padding:80px 7vw 44px;background:#d7d0bc;color:var(--bio-ink);scrollbar-color:#8b8c72 #d7d0bc}
+#personalPage .personal-portrait{position:static;grid-row:1;align-self:start;display:flex;flex-direction:column;gap:25px;max-width:340px;width:100%;margin:0}
+#personalPage .personal-portrait img{order:2;width:100%;height:min(51vh,490px);object-fit:contain;object-position:top center;background:#272727}
+#personalPage .personal-portrait figcaption{order:1;border:0;padding:0;margin:0}
+#personalPage .personal-portrait h2{font:400 clamp(38px,3vw,50px)/1.25 var(--serif,'Noto Serif SC',serif);margin:0 0 12px}
+#personalPage .personal-portrait figcaption>span{font:16px/1.7 var(--sans,sans-serif);letter-spacing:0;color:var(--bio-ink)}
+#personalPage .personal-birth{font:14px/1.7 var(--sans,sans-serif);margin:10px 0 0;color:var(--bio-secondary)}
+#personalPage .personal-text-scene{position:static;grid-column:2;grid-row:1;padding-top:6px;clip-path:none;overflow:visible}
+#personalPage .personal-introduction h3{font:400 28px/1.4 var(--serif,'Noto Serif SC',serif);margin:0 0 14px;letter-spacing:0}
+#personalPage .personal-introduction>p{font-size:16px;line-height:1.85;color:var(--bio-ink);margin:0;max-width:40em}
+#personalPage .personal-resume-grid{display:grid;grid-template-columns:1fr 1.13fr;gap:30px 42px;margin-top:30px}
+#personalPage .personal-resume-grid section{border:0;padding:0;min-width:0}
+#personalPage .personal-resume-grid h4{font:600 17px/1.5 var(--sans,sans-serif);margin:0 0 12px}
+#personalPage .personal-resume-grid p{font:15px/1.85 var(--sans,sans-serif);margin:0;color:var(--bio-ink);overflow-wrap:normal}
+#personalPage .personal-resume-grid .personal-role{margin-bottom:9px;font-weight:500}
+#personalPage .personal-role time{display:block;font-size:13px;font-weight:400;color:var(--bio-secondary)}
+#personalPage .personal-project h5{font:500 15px/1.6 var(--sans,sans-serif);margin:0 0 5px}
+#personalPage .personal-project+.personal-project{margin-top:17px}
+#personalPage .personal-hobbies{display:inline-flex;align-items:center;gap:24px;font:15px/1.4 var(--sans,sans-serif);margin:28px 0 0;padding:12px 18px;border:0;border-radius:0;box-shadow:none;background:#c5c6b3;color:var(--bio-ink);cursor:pointer}
+#personalPage .personal-hobbies svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.4}
+#personalPage .personal-hobbies:hover{background:#bbc0aa}
+#personalPage .personal-archive-note{display:none}
+#personalPage .personal-contact{position:static;grid-column:1 / -1;grid-row:2;display:grid;grid-template-columns:minmax(240px,340px) 1fr 1.6fr .85fr;align-items:start;gap:24px;margin:0;padding:22px 24px;background:#cac9b7;border:0;font:15px/1.6 var(--sans,sans-serif)}
+#personalPage .personal-contact h3{font:500 18px/1.6 var(--sans,sans-serif);margin:0}
+#personalPage .personal-contact>a,#personalPage .personal-contact>.personal-wechat{display:flex;flex-direction:column;gap:7px;font:inherit;white-space:nowrap;color:inherit}
+#personalPage .personal-contact a>span,#personalPage .personal-contact>.personal-wechat>span{font:13px/1.6 var(--sans,sans-serif);color:var(--bio-secondary)}
+#personalPage .standalone-close{color:var(--bio-ink)}
+#personalPage ::selection{background:#55634a;color:#f6eedb}
+#personalPage :focus-visible{outline:2px solid #55634a;outline-offset:5px}
+@media(max-width:1200px){#personalPage{column-gap:45px;padding:65px 5vw 36px;grid-template-columns:260px minmax(0,1fr)}#personalPage .personal-resume-grid{column-gap:26px;gap:25px}#personalPage .personal-contact{grid-template-columns:160px 1fr 1.6fr .8fr;gap:20px}#personalPage .personal-portrait img{height:47vh}}

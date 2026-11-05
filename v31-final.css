@@ -2863,3 +2863,8 @@ body.is-display-raised .directory-room-host { filter: brightness(var(--scene-dis
 body.collage-immersive191:not(.portfolio-portal-open) .topbar,body.collage-immersive191:not(.portfolio-portal-open) #experienceConsole{visibility:hidden!important;opacity:0!important;pointer-events:none!important}
 /* Show the actual work cover after the authored shutter closes, during decoding. */
 .work-route-preview191{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0b1010;opacity:0}.works-project-transition.is-preparing191:has(.work-route-preview191) .work-route-preview191{opacity:1}.works-project-transition.is-preparing191:has(.work-route-preview191) .project-shutter,.works-project-transition.is-preparing191:has(.work-route-preview191) .project-play-cue{opacity:0}
+.works-project-transition.is-preparing191{background:#060708}
+.is-project-active .works-orbit-archive{visibility:hidden}
+.work-project-frame.is-visible{background:#060708;isolation:isolate}
+.work-route-back192{position:absolute;z-index:3;top:30px;left:32px;border:0;padding:12px 18px;background:#303932;color:#eee8db;font:15px/1.4 sans-serif;cursor:pointer}
+.work-route-back192:focus-visible{outline:2px solid #dfcca3;outline-offset:4px}

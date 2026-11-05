@@ -22,7 +22,7 @@
     film.style.opacity='0';
     const revealFrame=()=>{const shown=()=>{film.style.opacity='1';state.firstFrameAt??=performance.now();document.dispatchEvent(new Event('portfolio:work-first-frame'));};if(film.requestVideoFrameCallback)film.requestVideoFrameCallback(shown);else if(film.readyState>=2)requestAnimationFrame(shown);};
     film.addEventListener('playing',revealFrame);
-    film.addEventListener('loadeddata',()=>{if(film.paused&&film.readyState>=2){film.style.opacity='1';state.coverReadyAt=performance.now();}});
+    film.addEventListener('loadeddata',()=>{if(film.paused&&film.readyState>=2){revealFrame();state.coverReadyAt=performance.now();}});
     film.addEventListener('play', () => { state.playing = true; });
     film.addEventListener('pause', () => { state.playing = false; });
     film.addEventListener('canplay', () => { void play(); });

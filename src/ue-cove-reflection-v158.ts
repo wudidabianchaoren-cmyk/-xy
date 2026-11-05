@@ -1,7 +1,7 @@
 import * as T from 'three';
 
 /** UE viewport color probe: restrained reflection detail, never a radiometric sky replacement. */
-export async function attachUECoveReflectionV158(water:T.Mesh,boat:T.Group,state:any){
+export async function prepareUECove192(){
  const folder='./assets/ue-v159/';
  const [meta,response]=await Promise.all([
   fetch(folder+'cove-ue5-cubeuv.json').then(r=>{if(!r.ok)throw Error('UE probe metadata '+r.status);return r.json();}),
@@ -11,6 +11,11 @@ export async function attachUECoveReflectionV158(water:T.Mesh,boat:T.Group,state
  if(meta.revision!==T.REVISION||meta.width!==384||meta.height!==512||!meta.ready)throw Error('Incompatible UE reflection probe');
  const decoded=await new Response(response.body!.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
  if(decoded.byteLength!==meta.bytes)throw Error('Incomplete UE reflection probe');
+ return {meta,decoded};
+}
+
+export async function attachUECoveReflectionV158(water:T.Mesh,boat:T.Group,state:any,prepared192?:ReturnType<typeof prepareUECove192>){
+ const {meta,decoded}=await(prepared192||prepareUECove192());
  const probe=new T.DataTexture(new Uint16Array(decoded),meta.width,meta.height,T.RGBAFormat,T.HalfFloatType);
  probe.name='FullCoveV149 UE5 native viewport color reflection';probe.mapping=T.CubeUVReflectionMapping;
  probe.colorSpace=T.LinearSRGBColorSpace;probe.minFilter=probe.magFilter=T.LinearFilter;probe.generateMipmaps=false;probe.needsUpdate=true;

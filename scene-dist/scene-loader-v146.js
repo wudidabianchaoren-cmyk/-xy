@@ -1,1 +1,1 @@
-export * from "./browser-v191/scene-loader-v146.js";
+export * from "./browser-v192/scene-loader-v146.js";

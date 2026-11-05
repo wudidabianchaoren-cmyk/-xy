@@ -1,11 +1,22 @@
 import * as T from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 
-/** True PBR terrain and fractured scan geometry, with original island/foliage retained. */
-export async function coastV161(scene:T.Scene,land:T.Group,loader:GLTFLoader,state:any){
+export function prepareCoast192(loader:GLTFLoader){
  const tx=new T.TextureLoader(),dir='./assets/odyssey/pbr-v103/';
  async function maps(name:string){const [c,n,r]=await Promise.all(['Diffuse.jpg','nor_gl.jpg','Rough.jpg'].map(f=>tx.loadAsync(dir+name+'/'+f)));c.colorSpace=T.SRGBColorSpace;for(const t of[c,n,r]){t.wrapS=t.wrapT=T.RepeatWrapping;t.anisotropy=8;}return{c,n,r};}
- const[sand,stone,soil]=await Promise.all([maps('coast_sand_03'),maps('seaside_rock'),maps('forest_ground_04')]);
+ const mapsReady=Promise.all([maps('coast_sand_03'),maps('seaside_rock'),maps('forest_ground_04')]);
+ const scansReady=Promise.all([
+  loader.loadAsync('./assets/odyssey/refit-v147/coastal_cliff_02-embedded-web.glb'),
+  loader.loadAsync('./assets/odyssey/refit-v147/coastal_cliff_04-embedded-web.glb'),
+  loader.loadAsync('./assets/odyssey/refit-v146/coast_rocks_02.glb')
+ ]);
+
+ mapsReady.catch(()=>{});scansReady.catch(()=>{});return{maps:mapsReady,scans:scansReady};
+}
+
+/** True PBR terrain and fractured scan geometry, with original island/foliage retained. */
+export async function coastV161(scene:T.Scene,land:T.Group,loader:GLTFLoader,state:any,assets192?:ReturnType<typeof prepareCoast192>){
+ const prepared=assets192||prepareCoast192(loader);const[sand,stone,soil]=await prepared.maps;
  const coastClock={value:0};state.coastClock=coastClock;
  const material=new T.MeshStandardMaterial({name:'V146 physical sand / bedrock / soil',roughness:.95,envMapIntensity:.58});
  material.onBeforeCompile=s=>{
@@ -36,11 +47,7 @@ export async function coastV161(scene:T.Scene,land:T.Group,loader:GLTFLoader,sta
  };
  material.customProgramCacheKey=()=> 'v161-live-pbr-island-with-coherent-sun';state.groundRestoration={source:'actual CC0 sand, bedrock and forest soil albedo / live directional sun and sky illumination',upperGroundIsNotRelit:false,shoreUsesLivePBR:true,bakedRadianceRelit:false,originalIslandFootprintPreserved:true};
  land.traverse(o=>{if(o instanceof T.Mesh){o.material=material;o.receiveShadow=true;o.castShadow=true;}});
- const scans=await Promise.all([
-  loader.loadAsync('./assets/odyssey/refit-v147/coastal_cliff_02-embedded-web.glb'),
-  loader.loadAsync('./assets/odyssey/refit-v147/coastal_cliff_04-embedded-web.glb'),
-  loader.loadAsync('./assets/odyssey/refit-v146/coast_rocks_02.glb')
- ]);
+ const scans=await prepared.scans;
  const layouts=[
   {i:0,p:[0,0,0],s:1,a:0},
   {i:1,p:[0,0,0],s:1,a:0},
