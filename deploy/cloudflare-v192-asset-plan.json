@@ -6,8 +6,8 @@
   "files": [
     {
       "path": "_headers",
-      "bytes": 2747,
-      "sha1": "e5028ed28acdde2fa505412c7eac81f15b089d21"
+      "bytes": 2850,
+      "sha1": "01fd6dab5066e42b9b2f2763e65aa6d970f92d2d"
     },
     {
       "path": "after-journey.css",
@@ -16,8 +16,8 @@
     },
     {
       "path": "after-journey.html",
-      "bytes": 33830,
-      "sha1": "7f5c9c3ce7d5605358cfff874364c3c4150872ca"
+      "bytes": 40092,
+      "sha1": "3df219d826c6dd531bb7bda26d1b93bd6131388c"
     },
     {
       "path": "assets/atmosphere-v172/atmosphere-01.webp",
@@ -7380,6 +7380,11 @@
       "sha1": "e6787497cefb20de06e43375db1efa765092aace"
     },
     {
+      "path": "assets/browser-v192/packed/23287af7d3355fa118b7.js",
+      "bytes": 1481325,
+      "sha1": "fd7d15bf5c6eee9f6c8e5bc5f82574fbb7a4b244"
+    },
+    {
       "path": "assets/browser-v192/packed/2480deb66330a44d00cc.css",
       "bytes": 43916,
       "sha1": "b736d256db47948ab170d22e6498882ca1d867db"
@@ -7408,6 +7413,11 @@
       "path": "assets/browser-v192/packed/3c6ea3421d70e244b6ac.css",
       "bytes": 39713,
       "sha1": "092ca33298cf127ab30fdf758c10901dd7ad7bf8"
+    },
+    {
+      "path": "assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
+      "bytes": 149245,
+      "sha1": "a60d7e41b13cb3fb69e9474beecdd21afd9527f7"
     },
     {
       "path": "assets/browser-v192/packed/50b8bce33e4f812e19d5.css",
@@ -12271,8 +12281,8 @@
     },
     {
       "path": "browser-runtime-v180.js",
-      "bytes": 24231,
-      "sha1": "570156b28521a6c223bc888bc2175061a303ce0a"
+      "bytes": 23884,
+      "sha1": "411846e166a4220a18fb5f0918cfb9225985632b"
     },
     {
       "path": "c4d/hybrid-study/architecture-master.png",
@@ -13772,12 +13782,12 @@
     {
       "path": "directory-credits.html",
       "bytes": 8907,
-      "sha1": "71798944f9d893cec1ff186e46bd1ff7b8417b67"
+      "sha1": "92d281a6caed730a91e6de69a971e2370c86f2ff"
     },
     {
       "path": "directory.html",
-      "bytes": 4698,
-      "sha1": "d7c9929079b73b346ce53080346442da22395140"
+      "bytes": 7197,
+      "sha1": "aa454a9d44acab694d110f9944bc6002e9c3c554"
     },
     {
       "path": "finish-v138.css",
@@ -13842,7 +13852,7 @@
     {
       "path": "home-creation.html",
       "bytes": 48296,
-      "sha1": "4ec8b9bbd0392977b1bc74f71a6d50ddefa0784a"
+      "sha1": "8fb6ef250b9cdea433240e853617cb53338617f2"
     },
     {
       "path": "home-intro-v153.css",
@@ -13876,8 +13886,8 @@
     },
     {
       "path": "humid-southeast-asia.html",
-      "bytes": 28362,
-      "sha1": "811b157a39494a7bee21cceb847b59bbd9643fa1"
+      "bytes": 34624,
+      "sha1": "c23a00473439d324291fb59e555a8b29f251e586"
     },
     {
       "path": "identity-v144.js",
@@ -13886,8 +13896,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 68548,
-      "sha1": "c2c33aabedfc67f84fb7c76732ef07a5fece5f7d"
+      "bytes": 74810,
+      "sha1": "b578c70dad93e1b6740c51816f9b3fef7f2bc5aa"
     },
     {
       "path": "learning-fade-v153.js",
@@ -13921,13 +13931,13 @@
     },
     {
       "path": "learning.html",
-      "bytes": 14448,
-      "sha1": "eb4fb6bc34a26776034fe1c6b45402398872ecfc"
+      "bytes": 16947,
+      "sha1": "54f1b597e49c85fff37b43b8a2a4c14895554759"
     },
     {
       "path": "mid-autumn.html",
-      "bytes": 13047,
-      "sha1": "ab24870e32e26bd9af4e72187ad34773c49c6380"
+      "bytes": 19309,
+      "sha1": "dc9873608b1ca82db98b348962e84482289f2cd7"
     },
     {
       "path": "motion/physical-universe-v103/drawing.js",
@@ -13986,8 +13996,8 @@
     },
     {
       "path": "mythology-process.html",
-      "bytes": 52422,
-      "sha1": "8ba9e120f3af20c34d9d75c5468c9ca2530b68f8"
+      "bytes": 54921,
+      "sha1": "eb9da480b416b23a7f7fa119100c781c44722e8e"
     },
     {
       "path": "mythology-v134.css",
@@ -14006,8 +14016,8 @@
     },
     {
       "path": "mythology.html",
-      "bytes": 9021,
-      "sha1": "52dd204952d8c7a4a6ce1ed749e2f551ad03d9de"
+      "bytes": 11520,
+      "sha1": "670089bc6b2dcdc78a2264b2c5f098aa4542d3e2"
     },
     {
       "path": "navigation-v141.js",
@@ -14036,8 +14046,8 @@
     },
     {
       "path": "physical-universe.html",
-      "bytes": 31416,
-      "sha1": "8f20856ac5eeb5dac3614adfbc8c34110249d6c7"
+      "bytes": 37678,
+      "sha1": "e448f1bac3a2522b5dc50cec388487e3cb4cca32"
     },
     {
       "path": "progressive-media-v185.js",
@@ -14086,8 +14096,8 @@
     },
     {
       "path": "reading.html",
-      "bytes": 7530,
-      "sha1": "d47a9eb2cd41969d391e089a3d24e758827a44c4"
+      "bytes": 13792,
+      "sha1": "ed3a674e349843c5c31f0d5f161693b4a8ca10dc"
     },
     {
       "path": "refinements-v141.css",
@@ -14141,8 +14151,8 @@
     },
     {
       "path": "rural-return.html",
-      "bytes": 29504,
-      "sha1": "d90913b8bc8413d471ba9cd8b061cf0486d32a08"
+      "bytes": 35766,
+      "sha1": "ceda97cd9167fdaa789d627947642d99c132660c"
     },
     {
       "path": "scene-dist/browser-v185/cinema-notes-v155.css",
@@ -16341,8 +16351,8 @@
     },
     {
       "path": "v31-final.css",
-      "bytes": 128354,
-      "sha1": "1b11ce4ebdd088624063be403bfb10d0144fd2fe"
+      "bytes": 128604,
+      "sha1": "022c54c77675c787e8825f818fc15add86f71b4c"
     },
     {
       "path": "v31-motion-v144.js",
@@ -16371,13 +16381,13 @@
     },
     {
       "path": "v31-works-ring-v144.js",
-      "bytes": 55298,
-      "sha1": "12a05a823c76870f020f4bd4e176523a2b14f117"
+      "bytes": 55274,
+      "sha1": "58829e9c235cd3c9a4ac62dee2f01617e50fcdb4"
     },
     {
       "path": "v31.html",
-      "bytes": 68548,
-      "sha1": "c2c33aabedfc67f84fb7c76732ef07a5fece5f7d"
+      "bytes": 74810,
+      "sha1": "b578c70dad93e1b6740c51816f9b3fef7f2bc5aa"
     },
     {
       "path": "v32-121.css",
@@ -16526,11 +16536,11 @@
     },
     {
       "path": "yangjian.html",
-      "bytes": 27742,
-      "sha1": "98b00140b82b073fc4a8462f226a1451de0dbf6b"
+      "bytes": 30241,
+      "sha1": "8f928236116e2f8a4486f18b99a7ea655d23a5e7"
     }
   ],
-  "bytes": 4012270262,
+  "bytes": 4013963405,
   "excludedUnusedSourceCopies": [
     "assets/odyssey/compact-v134/island-radiance.png",
     "assets/works/rural-return/original-film-v32-92.mp4"

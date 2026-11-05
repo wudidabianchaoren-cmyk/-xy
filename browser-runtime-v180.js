@@ -27,7 +27,8 @@
   })();
   const segmentCache=new Map();
   function cachedSegment(address,options={}){const key=new URL(address,location.href).href;if(segmentCache.has(key))return segmentCache.get(key);const task=(async()=>{for(let attempt=0;attempt<3;attempt++){const controller=new AbortController(),abort=()=>controller.abort();options.signal?.addEventListener('abort',abort,{once:true});const timer=setTimeout(abort,30000);try{const response=await originalFetch(address,{...options,signal:controller.signal,...(attempt?{cache:'reload'}:{})});if(!response.ok)throw Error('Resource segment unavailable: '+response.status);return new Uint8Array(await response.arrayBuffer());}catch(error){if(options.signal?.aborted||attempt===2)throw error;await new Promise(r=>setTimeout(r,300*(attempt+1)));}finally{clearTimeout(timer);options.signal?.removeEventListener('abort',abort);}}})();task.catch(()=>segmentCache.delete(key));segmentCache.set(key,task);return task;}
-  if(/^\/(?:index\.html|v31\.html)?$/.test(location.pathname)){const queue=['/blender/reference-architecture-v16/architecture-world.glb','/blender/reference-architecture-v24/baked-architecture.glb'].flatMap(path=>resources.binary[path]?.parts||[]);for(let worker=0;worker<2;worker++)void(async()=>{while(queue.length){const path=queue.shift();try{await cachedSegment(path,{priority:'low'});}catch{}}})();addEventListener('v85:home-intro-finished',()=>setTimeout(()=>segmentCache.clear(),30000),{once:true});}
+  // Geometry is requested by its actual scene owner after critical entry scripts.
+  // Do not prefetch the historical alternate courtyard before DOM readiness.
 
   const diagnostics=window.portfolioDeliveryState={version:187,browserOnly:true,segmentedVideos:0,assembledResources:0,errors:[]};
 

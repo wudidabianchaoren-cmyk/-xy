@@ -12,6 +12,17 @@ for page in stage.glob('*.html'):
   assert '</script' not in body.lower(),name
   embedded.append({'path':name,'bytes':len(body.encode())});return '<script data-critical-source="'+name+'">\n'+body+'\n</script>'
  text=re.sub(r'<script\s+src="([^"\n]+)"\s*>\s*</script>',script,text)
+
+ # These two deferred polish scripts were independently observed starving DCL
+ # on the physical route. Inline modules retain after-parse execution semantics.
+ def inline_polish192(match):
+  tag=match[0];source=re.search(r'src="([^"]+)"',tag)[1].split('?')[0].removeprefix('./').lstrip('/')
+  if source not in {'heading-interaction-v157.js','site-refinements-v129.js'}:return tag
+  body=(stage/source).read_text(encoding='utf-8-sig');assert '</script' not in body.lower()
+  embedded.append({'path':source,'bytes':len(body.encode()),'afterParseInline192':True})
+  return '<script type="module" data-critical-source="'+source+'">\n'+body+'\n</script>'
+ text=re.sub(r'<script\b(?=[^>]*src=")[^>]*>\s*</script>',inline_polish192,text)
+
  def stylesheet(match):
   path=match[1].removeprefix('./').lstrip('/')
   if not path.startswith('assets/browser-v192/packed/'):return match[0]

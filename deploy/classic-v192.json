@@ -12,32 +12,32 @@
   },
   {
     "page": "after-journey.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
     "page": "directory-credits.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
     "page": "directory.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
@@ -53,12 +53,12 @@
   },
   {
     "page": "home-creation.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
@@ -74,12 +74,12 @@
   },
   {
     "page": "humid-southeast-asia.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
@@ -94,7 +94,7 @@
   },
   {
     "page": "index.html",
-    "url": "/assets/browser-v192/packed/79d9f7450f59ddf50f72.js",
+    "url": "/assets/browser-v192/packed/23287af7d3355fa118b7.js",
     "sources": [
       "./assets/vendor/three-0.160.0.min.js",
       "./assets/vendor/gsap-3.13.0.min.js",
@@ -108,7 +108,7 @@
       "./v31-controls-v143.js",
       "./v31-works-ring-v144.js"
     ],
-    "bytes": 1474243,
+    "bytes": 1474219,
     "authoredOrderPreserved": true
   },
   {
@@ -123,22 +123,22 @@
   },
   {
     "page": "index.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
     "page": "learning.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
@@ -153,12 +153,12 @@
   },
   {
     "page": "mid-autumn.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
@@ -174,22 +174,22 @@
   },
   {
     "page": "mythology-process.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
     "page": "mythology.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
@@ -205,22 +205,22 @@
   },
   {
     "page": "physical-universe.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
     "page": "reading.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
@@ -236,12 +236,12 @@
   },
   {
     "page": "rural-return.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
@@ -256,7 +256,7 @@
   },
   {
     "page": "v31.html",
-    "url": "/assets/browser-v192/packed/79d9f7450f59ddf50f72.js",
+    "url": "/assets/browser-v192/packed/23287af7d3355fa118b7.js",
     "sources": [
       "./assets/vendor/three-0.160.0.min.js",
       "./assets/vendor/gsap-3.13.0.min.js",
@@ -270,7 +270,7 @@
       "./v31-controls-v143.js",
       "./v31-works-ring-v144.js"
     ],
-    "bytes": 1474243,
+    "bytes": 1474219,
     "authoredOrderPreserved": true
   },
   {
@@ -285,22 +285,22 @@
   },
   {
     "page": "v31.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   },
   {
     "page": "yangjian.html",
-    "url": "/assets/browser-v192/packed/b8ace968524229fdfeb7.js",
+    "url": "/assets/browser-v192/packed/4b90a7eea2e9a720f4de.js",
     "sources": [
       "/browser-resources-v180.js",
       "/browser-runtime-v180.js"
     ],
-    "bytes": 149430,
+    "bytes": 149082,
     "authoredOrderPreserved": true
   }
 ]

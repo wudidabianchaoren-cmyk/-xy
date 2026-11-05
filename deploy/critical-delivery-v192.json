@@ -5,6 +5,11 @@
       {
         "path": "assets/browser-v192/packed/5929872b0cc6560cfcb8.js",
         "bytes": 22042
+      },
+      {
+        "path": "site-refinements-v129.js",
+        "bytes": 3679,
+        "afterParseInline192": true
       }
     ],
     "modulepreloads": [],
@@ -44,6 +49,11 @@
       {
         "path": "assets/browser-v192/packed/3bfde0529db071a29b24.js",
         "bytes": 20862
+      },
+      {
+        "path": "site-refinements-v129.js",
+        "bytes": 3679,
+        "afterParseInline192": true
       }
     ],
     "modulepreloads": [],
@@ -59,6 +69,11 @@
       {
         "path": "assets/browser-v192/packed/1090a89391a81e607ceb.js",
         "bytes": 26193
+      },
+      {
+        "path": "site-refinements-v129.js",
+        "bytes": 3679,
+        "afterParseInline192": true
       }
     ],
     "modulepreloads": [
@@ -97,6 +112,11 @@
       {
         "path": "assets/browser-v192/packed/b4b24540700179568e34.js",
         "bytes": 4740
+      },
+      {
+        "path": "site-refinements-v129.js",
+        "bytes": 3679,
+        "afterParseInline192": true
       }
     ],
     "modulepreloads": [],
@@ -139,6 +159,11 @@
       {
         "path": "assets/browser-v192/packed/b460e63d2a2f7eef912a.js",
         "bytes": 21056
+      },
+      {
+        "path": "site-refinements-v129.js",
+        "bytes": 3679,
+        "afterParseInline192": true
       }
     ],
     "modulepreloads": [],
@@ -146,7 +171,13 @@
   },
   {
     "page": "reading.html",
-    "embedded": [],
+    "embedded": [
+      {
+        "path": "site-refinements-v129.js",
+        "bytes": 3679,
+        "afterParseInline192": true
+      }
+    ],
     "modulepreloads": [
       "scene-dist/browser-v192/reading-book-v155.js",
       "scene-dist/browser-v192/shared-C6N56PU3.js",
@@ -162,6 +193,11 @@
       {
         "path": "assets/browser-v192/packed/5929872b0cc6560cfcb8.js",
         "bytes": 22042
+      },
+      {
+        "path": "site-refinements-v129.js",
+        "bytes": 3679,
+        "afterParseInline192": true
       }
     ],
     "modulepreloads": [],
@@ -177,6 +213,11 @@
       {
         "path": "assets/browser-v192/packed/1090a89391a81e607ceb.js",
         "bytes": 26193
+      },
+      {
+        "path": "site-refinements-v129.js",
+        "bytes": 3679,
+        "afterParseInline192": true
       }
     ],
     "modulepreloads": [
