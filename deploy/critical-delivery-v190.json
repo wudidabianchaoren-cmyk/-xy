@@ -1,0 +1,341 @@
+[
+  {
+    "page": "after-journey.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/44d2fc8acb8d85821d6b.js",
+        "bytes": 21517
+      },
+      {
+        "path": "assets/browser-v190/packed/3c6ea3421d70e244b6ac.css",
+        "bytes": 39348
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "directory-credits.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/6c9254de386face98b8c.css",
+        "bytes": 1068
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "directory.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/434e7d3e8d1dda47be49.css",
+        "bytes": 34690
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "home-creation.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/22aac18f1d27b9d20025.js",
+        "bytes": 31393
+      },
+      {
+        "path": "assets/browser-v190/packed/30b0a5853c2e8d900cf0.css",
+        "bytes": 25532
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "humid-southeast-asia.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/47ece8891985f106a376.js",
+        "bytes": 20198
+      },
+      {
+        "path": "assets/browser-v190/packed/f343467bac1336fefa7a.css",
+        "bytes": 34609
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "index.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/804acbf1112e139268ee.js",
+        "bytes": 3178
+      },
+      {
+        "path": "assets/browser-v190/packed/afca4779f4c73345c330.js",
+        "bytes": 1473245
+      },
+      {
+        "path": "assets/browser-v190/packed/cd8c571da03d0f6813c6.js",
+        "bytes": 22089
+      },
+      {
+        "path": "assets/browser-v190/packed/ad719b9c3cfd3ff2b791.css",
+        "bytes": 467811
+      }
+    ],
+    "modulepreloads": [
+      "scene-dist/browser-v190/home-designed-intro-v160.js",
+      "scene-dist/browser-v190/home-thought-line-v160.js",
+      "scene-dist/browser-v190/home-world-v146.js",
+      "scene-dist/browser-v190/scene-loader-v146.js",
+      "scene-dist/browser-v190/shared-32475FOM.js",
+      "scene-dist/browser-v190/shared-C6N56PU3.js",
+      "scene-dist/browser-v190/shared-DGU5PTFW.js",
+      "scene-dist/browser-v190/shared-LZ7QSBR5.js",
+      "scene-dist/browser-v190/shared-ME7QVHGR.js",
+      "scene-dist/browser-v190/shared-MG6POSIJ.js",
+      "scene-dist/browser-v190/shared-NK3IH7V4.js",
+      "scene-dist/browser-v190/shared-PQUBCPGM.js",
+      "scene-dist/browser-v190/shared-R5XT465O.js",
+      "scene-dist/browser-v190/shared-RGYTE4B5.js",
+      "scene-dist/browser-v190/shared-RTTFH4P3.js",
+      "scene-dist/browser-v190/shared-SXRZKL2H.js",
+      "scene-dist/browser-v190/shared-W3TROUU3.js",
+      "scene-dist/browser-v190/shared-XL3CMSHR.js",
+      "scene-dist/browser-v190/shared-XM4RMFZ3.js",
+      "scene-dist/browser-v190/shared-YRQ74F3T.js"
+    ],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "learning.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/f76ca88b76485118f138.css",
+        "bytes": 25201
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "mid-autumn.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/e7bb6fd7c399dd7130ee.js",
+        "bytes": 4749
+      },
+      {
+        "path": "assets/browser-v190/packed/50b8bce33e4f812e19d5.css",
+        "bytes": 35054
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "mythology-process.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/18008c720daaacfd88bb.js",
+        "bytes": 37844
+      },
+      {
+        "path": "assets/browser-v190/packed/139622699c1332330717.css",
+        "bytes": 34694
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "mythology.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/7818e961c43095a8cb8c.css",
+        "bytes": 152040
+      }
+    ],
+    "modulepreloads": [
+      "scene-dist/browser-v190/mythology-local-v162.js",
+      "scene-dist/browser-v190/mythology-web-v165.js",
+      "scene-dist/browser-v190/shared-32475FOM.js",
+      "scene-dist/browser-v190/shared-6Y5UGBBP.js",
+      "scene-dist/browser-v190/shared-DGU5PTFW.js",
+      "scene-dist/browser-v190/shared-IPDBCHYA.js",
+      "scene-dist/browser-v190/shared-LZ7QSBR5.js",
+      "scene-dist/browser-v190/shared-NK3IH7V4.js",
+      "scene-dist/browser-v190/shared-RTTFH4P3.js",
+      "scene-dist/browser-v190/shared-RUKHF5KC.js",
+      "scene-dist/browser-v190/shared-W3TROUU3.js",
+      "scene-dist/browser-v190/shared-XM4RMFZ3.js",
+      "scene-dist/browser-v190/shared-YRQ74F3T.js"
+    ],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "physical-universe.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/9b9dd171a1101af70c6b.js",
+        "bytes": 20522
+      },
+      {
+        "path": "assets/browser-v190/packed/affab500e4694ed85228.css",
+        "bytes": 42434
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "reading.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/2480deb66330a44d00cc.css",
+        "bytes": 43620
+      }
+    ],
+    "modulepreloads": [
+      "scene-dist/browser-v190/reading-book-v155.js",
+      "scene-dist/browser-v190/shared-C6N56PU3.js",
+      "scene-dist/browser-v190/shared-LZ7QSBR5.js",
+      "scene-dist/browser-v190/shared-RTTFH4P3.js",
+      "scene-dist/browser-v190/shared-XM4RMFZ3.js"
+    ],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "rural-return.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/44d2fc8acb8d85821d6b.js",
+        "bytes": 21517
+      },
+      {
+        "path": "assets/browser-v190/packed/1a9948bef7ff6e0198fc.css",
+        "bytes": 38846
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "v31.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/804acbf1112e139268ee.js",
+        "bytes": 3178
+      },
+      {
+        "path": "assets/browser-v190/packed/afca4779f4c73345c330.js",
+        "bytes": 1473245
+      },
+      {
+        "path": "assets/browser-v190/packed/cd8c571da03d0f6813c6.js",
+        "bytes": 22089
+      },
+      {
+        "path": "assets/browser-v190/packed/ad719b9c3cfd3ff2b791.css",
+        "bytes": 467811
+      }
+    ],
+    "modulepreloads": [
+      "scene-dist/browser-v190/home-designed-intro-v160.js",
+      "scene-dist/browser-v190/home-thought-line-v160.js",
+      "scene-dist/browser-v190/home-world-v146.js",
+      "scene-dist/browser-v190/scene-loader-v146.js",
+      "scene-dist/browser-v190/shared-32475FOM.js",
+      "scene-dist/browser-v190/shared-C6N56PU3.js",
+      "scene-dist/browser-v190/shared-DGU5PTFW.js",
+      "scene-dist/browser-v190/shared-LZ7QSBR5.js",
+      "scene-dist/browser-v190/shared-ME7QVHGR.js",
+      "scene-dist/browser-v190/shared-MG6POSIJ.js",
+      "scene-dist/browser-v190/shared-NK3IH7V4.js",
+      "scene-dist/browser-v190/shared-PQUBCPGM.js",
+      "scene-dist/browser-v190/shared-R5XT465O.js",
+      "scene-dist/browser-v190/shared-RGYTE4B5.js",
+      "scene-dist/browser-v190/shared-RTTFH4P3.js",
+      "scene-dist/browser-v190/shared-SXRZKL2H.js",
+      "scene-dist/browser-v190/shared-W3TROUU3.js",
+      "scene-dist/browser-v190/shared-XL3CMSHR.js",
+      "scene-dist/browser-v190/shared-XM4RMFZ3.js",
+      "scene-dist/browser-v190/shared-YRQ74F3T.js"
+    ],
+    "authoredExecutionOrderPreserved": true
+  },
+  {
+    "page": "yangjian.html",
+    "embedded": [
+      {
+        "path": "assets/browser-v190/packed/acbc3e7fd8fda8aabaef.js",
+        "bytes": 149163
+      },
+      {
+        "path": "assets/browser-v190/packed/6bcfee47c830be63175a.css",
+        "bytes": 35377
+      }
+    ],
+    "modulepreloads": [],
+    "authoredExecutionOrderPreserved": true
+  }
+]

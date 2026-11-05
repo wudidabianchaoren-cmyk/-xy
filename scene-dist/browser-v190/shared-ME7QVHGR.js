@@ -1,0 +1,2 @@
+import{a as c}from"./shared-W3TROUU3.js";import{c as o}from"./shared-DGU5PTFW.js";var t=new Map;function n(e){let r=t.get(e);return r||(r=new o().setMeshoptDecoder(c).loadAsync(e),r.catch(()=>t.delete(e)),t.set(e,r)),r}function a(){for(let e of["./blender/reference-architecture-v18/courtyard-additions.glb","./blender/reference-architecture-v19/architectural-profiles.glb","./blender/reference-architecture-v20/courtyard-depth.glb"])n(e).catch(()=>{})}export{n as a,a as b};
+//# sourceMappingURL=shared-ME7QVHGR.js.map
