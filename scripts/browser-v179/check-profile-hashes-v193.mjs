@@ -1,9 +1,9 @@
 import{chromium}from'../../node_modules/playwright/index.mjs';
 import fs from'node:fs/promises';import{createHash}from'node:crypto';
-const origin=process.env.CF_QA_ORIGIN||'https://vvainex.click',out=process.env.CF_QA_HASH_OUTPUT||'.verify/v32-193/formal-hashes',stage='.verify/v32-193/site';
+const origin=process.env.CF_QA_ORIGIN||'https://vvainex.click',out=process.env.CF_QA_HASH_OUTPUT||'.verify/v32-193/formal-hashes',stage=process.env.CF_QA_STAGE||'.verify/v32-193/site';
 const previous=JSON.parse(await fs.readFile('.verify/v32-192/formal-hashes-normal/result.json','utf8'));
 const retry=process.env.CF_QA_HASH_RETRY?JSON.parse(await fs.readFile(process.env.CF_QA_HASH_RETRY,'utf8')):null;
-const paths=retry?retry.records.filter(r=>!r.match).map(r=>r.path):[...new Set(['index.html','v31.html',...previous.records.map(r=>r.path)])];
+const paths=process.env.CF_QA_CHANGED_ONLY==='1'?['index.html','v31.html','scene-dist/browser-v192/home-world-v146.js','browser-runtime-v180.js']:retry?retry.records.filter(r=>!r.match).map(r=>r.path):[...new Set(['index.html','v31.html',...previous.records.map(r=>r.path)])];
 await fs.mkdir(out,{recursive:true});const b=await chromium.launch({channel:'msedge',headless:true}),p=await b.newPage(),r={origin,errors:[],records:[]};
 try{
  await p.addInitScript(()=>{window.__profileAuditFetch=window.fetch.bind(window);});
