@@ -1,4 +1,6 @@
 /* Scoped portrait framing and expanded biography. Original photograph retained. */
-#personalPage .personal-portrait img{height:auto;aspect-ratio:4 / 5;object-fit:cover;object-position:center top;background:transparent}
+#personalPage{grid-template-columns:minmax(220px,260px) minmax(0,760px);padding-top:60px;column-gap:clamp(50px,6vw,100px)}
+#personalPage .personal-portrait{gap:18px;max-width:260px}
+#personalPage .personal-portrait img{width:240px;max-width:100%;height:auto;aspect-ratio:5 / 6;object-fit:cover;object-position:center 22%;background:transparent}
 #personalPage .personal-introduction>p+p{margin-top:12px}
 @media(max-width:1200px){#personalPage .personal-portrait img{height:auto}}

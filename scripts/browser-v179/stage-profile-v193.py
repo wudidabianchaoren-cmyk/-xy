@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,os,hashlib,re
-root=Path.cwd().resolve();out=root/'.verify/v32-193';stage=out/'site';baseline=root/'.verify/v32-192/cloudflare/site'
+root=Path.cwd().resolve();version=int(os.environ.get('PROFILE_REVISION','193'));out=root/f'.verify/v32-{version}';stage=out/'site';baseline=root/'.verify/v32-192/cloudflare/site'
 out.mkdir(parents=True,exist_ok=True);stage.mkdir(exist_ok=True)
 assert stage.resolve().is_relative_to(root)
 plan=json.loads((root/'.verify/v32-192/cloudflare/asset-plan.json').read_text(encoding='utf-8'))
@@ -11,7 +11,7 @@ if './personal-v193.css' not in source_text:
  source.write_text(source_text,encoding='utf-8')
 new_intro=re.search(r'<div class="personal-introduction">.*?</div>',source_text,re.S)[0]
 css=(root/'personal-v193.css').read_bytes();assert b'</style' not in css.lower()
-style='<style data-profile-v193="true">'+css.decode('utf-8')+'</style>'
+style='<style data-profile-v'+str(version)+'="true">'+css.decode('utf-8')+'</style>'
 # A tiny scoped style stays inline so this repair adds no network dependency.
 old_external=stage/('assets/browser-v193/personal-'+hashlib.sha256(css).hexdigest()[:16]+'.css')
 if old_external.exists():
@@ -31,7 +31,7 @@ for item in plan['files']:
   if not target.exists():os.link(src,target)
   assert os.path.samefile(src,target) and target.stat().st_size==item['bytes'],name
   files.append(item)
-record={'version':193,'scope':'portrait display crop and expanded factual introduction only','files':files,'bytes':sum(f['bytes']for f in files),'changed':changes,'unchangedFiles':len(files)-len(changes),'baselineProduction':'1c02a922-4093-4b16-917e-f247911b0d31','protectedSectionsUnchanged':True,'originalMediaUnchanged':True,'newRequests':0,'scopedStyleSHA256':hashlib.sha256(css).hexdigest()}
+record={'version':version,'scope':'portrait display crop and factual introduction only','files':files,'bytes':sum(f['bytes']for f in files),'changed':changes,'unchangedFiles':len(files)-len(changes),'baselineProduction':'1c02a922-4093-4b16-917e-f247911b0d31','protectedSectionsUnchanged':True,'originalMediaUnchanged':True,'newRequests':0,'scopedStyleSHA256':hashlib.sha256(css).hexdigest()}
 (out/'asset-plan.json').write_text(json.dumps(record,indent=2),encoding='utf-8')
-(root/'deploy/profile-v193-asset-plan.json').write_text(json.dumps(record,indent=2),encoding='utf-8')
+(root/f'deploy/profile-v{version}-asset-plan.json').write_text(json.dumps(record,indent=2),encoding='utf-8')
 print(json.dumps({k:v for k,v in record.items()if k!='files'}))
