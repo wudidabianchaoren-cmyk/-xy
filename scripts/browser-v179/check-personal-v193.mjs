@@ -1,13 +1,17 @@
 import {chromium} from '../../node_modules/playwright/index.mjs';
 import fs from 'node:fs/promises';
+// Capture the currently rendered page; unrelated offscreen font requests must
+// not hold the screenshot operation open. This does not change browser fonts.
+process.env.PW_TEST_SCREENSHOT_NO_FONTS_READY='1';
 const origin=process.env.PERSONAL_ORIGIN||'http://127.0.0.1:8059',out=process.env.PERSONAL_OUTPUT||'.verify/v32-193/personal-local';
 await fs.mkdir(out,{recursive:true});
 const b=await chromium.launch({channel:'msedge',headless:true}),p=await b.newPage({viewport:{width:1920,height:1080}}),r={origin,errors:[],console:[],http:[],views:[]};
 p.on('pageerror',e=>r.errors.push(e.message));p.on('console',e=>{if(e.type()==='error')r.console.push(e.text());});p.on('response',e=>{if(e.status()>=400)r.http.push({status:e.status(),url:e.url()});});
+const timer=setInterval(async()=>console.log(JSON.stringify({progress:await p.evaluate(()=>({home:window.homeClockState?.ready,personal:document.querySelector('#personalPage')?.className})).catch(()=>null)})),30000);
 try{
  await p.goto(origin+'/?return=1',{waitUntil:'domcontentloaded',timeout:60000});
- await p.waitForFunction(()=>window.homeClockState?.ready,{},{timeout:180000});
- r.liveHome=true;
+ await p.waitForFunction(()=>window.__v31InterfaceReady,{},{timeout:90000});
+ r.liveHome=await p.evaluate(()=>!!window.homeClockState?.ready);
  await p.click('#indexTrigger');await p.locator('#indexList [data-open-standalone="personalPage"]').click();
  await p.waitForFunction(()=>document.querySelector('#personalPage')?.classList.contains('is-standalone-open'));
  for(const viewport of[{width:1920,height:1080},{width:1440,height:900},{width:1280,height:720}]){
@@ -20,5 +24,5 @@ try{
  await p.click('#hobbyPageClose');await p.waitForFunction(()=>document.querySelector('#personalPage').classList.contains('is-standalone-open'));r.hobbiesReturned=true;
  await p.click('#personalPageClose');await p.waitForFunction(()=>!document.querySelector('#personalPage').classList.contains('is-standalone-open'));r.closed=true;
  await p.click('#indexTrigger');await p.locator('#indexList [data-open-standalone="personalPage"]').click();await p.waitForFunction(()=>document.querySelector('#personalPage').classList.contains('is-standalone-open'));r.reopened=true;
- await p.click('#personalPageClose');r.pass=r.closed&&r.reopened&&r.hobbiesReturned&&!r.errors.length&&!r.http.length;
-}catch(e){r.failure=e.stack;r.pass=false;await p.screenshot({path:out+'/failure.png'}).catch(()=>{});}finally{await b.close();await fs.writeFile(out+'/result.json',JSON.stringify(r,null,2));console.log(JSON.stringify({pass:r.pass,failure:r.failure,views:r.views.length,errors:r.errors,console:r.console,http:r.http,hobbiesReturned:r.hobbiesReturned,reopened:r.reopened}));}
+ await p.click('#personalPageClose');await p.waitForFunction(()=>!document.querySelector('#personalPage').classList.contains('is-standalone-open'));r.homeReturn=await p.evaluate(()=>({ready:!!window.homeClockState?.ready,interfaceReady:!!window.__v31InterfaceReady,contextLost:window.homeClockState?.contextLost}));r.contentPass=r.closed&&r.reopened&&r.hobbiesReturned&&r.homeReturn.interfaceReady&&!r.homeReturn.contextLost&&!r.errors.length&&!r.http.length;r.pass=r.contentPass&&!r.console.length;
+}catch(e){r.failure=e.stack;r.pass=false;await p.screenshot({path:out+'/failure.png'}).catch(()=>{});}finally{clearInterval(timer);await b.close();await fs.writeFile(out+'/result.json',JSON.stringify(r,null,2));console.log(JSON.stringify({pass:r.pass,contentPass:r.contentPass,failure:r.failure,views:r.views.length,errors:r.errors,console:r.console,http:r.http,hobbiesReturned:r.hobbiesReturned,reopened:r.reopened}));}

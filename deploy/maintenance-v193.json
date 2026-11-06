@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-06",
+  "freeBeforeBytes": 18726715392,
+  "freeAfterBytes": 37359554560,
+  "netFreedBytes": 18632839168,
+  "freeBeforeGiB": 17.44,
+  "freeAfterGiB": 34.79,
+  "netFreedGiB": 17.35,
+  "deletedCategories": [
+    "npm downloaded package cache (active CLI installation retained)",
+    "Chrome HTTP/code caches (history, passwords, bookmarks untouched)",
+    "Jianying update installer 11.7.0.14652 (same version installed)",
+    "10 superseded generated deployment folders (V192 and V193 retained)"
+  ],
+  "deletedLogicalBytes": 42659784000,
+  "logicalBytesAreNotActualFreedBecauseHardlinks": true,
+  "archive": {
+    "source": "C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-prototype\\.verify",
+    "destination": "F:\\Portfolio-Archives\\2026-11-06\\prototype-verify",
+    "files": 28929,
+    "bytes": 15477562996,
+    "allSHA256Match": true,
+    "originalPathJunctionRetained": true
+  },
+  "preserved": [
+    "source and Git history",
+    "original UE/artwork/media",
+    "editing drafts and project records",
+    "all test JSON, screenshots and logs",
+    "current V192 rollback and V193 output",
+    "browser history, passwords and bookmarks"
+  ],
+  "purchases": 0,
+  "systemNetworkAndDriverChanges": false
+}
