@@ -954,7 +954,7 @@
     const url=new URL(location.href);url.searchParams.set('v','32.91');url.searchParams.set('return','1');url.searchParams.set('work',new URL(work.href,location.href).pathname.split('/').pop().replace('.html',''));
     try{sessionStorage.setItem('brain-universe-return-scroll',String(scrollY));sessionStorage.setItem('brain-universe-work-return',JSON.stringify({active:true,index:selectedIndex,scroll:scrollY,href:url.pathname+url.search}));}catch{}
     const veil=document.createElement('div');veil.className='works-project-transition';veil.setAttribute('aria-hidden','true');veil.innerHTML='<i class="project-shutter top"></i><i class="project-shutter bottom"></i><span class="project-play-cue">▷</span>';const back=document.createElement('button');back.className='work-route-back192';back.type='button';back.textContent='Back';back.setAttribute('aria-label','Return to works');back.onclick=()=>history.back();veil.appendChild(back);document.body.appendChild(veil);
-    const coverPath=work.src;if(coverPath){const image=new Image();image.className='work-route-preview191';image.alt='';image.loading='eager';image.fetchPriority='high';image.src=coverPath;veil.prepend(image);}
+    const coverPath=null;
     document.body.classList.add('is-project-leaving');
     // Keep the existing world and its GPU resources alive across this child route.
     // The child is a real standalone document; direct links and refresh still work.
