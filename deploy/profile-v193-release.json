@@ -1,0 +1,117 @@
+{
+  "version": 193,
+  "date": "2026-11-06",
+  "url": "https://vvainex.click/",
+  "production": {
+    "id": "11ac27d1-762f-492e-b03b-464a115be54b",
+    "url": "https://11ac27d1.xy-crg.pages.dev",
+    "environment": "production",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-11-06T06:02:51.662189Z",
+      "status": "success"
+    }
+  },
+  "applicationSource": "0ed0eae3a4cfb299fe01367e0958f2311c2750f6",
+  "baselineProduction": "1c02a922-4093-4b16-917e-f247911b0d31",
+  "scope": [
+    "portrait 4:5 display crop, cover/top-center, no side fills, unchanged original photo",
+    "three factual introduction paragraphs"
+  ],
+  "protectedSectionsUnchanged": [
+    "internship",
+    "projects",
+    "tools",
+    "personal practice",
+    "identity and contacts"
+  ],
+  "changedFiles": [
+    "index.html",
+    "v31.html"
+  ],
+  "unchangedFiles": 3305,
+  "newNetworkRequests": 0,
+  "entryBytes": 75842,
+  "qa": {
+    "previewPersonalPass": true,
+    "formalPersonalPass": true,
+    "desktopViewports": [
+      {
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "closeReopenAndHobbyReturnPass": true,
+    "sampledErrors": [],
+    "sampledConsole": [],
+    "sampledHTTP": [],
+    "formalArtifactHashes": 67,
+    "formalHashesMatch": true,
+    "ordinaryEdge": {
+      "expandedBiographyObserved": true,
+      "note": "Observed ordinary existing Edge profile; user visual acceptance is not inferred",
+      "visualProfileVerified": true,
+      "at": "2026-11-06T14:10:27.7284562+08:00",
+      "newTabCreated": false,
+      "portraitBounds": "327,387,426,532",
+      "screenshot": "ordinary-edge.png",
+      "existingTab": true,
+      "portraitRatio": 0.8007518796992481
+    }
+  },
+  "cleanup": {
+    "date": "2026-11-06",
+    "freeBeforeBytes": 18726715392,
+    "freeAfterBytes": 37359554560,
+    "netFreedBytes": 18632839168,
+    "freeBeforeGiB": 17.44,
+    "freeAfterGiB": 34.79,
+    "netFreedGiB": 17.35,
+    "deletedCategories": [
+      "npm downloaded package cache (active CLI installation retained)",
+      "Chrome HTTP/code caches (history, passwords, bookmarks untouched)",
+      "Jianying update installer 11.7.0.14652 (same version installed)",
+      "10 superseded generated deployment folders (V192 and V193 retained)"
+    ],
+    "deletedLogicalBytes": 42659784000,
+    "logicalBytesAreNotActualFreedBecauseHardlinks": true,
+    "archive": {
+      "source": "C:\\Users\\HP\\Desktop\\codex 测试2\\cinematic-ai-archive-prototype\\.verify",
+      "destination": "F:\\Portfolio-Archives\\2026-11-06\\prototype-verify",
+      "files": 28929,
+      "bytes": 15477562996,
+      "allSHA256Match": true,
+      "originalPathJunctionRetained": true
+    },
+    "preserved": [
+      "source and Git history",
+      "original UE/artwork/media",
+      "editing drafts and project records",
+      "all test JSON, screenshots and logs",
+      "current V192 rollback and V193 output",
+      "browser history, passwords and bookmarks"
+    ],
+    "purchases": 0,
+    "systemNetworkAndDriverChanges": false
+  },
+  "automaticGitBuilds": false,
+  "purchases": 0,
+  "limitations": [
+    "This release verifies the scoped personal-page interaction, not a new whole-site/native/physical-network regression.",
+    "Initial preview full home-ready wait exceeded180s although home art rendered; unchanged geometry/runtime request path retained.",
+    "First preview hash batch had one atlas timeout; targeted retry matched all67.",
+    "Initial formal capture waited on offscreen fonts and timed out; final capture records actual rendered glyphs without waiting for unrelated font requests.",
+    "Historical V192 HTTP2 recovery, cold loading and Iris Xe performance limits remain; no universal stability, zero-stutter or user-acceptance claim."
+  ],
+  "qualityApproved": false,
+  "allHistoricalRequirementsComplete": false
+}
