@@ -1,0 +1,67 @@
+{
+  "version": 194,
+  "date": "2026-11-06",
+  "url": "https://vvainex.click/",
+  "production": "4c6bfa37-7b9d-401a-931e-1b5e33ed85bb",
+  "usesFunctions": false,
+  "source": "1aaad75",
+  "portrait": {
+    "cssWidth": 240,
+    "cssHeight": 288,
+    "previousWidth": 340,
+    "previousHeight": 425,
+    "objectPosition": "center 22%",
+    "visibleNameCount": 1
+  },
+  "introduction": "Two short plain-language paragraphs; no repeated name in prose",
+  "protectedResumeSectionsUnchanged": true,
+  "changedFiles": [
+    "index.html",
+    "v31.html"
+  ],
+  "unchangedFiles": 3305,
+  "newRequests": 0,
+  "formalPersonalPass": true,
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "http": [],
+  "changedEntryAndHomeRuntimeHashesMatch": true,
+  "homepage": {
+    "solved": false,
+    "cause": "Reported yellow view exactly matches existing assets/native-v165/home.jpg loading cover while live canvas opacity remains0",
+    "lightingAndGeometryFilesChanged": false,
+    "naturalEntryReadyPass": false,
+    "failure": "page.waitForFunction: Timeout 240000ms exceeded.",
+    "errors": [
+      "signal is aborted without reason"
+    ],
+    "console": [
+      "Native homepage world failed TypeError: Failed to fetch"
+    ],
+    "pendingAssetsRecorded": true,
+    "noPosterReplacementOrRegrading": true
+  },
+  "deploymentCorrection": "Initial c955c8cb incorrectly included repository Functions when invoked from repository root. Superseded immediately from the exact static stage cwd; final4c6bfa37 uses_functions=false. Do not restore c955c8cb.",
+  "cleanup": {
+    "initialFreeBytes": 18726715392,
+    "currentFreeBytes": 37325058048,
+    "historicalArchive": "F:/Portfolio-Archives/2026-11-06/prototype-verify",
+    "all28929ArchiveHashesVerified": true
+  },
+  "allRequirementsComplete": false,
+  "qualityApproved": false
+}
