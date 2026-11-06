@@ -1,0 +1,74 @@
+{
+  "version": 195,
+  "date": "2026-11-07",
+  "url": "https://vvainex.click/",
+  "production": {
+    "id": "bcadee7c-a88e-4598-91e7-c2f17f064509",
+    "url": "https://bcadee7c.xy-crg.pages.dev",
+    "environment": "production",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-11-06T16:15:39.358313Z",
+      "status": "success"
+    },
+    "uses_functions": false
+  },
+  "applicationSource": "cebeae7",
+  "baseline": 194,
+  "changes": [
+    "Remove all5work-transition preview images and6film poster attributes/hero images; black until movie frame",
+    "Remove poster-decode gate from child readiness",
+    "Mute media until a decoded frame is shown and parent is visible",
+    "First media buffer fetch1segment instead of4; steady playback3segments",
+    "Do not block desktop WebGL startup on handwriting font; redraw original notebook texture after font loads",
+    "Remove broad work/gallery image warming after opening; reading/myth first previews retained"
+  ],
+  "checks": {
+    "localSixFilmsAndMidpoint": true,
+    "localDeskReady": true,
+    "deskStartsWhileFontDelayed": true,
+    "previewSixFilmsAndMidpoints": true,
+    "previewAudioBeforeFrameLeaks": [],
+    "formalActualCardAndReturn": true,
+    "formalTransitionImages": 0,
+    "formalPosterCount": 0,
+    "formalHashesMatch": true,
+    "formalHashes": 23
+  },
+  "changed": [
+    "after-journey.html",
+    "assets/browser-v195/packed/11598fa683526f71373e.js",
+    "assets/browser-v195/packed/150fdb4e2847223a9f73.js",
+    "browser-runtime-v180.js",
+    "directory-credits.html",
+    "directory.html",
+    "home-creation.html",
+    "humid-southeast-asia.html",
+    "index.html",
+    "learning.html",
+    "mid-autumn.html",
+    "mythology-process.html",
+    "mythology.html",
+    "physical-universe.html",
+    "progressive-media-v195.js",
+    "reading.html",
+    "rural-return.html",
+    "scene-dist/browser-v192/directory-app-fast195.js",
+    "scene-dist/directory-v144/app.js",
+    "v31-works-ring-v144.js",
+    "v31.html",
+    "yangjian.html"
+  ],
+  "originalMediaGeometryLightingPreserved": true,
+  "noNetworkProviderDriverOrPaidChanges": true,
+  "authRecovery": "Existing system proxy used only in command environment to renew existing Cloudflare OAuth; global settings untouched",
+  "automaticGitBuilds": false,
+  "limitations": [
+    "This is scoped desktop/work acceleration and video-first repair, not universal instant-load or zero-stutter proof.",
+    "No paired real-world speed benchmark; preview entry-to-first-frame for first films2.7to9.7seconds in this run. Local timings are not public speed claims.",
+    "Prior V194 home loading/HTTP2/performance limitations are not declared fixed."
+  ],
+  "qualityApproved": false,
+  "allHistoricalRequirementsComplete": false
+}
