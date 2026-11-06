@@ -1,0 +1,135 @@
+{
+  "version": 196,
+  "date": "2026-11-07",
+  "productionUnchanged": "bcadee7c-a88e-4598-91e7-c2f17f064509",
+  "nonVPNStabilityFixed": false,
+  "readOnlyBoundWLANProbes": {
+    "dateUTC": "2026-11-06T16:50:27Z",
+    "dnsAnswersViaExistingProxyOnly": {
+      "vvainex.click": [
+        "104.21.81.43",
+        "172.67.138.27"
+      ],
+      "xy-crg.pages.dev": [
+        "172.66.44.111",
+        "172.66.47.145"
+      ],
+      "www.baidu.com": [
+        "103.235.47.188",
+        "103.235.46.96"
+      ]
+    },
+    "actualConnectionsBoundPhysicalWLAN": true,
+    "systemNetworkChanged": false,
+    "productionChanged": false,
+    "probes": [
+      {
+        "host": "vvainex.click",
+        "ip": "104.21.81.43",
+        "interface": 17,
+        "source": "10.49.64.1",
+        "proxy": false,
+        "certificateVerified": true,
+        "phase": "tls",
+        "tcpSeconds": 0.279,
+        "error": "_ssl.c:1015: The handshake operation timed out",
+        "seconds": 10.341
+      },
+      {
+        "host": "vvainex.click",
+        "ip": "172.67.138.27",
+        "interface": 17,
+        "source": "10.49.64.1",
+        "proxy": false,
+        "certificateVerified": true,
+        "phase": "tls",
+        "tcpSeconds": 1.293,
+        "error": "_ssl.c:1015: The handshake operation timed out",
+        "seconds": 11.338
+      },
+      {
+        "host": "xy-crg.pages.dev",
+        "ip": "172.66.44.111",
+        "interface": 17,
+        "source": "10.49.64.1",
+        "proxy": false,
+        "certificateVerified": true,
+        "phase": "complete",
+        "tcpSeconds": 1.322,
+        "tlsSeconds": 1.712,
+        "response": "HTTP/1.1 200 OK",
+        "seconds": 2.75
+      },
+      {
+        "host": "xy-crg.pages.dev",
+        "ip": "172.66.47.145",
+        "interface": 17,
+        "source": "10.49.64.1",
+        "proxy": false,
+        "certificateVerified": true,
+        "phase": "tls",
+        "tcpSeconds": 0.276,
+        "error": "_ssl.c:1015: The handshake operation timed out",
+        "seconds": 10.342
+      },
+      {
+        "host": "www.baidu.com",
+        "ip": "103.235.47.188",
+        "interface": 17,
+        "source": "10.49.64.1",
+        "proxy": false,
+        "certificateVerified": true,
+        "phase": "complete",
+        "tcpSeconds": 0.413,
+        "tlsSeconds": 1.265,
+        "response": "HTTP/1.1 206 Partial Content",
+        "seconds": 1.696
+      },
+      {
+        "host": "www.baidu.com",
+        "ip": "103.235.46.96",
+        "interface": 17,
+        "source": "10.49.64.1",
+        "proxy": false,
+        "certificateVerified": true,
+        "phase": "complete",
+        "tcpSeconds": 0.277,
+        "tlsSeconds": 0.779,
+        "response": "HTTP/1.1 206 Partial Content",
+        "seconds": 1.01
+      }
+    ]
+  },
+  "alternativeRoute": [
+    {
+      "host": "vvainex.click",
+      "path": "/",
+      "ip": "172.66.44.111",
+      "physicalInterface": 17,
+      "proxy": false,
+      "response": "HTTP/1.1 200 OK",
+      "seconds": 1.48
+    },
+    {
+      "host": "xy-crg.pages.dev",
+      "path": "/browser-runtime-v180.js",
+      "ip": "172.66.44.111",
+      "physicalInterface": 17,
+      "proxy": false,
+      "error": "_ssl.c:1015: The handshake operation timed out",
+      "seconds": 9.33
+    },
+    {
+      "host": "xy-crg.pages.dev",
+      "path": "/assets/browser-v187/media/2ccdd6e0115f2b1f9f5879a6.mp4",
+      "ip": "172.66.44.111",
+      "physicalInterface": 17,
+      "proxy": false,
+      "error": "_ssl.c:1015: The handshake operation timed out",
+      "seconds": 8.34
+    }
+  ],
+  "conclusion": "Main assigned104.21/172.67addresses reachedTCP but both TLS10s timeout; Baidu controls completed. Pages172.66route intermittently completed root but JS/video laterTLS timed out. Main SNI via172.66returned200once, not proof of stable full-site access. No safe confirmed delivery fix under current remaining quota; do not claim VPN-free access fixed.",
+  "productionDNSProxySystemNetworkChanged": false,
+  "followup": "Investigate existing Pages custom-domain DNS-only delivery via native Pages IP pool with controlled rollback and actual browser/asset verification; one200is insufficient. Existing wrangler scope has no DNS write; do not seek new scopes or start provider/purchase loops in this quota-limited run."
+}
